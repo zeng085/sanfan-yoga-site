@@ -11,9 +11,9 @@ const I18N = {
   en: {
     'nav.home': 'Home', 'nav.products': 'Products', 'nav.about': 'About',
     'nav.contact': 'Contact', 'nav.quote': 'Get a Quote',
-    'hero.eyebrow': 'TPE Yoga Mat & Foam Roller Source Factory',
-    'hero.title': 'Direct from the Factory. Built for Your Brand.',
-    'hero.lead': '12 years of OEM/ODM expertise. 100 pcs MOQ, 7-day sampling, full customization. We help yoga brands, retailers and studios launch faster.',
+    'hero.eyebrow': 'TPE / NBR Yoga Mats & Foam Rollers — OEM Factory',
+    'hero.title': 'Direct from Jinjiang, China. Built for Your Brand.',
+    'hero.lead': 'Fujian Sanfan Sports Goods Industrial Co., Ltd. — 12 years manufacturing TPE mats, alignment mats, NBR mats and foam rollers. MOQ from 100 pcs (TPE) / 500 pcs (rollers) / 1,000 pcs (NBR). 7-day sampling.',
     'hero.cta1': 'Request a Quote', 'hero.cta2': 'View Products',
     'hero.stat1.n': '12+', 'hero.stat1.l': 'Years Manufacturing',
     'hero.stat2.n': '100', 'hero.stat2.l': 'Pcs Min. Order',
@@ -21,16 +21,29 @@ const I18N = {
     'hero.media': 'Factory / Product photo placeholder',
     'str.title': 'Why Buyers Choose Us',
     'str.sub': 'A flexible supply chain engineered for private-label success.',
-    'str1.t': 'Low MOQ', 'str1.d': 'Start from 100 pcs. Test the market without heavy inventory risk.',
-    'str2.t': 'Fast Sampling', 'str2.d': 'Physical samples in 7 days with your logo and color options.',
-    'str3.t': 'Full Customization', 'str3.d': 'Material, size, color, double-color, packaging — all made to spec.',
+    'str1.t': 'Low MOQ', 'str1.d': 'TPE mats from 100 pcs; foam rollers from 500 pcs; NBR mats from 1,000 pcs. Test without heavy inventory risk.',
+    'str2.t': 'Fast Sampling', 'str2.d': 'Physical samples in 7 days with your logo, color and packaging options.',
+    'str3.t': 'Full Customization', 'str3.d': 'Material, size, thickness, color, double-color, logo, fold and packaging — all made to spec.',
     'str4.t': 'Certified Quality', 'str4.d': 'REACH, CA Prop 65, 6P/7P compliance for global markets.',
     'prod.title': 'Our Products',
-    'prod.sub': 'TPE yoga mats and foam rollers, ready for private label.',
-    'prod1.t': 'TPE Yoga Mat', 'prod1.d': 'Eco-friendly, non-slip, double-color options. Perfect for premium brands.',
-    'prod2.t': 'Yoga Foam Roller', 'prod2.d': 'High-density EVA, smooth or textured. Ideal for recovery and studios.',
-    'prod3.t': 'Alignment Yoga Mat', 'prod3.d': 'Printed guide lines to help users practice with correct posture.',
+    'prod.sub': 'TPE/NBR yoga mats, alignment mats and foam rollers, ready for private label.',
+    'prod1.t': 'TPE Yoga Mat', 'prod1.d': 'Eco-friendly double-layer TPE, non-slip textured surface, 61-122 cm widths, 4-12 mm thickness. Solid, economy and special grades available.',
+    'prod2.t': 'Alignment Yoga Mat', 'prod2.d': 'Lotus-printed guide lines for correct posture. TPE base, 61/80 cm widths, matching strap and mesh bag sets.',
+    'prod3.t': 'NBR Yoga Mat', 'prod3.d': 'High-elastic matte anti-slip NBR rubber. Best-seller 183×61×1 cm; thickness 0.8-2 cm; wide versions 80/90 cm.',
+    'prod3.thumb': 'NBR Yoga Mat',
+    'prod4.t': 'Yoga Foam Roller', 'prod4.d': 'PVC/PP core, 50° hardness, smooth or textured surfaces including wolf-tooth, moon, corrugated and diamond patterns.',
+    'prod4.thumb': 'Yoga Foam Roller',
     'prod.spec.moq': 'MOQ', 'prod.spec.lead': 'Sampling', 'prod.spec.cert': 'Cert.', 'prod.spec.oem': 'OEM',
+    'spec.title': 'Specification Overview',
+    'spec.sub': 'Popular sizes and MOQs at a glance. Custom sizes, colors and packaging available on request.',
+    'spec1.t': 'TPE Yoga Mat',
+    'spec1.d': '1830×610 / 1830×800 / 1850×900 / 2000×1000 / 1850×1220 mm\nThickness 4-12 mm\nMOQ 100 pcs',
+    'spec2.t': 'Alignment Yoga Mat',
+    'spec2.d': '61 cm / 80 cm widths\nLotus + centerline guides\nMOQ 100 pcs',
+    'spec3.t': 'NBR Yoga Mat',
+    'spec3.d': '183×61×0.8-2 cm\n185×80×1 / 185×90×1 cm\nMOQ 1,000 pcs (regular colors)',
+    'spec4.t': 'Yoga Foam Roller',
+    'spec4.d': '25×7.5 to 45×14 cm\nSmooth / wolf-tooth / moon / corrugated / diamond\nMOQ 500 pcs',
     'proc.title': 'How It Works',
     'proc.sub': 'From inquiry to delivery in four clear steps.',
     'proc1.t': 'Send Inquiry', 'proc1.d': 'Tell us your specs, quantity and target market.',
@@ -42,10 +55,14 @@ const I18N = {
     'cta.btn': 'Contact Our Team',
     'about.title': 'About SANFAN',
     'about.sub': 'A yoga equipment source factory trusted by brands worldwide.',
+    'about.h1': 'Fujian Sanfan Sports Goods Industrial Co., Ltd.',
+    'about.p1': 'Founded in Jinjiang, Quanzhou — the heart of China\'s sporting-goods manufacturing belt — SANFAN has spent 12 years building yoga mats and rollers for brands, retailers and studios around the world.',
+    'about.p2': 'We specialize in TPE yoga mats, alignment mats, NBR yoga mats and foam rollers. Our flexible supply chain supports small test orders, fast 7-day sampling and full private-label customization including material, size, color, double-color finish, logo, fold and packaging.',
+    'about.p3': 'Whether you are a yoga brand looking for a reliable OEM partner, a retailer building your own line, or a studio chain that needs consistent quality at scale, we ship from our Fujian factory to your warehouse.',
     'contact.title': 'Get in Touch',
     'contact.sub': 'Tell us what you need — we reply within 1 business day.',
     'f.home': 'Home', 'f.products': 'Products', 'f.about': 'About', 'f.contact': 'Contact',
-    'f.brand': 'SANFAN Yoga', 'f.tag': 'TPE yoga mat & foam roller source factory.',
+    'f.brand': 'SANFAN Yoga', 'f.tag': 'TPE/NBR yoga mat & foam roller source factory.',
     'foot.products': 'Products', 'foot.company': 'Company', 'foot.contact': 'Contact',
     'foot.addr': 'Address', 'foot.email': 'Email', 'foot.phone': 'WhatsApp',
     'form.name': 'Your Name', 'form.company': 'Company', 'form.email': 'Email',
@@ -57,9 +74,9 @@ const I18N = {
   zh: {
     'nav.home': '首页', 'nav.products': '产品', 'nav.about': '关于',
     'nav.contact': '联系', 'nav.quote': '获取报价',
-    'hero.eyebrow': 'TPE 瑜伽垫 / 瑜伽柱 源头工厂',
-    'hero.title': '工厂直供，为你的品牌而生。',
-    'hero.lead': '12 年 OEM/ODM 经验。100 片起订、7 天打样、全面定制。我们帮瑜伽品牌、零售商与场馆更快上市。',
+    'hero.eyebrow': 'TPE / NBR 瑜伽垫 & 瑜伽柱 源头工厂',
+    'hero.title': '来自中国晋江，为你的品牌而生。',
+    'hero.lead': '福建三梵体育用品实业有限公司 — 12 年专注 TPE 瑜伽垫、体位线垫、NBR 瑜伽垫与瑜伽柱制造。TPE 100 片起订，瑜伽柱 500 个起订，NBR 1000 条起订。7 天打样。',
     'hero.cta1': '立即询价', 'hero.cta2': '查看产品',
     'hero.stat1.n': '12+', 'hero.stat1.l': '年制造经验',
     'hero.stat2.n': '100', 'hero.stat2.l': '片起订',
@@ -67,16 +84,29 @@ const I18N = {
     'hero.media': '工厂 / 产品图占位',
     'str.title': '为什么选择我们',
     'str.sub': '为贴牌成功而生的柔性供应链。',
-    'str1.t': '低起订量', 'str1.d': '100 片起订，小批量试水无库存压力。',
-    'str2.t': '快速打样', 'str2.d': '7 天出实物样，支持你的品牌 logo 与配色。',
-    'str3.t': '全面定制', 'str3.d': '材质、尺寸、颜色、双色、包装，全部按需定制。',
+    'str1.t': '低起订量', 'str1.d': 'TPE 瑜伽垫 100 片起订；瑜伽柱 500 个起订；NBR 瑜伽垫 1000 条起订。小批量试水无库存压力。',
+    'str2.t': '快速打样', 'str2.d': '7 天出实物样，支持你的品牌 logo、配色与包装。',
+    'str3.t': '全面定制', 'str3.d': '材质、尺寸、厚度、颜色、双色、logo、折叠、包装，全部按需定制。',
     'str4.t': '认证品质', 'str4.d': '符合 REACH、CA Prop 65、6P/7P 等国际市场要求。',
     'prod.title': '我们的产品',
-    'prod.sub': 'TPE 瑜伽垫与瑜伽柱，支持贴牌定制。',
-    'prod1.t': 'TPE 瑜伽垫', 'prod1.d': '环保防滑，支持双色。适合高端品牌。',
-    'prod2.t': '瑜伽柱', 'prod2.d': '高密度 EVA，光面或浮点。适合康复与场馆。',
-    'prod3.t': '正位瑜伽垫', 'prod3.d': '印刷引导线，帮助用户正确练习体式。',
+    'prod.sub': 'TPE/NBR 瑜伽垫、体位线垫与瑜伽柱，支持贴牌定制。',
+    'prod1.t': 'TPE 瑜伽垫', 'prod1.d': '环保双层 TPE，防滑纹理表面，宽度 61-122 cm，厚度 4-12 mm。可选实重、经济、特供等级。',
+    'prod2.t': '体位线瑜伽垫', 'prod2.d': '莲花印花引导线，帮助正确练习。TPE 基材，61/80 cm 宽度，可配套背带与网包。',
+    'prod3.t': 'NBR 瑜伽垫', 'prod3.d': '高弹亚光防滑 NBR 橡胶。爆款 183×61×1 cm；厚度 0.8-2 cm；可加宽至 80/90 cm。',
+    'prod3.thumb': 'NBR 瑜伽垫',
+    'prod4.t': '瑜伽柱', 'prod4.d': 'PVC/PP 内管，50 度硬度，光面或狼牙、月牙、水波纹、菱形等纹理表面。',
+    'prod4.thumb': '瑜伽柱',
     'prod.spec.moq': '起订量', 'prod.spec.lead': '打样', 'prod.spec.cert': '认证', 'prod.spec.oem': '贴牌',
+    'spec.title': '规格一览',
+    'spec.sub': '常见尺寸与起订量速查。支持定制尺寸、颜色与包装。',
+    'spec1.t': 'TPE 瑜伽垫',
+    'spec1.d': '1830×610 / 1830×800 / 1850×900 / 2000×1000 / 1850×1220 mm\n厚度 4-12 mm\n起订量 100 片',
+    'spec2.t': '体位线瑜伽垫',
+    'spec2.d': '61 cm / 80 cm 宽度\n莲花 + 中线引导\n起订量 100 片',
+    'spec3.t': 'NBR 瑜伽垫',
+    'spec3.d': '183×61×0.8-2 cm\n185×80×1 / 185×90×1 cm\n起订量 1000 条（常规色）',
+    'spec4.t': '瑜伽柱',
+    'spec4.d': '25×7.5 至 45×14 cm\n光面 / 狼牙 / 月牙 / 水波纹 / 菱形\n起订量 500 个',
     'proc.title': '合作流程',
     'proc.sub': '四步清晰，从询盘到交付。',
     'proc1.t': '提交询盘', 'proc1.d': '告知规格、数量与目标市场。',
@@ -88,10 +118,14 @@ const I18N = {
     'cta.btn': '联系我们',
     'about.title': '关于 三梵',
     'about.sub': '全球品牌信赖的瑜伽器材源头工厂。',
+    'about.h1': '福建三梵体育用品实业有限公司',
+    'about.p1': '三梵创立于中国体育用品制造重镇 — 泉州晋江。12 年来，我们为世界各地的瑜伽品牌、零售商与场馆生产瑜伽垫与瑜伽柱。',
+    'about.p2': '我们专注 TPE 瑜伽垫、体位线垫、NBR 瑜伽垫与瑜伽柱。柔性供应链支持小批量试单、7 天快速打样及全面贴牌定制，包括材质、尺寸、颜色、双色、logo、折叠与包装。',
+    'about.p3': '无论你是寻找可靠 OEM 伙伴的瑜伽品牌、打造自有产品线的零售商，还是需要稳定品质大规模供货的场馆连锁，我们都能从福建工厂直发至你的仓库。',
     'contact.title': '联系我们',
     'contact.sub': '告诉我们你的需求，1 个工作日内回复。',
     'f.home': '首页', 'f.products': '产品', 'f.about': '关于', 'f.contact': '联系',
-    'f.brand': '三梵瑜伽', 'f.tag': 'TPE 瑜伽垫 / 瑜伽柱 源头工厂。',
+    'f.brand': '三梵瑜伽', 'f.tag': 'TPE/NBR 瑜伽垫 / 瑜伽柱 源头工厂。',
     'foot.products': '产品', 'foot.company': '公司', 'foot.contact': '联系',
     'foot.addr': '地址', 'foot.email': '邮箱', 'foot.phone': 'WhatsApp',
     'form.name': '姓名', 'form.company': '公司', 'form.email': '邮箱',
@@ -106,7 +140,14 @@ function applyLang(lang) {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (I18N[lang][key] != null) el.textContent = I18N[lang][key];
+    if (I18N[lang][key] != null) {
+      // preserve line breaks in spec cards
+      if (key.startsWith('spec') && key.endsWith('.d')) {
+        el.innerHTML = I18N[lang][key].replace(/\n/g, '<br>');
+      } else {
+        el.textContent = I18N[lang][key];
+      }
+    }
   });
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
     const key = el.getAttribute('data-i18n-ph');
@@ -140,6 +181,9 @@ if (form) {
       if (res.ok) {
         form.reset();
         okBox.style.display = 'block';
+        okBox.style.background = '';
+        okBox.style.color = '';
+        okBox.style.borderColor = '';
         okBox.textContent = I18N[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en']['form.ok'];
         okBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {

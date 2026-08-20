@@ -78,8 +78,10 @@ img { max-width: 100%; display: block; }
 .hero-stats { display: flex; gap: 34px; margin-top: 38px; }
 .stat .n { font-size: 26px; font-weight: 700; color: var(--ink); }
 .stat .l { font-size: 13px; color: var(--muted); }
-.hero-media { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); background: #dfe7e2; aspect-ratio: 4/3; display: grid; place-items: center; color: var(--brand-ink); font-weight: 600; text-align: center; padding: 20px; }
-.hero-media .ph { opacity: .8; }
+.hero-media { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); background: #dfe7e2; aspect-ratio: 4/3; display: grid; place-items: center; color: var(--brand-ink); font-weight: 600; text-align: center; }
+.hero-media .ph { opacity: .8; padding: 20px; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.prod .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ---------- Sections ---------- */
 section { padding: 64px 0; }
