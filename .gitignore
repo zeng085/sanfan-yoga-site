@@ -1,0 +1,13 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# node (if you later add build tooling)
+node_modules/
+dist/
+.next/
+
+# local secrets
+.env
+.env.local
