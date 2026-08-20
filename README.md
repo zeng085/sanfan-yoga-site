@@ -22,7 +22,7 @@ python3 -m http.server 8080
 ```
 
 ## 你需要替换的占位内容
-1. **品牌信息**：`sales@sanfan-yoga.com`、`+86 188-0000-0000`、地址 → 改成你的真实信息（在 4 个 html 里搜这些字符串批量替换）。
+1. **品牌信息（已填真实值）**：邮箱 `zenglinggun@hotmail.com`、WhatsApp `+86 15959029082`、地址 `No. 8 Haiguang Road, Yuejin Industrial Zone, Xibin Town, Jinjiang City, Quanzhou City, Fujian Province, China` 已写入 4 个 html。如变更，直接搜这些字符串批量替换即可。
 2. **产品图**：把真实产品照片放进 `assets/img/`，然后把 `products.html` / `index.html` 里的 `<div class="thumb">...</div>` 换成 `<img src="assets/img/xxx.jpg" alt="...">`。
 3. **询盘表单**：注册 https://formspree.io （免费），拿到你的表单 ID，把 `contact.html` 里
    `action="https://formspree.io/f/YOUR_FORM_ID"` 的 `YOUR_FORM_ID` 替换掉。
