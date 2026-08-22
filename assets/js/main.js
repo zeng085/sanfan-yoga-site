@@ -14,7 +14,7 @@ const I18N = {
 
     // Hero
     'hero.eyebrow': 'OEM / ODM Yoga & Fitness Manufacturer',
-    'hero.title': 'XIAMEN SANFAN — Your Direct Factory for Yoga & Fitness Gear',
+    'hero.title': 'FUJIAN SANFAN — Your Direct Factory for Yoga & Fitness Gear',
     'hero.lead': 'Since 2013, a leading OEM/ODM manufacturer of yoga mats, aerial yoga hammocks, yoga props, foam rollers, resistance bands and fitness equipment. 600+ skilled workers, monthly capacity of 200,000+ yoga mats, 24-hour service team. MOQ from 100 pcs, 7-day sampling.',
     'hero.cta1': 'Request a Quote', 'hero.cta2': 'Explore Products',
     'hero.stat1.n': '2013', 'hero.stat1.l': 'Established',
@@ -180,7 +180,7 @@ const I18N = {
     // About
     'about.title': 'About SANFAN',
     'about.sub': 'A yoga & fitness equipment source factory trusted by brands worldwide.',
-    'about.h1': 'XIAMEN SANFAN Sports Products Co., Ltd.',
+    'about.h1': 'FUJIAN SANFAN Sports Products Co., Ltd.',
     'about.p1': 'Founded in 2013 and based in Xiamen, Fujian, SANFAN is a leading OEM/ODM manufacturer of yoga mats and sports products, with our manufacturing base in Jinjiang — the heart of China’s sporting-goods belt.',
     'about.p2': 'We provide customized designing, developing, manufacturing and exporting for customers worldwide. Our range covers yoga mats, aerial yoga hammocks, yoga wheels, foam rollers, blocks, balls, resistance bands and a broad selection of fitness gear.',
     'about.p3': 'With 600+ skilled workers and high-tech machines, we guarantee high-output, high-quality production and on-time delivery at competitive prices. Our service team is on standby 24 hours to support our customers.',
@@ -210,7 +210,7 @@ const I18N = {
     'f.brand': 'SANFAN', 'f.tag': 'OEM / ODM yoga & fitness manufacturer.',
     'foot.products': 'Products', 'foot.company': 'Company', 'foot.contact': 'Contact',
     'foot.addr': 'Address', 'foot.email': 'Email', 'foot.phone': 'WhatsApp',
-    'foot.copyright': '© 2026 XIAMEN SANFAN Sports Products Co., Ltd. All rights reserved.',
+    'foot.copyright': '© 2026 FUJIAN SANFAN Sports Products Co., Ltd. All rights reserved.',
 
     // CTA
     'cta.title': 'Ready to Build Your Brand?',
@@ -239,7 +239,7 @@ const I18N = {
     'nav.contact': '联系', 'nav.quote': '获取报价',
 
     'hero.eyebrow': '瑜伽 & 健身器材 OEM / ODM 制造工厂',
-    'hero.title': '厦门三梵 — 你的瑜伽与健身器材直供工厂',
+    'hero.title': '福建三梵 — 你的瑜伽与健身器材直供工厂',
     'hero.lead': '自 2013 年起，三梵是领先的瑜伽垫、空中瑜伽吊床、瑜伽道具、瑜伽柱、弹力带及健身器材 OEM/ODM 制造商。600+ 熟练工人，瑜伽垫月产能 20 万+，24 小时服务团队。100 片起订，7 天打样。',
     'hero.cta1': '立即询价', 'hero.cta2': '浏览产品',
     'hero.stat1.n': '2013', 'hero.stat1.l': '成立年份',
@@ -394,7 +394,7 @@ const I18N = {
 
     'about.title': '关于三梵',
     'about.sub': '全球品牌信赖的瑜伽与健身器材源头工厂。',
-    'about.h1': '厦门三梵体育用品有限公司',
+    'about.h1': '福建三梵体育用品有限公司',
     'about.p1': '三梵成立于 2013 年，总部位于福建厦门，是领先的瑜伽垫及运动用品 OEM/ODM 制造商，制造基地坐落于中国体育用品制造重镇 — 泉州晋江。',
     'about.p2': '我们为全球客户提供设计、研发、制造与出口的一体化定制服务，产品涵盖瑜伽垫、空中瑜伽吊床、瑜伽轮、瑜伽柱、瑜伽砖、瑜伽球、弹力带及丰富的健身器材。',
     'about.p3': '600+ 熟练工人与高精设备，保证高产出、高品质与准时交付，且价格具竞争力。我们的服务团队 24 小时待命，随时响应客户需求。',
@@ -422,7 +422,7 @@ const I18N = {
     'f.brand': '三梵 SANFAN', 'f.tag': '瑜伽 & 健身器材 OEM / ODM 制造工厂。',
     'foot.products': '产品', 'foot.company': '公司', 'foot.contact': '联系',
     'foot.addr': '地址', 'foot.email': '邮箱', 'foot.phone': 'WhatsApp',
-    'foot.copyright': '© 2026 厦门三梵体育用品有限公司 版权所有。',
+    'foot.copyright': '© 2026 福建三梵体育用品有限公司 版权所有。',
 
     'cta.title': '准备好打造你的品牌了吗？',
     'cta.sub': '立即获取专属报价与免费样品。',

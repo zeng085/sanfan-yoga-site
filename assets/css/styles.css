@@ -150,18 +150,22 @@ a { color: inherit; text-decoration: none; }
 .cap-table td.val { font-weight: 700; color: var(--brand); text-align: right; white-space: nowrap; }
 
 /* ---------- Range cards ---------- */
+.range-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; }
 .range-card {
-  position: relative; border-radius: var(--radius); overflow: hidden; min-height: 260px;
-  display: flex; flex-direction: column; justify-content: flex-end; color: #fff;
+  display: flex; flex-direction: column;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden;
   box-shadow: var(--shadow-sm); transition: .22s ease;
+  text-decoration: none; color: inherit;
 }
-.range-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.range-card .bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
-.range-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(10,40,34,.86)); }
-.range-card .body { position: relative; z-index: 2; padding: 24px; }
-.range-card h3 { margin: 0 0 6px; font-size: 22px; }
-.range-card p { margin: 0 0 14px; font-size: 14px; color: #e3f3ee; }
-.range-card .more { font-weight: 600; font-size: 14px; }
+.range-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #cfe3dc; }
+.range-card .rc-img { aspect-ratio: 4 / 3; overflow: hidden; background: var(--soft); }
+.range-card .rc-img img { width: 100%; height: 100%; object-fit: cover; transition: .3s; }
+.range-card:hover .rc-img img { transform: scale(1.06); }
+.range-card .rc-body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.range-card h3 { margin: 0; font-size: 19px; }
+.range-card p { margin: 0; font-size: 13.5px; color: var(--muted); }
+.range-card .rc-more { margin-top: auto; padding-top: 10px; font-weight: 600; font-size: 13.5px; color: var(--brand); }
 
 /* ---------- Product gallery ---------- */
 .gallery { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
