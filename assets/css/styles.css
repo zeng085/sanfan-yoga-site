@@ -22,7 +22,16 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* iOS Safari: keep layout viewport locked to device width so a pinch-zoom
+   (especially on the longer English copy) can never leave the page "stuck"
+   at a wider size; also stop iOS auto-inflating font sizes after zoom/rotate. */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: clip;
+  max-width: 100%;
+}
 body {
   margin: 0;
   font-family: var(--font);
@@ -30,8 +39,10 @@ body {
   background: var(--bg);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  overflow-wrap: break-word;
 }
-img { max-width: 100%; display: block; }
+img, table, iframe, video { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
@@ -294,6 +305,7 @@ a.prod-card:hover .info h4 { color: var(--brand); }
 .field input, .field select, .field textarea {
   width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm);
   font-family: inherit; font-size: 15px; color: var(--ink); background: #fff;
+  overflow-wrap: anywhere;
 }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); }
 .field textarea { resize: vertical; min-height: 110px; }
@@ -309,7 +321,7 @@ a.prod-card:hover .info h4 { color: var(--brand); }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
 .site-footer ul li { margin-bottom: 9px; font-size: 14px; }
 .site-footer ul li a:hover { color: #fff; }
-.site-footer .contact-line { font-size: 14px; margin-bottom: 8px; }
+.site-footer .contact-line { font-size: 14px; margin-bottom: 8px; overflow-wrap: anywhere; word-break: break-word; }
 .site-footer .contact-line span { color: #fff; font-weight: 600; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 38px; padding-top: 18px; font-size: 13px; color: #93a39c; text-align: center; }
 
