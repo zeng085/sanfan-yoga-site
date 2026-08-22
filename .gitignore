@@ -11,3 +11,6 @@ dist/
 # local secrets
 .env
 .env.local
+
+# WorkBuddy project-local memory (not for public repo)
+.workbuddy/
