@@ -216,6 +216,22 @@ const I18N = {
     'cta.title': 'Ready to Build Your Brand?',
     'cta.sub': 'Get a tailored quote and free samples today.',
     'cta.btn': 'Contact Our Team',
+
+    // Product detail page
+    'pd.back': 'Back to Products',
+    'pd.specs': 'Specifications',
+    'pd.features': 'Key Features',
+    'pd.custom': 'Customization & OEM/ODM',
+    'pd.related': 'Related Products',
+    'pd.overview': 'Product Overview',
+    'pd.whatsapp': 'Chat on WhatsApp',
+    'pd.quote': 'Request a Quote',
+    'pd.notfound': 'Product not found',
+    'pd.notfound.d': 'The product you are looking for does not exist.',
+    'pd.material': 'Material', 'pd.size': 'Size', 'pd.thickness': 'Thickness',
+    'pd.moq': 'MOQ', 'pd.colors': 'Colors & Print', 'pd.cert': 'Compliance', 'pd.packing': 'Packaging',
+    'pd.custom.d': 'Full OEM/ODM support: material, size, thickness, color, double-color, logo printing, embossing and packaging. Physical samples ready in 7 days with your spec.',
+    'pd.brand': 'Branding',
   },
 
   zh: {
@@ -411,8 +427,25 @@ const I18N = {
     'cta.title': '准备好打造你的品牌了吗？',
     'cta.sub': '立即获取专属报价与免费样品。',
     'cta.btn': '联系我们',
+
+    // 产品详情页
+    'pd.back': '返回产品',
+    'pd.specs': '规格参数',
+    'pd.features': '核心卖点',
+    'pd.custom': '定制与 OEM/ODM',
+    'pd.related': '相关产品',
+    'pd.overview': '产品概述',
+    'pd.whatsapp': 'WhatsApp 咨询',
+    'pd.quote': '获取报价',
+    'pd.notfound': '未找到产品',
+    'pd.notfound.d': '你访问的产品不存在。',
+    'pd.material': '材质', 'pd.size': '尺寸', 'pd.thickness': '厚度',
+    'pd.moq': '起订量', 'pd.colors': '颜色与印花', 'pd.cert': '合规认证', 'pd.packing': '包装',
+    'pd.custom.d': '全面支持 OEM/ODM：材质、尺寸、厚度、颜色、双色、logo 印刷、压印及包装均可定制。7 天按你的规格出实物样品。',
+    'pd.brand': '品牌定制',
   }
 };
+window.I18N = I18N;
 
 function applyLang(lang) {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
@@ -433,6 +466,7 @@ function applyLang(lang) {
   const btn = document.querySelector('.lang-btn');
   if (btn) btn.textContent = lang === 'zh' ? 'EN' : '中文';
   try { localStorage.setItem('siteLang', lang); } catch (e) {}
+  window.dispatchEvent(new Event('sanfan-langchange'));
 }
 
 const langBtn = document.querySelector('.lang-btn');

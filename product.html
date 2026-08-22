@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — SANFAN</title>
+  <meta name="description" content="SANFAN product detail — specifications, features and OEM/ODM customization." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/logo.jpg" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="nav-brand"><img src="assets/img/logo.jpg" alt="SANFAN" /><span>SAN<span class="accent">FAN</span></span></a>
+      <nav class="nav-links">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="products.html" data-i18n="nav.products">Products</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-btn" type="button">中文</button>
+        <a href="contact.html" class="btn btn-primary" data-i18n="nav.quote">Get a Quote</a>
+      </div>
+      <button class="menu-toggle" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <section class="hero" style="background:linear-gradient(120deg,var(--brand-ink),var(--brand));">
+    <div class="container hero-inner" style="padding:52px 0 30px;">
+      <nav class="breadcrumb">
+        <a href="products.html" data-i18n="pd.back">Back to Products</a>
+        <span class="bc-sep">/</span>
+        <span class="bc-cat" id="pd-breadcrumb">—</span>
+      </nav>
+      <h1 id="pd-title">Product</h1>
+    </div>
+  </section>
+
+  <!-- ===== Detail ===== -->
+  <section class="section">
+    <div class="container product-detail">
+      <div class="pd-gallery">
+        <div class="pd-main"><img id="pd-main-img" src="" alt="" /></div>
+        <div class="pd-thumbs" id="pd-thumbs"></div>
+      </div>
+      <div class="pd-info">
+        <p class="pd-desc" id="pd-desc"></p>
+        <div class="pd-actions">
+          <a class="btn btn-primary" href="contact.html" data-i18n="pd.quote">Request a Quote</a>
+          <a class="btn btn-ghost" id="pd-wa" href="#" data-i18n="pd.whatsapp">Chat on WhatsApp</a>
+        </div>
+        <div class="pd-specs">
+          <h3 data-i18n="pd.specs">Specifications</h3>
+          <table class="spec-table"><tbody id="pd-specs-body"></tbody></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Overview + Features ===== -->
+  <section class="section soft">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="pd.overview">Product Overview</div>
+        <h2 id="pd-overview-title">—</h2>
+      </div>
+      <p class="pd-overview" id="pd-overview"></p>
+      <h3 class="pd-features-title" data-i18n="pd.features">Key Features</h3>
+      <ul class="pd-features" id="pd-features"></ul>
+    </div>
+  </section>
+
+  <!-- ===== Customization ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="pd.brand">Branding</div>
+        <h2 data-i18n="pd.custom">Customization &amp; OEM/ODM</h2>
+      </div>
+      <p class="pd-custom" id="pd-custom" data-i18n="pd.custom.d"></p>
+    </div>
+  </section>
+
+  <!-- ===== Related ===== -->
+  <section class="section soft">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="pd.related">Related Products</h2>
+      </div>
+      <div class="prod-grid" id="pd-related"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <h2 data-i18n="cta.title">Ready to Build Your Brand?</h2>
+        <p data-i18n="cta.sub">Get a tailored quote and free samples today.</p>
+        <a href="contact.html" class="btn btn-light" data-i18n="cta.btn">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand"><img src="assets/img/logo.jpg" alt="SANFAN" /> <span>SAN<span style="color:var(--brand-2)">FAN</span></span></div>
+        <p style="font-size:14px;max-width:300px" data-i18n="f.tag">OEM / ODM yoga &amp; fitness manufacturer.</p>
+      </div>
+      <div><h5 data-i18n="foot.products">Products</h5><ul>
+        <li><a href="products.html#yoga" data-i18n="cat.yoga.title">Yoga Mats</a></li>
+        <li><a href="products.html#props" data-i18n="cat.props.title">Yoga Props &amp; Accessories</a></li>
+        <li><a href="products.html#rollers" data-i18n="cat.rollers.title">Foam Rollers &amp; Massage</a></li>
+        <li><a href="products.html#bands" data-i18n="cat.bands.title">Resistance Bands &amp; Pilates</a></li>
+        <li><a href="products.html#fitness" data-i18n="cat.fit.title">Fitness Equipment</a></li>
+      </ul></div>
+      <div><h5 data-i18n="foot.company">Company</h5><ul>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="about.html" data-i18n="process.title">Production Process</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul></div>
+      <div><h5 data-i18n="foot.contact">Contact</h5>
+        <div class="contact-line"><span data-i18n="foot.addr">Address</span>: No. 8 Haiguang Road, Yuejin Industrial Zone, Xibin Town, Jinjiang, Quanzhou, Fujian, China</div>
+        <div class="contact-line"><span data-i18n="foot.email">Email</span>: zenglinggun@gmail.com</div>
+        <div class="contact-line"><span data-i18n="foot.phone">WhatsApp</span>: +86 15959029082</div>
+      </div>
+    </div>
+    <div class="container footer-bottom" data-i18n="foot.copyright">© 2026 XIAMEN SANFAN Sports Products Co., Ltd. All rights reserved.</div>
+  </footer>
+
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/product.js"></script>
+</body>
+</html>
