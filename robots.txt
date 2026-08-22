@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.sanfanyoga.com/sitemap.xml
+Sitemap: https://sanfan-yoga-site.vercel.app/sitemap.xml
