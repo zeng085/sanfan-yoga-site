@@ -10,7 +10,7 @@ if (toggle && links) {
 const I18N = {
   en: {
     'nav.home': 'Home', 'nav.products': 'Products', 'nav.about': 'About',
-    'nav.contact': 'Contact', 'nav.quote': 'Get a Quote',
+    'nav.contact': 'Contact', 'nav.quote': 'Get a Quote', 'nav.blog': 'Blog',
 
     // Hero
     'hero.eyebrow': 'OEM / ODM Yoga & Fitness Manufacturer',
@@ -294,7 +294,7 @@ const I18N = {
 
   zh: {
     'nav.home': '首页', 'nav.products': '产品', 'nav.about': '关于',
-    'nav.contact': '联系', 'nav.quote': '获取报价',
+    'nav.contact': '联系', 'nav.quote': '获取报价', 'nav.blog': '博客',
 
     'hero.eyebrow': '瑜伽 & 健身器材 OEM / ODM 制造工厂',
     'hero.title': '福建三梵 — 你的瑜伽与健身器材直供工厂',
@@ -565,6 +565,8 @@ window.I18N = I18N;
 
 function applyLang(lang) {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.documentElement.classList.toggle('show-zh', lang === 'zh');
+  document.documentElement.classList.toggle('show-en', lang === 'en');
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (I18N[lang][key] != null) {

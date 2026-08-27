@@ -5,4 +5,11 @@
   <url><loc>https://sanfan-yoga-site.vercel.app/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://sanfan-yoga-site.vercel.app/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sanfan-yoga-site.vercel.app/faq.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sanfan-yoga-site.vercel.app/blog.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://sanfan-yoga-site.vercel.app/blog/tpe-vs-pu.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sanfan-yoga-site.vercel.app/blog/moq-explained.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sanfan-yoga-site.vercel.app/blog/compliance.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sanfan-yoga-site.vercel.app/blog/vet-factory.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sanfan-yoga-site.vercel.app/blog/7day-sampling.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sanfan-yoga-site.vercel.app/blog/custom-sizes.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
