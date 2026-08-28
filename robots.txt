@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sanfan-yoga-site.vercel.app/sitemap.xml
+LLMS-TXT: https://sanfan-yoga-site.vercel.app/llms.txt

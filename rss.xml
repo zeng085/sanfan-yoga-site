@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FUJIAN SANFAN — Yoga &amp; Fitness Sourcing Blog</title>
+    <link>https://sanfan-yoga-site.vercel.app/blog.html</link>
+    <description>Practical sourcing guides for brands, studios and importers buying yoga mats and fitness gear from China: materials, MOQ, US/EU compliance, factory vetting, sampling and custom specs.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sanfan-yoga-site.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TPE vs PU Rubber Yoga Mats: Which to Choose in 2026</title>
+      <link>https://sanfan-yoga-site.vercel.app/blog/tpe-vs-pu.html</link>
+      <guid isPermaLink="true">https://sanfan-yoga-site.vercel.app/blog/tpe-vs-pu.html</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Cost, grip, eco-profile and which material fits your brand and market.</description>
+    </item>
+    <item>
+      <title>Yoga Mat MOQ Explained: How Low Can You Go</title>
+      <link>https://sanfan-yoga-site.vercel.app/blog/moq-explained.html</link>
+      <guid isPermaLink="true">https://sanfan-yoga-site.vercel.app/blog/moq-explained.html</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <description>What 100-pcs really means for launching and testing a private label.</description>
+    </item>
+    <item>
+      <title>REACH, CA Prop 65 &amp; 6P: Yoga Mat Rules for US/EU</title>
+      <link>https://sanfan-yoga-site.vercel.app/blog/compliance.html</link>
+      <guid isPermaLink="true">https://sanfan-yoga-site.vercel.app/blog/compliance.html</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <description>The certifications your importer actually needs — and how we meet them.</description>
+    </item>
+    <item>
+      <title>How to Vet a Chinese Yoga Mat Factory Before Bulk</title>
+      <link>https://sanfan-yoga-site.vercel.app/blog/vet-factory.html</link>
+      <guid isPermaLink="true">https://sanfan-yoga-site.vercel.app/blog/vet-factory.html</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Factory vs trader, audits, red flags and what real proof looks like.</description>
+    </item>
+    <item>
+      <title>7-Day Sampling: Why Fast Prototyping Wins Brands</title>
+      <link>https://sanfan-yoga-site.vercel.app/blog/7day-sampling.html</link>
+      <guid isPermaLink="true">https://sanfan-yoga-site.vercel.app/blog/7day-sampling.html</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <description>How a one-week sample cycle de-risks your launch and beats competitors.</description>
+    </item>
+    <item>
+      <title>Custom Yoga Mat Sizes &amp; Thickness: A Buyer's Guide</title>
+      <link>https://sanfan-yoga-site.vercel.app/blog/custom-sizes.html</link>
+      <guid isPermaLink="true">https://sanfan-yoga-site.vercel.app/blog/custom-sizes.html</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Standard, wide, double-wide and non-standard specs — what's possible.</description>
+    </item>
+  </channel>
+</rss>
