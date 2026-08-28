@@ -136,6 +136,14 @@
       });
   }
 
+  // Redirect legacy ?id= URLs to the static, crawlable product page.
+  (function redirectToStatic() {
+    var id = getId();
+    if (id && PRODUCTS[id]) {
+      window.location.replace('products/' + encodeURIComponent(id) + '.html');
+    }
+  })();
+
   document.addEventListener('DOMContentLoaded', render);
   window.addEventListener('sanfan-langchange', render);
 })();
