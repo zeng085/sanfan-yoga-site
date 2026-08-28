@@ -43,6 +43,27 @@
     const desc = t(id + '.d') || '';
 
     document.title = title + ' — SANFAN';
+
+    // SEO: 按产品动态更新 canonical + Open Graph / Twitter Card
+    (function updateSeoMeta() {
+      var canon = location.origin + '/product.html?id=' + encodeURIComponent(id);
+      var imgAbs = p.img ? (p.img.indexOf('http') === 0 ? p.img : location.origin + '/' + p.img) : '';
+      function setMeta(selector, attr, val) {
+        var el = document.head.querySelector(selector);
+        if (el) el.setAttribute(attr, val);
+      }
+      setMeta('link[rel="canonical"]', 'href', canon);
+      setMeta('meta[property="og:url"]', 'content', canon);
+      setMeta('meta[property="og:title"]', 'content', title + ' — SANFAN');
+      setMeta('meta[name="twitter:title"]', 'content', title + ' — SANFAN');
+      setMeta('meta[property="og:description"]', 'content', desc);
+      setMeta('meta[name="twitter:description"]', 'content', desc);
+      if (imgAbs) {
+        setMeta('meta[property="og:image"]', 'content', imgAbs);
+        setMeta('meta[name="twitter:image"]', 'content', imgAbs);
+      }
+    })();
+
     document.getElementById('pd-title').textContent = title;
     document.getElementById('pd-desc').textContent = desc;
     document.getElementById('pd-breadcrumb').textContent = t('cat.' + p.cat + '.title') || '';
