@@ -182,6 +182,9 @@ function buildPage(id) {
   <title>${esc(enTitle)} — SANFAN Yoga & Fitness Manufacturer</title>
   <meta name="description" content="${esc(enDesc)}" />
   <link rel="canonical" href="${url}" />
+  <link rel="alternate" hreflang="en" href="${url}" />
+  <link rel="alternate" hreflang="zh" href="${url}" />
+  <link rel="alternate" hreflang="x-default" href="${url}" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="${esc(enTitle)} — SANFAN" />
   <meta property="og:description" content="${esc(enDesc)}" />
