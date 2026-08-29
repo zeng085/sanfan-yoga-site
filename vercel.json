@@ -1,7 +1,13 @@
 {
   "redirects": [
     {
-      "source": "https://sanfan-yoga-site.vercel.app/:path*",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "sanfan-yoga-site.vercel.app"
+        }
+      ],
       "destination": "https://fjsanfan.com/:path*",
       "permanent": true
     }
