@@ -1,0 +1,269 @@
+{
+  "generated_at": "2026-08-30 00:48:46",
+  "langs": {
+    "de": {
+      "pairs_total": 936,
+      "dim2": {
+        "checked": 936,
+        "bad": 4,
+        "samples": [
+          {
+            "src": "12,000㎡",
+            "dst": "12.000 ㎡",
+            "issues": [
+              "TERM_LOST:12,000㎡"
+            ]
+          },
+          {
+            "src": "With 600+ skilled workers and high-tech machines, we guarantee high-output, high-quality production and on-time delivery at competitive prices. Our service team",
+            "dst": "Mit mehr als 600 Facharbeitern und High-Tech-Maschinen garantieren wir eine leistungsstarke, qualitativ hochwertige Produktion und pünktliche Lieferung zu wettb",
+            "issues": [
+              "NUMBERS_CHANGED:['24', '600']->['600']"
+            ]
+          },
+          {
+            "src": "12,000㎡",
+            "dst": "12.000 ㎡",
+            "issues": [
+              "TERM_LOST:12,000㎡"
+            ]
+          },
+          {
+            "src": "Natural rubber base + PU anti-slip top\\n1830×610 / 1850×800 mm\\nMOQ on request",
+            "dst": "Naturkautschukbasis + PU Anti-Rutsch-Oberteil\\ n1830 ×610 / 1850× 800 mm\\nMOQ auf Anfrage",
+            "issues": [
+              "TERM_LOST:1830×610",
+              "TERM_LOST:1850×800 mm"
+            ]
+          }
+        ]
+      },
+      "dim3": {
+        "checked": 936,
+        "bad": 3,
+        "samples": [
+          {
+            "src": "12,000㎡",
+            "dst": "12.000 ㎡",
+            "issues": [
+              "WRONG_SCRIPT"
+            ]
+          },
+          {
+            "src": "BOSU-style balance dome",
+            "dst": "BOSU-Balance-Dome",
+            "issues": [
+              "LENGTH_RATIO_0.74"
+            ]
+          },
+          {
+            "src": "12,000㎡",
+            "dst": "12.000 ㎡",
+            "issues": [
+              "WRONG_SCRIPT"
+            ]
+          }
+        ]
+      },
+      "dim1": {
+        "checked": 0,
+        "avg_score": 0.0,
+        "bad": 0,
+        "samples": []
+      },
+      "dim4": {
+        "checked": 0,
+        "avg_score": 0.0,
+        "bad": 0,
+        "samples": []
+      }
+    },
+    "ja": {
+      "pairs_total": 500,
+      "dim2": {
+        "checked": 500,
+        "bad": 27,
+        "samples": [
+          {
+            "src": "1830×610 / 1830×800 / 1850×900 / 2000×1000 / 1850×1220 mm\\nThickness 4–12 mm\\nMOQ 100 pcs",
+            "dst": "1830 × 610/1830 × 800/1850 × 900/2000 × 1000/1850 ×1220 mm\\ n厚さ4 - 12 mm\\ nMOQ 100 pcs",
+            "issues": [
+              "TERM_LOST:1830×800",
+              "TERM_LOST:1850×900",
+              "TERM_LOST:2000×1000",
+              "TERM_LOST:1830×610",
+              "TERM_LOST:1850×1220 mm"
+            ]
+          },
+          {
+            "src": "Natural rubber base + PU anti-slip top\\n1830×610 / 1850×800 mm\\nMOQ on request",
+            "dst": "天然ゴムベース+ PU滑り止めトップ\\ n 1830 × 610/1850 ×800 mm\\ n要望に応じてMOQ",
+            "issues": [
+              "TERM_LOST:1830×610",
+              "TERM_LOST:1850×800 mm"
+            ]
+          },
+          {
+            "src": "High-density EVA\\n9×15×23 cm standard\\nMOQ 500 pcs",
+            "dst": "高密度EVA\\ n 9 × 15 ×23 cm標準\\ nMOQ 500 pcs",
+            "issues": [
+              "TERM_LOST:9×15×23 cm"
+            ]
+          },
+          {
+            "src": "25×7.5 to 45×14 cm\\nSmooth / wolf-tooth / solid\\nMOQ 500 pcs",
+            "dst": "25 × 7.5 ～ 45 ×14 cm\\ nスムース/ウルフトゥース/ソリッド\\ nMOQ 500 pcs",
+            "issues": [
+              "TERM_LOST:45×14 cm",
+              "TERM_LOST:25×7"
+            ]
+          },
+          {
+            "src": "Can you make non-standard sizes such as 1830×610×3 mm, wide or double-wide?",
+            "dst": "1830 × 610 ×3 mm、ワイドまたはダブルワイドなどの非標準サイズを作ることができますか？",
+            "issues": [
+              "TERM_LOST:1830×610×3 mm"
+            ]
+          },
+          {
+            "src": "Yes. Beyond standard 1830×610 mm we produce wide (80/122 cm) and double-wide formats, plus custom lengths and thicknesses. Send your dimensions and we confirm t",
+            "dst": "はい。標準の1830 ×610 mmを超えて、ワイド（ 80/122 cm ）とダブルワイドフォーマット、さらにカスタムの長さと厚さを製造しています。 寸法を送信して、ツーリングを確認します。",
+            "issues": [
+              "TERM_LOST:1830×610 mm"
+            ]
+          },
+          {
+            "src": "Can you develop a new product from my sample or design?",
+            "dst": "Can you develop a new product from my sample or design?",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "Absolutely. Our R&D team develops new items from your sample, sketch or concept — from material selection to final mass production, with a physical sample in ab",
+            "dst": "Absolutely. Our R&D team develops new items from your sample, sketch or concept — from material selection to final mass production, with a physical sample in ab",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "How fast can I get a sample and bulk production?",
+            "dst": "How fast can I get a sample and bulk production?",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "Physical samples are ready in about 7 days with your logo, color and packaging. Bulk lead time depends on order size and customization; we confirm a clear timel",
+            "dst": "Physical samples are ready in about 7 days with your logo, color and packaging. Bulk lead time depends on order size and customization; we confirm a clear timel",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "What is your monthly production capacity?",
+            "dst": "What is your monthly production capacity?",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "We produce 200,000+ yoga mats per month across 5 production lines, plus rollers, blocks, bags and apparel — enough to support both growing brands and large repe",
+            "dst": "We produce 200,000+ yoga mats per month across 5 production lines, plus rollers, blocks, bags and apparel — enough to support both growing brands and large repe",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "Do you ship to the US, EU or Australia? Which incoterms (FOB, EXW, DDP)?",
+            "dst": "Do you ship to the US, EU or Australia? Which incoterms (FOB, EXW, DDP)?",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "Yes, worldwide. We ship under FOB, EXW, CIF or DDP depending on your preference, and handle export documentation for smooth customs clearance.",
+            "dst": "Yes, worldwide. We ship under FOB, EXW, CIF or DDP depending on your preference, and handle export documentation for smooth customs clearance.",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "Can you ship directly to Amazon FBA warehouses?",
+            "dst": "Can you ship directly to Amazon FBA warehouses?",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "Yes. We prepare FBA-compliant labeling, cartons and paperwork and can ship directly to Amazon fulfillment centers in the US, EU and other regions.",
+            "dst": "Yes. We prepare FBA-compliant labeling, cartons and paperwork and can ship directly to Amazon fulfillment centers in the US, EU and other regions.",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "Why source yoga mats from Fujian, China?",
+            "dst": "Why source yoga mats from Fujian, China?",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "Fujian (Jinjiang/Quanzhou) is a mature sports-goods manufacturing hub with deep supply chains, skilled labor and strong export logistics — shorter lead times an",
+            "dst": "Fujian (Jinjiang/Quanzhou) is a mature sports-goods manufacturing hub with deep supply chains, skilled labor and strong export logistics — shorter lead times an",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "What does a vertically integrated factory give a buyer?",
+            "dst": "What does a vertically integrated factory give a buyer?",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          },
+          {
+            "src": "Vertical integration means R&D, foaming, cutting, molding, printing and QC sit under one roof. You get faster sampling, tighter quality control and one accounta",
+            "dst": "Vertical integration means R&D, foaming, cutting, molding, printing and QC sit under one roof. You get faster sampling, tighter quality control and one accounta",
+            "issues": [
+              "UNTRANSLATED_IDENTICAL"
+            ]
+          }
+        ]
+      },
+      "dim3": {
+        "checked": 500,
+        "bad": 2,
+        "samples": [
+          {
+            "src": "About — FUJIAN SANFAN Sports Products Co., Ltd.",
+            "dst": "会社概要— FUJIAN SANFAN Sports Products Co., Ltd.",
+            "issues": [
+              "LOOKS_LIKE_ENGLISH"
+            ]
+          },
+          {
+            "src": "1830×610 / 1830×800 / 1850×900 / 2000×1000 / 1850×1220 mm\\nThickness 4–12 mm\\nMOQ 100 pcs",
+            "dst": "1830 × 610/1830 × 800/1850 × 900/2000 × 1000/1850 ×1220 mm\\ n厚さ4 - 12 mm\\ nMOQ 100 pcs",
+            "issues": [
+              "LOOKS_LIKE_ENGLISH"
+            ]
+          }
+        ]
+      },
+      "dim1": {
+        "checked": 0,
+        "avg_score": 0.0,
+        "bad": 0,
+        "samples": []
+      },
+      "dim4": {
+        "checked": 0,
+        "avg_score": 0.0,
+        "bad": 0,
+        "samples": []
+      }
+    }
+  }
+}

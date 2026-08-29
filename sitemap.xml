@@ -1,10 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://fjsanfan.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://fjsanfan.com/products.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fjsanfan.com/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://fjsanfan.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://fjsanfan.com/faq.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://fjsanfan.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/about.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/faq.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/contact.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/products/ym1.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products/ym1.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products/ym1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products/ym1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products/ym1.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/products/ym2.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products/ym2.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products/ym2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products/ym2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products/ym2.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/products/ym3.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products/ym3.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products/ym3.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products/ym3.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products/ym3.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/products/fr1.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products/fr1.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products/fr1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products/fr1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products/fr1.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/products/rb2.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products/rb2.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products/rb2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products/rb2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products/rb2.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/about.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/faq.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/contact.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/products/ym1.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products/ym1.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products/ym1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products/ym1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products/ym1.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/products/ym2.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products/ym2.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products/ym2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products/ym2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products/ym2.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/products/ym3.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products/ym3.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products/ym3.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products/ym3.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products/ym3.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/products/fr1.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products/fr1.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products/fr1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products/fr1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products/fr1.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/products/rb2.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products/rb2.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products/rb2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products/rb2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products/rb2.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/about.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fjsanfan.com/products.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/products.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url><loc>https://fjsanfan.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/blog/tpe-vs-pu.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://fjsanfan.com/blog/moq-explained.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
@@ -13,9 +225,6 @@
   <url><loc>https://fjsanfan.com/blog/7day-sampling.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://fjsanfan.com/blog/custom-sizes.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://fjsanfan.com/rss.xml</loc><changefreq>daily</changefreq><priority>0.4</priority></url>
-  <url><loc>https://fjsanfan.com/products/ym1.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://fjsanfan.com/products/ym2.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://fjsanfan.com/products/ym3.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://fjsanfan.com/products/ym4.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://fjsanfan.com/products/ym5.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://fjsanfan.com/products/ym6.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -26,13 +235,11 @@
   <url><loc>https://fjsanfan.com/products/pr3.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/products/pr4.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/products/pr5.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://fjsanfan.com/products/fr1.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/products/fr2.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/products/fr3.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/products/fr4.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/products/fr5.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/products/rb1.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://fjsanfan.com/products/rb2.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/products/rb3.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/products/rb4.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://fjsanfan.com/products/fi1.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>

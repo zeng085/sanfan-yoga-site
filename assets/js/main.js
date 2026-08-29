@@ -594,6 +594,15 @@ if (langBtn) {
     applyLang(cur === 'zh' ? 'en' : 'zh');
   });
 }
+// 多语言页面(/de/ /ja/ /ko/)的语言切换器：中文走同页 JS 切换，需先写入偏好再跳转
+document.querySelectorAll('[data-setlang]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    try { localStorage.setItem('siteLang', a.getAttribute('data-setlang')); } catch (err) {}
+    const href = a.getAttribute('href');
+    if (href) { location.href = href; }
+  });
+});
 const saved = (function () { try { return localStorage.getItem('siteLang'); } catch (e) { return null; } })();
 applyLang(saved === 'zh' ? 'zh' : 'en');
 

@@ -93,6 +93,18 @@ a { color: inherit; text-decoration: none; }
   border-radius: 999px; padding: 7px 14px; font-weight: 600; font-size: 13px; cursor: pointer;
 }
 .lang-btn:hover { border-color: var(--brand); color: var(--brand); }
+/* 多语言切换器（分语言 URL 版本） */
+.lang-switch { display: flex; align-items: center; gap: 2px; border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 3px; }
+.lang-switch a {
+  padding: 4px 9px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  color: var(--muted); text-decoration: none; line-height: 1.4; white-space: nowrap;
+}
+.lang-switch a:hover { color: var(--brand); background: rgba(0,0,0,.04); }
+.lang-switch a.active { background: var(--brand); color: #fff; }
+@media (max-width: 720px) {
+  .lang-switch { padding: 2px; }
+  .lang-switch a { padding: 3px 6px; font-size: 11px; }
+}
 .menu-toggle { display: none; background: none; border: 0; font-size: 26px; cursor: pointer; color: var(--ink); }
 
 /* ---------- Hero ---------- */
