@@ -15,7 +15,20 @@ import os, re, json, time, hashlib, threading
 import urllib.parse, urllib.request, urllib.error
 
 CACHE_PATH = os.path.join(os.path.dirname(__file__), "cache", "translations.json")
-DEEPL_KEY = os.environ.get("DEEPL_API_KEY", "DEEPL_KEY_PLACEHOLDER")
+
+
+def _load_deepl_key():
+    """DeepL key 只从环境变量或 .deepl_key 读取，禁止硬编码进代码（会被 GitHub 密钥扫描拦截推送）"""
+    k = os.environ.get("DEEPL_API_KEY", "").strip()
+    if k:
+        return k
+    kf = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".deepl_key")
+    if os.path.exists(kf):
+        return open(kf, encoding="utf-8").read().strip()
+    return ""
+
+
+DEEPL_KEY = _load_deepl_key()
 # DeepL Free key 以 :fx 结尾，必须走 api-free 域名
 DEEPL_URL = ("https://api-free.deepl.com/v2/translate"
              if DEEPL_KEY.endswith(":fx") else "https://api.deepl.com/v2/translate")

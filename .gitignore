@@ -1,19 +1,6 @@
-# OS / editor
+# 密钥与本地缓存，禁止入库
+i18n_build/.deepl_key
+i18n_build/.indexnow_key
+i18n_build/cache/
+i18n_build/_pending/
 .DS_Store
-Thumbs.db
-*.log
-
-# node (if you later add build tooling)
-node_modules/
-dist/
-.next/
-
-# local secrets
-.env
-.env.local
-
-# WorkBuddy project-local memory (not for public repo)
-.workbuddy/
-
-# Local test screenshots / outputs
-outputs/
