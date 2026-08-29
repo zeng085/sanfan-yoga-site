@@ -192,10 +192,15 @@ def main():
 
 def write_md(r):
     L = {"de": "德语 DE", "ja": "日语 JA", "ko": "韩语 KO"}
+    offline_any = any(d["dim1"]["checked"] == 0 for d in r["langs"].values())
     lines = ["# 三梵独立站 · 多语言翻译质量验证报告", "",
              "生成时间：%s" % r["generated_at"], "",
-             "翻译引擎：MyMemory Public Translation API（本机环境唯一稳定可达的公开翻译 API）", "",
-             "## 验证方法（4 个独立维度）", "",
+             "翻译引擎：MyMemory Public Translation API（本机环境唯一稳定可达的公开翻译 API）", ""]
+    if offline_any:
+        lines += ["> ⚠️ 本次为 `--local` 模式：DIM-1 回译与 DIM-4 交叉校验需要调用翻译 API，"
+                  "因 MyMemory 免费配额当日耗尽而跳过；DIM-2 与 DIM-3 为**全量本地校验**，结果不受影响。"
+                  "配额恢复后重跑（不带 `--local`）即可补齐另两个维度。", ""]
+    lines += ["## 验证方法（4 个独立维度）", "",
              "| 维度 | 方法 | 检测什么 | 是否需要网络 |",
              "|---|---|---|---|",
              "| DIM-1 回译语义一致性 | 译文 → 回翻英文 → 与原文语义比对（token Jaccard 60% + 序列模糊匹配 40%） | 语义是否跑偏/漏译 | 是（抽样） |",

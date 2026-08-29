@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30 00:48:46",
+  "generated_at": "2026-08-30 00:54:25",
   "langs": {
     "de": {
       "pairs_total": 936,
@@ -79,10 +79,10 @@
       }
     },
     "ja": {
-      "pairs_total": 500,
+      "pairs_total": 412,
       "dim2": {
-        "checked": 500,
-        "bad": 27,
+        "checked": 412,
+        "bad": 4,
         "samples": [
           {
             "src": "1830×610 / 1830×800 / 1850×900 / 2000×1000 / 1850×1220 mm\\nThickness 4–12 mm\\nMOQ 100 pcs",
@@ -90,8 +90,8 @@
             "issues": [
               "TERM_LOST:1830×800",
               "TERM_LOST:1850×900",
-              "TERM_LOST:2000×1000",
               "TERM_LOST:1830×610",
+              "TERM_LOST:2000×1000",
               "TERM_LOST:1850×1220 mm"
             ]
           },
@@ -117,123 +117,11 @@
               "TERM_LOST:45×14 cm",
               "TERM_LOST:25×7"
             ]
-          },
-          {
-            "src": "Can you make non-standard sizes such as 1830×610×3 mm, wide or double-wide?",
-            "dst": "1830 × 610 ×3 mm、ワイドまたはダブルワイドなどの非標準サイズを作ることができますか？",
-            "issues": [
-              "TERM_LOST:1830×610×3 mm"
-            ]
-          },
-          {
-            "src": "Yes. Beyond standard 1830×610 mm we produce wide (80/122 cm) and double-wide formats, plus custom lengths and thicknesses. Send your dimensions and we confirm t",
-            "dst": "はい。標準の1830 ×610 mmを超えて、ワイド（ 80/122 cm ）とダブルワイドフォーマット、さらにカスタムの長さと厚さを製造しています。 寸法を送信して、ツーリングを確認します。",
-            "issues": [
-              "TERM_LOST:1830×610 mm"
-            ]
-          },
-          {
-            "src": "Can you develop a new product from my sample or design?",
-            "dst": "Can you develop a new product from my sample or design?",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "Absolutely. Our R&D team develops new items from your sample, sketch or concept — from material selection to final mass production, with a physical sample in ab",
-            "dst": "Absolutely. Our R&D team develops new items from your sample, sketch or concept — from material selection to final mass production, with a physical sample in ab",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "How fast can I get a sample and bulk production?",
-            "dst": "How fast can I get a sample and bulk production?",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "Physical samples are ready in about 7 days with your logo, color and packaging. Bulk lead time depends on order size and customization; we confirm a clear timel",
-            "dst": "Physical samples are ready in about 7 days with your logo, color and packaging. Bulk lead time depends on order size and customization; we confirm a clear timel",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "What is your monthly production capacity?",
-            "dst": "What is your monthly production capacity?",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "We produce 200,000+ yoga mats per month across 5 production lines, plus rollers, blocks, bags and apparel — enough to support both growing brands and large repe",
-            "dst": "We produce 200,000+ yoga mats per month across 5 production lines, plus rollers, blocks, bags and apparel — enough to support both growing brands and large repe",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "Do you ship to the US, EU or Australia? Which incoterms (FOB, EXW, DDP)?",
-            "dst": "Do you ship to the US, EU or Australia? Which incoterms (FOB, EXW, DDP)?",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "Yes, worldwide. We ship under FOB, EXW, CIF or DDP depending on your preference, and handle export documentation for smooth customs clearance.",
-            "dst": "Yes, worldwide. We ship under FOB, EXW, CIF or DDP depending on your preference, and handle export documentation for smooth customs clearance.",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "Can you ship directly to Amazon FBA warehouses?",
-            "dst": "Can you ship directly to Amazon FBA warehouses?",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "Yes. We prepare FBA-compliant labeling, cartons and paperwork and can ship directly to Amazon fulfillment centers in the US, EU and other regions.",
-            "dst": "Yes. We prepare FBA-compliant labeling, cartons and paperwork and can ship directly to Amazon fulfillment centers in the US, EU and other regions.",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "Why source yoga mats from Fujian, China?",
-            "dst": "Why source yoga mats from Fujian, China?",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "Fujian (Jinjiang/Quanzhou) is a mature sports-goods manufacturing hub with deep supply chains, skilled labor and strong export logistics — shorter lead times an",
-            "dst": "Fujian (Jinjiang/Quanzhou) is a mature sports-goods manufacturing hub with deep supply chains, skilled labor and strong export logistics — shorter lead times an",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "What does a vertically integrated factory give a buyer?",
-            "dst": "What does a vertically integrated factory give a buyer?",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
-          },
-          {
-            "src": "Vertical integration means R&D, foaming, cutting, molding, printing and QC sit under one roof. You get faster sampling, tighter quality control and one accounta",
-            "dst": "Vertical integration means R&D, foaming, cutting, molding, printing and QC sit under one roof. You get faster sampling, tighter quality control and one accounta",
-            "issues": [
-              "UNTRANSLATED_IDENTICAL"
-            ]
           }
         ]
       },
       "dim3": {
-        "checked": 500,
+        "checked": 412,
         "bad": 2,
         "samples": [
           {
