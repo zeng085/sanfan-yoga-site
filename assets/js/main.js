@@ -594,13 +594,25 @@ if (langBtn) {
     applyLang(cur === 'zh' ? 'en' : 'zh');
   });
 }
-// 多语言页面(/de/ /ja/ /ko/)的语言切换器：中文走同页 JS 切换，需先写入偏好再跳转
-document.querySelectorAll('[data-setlang]').forEach(a => {
-  a.addEventListener('click', e => {
+// 语言切换器 data-setlang：
+//  - 带 href（如 /de/ /ja/ /ko/ 页面上的"中文"）→ 写入偏好后跳转
+//  - 不带 href（英文页上的"中文"按钮）→ 直接同页切换，不跳转
+document.querySelectorAll('[data-setlang]').forEach(el => {
+  el.addEventListener('click', e => {
     e.preventDefault();
-    try { localStorage.setItem('siteLang', a.getAttribute('data-setlang')); } catch (err) {}
-    const href = a.getAttribute('href');
-    if (href) { location.href = href; }
+    const L = el.getAttribute('data-setlang');
+    try { localStorage.setItem('siteLang', L); } catch (err) {}
+    const href = el.getAttribute('href');
+    if (href) {
+      location.href = href;
+    } else {
+      applyLang(L);
+      // 同步高亮：当前项标记为 active
+      document.querySelectorAll('.lang-switch a, .lang-switch button').forEach(x => {
+        x.classList.remove('active');
+      });
+      el.classList.add('active');
+    }
   });
 });
 const saved = (function () { try { return localStorage.getItem('siteLang'); } catch (e) { return null; } })();

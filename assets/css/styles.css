@@ -99,8 +99,16 @@ a { color: inherit; text-decoration: none; }
   padding: 4px 9px; border-radius: 999px; font-size: 12px; font-weight: 600;
   color: var(--muted); text-decoration: none; line-height: 1.4; white-space: nowrap;
 }
-.lang-switch a:hover { color: var(--brand); background: rgba(0,0,0,.04); }
-.lang-switch a.active { background: var(--brand); color: #fff; }
+.lang-switch a:hover,
+.lang-switch button:hover { color: var(--brand); background: rgba(0,0,0,.04); }
+.lang-switch a.active,
+.lang-switch button.active { background: var(--brand); color: #fff; }
+/* 英文页的"中文"是同页切换按钮（非链接），需与 <a> 视觉一致 */
+.lang-switch button {
+  border: 0; background: none; cursor: pointer; font-family: inherit;
+  padding: 4px 9px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  color: var(--muted); line-height: 1.4; white-space: nowrap;
+}
 @media (max-width: 720px) {
   .lang-switch { padding: 2px; }
   .lang-switch a { padding: 3px 6px; font-size: 11px; }
@@ -200,6 +208,8 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Product gallery ---------- */
 .gallery { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .g-item {
+  /* 图库项已改为 <a>，需显式声明为块级并去掉链接默认样式 */
+  display: block; color: inherit; text-decoration: none;
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm);
   overflow: hidden; transition: .22s ease;
 }
