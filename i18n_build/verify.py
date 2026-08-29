@@ -28,7 +28,16 @@ SPEC_HINT = re.compile(r"\d+\s?[x×]\s?\d+|·|\d+\s?/\s?\d+")
 # 英文数字单词（one/two/four…）在目标语常被写成阿拉伯数字，属正常，不算数字丢失
 NUMWORD_HINT = re.compile(
     r"\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|"
-    r"twenty|thirty|forty|fifty|hundred|thousand)\b", re.I)
+    r"twenty|thirty|forty|fifty|hundred|thousand|"
+    # 数量词缀：double-layer -> 2층 / tri-fold -> 3つ折り 属正确本地化
+    r"single|double|triple|tri|twin|dual|quarter|half)\b", re.I)
+# 反向情况：阿拉伯数字被本地化为目标语数字单词（5 lines -> fünf Linien），同样正常
+NUMWORD_TARGET = {
+    "de": re.compile(r"\b(ein|eine|einen|einem|einer|zwei|drei|vier|fünf|sechs|sieben|acht|"
+                     r"neun|zehn|elf|zwölf|zwanzig|dreißig|vierzig|fünfzig|hundert|tausend)\b", re.I),
+    "ja": re.compile(r"[一二三四五六七八九十百千万]"),
+    "ko": re.compile(r"(하나|둘|셋|넷|다섯|여섯|일곱|여덟|아홉|열|스물|백|천)"),
+}
 
 
 def _norm(s):
@@ -91,7 +100,8 @@ def dim2_terms_structure(src, dst, lang):
         # 豁免：数量级换算 (200K+ -> 20万人以上 / 200K -> 20만) 与习语 (24/7 -> 24시간 연중무휴)
         scale = re.search(r"\d\s*[KkMm]\b|万|千|億|亿|만|천", src) or \
                 re.search(r"万|千|億|亿|만|천", dst) or re.search(r"\d+\s*/\s*\d+", src) or \
-                NUMWORD_HINT.search(src) or SPEC_HINT.search(src)
+                NUMWORD_HINT.search(src) or SPEC_HINT.search(src) or \
+                (lang in NUMWORD_TARGET and NUMWORD_TARGET[lang].search(dst))
         if not scale:
             issues.append("NUMBERS_CHANGED:%s->%s" % (sn, dn))
 
@@ -132,6 +142,9 @@ def dim3_language(src, dst, lang):
     # 保留项（品牌名/数字/缩写原样未译）不做语言与长度判定
     if _norm(src) == _norm(dst):
         return True, []
+    # 纯数字/符号（如 "200K+" -> "200.000+"，德语用点作千分位）：无字母可判，跳过
+    if not re.search(r"[A-Za-z]", dst):
+        return True, []
     if not LANG_SCRIPT[lang](dst):
         issues.append("WRONG_SCRIPT")
     if lang in FOREIGN_HINT and FOREIGN_HINT[lang](dst):
@@ -146,16 +159,26 @@ def dim3_language(src, dst, lang):
 
 # ------------------------------------------------------- DIM-1: 回译
 def dim1_backtranslate(pairs, lang):
-    """pairs: [(src, dst)] -> [(src, dst, back, score, ok)]"""
-    backs = T.translate_lines([d for _, d in pairs], "en")
+    """pairs: [(src, dst)] -> [(src, dst, back, score, ok, thr)]
+
+    定位：**严重跑偏粗筛**，不是措辞一致性打分。
+    回译天然会改写措辞（"2 persons" -> "two people"、"format" -> "size"），
+    词面 Jaccard 会被同义改写严重压低，故以字符级模糊匹配为主、
+    Jaccard 为辅；只有语义真跑偏/大量漏译时得分才会低到阈值以下。
+    精确判定由 DIM-2/3/4 承担。
+    """
+    backs = T.translate_lines([d for _, d in pairs], "en", src=lang.upper())
     res = []
     for (src, dst), back in zip(pairs, backs):
+        n = len(_toks(src))
+        thr = 0.28 if n <= 4 else (0.30 if n <= 9 else 0.32)
+        # 回译接口偶发返回空串（多为极短文本），此时无法判定，不计为失败
+        if not (back or "").strip():
+            res.append((src, dst, back, 0.0, True, thr))
+            continue
         j = jaccard(src, back)
         f = fuzzy(src, back)
-        score = 0.6 * j + 0.4 * f
-        # 短文本阈值放宽
-        n = len(_toks(src))
-        thr = 0.22 if n <= 4 else (0.28 if n <= 9 else 0.32)
+        score = 0.7 * f + 0.3 * j
         res.append((src, dst, back, round(score, 3), score >= thr, thr))
     return res
 

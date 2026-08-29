@@ -1,39 +1,148 @@
 {
-  "generated_at": "2026-08-30 00:54:25",
+  "generated_at": "2026-08-30 01:25:45",
   "langs": {
     "de": {
+      "pairs_total": 936,
+      "dim2": {
+        "checked": 936,
+        "bad": 1,
+        "samples": [
+          {
+            "src": "Tell us what you need — we reply within 1 business day.",
+            "dst": "Teilen Sie uns mit, was Sie benötigen – wir antworten innerhalb eines Werktags.",
+            "issues": [
+              "NUMBERS_CHANGED:['1']->[]"
+            ]
+          }
+        ]
+      },
+      "dim3": {
+        "checked": 936,
+        "bad": 1,
+        "samples": [
+          {
+            "src": "Cardio stepper machine",
+            "dst": "Cardio-Stepper",
+            "issues": [
+              "LENGTH_RATIO_0.64"
+            ]
+          }
+        ]
+      },
+      "dim1": {
+        "checked": 110,
+        "avg_score": 0.7486,
+        "bad": 2,
+        "samples": [
+          {
+            "src": "Third-party tested",
+            "dst": "Von einer unabhängigen Stelle geprüft",
+            "back": "Audited by an independent body",
+            "score": 0.117,
+            "threshold": 0.28
+          },
+          {
+            "src": "Fujian (Jinjiang/Quanzhou) is a mature sports-goods manufacturing hub with deep supply chains, skilled labor and strong export logistics — shorter lead times an",
+            "dst": "Fujian (Jinjiang/Quanzhou) ist ein etablierter Produktionsstandort für Sportartikel mit gut ausgebauten Lieferketten, qualifizierten Arbeitskräften und einer le",
+            "back": "Fujian (Jinjiang/Quanzhou) is a well-established manufacturing hub for sporting goods, with well-developed supply chains, a skilled workforce, and efficient exp",
+            "score": 0.254,
+            "threshold": 0.32
+          }
+        ]
+      },
+      "dim4": {
+        "checked": 25,
+        "avg_score": 1.0,
+        "bad": 0,
+        "samples": []
+      }
+    },
+    "ja": {
+      "pairs_total": 936,
+      "dim2": {
+        "checked": 936,
+        "bad": 0,
+        "samples": []
+      },
+      "dim3": {
+        "checked": 936,
+        "bad": 4,
+        "samples": [
+          {
+            "src": "ISO 9001, SGS, BSCI, 1688 Super Factory and Made-in-China Audited.",
+            "dst": "ISO 9001、SGS、BSCI、1688 Super Factory、およびMade-in-China Audited。",
+            "issues": [
+              "LOOKS_LIKE_ENGLISH"
+            ]
+          },
+          {
+            "src": "FUJIAN SANFAN Blog",
+            "dst": "FUJIAN SANFAN ブログ",
+            "issues": [
+              "LOOKS_LIKE_ENGLISH"
+            ]
+          },
+          {
+            "src": "ISO 9001, SGS, BSCI, 1688 Super Factory and Made-in-China Audited.",
+            "dst": "ISO 9001、SGS、BSCI、1688 Super Factory、およびMade-in-China Audited。",
+            "issues": [
+              "LOOKS_LIKE_ENGLISH"
+            ]
+          },
+          {
+            "src": "ISO 9001, SGS, BSCI, 1688 Super Factory and Made-in-China Audited.",
+            "dst": "ISO 9001、SGS、BSCI、1688 Super Factory、およびMade-in-China Audited。",
+            "issues": [
+              "LOOKS_LIKE_ENGLISH"
+            ]
+          }
+        ]
+      },
+      "dim1": {
+        "checked": 110,
+        "avg_score": 0.7654,
+        "bad": 0,
+        "samples": []
+      },
+      "dim4": {
+        "checked": 25,
+        "avg_score": 1.0,
+        "bad": 0,
+        "samples": []
+      }
+    },
+    "ko": {
       "pairs_total": 936,
       "dim2": {
         "checked": 936,
         "bad": 4,
         "samples": [
           {
-            "src": "12,000㎡",
-            "dst": "12.000 ㎡",
+            "src": "Third-party tested",
+            "dst": "제3자 기관에서 테스트 완료",
             "issues": [
-              "TERM_LOST:12,000㎡"
+              "NUMBERS_CHANGED:[]->['3']"
             ]
           },
           {
-            "src": "With 600+ skilled workers and high-tech machines, we guarantee high-output, high-quality production and on-time delivery at competitive prices. Our service team",
-            "dst": "Mit mehr als 600 Facharbeitern und High-Tech-Maschinen garantieren wir eine leistungsstarke, qualitativ hochwertige Produktion und pünktliche Lieferung zu wettb",
+            "src": "Third-party tested",
+            "dst": "제3자 기관에서 테스트 완료",
             "issues": [
-              "NUMBERS_CHANGED:['24', '600']->['600']"
+              "NUMBERS_CHANGED:[]->['3']"
             ]
           },
           {
-            "src": "12,000㎡",
-            "dst": "12.000 ㎡",
+            "src": "Third-party tested",
+            "dst": "제3자 기관에서 테스트 완료",
             "issues": [
-              "TERM_LOST:12,000㎡"
+              "NUMBERS_CHANGED:[]->['3']"
             ]
           },
           {
-            "src": "Natural rubber base + PU anti-slip top\\n1830×610 / 1850×800 mm\\nMOQ on request",
-            "dst": "Naturkautschukbasis + PU Anti-Rutsch-Oberteil\\ n1830 ×610 / 1850× 800 mm\\nMOQ auf Anfrage",
+            "src": "We never share your information.",
+            "dst": "당사는 귀하의 정보를 절대 제3자에게 제공하지 않습니다.",
             "issues": [
-              "TERM_LOST:1830×610",
-              "TERM_LOST:1850×800 mm"
+              "NUMBERS_CHANGED:[]->['3']"
             ]
           }
         ]
@@ -43,97 +152,22 @@
         "bad": 3,
         "samples": [
           {
-            "src": "12,000㎡",
-            "dst": "12.000 ㎡",
-            "issues": [
-              "WRONG_SCRIPT"
-            ]
-          },
-          {
-            "src": "BOSU-style balance dome",
-            "dst": "BOSU-Balance-Dome",
-            "issues": [
-              "LENGTH_RATIO_0.74"
-            ]
-          },
-          {
-            "src": "12,000㎡",
-            "dst": "12.000 ㎡",
-            "issues": [
-              "WRONG_SCRIPT"
-            ]
-          }
-        ]
-      },
-      "dim1": {
-        "checked": 0,
-        "avg_score": 0.0,
-        "bad": 0,
-        "samples": []
-      },
-      "dim4": {
-        "checked": 0,
-        "avg_score": 0.0,
-        "bad": 0,
-        "samples": []
-      }
-    },
-    "ja": {
-      "pairs_total": 412,
-      "dim2": {
-        "checked": 412,
-        "bad": 4,
-        "samples": [
-          {
-            "src": "1830×610 / 1830×800 / 1850×900 / 2000×1000 / 1850×1220 mm\\nThickness 4–12 mm\\nMOQ 100 pcs",
-            "dst": "1830 × 610/1830 × 800/1850 × 900/2000 × 1000/1850 ×1220 mm\\ n厚さ4 - 12 mm\\ nMOQ 100 pcs",
-            "issues": [
-              "TERM_LOST:1830×800",
-              "TERM_LOST:1850×900",
-              "TERM_LOST:1830×610",
-              "TERM_LOST:2000×1000",
-              "TERM_LOST:1850×1220 mm"
-            ]
-          },
-          {
-            "src": "Natural rubber base + PU anti-slip top\\n1830×610 / 1850×800 mm\\nMOQ on request",
-            "dst": "天然ゴムベース+ PU滑り止めトップ\\ n 1830 × 610/1850 ×800 mm\\ n要望に応じてMOQ",
-            "issues": [
-              "TERM_LOST:1830×610",
-              "TERM_LOST:1850×800 mm"
-            ]
-          },
-          {
-            "src": "High-density EVA\\n9×15×23 cm standard\\nMOQ 500 pcs",
-            "dst": "高密度EVA\\ n 9 × 15 ×23 cm標準\\ nMOQ 500 pcs",
-            "issues": [
-              "TERM_LOST:9×15×23 cm"
-            ]
-          },
-          {
-            "src": "25×7.5 to 45×14 cm\\nSmooth / wolf-tooth / solid\\nMOQ 500 pcs",
-            "dst": "25 × 7.5 ～ 45 ×14 cm\\ nスムース/ウルフトゥース/ソリッド\\ nMOQ 500 pcs",
-            "issues": [
-              "TERM_LOST:45×14 cm",
-              "TERM_LOST:25×7"
-            ]
-          }
-        ]
-      },
-      "dim3": {
-        "checked": 412,
-        "bad": 2,
-        "samples": [
-          {
-            "src": "About — FUJIAN SANFAN Sports Products Co., Ltd.",
-            "dst": "会社概要— FUJIAN SANFAN Sports Products Co., Ltd.",
+            "src": "ISO 9001, SGS, BSCI, 1688 Super Factory and Made-in-China Audited.",
+            "dst": "ISO 9001, SGS, BSCI, 1688 Super Factory 및 Made-in-China Audited.",
             "issues": [
               "LOOKS_LIKE_ENGLISH"
             ]
           },
           {
-            "src": "1830×610 / 1830×800 / 1850×900 / 2000×1000 / 1850×1220 mm\\nThickness 4–12 mm\\nMOQ 100 pcs",
-            "dst": "1830 × 610/1830 × 800/1850 × 900/2000 × 1000/1850 ×1220 mm\\ n厚さ4 - 12 mm\\ nMOQ 100 pcs",
+            "src": "ISO 9001, SGS, BSCI, 1688 Super Factory and Made-in-China Audited.",
+            "dst": "ISO 9001, SGS, BSCI, 1688 Super Factory 및 Made-in-China Audited.",
+            "issues": [
+              "LOOKS_LIKE_ENGLISH"
+            ]
+          },
+          {
+            "src": "ISO 9001, SGS, BSCI, 1688 Super Factory and Made-in-China Audited.",
+            "dst": "ISO 9001, SGS, BSCI, 1688 Super Factory 및 Made-in-China Audited.",
             "issues": [
               "LOOKS_LIKE_ENGLISH"
             ]
@@ -141,14 +175,14 @@
         ]
       },
       "dim1": {
-        "checked": 0,
-        "avg_score": 0.0,
+        "checked": 110,
+        "avg_score": 0.7796,
         "bad": 0,
         "samples": []
       },
       "dim4": {
-        "checked": 0,
-        "avg_score": 0.0,
+        "checked": 25,
+        "avg_score": 1.0,
         "bad": 0,
         "samples": []
       }
