@@ -63,7 +63,7 @@ your own logo. A real factory can do it; a trader buys time. We run TPE, PU
 and natural rubber lines at MOQ 100 pcs, certified REACH / CA Prop 65 / ISO9001.
 
 Happy to expand or jump on a call. Link for attribution:
-https://sanfan-yoga-site.vercel.app
+https://fjsanfan.com
 
 Best,
 [Name] | Fujian SANFAN Yoga Products
@@ -83,7 +83,7 @@ label for 12 years.
 One underreported point: "non-toxic" claims need REACH SVHC + CA Prop 65
 paperwork behind them, or they're just marketing.
 
-Attribution: https://sanfan-yoga-site.vercel.app
+Attribution: https://fjsanfan.com
 
 [Name] | Fujian SANFAN Yoga Products
 ```

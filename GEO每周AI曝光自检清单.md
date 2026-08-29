@@ -31,7 +31,7 @@
 - **强化问法**（更贴近采购决策）：在词后加 `recommend` / `list top 5`，例如 `list top 5 low MOQ yoga mat factory`
 - **看完 AI 回答，盯住这几样**：是否出现
   - 品牌词 `SANFAN` / `三梵` / `Fujian`
-  - 我们的域名 `sanfan-yoga-site.vercel.app`
+  - 我们的域名 `fjsanfan.com`
   - 我们的博客或 FAQ 标题（如 "Yoga Mat MOQ Explained"）
 
 ---

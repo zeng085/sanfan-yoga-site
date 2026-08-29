@@ -4,7 +4,7 @@ import os
 import json
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-D = "https://sanfan-yoga-site.vercel.app"
+D = "https://fjsanfan.com"
 
 INDEX_JSON = {
     "@context": "https://schema.org",

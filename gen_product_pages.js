@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = __dirname;
-const BASE = 'https://sanfan-yoga-site.vercel.app';
+const BASE = 'https://fjsanfan.com';
 const WA = '8615959029082';
 
 // ---- load product data ----

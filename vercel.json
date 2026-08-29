@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://sanfan-yoga-site.vercel.app/:path*",
+      "destination": "https://fjsanfan.com/:path*",
+      "permanent": true
+    }
+  ]
+}

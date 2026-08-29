@@ -27,9 +27,9 @@ Low MOQ 100pcs · 7-Day Sampling
 REACH/CA65/ISO9001/BSCI Certified
 🌏 Ship to 50+ Countries
 📩 WhatsApp: wa.me/8615959029082
-🔗 Quote: sanfan-yoga-site.vercel.app
+🔗 Quote: fjsanfan.com
 
-链接：独立站 sanfan-yoga-site.vercel.app （或 Linktree 聚合 独立站+WhatsApp+询盘表单）
+链接：独立站 fjsanfan.com （或 Linktree 聚合 独立站+WhatsApp+询盘表单）
 ```
 
 ## 3. 内容矩阵（4 大栏目）

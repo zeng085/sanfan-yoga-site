@@ -1,7 +1,7 @@
 # 三梵独立站 · SEO 站内体检报告
 
 > 工具：marketing-skills / seo-audit 模块 + 自写解析脚本（seo_audit.py，已对全站 13 个页面逐页抓取）
-> 站点：sanfan-yoga-site.vercel.app（Vercel + GitHub 静态站）
+> 站点：fjsanfan.com（Vercel + GitHub 静态站）
 > 体检时间：2026-08-28
 
 ## 一、总评（健康度评分卡）
@@ -53,7 +53,7 @@
 **1. 全站缺失 canonical 标签**
 - 影响：高。Google 可能把 `product.html?id=ym1…ym8/pr1…` 等参数 URL 当作独立页面，权重分散、出现重复内容；未来加 UTM 外链也会制造副本。
 - 证据：13 个页面 `canonical: None`（脚本实测）。
-- 修复：每页 `<head>` 注入 self-referencing canonical（绝对 URL）。可按 Vercel 部署域 `https://sanfan-yoga-site.vercel.app/<page>` 统一；product.html 需按 `id` 动态生成。
+- 修复：每页 `<head>` 注入 self-referencing canonical（绝对 URL）。可按 Vercel 部署域 `https://fjsanfan.com/<page>` 统一；product.html 需按 `id` 动态生成。
 - 优先级：P1
 
 **2. product.html 是 JS 渲染模板，静态内容几乎为空**

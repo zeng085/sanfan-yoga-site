@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sanfan-yoga-site.vercel.app/sitemap.xml
-LLMS-TXT: https://sanfan-yoga-site.vercel.app/llms.txt
+Sitemap: https://fjsanfan.com/sitemap.xml
+LLMS-TXT: https://fjsanfan.com/llms.txt

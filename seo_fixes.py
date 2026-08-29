@@ -5,7 +5,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-DOMAIN = "https://sanfan-yoga-site.vercel.app"
+DOMAIN = "https://fjsanfan.com"
 
 # 文件 -> (canonical 路径后缀, og:image 文件名)
 PAGES = {
