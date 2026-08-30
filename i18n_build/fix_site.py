@@ -117,10 +117,12 @@ def lang_switcher(rel, lang=None, has_lang=True):
                          % (url(lg), lg, NAME[lg], act, LBL[lg]))
         current = LBL[lang] if has_lang else "EN"
 
-    # 下拉式：当前语言收进按钮，8 种语言不会撑爆导航栏
+    # 下拉式：当前语言收进按钮，8 种语言不会撑爆导航栏。
+    # 当前语言文本必须包进 .lang-cur-txt（而不是直接写在 button 里），
+    # 否则切到中文后 JS 无法定位并更新它，按钮会一直显示 EN。
     return ('<div class="lang-switch">'
             '<button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false">'
-            '%s<span class="lang-caret">&#9662;</span></button>'
+            '<span class="lang-cur-txt">%s</span><span class="lang-caret">&#9662;</span></button>'
             '<div class="lang-menu">%s</div>'
             '</div>' % (current, "".join(items)))
 

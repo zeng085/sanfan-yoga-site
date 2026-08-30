@@ -580,6 +580,19 @@ function applyLang(lang) {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   document.documentElement.classList.toggle('show-zh', lang === 'zh');
   document.documentElement.classList.toggle('show-en', lang === 'en');
+  // 同步下拉按钮上显示的当前语言。漏掉这步的话，
+  // 页面已经换成中文了，按钮却还写着 EN —— 看起来像切换没生效。
+  document.querySelectorAll('.lang-cur-txt').forEach(el => {
+    el.textContent = lang === 'zh' ? '中文' : 'EN';
+  });
+  // 同步菜单项高亮：切到中文时高亮"中文"，切回英文时高亮 EN
+  document.querySelectorAll('.lang-menu a[data-setlang], .lang-menu button[data-setlang]')
+    .forEach(el => {
+      const l = el.getAttribute('data-setlang');
+      if (l === 'en' || l === 'zh') {
+        el.classList.toggle('active', l === lang);
+      }
+    });
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const val = I18N[lang][key];
