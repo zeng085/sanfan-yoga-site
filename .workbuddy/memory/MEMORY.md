@@ -1,0 +1,53 @@
+# 三梵独立站（fjsanfan.com）项目长期笔记
+
+## 站点概况
+- 仓库：`zeng085/sanfan-yoga-site`，部署在 Vercel，域名 https://fjsanfan.com
+- 定位：**面向海外采购商的 B2B 瑜伽垫/健身器材 OEM/ODM 工厂站**（不是零售站）
+- 语言：英文为主 + 德/日/韩/法/意/西 6 种分语言 URL（`/de/` `/fr/` 等）+ 中文同页预览
+- 页面规模：约 102 个 HTML，sitemap 101 条
+
+## 重要约定（改动前必读）
+
+### 1. 语言策略：记住访客选择，一直沿用，直到他手动改
+用户于 2026-08-30 明确要求（中途我曾误解成"永远默认英文"，已纠正）。
+- 访客选了中文 → 整个站点一路中文（首页、产品页、关于页…），直到他改回 EN
+- 访客选了 EN → 一路英文
+- 没选过（或存储不可用）→ 默认英文
+- 存储：**localStorage + cookie 双写**（隐私模式下 localStorage 可能静默失败，cookie 兜底）
+- 语言页（/de/ /fr/ 等）是各自语言的独立 URL，**不受中英偏好影响**
+- 关键前提：切换器的 EN 项必须带 `data-setlang="en"`，
+  否则点了不写入偏好，跳页会回到旧值（曾导致"点 EN 后跳产品又变中文"）
+
+### 2. 尺寸表达：英文内容必须带英制
+采购商是美国市场，尺寸要同时给出公制与英制：
+`6 mm (1/4")`、`61–122 cm (24"–48")`、`183 cm (72")`
+- 厚度用美国惯用**分数**（1/8"、1/4"、3/8"、1/2"、5/8"），不用小数
+- 欧洲/日韩页面保持公制，不加英制
+- **注意**：英寸符号 `"` 写进 JSON-LD 必须转义，否则破坏 JSON
+- 产品页的规格文本在 **main.js 的 I18N** 里（data-i18n 渲染），不在 HTML
+
+### 3. 语言集合统一在 `i18n_build/build_pages.py` 的 `LANGS`
+`update_seo.py` / `fix_site.py` / `run_verify.py` 都引用它，不要各自硬编码。
+新增语言只需改这一处，再跑 `build_pages.py <lang>` 生成。
+
+### 4. 切换器由 `fix_site.py` 统一注入（幂等）
+- `build_pages.py` 只管翻译，不生成切换器
+- 切换器是**下拉式**（8 种语言横排会挤爆导航栏）
+- EN 项必须带 `data-setlang="en"`；英文页用 `<button>`（同页切换），语言页用 `<a href>`
+
+## 已知的坑
+
+- **不要执行生成脚本来验证语法**：`node -e "require('gen_product_pages.js')"` 会真的执行并覆盖页面。
+  用 `node --check` 只做语法检查。
+- **GitHub API 一次推 100+ 个文件会返回 500**：分批推送（核心 / 产品页 / 语言页）。
+- **中文文件名**用 `git diff --name-only` 会输出八进制转义，push 脚本会 skip。
+  先 `git config core.quotepath false`，或手工传真实文件名。
+- **localStorage 写入可能被静默吞掉**（隐私模式）：涉及跨页面状态的写入要考虑降级。
+- **Playwright 的 `add_init_script` 每个页面都会执行**：预设 localStorage 会反复重置，
+  导致误判。只在第一个页面用 `evaluate` 设一次再 `reload`。
+- **i18n 值含 HTML 标签**：`applyLang` 会按内容是否匹配 `/<[a-z]/` 决定用 innerHTML 还是
+  textContent；改 i18n 键必须 HTML 与 main.js 同步改。
+
+## 待办
+- GitHub PAT 轮换（现用的已被 GitHub 提示过）
+- 本地 git 与远程对齐（网络恢复后 `git fetch origin && git reset --hard origin/main`）

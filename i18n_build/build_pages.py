@@ -47,6 +47,16 @@ LD_KEYS = {"name", "description", "headline", "abstract", "text", "caption",
            "alternateName", "slogan", "disambiguatingDescription"}
 LD_SKIP_PARENTS = {"brand", "manufacturer"}
 
+# 产品 -> 分类锚点（未翻译时回退到语言站产品列表）
+PROD_CAT = {
+    'ym1': 'yoga', 'ym2': 'yoga', 'ym3': 'yoga', 'ym4': 'yoga',
+    'ym5': 'yoga', 'ym6': 'yoga', 'ym7': 'yoga', 'ym8': 'yoga',
+    'pr1': 'props', 'pr2': 'props', 'pr3': 'props', 'pr4': 'props', 'pr5': 'props',
+    'fr1': 'rollers', 'fr2': 'rollers', 'fr3': 'rollers', 'fr4': 'rollers', 'fr5': 'rollers',
+    'rb1': 'bands', 'rb2': 'bands', 'rb3': 'bands', 'rb4': 'bands',
+    'fi1': 'fitness', 'fi2': 'fitness', 'fi3': 'fitness', 'fi4': 'fitness', 'fi5': 'fitness',
+}
+
 
 # ------------------------------------------------------------------ 工具
 def rel_from(cur_dir, target):
@@ -59,14 +69,33 @@ def rel_from(cur_dir, target):
 
 
 def rewrite_rel(u, cur_dir, src_dir, lang):
-    """重写相对链接：有语言版则指向语言版，否则回英文原页"""
+    """重写相对链接：有语言版则指向语言版；
+    无语言版的分类页仍指向当前语言产品列表（带锚点）；
+    无语言版的产品详情页回退到当前语言产品列表对应分类。"""
     if not u:
         return u
     s = u.strip()
     if s.startswith(("#", "mailto:", "tel:", "http://", "https://", "//", "data:", "javascript:")):
         return u
-    A = posixpath.normpath(posixpath.join(src_dir, s)) if src_dir else posixpath.normpath(s)
-    target = (lang + "/" + A) if A in T1_SET else A
+    # 保留 #hash / ?query
+    m = re.match(r'^([^#?]*)([?#].*)?$', s)
+    base = m.group(1) or ''
+    suffix = m.group(2) or ''
+    A = posixpath.normpath(posixpath.join(src_dir, base)) if src_dir else posixpath.normpath(base)
+    if A in T1_SET:
+        target = lang + "/" + A + suffix
+    elif A == "products.html":
+        # 分类页始终在当前语言站点打开
+        target = lang + "/products.html" + suffix
+    elif A.startswith("products/") and A.endswith(".html"):
+        prod = A[len("products/"):-len(".html")]
+        cat = PROD_CAT.get(prod)
+        if cat:
+            target = lang + "/products.html#" + cat
+        else:
+            target = A + suffix
+    else:
+        target = A + suffix
     return rel_from(cur_dir, target)
 
 
