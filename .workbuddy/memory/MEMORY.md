@@ -81,6 +81,9 @@
   导致误判。只在第一个页面用 `evaluate` 设一次再 `reload`。
 - **i18n 值含 HTML 标签**：`applyLang` 会按内容是否匹配 `/<[a-z]/` 决定用 innerHTML 还是
   textContent；改 i18n 键必须 HTML 与 main.js 同步改。
+- **产品页 header 结构脆弱**：`.nav-actions` 里必须同时包裹 `.lang-switch` 和 `.btn.btn-primary`，
+  任何多余的 `</div>` 都会让「获取报价」按钮掉到导航栏下方。批量生成/修复页面后，
+  用 `/tmp/fix_all_product_headers.py` 统一校验并重建结构。
 
 ## 待办
 - GitHub PAT 轮换（现用的已被 GitHub 提示过）
