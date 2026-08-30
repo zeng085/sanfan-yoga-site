@@ -709,6 +709,18 @@ document.querySelectorAll('[data-setlang]').forEach(el => {
     }
   });
 });
+// 多语言"跟随"：访客此前选过 6 国之一，进入根页（英文/中文同页）时，
+// 自动跳到对应语言站的同页，保证"选了 de 整站一路德文，直到手动改"。
+// 例：siteLang=de 访问 /blog.html → 跳 /de/blog.html；/products/ym1.html → 跳 /de/products/ym1.html。
+(function followPreferredLang() {
+  var pref = getLangPref();
+  var LANGS = ['de', 'ja', 'ko', 'fr', 'it', 'es'];
+  if (LANGS.indexOf(pref) === -1) return;            // 仅 6 国需要跟随跳转
+  var p = location.pathname;
+  if (p.indexOf('/' + pref + '/') === 0) return;     // 已在对应语言站内则不跳
+  var target = '/' + pref + (p.charAt(0) === '/' ? p : '/' + p);
+  if (target !== p) location.replace(target);        // 替换历史，避免后退成死循环
+})();
 // 沿用访客上次选择的语言；没选过（或选过但存储不可用）则默认英文。
 applyLang(getLangPref() === 'zh' ? 'zh' : 'en');
 
