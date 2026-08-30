@@ -82,6 +82,9 @@ def rewrite_rel(u, cur_dir, src_dir, lang):
     base = m.group(1) or ''
     suffix = m.group(2) or ''
     A = posixpath.normpath(posixpath.join(src_dir, base)) if src_dir else posixpath.normpath(base)
+    if A in ("/", "", "."):
+        # 站点根 -> 语言站根（用绝对路径，避免 rel_from 对 "/" 产生 "..//"）
+        return "/" + lang + "/" + suffix
     if A in T1_SET:
         target = lang + "/" + A + suffix
     elif A == "products.html":
