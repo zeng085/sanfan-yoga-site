@@ -125,8 +125,10 @@ a { color: inherit; text-decoration: none; }
 }
 .lang-menu a:hover,
 .lang-menu button:hover { color: var(--brand); background: rgba(0, 0, 0, .05); }
-.lang-menu a.active { background: var(--brand); color: #fff; }
-.lang-menu a.active:hover { background: var(--brand); color: #fff; }
+.lang-menu a.active,
+.lang-menu button.active { background: var(--brand); color: #fff; }
+.lang-menu a.active:hover,
+.lang-menu button.active:hover { background: var(--brand); color: #fff; }
 @media (max-width: 720px) {
   .lang-current { padding: 6px 10px; font-size: 11px; }
   .lang-menu { min-width: 116px; }

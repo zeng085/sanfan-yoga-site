@@ -96,8 +96,12 @@ def lang_switcher(rel, lang=None, has_lang=True):
     NAME = {"de": "Deutsch", "ja": "日本語", "ko": "한국어",
             "fr": "Français", "it": "Italiano", "es": "Español"}
 
+    # EN / 中文 两项的写法：
+    #  - 必须带 data-setlang，否则只跳转不写入偏好，选过中文后点 EN 切不回英文。
+    #  - 英文原页上用 <button>（无 href）：点 EN/中文都只做同页切换，不该把用户踢回首页。
+    #  - 语言页上用 <a href>：需要跳回对应的英文页，同时写入偏好。
     if lang is None:      # 英文原页：EN 高亮，中文用同页切换按钮
-        items = ['<a href="%s" hreflang="en" title="English" class="active">EN</a>' % url(None)]
+        items = ['<button type="button" data-setlang="en" title="English" class="active">EN</button>']
         items.append('<button type="button" data-setlang="zh" title="中文">中文</button>')
         for lg in LANGS:
             items.append('<a href="%s" hreflang="%s" title="%s">%s</a>'
@@ -105,7 +109,7 @@ def lang_switcher(rel, lang=None, has_lang=True):
         current = "EN"
     else:                 # 语言页：中文跳英文页同时写入偏好
         en = url(None)
-        items = ['<a href="%s" hreflang="en" title="English">EN</a>' % en]
+        items = ['<a href="%s" hreflang="en" data-setlang="en" title="English">EN</a>' % en]
         items.append('<a href="%s" hreflang="zh" data-setlang="zh" title="中文">中文</a>' % en)
         for lg in LANGS:
             act = ' class="active"' if (lg == lang and has_lang) else ""

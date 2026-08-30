@@ -60,7 +60,7 @@ const I18N = {
     'gallery.title': 'Full Product Gallery',
     'gallery.sub': 'Every category we manufacture — ready for OEM, ODM and private label.',
     'gallery.note': 'Every photo is a real shot from our Alibaba.com international factory store — the exact products we make and ship.',
-    'g1.n': 'TPE Yoga Mat', 'g1.s': 'Eco double-layer, 4–12 mm',
+    'g1.n': 'TPE Yoga Mat', 'g1.s': 'Eco double-layer, 4–12 mm (5/32"–1/2")',
     'g2.n': 'Wide TPE Yoga Mat', 'g2.s': 'Extra-wide 80/122 cm',
     'g3.n': 'Double-wide TPE Mat', 'g3.s': 'Wide format for 2 persons',
     'g4.n': 'Foldable TPE Yoga Mat', 'g4.s': 'Tri-fold, ultra-portable',
@@ -79,7 +79,7 @@ const I18N = {
     'g17.n': 'Electric Foam Roller', 'g17.s': 'Rechargeable vibration',
     'g18.n': 'Massage Ball', 'g18.s': 'Fascia relief',
     'g19.n': 'Resistance Band', 'g19.s': 'Multi-tension',
-    'g20.n': 'Mini Yoga Ball (25 cm)', 'g20.s': '25 cm anti-slip',
+    'g20.n': 'Mini Yoga Ball (25 cm / 10")', 'g20.s': '25 cm (10") anti-slip',
     'g21.n': 'Yoga / Fitness Ball', 'g21.s': 'Anti-burst training ball',
     'g22.n': 'Balance Board', 'g22.s': 'Wooden balance board',
     'g23.n': 'Mini Stepper', 'g23.s': 'Compact home stepper',
@@ -134,10 +134,10 @@ const I18N = {
     'cat.rollers.title': 'Foam Rollers & Massage', 'cat.rollers.sub': 'Rollers · Electric Roller · Massage Ball',
     'cat.bands.title': 'Resistance Bands & Pilates', 'cat.bands.sub': 'Bands · Yoga Balls · Balance Board',
     'cat.fit.title': 'Fitness Equipment', 'cat.fit.sub': 'Dumbbells · Kettlebells · Jump Rope',
-    'ym1.t': 'TPE Yoga Mat', 'ym1.d': 'Eco double-layer TPE, non-slip textured surface, widths 61–122 cm, thickness 4–12 mm. Solid, economy and special grades.',
+    'ym1.t': 'TPE Yoga Mat', 'ym1.d': 'Eco double-layer TPE, non-slip textured surface, widths 61–122 cm (24"–48"), thickness 4–12 mm (5/32"–1/2"). Solid, economy and special grades.',
     'ym2.t': 'Wide TPE Yoga Mat', 'ym2.d': 'Extra-wide 80/122 cm TPE mat for dynamic and partner practice; same eco double-layer grip.',
     'ym3.t': 'Double-wide TPE Mat', 'ym3.d': 'Wide-format TPE mat for couples and family use; non-slip, easy to clean.',
-    'ym4.t': 'Foldable TPE Yoga Mat', 'ym4.d': 'Tri-fold design opens flat with no curl; 6 mm cushioning; ultra-portable, packs into a backpack.',
+    'ym4.t': 'Foldable TPE Yoga Mat', 'ym4.d': 'Tri-fold design opens flat with no curl; 6 mm (1/4") cushioning; ultra-portable, packs into a backpack.',
     'ym5.t': 'PU / Rubber Premium Mat', 'ym5.d': 'Natural rubber base + PU anti-slip top; premium grip for hot yoga and studios (the "premium" mat).',
     'ym6.t': 'Frosted PU Yoga Mat', 'ym6.d': 'Matte frosted PU surface, elegant feel, high sweat-absorption grip for intense sessions.',
     'ym7.t': 'Camo PU Yoga Mat', 'ym7.d': 'Camouflage-print PU rubber mat with a bold look, ideal for branded lines.',
@@ -147,13 +147,13 @@ const I18N = {
     'pr3.t': 'Meditation Cushion (Zafu)', 'pr3.d': 'Zafu meditation cushion with buckwheat fill and cotton cover; round and rectangular styles, custom fabrics.',
     'pr4.t': 'Yoga Blocks (EVA)', 'pr4.d': 'High-density EVA blocks; stable support for poses and stretches, multiple colors.',
     'pr5.t': 'Knee Pad', 'pr5.d': 'Thick kneeling knee pad for yoga, gardening and floor work; shock-absorbing, non-slip base.',
-    'fr1.t': 'Yoga Foam Roller (Wolf-tooth)', 'fr1.d': 'EVA foam roller with wolf-tooth texture; 45 cm muscle recovery and myofascial release.',
+    'fr1.t': 'Yoga Foam Roller (Wolf-tooth)', 'fr1.d': 'EVA foam roller with wolf-tooth texture; 45 cm (18") muscle recovery and myofascial release.',
     'fr2.t': 'Solid Foam Roller', 'fr2.d': 'Solid EVA roller for deep-tissue massage and core training.',
     'fr3.t': 'Electric Foam Roller', 'fr3.d': 'Rechargeable vibrating foam roller for professional recovery.',
     'fr4.t': 'EVA Massage Rollers', 'fr4.d': 'Multiple textures and sizes — smooth, grid and half-roller options; custom colors and hardness.',
     'fr5.t': 'Massage Ball', 'fr5.d': 'Fascia massage ball for shoulders, back, waist and foot relief.',
     'rb1.t': 'Resistance Bands', 'rb1.d': 'Latex and fabric resistance bands — loops, tubes and figure-8 styles; multiple tensions, custom colors and prints.',
-    'rb2.t': 'Mini Yoga Ball (25 cm)', 'rb2.d': '25 cm anti-slip gymnastic ball for pilates, rehab and core work.',
+    'rb2.t': 'Mini Yoga Ball (25 cm / 10")', 'rb2.d': '25 cm (10") anti-slip gymnastic ball for pilates, rehab and core work.',
     'rb3.t': 'Balance Dome', 'rb3.d': 'BOSU-style balance dome for core strength, stability and rehab; anti-slip base, custom colors.',
     'rb4.t': 'Balance Board', 'rb4.d': 'Wooden balance board with non-slip surface for stability, coordination and rehab training.',
     'fi1.t': 'Mini Stepper', 'fi1.d': 'Compact home stepper for cardio and lower-body training; adjustable resistance, small footprint.',
@@ -165,15 +165,15 @@ const I18N = {
     // Spec overview
     'spec.title': 'Specification Overview',
     'spec.sub': 'Popular sizes and MOQs at a glance. Custom sizes, colors and packaging available on request.',
-    'spec1.t': 'TPE Yoga Mat', 'spec1.d': '1830×610 / 1830×800 / 1850×900 / 2000×1000 / 1850×1220 mm\nThickness 4–12 mm\nMOQ 100 pcs',
-    'spec2.t': 'Wide / Double TPE Mat', 'spec2.d': '80 cm / 122 cm widths\nEco double-layer TPE\nMOQ 100 pcs',
-    'spec3.t': 'PU / Rubber Mat', 'spec3.d': 'Natural rubber base + PU anti-slip top\n1830×610 / 1850×800 mm\nMOQ on request',
+    'spec1.t': 'TPE Yoga Mat', 'spec1.d': '1830×610 / 1830×800 / 1850×900 / 2000×1000 / 1850×1220 mm (48")\nThickness 4–12 mm (5/32"–1/2")\nMOQ 100 pcs',
+    'spec2.t': 'Wide / Double TPE Mat', 'spec2.d': '80 cm (31") / 122 cm (48") widths\nEco double-layer TPE\nMOQ 100 pcs',
+    'spec3.t': 'PU / Rubber Mat', 'spec3.d': 'Natural rubber base + PU anti-slip top\n1830×610 / 1850×800 mm (31")\nMOQ on request',
     'spec4.t': 'Balance Trainer', 'spec4.d': 'Half-ball balance trainer\nAnti-slip base\nCustom colors\nMOQ on request',
     'spec5.t': 'Aerial Yoga Hammock', 'spec5.d': 'High-strength aerial silk\nCeiling mount kit available\nCustom colors & sizes\nMOQ on request',
-    'spec6.t': 'Yoga Wheel', 'spec6.d': 'ABS core + TPE cushion\n33 / 38 cm diameters\nCustom colors\nMOQ on request',
-    'spec7.t': 'Yoga Blocks (EVA)', 'spec7.d': 'High-density EVA\n9×15×23 cm standard\nMOQ 500 pcs',
-    'spec8.t': 'Yoga Foam Roller', 'spec8.d': '25×7.5 to 45×14 cm\nSmooth / wolf-tooth / solid\nMOQ 500 pcs',
-    'spec9.t': 'Yoga / Fitness Ball', 'spec9.d': '25 cm mini / standard sizes\nAnti-burst\nMOQ on request',
+    'spec6.t': 'Yoga Wheel', 'spec6.d': 'ABS core + TPE cushion\n33 / 38 cm (15") diameters\nCustom colors\nMOQ on request',
+    'spec7.t': 'Yoga Blocks (EVA)', 'spec7.d': 'High-density EVA\n9×15×23 cm (9") standard\nMOQ 500 pcs',
+    'spec8.t': 'Yoga Foam Roller', 'spec8.d': '25×7.5 to 45×14 cm (6")\nSmooth / wolf-tooth / solid\nMOQ 500 pcs',
+    'spec9.t': 'Yoga / Fitness Ball', 'spec9.d': '25 cm (10") mini / standard sizes\nAnti-burst\nMOQ on request',
     'spec10.t': 'Resistance Bands', 'spec10.d': 'Latex & fabric bands\nLoops / tubes / figure-8\nMultiple tensions\nMOQ on request',
     'spec11.t': 'Balance Pad / Knee Pad', 'spec11.d': 'TPE balance & knee pads\nCustom sizes & colors\nMOQ on request',
     'spec12.t': 'Fitness Gear', 'spec12.d': 'Dumbbells · Kettlebells\nJump Ropes · Steppers\nMultiple weights & colors\nMOQ on request',
@@ -268,9 +268,9 @@ const I18N = {
     'faq.q12': 'Can you print my logo on the yoga mats?',
     'faq.a12': 'Yes. We offer logo printing, embossing and laser engraving on mats and most accessories, with color-matched packaging to build your brand identity.',
     'faq.q13': 'What can be customized — size, thickness, color, double-color, packaging?',
-    'faq.a13': 'Nearly everything: material, size, thickness (4–12 mm), color, double-color, surface finish, logo, fold style and packaging. Just share your spec and we engineer it.',
-    'faq.q14': 'Can you make non-standard sizes such as 1830×610×3 mm, wide or double-wide?',
-    'faq.a14': 'Yes. Beyond standard 1830×610 mm we produce wide (80/122 cm) and double-wide formats, plus custom lengths and thicknesses. Send your dimensions and we confirm tooling.',
+    'faq.a13': 'Nearly everything: material, size, thickness (4–12 mm (5/32"–1/2")), color, double-color, surface finish, logo, fold style and packaging. Just share your spec and we engineer it.',
+    'faq.q14': 'Can you make non-standard sizes such as 1830×610×3 mm (1/8"), wide or double-wide?',
+    'faq.a14': 'Yes. Beyond standard 1830×610 mm (24") we produce wide (80/122 cm) and double-wide formats, plus custom lengths and thicknesses. Send your dimensions and we confirm tooling.',
     'faq.q15': 'Do you provide custom packaging, barcodes and inserts?',
     'faq.a15': 'Yes. We design and produce custom boxes, belly bands, barcodes, QR codes and inserts, so your product arrives shelf-ready under your brand.',
     'faq.q16': 'Can you develop a new product from my sample or design?',
@@ -574,9 +574,10 @@ function isLocalizedPage() {
 }
 
 function applyLang(lang) {
-  if (!isLocalizedPage()) {
-    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-  }
+  // 分语言 URL 页面（/de/ /fr/ 等）本身就是目标语言，中英文切换对它们无意义。
+  // 如果不整体返回，用户在英文页选过中文后，访问法语页会把中文内容混进去。
+  if (isLocalizedPage()) return;
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   document.documentElement.classList.toggle('show-zh', lang === 'zh');
   document.documentElement.classList.toggle('show-en', lang === 'en');
   document.querySelectorAll('[data-i18n]').forEach(el => {
