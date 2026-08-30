@@ -344,13 +344,15 @@ def build_one(rel_path, lang, verbose=True):
         return tag
     h = re.sub(r"<link\b[^>]*>", _abs_fix, h, flags=re.I)
 
-    # 7) hreflang 集合改为 en/zh/de/ja/ko + x-default 互链
+    # 7) hreflang 集合：en/de/ja/ko + x-default 互链
+    #    注意：不要声明 hreflang="zh"——站点没有独立 /zh/ 目录，
+    #    把英文 URL 同时声明成 en 和 zh 是冲突信号。中文走页面内切换器，不是独立语言版本。
     def _u(lg):
-        if lg is None:      # en / zh / x-default -> 英文原页
+        if lg is None:      # en / x-default -> 英文原页
             return SITE + "/" if rel_path == "index.html" else SITE + "/" + rel_path
         return norm_lang_url(SITE + "/" + lg + "/" + rel_path)
 
-    variants = [("en", _u(None)), ("zh", _u(None)),
+    variants = [("en", _u(None)),
                 ("de", _u("de")), ("ja", _u("ja")), ("ko", _u("ko")),
                 ("x-default", _u(None))]
     hl_lines = "\n".join('  <link rel="alternate" hreflang="%s" href="%s" />' % (l, u)

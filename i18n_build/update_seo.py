@@ -21,12 +21,14 @@ def exists(rel, lg):
 
 
 def variants(rel):
-    """只列出真实存在的语言版本；en/zh 同页承载，故共用英文 URL"""
+    """只列出真实存在的语言版本。
+    注意：不再声明 hreflang="zh"——站点没有独立 /zh/ 目录，
+    把英文 URL 同时声明成 en 和 zh 是冲突信号。中文走页面内切换器，不是独立语言版本。"""
     def u(lg):
         if lg is None:
             return SITE + "/" if rel == "index.html" else SITE + "/" + rel
         return (SITE + "/" + lg + "/") if rel == "index.html" else (SITE + "/" + lg + "/" + rel)
-    out = [("en", u(None)), ("zh", u(None))]
+    out = [("en", u(None))]
     for lg in LANGS:
         if exists(rel, lg):
             out.append((lg, u(lg)))

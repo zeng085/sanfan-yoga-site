@@ -10,6 +10,26 @@
       ],
       "destination": "https://fjsanfan.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/de/index.html",
+      "destination": "/de/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/index.html",
+      "destination": "/ja/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/index.html",
+      "destination": "/ko/",
+      "permanent": true
     }
   ]
 }

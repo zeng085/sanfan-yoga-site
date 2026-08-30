@@ -164,7 +164,8 @@ function buildPage(id) {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: BASE + '/index.html' },
+          // 首页规范 URL 是 / 而不是 /index.html，否则与 canonical 发出冲突信号
+          { '@type': 'ListItem', position: 1, name: 'Home', item: BASE + '/' },
           { '@type': 'ListItem', position: 2, name: 'Products', item: BASE + '/products.html' },
           { '@type': 'ListItem', position: 3, name: catEn, item: BASE + '/products.html#' + cat },
           { '@type': 'ListItem', position: 4, name: enTitle, item: url }
@@ -183,8 +184,9 @@ function buildPage(id) {
   <meta name="description" content="${esc(enDesc)}" />
   <link rel="canonical" href="${url}" />
   <link rel="alternate" hreflang="en" href="${url}" />
-  <link rel="alternate" hreflang="zh" href="${url}" />
   <link rel="alternate" hreflang="x-default" href="${url}" />
+  <!-- de/ja/ko 的 hreflang 回链由 i18n_build/update_seo.py 按"真实存在的语言页"补充，
+       不要在这里声明 hreflang="zh"（站点没有独立 /zh/ 目录，会与 en 冲突） -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="${esc(enTitle)} — SANFAN" />
   <meta property="og:description" content="${esc(enDesc)}" />
@@ -202,9 +204,9 @@ function buildPage(id) {
 
   <header class="site-header">
     <div class="container nav">
-      <a href="../index.html" class="nav-brand"><img src="../assets/img/logo.jpg" alt="SANFAN" /><span>SAN<span class="accent">FAN</span></span></a>
+      <a href="/" class="nav-brand"><img src="../assets/img/logo.jpg" alt="SANFAN" /><span>SAN<span class="accent">FAN</span></span></a>
       <nav class="nav-links">
-        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="/" data-i18n="nav.home">Home</a>
         <a href="../products.html" data-i18n="nav.products">Products</a>
         <a href="../about.html" data-i18n="nav.about">About</a>
         <a href="../faq.html" data-i18n="nav.faq">FAQ</a>
@@ -212,7 +214,8 @@ function buildPage(id) {
         <a href="../contact.html" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="nav-actions">
-        <button class="lang-btn" type="button">中文</button>
+        <!-- 多语言切换器由 i18n_build/fix_site.py 统一注入（幂等），
+             这里只保留容器，避免重新生成时覆盖掉分语言 URL 版本的切换器 -->
         <a href="../contact.html" class="btn btn-primary" data-i18n="nav.quote">Get a Quote</a>
       </div>
       <button class="menu-toggle" aria-label="menu">☰</button>
