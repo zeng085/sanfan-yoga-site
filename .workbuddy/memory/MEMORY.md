@@ -35,6 +35,21 @@
 - 切换器是**下拉式**（8 种语言横排会挤爆导航栏）
 - EN 项必须带 `data-setlang="en"`；英文页用 `<button>`（同页切换），语言页用 `<a href>`
 
+### 5. 多语言页未翻译产品不得跳回英文
+- 6 种语言站（/de/ /ja/ /ko/ /fr/ /it/ /es/）各只翻译了 5 个核心产品（ym1/ym2/ym3/fr1/rb2），其余 22 个产品无翻译。
+- 未翻译产品在语言页中的链接必须指向当前语言的 `products.html#<category>`，而不是英文 `/products/xxx.html`。
+- `build_pages.py` 的 `rewrite_rel` 已处理该回退逻辑：
+  - 有语言版 → `/{lang}/products/xxx.html`
+  - 无语言版 → `/{lang}/products.html#{category}`
+  - 分类导航 `products.html#xxx` → `/{lang}/products.html#xxx`
+- 分类锚点：yoga / props / rollers / bands / fitness
+
+### 6. 语言页「回站点根」的链接必须是绝对路径 `/{lang}/`
+`rel_from` 对根目标 `'/'` 做 `split('/')` 会得到 `['','']`，拼出 `'..//'`；
+浏览器解析后落到英文站根 `/`，再套用访客存的 `siteLang` → 出现「点 logo 回首页变中文」。
+`rewrite_rel` 里已对 `A in ('/', '', '.')` 提前返回 `/{lang}/`。
+新增任何「回到首页 / 站点根」的链接时，务必用绝对路径。
+
 ## 已知的坑
 
 - **不要执行生成脚本来验证语法**：`node -e "require('gen_product_pages.js')"` 会真的执行并覆盖页面。
@@ -50,4 +65,3 @@
 
 ## 待办
 - GitHub PAT 轮换（现用的已被 GitHub 提示过）
-- 本地 git 与远程对齐（网络恢复后 `git fetch origin && git reset --hard origin/main`）
