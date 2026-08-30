@@ -565,6 +565,30 @@ const I18N = {
 };
 window.I18N = I18N;
 
+// 语言偏好持久化：localStorage 优先，cookie 兜底。
+// 为什么需要 cookie：隐私模式、或浏览器阻止站点数据时，localStorage.setItem 会静默失败
+// （被 try/catch 吞掉）。结果是当前页能切英文（内存中生效），但偏好没落盘，
+// 一跳到产品页就掉回中文 —— 表现为"首页切了英文，点进产品又变中文"。
+function setLangPref(l) {
+  try { localStorage.setItem('siteLang', l); } catch (e) {}
+  try {
+    document.cookie = 'siteLang=' + encodeURIComponent(l) +
+      ';path=/;max-age=31536000;samesite=Lax';
+  } catch (e) {}
+}
+
+function getLangPref() {
+  var v = null;
+  try { v = localStorage.getItem('siteLang'); } catch (e) {}
+  if (!v) {
+    try {
+      var m = document.cookie.match(/(?:^|;\s*)siteLang=([^;]*)/);
+      if (m) v = decodeURIComponent(m[1]);
+    } catch (e) {}
+  }
+  return v;
+}
+
 // 分语言 URL 的页面（/de/ /ja/ /ko/ /fr/ /it/ /es/）自身就是目标语言，
 // 静态 HTML 已带正确的 <html lang>。绝不能用 en 覆盖掉，
 // 否则 Google 与屏幕阅读器会把法语页面当成英文页面。
@@ -613,7 +637,7 @@ function applyLang(lang) {
   });
   const btn = document.querySelector('.lang-btn');
   if (btn) btn.textContent = lang === 'zh' ? 'EN' : '中文';
-  try { localStorage.setItem('siteLang', lang); } catch (e) {}
+  setLangPref(lang);
   window.dispatchEvent(new Event('sanfan-langchange'));
 }
 
@@ -669,7 +693,7 @@ document.querySelectorAll('[data-setlang]').forEach(el => {
   el.addEventListener('click', e => {
     e.preventDefault();
     const L = el.getAttribute('data-setlang');
-    try { localStorage.setItem('siteLang', L); } catch (err) {}
+    setLangPref(L);
     const href = el.getAttribute('href');
     if (href) {
       location.href = href;
@@ -683,8 +707,7 @@ document.querySelectorAll('[data-setlang]').forEach(el => {
     }
   });
 });
-const saved = (function () { try { return localStorage.getItem('siteLang'); } catch (e) { return null; } })();
-applyLang(saved === 'zh' ? 'zh' : 'en');
+applyLang(getLangPref() === 'zh' ? 'zh' : 'en');
 
 // ---------- Inquiry form (Formspree) ----------
 const form = document.getElementById('inquiry-form');
