@@ -565,17 +565,30 @@ const I18N = {
 };
 window.I18N = I18N;
 
-// 语言偏好：不持久化，永远默认英文。
+// 语言偏好：记住访客的选择，直到他手动改。
+// 访客选了中文就一直中文，选了英文就一直英文 —— 整个站点跟随，不因跳页而丢失。
 //
-// 站点面向海外采购商，英文是主语言。按用户要求（2026-08-30），
-// 中文只作为"当场看一眼"的预览：点了中文当前页立刻变中文，
-// 但刷新或跳到任何别的页面都回到英文 —— 不会把中文状态带到下一个页面。
-//
-// 之前是持久化到 localStorage（+cookie 兜底），结果出现
-// "点过一次中文，整个站点之后一直是中文"的困扰，故改为不记忆。
-function clearLangPref() {
-  try { localStorage.removeItem('siteLang'); } catch (e) {}
-  try { document.cookie = 'siteLang=;path=/;max-age=0;samesite=Lax'; } catch (e) {}
+// 存储用 localStorage 优先 + cookie 兜底：
+// 隐私模式或浏览器阻止站点数据时，localStorage.setItem 会静默失败（被 try/catch 吞掉），
+// 结果就是"当前页切了，跳到下一页又回去"，加 cookie 后这种情况仍能保持。
+function setLangPref(l) {
+  try { localStorage.setItem('siteLang', l); } catch (e) {}
+  try {
+    document.cookie = 'siteLang=' + encodeURIComponent(l) +
+      ';path=/;max-age=31536000;samesite=Lax';
+  } catch (e) {}
+}
+
+function getLangPref() {
+  var v = null;
+  try { v = localStorage.getItem('siteLang'); } catch (e) {}
+  if (!v) {
+    try {
+      var m = document.cookie.match(/(?:^|;\s*)siteLang=([^;]*)/);
+      if (m) v = decodeURIComponent(m[1]);
+    } catch (e) {}
+  }
+  return v;
 }
 
 // 分语言 URL 的页面（/de/ /ja/ /ko/ /fr/ /it/ /es/）自身就是目标语言，
@@ -626,7 +639,7 @@ function applyLang(lang) {
   });
   const btn = document.querySelector('.lang-btn');
   if (btn) btn.textContent = lang === 'zh' ? 'EN' : '中文';
-  // 刻意不写 setLangPref：中文只在当前页生效，不跨页面记忆
+  setLangPref(lang);      // 记住选择，后续页面沿用
   window.dispatchEvent(new Event('sanfan-langchange'));
 }
 
@@ -676,13 +689,13 @@ if (langBtn) {
 })();
 
 // 语言切换器 data-setlang：
-//  - 带 href（如 /de/ /ja/ /ko/ 页面上的"中文"）→ 跳转到对应英文页（落地后仍是英文）
-//  - 不带 href（英文页上的"中文"按钮）→ 直接同页切换，不跳转
-// 两种都不写偏好：中文不跨页面记忆。
+//  - 带 href（如 /de/ /ja/ /ko/ 页面上的"中文"）→ 先记下偏好，再跳转到对应页面
+//  - 不带 href（英文页上的"中文"按钮）→ 记下偏好并同页切换，不跳转
 document.querySelectorAll('[data-setlang]').forEach(el => {
   el.addEventListener('click', e => {
     e.preventDefault();
     const L = el.getAttribute('data-setlang');
+    setLangPref(L);
     const href = el.getAttribute('href');
     if (href) {
       location.href = href;
@@ -696,10 +709,8 @@ document.querySelectorAll('[data-setlang]').forEach(el => {
     }
   });
 });
-// 永远以英文开场：清掉历史上可能残留的中文偏好，然后渲染英文。
-// 想看中文就当场点"中文"，切走或刷新即恢复英文。
-clearLangPref();
-applyLang('en');
+// 沿用访客上次选择的语言；没选过（或选过但存储不可用）则默认英文。
+applyLang(getLangPref() === 'zh' ? 'zh' : 'en');
 
 // ---------- Inquiry form (Formspree) ----------
 const form = document.getElementById('inquiry-form');
