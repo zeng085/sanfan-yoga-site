@@ -37,7 +37,8 @@ const I18N = {
     'factory.stat1': '2013', 'factory.s1': 'Established',
     'factory.stat2': '600+', 'factory.s2': 'Workers',
     'factory.stat3': '12,000㎡', 'factory.s3': 'Facility',
-    'factory.stat4': '5 Lines', 'factory.s4': 'Production Lines',
+    'factory.stat4': '12 Lines', 'factory.s4': 'Production Lines',
+    'factory.vertical': '<strong>In-house from foaming to finishing.</strong> We operate three owned plants — two dedicated to TPE yoga mats and one to PU / rubber mats — running 6 foaming machines and 12 production lines. Because foaming, the most capacity-critical step, happens inside our own factories, we hold a steady output of 7,000–8,000 mats per day (about 200,000 per month) and control quality from raw material through to the finished mat.',
     'factory.cap.title': 'Monthly Production Capacity',
     'cap1.t': 'Yoga Mats', 'cap1.d': '200,000 pcs / month',
     'cap2.t': 'Sports Bags', 'cap2.d': '150,000 pcs / month',
@@ -318,7 +319,8 @@ const I18N = {
     'factory.stat1': '2013', 'factory.s1': '成立年份',
     'factory.stat2': '600+', 'factory.s2': '员工规模',
     'factory.stat3': '12000㎡', 'factory.s3': '厂房面积',
-    'factory.stat4': '5 条', 'factory.s4': '生产线',
+    'factory.stat4': '12 条', 'factory.s4': '生产线',
+    'factory.vertical': '<strong>从发泡到成品全自有。</strong>我们运营三家自有工厂——两家专做 TPE 瑜伽垫，一家专做 PU/橡胶垫，共配备 6 台发泡机、12 条生产线。由于发泡这道最影响产能的工序掌握在自己手里，我们能稳定做到日产 7,000–8,000 片（约 20 万片/月），并从原料到成品全程控质。',
     'factory.cap.title': '月度产能',
     'cap1.t': '瑜伽垫', 'cap1.d': '200,000 片 / 月',
     'cap2.t': '运动包', 'cap2.d': '150,000 个 / 月',
@@ -579,11 +581,15 @@ function applyLang(lang) {
   document.documentElement.classList.toggle('show-en', lang === 'en');
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (I18N[lang][key] != null) {
-      if (key.startsWith('spec') && key.endsWith('.d')) {
-        el.innerHTML = I18N[lang][key].replace(/\n/g, '<br>');
+    const val = I18N[lang][key];
+    if (val != null) {
+      // 值里含标签时按 HTML 渲染（如带 <strong> 的说明段），否则按纯文本，
+      // 避免把标签当字面量显示出来
+      if (/<[a-z][\s\S]*>/i.test(val)) {
+        el.innerHTML = (key.startsWith('spec') && key.endsWith('.d'))
+          ? val.replace(/\n/g, '<br>') : val;
       } else {
-        el.textContent = I18N[lang][key];
+        el.textContent = val;
       }
     }
   });
