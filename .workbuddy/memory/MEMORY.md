@@ -56,6 +56,14 @@
 - 用户需在 GA4 后台把 `generate_lead` 手动标记为「关键事件」才进转化报表
 - Formspree 表单**暂不更换**（用户 2026-08-30 明确：现在一个询盘都没有，换了也没意义）
 
+### 8. 图片规范（2026-08-30 全量改造）
+- 33 张图已转 **WebP 质量 75**（2.6MB → 1.2MB，省 53%）。HTML/CSS/JSON-LD/og:image 共 1400+ 处引用已统一为 `.webp`
+- **新增图片必须先转 WebP 再入站**，不要直接放 jpg
+- 每个 `<img>` 都要带 `width`/`height`（防 CLS）；**header 内首屏 logo 不加 `loading="lazy"`**（会拖慢 LCP）
+- CSS 有 `img{height:auto}` 兜底，保证 width/height 属性不会把图拉变形
+- 转换用隔离 venv 的 Pillow：`/Users/mac-zlg/.workbuddy/binaries/python/envs/default/bin/python`（系统 Python 无 Pillow，macOS `sips` **不支持** WebP 输出）
+- 原 jpg 暂时保留在 `assets/img/`，确认线上稳定后可清理
+
 ## 已知的坑
 
 - **不要执行生成脚本来验证语法**：`node -e "require('gen_product_pages.js')"` 会真的执行并覆盖页面。
