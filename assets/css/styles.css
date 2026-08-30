@@ -43,6 +43,9 @@ body {
   overflow-wrap: break-word;
 }
 img, table, iframe, video { max-width: 100%; display: block; }
+/* 配合 <img width/height> 属性：保留固有宽高比防 CLS，同时不被属性固定高度拉变形。
+   更具体的规则（如 .rc-img img{height:100%}）优先级更高，不受影响。 */
+img { height: auto; }
 a { color: inherit; text-decoration: none; }
 
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
@@ -144,7 +147,7 @@ a { color: inherit; text-decoration: none; }
 }
 .hero::after {
   content: ""; position: absolute; inset: 0;
-  background: url("../../assets/img/factory-building.jpg") center/cover no-repeat;
+  background: url("../../assets/img/factory-building.webp") center/cover no-repeat;
   opacity: .22; mix-blend-mode: multiply;
 }
 .hero-inner { position: relative; z-index: 2; padding: 84px 0 92px; }

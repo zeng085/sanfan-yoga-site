@@ -50,11 +50,22 @@
 `rewrite_rel` 里已对 `A in ('/', '', '.')` 提前返回 `/{lang}/`。
 新增任何「回到首页 / 站点根」的链接时，务必用绝对路径。
 
+### 7. GA4 与分析
+- 衡量 ID：**G-RMSNDR5S06**（2026-08-30 全站接入，102 页 head 内 gtag.js）
+- 转化事件 `generate_lead` 埋在 `main.js` 表单成功回调，带 product_interest / page_language / page_path
+- 用户需在 GA4 后台把 `generate_lead` 手动标记为「关键事件」才进转化报表
+- Formspree 表单**暂不更换**（用户 2026-08-30 明确：现在一个询盘都没有，换了也没意义）
+
 ## 已知的坑
 
 - **不要执行生成脚本来验证语法**：`node -e "require('gen_product_pages.js')"` 会真的执行并覆盖页面。
   用 `node --check` 只做语法检查。
-- **GitHub API 一次推 100+ 个文件会返回 500**：分批推送（核心 / 产品页 / 语言页）。
+- **`node --check` 会因 NODE_OPTIONS 报 `--use-system-ca is not allowed`**：
+  先 `unset NODE_OPTIONS` 再执行。
+- **git push 走 github.com，API 走 api.github.com，代理策略不同**：
+  push 反复失败时先分别探测（返回 000 即连接失败）；`api` 通而 `github` 不通就走 REST API 四步提交。
+  103 个文件单批也能成功，不必硬拆。API 提交后必须 `git fetch && git reset --hard origin/main` 对齐本地。
+- **git 报错会把 remote URL 里的 PAT 打印出来**：日志会泄露 PAT 前缀，轮换待办优先级高。
 - **中文文件名**用 `git diff --name-only` 会输出八进制转义，push 脚本会 skip。
   先 `git config core.quotepath false`，或手工传真实文件名。
 - **localStorage 写入可能被静默吞掉**（隐私模式）：涉及跨页面状态的写入要考虑降级。
