@@ -3303,13 +3303,121 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url><loc>https://fjsanfan.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://fjsanfan.com/blog/tpe-vs-pu.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://fjsanfan.com/blog/moq-explained.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://fjsanfan.com/blog/compliance.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://fjsanfan.com/blog/vet-factory.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://fjsanfan.com/blog/7day-sampling.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://fjsanfan.com/blog/custom-sizes.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://fjsanfan.com/blog/yoga-mat-materials.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://fjsanfan.com/blog/yoga-mat-spec-guide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url>
+    <loc>https://fjsanfan.com/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/blog/tpe-vs-pu.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/tpe-vs-pu.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/tpe-vs-pu.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/blog/tpe-vs-pu.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/blog/tpe-vs-pu.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/blog/tpe-vs-pu.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog/tpe-vs-pu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog/tpe-vs-pu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog/tpe-vs-pu.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/blog/moq-explained.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/moq-explained.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/moq-explained.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/blog/moq-explained.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/blog/moq-explained.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/blog/moq-explained.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog/moq-explained.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog/moq-explained.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog/moq-explained.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/blog/compliance.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/blog/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/blog/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/blog/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog/compliance.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/blog/vet-factory.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/vet-factory.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/vet-factory.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/blog/vet-factory.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/blog/vet-factory.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/blog/vet-factory.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog/vet-factory.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog/vet-factory.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog/vet-factory.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/blog/7day-sampling.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/7day-sampling.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/7day-sampling.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/blog/7day-sampling.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/blog/7day-sampling.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/blog/7day-sampling.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog/7day-sampling.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog/7day-sampling.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog/7day-sampling.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/blog/custom-sizes.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/custom-sizes.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/custom-sizes.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/blog/custom-sizes.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/blog/custom-sizes.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/blog/custom-sizes.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog/custom-sizes.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog/custom-sizes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog/custom-sizes.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/blog/yoga-mat-materials.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/yoga-mat-materials.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/yoga-mat-materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/blog/yoga-mat-materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/blog/yoga-mat-materials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/blog/yoga-mat-materials.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog/yoga-mat-materials.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog/yoga-mat-materials.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog/yoga-mat-materials.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/blog/yoga-mat-spec-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/yoga-mat-spec-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/yoga-mat-spec-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/blog/yoga-mat-spec-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/blog/yoga-mat-spec-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/blog/yoga-mat-spec-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog/yoga-mat-spec-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog/yoga-mat-spec-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog/yoga-mat-spec-guide.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
