@@ -35,15 +35,15 @@
 - 切换器是**下拉式**（8 种语言横排会挤爆导航栏）
 - EN 项必须带 `data-setlang="en"`；英文页用 `<button>`（同页切换），语言页用 `<a href>`
 
-### 5. 多语言页未翻译产品不得跳回英文
-- 6 种语言站（/de/ /ja/ /ko/ /fr/ /it/ /es/）各只翻译了 5 个核心产品（ym1/ym2/ym3/fr1/rb2），其余 22 个产品无翻译。
-- 未翻译产品在语言页中的链接必须指向当前语言的 `products.html#<category>`，而不是英文 `/products/xxx.html`。
-- `build_pages.py` 的 `rewrite_rel` 已处理该回退逻辑：
+### 5. 多语言产品页已全量翻译（27/27）
+- 2026-08-30 补齐：原仅 5 个核心产品（ym1/ym2/ym3/fr1/rb2）有语言版，其余 22 个（fi1-5/fr2-5/pr1-5/rb1/rb3/rb4/ym4-8）无翻译；
+  现 **6 种语言站产品页均达 27 个**，无未翻译产品，不再有跳回英文的风险。
+- `build_pages.py` 的 `rewrite_rel` 回退逻辑仍保留作防御（万一未来新增未翻译产品）：
   - 有语言版 → `/{lang}/products/xxx.html`
   - 无语言版 → `/{lang}/products.html#{category}`
   - 分类导航 `products.html#xxx` → `/{lang}/products.html#xxx`
 - 分类锚点：yoga / props / rollers / bands / fitness
-
+- **标准生成流程**（任何语言扩展都走这套）：`build_pages.py`（翻译，会移除旧切换器）→ `fix_site.py`（补切换器）→ `inject_ga4.py`（兜底 GA4）→ `update_seo.py`（hreflang + sitemap）
 ### 6. 语言页「回站点根」的链接必须是绝对路径 `/{lang}/`
 `rel_from` 对根目标 `'/'` 做 `split('/')` 会得到 `['','']`，拼出 `'..//'`；
 浏览器解析后落到英文站根 `/`，再套用访客存的 `siteLang` → 出现「点 logo 回首页变中文」。
