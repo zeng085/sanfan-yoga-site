@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://fjsanfan.com/sitemap.xml
-LLMS-TXT: https://fjsanfan.com/llms.txt
