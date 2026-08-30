@@ -563,8 +563,18 @@ const I18N = {
 };
 window.I18N = I18N;
 
+// 分语言 URL 的页面（/de/ /ja/ /ko/ /fr/ /it/ /es/）自身就是目标语言，
+// 静态 HTML 已带正确的 <html lang>。绝不能用 en 覆盖掉，
+// 否则 Google 与屏幕阅读器会把法语页面当成英文页面。
+function isLocalizedPage() {
+  const cur = (document.documentElement.lang || '').toLowerCase();
+  return cur !== '' && cur !== 'en' && !cur.startsWith('zh');
+}
+
 function applyLang(lang) {
-  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  if (!isLocalizedPage()) {
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  }
   document.documentElement.classList.toggle('show-zh', lang === 'zh');
   document.documentElement.classList.toggle('show-en', lang === 'en');
   document.querySelectorAll('[data-i18n]').forEach(el => {
