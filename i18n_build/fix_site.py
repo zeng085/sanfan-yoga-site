@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_pages as B
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LANGS = ["de", "ja", "ko"]
+LANGS = B.LANGS      # 统一引用，新增语言只需改 build_pages 一处
 # 语言版只生成了这 5 个产品页，其余图库项在语言页上回链到英文原页
 T1_PRODUCTS = {"ym1", "ym2", "ym3", "fr1", "rb2"}
 
@@ -92,19 +92,33 @@ def lang_switcher(rel, lang=None, has_lang=True):
             return "/%s/products.html" % lg
         return "/%s/%s" % (lg, rel)
 
+    LBL = {"de": "DE", "ja": "JA", "ko": "KO", "fr": "FR", "it": "IT", "es": "ES"}
+    NAME = {"de": "Deutsch", "ja": "日本語", "ko": "한국어",
+            "fr": "Français", "it": "Italiano", "es": "Español"}
+
     if lang is None:      # 英文原页：EN 高亮，中文用同页切换按钮
-        links = ['<a href="%s" hreflang="en" class="active">EN</a>' % url(None)]
-        links.append('<button type="button" data-setlang="zh">中文</button>')
-        for lg, lbl in (("de", "DE"), ("ja", "JA"), ("ko", "KO")):
-            links.append('<a href="%s" hreflang="%s">%s</a>' % (url(lg), lg, lbl))
+        items = ['<a href="%s" hreflang="en" title="English" class="active">EN</a>' % url(None)]
+        items.append('<button type="button" data-setlang="zh" title="中文">中文</button>')
+        for lg in LANGS:
+            items.append('<a href="%s" hreflang="%s" title="%s">%s</a>'
+                         % (url(lg), lg, NAME[lg], LBL[lg]))
+        current = "EN"
     else:                 # 语言页：中文跳英文页同时写入偏好
         en = url(None)
-        links = ['<a href="%s" hreflang="en">EN</a>' % en]
-        links.append('<a href="%s" hreflang="zh" data-setlang="zh">中文</a>' % en)
-        for lg, lbl in (("de", "DE"), ("ja", "JA"), ("ko", "KO")):
+        items = ['<a href="%s" hreflang="en" title="English">EN</a>' % en]
+        items.append('<a href="%s" hreflang="zh" data-setlang="zh" title="中文">中文</a>' % en)
+        for lg in LANGS:
             act = ' class="active"' if (lg == lang and has_lang) else ""
-            links.append('<a href="%s" hreflang="%s"%s>%s</a>' % (url(lg), lg, act, lbl))
-    return '<div class="lang-switch">' + "".join(links) + "</div>"
+            items.append('<a href="%s" hreflang="%s" title="%s"%s>%s</a>'
+                         % (url(lg), lg, NAME[lg], act, LBL[lg]))
+        current = LBL[lang] if has_lang else "EN"
+
+    # 下拉式：当前语言收进按钮，8 种语言不会撑爆导航栏
+    return ('<div class="lang-switch">'
+            '<button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false">'
+            '%s<span class="lang-caret">&#9662;</span></button>'
+            '<div class="lang-menu">%s</div>'
+            '</div>' % (current, "".join(items)))
 
 
 def all_pages():

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-30 01:25:45",
+  "generated_at": "2026-08-30 10:10:56",
   "langs": {
     "de": {
-      "pairs_total": 936,
+      "pairs_total": 1057,
       "dim2": {
-        "checked": 936,
+        "checked": 1057,
         "bad": 1,
         "samples": [
           {
@@ -17,7 +17,7 @@
         ]
       },
       "dim3": {
-        "checked": 936,
+        "checked": 1057,
         "bad": 1,
         "samples": [
           {
@@ -58,14 +58,14 @@
       }
     },
     "ja": {
-      "pairs_total": 936,
+      "pairs_total": 1057,
       "dim2": {
-        "checked": 936,
+        "checked": 1057,
         "bad": 0,
         "samples": []
       },
       "dim3": {
-        "checked": 936,
+        "checked": 1057,
         "bad": 4,
         "samples": [
           {
@@ -112,9 +112,9 @@
       }
     },
     "ko": {
-      "pairs_total": 936,
+      "pairs_total": 1057,
       "dim2": {
-        "checked": 936,
+        "checked": 1057,
         "bad": 4,
         "samples": [
           {
@@ -148,7 +148,7 @@
         ]
       },
       "dim3": {
-        "checked": 936,
+        "checked": 1057,
         "bad": 3,
         "samples": [
           {
@@ -179,6 +179,127 @@
         "avg_score": 0.7796,
         "bad": 0,
         "samples": []
+      },
+      "dim4": {
+        "checked": 25,
+        "avg_score": 1.0,
+        "bad": 0,
+        "samples": []
+      }
+    },
+    "fr": {
+      "pairs_total": 1057,
+      "dim2": {
+        "checked": 1057,
+        "bad": 0,
+        "samples": []
+      },
+      "dim3": {
+        "checked": 1057,
+        "bad": 0,
+        "samples": []
+      },
+      "dim1": {
+        "checked": 110,
+        "avg_score": 0.7581,
+        "bad": 2,
+        "samples": [
+          {
+            "src": "Third-party tested",
+            "dst": "Testé par un organisme indépendant",
+            "back": "Tested by an independent organization",
+            "score": 0.213,
+            "threshold": 0.28
+          },
+          {
+            "src": "Fujian (Jinjiang/Quanzhou) is a mature sports-goods manufacturing hub with deep supply chains, skilled labor and strong export logistics — shorter lead times an",
+            "dst": "Le Fujian (Jinjiang/Quanzhou) est un pôle de fabrication d'articles de sport bien établi, doté de chaînes d'approvisionnement solides, d'une main-d'œuvre qualif",
+            "back": "Fujian (Jinjiang/Quanzhou) is a well-established sports goods manufacturing hub, with robust supply chains, a skilled workforce, and efficient export logistics,",
+            "score": 0.268,
+            "threshold": 0.32
+          }
+        ]
+      },
+      "dim4": {
+        "checked": 25,
+        "avg_score": 1.0,
+        "bad": 0,
+        "samples": []
+      }
+    },
+    "it": {
+      "pairs_total": 1057,
+      "dim2": {
+        "checked": 1057,
+        "bad": 1,
+        "samples": [
+          {
+            "src": "Since 2013, a leading OEM/ODM manufacturer of yoga mats, aerial yoga hammocks, yoga props, foam rollers, resistance bands and fitness equipment. 600+ skilled wo",
+            "dst": "Dal 2013, azienda leader nella produzione OEM/ODM di tappetini da yoga, amache per yoga aereo, accessori per lo yoga, rulli in schiuma, fasce elastiche di resis",
+            "issues": [
+              "NUMBERS_CHANGED:['000', '100', '200', '2013', '24', '600', '7']->['000', '100', '200', '2013', '24', '24', '600', '7']"
+            ]
+          }
+        ]
+      },
+      "dim3": {
+        "checked": 1057,
+        "bad": 0,
+        "samples": []
+      },
+      "dim1": {
+        "checked": 110,
+        "avg_score": 0.767,
+        "bad": 1,
+        "samples": [
+          {
+            "src": "Fujian (Jinjiang/Quanzhou) is a mature sports-goods manufacturing hub with deep supply chains, skilled labor and strong export logistics — shorter lead times an",
+            "dst": "Il Fujian (Jinjiang/Quanzhou) è un polo consolidato per la produzione di articoli sportivi, caratterizzato da catene di approvvigionamento ben consolidate, mano",
+            "back": "Fujian (Jinjiang/Quanzhou) is a well-established hub for the production of sporting goods, characterized by well-established supply chains, a skilled workforce,",
+            "score": 0.247,
+            "threshold": 0.32
+          }
+        ]
+      },
+      "dim4": {
+        "checked": 25,
+        "avg_score": 1.0,
+        "bad": 0,
+        "samples": []
+      }
+    },
+    "es": {
+      "pairs_total": 1057,
+      "dim2": {
+        "checked": 1057,
+        "bad": 0,
+        "samples": []
+      },
+      "dim3": {
+        "checked": 1057,
+        "bad": 0,
+        "samples": []
+      },
+      "dim1": {
+        "checked": 110,
+        "avg_score": 0.7763,
+        "bad": 2,
+        "samples": [
+          {
+            "src": "OEM = we produce to your spec/design. ODM = we provide existing designs you brand as yours. Private label = our standard products shipped under your brand with ",
+            "dst": "OEM = fabricamos según sus especificaciones o diseño. ODM = le ofrecemos diseños ya existentes que usted comercializará como propios. Marca propia = nuestros pr",
+            "back": "OEM = We manufacture according to your specifications or design. ODM = We offer existing designs that you can market as your own. Private Label = Our standard p",
+            "score": 0.228,
+            "threshold": 0.32
+          },
+          {
+            "src": "Fujian (Jinjiang/Quanzhou) is a mature sports-goods manufacturing hub with deep supply chains, skilled labor and strong export logistics — shorter lead times an",
+            "dst": "Fujian (Jinjiang/Quanzhou) es un centro consolidado de fabricación de artículos deportivos que cuenta con cadenas de suministro bien desarrolladas, mano de obra",
+            "back": "Fujian (Jinjiang/Quanzhou) is a well-established hub for the manufacture of sporting goods, featuring well-developed supply chains, a skilled workforce, and rob",
+            "score": 0.246,
+            "threshold": 0.32
+          }
+        ]
       },
       "dim4": {
         "checked": 25,

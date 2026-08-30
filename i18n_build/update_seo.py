@@ -11,7 +11,8 @@ import build_pages as B
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://fjsanfan.com"
 T1 = B.PAGES
-LANGS = ["de", "ja", "ko"]
+# 统一引用 build_pages 的语言集合，避免两处硬编码不一致导致 hreflang/sitemap 漏语言
+LANGS = B.LANGS
 
 
 def exists(rel, lg):

@@ -11,7 +11,7 @@ import verify as V
 import build_pages as B
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LANGS = ["de", "ja", "ko"]
+LANGS = B.LANGS      # 统一引用 build_pages，新增语言自动纳入验证
 REPORT_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "verify_report.json")
 REPORT_MD = os.path.join(ROOT, "三梵多语言翻译质量验证报告.md")
 

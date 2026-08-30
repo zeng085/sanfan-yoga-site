@@ -594,6 +594,44 @@ if (langBtn) {
     applyLang(cur === 'zh' ? 'en' : 'zh');
   });
 }
+// 多语言下拉菜单（8 种语言横排放不下，改用下拉）
+(function () {
+  function closeAll(except) {
+    document.querySelectorAll('.lang-switch.open').forEach(sw => {
+      if (sw === except) return;
+      sw.classList.remove('open');
+      const b = sw.querySelector('.lang-current');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  }
+  document.querySelectorAll('.lang-switch').forEach(sw => {
+    const btn = sw.querySelector('.lang-current');
+    if (!btn) return;                       // 旧结构无下拉按钮，跳过
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      const willOpen = !sw.classList.contains('open');
+      closeAll(sw);
+      sw.classList.toggle('open', willOpen);
+      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+    // 选中语言后收起菜单
+    sw.querySelectorAll('.lang-menu a, .lang-menu button').forEach(item => {
+      item.addEventListener('click', () => {
+        sw.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+  document.addEventListener('click', e => {
+    const t = e.target;
+    if (t && t.closest && !t.closest('.lang-switch')) closeAll(null);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeAll(null);
+  });
+})();
+
 // 语言切换器 data-setlang：
 //  - 带 href（如 /de/ /ja/ /ko/ 页面上的"中文"）→ 写入偏好后跳转
 //  - 不带 href（英文页上的"中文"按钮）→ 直接同页切换，不跳转
@@ -608,7 +646,7 @@ document.querySelectorAll('[data-setlang]').forEach(el => {
     } else {
       applyLang(L);
       // 同步高亮：当前项标记为 active
-      document.querySelectorAll('.lang-switch a, .lang-switch button').forEach(x => {
+      document.querySelectorAll('.lang-menu a, .lang-menu button').forEach(x => {
         x.classList.remove('active');
       });
       el.classList.add('active');

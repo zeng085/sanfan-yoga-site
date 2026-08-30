@@ -12,7 +12,11 @@ import translator as T
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://fjsanfan.com"
-LANGS = ["de", "ja", "ko"]
+# T1 = 德/日/韩（已上线）；T2 = 法/意/西（欧洲瑜伽垫进口大国）
+# 注意：LANGS 是全局语言集合，update_seo.py 会据此生成 hreflang 互链与 sitemap，
+#       所以新增语言只需加在这里；生成时用命令行参数过滤只跑指定语言：
+#       python3 build_pages.py fr it es
+LANGS = ["de", "ja", "ko", "fr", "it", "es"]
 
 # T1 试点页面清单（相对站点根）
 PAGES = [
@@ -352,9 +356,8 @@ def build_one(rel_path, lang, verbose=True):
             return SITE + "/" if rel_path == "index.html" else SITE + "/" + rel_path
         return norm_lang_url(SITE + "/" + lg + "/" + rel_path)
 
-    variants = [("en", _u(None)),
-                ("de", _u("de")), ("ja", _u("ja")), ("ko", _u("ko")),
-                ("x-default", _u(None))]
+    variants = [("en", _u(None))] + [(lg, _u(lg)) for lg in LANGS] + \
+               [("x-default", _u(None))]
     hl_lines = "\n".join('  <link rel="alternate" hreflang="%s" href="%s" />' % (l, u)
                          for l, u in variants)
     h = re.sub(r'\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*/?>', "", h)
@@ -365,19 +368,18 @@ def build_one(rel_path, lang, verbose=True):
     h = re.sub(r'<html\s+lang="[^"]*"', '<html lang="%s"' % lang, h, count=1)
     h = re.sub(r'<html(?![^>]*lang=)', '<html lang="%s"' % lang, h, count=1)
 
-    def lang_url(lg):
-        """lg=None -> 英文/中文原页；否则 -> /<lg>/<rel_path>"""
-        target = rel_path if lg is None else (lg + "/" + rel_path)
-        return rel_from(cur_dir, target)
+    # 8.5) 修正 <script src> 的相对路径。
+    # 语言页比英文原页深一级目录（fr/ 或 fr/products/），相对路径必须相应加深，
+    # 否则会引用到 fr/assets/js/main.js 这种不存在的路径，导致整页 JS 失效
+    # （移动端菜单、切换器交互、FAQ 折叠全废）。这个 bug 曾影响全部 30 个语言页。
+    h = re.sub(r'(<script[^>]*\ssrc=")((?:\.\./)*assets/[^"]+)(")',
+               lambda m: m.group(1) + '../' + m.group(2) + m.group(3), h)
 
-    LBL = {"de": "DE", "ja": "JA", "ko": "KO"}
-    links = ['<a href="%s" hreflang="en"%s>EN</a>' % (lang_url(None), ""),
-             '<a href="%s" hreflang="zh" data-setlang="zh">中文</a>' % lang_url(None)]
-    for lg in ("de", "ja", "ko"):
-        act = ' class="active"' if lg == lang else ""
-        links.append('<a href="%s" hreflang="%s"%s>%s</a>' % (lang_url(lg), lg, act, LBL[lg]))
-    switch = '<div class="lang-switch">' + "".join(links) + '</div>'
-    h = re.sub(r'<button class="lang-btn"[^>]*>.*?</button>', switch, h, count=1, flags=re.S)
+    # 切换器不在这里生成：由 fix_site.py 用「绝对路径」统一注入（幂等，覆盖英文原页+全部语言页）。
+    # 原因：这里用相对路径容易算错层级（曾出现 ..// 这类错误），且旧 lang-btn 正则早已失效。
+    # 翻译会把旧切换器的 "EN"/"DE" 等标签也翻掉，所以先整块摘掉，避免残留被译文污染的切换器。
+    h = re.sub(r'\s*<div class="lang-switch">.*?</div>', '', h, count=1, flags=re.S)
+    h = re.sub(r'\s*<button class="lang-btn"[^>]*>.*?</button>', '', h, count=1, flags=re.S)
 
     # 9) 回填 JSON-LD（翻译内部字符串）
     ld_cache = {}

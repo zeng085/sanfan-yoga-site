@@ -37,6 +37,12 @@ NUMWORD_TARGET = {
                      r"neun|zehn|elf|zwölf|zwanzig|dreißig|vierzig|fünfzig|hundert|tausend)\b", re.I),
     "ja": re.compile(r"[一二三四五六七八九十百千万]"),
     "ko": re.compile(r"(하나|둘|셋|넷|다섯|여섯|일곱|여덟|아홉|열|스물|백|천)"),
+    "fr": re.compile(r"\b(un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|"
+                     r"vingt|trente|quarante|cinquante|cent|mille)\b", re.I),
+    "it": re.compile(r"\b(un|uno|una|due|tre|quattro|cinque|sei|sette|otto|nove|dieci|undici|"
+                     r"dodici|venti|trenta|quaranta|cinquanta|cento|mille)\b", re.I),
+    "es": re.compile(r"\b(un|uno|una|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|once|"
+                     r"doce|veinte|treinta|cuarenta|cincuenta|cien|mil)\b", re.I),
 }
 
 
@@ -123,6 +129,12 @@ LANG_SCRIPT = {
     "de": lambda s: bool(re.search(r"[A-Za-zÄÖÜäöüß]", s)),
     "ja": lambda s: bool(re.search(r"[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff]", s)),
     "ko": lambda s: bool(re.search(r"[\uac00-\ud7af\u1100-\u11ff]", s)),
+    # 法/意/西与英文同为拉丁字母，靠字符系统无法区分语言，
+    # 这里只校验"确实有字母内容"（防止译文变成纯符号/数字），
+    # 真正的语言正确性由 DIM-1 回译语义 + DIM-4 交叉一致性承担。
+    "fr": lambda s: bool(re.search(r"[A-Za-zÀ-ÿŒœÆæ]", s)),
+    "it": lambda s: bool(re.search(r"[A-Za-zÀ-ÿ]", s)),
+    "es": lambda s: bool(re.search(r"[A-Za-zÀ-ÿÑñ¿¡]", s)),
 }
 # 目标语若几乎不含本语言字符，说明返回了错误语种
 FOREIGN_HINT = {
@@ -131,7 +143,9 @@ FOREIGN_HINT = {
     "de": lambda s: len(re.findall(r"[\u0400-\u04FF]", s)) > 0,
 }
 # CJK 信息密度高，等长英文对应的中日韩文字符数天然更短
-LEN_RANGE = {"de": (0.75, 2.20), "ja": (0.15, 1.60), "ko": (0.15, 1.60)}
+# 相对英文的长度膨胀区间。法/意/西译自英文普遍膨胀 15-40%，上限比德语放宽。
+LEN_RANGE = {"de": (0.75, 2.20), "ja": (0.15, 1.60), "ko": (0.15, 1.60),
+             "fr": (0.70, 2.40), "it": (0.70, 2.40), "es": (0.70, 2.40)}
 LEN_MIN_SRC = 20      # 短文本的字符数比无统计意义（如 Products -> 製品）
 
 
