@@ -723,6 +723,15 @@ if (form) {
     try {
       const res = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
       if (res.ok) {
+        // GA4 转化事件：只有表单真正提交成功才记，避免把失败也算成询盘
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            form_name: 'inquiry',
+            product_interest: data.get('product') || 'unspecified',
+            page_language: document.documentElement.lang || 'en',
+            page_path: location.pathname
+          });
+        }
         form.reset();
         okBox.style.display = 'block';
         okBox.style.background = '';
