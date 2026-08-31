@@ -413,7 +413,7 @@ a.prod-card:hover .info h4 { color: var(--brand); }
   .stat-card .num { font-size: 28px; }
   .cap-table th, .cap-table td { padding: 10px 12px; font-size: 13.5px; }
   .pd-features { grid-template-columns: 1fr; }
-  .container { padding-left: 28px; padding-right: 28px; }
+  .container { padding-left: 34px; padding-right: 34px; }
   .section { padding: 50px 0; }
   .hero-inner { padding: 52px 0 56px; }
 }
