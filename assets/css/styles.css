@@ -373,7 +373,7 @@ a.prod-card:hover .info h4 { color: var(--brand); }
 .site-footer { background: var(--ink); color: #cdd9d4; padding: 56px 0 26px; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.4fr; gap: 34px; }
 .site-footer .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 18px; margin-bottom: 14px; }
-.site-footer .brand img { height: 34px; border-radius: 8px; }
+.site-footer .brand img { width: auto; height: 34px; border-radius: 8px; object-fit: contain; }
 .site-footer h5 { color: #fff; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 14px; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
 .site-footer ul li { margin-bottom: 9px; font-size: 14px; }
