@@ -413,7 +413,11 @@ a.prod-card:hover .info h4 { color: var(--brand); }
   .stat-card .num { font-size: 28px; }
   .cap-table th, .cap-table td { padding: 10px 12px; font-size: 13.5px; }
   .pd-features { grid-template-columns: 1fr; }
-  .container { padding-left: 44px; padding-right: 44px; }
+  /* 手机屏再分两列的话，每张卡正文只剩 ~100px，长尺寸串会挤成一团 —— 改单列 */
+  .grid-4 { grid-template-columns: 1fr; }
+  .card { padding: 22px 20px; }
+  .grid-4 .card p { overflow-wrap: anywhere; line-height: 1.75; }
+  .container { padding-left: 20px; padding-right: 20px; }
   .section { padding: 50px 0; }
   .hero-inner { padding: 52px 0 56px; }
 }

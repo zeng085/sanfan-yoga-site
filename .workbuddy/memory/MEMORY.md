@@ -71,6 +71,14 @@
 - 用法：改脚本顶部 `VER = "vYYYYMMDD"` → 运行 → 全站 288 个 HTML 的 css/js 引用全部带上版本号。
 - 线上验证：`curl -sL https://fjsanfan.com/ | grep -o 'styles.css[^"]*'` 应返回带 `?v` 的引用。
 
+### 10. 产品页结构化数据（JSON-LD Product / AggregateOffer，2026-09-01 修正）
+- 全站 189 个产品页（27 产品 × 7 语言）统一使用 `@graph` 包裹 `Product` + `BreadcrumbList`。
+- `Product.offers` 用 `AggregateOffer` 表示 B2B 阶梯/定制报价区间，Google 商品摘要接受该类型。
+- `AggregateOffer` 必须字段：**`lowPrice`（数字，非字符串）、`highPrice`（数字）、`priceCurrency`**。
+- `AggregateOffer` 里**不要放 `availability` 和 `priceValidUntil`**，这两个属性属于单个 `Offer`，放在汇总报价里会被 Google 视为不规范。
+- 新增/修改产品页后，用 `~/.workbuddy/skills/fjsanfan-product-schema/scripts/audit_product_schema.py` 全量审计，
+  再用 `fix_aggregate_offers.py` 自动修复。
+
 ## 已知的坑
 
 - **不要执行生成脚本来验证语法**：`node -e "require('gen_product_pages.js')"` 会真的执行并覆盖页面。
