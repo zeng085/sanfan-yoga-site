@@ -64,6 +64,13 @@
 - 转换用隔离 venv 的 Pillow：`/Users/mac-zlg/.workbuddy/binaries/python/envs/default/bin/python`（系统 Python 无 Pillow，macOS `sips` **不支持** WebP 输出）
 - 原 jpg 暂时保留在 `assets/img/`，确认线上稳定后可清理
 
+### 9. 缓存版本号（cache-busting，2026-08-31 起强制）
+- **任何改 CSS/JS 的提交，必须同步 bump 全站 `?v=` 版本号**（`?v=20260831` 按当天日期），
+  否则浏览器/手机（尤其微信内置浏览器）会缓存旧样式，用户看到"没改过来"。
+- 批量工具：`/tmp/bump_assets_ver.py`（幂等：已带版本号的不重复加；跳过 i18n_build 等非站点目录）。
+- 用法：改脚本顶部 `VER = "vYYYYMMDD"` → 运行 → 全站 288 个 HTML 的 css/js 引用全部带上版本号。
+- 线上验证：`curl -sL https://fjsanfan.com/ | grep -o 'styles.css[^"]*'` 应返回带 `?v` 的引用。
+
 ## 已知的坑
 
 - **不要执行生成脚本来验证语法**：`node -e "require('gen_product_pages.js')"` 会真的执行并覆盖页面。
