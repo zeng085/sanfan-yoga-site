@@ -30,6 +30,51 @@
       "source": "/ko/index.html",
       "destination": "/ko/",
       "permanent": true
+    },
+    {
+      "source": "/fr/index.html",
+      "destination": "/fr/",
+      "permanent": true
+    },
+    {
+      "source": "/it/index.html",
+      "destination": "/it/",
+      "permanent": true
+    },
+    {
+      "source": "/es/index.html",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/de",
+      "destination": "/de/",
+      "permanent": true
+    },
+    {
+      "source": "/ja",
+      "destination": "/ja/",
+      "permanent": true
+    },
+    {
+      "source": "/ko",
+      "destination": "/ko/",
+      "permanent": true
+    },
+    {
+      "source": "/fr",
+      "destination": "/fr/",
+      "permanent": true
+    },
+    {
+      "source": "/it",
+      "destination": "/it/",
+      "permanent": true
+    },
+    {
+      "source": "/es",
+      "destination": "/es/",
+      "permanent": true
     }
   ]
 }
