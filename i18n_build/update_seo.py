@@ -11,6 +11,20 @@ import build_pages as B
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://fjsanfan.com"
 T1 = B.PAGES
+# 2026-08-31: blog 列表页 + 8 篇文章是后来生成的，不在 build_pages.PAGES 中，
+# 需要单独纳入 hreflang/sitemap，否则 Google 不会索引这些语言版页面。
+EXTRA_PAGES = [
+    "blog.html",
+    "blog/7day-sampling.html",
+    "blog/compliance.html",
+    "blog/custom-sizes.html",
+    "blog/moq-explained.html",
+    "blog/tpe-vs-pu.html",
+    "blog/vet-factory.html",
+    "blog/yoga-mat-materials.html",
+    "blog/yoga-mat-spec-guide.html",
+]
+PAGES = T1 + EXTRA_PAGES
 # 统一引用 build_pages 的语言集合，避免两处硬编码不一致导致 hreflang/sitemap 漏语言
 LANGS = B.LANGS
 
@@ -43,7 +57,7 @@ def available_langs(rel):
 
 def fix_en_pages():
     n = 0
-    for rel in T1:
+    for rel in PAGES:
         p = os.path.join(ROOT, rel)
         if not os.path.exists(p):
             print("  缺页", rel); continue
@@ -61,7 +75,7 @@ def fix_en_pages():
 def fix_lang_pages():
     """语言页的 hreflang 也需剔除尚未生成的语言，避免指向 404"""
     n = 0
-    for rel in T1:
+    for rel in PAGES:
         for lg in LANGS:
             p = os.path.join(ROOT, lg, rel)
             if not os.path.exists(p):
@@ -90,13 +104,13 @@ def update_sitemap():
     for e in entries:
         loc = re.search(r"<loc>(.*?)</loc>", e).group(1)
         path = loc[len(SITE):].lstrip("/") or "index.html"
-        if path in T1 or re.match(r"^(de|ja|ko)/", path):
+        if path in PAGES or re.match(r"^(de|ja|ko|fr|it|es)/", path):
             continue
         keep.append(e)
     head = s.split("<url>")[0]
     out = [head.rstrip()]
-    # T1 英文页 + hreflang
-    for rel in T1:
+    # 英文原页 + hreflang
+    for rel in PAGES:
         loc = SITE + "/" if rel == "index.html" else SITE + "/" + rel
         links = "\n".join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (l, u)
                           for l, u in variants(rel))
@@ -105,7 +119,7 @@ def update_sitemap():
     # 语言页（只收录真实存在的）
     cnt_lang = 0
     for lg in LANGS:
-        for rel in T1:
+        for rel in PAGES:
             if not exists(rel, lg):
                 continue
             loc = (SITE + "/" + lg + "/") if rel == "index.html" else (SITE + "/" + lg + "/" + rel)
@@ -117,7 +131,7 @@ def update_sitemap():
     out += [e.strip("\n") for e in keep]
     out.append("</urlset>")
     open(sm, "w", encoding="utf-8").write("\n".join(out) + "\n")
-    print("sitemap 更新: T1 %d 页 + 语言页 %d 条，保留其他 %d 条" % (len(T1), cnt_lang, len(keep)))
+    print("sitemap 更新: 英文 %d 页 + 语言页 %d 条，保留其他 %d 条" % (len(PAGES), cnt_lang, len(keep)))
 
 
 if __name__ == "__main__":
