@@ -383,6 +383,12 @@ a.prod-card:hover .info h4 { color: var(--brand); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 38px; padding-top: 18px; font-size: 13px; color: #93a39c; text-align: center; }
 
 /* ---------- Responsive ---------- */
+/* 980-1100px 区间，桌面 .split 仍 1.05fr 1fr，但 stat-grid 4 列在窄左栏会挤碎。
+   提前到 1100px 改 2 列（2x2），并把 .split 的 gap 收紧。 */
+@media (max-width: 1100px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .split { gap: 28px; }
+}
 @media (max-width: 980px) {
   .gallery, .cert-grid { grid-template-columns: repeat(3, 1fr); }
   .steps, .stat-grid { grid-template-columns: repeat(2, 1fr); }
