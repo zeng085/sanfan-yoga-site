@@ -109,11 +109,38 @@
     但 HTML 静态内容同样要保持 `<br>`，否则 JS 未执行时就是坏的。
   - 修完用 `grep -c '\\n'` 全站复查（脚本 `/tmp/fix_spec_linebreaks.py`，幂等）。
 
-## 11. 手机端栅格（2026-09-01 调整）
+## 11. URL 规范化 / vercel.json（2026-09-01 复查后定稿）
+- `vercel.json` 的 redirect 必须同时覆盖两种重复入口，缺一就会留下 200 的重复首页/目录：
+  1. `/{lang}/index.html` → `/{lang}/`（7 个语言目录 + 根 `/index.html` → `/`）
+  2. `/{lang}`（无尾斜杠）→ `/{lang}/`（Vercel 默认两个都 200，是重复 URL）
+- **不要开 `trailingSlash` 配置**：canonical 全部指向带斜杠的 `/{lang}/`，
+  设成 `trailingSlash:false` 会把 `/fr/` 301 到 `/fr`，和 canonical 打架。
+- 全站 hreflang 已验证健康（287 页：en/de/ja/ko/fr/it/es + x-default 集合一致、
+  自引用 100%、互相回链 100%、无重复），**不要再动 hreflang**。
+- `zh` 是**同页客户端切换**（`button[data-setlang="zh"]`，不是链接），
+  所以 head 里没有（也不该有）`hreflang="zh"` —— 这是正确的，别"修"。
+- 已知遗留（低优先级）：`product.html`（单数）是孤儿页，不在 sitemap、无任何内链。
+- 扫 URL 规范化的正确姿势：正则要**属性顺序无关**（有的页写 `<link rel= hreflang= href=>`，
+  有的写 `<link href= hreflang= rel=>`），只扫 `</head>` 之前（导航里的 `<a hreflang=>` 会污染结果）。
+
+## 12. 手机端栅格（2026-09-01 调整）
 - `.grid-4`（产品页规格总览 12 张卡）在 ≤640px 时**改单列**：
   两列在 375px 屏上每张卡正文只剩约 100px，长尺寸串（`1830×610 / 1830×800 / …`）会挤成一团。
 - 移动端 `.container` 内边距 44px → 20px（原来 44px 比桌面 40px 还大，方向反了）。
 - 规格卡 `<p>` 加 `overflow-wrap: anywhere` 防长串撑破。
 
+## 13. DNS / 部署架构（2026-09-01 核实）
+- **DNS 在 Cloudflare**（NS: lana / noah.ns.cloudflare.com），站点在 **Vercel**。
+- **主域 `fjsanfan.com` 是灰云（DNS only）**：A 记录 216.198.79.1 / 64.29.17.1（Vercel），
+  响应头 `server: Vercel` 且**无 cf-ray**，流量**不经过 CF**。
+  → 所以在 CF 后台给主域加的任何规则（页面规则/重定向规则/缓存）**都不生效**，别白配。
+- CF 的重定向规则**只在记录开橙云（Proxied）时才生效**。
+- `www.fjsanfan.com` **CF 里没有任何 DNS 记录**（NXDOMAIN）。
+  本地 curl 看到的 502 是本地代理伪造的响应，不是真实线上结果 —— 判断线上状态要以
+  `dig`/`nslookup` + 带 `-I` 的真实响应头为准。
+- 推荐方案（未执行，等用户操作）：www 单独加 CNAME 开**橙云** → CF「规则 → 重定向规则」
+  做 301 → 主域保持灰云不动，避免与 vercel.json 的路径重定向冲突。
+
 ## 待办
 - GitHub PAT 轮换（现用的已被 GitHub 提示过）
+- `www.fjsanfan.com` 加记录 + 301 到主域（用户自己在 CF 后台操作，见第 13 节）
