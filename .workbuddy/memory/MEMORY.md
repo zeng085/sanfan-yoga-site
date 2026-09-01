@@ -44,6 +44,29 @@
   - 分类导航 `products.html#xxx` → `/{lang}/products.html#xxx`
 - 分类锚点：yoga / props / rollers / bands / fitness
 - **标准生成流程**（任何语言扩展都走这套）：`build_pages.py`（翻译，会移除旧切换器）→ `fix_site.py`（补切换器）→ `inject_ga4.py`（兜底 GA4）→ `update_seo.py`（hreflang + sitemap）
+
+### 5b. 页头 `.nav-actions` 结构（2026-09-01 全站修复后定稿）
+- `<div class="container nav">` 内子结构（**严格层级，不能多/少 `</div>`**）：
+  ```
+  .container.nav
+    ├ .nav-brand          ← <a> 直接子
+    ├ .nav-links          ← <nav> 直接子
+    └ .nav-actions        ← <div> 直接子
+        ├ .lang-switch    ← <div> 子（含 lang-current + lang-menu）
+        ├ .btn.btn-primary← <a> 子（报价按钮，移动端 hidden）
+        └ (无 menu-toggle)
+  .container.nav 下与 .nav-actions 同级的：.menu-toggle  ← <button>，hamburger 图标
+  ```
+- `.menu-toggle` 必须挂在 `.container.nav` 下，**不能塞进 `.nav-actions`**：
+  CSS `.menu-toggle{display:block}` 默认隐藏、`.nav-actions .btn{display:none}` 移动端隐藏按钮，
+  二者靠父级差异区分桌面/移动端可见性。
+- 修复工具：`/tmp/fix_nav_structure.py`（4 种变体，70 文件命中 69 个，幂等）
+- 修复后务必复查 `<button class="menu-toggle">` 没出现 `class="menu-toggle"class="menu-toggle"`
+  重复属性：用 `/tmp/fix_dup_menu_toggle_class.py` 清理（删除多余 class，补齐属性间缺失空格）。
+- 移动端 nav 断点用 `@media (max-width: 920px)`，比 `.gallery/.cert-grid` 的 980px 内容栅格更激进
+  —— iPad portrait 768px 6 个链接+语言+按钮挤爆才会变 hamburger，不要等到 640px。
+- 语言站 `blog.html` 的报价按钮必须用相对路径 `contact.html`（→ `/{lang}/contact.html`），
+  不是 `../contact.html`（→ 英文根）。检查命令：`grep -ho 'class="btn btn-primary"[^>]*' {de,fr,it,es,ja,ko}/blog.html`
 ### 6. 语言页「回站点根」的链接必须是绝对路径 `/{lang}/`
 `rel_from` 对根目标 `'/'` 做 `split('/')` 会得到 `['','']`，拼出 `'..//'`；
 浏览器解析后落到英文站根 `/`，再套用访客存的 `siteLang` → 出现「点 logo 回首页变中文」。
@@ -88,6 +111,11 @@
 - **git push 走 github.com，API 走 api.github.com，代理策略不同**：
   push 反复失败时先分别探测（返回 000 即连接失败）；`api` 通而 `github` 不通就走 REST API 四步提交。
   103 个文件单批也能成功，不必硬拆。API 提交后必须 `git fetch && git reset --hard origin/main` 对齐本地。
+- **REST API 推送用 tree inline content（BATCH=100）**：`/tmp/push_via_api2.py` 用 tree API 的
+  `{"content": <text>}` 直接带文件正文，省掉每个文件一次 createBlob 请求。289 个文件从 v1 的
+  6 分钟（289 blob + 5 tree）降到十几秒（3 tree）。对 500/502/503 做指数退避（5s/10s/15s），
+  第 5 批撞过 502。变更集对比「远端 parent」而非 `HEAD`（改动已 commit 时 HEAD 自比恒为空，
+  第一次跑就翻车在这里：`No changed files; nothing to push.`）。
 - **git 报错会把 remote URL 里的 PAT 打印出来**：日志会泄露 PAT 前缀，轮换待办优先级高。
 - **中文文件名**用 `git diff --name-only` 会输出八进制转义，push 脚本会 skip。
   先 `git config core.quotepath false`，或手工传真实文件名。
