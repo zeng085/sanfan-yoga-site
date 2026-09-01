@@ -55,7 +55,7 @@
     ├ .nav-links          ← <nav> 直接子
     └ .nav-actions        ← <div> 直接子
         ├ .lang-switch    ← <div> 子（含 lang-current + lang-menu，btn 在这里也 OK）
-        ├ .btn.btn-primary← <a> 子（移动端 hidden）
+        ├ .btn.btn-primary← <a> 子（移动端常驻，不要 hidden —— 2026-09-01 用户反馈：移动端也要有报价按钮，否则 header 太冷清）
         └ (无 menu-toggle)
   .container.nav 下与 .nav-actions 同级的：.menu-toggle  ← <button>，hamburger 图标
   ```
@@ -68,6 +68,14 @@
   重复属性：用 `/tmp/fix_dup_menu_toggle_class.py` 清理（删除多余 class，补齐属性间缺失空格）。
 - 移动端 nav 断点用 `@media (max-width: 920px)`，比 `.gallery/.cert-grid` 的 980px 内容栅格更激进
   —— iPad portrait 768px 6 个链接+语言+按钮挤爆才会变 hamburger，不要等到 640px。
+- **移动端报价按钮常驻 + 缩小版**（commit `3f8bcbc`）：
+  - ≤920px：`.nav-actions { margin-left: auto; gap: 8px }`（nav-links 隐藏后 space-between
+    会把 actions 甩到中间，必须 auto 推右）；按钮 `padding: 10px 16px; font-size: 13.5px`
+  - ≤560px：`.nav-brand { font-size: 14px }` 缩 logo 文字（仍可见，让 logo 看起来更"大"
+    填满左侧）；按钮 `padding: 9px 14px; font-size: 12.5px`
+  - ≤420px：`.nav-brand span { display: none }` 完全隐藏 logo 文字（iPhone SE/5 等极窄屏）
+  - 最长按钮文案实测：`Solicitar cotización` 21 字符 / 147px（≤320px 时也是最宽）；
+    中文「获取报价」4 字符 / 83px。设计按钮 min-width 时按最长文案算。
 - 语言站 `blog.html` 的报价按钮必须用相对路径 `contact.html`（→ `/{lang}/contact.html`），
   不是 `../contact.html`（→ 英文根）。检查命令：`grep -ho 'class="btn btn-primary"[^>]*' {de,fr,it,es,ja,ko}/blog.html`
 - 子目录 `*.html`（`{lang}/products/*.html`、`{lang}/blog/*.html`）的三类 markup：
