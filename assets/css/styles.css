@@ -414,7 +414,23 @@ a.prod-card:hover .info h4 { color: var(--brand); }
   .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--line); }
   .nav-links a.active { color: var(--brand); font-weight: 700; }
   .menu-toggle { display: block; }
-  .nav-actions .btn { display: none; }
+  /* nav-links 隐藏后 .nav 只剩 3 个可见子元素，space-between 会把 .nav-actions
+     甩到中间 —— 用 margin-left:auto 把「语言切换 + 报价按钮」整体顶到 hamburger 左侧。 */
+  .nav-actions { margin-left: auto; gap: 8px; }
+  /* 移动端保留报价按钮：这是全站核心转化入口，藏掉后 header 右侧空一大块。
+     改缩小版常驻（padding/font 收紧），不占爆窄屏。 */
+  .nav-actions .btn { padding: 10px 16px; font-size: 13.5px; }
+}
+/* ≤560px：进一步压缩 —— 把 logo "SANFAN" 文字缩到 14px（仍可见填满左侧），
+   按钮 padding/font 再收一档，避免在 420px 屏溢出。
+   ≤420px 才完全隐藏 logo 文字（iPhone SE/5 等极端小屏）。 */
+@media (max-width: 560px) {
+  .nav-brand { font-size: 14px; }
+  .nav-actions .btn { padding: 9px 14px; font-size: 12.5px; }
+  .menu-toggle { font-size: 22px; }
+}
+@media (max-width: 420px) {
+  .nav-brand span { display: none; }
 }
 @media (max-width: 640px) {
   .gallery, .cert-grid, .grid-3, .grid-4, .grid-5, .prod-grid, .stat-grid, .steps { grid-template-columns: repeat(2, 1fr); }

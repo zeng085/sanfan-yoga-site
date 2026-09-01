@@ -46,27 +46,35 @@
 - **标准生成流程**（任何语言扩展都走这套）：`build_pages.py`（翻译，会移除旧切换器）→ `fix_site.py`（补切换器）→ `inject_ga4.py`（兜底 GA4）→ `update_seo.py`（hreflang + sitemap）
 
 ### 5b. 页头 `.nav-actions` 结构（2026-09-01 全站修复后定稿）
-- `<div class="container nav">` 内子结构（**严格层级，不能多/少 `</div>`**）：
+- **关键概念**：CSS `.nav-actions .btn` 是**后代选择器**，btn 在 nav-actions 内任意层级都生效；
+  不要被「btn 必须直接挂在 .nav-actions 下」误导——btn 在 lang-switch 里也能命中。
+- 完整层级（参考，但只要 btn 是 .nav-actions 后代、mt 是 .container.nav 后代就够）：
   ```
   .container.nav
     ├ .nav-brand          ← <a> 直接子
     ├ .nav-links          ← <nav> 直接子
     └ .nav-actions        ← <div> 直接子
-        ├ .lang-switch    ← <div> 子（含 lang-current + lang-menu）
-        ├ .btn.btn-primary← <a> 子（报价按钮，移动端 hidden）
+        ├ .lang-switch    ← <div> 子（含 lang-current + lang-menu，btn 在这里也 OK）
+        ├ .btn.btn-primary← <a> 子（移动端 hidden）
         └ (无 menu-toggle)
   .container.nav 下与 .nav-actions 同级的：.menu-toggle  ← <button>，hamburger 图标
   ```
-- `.menu-toggle` 必须挂在 `.container.nav` 下，**不能塞进 `.nav-actions`**：
-  CSS `.menu-toggle{display:block}` 默认隐藏、`.nav-actions .btn{display:none}` 移动端隐藏按钮，
-  二者靠父级差异区分桌面/移动端可见性。
-- 修复工具：`/tmp/fix_nav_structure.py`（4 种变体，70 文件命中 69 个，幂等）
+- `.menu-toggle` 必须在 `.container.nav` 子树里（不要塞进别的容器，否则 920px 断点的
+  `position: absolute; top: 68px` 定位找不到正确祖先）。
+- 修复工具：`/tmp/fix_nav_structure.py`（顶层 4 种变体，70 文件命中 69 个，幂等）
+- 修复子目录时一定要 glob **递归**（`rglob('*.html')`），上一轮我只 glob `*.html` 漏掉 210 个子目录文件！
+  全站 audit 工具：`/tmp/audit_headers.py`（BS4 严格版）+ `/tmp/audit_loose.py`（CSS 后代视角）
 - 修复后务必复查 `<button class="menu-toggle">` 没出现 `class="menu-toggle"class="menu-toggle"`
   重复属性：用 `/tmp/fix_dup_menu_toggle_class.py` 清理（删除多余 class，补齐属性间缺失空格）。
 - 移动端 nav 断点用 `@media (max-width: 920px)`，比 `.gallery/.cert-grid` 的 980px 内容栅格更激进
   —— iPad portrait 768px 6 个链接+语言+按钮挤爆才会变 hamburger，不要等到 640px。
 - 语言站 `blog.html` 的报价按钮必须用相对路径 `contact.html`（→ `/{lang}/contact.html`），
   不是 `../contact.html`（→ 英文根）。检查命令：`grep -ho 'class="btn btn-primary"[^>]*' {de,fr,it,es,ja,ko}/blog.html`
+- 子目录 `*.html`（`{lang}/products/*.html`、`{lang}/blog/*.html`）的三类 markup：
+  - bucket1（162 文件，{lang}/products/*.html）：btn 在 nav-actions 外，mt 在 nav-actions 内 → 移位
+  - bucket2（48 文件，{lang}/blog/*.html）：2 个多余 `</div>` + href `../../contact.html` → 删除多余 div + 改 href
+  - bucket3（28 文件，根 blog.html + 根 products/*.html）：btn 在 lang-switch 内、mt 在 nav-actions 内
+    → **不动**，CSS 后代选择器仍生效，只有「直接父级」严格检查才会 flag
 ### 6. 语言页「回站点根」的链接必须是绝对路径 `/{lang}/`
 `rel_from` 对根目标 `'/'` 做 `split('/')` 会得到 `['','']`，拼出 `'..//'`；
 浏览器解析后落到英文站根 `/`，再套用访客存的 `siteLang` → 出现「点 logo 回首页变中文」。
