@@ -1,190 +1,38 @@
-# 三梵独立站（fjsanfan.com）项目长期笔记
+# 三梵独立站 fjsanfan.com 长期笔记（精简版 2026-09-05）
 
-## 站点概况
-- 仓库：`zeng085/sanfan-yoga-site`，部署在 Vercel，域名 https://fjsanfan.com
-- 定位：**面向海外采购商的 B2B 瑜伽垫/健身器材 OEM/ODM 工厂站**（不是零售站）
-- 语言：英文为主 + 德/日/韩/法/意/西 6 种分语言 URL（`/de/` `/fr/` 等）+ 中文同页预览
-- 页面规模：约 102 个 HTML，sitemap 101 条
+## 概况
+- 仓库 zeng085/sanfan-yoga-site，Vercel 部署，B2B 瑜伽垫/健身器材 OEM/ODM 工厂站（非零售）
+- EN 主站 + de/ja/ko/fr/it/es 6 语言 URL + 中文同页切换（无 /zh/ URL）；288 个 HTML
+- 改动标准流程：bump ?v= → commit → push（git push 不稳，用 REST API：
+  `~/.workbuddy/skills/github-api-push/push_api_v2.py`，GH_PAT 走环境变量，
+  变更集对比**远端 parent** 而非 HEAD）→ `git fetch --depth=1` 对齐 → curl 验线上 ?v=
 
-## 重要约定（改动前必读）
-
-### 1. 语言策略：记住访客选择，一直沿用，直到他手动改
-用户于 2026-08-30 明确要求（中途我曾误解成"永远默认英文"，已纠正）。
-- 访客选了中文 → 整个站点一路中文（首页、产品页、关于页…），直到他改回 EN
-- 访客选了 EN → 一路英文
-- 没选过（或存储不可用）→ 默认英文
-- 存储：**localStorage + cookie 双写**（隐私模式下 localStorage 可能静默失败，cookie 兜底）
-- 语言页（/de/ /fr/ 等）是各自语言的独立 URL，**不受中英偏好影响**
-- 关键前提：切换器的 EN 项必须带 `data-setlang="en"`，
-  否则点了不写入偏好，跳页会回到旧值（曾导致"点 EN 后跳产品又变中文"）
-
-### 2. 尺寸表达：英文内容必须带英制
-采购商是美国市场，尺寸要同时给出公制与英制：
-`6 mm (1/4")`、`61–122 cm (24"–48")`、`183 cm (72")`
-- 厚度用美国惯用**分数**（1/8"、1/4"、3/8"、1/2"、5/8"），不用小数
-- 欧洲/日韩页面保持公制，不加英制
-- **注意**：英寸符号 `"` 写进 JSON-LD 必须转义，否则破坏 JSON
-- 产品页的规格文本在 **main.js 的 I18N** 里（data-i18n 渲染），不在 HTML
-
-### 3. 语言集合统一在 `i18n_build/build_pages.py` 的 `LANGS`
-`update_seo.py` / `fix_site.py` / `run_verify.py` 都引用它，不要各自硬编码。
-新增语言只需改这一处，再跑 `build_pages.py <lang>` 生成。
-
-### 4. 切换器由 `fix_site.py` 统一注入（幂等）
-- `build_pages.py` 只管翻译，不生成切换器
-- 切换器是**下拉式**（8 种语言横排会挤爆导航栏）
-- EN 项必须带 `data-setlang="en"`；英文页用 `<button>`（同页切换），语言页用 `<a href>`
-
-### 5. 多语言产品页已全量翻译（27/27）
-- 2026-08-30 补齐：原仅 5 个核心产品（ym1/ym2/ym3/fr1/rb2）有语言版，其余 22 个（fi1-5/fr2-5/pr1-5/rb1/rb3/rb4/ym4-8）无翻译；
-  现 **6 种语言站产品页均达 27 个**，无未翻译产品，不再有跳回英文的风险。
-- `build_pages.py` 的 `rewrite_rel` 回退逻辑仍保留作防御（万一未来新增未翻译产品）：
-  - 有语言版 → `/{lang}/products/xxx.html`
-  - 无语言版 → `/{lang}/products.html#{category}`
-  - 分类导航 `products.html#xxx` → `/{lang}/products.html#xxx`
-- 分类锚点：yoga / props / rollers / bands / fitness
-- **标准生成流程**（任何语言扩展都走这套）：`build_pages.py`（翻译，会移除旧切换器）→ `fix_site.py`（补切换器）→ `inject_ga4.py`（兜底 GA4）→ `update_seo.py`（hreflang + sitemap）
-
-### 5b. 页头 `.nav-actions` 结构（2026-09-01 全站修复后定稿）
-- **关键概念**：CSS `.nav-actions .btn` 是**后代选择器**，btn 在 nav-actions 内任意层级都生效；
-  不要被「btn 必须直接挂在 .nav-actions 下」误导——btn 在 lang-switch 里也能命中。
-- 完整层级（参考，但只要 btn 是 .nav-actions 后代、mt 是 .container.nav 后代就够）：
-  ```
-  .container.nav
-    ├ .nav-brand          ← <a> 直接子
-    ├ .nav-links          ← <nav> 直接子
-    └ .nav-actions        ← <div> 直接子
-        ├ .lang-switch    ← <div> 子（含 lang-current + lang-menu，btn 在这里也 OK）
-        ├ .btn.btn-primary← <a> 子（移动端常驻，不要 hidden —— 2026-09-01 用户反馈：移动端也要有报价按钮，否则 header 太冷清）
-        └ (无 menu-toggle)
-  .container.nav 下与 .nav-actions 同级的：.menu-toggle  ← <button>，hamburger 图标
-  ```
-- `.menu-toggle` 必须在 `.container.nav` 子树里（不要塞进别的容器，否则 920px 断点的
-  `position: absolute; top: 68px` 定位找不到正确祖先）。
-- 修复工具：`/tmp/fix_nav_structure.py`（顶层 4 种变体，70 文件命中 69 个，幂等）
-- 修复子目录时一定要 glob **递归**（`rglob('*.html')`），上一轮我只 glob `*.html` 漏掉 210 个子目录文件！
-  全站 audit 工具：`/tmp/audit_headers.py`（BS4 严格版）+ `/tmp/audit_loose.py`（CSS 后代视角）
-- 修复后务必复查 `<button class="menu-toggle">` 没出现 `class="menu-toggle"class="menu-toggle"`
-  重复属性：用 `/tmp/fix_dup_menu_toggle_class.py` 清理（删除多余 class，补齐属性间缺失空格）。
-- 移动端 nav 断点用 `@media (max-width: 920px)`，比 `.gallery/.cert-grid` 的 980px 内容栅格更激进
-  —— iPad portrait 768px 6 个链接+语言+按钮挤爆才会变 hamburger，不要等到 640px。
-- **移动端报价按钮常驻 + 缩小版**（commit `3f8bcbc`）：
-  - ≤920px：`.nav-actions { margin-left: auto; gap: 8px }`（nav-links 隐藏后 space-between
-    会把 actions 甩到中间，必须 auto 推右）；按钮 `padding: 10px 16px; font-size: 13.5px`
-  - ≤560px：`.nav-brand { font-size: 14px }` 缩 logo 文字（仍可见，让 logo 看起来更"大"
-    填满左侧）；按钮 `padding: 9px 14px; font-size: 12.5px`
-  - ≤420px：`.nav-brand span { display: none }` 完全隐藏 logo 文字（iPhone SE/5 等极窄屏）
-  - 最长按钮文案实测：`Solicitar cotización` 21 字符 / 147px（≤320px 时也是最宽）；
-    中文「获取报价」4 字符 / 83px。设计按钮 min-width 时按最长文案算。
-- 语言站 `blog.html` 的报价按钮必须用相对路径 `contact.html`（→ `/{lang}/contact.html`），
-  不是 `../contact.html`（→ 英文根）。检查命令：`grep -ho 'class="btn btn-primary"[^>]*' {de,fr,it,es,ja,ko}/blog.html`
-- 子目录 `*.html`（`{lang}/products/*.html`、`{lang}/blog/*.html`）的三类 markup：
-  - bucket1（162 文件，{lang}/products/*.html）：btn 在 nav-actions 外，mt 在 nav-actions 内 → 移位
-  - bucket2（48 文件，{lang}/blog/*.html）：2 个多余 `</div>` + href `../../contact.html` → 删除多余 div + 改 href
-  - bucket3（28 文件，根 blog.html + 根 products/*.html）：btn 在 lang-switch 内、mt 在 nav-actions 内
-    → **不动**，CSS 后代选择器仍生效，只有「直接父级」严格检查才会 flag
-### 6. 语言页「回站点根」的链接必须是绝对路径 `/{lang}/`
-`rel_from` 对根目标 `'/'` 做 `split('/')` 会得到 `['','']`，拼出 `'..//'`；
-浏览器解析后落到英文站根 `/`，再套用访客存的 `siteLang` → 出现「点 logo 回首页变中文」。
-`rewrite_rel` 里已对 `A in ('/', '', '.')` 提前返回 `/{lang}/`。
-新增任何「回到首页 / 站点根」的链接时，务必用绝对路径。
-
-### 7. GA4 与分析
-- 衡量 ID：**G-RMSNDR5S06**（2026-08-30 全站接入，102 页 head 内 gtag.js）
-- 转化事件 `generate_lead` 埋在 `main.js` 表单成功回调，带 product_interest / page_language / page_path
-- 用户需在 GA4 后台把 `generate_lead` 手动标记为「关键事件」才进转化报表
-- Formspree 表单**暂不更换**（用户 2026-08-30 明确：现在一个询盘都没有，换了也没意义）
-
-### 8. 图片规范（2026-08-30 全量改造）
-- 33 张图已转 **WebP 质量 75**（2.6MB → 1.2MB，省 53%）。HTML/CSS/JSON-LD/og:image 共 1400+ 处引用已统一为 `.webp`
-- **新增图片必须先转 WebP 再入站**，不要直接放 jpg
-- 每个 `<img>` 都要带 `width`/`height`（防 CLS）；**header 内首屏 logo 不加 `loading="lazy"`**（会拖慢 LCP）
-- CSS 有 `img{height:auto}` 兜底，保证 width/height 属性不会把图拉变形
-- 转换用隔离 venv 的 Pillow：`/Users/mac-zlg/.workbuddy/binaries/python/envs/default/bin/python`（系统 Python 无 Pillow，macOS `sips` **不支持** WebP 输出）
-- 原 jpg 暂时保留在 `assets/img/`，确认线上稳定后可清理
-
-### 9. 缓存版本号（cache-busting，2026-08-31 起强制）
-- **任何改 CSS/JS 的提交，必须同步 bump 全站 `?v=` 版本号**（`?v=20260831` 按当天日期），
-  否则浏览器/手机（尤其微信内置浏览器）会缓存旧样式，用户看到"没改过来"。
-- 批量工具：`/tmp/bump_assets_ver.py`（幂等：已带版本号的不重复加；跳过 i18n_build 等非站点目录）。
-- 用法：改脚本顶部 `VER = "vYYYYMMDD"` → 运行 → 全站 288 个 HTML 的 css/js 引用全部带上版本号。
-- 线上验证：`curl -sL https://fjsanfan.com/ | grep -o 'styles.css[^"]*'` 应返回带 `?v` 的引用。
-
-### 10. 产品页结构化数据（JSON-LD Product / AggregateOffer，2026-09-01 修正）
-- 全站 189 个产品页（27 产品 × 7 语言）统一使用 `@graph` 包裹 `Product` + `BreadcrumbList`。
-- `Product.offers` 用 `AggregateOffer` 表示 B2B 阶梯/定制报价区间，Google 商品摘要接受该类型。
-- `AggregateOffer` 必须字段：**`lowPrice`（数字，非字符串）、`highPrice`（数字）、`priceCurrency`**。
-- `AggregateOffer` 里**不要放 `availability` 和 `priceValidUntil`**，这两个属性属于单个 `Offer`，放在汇总报价里会被 Google 视为不规范。
-- 新增/修改产品页后，用 `~/.workbuddy/skills/fjsanfan-product-schema/scripts/audit_product_schema.py` 全量审计，
-  再用 `fix_aggregate_offers.py` 自动修复。
+## 关键约定
+1. **语言策略**：记住访客选择（localStorage+cookie 双写 siteLang）一路沿用直到手动改；未选默认 EN。切换器 EN 项必须 `data-setlang="en"`。语言页不受中英偏好影响。
+2. **尺寸**：英文内容公制+英制（`6 mm (1/4")`，厚度用分数英寸）；欧/日韩页纯公制。`"` 写进 JSON-LD 必须转义。
+3. **LANGS** 统一在 `i18n_build/build_pages.py`；标准生成流程：build_pages.py → fix_site.py（切换器）→ inject_ga4.py → update_seo.py（hreflang+sitemap）。
+4. **header 结构**：`.container.nav` 下 = nav-brand + nav-links + nav-actions（内含 lang-switch、btn.btn-primary **移动端常驻**）+ 同级 `.menu-toggle`。CSS `.nav-actions .btn` 是**后代选择器**（btn 在 lang-switch 内也命中，勿被「必须直接子级」误导）。nav 断点 920px（勿用 640）；≤920px `.nav-actions{margin-left:auto}`；≤560px 缩 logo 字号；≤420px 隐藏 logo 文字。语言站 blog.html 报价按钮用相对路径 `contact.html`（勿 `../contact.html`）。
+5. 语言页「回站点根」必须绝对路径 `/{lang}/`。
+6. **GA4**：G-RMSNDR5S06；转化事件 `generate_lead` 在 main.js 表单回调。Formspree 暂不换。
+7. **图片**：一律 WebP q75（venv Pillow：`/Users/mac-zlg/.workbuddy/binaries/python/envs/default/bin/python`），img 带 width/height，header logo 不 lazy。
+8. **?v= 强制**：改 CSS/JS 必 bump 全站版本号（`/tmp/bump_assets_ver.py` 改 VER 后跑）。
+9. **产品页 JSON-LD**：@graph 包 Product+BreadcrumbList；offers 用 AggregateOffer（lowPrice/highPrice 数字+priceCurrency，勿放 availability/priceValidUntil）。审计：`~/.workbuddy/skills/fjsanfan-product-schema/scripts/`。
+10. **URL 规范化**：vercel.json 已覆盖 /index.html 与无斜杠重定向；勿开 trailingSlash；**hreflang 已健康勿动**（zh 是同页切换，head 无 hreflang=zh 是正确的）。product.html（单数）孤儿页可删。
 
 ## 已知的坑
+- `node --check` 前 `unset NODE_OPTIONS`；勿执行生成脚本验证语法。
+- 语言页 JS 完全不介入，多行必须真 `<br>`（生成脚本的 `\n` 是字面量反斜杠n，踩过坑）。
+- i18n 值含 HTML 标签时 applyLang 用 innerHTML；改 i18n 键 HTML 与 main.js 同步改。
+- 中文文件名：`git config core.quotepath false`。
+- localStorage 隐私模式可能静默失败；Playwright `add_init_script` 每页都执行（用 evaluate 设一次+reload）。
+- 批量修 HTML 用最小 regex 替换（BS4 decode 会重排全文件）；glob 子目录要**递归 rglob**（曾漏 210 文件）。
 
-- **不要执行生成脚本来验证语法**：`node -e "require('gen_product_pages.js')"` 会真的执行并覆盖页面。
-  用 `node --check` 只做语法检查。
-- **`node --check` 会因 NODE_OPTIONS 报 `--use-system-ca is not allowed`**：
-  先 `unset NODE_OPTIONS` 再执行。
-- **git push 走 github.com，API 走 api.github.com，代理策略不同**：
-  push 反复失败时先分别探测（返回 000 即连接失败）；`api` 通而 `github` 不通就走 REST API 四步提交。
-  103 个文件单批也能成功，不必硬拆。API 提交后必须 `git fetch && git reset --hard origin/main` 对齐本地。
-- **REST API 推送用 tree inline content（BATCH=100）**：`/tmp/push_via_api2.py` 用 tree API 的
-  `{"content": <text>}` 直接带文件正文，省掉每个文件一次 createBlob 请求。289 个文件从 v1 的
-  6 分钟（289 blob + 5 tree）降到十几秒（3 tree）。对 500/502/503 做指数退避（5s/10s/15s），
-  第 5 批撞过 502。变更集对比「远端 parent」而非 `HEAD`（改动已 commit 时 HEAD 自比恒为空，
-  第一次跑就翻车在这里：`No changed files; nothing to push.`）。
-- **git 报错会把 remote URL 里的 PAT 打印出来**：日志会泄露 PAT 前缀，轮换待办优先级高。
-- **中文文件名**用 `git diff --name-only` 会输出八进制转义，push 脚本会 skip。
-  先 `git config core.quotepath false`，或手工传真实文件名。
-- **localStorage 写入可能被静默吞掉**（隐私模式）：涉及跨页面状态的写入要考虑降级。
-- **Playwright 的 `add_init_script` 每个页面都会执行**：预设 localStorage 会反复重置，
-  导致误判。只在第一个页面用 `evaluate` 设一次再 `reload`。
-- **i18n 值含 HTML 标签**：`applyLang` 会按内容是否匹配 `/<[a-z]/` 决定用 innerHTML 还是
-  textContent；改 i18n 键必须 HTML 与 main.js 同步改。
-- **产品页 header 结构脆弱**：`.nav-actions` 里必须同时包裹 `.lang-switch` 和 `.btn.btn-primary`，
-  任何多余的 `</div>` 都会让「获取报价」按钮掉到导航栏下方。批量生成/修复页面后，
-  用 `/tmp/fix_all_product_headers.py` 统一校验并重建结构。
+## DNS/部署
+- DNS 在 Cloudflare，主域**灰云直连 Vercel**（A 216.198.79.1/64.29.17.1，无 cf-ray）→ CF 对主域的规则不生效，别白配。
+- `www.fjsanfan.com` NXDOMAIN，待用户在 CF 加 CNAME 开橙云 + 301 到主域。
+- 待办：GitHub PAT 轮换。
 
-- **i18n 生成的 `\n` 不是 HTML 换行（2026-09-01 踩坑）**：
-  翻译/生成脚本往 HTML 里写的 `\n` 是**反斜杠+n 两个字符**，不是换行，
-  浏览器会把 `\n` 当可见文字印出来，整段还挤成一行。
-  - 语言页（/de/ /fr/ 等）走 `applyLang()` 里 `isLocalizedPage()` 的早退分支，
-    **JS 完全不介入**，所以 HTML 里必须是真 `<br>`，不能指望 JS 兜底。
-  - EN/ZH 页 main.js 虽有 `spec*.d` 的 `replace(/\n/g,'<br>')` 兜底，
-    但 HTML 静态内容同样要保持 `<br>`，否则 JS 未执行时就是坏的。
-  - 修完用 `grep -c '\\n'` 全站复查（脚本 `/tmp/fix_spec_linebreaks.py`，幂等）。
-
-## 11. URL 规范化 / vercel.json（2026-09-01 复查后定稿）
-- `vercel.json` 的 redirect 必须同时覆盖两种重复入口，缺一就会留下 200 的重复首页/目录：
-  1. `/{lang}/index.html` → `/{lang}/`（7 个语言目录 + 根 `/index.html` → `/`）
-  2. `/{lang}`（无尾斜杠）→ `/{lang}/`（Vercel 默认两个都 200，是重复 URL）
-- **不要开 `trailingSlash` 配置**：canonical 全部指向带斜杠的 `/{lang}/`，
-  设成 `trailingSlash:false` 会把 `/fr/` 301 到 `/fr`，和 canonical 打架。
-- 全站 hreflang 已验证健康（287 页：en/de/ja/ko/fr/it/es + x-default 集合一致、
-  自引用 100%、互相回链 100%、无重复），**不要再动 hreflang**。
-- `zh` 是**同页客户端切换**（`button[data-setlang="zh"]`，不是链接），
-  所以 head 里没有（也不该有）`hreflang="zh"` —— 这是正确的，别"修"。
-- 已知遗留（低优先级）：`product.html`（单数）是孤儿页，不在 sitemap、无任何内链。
-- 扫 URL 规范化的正确姿势：正则要**属性顺序无关**（有的页写 `<link rel= hreflang= href=>`，
-  有的写 `<link href= hreflang= rel=>`），只扫 `</head>` 之前（导航里的 `<a hreflang=>` 会污染结果）。
-
-## 12. 手机端栅格（2026-09-01 调整）
-- `.grid-4`（产品页规格总览 12 张卡）在 ≤640px 时**改单列**：
-  两列在 375px 屏上每张卡正文只剩约 100px，长尺寸串（`1830×610 / 1830×800 / …`）会挤成一团。
-- 移动端 `.container` 内边距 44px → 20px（原来 44px 比桌面 40px 还大，方向反了）。
-- 规格卡 `<p>` 加 `overflow-wrap: anywhere` 防长串撑破。
-
-## 13. DNS / 部署架构（2026-09-01 核实）
-- **DNS 在 Cloudflare**（NS: lana / noah.ns.cloudflare.com），站点在 **Vercel**。
-- **主域 `fjsanfan.com` 是灰云（DNS only）**：A 记录 216.198.79.1 / 64.29.17.1（Vercel），
-  响应头 `server: Vercel` 且**无 cf-ray**，流量**不经过 CF**。
-  → 所以在 CF 后台给主域加的任何规则（页面规则/重定向规则/缓存）**都不生效**，别白配。
-- CF 的重定向规则**只在记录开橙云（Proxied）时才生效**。
-- `www.fjsanfan.com` **CF 里没有任何 DNS 记录**（NXDOMAIN）。
-  本地 curl 看到的 502 是本地代理伪造的响应，不是真实线上结果 —— 判断线上状态要以
-  `dig`/`nslookup` + 带 `-I` 的真实响应头为准。
-- 推荐方案（未执行，等用户操作）：www 单独加 CNAME 开**橙云** → CF「规则 → 重定向规则」
-  做 301 → 主域保持灰云不动，避免与 vercel.json 的路径重定向冲突。
-
-## 待办
-- GitHub PAT 轮换（现用的已被 GitHub 提示过）
-- `www.fjsanfan.com` 加记录 + 301 到主域（用户自己在 CF 后台操作，见第 13 节）
+## GEO 方向（2026-09-05 定）
+- 站内已及格（AI 爬虫全 200、llms.txt、FAQPage）；胜负在「可被 AI 引用的资产」：榜单/对比表类内容，官网自述权重低。
+- 第一步：写 `blog/top-12-china-yoga-mat-manufacturers.html` 榜单页（EN+6 语言，Article+FAQPage，真实竞品+对比表）。
+- 其他方向：Reddit r/sourcing、Quora、行业目录等第三方曝光；YouTube 工厂视频（Perplexity/Gemini 会引用 YT，用户已有 AI 短视频产能）。
