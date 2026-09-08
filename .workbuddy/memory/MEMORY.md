@@ -36,3 +36,5 @@
 - 站内已及格（AI 爬虫全 200、llms.txt、FAQPage）；胜负在「可被 AI 引用的资产」：榜单/对比表类内容，官网自述权重低。
 - 第一步：写 `blog/top-12-china-yoga-mat-manufacturers.html` 榜单页（EN+6 语言，Article+FAQPage，真实竞品+对比表）。
 - 其他方向：Reddit r/sourcing、Quora、行业目录等第三方曝光；YouTube 工厂视频（Perplexity/Gemini 会引用 YT，用户已有 AI 短视频产能）。
+- **Reddit 实测（2026-09-08）**：全站归档扫 23 版块，带采购意图的瑜伽垫帖仅 7 条、同行工厂 0 下场 → 竞争真空，但容量只有 6–8 条，量要靠主动发帖+邻近品类（瑜伽服/工作室采购）。作战表见 `outputs/Reddit-GEO作战表-2026-09-08.md`。
+- Reddit 国内直连不通（HTTP 000）；可用的归档检索：`arctic-shift.photon-reddit.com/api/posts/search?subreddit=X&title=yoga&limit=N`（本地 curl 直连，部分组合会 Timeout 换版块即可），评论 `/api/comments/search?link_id=t3_<id>`，原文 `/api/posts/ids?ids=t3_<id>`。归档 score 失真，只看评论数与时间。
