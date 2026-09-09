@@ -194,7 +194,7 @@ const I18N = {
 
     // Contact
     'contact.title': 'Get in Touch',
-    'contact.sub': 'Tell us what you need — we reply within 1 business day.',
+    'contact.sub': 'Tell us what you need — we usually reply within 2 hours, 09:00–22:00 China time.',
     'contact.info.title': 'Contact Information',
     'c.addr.label': 'Factory Address', 'c.email.label': 'Email', 'c.phone.label': 'WhatsApp', 'c.hours.label': 'Service',
     'form.name': 'Your Name', 'form.company': 'Company', 'form.email': 'Email',
@@ -466,7 +466,7 @@ const I18N = {
     'about.cap.t1': '材料与研发', 'about.cap.t2': '定制工艺', 'about.cap.t3': '品牌与包装', 'about.cap.t4': '质量控制',
 
     'contact.title': '联系我们',
-    'contact.sub': '告诉我们你的需求，1 个工作日内回复。',
+    'contact.sub': '告诉我们你的需求，通常 2 小时内回复（中国时间 09:00–22:00）。',
     'contact.info.title': '联系方式',
     'c.addr.label': '工厂地址', 'c.email.label': '邮箱', 'c.phone.label': 'WhatsApp', 'c.hours.label': '服务',
     'form.name': '姓名', 'form.company': '公司', 'form.email': '邮箱',
@@ -764,3 +764,105 @@ if (form) {
     }
   });
 }
+
+// ---------- Floating contact bar: 全站一键联系（WhatsApp / Email / 复制号码） ----------
+(function () {
+  var WA_NUM = '8615959029082';
+  var TEL_TXT = '+86 15959029082';
+  var MAIL = 'zenglinggun@gmail.com';
+  var lang = (document.documentElement.lang || 'en').toLowerCase();
+  var MSG = {
+    en: "Hi SANFAN, I found your website and I'm interested in your yoga mats. Could you share MOQ, price and sampling time?",
+    zh: "你好三梵，我在官网看到贵司，想咨询瑜伽垫定制。请问起订量、报价与打样周期？",
+    de: "Hallo SANFAN, ich habe Ihre Website gefunden und interessiere mich für Ihre Yogamatten. Können Sie mir MOQ, Preis und Musterzeit nennen?",
+    ja: "SANFAN様、サイトを拝見しました。ヨガマットについて伺いたいです。MOQ・価格・サンプル期間を教えてください。",
+    ko: "안녕하세요 SANFAN, 웹사이트를 보고 연락드립니다. 요가매트 관련해 MOQ, 가격, 샘플 제작 기간을 알려주세요.",
+    fr: "Bonjour SANFAN, j'ai trouvé votre site et je m'intéresse à vos tapis de yoga. Pouvez-vous m'indiquer le MOQ, le prix et le délai d'échantillonnage ?",
+    it: "Ciao SANFAN, ho trovato il vostro sito e sono interessato ai vostri tappetini yoga. Potete indicarmi MOQ, prezzo e tempi di campionatura?",
+    es: "Hola SANFAN, encontré su web y me interesan sus esterillas de yoga. ¿Pueden indicarme MOQ, precio y plazo de muestras?"
+  };
+  var body = MSG[lang.slice(0, 2)] || MSG.en;
+  var tail = '\n\n— sent from ' + location.href;
+  var waHref = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(body + tail);
+  var mailHref = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Inquiry from fjsanfan.com') + '&body=' + encodeURIComponent(body + tail);
+
+  var ICON_WA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.68-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2 22l5.36-1.4a9.86 9.86 0 0 0 4.68 1.19h.01c5.43 0 9.85-4.42 9.85-9.86 0-2.63-1.02-5.1-2.88-6.96A9.77 9.77 0 0 0 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.1.81.83-3.02-.2-.31a8.15 8.15 0 0 1-1.25-4.36c0-4.52 3.68-8.19 8.2-8.19 2.19 0 4.25.85 5.8 2.4a8.15 8.15 0 0 1 2.4 5.8c0 4.52-3.68 8.19-8.19 8.19z"/></svg>';
+  var ICON_MAIL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 4.8-8-4.8V6l8 4.8L20 6v2.24z"/></svg>';
+  var ICON_COPY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>';
+
+  var bar = document.createElement('div');
+  bar.className = 'cbar';
+  bar.innerHTML =
+    '<a class="cb-wa" href="' + waHref + '" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp ' + TEL_TXT + '">' + ICON_WA + '<span class="cb-lab">WhatsApp</span></a>' +
+    '<a class="cb-mail" href="' + mailHref + '" aria-label="Send us an email">' + ICON_MAIL + '<span class="cb-lab">Email</span></a>' +
+    '<button class="cb-copy" type="button" aria-label="Copy phone number">' + ICON_COPY + '<span class="cb-lab">Copy</span></button>';
+  document.body.appendChild(bar);
+
+  var toast = document.createElement('div');
+  toast.className = 'cbar-toast';
+  document.body.appendChild(toast);
+  var toastTimer;
+  function showToast(t) {
+    toast.textContent = t;
+    toast.classList.add('on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.classList.remove('on'); }, 2200);
+  }
+  function track(channel) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'contact_click', { channel: channel, page_path: location.pathname });
+    }
+  }
+  bar.querySelector('.cb-wa').addEventListener('click', function () { track('whatsapp'); });
+  bar.querySelector('.cb-mail').addEventListener('click', function () { track('email'); });
+  bar.querySelector('.cb-copy').addEventListener('click', function () {
+    track('copy_number');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(TEL_TXT).then(
+        function () { showToast('Copied ' + TEL_TXT); },
+        function () { fallbackCopy(); }
+      );
+    } else { fallbackCopy(); }
+  });
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = TEL_TXT;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast('Copied ' + TEL_TXT); }
+    catch (e) { showToast(TEL_TXT); }
+    document.body.removeChild(ta);
+  }
+})();
+
+// ---------- 页面内联系按钮 + 实时中国时间 ----------
+(function () {
+  var TEL = '+86 15959029082';
+  function toastEl() { return document.querySelector('.cbar-toast'); }
+  function show(msg) {
+    var t = toastEl();
+    if (!t) return;
+    t.textContent = msg;
+    t.classList.add('on');
+    setTimeout(function () { t.classList.remove('on'); }, 2200);
+  }
+  document.querySelectorAll('[data-copy-phone]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(TEL).then(function () { show('Copied ' + TEL); }, function () { show(TEL); });
+      } else { show(TEL); }
+      if (typeof gtag === 'function') gtag('event', 'contact_click', { channel: 'copy_number', page_path: location.pathname });
+    });
+  });
+  var clocks = document.querySelectorAll('.cn-time');
+  if (clocks.length) {
+    var upd = function () {
+      var s = new Date().toLocaleTimeString('en-GB', { timeZone: 'Asia/Shanghai', hour: '2-digit', minute: '2-digit' });
+      clocks.forEach(function (c) { c.textContent = s; });
+    };
+    upd();
+    setInterval(upd, 30000);
+  }
+})();

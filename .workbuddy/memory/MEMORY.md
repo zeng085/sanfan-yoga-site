@@ -37,4 +37,7 @@
 - 第一步：写 `blog/top-12-china-yoga-mat-manufacturers.html` 榜单页（EN+6 语言，Article+FAQPage，真实竞品+对比表）。
 - 其他方向：Reddit r/sourcing、Quora、行业目录等第三方曝光；YouTube 工厂视频（Perplexity/Gemini 会引用 YT，用户已有 AI 短视频产能）。
 - **Reddit 实测（2026-09-08）**：全站归档扫 23 版块，带采购意图的瑜伽垫帖仅 7 条、同行工厂 0 下场 → 竞争真空，但容量只有 6–8 条，量要靠主动发帖+邻近品类（瑜伽服/工作室采购）。作战表见 `outputs/Reddit-GEO作战表-2026-09-08.md`。
+- **Reddit 主动发帖包（2026-09-09）**：`outputs/Reddit-主动发帖包-2026-09-09.md` —— 《How to vet a yoga mat factory in China》英文主帖全文+5 版块标题+占楼首评+发布 SOP+四次分发。**主帖不提品牌不放链接**，品牌只放 Reddit 简介。
+- **站内已对齐**：`blog/vet-factory.html`（EN+ZH+6 语）补齐数字型内容（MOQ 换色规则、密度克重、样品 5 测试、AQL 2.5/4.0、60–90 天时间线、EXW/FOB/DDP），新增 3 条 FAQ+JSON-LD。**Reddit 话术与站内措辞必须逐句一致**，AI 才会判定独立信源互相印证。
+- **增量翻译脚本**：`i18n_build/sync_vet_blocks.py` —— 把 EN 文章页新增块/FAQ 同步到 6 语言版（DeepL，自动补 dateModified）。改 SLUG 与标记即可复用。注意 DeepL 会把 "timeline nobody quotes you" 误译成「引用」，德日文必查。
 - Reddit 国内直连不通（HTTP 000）；可用的归档检索：`arctic-shift.photon-reddit.com/api/posts/search?subreddit=X&title=yoga&limit=N`（本地 curl 直连，部分组合会 Timeout 换版块即可），评论 `/api/comments/search?link_id=t3_<id>`，原文 `/api/posts/ids?ids=t3_<id>`。归档 score 失真，只看评论数与时间。
