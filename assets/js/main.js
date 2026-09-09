@@ -789,14 +789,68 @@ if (form) {
   var ICON_WA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.68-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2 22l5.36-1.4a9.86 9.86 0 0 0 4.68 1.19h.01c5.43 0 9.85-4.42 9.85-9.86 0-2.63-1.02-5.1-2.88-6.96A9.77 9.77 0 0 0 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.1.81.83-3.02-.2-.31a8.15 8.15 0 0 1-1.25-4.36c0-4.52 3.68-8.19 8.2-8.19 2.19 0 4.25.85 5.8 2.4a8.15 8.15 0 0 1 2.4 5.8c0 4.52-3.68 8.19-8.19 8.19z"/></svg>';
   var ICON_MAIL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 4.8-8-4.8V6l8 4.8L20 6v2.24z"/></svg>';
   var ICON_COPY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>';
+  var ICON_WECHAT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.69 4C4.98 4 2 6.5 2 9.6c0 1.8 1 3.4 2.6 4.4l-.65 2 2.3-1.16c.6.17 1.24.26 1.9.27-.13-.44-.2-.9-.2-1.37 0-2.98 2.9-5.4 6.47-5.4h.46C14.3 5.9 11.75 4 8.69 4zM6.6 7.3a.85.85 0 1 1 0 1.7.85.85 0 0 1 0-1.7zm4.2 0a.85.85 0 1 1 0 1.7.85.85 0 0 1 0-1.7z"/><path d="M22 13.74c0-2.6-2.6-4.7-5.8-4.7s-5.8 2.1-5.8 4.7 2.6 4.7 5.8 4.7c.63 0 1.24-.09 1.8-.25l1.98 1-.56-1.73C20.9 16.6 22 15.27 22 13.74zm-7.7-1.2a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm3.8 0a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"/></svg>';
+
+  var WX_ID = 'sanfan_999';
+  var QR_IMG = (function () {
+    var stat = document.querySelector('img[src*="wechat-qr"]');
+    if (stat) return stat.getAttribute('src');
+    var seg = location.pathname.split('/').filter(Boolean);
+    return '../'.repeat(Math.max(seg.length - 1, 0)) + 'assets/img/wechat-qr.webp';
+  })();
+  var WX_TXT = {
+    en: { scan: 'Scan this QR code in WeChat, or add us by ID:', copy: 'Copy WeChat ID' },
+    zh: { scan: '微信扫码加我，或搜索微信号：', copy: '复制微信号' },
+    de: { scan: 'QR-Code in WeChat scannen oder uns per ID hinzufügen:', copy: 'WeChat-ID kopieren' },
+    ja: { scan: 'WeChatでQRコードをスキャン、またはIDで追加：', copy: 'WeChat IDをコピー' },
+    ko: { scan: 'WeChat에서 QR코드를 스캔하거나 ID로 추가하세요:', copy: 'WeChat ID 복사' },
+    fr: { scan: 'Scannez ce QR code dans WeChat, ou ajoutez-nous par ID :', copy: 'Copier l\'ID WeChat' },
+    it: { scan: 'Scansiona questo QR code in WeChat, o aggiungici per ID:', copy: 'Copia ID WeChat' },
+    es: { scan: 'Escanea este código QR en WeChat, o añádenos por ID:', copy: 'Copiar ID de WeChat' }
+  };
+  var wx = WX_TXT[lang.slice(0, 2)] || WX_TXT.en;
 
   var bar = document.createElement('div');
   bar.className = 'cbar';
   bar.innerHTML =
     '<a class="cb-wa" href="' + waHref + '" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp ' + TEL_TXT + '">' + ICON_WA + '<span class="cb-lab">WhatsApp</span></a>' +
     '<a class="cb-mail" href="' + mailHref + '" aria-label="Send us an email">' + ICON_MAIL + '<span class="cb-lab">Email</span></a>' +
+    '<button class="cb-wechat" type="button" aria-label="WeChat">' + ICON_WECHAT + '<span class="cb-lab">WeChat</span></button>' +
     '<button class="cb-copy" type="button" aria-label="Copy phone number">' + ICON_COPY + '<span class="cb-lab">Copy</span></button>';
   document.body.appendChild(bar);
+
+  // WeChat QR modal (site-wide, reused by any [data-wx-open] trigger)
+  var modal = document.createElement('div');
+  modal.className = 'wx-modal';
+  modal.innerHTML =
+    '<div class="wx-card" role="dialog" aria-modal="true" aria-label="WeChat">' +
+    '<button class="wx-close" type="button" aria-label="Close">&times;</button>' +
+    '<img src="' + QR_IMG + '" alt="SANFAN WeChat QR code" width="261" height="312">' +
+    '<div class="wx-title">WeChat 微信</div>' +
+    '<p class="wx-scan">' + wx.scan + ' <b>' + WX_ID + '</b></p>' +
+    '<button class="wx-copy" type="button">' + wx.copy + '</button>' +
+    '</div>';
+  modal.style.display = 'none';
+  document.body.appendChild(modal);
+  function openWx() {
+    modal.style.display = 'flex';
+    track('wechat_qr');
+  }
+  function closeWx() { modal.style.display = 'none'; }
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeWx(); });
+  modal.querySelector('.wx-close').addEventListener('click', closeWx);
+  modal.querySelector('.wx-copy').addEventListener('click', function () {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(WX_ID).then(function () { showToast('Copied ' + WX_ID); }, function () { showToast(WX_ID); });
+    } else { showToast(WX_ID); }
+    track('copy_wechat_id');
+  });
+  bar.querySelector('.cb-wechat').addEventListener('click', openWx);
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest ? e.target.closest('[data-wx-open]') : null;
+    if (t) openWx();
+  });
+  window.sanfanOpenWeChat = openWx;
 
   var toast = document.createElement('div');
   toast.className = 'cbar-toast';

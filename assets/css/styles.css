@@ -545,3 +545,41 @@ html.show-zh .lang-en { display: none; }
 }
 .reply-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #10b981; }
 @media (max-width: 520px) { .cta-row a, .cta-row button { flex: 1 1 100%; justify-content: center; } }
+
+/* ---------- WeChat button + QR modal ---------- */
+.cbar .cb-wechat { background: #07c160; }
+.wx-modal {
+  position: fixed; inset: 0; z-index: 90; display: none; align-items: center; justify-content: center;
+  background: rgba(0,0,0,.55); padding: 20px;
+}
+.wx-card {
+  position: relative; background: #fff; color: #111; border-radius: 16px; padding: 22px 22px 18px;
+  max-width: 300px; width: 100%; text-align: center; box-shadow: 0 18px 48px rgba(0,0,0,.35);
+}
+.wx-card img { width: 100%; max-width: 220px; height: auto; border-radius: 10px; display: block; margin: 0 auto; }
+.wx-title { font-size: 17px; font-weight: 700; margin: 12px 0 4px; }
+.wx-scan { font-size: 13.5px; color: #444; margin: 4px 0 12px; line-height: 1.45; }
+.wx-scan b { color: #07c160; }
+.wx-copy {
+  display: inline-block; background: #07c160; color: #fff; border: none; cursor: pointer;
+  padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 600;
+}
+.wx-close {
+  position: absolute; top: 8px; right: 12px; background: none; border: none; cursor: pointer;
+  font-size: 26px; line-height: 1; color: #888;
+}
+/* contact page WeChat QR card */
+.wx-card-static {
+  display: flex; gap: 16px; align-items: center; margin-top: 14px; padding: 14px;
+  border: 1px solid #e5e7eb; border-radius: 12px; background: #f9fafb;
+}
+.wx-card-static img { width: 132px; height: auto; border-radius: 8px; flex: 0 0 auto; }
+.wx-card-static .wx-info { text-align: left; }
+.wx-card-static .wx-info .t { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+.wx-card-static .wx-info .d { font-size: 13.5px; color: #555; line-height: 1.5; }
+.wx-card-static .wx-info .d b { color: #07c160; }
+@media (max-width: 920px) {
+  .wx-modal { align-items: flex-end; }
+  .wx-card { margin-bottom: 66px; border-radius: 16px 16px 12px 12px; }
+}
+.cta-row .r-wechat { background: #07c160; }
