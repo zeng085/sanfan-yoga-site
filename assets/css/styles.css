@@ -16,6 +16,13 @@
   --radius-sm: 10px;
   --shadow: 0 10px 30px rgba(20, 50, 42, .08);
   --shadow-sm: 0 4px 14px rgba(20, 50, 42, .07);
+  /* 卡片 = 一张暖白纸样。图与文字共用同一底色，图片以 multiply「印」在纸上，
+     于是纯白底 / 彩色块底 / 实景底三类素材自动同源，不必再抠图。
+     想调整体气质只需改这两个值；静止态不描边不投影，层次全靠纸色 vs 白页。 */
+  --paper: #f9f7f2;
+  --paper-2: #f2eee6;
+  --card-r: 6px;
+  --shadow-card: 0 16px 36px rgba(24, 40, 35, .085);
   --maxw: 1180px;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
     "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
@@ -227,35 +234,46 @@ a { color: inherit; text-decoration: none; }
 .range-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; }
 .range-card {
   display: flex; flex-direction: column;
-  background: #fff; border: 1px solid var(--line);
-  border-radius: var(--radius); overflow: hidden;
-  box-shadow: var(--shadow-sm); transition: .22s ease;
+  background: var(--paper); border: 0;
+  border-radius: var(--card-r); overflow: hidden; isolation: isolate;
+  transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
   text-decoration: none; color: inherit;
 }
-.range-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #cfe3dc; }
-.range-card .rc-img { aspect-ratio: 4 / 3; overflow: hidden; background: var(--soft); }
-.range-card .rc-img img { width: 100%; height: 100%; object-fit: cover; transition: .3s; }
-.range-card:hover .rc-img img { transform: scale(1.06); }
-.range-card .rc-body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
-.range-card h3 { margin: 0; font-size: 19px; }
-.range-card p { margin: 0; font-size: 13.5px; color: var(--muted); }
-.range-card .rc-more { margin-top: auto; padding-top: 10px; font-weight: 600; font-size: 13.5px; color: var(--brand); }
+.range-card:hover { transform: translateY(-2px); background: var(--paper-2); box-shadow: var(--shadow-card); }
+/* 与产品卡同一套语言：纸色卡片 + multiply 印刷，封面图完整显示（cover 会裁掉） */
+.range-card .rc-img { aspect-ratio: 1/1; overflow: hidden; padding: 4%; }
+.range-card .rc-img img {
+  width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply;
+  transition: transform .9s cubic-bezier(.16, .7, .2, 1);
+}
+.range-card:hover .rc-img img { transform: scale(1.035); }
+.range-card .rc-body { padding: 17px 18px 20px; display: flex; flex-direction: column; gap: 5px; flex: 1; }
+.range-card h3 { margin: 0; font-size: 18px; font-weight: 500; letter-spacing: -.012em; transition: color .25s; }
+.range-card p { margin: 4px 0 0; font-size: 12.5px; line-height: 1.64; color: var(--muted); }
+.range-card .rc-more { margin-top: auto; padding-top: 13px; font-weight: 600; font-size: 12.5px; color: var(--brand); }
+.range-card:hover h3 { color: var(--brand); }
+html.show-zh .range-card h3 { font-weight: 600; }
 
 /* ---------- Product gallery ---------- */
 .gallery { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .g-item {
   /* 图库项已改为 <a>，需显式声明为块级并去掉链接默认样式 */
   display: block; color: inherit; text-decoration: none;
-  background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm);
-  overflow: hidden; transition: .22s ease;
+  background: var(--paper); border: 0; border-radius: var(--card-r);
+  overflow: hidden; isolation: isolate;
+  transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
 }
-.g-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #cfe3dc; }
-.g-item .ph { aspect-ratio: 1/1; overflow: hidden; background: var(--soft); }
-.g-item .ph img { width: 100%; height: 100%; object-fit: cover; transition: .3s; }
-.g-item:hover .ph img { transform: scale(1.06); }
-.g-item .meta { padding: 12px 13px; }
-.g-item .meta .n { font-weight: 700; font-size: 14.5px; }
-.g-item .meta .s { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.g-item:hover { transform: translateY(-2px); background: var(--paper-2); box-shadow: var(--shadow-card); }
+.g-item .ph { aspect-ratio: 1/1; overflow: hidden; padding: 4%; }
+.g-item .ph img {
+  width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply;
+  transition: transform .9s cubic-bezier(.16, .7, .2, 1);
+}
+.g-item:hover .ph img { transform: scale(1.04); }
+.g-item .meta { padding: 13px 15px 15px; }
+.g-item .meta .n { font-weight: 500; font-size: 14.5px; letter-spacing: -.01em; }
+.g-item .meta .s { color: var(--muted); font-size: 12.3px; margin-top: 4px; }
+html.show-zh .g-item .meta .n { font-weight: 600; }
 .gallery-note {
   text-align: center; color: var(--muted); font-size: 13px; margin-top: 22px;
   background: #fff7ec; border: 1px solid #f3e2c6; color: #8a5a1c;
@@ -294,19 +312,37 @@ a { color: inherit; text-decoration: none; }
 .cat-head .tag { color: var(--brand-2); font-weight: 600; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
 .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .prod-card {
-  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-  overflow: hidden; box-shadow: var(--shadow-sm); transition: .22s ease; display: flex; flex-direction: column;
+  background: var(--paper); border: 0; border-radius: var(--card-r);
+  overflow: hidden; isolation: isolate;
+  transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
+  display: flex; flex-direction: column;
 }
-.prod-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.prod-card .ph { aspect-ratio: 4/3; background: var(--soft); overflow: hidden; }
-.prod-card .ph img { width: 100%; height: 100%; object-fit: cover; }
-.prod-card .info { padding: 18px 20px 22px; flex: 1; display: flex; flex-direction: column; }
-.prod-card .info h4 { margin: 0 0 8px; font-size: 17px; }
-.prod-card .info p { margin: 0; color: var(--muted); font-size: 13.5px; flex: 1; }
-.prod-card .info .more { margin-top: 14px; color: var(--brand); font-weight: 600; font-size: 13.5px; }
+.prod-card:hover { transform: translateY(-2px); background: var(--paper-2); box-shadow: var(--shadow-card); }
+/* 图与文字同一张纸：图片 multiply 压在纸色上，白底图自然融为纸色，
+   彩色底图被统一成印刷色调 —— 底色差异在版式层消解，不需要改图。
+   静止态不描边、不投影，层次由「纸卡 vs 白页」和字体层级承担。 */
+.prod-card .ph { aspect-ratio: 1/1; overflow: hidden; padding: 4%; }
+.prod-card .ph img {
+  width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply;
+  transition: transform .9s cubic-bezier(.16, .7, .2, 1);
+}
+.prod-card:hover .ph img { transform: scale(1.035); }
+.prod-card .info { padding: 17px 17px 19px; flex: 1; display: flex; flex-direction: column; }
+.prod-card .info h4 {
+  margin: 0; font-size: 16px; font-weight: 500; letter-spacing: -.012em;
+  line-height: 1.34; transition: color .25s ease;
+}
+.prod-card .info p { margin: 7px 0 0; color: var(--muted); font-size: 12.3px; line-height: 1.64; flex: 1; }
+.prod-card .info .more {
+  margin-top: 11px; color: var(--brand); font-weight: 600; font-size: 12.2px;
+  opacity: 0; transform: translateX(-3px); transition: opacity .32s ease, transform .32s ease;
+}
+.prod-card:hover .info .more { opacity: 1; transform: none; }
 /* anchor variant: keep block behaviour when wrapped in <a> */
 a.prod-card { color: inherit; }
 a.prod-card:hover .info h4 { color: var(--brand); }
+/* 无衬线中文字重在 500 时偏细，中文态升到 600 才与英文版同等分量 */
+html.show-zh .prod-card .info h4 { font-weight: 600; }
 
 /* ---------- Product detail page ---------- */
 .breadcrumb { display: flex; align-items: center; gap: 10px; font-size: 14px; margin-bottom: 16px; color: rgba(255,255,255,.82); }
@@ -318,7 +354,9 @@ a.prod-card:hover .info h4 { color: var(--brand); }
 .product-detail { display: grid; grid-template-columns: 1.05fr 1fr; gap: 42px; align-items: start; }
 .pd-gallery { position: sticky; top: 92px; }
 .pd-main { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--soft); box-shadow: var(--shadow-sm); }
-.pd-main img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+/* 英文站产品图统一为 1:1 方图。容器用 4:3 + cover 会把方图上下裁掉（大图显示不全），
+   故改为 1:1 + contain：方图完整显示，非方图留白（底色 --soft）。 */
+.pd-main img { width: 100%; aspect-ratio: 1/1; object-fit: contain; }
 .pd-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px; }
 .pd-thumb { padding: 0; border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; background: #fff; cursor: pointer; transition: .2s; aspect-ratio: 1/1; }
 .pd-thumb img { width: 100%; height: 100%; object-fit: cover; }
@@ -583,3 +621,91 @@ html.show-zh .lang-en { display: none; }
   .wx-card { margin-bottom: 66px; border-radius: 16px 16px 12px 12px; }
 }
 .cta-row .r-wechat { background: #07c160; }
+
+/* ---------- Product category nav + category tiles ---------- */
+.cat-nav-wrap { padding: 24px 22px 0; }
+.cat-nav { display: flex; gap: 10px; flex-wrap: wrap; }
+.cat-chip {
+  display: inline-block; padding: 9px 16px; border: 1px solid var(--line);
+  border-radius: 999px; background: #fff; color: var(--ink);
+  font-size: 14px; font-weight: 600; text-decoration: none; transition: .2s ease;
+}
+.cat-chip:hover { border-color: var(--brand); color: var(--brand); }
+.cat-chip-active { background: var(--brand); border-color: var(--brand); color: #fff; }
+.cat-chip-active:hover { background: #0a5449; border-color: #0a5449; color: #fff; }
+/* 双语 chip 内联显示，避免 .lang-zh 的 display:block 打散一行 */
+.cat-chip .lang-zh { display: none; }
+html.show-zh .cat-chip .lang-zh { display: inline; }
+html.show-zh .cat-chip .lang-en { display: none; }
+
+.cat-head .cat-count { margin-left: auto; color: var(--muted); font-size: 13px; }
+
+.cat-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.cat-tile {
+  display: flex; gap: 0; background: var(--paper); border: 0;
+  border-radius: var(--card-r); overflow: hidden; isolation: isolate;
+  transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
+  color: inherit;
+}
+.cat-tile:hover { transform: translateY(-2px); background: var(--paper-2); box-shadow: var(--shadow-card); }
+.cat-tile .ct-img { flex: 0 0 36%; aspect-ratio: 1/1; overflow: hidden; padding: 4%; }
+.cat-tile .ct-img img {
+  width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply;
+  transition: transform .9s cubic-bezier(.16, .7, .2, 1);
+}
+.cat-tile:hover .ct-img img { transform: scale(1.035); }
+.cat-tile .ct-body {
+  flex: 1; min-width: 0; padding: 20px 22px;
+  display: flex; flex-direction: column;
+}
+.cat-tile .ct-body h3 { margin: 0 0 6px; font-size: 19px; font-weight: 500; letter-spacing: -.012em; }
+html.show-zh .cat-tile .ct-body h3 { font-weight: 600; }
+.cat-tile .ct-body h3 a { color: inherit; text-decoration: none; }
+.cat-tile:hover .ct-body h3 a { color: var(--brand); }
+.cat-tile .ct-kw { margin: 0 0 14px; color: var(--brand-2); font-size: 13px; font-weight: 600; }
+.cat-tile .ct-kw .lang-zh { display: none; }
+html.show-zh .cat-tile .ct-kw .lang-zh { display: inline; }
+html.show-zh .cat-tile .ct-kw .lang-en { display: none; }
+.ct-thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 14px; }
+.ct-thumbs a {
+  display: block; aspect-ratio: 1/1; border-radius: 6px; overflow: hidden;
+  background: var(--paper); isolation: isolate;
+}
+.ct-thumbs img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  mix-blend-mode: multiply; transition: .35s ease;
+}
+.ct-thumbs a:hover img { transform: scale(1.08); }
+.ct-more {
+  margin-top: auto; align-self: flex-start; color: var(--brand);
+  font-weight: 600; font-size: 14px; text-decoration: none;
+}
+.ct-more:hover { color: var(--brand-ink); }
+.ct-more .lang-zh { display: none; }
+html.show-zh .ct-more .lang-zh { display: inline; }
+html.show-zh .ct-more .lang-en { display: none; }
+
+@media (max-width: 860px) {
+  .cat-tiles { grid-template-columns: 1fr; }
+  .cat-tile .ct-img { flex: 0 0 32%; }
+}
+@media (max-width: 560px) {
+  /* 窄屏下分类页标题会把副标题和计数挤成细列 → 改为纵向堆叠 */
+  .cat-head { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .cat-head .cat-count { margin-left: 0; }
+  .cat-tile { flex-direction: column; }
+  .cat-tile .ct-img { flex: none; width: 100%; }
+  .ct-thumbs { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Homepage featured products ---------- */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.featured-cta { text-align: center; margin-top: 30px; }
+.featured-cta .btn { display: inline-block; }
+@media (max-width: 1100px) { .featured-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 820px)  { .featured-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .featured-grid { grid-template-columns: 1fr; } }

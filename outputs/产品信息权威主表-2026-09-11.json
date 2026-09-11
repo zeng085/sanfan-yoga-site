@@ -1,0 +1,504 @@
+{
+ "_note": "fjsanfan.com 产品信息权威主表。来源：SF=sanfansport.com 英文站；YC=Fujian Sanfan Yoga Product Catalog.pdf；FC=Fitness Series Catalogue.pdf；PR=yoga and pilate accessories-SANFAN sports.xlsx（价格）。站点现行数据作废。",
+ "_version": "2026-09-11",
+ "pages": {
+  "ym1": {
+   "name": "TPE Yoga Mat",
+   "sf_slug": "tpe-yoga-mat",
+   "factory_sku": ["S1C61", "S1B81", "S1A66", "S1A11", "S1A12", "S1B82", "S1A84"],
+   "spec": {
+    "Material": {"v": "TPE (single layer / double layer)", "src": "SF+YC"},
+    "Size": {"v": "183×61cm / 183×66cm / 183×80cm", "src": "YC S1A66·S1A84·S1A11 + SF"},
+    "Thickness": {"v": "6 / 8 / 10 / 12 mm", "src": "YC S1A66 + SF tpe-yoga-mat-4"},
+    "Weight": {"v": "550g/pc (6mm 单层) – 1200g/pc (80cm 双层)", "src": "YC S1A66 NW 550g/pc + SF 800g/1050g · 1100g/1200g"},
+    "Color": {"v": "Purple, Blue, Black, Light Purple, Matcha Green, Soft Pink (or customized)", "src": "SF tpe-yoga-mat / tpe-yoga-mat-2"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant, Anti-Tears", "src": "SF"},
+    "Logo": {"v": "Laser engraving / Screen print / Emboss (customizable)", "src": "YC"},
+    "MOQ": {"v": "100 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "REACH, CA Prop 65, 6P/7P, ISO 9001, BSCI", "src": "站点保留 · 待厂方口径"},
+    "Packing": {"v": "Color paper + OPP film + Box; 12 pcs/carton (63×39×52cm)", "src": "YC S1A66"}
+   },
+   "must_fix": "删除 1850×900 / 2000×1000 / 1850×1220 三个尺寸（三方资料均无）；厚度下限由 4mm 改 6mm"
+  },
+  "ym2": {
+   "name": "Wide TPE Yoga Mat (80/90cm)",
+   "sf_slug": "tpe-yoga-mat-5·6·7·8 | tpe-eco-friendly-yoga-mat",
+   "factory_sku": ["S1A66", "S1A11", "S1B82"],
+   "spec": {
+    "Material": {"v": "TPE (double layer)", "src": "SF+YC"},
+    "Size": {"v": "183×80cm；183×90cm（90cm 仅英文站有）", "src": "YC 183×80 + SF tpe-yoga-mat-7/8 183*90"},
+    "Thickness": {"v": "6 / 8 / 10 / 12 mm", "src": "SF 183*80*0.6/0.8/1/1.2cm"},
+    "Weight": {"v": "1100g/1200g", "src": "SF tpe-yoga-mat"},
+    "Color": {"v": "Matcha Green + Dark Gray, Pink + Dark Blue, Green + Dark Gray (or customized)", "src": "SF"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Anti-Tears", "src": "SF"},
+    "Logo": {"v": "Customization Available", "src": "SF"},
+    "MOQ": {"v": "100 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "REACH, CA Prop 65, 6P/7P, ISO 9001, BSCI", "src": "站点保留 · 待厂方口径"},
+    "Packing": {"v": "Color paper + OPP film + Box; 10–12 pcs/carton", "src": "YC S1A66"}
+   },
+   "must_fix": "长度改为 183cm（删除 1830–2000mm 说法）；80cm 是独立 SKU，不宜单列「加宽」品类页，建议并入 ym1 作规格行"
+  },
+  "ym3": {
+   "name": "TPE Double Yoga Mat (双人垫)",
+   "sf_slug": "tpe-double-yoga-mat",
+   "factory_sku": ["S1A87"],
+   "spec": {
+    "Material": {"v": "TPE", "src": "SF+YC"},
+    "Size": {"v": "185×122cm", "src": "YC S1A87 + SF 185x122cm"},
+    "Thickness": {"v": "6 / 8 mm", "src": "YC S1A87 + SF"},
+    "Weight": {"v": "1450g (6mm) / 2000g (8mm)", "src": "YC S1A87"},
+    "Color": {"v": "Matcha Green + Dark Gray (or customized)", "src": "SF tpe-double-yoga-mat"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Anti-Tears", "src": "SF"},
+    "Logo": {"v": "Laser engraving / Screen print / Emboss", "src": "YC"},
+    "MOQ": {"v": "100 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "REACH, CA Prop 65, 6P/7P, ISO 9001, BSCI", "src": "站点保留 · 待厂方口径"},
+    "Packing": {"v": "Color paper + OPP film + Box; 6 pcs/carton (125×45×32cm)", "src": "YC S1A87"}
+   },
+   "must_fix": "长度 2000mm → 185cm；补单重 1450/2000g"
+  },
+  "ym4": {
+   "name": "Foldable Yoga Mat (折叠垫)",
+   "sf_slug": "folding-mat | folding-yoga-mat | folding-yoga-mat-2",
+   "factory_sku": ["S1A25", "S1A41", "—(TPE折叠见 FC P7)"],
+   "spec": {
+    "Material": {"v": "TPE / Frosted PU+Rubber (S1A25) / Rubber (S1A41) / POE+PU·Cork·Suede·Linen (FC)", "src": "SF+YC+FC"},
+    "Size": {"v": "TPE: 183×61cm，折叠后 14×61cm；PU: 185×68cm；Rubber: 183×61cm", "src": "SF folding-mat + YC S1A25/S1A41"},
+    "Thickness": {"v": "TPE 6mm；PU 1.5mm；Rubber 2mm；折叠系列 0.6–1.5cm", "src": "SF + YC + FC P7"},
+    "Weight": {"v": "按款式（折叠数 4/6/8/12 折）", "src": "FC P7"},
+    "Color": {"v": "Green, Blue, Pink, Purple, Gray (or customized)", "src": "SF folding-yoga-mat"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Foldable, Space-saving", "src": "SF+FC"},
+    "Logo": {"v": "Laser engraving / Screen print / Heat transfer", "src": "YC"},
+    "MOQ": {"v": "100 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "REACH, CA Prop 65, 6P/7P, ISO 9001, BSCI", "src": "站点保留 · 待厂方口径"},
+    "Packing": {"v": "Color paper + OPP film + Bag", "src": "YC S1A25/S1A41"}
+   },
+   "must_fix": "保留该页。现有信息缺「折叠后尺寸」与「折叠数」，按 SF+FC 补；材质不再写单一 TPE"
+  },
+  "ym5": {
+   "name": "PU / Rubber Premium Mat",
+   "sf_slug": "pu-rubber-yoga-mat | pu-rubber-yoga-mat-2…-12 | rubber-yoga-mat",
+   "factory_sku": ["S1A21", "S1A26", "S1A24"],
+   "spec": {
+    "Material": {"v": "PU + Natural Rubber", "src": "SF+YC"},
+    "Size": {"v": "185×68cm", "src": "YC S1A21 + SF pu-rubber-yoga-mat + FC P6"},
+    "Thickness": {"v": "4.5 mm (fixed)", "src": "YC S1A21 + FC P6"},
+    "Weight": {"v": "2900g/pc", "src": "YC S1A21 NW 2900g/pc"},
+    "Color": {"v": "Purple, Pink, Green, Black, Gray, Blue, Sky Blue, Orange, Mustard Green, Milk Tea, Soft Pink (or customized)", "src": "SF pu-rubber-yoga-mat"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant", "src": "SF"},
+    "Logo": {"v": "Laser engraving / Screen print / Emboss / UV print", "src": "YC"},
+    "MOQ": {"v": "100 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "REACH, CA Prop 65, ISO 9001, BSCI", "src": "站点保留 · 待厂方口径"},
+    "Packing": {"v": "Color paper + OPP film + Carton; 6 pcs/carton (70×35×25cm), GW 18.2kg", "src": "YC S1A21"}
+   },
+   "must_fix": "宽度 1850×800 → 185×68cm（序列行错误）；厚度 4–6mm 区间 → 固定 4.5mm；补单重 2900g 与装箱"
+  },
+  "ym6": {
+   "name": "Frosted PU Yoga Mat (磨砂 PU)",
+   "sf_slug": "matte-pu-rubber-yoga-mat",
+   "factory_sku": ["S1A27"],
+   "spec": {
+    "Material": {"v": "Frosted PU + Natural Rubber", "src": "YC S1A27 + SF Matte PU+Rubber"},
+    "Size": {"v": "185×68cm", "src": "YC S1A27 + SF 185cm*68cm*0.45cm"},
+    "Thickness": {"v": "4.5 mm", "src": "YC + SF"},
+    "Weight": {"v": "2900g/pc", "src": "SF matte-pu-rubber-yoga-mat"},
+    "Color": {"v": "Milk Tea, Dark Gray, Soft Pink, Light Purple, Jade Green", "src": "SF matte-pu-rubber-yoga-mat"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant, Matte Surface", "src": "SF+YC"},
+    "Logo": {"v": "Laser engraving / Screen print / Emboss / UV print", "src": "YC"},
+    "MOQ": {"v": "100 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "REACH, CA Prop 65, ISO 9001, BSCI", "src": "站点保留 · 待厂方口径"},
+    "Packing": {"v": "Color paper + OPP film + Carton; 70×35×25cm, GW 18.2kg", "src": "YC S1A27"}
+   },
+   "must_fix": "宽度改 68cm；厚度改 4.5mm；补 5 个具体色名与 2900g"
+  },
+  "ym7": {
+   "name": "Camouflage Yoga Mat (迷彩垫)",
+   "sf_slug": "pu-rubber-yoga-mat-test（英文站内标题为 TPE Camouflage Yoga Mat）",
+   "factory_sku": ["S1AM8"],
+   "spec": {
+    "Material": {"v": "TPE", "src": "YC S1AM8 + SF TPE Camouflage"},
+    "Size": {"v": "183×66cm", "src": "YC S1AM8（英文站写 68cm，以目录 66cm 为准）"},
+    "Thickness": {"v": "6 mm", "src": "YC S1AM8 + SF"},
+    "Weight": {"v": "按 6mm 常规（同 S1A84 约 900g）", "src": "YC 推定"},
+    "Color": {"v": "Camouflage Pink, Camouflage Blue, Camouflage Purple, Camouflage Green", "src": "SF"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant, Camo Print", "src": "SF"},
+    "Logo": {"v": "Laser engraving / Screen print / Emboss", "src": "YC"},
+    "MOQ": {"v": "100 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "REACH, CA Prop 65, 6P/7P, ISO 9001, BSCI", "src": "站点保留 · 待厂方口径"},
+    "Packing": {"v": "Color paper + OPP film + Box; 70×39×52cm, GW 12.5kg", "src": "YC S1AM8"}
+   },
+   "must_fix": "材质 PU → TPE（三方一致：目录 S1AM8 与英文站均为 TPE）；尺寸改 183×66cm。页面标题「Camo PU Yoga Mat」需改名"
+  },
+  "ym8": {
+   "name": "Bosu Ball / Half Balance Ball (半平衡球)",
+   "sf_slug": "—（英文站无此产品页，仅目录+报价表）",
+   "factory_sku": ["F2D34", "F2D24"],
+   "spec": {
+    "Material": {"v": "PVC (球体) / PVC+ABS", "src": "FC P17 + YC F2D34"},
+    "Size": {"v": "直径 58 cm", "src": "FC P17「Wide 58cm」+ PR F2D34 58cm"},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "—（自定义）", "src": "FC"},
+    "Feature": {"v": "Anti-burst, Non-slip Base", "src": "FC"},
+    "Logo": {"v": "Screen printing", "src": "YC F2D34"},
+    "MOQ": {"v": "—", "src": "报价表 F2D34 定制 logo 1000 pcs"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Box + Manual + Foam bag (62×45×62cm)", "src": "YC F2D34"}
+   },
+   "must_fix": "直径 63cm → 58cm；与 rb3 重复，两页合并为一页（Bosu Ball）"
+  },
+  "pr1": {
+   "name": "Aerial Yoga Hammock (空中瑜伽吊床)",
+   "sf_slug": "yoga-hammock / -2 / -3 / -4 / -5 / solid-color / gradient-color / yoga-hammock-with-handles",
+   "factory_sku": ["—（目录无，以英文站为准）"],
+   "spec": {
+    "Material": {"v": "Polyester (纯色/渐变色/彩色) / 210T Nylon Taffeta (带手柄款)", "src": "SF"},
+    "Size": {"v": "按款；带手柄款 210T 尼龙", "src": "SF"},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Solid / Gradient / Colorful", "src": "SF"},
+    "Feature": {"v": "High strength, Soft, Easy install", "src": "SF"},
+    "Logo": {"v": "Customization Available", "src": "SF"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Carry bag + carton", "src": "站点保留"}
+   },
+   "must_fix": "材质由 aerial silk(nylon) 改为 Polyester / 210T 尼龙塔夫绸两档（英文站口径）；可拆成整组吊床页"
+  },
+  "pr2": {
+   "name": "Yoga Wheel (瑜伽轮)",
+   "sf_slug": "—（英文站仅类目，无产品页）",
+   "factory_sku": ["F2C12", "F2C22", "F2C42", "F2C51"],
+   "spec": {
+    "Material": {"v": "TPE+PP (F2C12) / PU Rubber+PP (F2C22) / Cork+PP (F2C42) / PVC+PP (F2C51)", "src": "YC P48-49"},
+    "Size": {"v": "直径 31.5–32 cm × 宽 12.6–12.7 cm", "src": "YC F2C22 D31.5×W12.6 / F2C42 D31.8×W12.7 / F2C51 D32×W12.7"},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "5 pcs/carton, GW 8–8.6kg", "src": "YC"},
+    "Color": {"v": "自定义", "src": "YC"},
+    "Feature": {"v": "Anti-slip, High load, Eco Friendly", "src": "站点保留"},
+    "Logo": {"v": "Laser engraving / Screen print / Emboss", "src": "YC"},
+    "MOQ": {"v": "—", "src": ""},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Box + Manual + Foam bag (72×35×36cm)", "src": "YC"}
+   },
+   "must_fix": "直径 33/38cm → 31.5–32cm × 宽 12.6–12.7cm（四款材质分列）"
+  },
+  "pr3": {
+   "name": "Meditation Mat & Yoga Bolster",
+   "sf_slug": "yoga-bolster | pu-meditation-mat | tpe-meditation-mat | meditation-mat",
+   "factory_sku": ["S1A5"],
+   "spec": {
+    "Material": {"v": "冥想垫 PU+Rubber；抱枕 100% Polyester + Sponge", "src": "YC S1A5 + SF yoga-bolster"},
+    "Size": {"v": "冥想垫 40×60cm（方）/ 60×60cm（圆）；抱枕 64×24×13cm", "src": "YC S1A5 + SF"},
+    "Thickness": {"v": "冥想垫 4.5mm", "src": "YC S1A5"},
+    "Weight": {"v": "抱枕 550g", "src": "SF yoga-bolster"},
+    "Color": {"v": "Beige, Gray, Pink, Purple / Black, Blue, Gray, Green, Pink, Purple", "src": "SF"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant", "src": "SF"},
+    "Logo": {"v": "Laser engraving / Screen print / Emboss", "src": "YC"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Color paper + OPP film; 20 pcs/carton", "src": "YC S1A5"}
+   },
+   "must_fix": "站点写 Zafu 荞麦坐垫，三方资料均无此品；建议改为「冥想垫 (S1A5) + 瑜伽抱枕 (yoga-bolster)」两款"
+  },
+  "pr4": {
+   "name": "Yoga Block (瑜伽砖)",
+   "sf_slug": "eva-yoga-block | yoga-block-cover",
+   "factory_sku": ["F1B11", "F1B12", "F1B31", "F1B61", "F1B13000"],
+   "spec": {
+    "Material": {"v": "EVA (F1B11/F1B12/F1B13000) / POE (F1B61) / Cork (F1B31)", "src": "YC P45-47"},
+    "Size": {"v": "23×15×7.5cm (3\"×6\"×9\")", "src": "YC 全系列一致 + PR 报价表"},
+    "Thickness": {"v": "7.5 cm (即 3\")", "src": "YC"},
+    "Weight": {"v": "EVA 200g/pc；Cork 750g/pc", "src": "YC F1B12/F1B31"},
+    "Color": {"v": "Multiple colors (or customized)", "src": "SF"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Durable", "src": "SF"},
+    "Logo": {"v": "Laser engraving / Screen print / Emboss", "src": "YC"},
+    "MOQ": {"v": "500 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "OPP film; EVA 50 pcs/carton (47×40×77cm)；Cork 20 pcs/carton", "src": "YC"}
+   },
+   "must_fix": "尺寸 9×15×23cm → 23×15×7.5cm（站点把厚度写成 9cm，实际 7.5cm）；补软木款 F1B31"
+  },
+  "pr5": {
+   "name": "Knee Pad (膝盖垫)",
+   "sf_slug": "—（英文站仅类目 yoga-knee-pads 无产品页）",
+   "factory_sku": ["—（FC P18 Knee Pad Cushion）"],
+   "spec": {
+    "Material": {"v": "TPE / EVA", "src": "FC P18"},
+    "Size": {"v": "28×17×6cm / 20×20cm×13mm / 21×19×2cm", "src": "FC P18"},
+    "Thickness": {"v": "13 mm / 2 cm", "src": "FC P18"},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Customized", "src": ""},
+    "Feature": {"v": "Non-slip, Cushioning", "src": "FC 推定"},
+    "Logo": {"v": "Customization Available", "src": "SF"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "OPP bag + carton", "src": "站点保留"}
+   },
+   "must_fix": "现写「Custom」无数据 → 按健身目录 P18 补三个尺寸"
+  },
+  "fr1": {
+   "name": "Wolf-tooth Yoga Roller (狼牙柱)",
+   "sf_slug": "eva-foam-roller-2 | foam-roller",
+   "factory_sku": ["S2A22", "S2A16", "S2A36"],
+   "spec": {
+    "Material": {"v": "EVA + PVC (狼牙纹)", "src": "YC S2A22 + FC P8"},
+    "Size": {"v": "45cm×14cm / 33cm×14cm / 30cm×8.5cm", "src": "YC S2A22 + FC P8「45x14cm EVA+PVC」"},
+    "Thickness": {"v": "直径 14 cm", "src": "YC S2A22"},
+    "Weight": {"v": "310g/pc", "src": "YC S2A22 NW 310g/pc"},
+    "Color": {"v": "Customized", "src": "SF"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant", "src": "SF"},
+    "Logo": {"v": "Silk printing", "src": "YC S2A22"},
+    "MOQ": {"v": "500 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "OPP film plastic seal; 25 pcs/carton (62×40×35cm), GW 9.2kg", "src": "YC S2A22"}
+   },
+   "must_fix": "直径 14cm 是狼牙柱(EVA+PVC)的正确值，无需改；但要与光面 EVA 柱(12.5/13.5cm)分开写，别混"
+  },
+  "fr2": {
+   "name": "Solid / Smooth Foam Roller (光面柱)",
+   "sf_slug": "foam-roller-2 | foam-roller-3 | foam-roller",
+   "factory_sku": ["S2B13", "S2A13", "S2A14"],
+   "spec": {
+    "Material": {"v": "EVA (实心) / EVA+PVC", "src": "YC + FC P8"},
+    "Size": {"v": "33cm×13cm / 45cm×13.5cm / 30cm×12.5cm / 34cm×12.5cm", "src": "FC P8 + YC"},
+    "Thickness": {"v": "直径 12.5 / 13 / 13.5 cm", "src": "FC P8"},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Customized", "src": "SF"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant", "src": "SF"},
+    "Logo": {"v": "Customization Available", "src": "SF"},
+    "MOQ": {"v": "500 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Shrink wrap + carton", "src": "站点保留"}
+   },
+   "must_fix": "现写「25×7.5 to 45×14 cm」混淆了光面与狼牙款；光面按 12.5–13.5cm 直径分列"
+  },
+  "fr3": {
+   "name": "Electric Yoga Roller (电动柱)",
+   "sf_slug": "vibrating-foam-roller | vibrating-yoga-roller",
+   "factory_sku": ["—（FC P8 Electric Yoga Shaft）"],
+   "spec": {
+    "Material": {"v": "PU + ABS", "src": "FC P8"},
+    "Size": {"v": "31cm × 10cm", "src": "FC P8「Electric Yoga Shaft: 31*10CM」"},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Customized", "src": ""},
+    "Feature": {"v": "Vibrating, Rechargeable", "src": "站点保留"},
+    "Logo": {"v": "Customization Available", "src": "站点保留"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Box", "src": "站点保留"}
+   },
+   "must_fix": "33×13cm → 31×10cm（健身目录口径）；材质 EVA+motor → PU+ABS"
+  },
+  "fr4": {
+   "name": "EVA Massage Roller (EVA 按摩柱)",
+   "sf_slug": "eva-foam-roller | advanced-yoga-roller",
+   "factory_sku": ["S2A36", "S2B11", "S2B14"],
+   "spec": {
+    "Material": {"v": "EVA", "src": "YC + FC P8"},
+    "Size": {"v": "34×12.5cm / 33×13.5cm / 52×12cm (水波纹)", "src": "FC P8"},
+    "Thickness": {"v": "直径 12.5 / 13.5 cm", "src": "FC P8"},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Customized", "src": "SF"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant", "src": "SF"},
+    "Logo": {"v": "Customization Available", "src": "SF"},
+    "MOQ": {"v": "500 pcs", "src": "站点保留 · 待厂方口径"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Shrink wrap + carton", "src": "站点保留"}
+   },
+   "must_fix": "现写「Smooth / grid / half-roller」无数字 → 补 34×12.5 / 33×13.5 / 52×12cm"
+  },
+  "fr5": {
+   "name": "Fascia / Massage Ball (按摩球)",
+   "sf_slug": "fascial-sphere-1·2·3",
+   "factory_sku": ["F2D16", "F1E28", "F1EA1"],
+   "spec": {
+    "Material": {"v": "EVA / TPE", "src": "YC F2D16 EVA Fascia Ball + SF"},
+    "Size": {"v": "Ø 6–10 cm（含刺猬球、花生球款）", "src": "站点保留 + YC"},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Customized", "src": "SF"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Deep Tissue", "src": "SF"},
+    "Logo": {"v": "Customization Available", "src": "SF"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Mesh bag + carton", "src": "站点保留"}
+   },
+   "must_fix": "补具体直径区间（Ø6/7/7.5/10cm）与刺猬球款"
+  },
+  "rb1": {
+   "name": "Resistance Bands (弹力带)",
+   "sf_slug": "exercise-bands | figure-8-resistance-bands | resistance-band | resistance-band-2 | tpe-resistance-loop-band | resistance-tube | resistance-tube-2 | power-band | foot-pedal-resistance-band",
+   "factory_sku": ["—（FC P3-4 全系列；PR R22/R27）"],
+   "spec": {
+    "Material": {"v": "Latex / TPE / Rubber / Polyester Cotton + Latex / Silicone", "src": "FC P3-4 + SF"},
+    "Size": {"v": "600×50×0.35/0.5/0.7/0.9/1.1mm；1500×150×0.45mm；660×60mm；42×14cm；33×6.9cm；44×9.9×5mm；2080×4.5×6.4…45mm", "src": "FC P3-4 + SF"},
+    "Thickness": {"v": "0.35–1.1 mm", "src": "FC P3-4"},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Pink, Purple, Blue, Green, Orange (multi-set)", "src": "SF"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant", "src": "SF"},
+    "Logo": {"v": "Customization Available", "src": "SF"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "OPP bag / Paper box / Kraft paper box", "src": "SF"}
+   },
+   "must_fix": "「Latex / fabric」不完整：三方资料含 Latex/TPE/Rubber/针织涤棉/硅胶五类，应按款式拆 3–5 个产品页；补拉力值(15/25/35lb 等)"
+  },
+  "rb2": {
+   "name": "Mini Yoga Ball / Gym Ball",
+   "sf_slug": "yoga-ball",
+   "factory_sku": ["F2D23A00"],
+   "spec": {
+    "Material": {"v": "Anti-burst PVC", "src": "站点保留 + SF"},
+    "Size": {"v": "Ø 25 cm（迷你）；大球 55/65/75 cm", "src": "站点保留 + PR"},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Customized", "src": "SF"},
+    "Feature": {"v": "Anti-burst, Non-slip", "src": "站点保留"},
+    "Logo": {"v": "Customization Available", "src": "SF"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Carton", "src": "站点保留"}
+   },
+   "must_fix": "与报价表 F2D23A00 对齐；补大球尺寸线"
+  },
+  "rb3": {
+   "name": "Bosu Ball (与 ym8 合并)",
+   "sf_slug": "—（英文站无产品页）",
+   "factory_sku": ["F2D34", "F2D24"],
+   "spec": {
+    "Material": {"v": "PVC", "src": "FC P17 + YC"},
+    "Size": {"v": "直径 58 cm", "src": "FC P17 + PR"},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Customized", "src": ""},
+    "Feature": {"v": "Anti-burst", "src": "FC"},
+    "Logo": {"v": "Screen printing", "src": "YC"},
+    "MOQ": {"v": "1000 pcs (定制 logo)", "src": "PR"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Box + Manual + Foam bag", "src": "YC"}
+   },
+   "must_fix": "直径 60cm → 58cm；本页与 ym8 是同一产品，合并为一页"
+  },
+  "rb4": {
+   "name": "Balance Board (平衡板)",
+   "sf_slug": "fitness-board | p3-fitness-board",
+   "factory_sku": ["—（FC P18 Wooden Balance Board / Slant Board）"],
+   "spec": {
+    "Material": {"v": "Plywood / Eucalyptus Multilayer Board / PP+TPE", "src": "FC P18"},
+    "Size": {"v": "40×32×15cm / 43×33×8cm / 40×33.5×4cm / 41.5×41.5×8.5cm", "src": "FC P18"},
+    "Thickness": {"v": "4–15 cm (按款)", "src": "FC P18"},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Wood / Customized", "src": "FC"},
+    "Feature": {"v": "Non-slip, Balance Training", "src": "FC 推定"},
+    "Logo": {"v": "Customization Available", "src": "站点保留"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Carton", "src": "站点保留"}
+   },
+   "must_fix": "现写「Plywood + TPE surface, Custom」→ 按健身目录 P18 补四款具体尺寸与材质"
+  },
+  "fi1": {
+   "name": "Stair Climber / Mini Stepper",
+   "sf_slug": "stair-climbers",
+   "factory_sku": ["—（英文站无规格；两份目录均无脚踏式）"],
+   "spec": {
+    "Material": {"v": "Steel + ABS", "src": "站点保留"},
+    "Size": {"v": "待补（英文站无规格）", "src": ""},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Customized", "src": ""},
+    "Feature": {"v": "Compact, Hydraulic", "src": ""},
+    "Logo": {"v": "Customization Available", "src": ""},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Box", "src": "站点保留"}
+   },
+   "must_fix": "标题 bug：H1 写 Mini Stepper，副标题写硅胶哑铃 → 必改；产品名统一为 Stair Climber（对齐英文站）"
+  },
+  "fi2": {
+   "name": "Kettlebell (壶铃)",
+   "sf_slug": "kettlebell | kettlebell-2 (Bag Kettlebell)",
+   "factory_sku": ["—（FC P23 Kettle Bell 系列）"],
+   "spec": {
+    "Material": {"v": "Cast iron + Rubber / Cast iron + Neoprene / PVC / Environmental PVC+PP / Silicone + Cast Iron", "src": "FC P23 + SF"},
+    "Size": {"v": "2–20 kg (iron)；2/3/4/5/6/8/10 kg (PVC)；0.5–10 kg (rubber/neoprene)；袋式 20×18cm", "src": "FC P23"},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "4500g (袋式壶铃 F 款)", "src": "SF kettlebell-2"},
+    "Color": {"v": "Pink, Green, Beige (硅胶袋式)", "src": "SF"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant", "src": "SF"},
+    "Logo": {"v": "Customized Logo Available", "src": "SF"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Kraft Paper Box (袋式) / Carton", "src": "SF"}
+   },
+   "must_fix": "4–24kg 需按材质拆款（铸铁/浸塑/PVC/硅胶袋式）；补「袋式壶铃」硅胶款"
+  },
+  "fi3": {
+   "name": "Jump Rope (跳绳)",
+   "sf_slug": "jump-rope | -2 | -3 | -kids | speed-jump-rope | smart-counting-jump-rope | electronic-counting-skip-rope | cordless-jump-rope | foot-pedal-…",
+   "factory_sku": ["—（FC P11 十款）"],
+   "spec": {
+    "Material": {"v": "Steel Wire+PVC / ABS+PVC / Aluminum Alloy+PVC coated wire / PVC / Rubber / PP+PVC+EVA / ABS+PP+TPR", "src": "FC P11"},
+    "Size": {"v": "绳长 2.2 / 2.4 / 2.8 / 3 m；手柄 12×2cm / 14.5×5.2cm / 15.7×2.1cm / 19.3×3.1cm", "src": "FC P11 + SF"},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "White, Blue, Purple, Pink, Green, Orange, Yellow, Black", "src": "SF"},
+    "Feature": {"v": "Adjustable length, Tangle-free", "src": "SF"},
+    "Logo": {"v": "Customized Logo Available", "src": "SF"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Customized Package", "src": "SF"}
+   },
+   "must_fix": "「Adjustable length」无数字 → 按 FC P11 + SF 补绳长与手柄尺寸；建议拆成 3 页（常规/儿童/智能计数）"
+  },
+  "fi4": {
+   "name": "Home Stepper / Aerobic Step",
+   "sf_slug": "stair-climbers-2 | -3",
+   "factory_sku": ["—（FC P19 Aerobic Step 可借）"],
+   "spec": {
+    "Material": {"v": "Steel + hydraulic；踏板款 PP / PE / ABS", "src": "站点保留 + FC P19"},
+    "Size": {"v": "踏板：110×41×20cm(10/15/20cm) / 40×40×30cm / 68×28×15cm / 72×35×10cm / 78×30×10cm", "src": "FC P19"},
+    "Thickness": {"v": "可调高度 10/15/20/25/30 cm", "src": "FC P19"},
+    "Weight": {"v": "—", "src": ""},
+    "Color": {"v": "Customized", "src": ""},
+    "Feature": {"v": "Height adjustable, Compact", "src": "FC"},
+    "Logo": {"v": "Customization Available", "src": ""},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Box", "src": "站点保留"}
+   },
+   "must_fix": "「Compact」无数字 → 补具体尺寸；或改为 Aerobic Step（健身目录有真实数据）"
+  },
+  "fi5": {
+   "name": "Dumbbell & Barbell (哑铃/杠铃)",
+   "sf_slug": "adjustable-dumbbell | dumbbell | dumbbell-2 | dumbbel | barbell",
+   "factory_sku": ["—（FC P23 + PR R10-R16 硅胶系列）"],
+   "spec": {
+    "Material": {"v": "Silicone + Cast Iron / Cast iron + Rubber + Steel / Cast iron + Neoprene / Imported rubber", "src": "SF + FC P23"},
+    "Size": {"v": "1–10 kg（哑铃）；91 / 110 cm（杠铃）", "src": "FC P23 + SF barbell"},
+    "Thickness": {"v": "—", "src": ""},
+    "Weight": {"v": "1–2.5 kg（硅胶哑铃）；15 / 25 lbs（杠铃）；0.5–10 kg", "src": "SF + FC P23"},
+    "Color": {"v": "Black, Nude Pink, Beige, Milk Tea, Gray Green, Pink", "src": "SF 硅胶系列"},
+    "Feature": {"v": "Non-slip, Eco Friendly, Wear-Resistant", "src": "SF"},
+    "Logo": {"v": "Customized Logo Available", "src": "SF"},
+    "MOQ": {"v": "On request", "src": "站点保留"},
+    "Compliance": {"v": "站点保留 · 待厂方口径", "src": ""},
+    "Packing": {"v": "Kraft Paper Box", "src": "SF"}
+   },
+   "must_fix": "6kg/2kg 套装说法无依据 → 按硅胶系列（1–2.5kg↑）与铸铁系列分列；补 6 个具体色名"
+  }
+ },
+ "image_sources": {
+  "A_english_site": {"count": 1586, "urls_file": "/tmp/sf_images.json", "per_product": "3–24 张", "status": "URL 已全部抓取；图片本体下载当前被 Cloudflare 限流，需稍后重试"},
+  "B_yoga_catalog_pages": {"count": 57, "path": "/tmp/yoga_raw/p01-p57.jpg", "size": "2481×3367", "status": "已在本机，可直接用（做详情长图区块）"},
+  "C_fitness_catalog_images": {"count": 197, "status": "原 PDF 已不在本机，需重新提供，或直接用英文站图替代"},
+  "D_current_site": {"count": 33, "path": "assets/img/", "status": "覆盖严重不足，27 页产品只有 33 张图"}
+ },
+ "open_items": [
+  "认证口径：REACH / CA Prop 65 / 6P-7P / ISO 9001 / BSCI 三项权威源均无依据，目录只有 CE 证书 + 专利证书 → 需厂方给证书清单",
+  "MOQ 对外口径：报价表最小定制 20 pcs vs 站点 100/500 pcs → 需定一个",
+  "价格是否上站：报价表为 FOB 厦门 USD，站点现为 On request",
+  "健身目录 197 张原图：需重新提供 PDF"
+ ]
+}

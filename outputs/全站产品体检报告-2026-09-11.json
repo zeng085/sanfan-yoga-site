@@ -1,0 +1,5430 @@
+{
+ "pages": [
+  {
+   "slug": "abs-yoga-ring",
+   "path": "products/abs-yoga-ring.html",
+   "src": "abs-yoga-ring",
+   "imgs": [
+    "assets/img/abs-yoga-ring-1.webp",
+    "assets/img/abs-yoga-ring-2.webp",
+    "assets/img/abs-yoga-ring-3.webp",
+    "assets/img/abs-yoga-ring-4.webp",
+    "assets/img/abs-yoga-ring-5.webp",
+    "assets/img/abs-yoga-ring-6.webp",
+    "assets/img/abs-yoga-ring-7.webp",
+    "assets/img/abs-yoga-ring-8.webp",
+    "assets/img/abs-yoga-ring-9.webp",
+    "assets/img/abs-yoga-ring-10.webp",
+    "assets/img/abs-yoga-ring-11.webp"
+   ],
+   "n_img": 11,
+   "h1_en": "ABS Yoga Ring — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 11,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/abs-yoga-ring-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 11,
+   "price": [
+    1.33,
+    2.47,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "advanced-yoga-roller",
+   "path": "products/advanced-yoga-roller.html",
+   "src": "advanced-yoga-roller",
+   "imgs": [
+    "assets/img/advanced-yoga-roller-1.webp",
+    "assets/img/advanced-yoga-roller-2.webp",
+    "assets/img/advanced-yoga-roller-3.webp",
+    "assets/img/advanced-yoga-roller-4.webp",
+    "assets/img/advanced-yoga-roller-5.webp"
+   ],
+   "n_img": 5,
+   "h1_en": "Advanced Yoga Roller — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 5,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/advanced-yoga-roller-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 5,
+   "price": [
+    1.76,
+    3.28,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "alignment-line-tpe-yoga-mat",
+   "path": "products/alignment-line-tpe-yoga-mat.html",
+   "src": "tpe-yoga-mat-special-dual-color-body-line",
+   "imgs": [
+    "assets/img/alignment-line-tpe-yoga-mat-1.webp",
+    "assets/img/alignment-line-tpe-yoga-mat-2.webp",
+    "assets/img/alignment-line-tpe-yoga-mat-3.webp",
+    "assets/img/alignment-line-tpe-yoga-mat-4.webp",
+    "assets/img/alignment-line-tpe-yoga-mat-5.webp",
+    "assets/img/alignment-line-tpe-yoga-mat-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Alignment Line TPE Yoga Mat — SANFAN",
+   "spec_rows": 7,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/alignment-line-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "arched-pu-rubber-yoga-mat",
+   "path": "products/arched-pu-rubber-yoga-mat.html",
+   "src": "arched-pu-rubber-yoga-mat",
+   "imgs": [
+    "assets/img/arched-pu-rubber-yoga-mat-1.webp",
+    "assets/img/arched-pu-rubber-yoga-mat-2.webp",
+    "assets/img/arched-pu-rubber-yoga-mat-3.webp",
+    "assets/img/arched-pu-rubber-yoga-mat-4.webp",
+    "assets/img/arched-pu-rubber-yoga-mat-5.webp",
+    "assets/img/arched-pu-rubber-yoga-mat-6.webp",
+    "assets/img/arched-pu-rubber-yoga-mat-7.webp",
+    "assets/img/arched-pu-rubber-yoga-mat-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Arched PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/arched-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "aurora-gradient-suede-yoga-mat",
+   "path": "products/aurora-gradient-suede-yoga-mat.html",
+   "src": "suede-yoga-mat-3",
+   "imgs": [
+    "assets/img/aurora-gradient-suede-yoga-mat-1.webp",
+    "assets/img/aurora-gradient-suede-yoga-mat-2.webp",
+    "assets/img/aurora-gradient-suede-yoga-mat-3.webp",
+    "assets/img/aurora-gradient-suede-yoga-mat-4.webp",
+    "assets/img/aurora-gradient-suede-yoga-mat-5.webp",
+    "assets/img/aurora-gradient-suede-yoga-mat-6.webp",
+    "assets/img/aurora-gradient-suede-yoga-mat-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "Aurora Gradient Suede Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/aurora-gradient-suede-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "botanical-print-cork-rubber-yoga-mat",
+   "path": "products/botanical-print-cork-rubber-yoga-mat.html",
+   "src": "cork-rubber-yoga-mat-2",
+   "imgs": [
+    "assets/img/botanical-print-cork-rubber-yoga-mat-1.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-2.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-3.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-4.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-5.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-6.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-7.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-8.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-9.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-10.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-11.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-12.webp",
+    "assets/img/botanical-print-cork-rubber-yoga-mat-13.webp"
+   ],
+   "n_img": 13,
+   "h1_en": "Botanical Print Cork Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 13,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/botanical-print-cork-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 13,
+   "price": [
+    7.63,
+    14.17,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "circular-leg-clamps",
+   "path": "products/circular-leg-clamps.html",
+   "src": "circular-leg-clamps",
+   "imgs": [
+    "assets/img/circular-leg-clamps-1.webp",
+    "assets/img/circular-leg-clamps-2.webp",
+    "assets/img/circular-leg-clamps-3.webp",
+    "assets/img/circular-leg-clamps-4.webp",
+    "assets/img/circular-leg-clamps-5.webp"
+   ],
+   "n_img": 5,
+   "h1_en": "Circular Leg Massager — SANFAN",
+   "spec_rows": 8,
+   "en_imgs": 5,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/circular-leg-clamps-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 5,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "cork-rubber-yoga-mat",
+   "path": "products/cork-rubber-yoga-mat.html",
+   "src": "cork-rubber-yoga-mat",
+   "imgs": [
+    "assets/img/cork-rubber-yoga-mat-1.webp",
+    "assets/img/cork-rubber-yoga-mat-2.webp",
+    "assets/img/cork-rubber-yoga-mat-3.webp",
+    "assets/img/cork-rubber-yoga-mat-4.webp",
+    "assets/img/cork-rubber-yoga-mat-5.webp"
+   ],
+   "n_img": 5,
+   "h1_en": "Cork Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 5,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/cork-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 5,
+   "price": [
+    7.63,
+    14.17,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "cork-suede-yoga-mat",
+   "path": "products/cork-suede-yoga-mat.html",
+   "src": "cork-suede-yoga-mat",
+   "imgs": [
+    "assets/img/cork-suede-yoga-mat-1.webp",
+    "assets/img/cork-suede-yoga-mat-2.webp",
+    "assets/img/cork-suede-yoga-mat-3.webp",
+    "assets/img/cork-suede-yoga-mat-4.webp"
+   ],
+   "n_img": 4,
+   "h1_en": "Cork Suede Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 4,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/cork-suede-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 4,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "cork-surface-pu-rubber-yoga-mat",
+   "path": "products/cork-surface-pu-rubber-yoga-mat.html",
+   "src": "pu-rubber-yoga-mat-9",
+   "imgs": [
+    "assets/img/cork-surface-pu-rubber-yoga-mat-1.webp",
+    "assets/img/cork-surface-pu-rubber-yoga-mat-2.webp",
+    "assets/img/cork-surface-pu-rubber-yoga-mat-3.webp",
+    "assets/img/cork-surface-pu-rubber-yoga-mat-4.webp",
+    "assets/img/cork-surface-pu-rubber-yoga-mat-5.webp",
+    "assets/img/cork-surface-pu-rubber-yoga-mat-6.webp",
+    "assets/img/cork-surface-pu-rubber-yoga-mat-7.webp",
+    "assets/img/cork-surface-pu-rubber-yoga-mat-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Cork Surface PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/cork-surface-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    7.63,
+    14.17,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "cork-tpe-yoga-mat",
+   "path": "products/cork-tpe-yoga-mat.html",
+   "src": "cork-tpe-yoga-mat",
+   "imgs": [
+    "assets/img/cork-tpe-yoga-mat-1.webp",
+    "assets/img/cork-tpe-yoga-mat-2.webp",
+    "assets/img/cork-tpe-yoga-mat-3.webp",
+    "assets/img/cork-tpe-yoga-mat-4.webp",
+    "assets/img/cork-tpe-yoga-mat-5.webp",
+    "assets/img/cork-tpe-yoga-mat-6.webp",
+    "assets/img/cork-tpe-yoga-mat-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "Cork TPE Yoga Mat — SANFAN",
+   "spec_rows": 7,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/cork-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "dual-color-tpe-yoga-mat",
+   "path": "products/dual-color-tpe-yoga-mat.html",
+   "src": "tpe-dual-color-yoga-mat",
+   "imgs": [
+    "assets/img/dual-color-tpe-yoga-mat-1.webp",
+    "assets/img/dual-color-tpe-yoga-mat-2.webp",
+    "assets/img/dual-color-tpe-yoga-mat-3.webp",
+    "assets/img/dual-color-tpe-yoga-mat-4.webp",
+    "assets/img/dual-color-tpe-yoga-mat-5.webp",
+    "assets/img/dual-color-tpe-yoga-mat-6.webp",
+    "assets/img/dual-color-tpe-yoga-mat-7.webp",
+    "assets/img/dual-color-tpe-yoga-mat-8.webp",
+    "assets/img/dual-color-tpe-yoga-mat-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Dual-Color TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/dual-color-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "eco-friendly-tpe-yoga-mat",
+   "path": "products/eco-friendly-tpe-yoga-mat.html",
+   "src": "tpe-eco-friendly-yoga-mat",
+   "imgs": [
+    "assets/img/eco-friendly-tpe-yoga-mat-1.webp",
+    "assets/img/eco-friendly-tpe-yoga-mat-2.webp",
+    "assets/img/eco-friendly-tpe-yoga-mat-3.webp",
+    "assets/img/eco-friendly-tpe-yoga-mat-4.webp",
+    "assets/img/eco-friendly-tpe-yoga-mat-5.webp",
+    "assets/img/eco-friendly-tpe-yoga-mat-6.webp",
+    "assets/img/eco-friendly-tpe-yoga-mat-7.webp",
+    "assets/img/eco-friendly-tpe-yoga-mat-8.webp",
+    "assets/img/eco-friendly-tpe-yoga-mat-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Eco-Friendly TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/eco-friendly-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "eva-foam-roller-2",
+   "path": "products/eva-foam-roller-2.html",
+   "src": "eva-foam-roller-2",
+   "imgs": [
+    "assets/img/eva-foam-roller-2-1.webp",
+    "assets/img/eva-foam-roller-2-2.webp",
+    "assets/img/eva-foam-roller-2-3.webp",
+    "assets/img/eva-foam-roller-2-4.webp",
+    "assets/img/eva-foam-roller-2-5.webp",
+    "assets/img/eva-foam-roller-2-6.webp",
+    "assets/img/eva-foam-roller-2-7.webp",
+    "assets/img/eva-foam-roller-2-8.webp",
+    "assets/img/eva-foam-roller-2-9.webp",
+    "assets/img/eva-foam-roller-2-10.webp",
+    "assets/img/eva-foam-roller-2-11.webp",
+    "assets/img/eva-foam-roller-2-12.webp",
+    "assets/img/eva-foam-roller-2-13.webp"
+   ],
+   "n_img": 13,
+   "h1_en": "EVA Foam Roller 33 / 45 cm — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 13,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/eva-foam-roller-2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 13,
+   "price": [
+    1.76,
+    3.28,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "eva-foam-roller",
+   "path": "products/eva-foam-roller.html",
+   "src": "eva-foam-roller",
+   "imgs": [
+    "assets/img/eva-foam-roller-1.webp",
+    "assets/img/eva-foam-roller-2.webp",
+    "assets/img/eva-foam-roller-3.webp",
+    "assets/img/eva-foam-roller-4.webp",
+    "assets/img/eva-foam-roller-5.webp",
+    "assets/img/eva-foam-roller-6.webp",
+    "assets/img/eva-foam-roller-7.webp",
+    "assets/img/eva-foam-roller-8.webp",
+    "assets/img/eva-foam-roller-9.webp",
+    "assets/img/eva-foam-roller-10.webp",
+    "assets/img/eva-foam-roller-11.webp",
+    "assets/img/eva-foam-roller-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "EVA Wave Foam Roller — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/eva-foam-roller-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    1.76,
+    3.28,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "eva-yoga-block",
+   "path": "products/eva-yoga-block.html",
+   "src": "eva-yoga-block",
+   "imgs": [
+    "assets/img/eva-yoga-block-1.webp",
+    "assets/img/eva-yoga-block-2.webp",
+    "assets/img/eva-yoga-block-3.webp",
+    "assets/img/eva-yoga-block-4.webp",
+    "assets/img/eva-yoga-block-5.webp",
+    "assets/img/eva-yoga-block-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "EVA Yoga Block — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/eva-yoga-block-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    0.99,
+    1.85,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "exercise-bands",
+   "path": "products/exercise-bands.html",
+   "src": "exercise-bands",
+   "imgs": [
+    "assets/img/exercise-bands-1.webp",
+    "assets/img/exercise-bands-2.webp",
+    "assets/img/exercise-bands-3.webp",
+    "assets/img/exercise-bands-4.webp",
+    "assets/img/exercise-bands-5.webp",
+    "assets/img/exercise-bands-6.webp",
+    "assets/img/exercise-bands-7.webp",
+    "assets/img/exercise-bands-8.webp",
+    "assets/img/exercise-bands-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Exercise Bands Set — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/exercise-bands-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    4.06,
+    7.54,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "fascia-gun-1",
+   "path": "products/fascia-gun-1.html",
+   "src": "fascia-gun-1",
+   "imgs": [
+    "assets/img/fascia-gun-1-1.webp",
+    "assets/img/fascia-gun-1-2.webp",
+    "assets/img/fascia-gun-1-3.webp",
+    "assets/img/fascia-gun-1-4.webp",
+    "assets/img/fascia-gun-1-5.webp",
+    "assets/img/fascia-gun-1-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Fascia Gun (T-Shape) — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fascia-gun-1-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "fascia-gun-2",
+   "path": "products/fascia-gun-2.html",
+   "src": "fascia-gun-2",
+   "imgs": [
+    "assets/img/fascia-gun-2-1.webp",
+    "assets/img/fascia-gun-2-2.webp",
+    "assets/img/fascia-gun-2-3.webp",
+    "assets/img/fascia-gun-2-4.webp",
+    "assets/img/fascia-gun-2-5.webp",
+    "assets/img/fascia-gun-2-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Fascia Gun (Ring Grip) — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fascia-gun-2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "fascia-gun-3",
+   "path": "products/fascia-gun-3.html",
+   "src": "fascia-gun-3",
+   "imgs": [
+    "assets/img/fascia-gun-3-1.webp",
+    "assets/img/fascia-gun-3-2.webp",
+    "assets/img/fascia-gun-3-3.webp",
+    "assets/img/fascia-gun-3-4.webp",
+    "assets/img/fascia-gun-3-5.webp",
+    "assets/img/fascia-gun-3-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Fascia Gun (Pro) — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fascia-gun-3-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "fascia-gun",
+   "path": "products/fascia-gun.html",
+   "src": "fascia-gun",
+   "imgs": [
+    "assets/img/fascia-gun-1.webp",
+    "assets/img/fascia-gun-2.webp",
+    "assets/img/fascia-gun-3.webp",
+    "assets/img/fascia-gun-4.webp",
+    "assets/img/fascia-gun-5.webp",
+    "assets/img/fascia-gun-6.webp",
+    "assets/img/fascia-gun-7.webp",
+    "assets/img/fascia-gun-8.webp",
+    "assets/img/fascia-gun-9.webp",
+    "assets/img/fascia-gun-10.webp"
+   ],
+   "n_img": 10,
+   "h1_en": "Fascia Gun (White) — SANFAN",
+   "spec_rows": 8,
+   "en_imgs": 10,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fascia-gun-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 10,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "fascial-sphere-1",
+   "path": "products/fascial-sphere-1.html",
+   "src": "fascial-sphere-1",
+   "imgs": [
+    "assets/img/fascial-sphere-1-1.webp",
+    "assets/img/fascial-sphere-1-2.webp",
+    "assets/img/fascial-sphere-1-3.webp",
+    "assets/img/fascial-sphere-1-4.webp",
+    "assets/img/fascial-sphere-1-5.webp",
+    "assets/img/fascial-sphere-1-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Fascial Sphere (Textured) — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fascial-sphere-1-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "fascial-sphere-2",
+   "path": "products/fascial-sphere-2.html",
+   "src": "fascial-sphere-2",
+   "imgs": [
+    "assets/img/fascial-sphere-2-1.webp",
+    "assets/img/fascial-sphere-2-2.webp",
+    "assets/img/fascial-sphere-2-3.webp",
+    "assets/img/fascial-sphere-2-4.webp",
+    "assets/img/fascial-sphere-2-5.webp",
+    "assets/img/fascial-sphere-2-6.webp",
+    "assets/img/fascial-sphere-2-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "Fascial Sphere (Smooth) — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fascial-sphere-2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "fascial-sphere-3",
+   "path": "products/fascial-sphere-3.html",
+   "src": "fascial-sphere-3",
+   "imgs": [
+    "assets/img/fascial-sphere-3-1.webp",
+    "assets/img/fascial-sphere-3-2.webp",
+    "assets/img/fascial-sphere-3-3.webp",
+    "assets/img/fascial-sphere-3-4.webp",
+    "assets/img/fascial-sphere-3-5.webp",
+    "assets/img/fascial-sphere-3-6.webp",
+    "assets/img/fascial-sphere-3-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "Fascial Sphere Set (6 Colours) — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fascial-sphere-3-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "fi2",
+   "path": "products/fi2.html",
+   "src": "kettlebell-2",
+   "imgs": [
+    "assets/img/fi2-1.webp",
+    "assets/img/fi2-2.webp",
+    "assets/img/fi2-3.webp",
+    "assets/img/fi2-4.webp",
+    "assets/img/fi2-5.webp",
+    "assets/img/fi2-6.webp",
+    "assets/img/fi2-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "Kettlebell — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fi2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "price": [
+    2.0,
+    30.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 7,
+    "ja": 7,
+    "ko": 7,
+    "fr": 7,
+    "it": 7,
+    "es": 7
+   }
+  },
+  {
+   "slug": "fi3",
+   "path": "products/fi3.html",
+   "src": "jump-rope-2",
+   "imgs": [
+    "assets/img/fi3-1.webp",
+    "assets/img/fi3-2.webp",
+    "assets/img/fi3-3.webp",
+    "assets/img/fi3-4.webp",
+    "assets/img/fi3-5.webp",
+    "assets/img/fi3-6.webp",
+    "assets/img/fi3-7.webp",
+    "assets/img/fi3-8.webp",
+    "assets/img/fi3-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Jump Rope — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fi3-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    2.0,
+    30.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 9,
+    "ja": 9,
+    "ko": 9,
+    "fr": 9,
+    "it": 9,
+    "es": 9
+   }
+  },
+  {
+   "slug": "fi4",
+   "path": "products/fi4.html",
+   "src": "stair-climbers-3",
+   "imgs": [
+    "assets/img/fi4-1.webp"
+   ],
+   "n_img": 1,
+   "h1_en": "Home Stepper — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 1,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fi4-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 1,
+   "price": [
+    2.0,
+    30.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 1,
+    "ja": 1,
+    "ko": 1,
+    "fr": 1,
+    "it": 1,
+    "es": 1
+   }
+  },
+  {
+   "slug": "fi5",
+   "path": "products/fi5.html",
+   "src": "dumbbell-2",
+   "imgs": [
+    "assets/img/fi5-1.webp",
+    "assets/img/fi5-2.webp",
+    "assets/img/fi5-3.webp",
+    "assets/img/fi5-4.webp",
+    "assets/img/fi5-5.webp",
+    "assets/img/fi5-6.webp",
+    "assets/img/fi5-7.webp",
+    "assets/img/fi5-8.webp",
+    "assets/img/fi5-9.webp",
+    "assets/img/fi5-10.webp",
+    "assets/img/fi5-11.webp"
+   ],
+   "n_img": 11,
+   "h1_en": "Dumbbell &amp; Barbell — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 11,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fi5-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 11,
+   "price": [
+    2.0,
+    30.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 11,
+    "ja": 11,
+    "ko": 11,
+    "fr": 11,
+    "it": 11,
+    "es": 11
+   }
+  },
+  {
+   "slug": "figure-8-resistance-bands",
+   "path": "products/figure-8-resistance-bands.html",
+   "src": "figure-8-resistance-bands",
+   "imgs": [
+    "assets/img/figure-8-resistance-bands-1.webp",
+    "assets/img/figure-8-resistance-bands-2.webp",
+    "assets/img/figure-8-resistance-bands-3.webp",
+    "assets/img/figure-8-resistance-bands-4.webp",
+    "assets/img/figure-8-resistance-bands-5.webp",
+    "assets/img/figure-8-resistance-bands-6.webp",
+    "assets/img/figure-8-resistance-bands-7.webp",
+    "assets/img/figure-8-resistance-bands-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Figure 8 Resistance Bands — SANFAN",
+   "spec_rows": 8,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/figure-8-resistance-bands-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    2.45,
+    4.55,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "flamingo-print-suede-rubber-yoga-mat",
+   "path": "products/flamingo-print-suede-rubber-yoga-mat.html",
+   "src": "suede-rubber-yoga-mat",
+   "imgs": [
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-1.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-2.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-3.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-4.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-5.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-6.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-7.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-8.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-9.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-10.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-11.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-12.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-13.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-14.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-15.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-16.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-17.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-18.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-19.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-20.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-21.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-22.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-23.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-24.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-25.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-26.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-27.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-28.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-29.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-30.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-31.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-32.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-33.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-34.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-35.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-36.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-37.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-38.webp",
+    "assets/img/flamingo-print-suede-rubber-yoga-mat-39.webp"
+   ],
+   "n_img": 39,
+   "h1_en": "Flamingo Print Suede Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 39,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/flamingo-print-suede-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 39,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "foam-roller-2",
+   "path": "products/foam-roller-2.html",
+   "src": "foam-roller-2",
+   "imgs": [
+    "assets/img/foam-roller-2-1.webp",
+    "assets/img/foam-roller-2-2.webp",
+    "assets/img/foam-roller-2-3.webp",
+    "assets/img/foam-roller-2-4.webp",
+    "assets/img/foam-roller-2-5.webp",
+    "assets/img/foam-roller-2-6.webp",
+    "assets/img/foam-roller-2-7.webp",
+    "assets/img/foam-roller-2-8.webp",
+    "assets/img/foam-roller-2-9.webp",
+    "assets/img/foam-roller-2-10.webp",
+    "assets/img/foam-roller-2-11.webp",
+    "assets/img/foam-roller-2-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "EVA Foam Roller — Pink — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/foam-roller-2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    1.76,
+    3.28,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "foam-roller-3",
+   "path": "products/foam-roller-3.html",
+   "src": "foam-roller-3",
+   "imgs": [
+    "assets/img/foam-roller-3-1.webp",
+    "assets/img/foam-roller-3-2.webp",
+    "assets/img/foam-roller-3-3.webp",
+    "assets/img/foam-roller-3-4.webp",
+    "assets/img/foam-roller-3-5.webp",
+    "assets/img/foam-roller-3-6.webp",
+    "assets/img/foam-roller-3-7.webp",
+    "assets/img/foam-roller-3-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "EVA Foam Roller — Purple — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/foam-roller-3-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    1.76,
+    3.28,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "foam-roller",
+   "path": "products/foam-roller.html",
+   "src": "foam-roller",
+   "imgs": [
+    "assets/img/foam-roller-1.webp",
+    "assets/img/foam-roller-2.webp",
+    "assets/img/foam-roller-3.webp",
+    "assets/img/foam-roller-4.webp",
+    "assets/img/foam-roller-5.webp",
+    "assets/img/foam-roller-6.webp",
+    "assets/img/foam-roller-7.webp",
+    "assets/img/foam-roller-8.webp",
+    "assets/img/foam-roller-9.webp",
+    "assets/img/foam-roller-10.webp",
+    "assets/img/foam-roller-11.webp",
+    "assets/img/foam-roller-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "EVA Foam Roller Set — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/foam-roller-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    1.76,
+    3.28,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "foldable-yoga-mat-multi-color",
+   "path": "products/foldable-yoga-mat-multi-color.html",
+   "src": "folding-yoga-mat",
+   "imgs": [
+    "assets/img/foldable-yoga-mat-multi-color-1.webp",
+    "assets/img/foldable-yoga-mat-multi-color-2.webp",
+    "assets/img/foldable-yoga-mat-multi-color-3.webp",
+    "assets/img/foldable-yoga-mat-multi-color-4.webp",
+    "assets/img/foldable-yoga-mat-multi-color-5.webp",
+    "assets/img/foldable-yoga-mat-multi-color-6.webp",
+    "assets/img/foldable-yoga-mat-multi-color-7.webp",
+    "assets/img/foldable-yoga-mat-multi-color-8.webp",
+    "assets/img/foldable-yoga-mat-multi-color-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Foldable Yoga Mat (Multi-Color) — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/foldable-yoga-mat-multi-color-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "foot-pedal-resistance-band",
+   "path": "products/foot-pedal-resistance-band.html",
+   "src": "foot-pedal-resistance-band",
+   "imgs": [
+    "assets/img/foot-pedal-resistance-band-1.webp",
+    "assets/img/foot-pedal-resistance-band-2.webp",
+    "assets/img/foot-pedal-resistance-band-3.webp",
+    "assets/img/foot-pedal-resistance-band-4.webp",
+    "assets/img/foot-pedal-resistance-band-5.webp",
+    "assets/img/foot-pedal-resistance-band-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Foot Pedal Resistance Band — SANFAN",
+   "spec_rows": 8,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/foot-pedal-resistance-band-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    2.45,
+    4.55,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "fr1",
+   "path": "products/fr1.html",
+   "src": "foam-roller-2",
+   "imgs": [
+    "assets/img/fr1-1.webp",
+    "assets/img/fr1-2.webp",
+    "assets/img/fr1-3.webp",
+    "assets/img/fr1-4.webp",
+    "assets/img/fr1-5.webp",
+    "assets/img/fr1-6.webp",
+    "assets/img/fr1-7.webp",
+    "assets/img/fr1-8.webp",
+    "assets/img/fr1-9.webp",
+    "assets/img/fr1-10.webp",
+    "assets/img/fr1-11.webp",
+    "assets/img/fr1-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "Yoga Foam Roller (Wolf-tooth) — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fr1-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    2.0,
+    16.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 12,
+    "ja": 12,
+    "ko": 12,
+    "fr": 12,
+    "it": 12,
+    "es": 12
+   }
+  },
+  {
+   "slug": "fr2",
+   "path": "products/fr2.html",
+   "src": "foam-roller",
+   "imgs": [
+    "assets/img/fr2-1.webp",
+    "assets/img/fr2-2.webp",
+    "assets/img/fr2-3.webp",
+    "assets/img/fr2-4.webp",
+    "assets/img/fr2-5.webp",
+    "assets/img/fr2-6.webp",
+    "assets/img/fr2-7.webp",
+    "assets/img/fr2-8.webp",
+    "assets/img/fr2-9.webp",
+    "assets/img/fr2-10.webp",
+    "assets/img/fr2-11.webp",
+    "assets/img/fr2-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "Solid Foam Roller — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fr2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    2.0,
+    16.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 12,
+    "ja": 12,
+    "ko": 12,
+    "fr": 12,
+    "it": 12,
+    "es": 12
+   }
+  },
+  {
+   "slug": "fr3",
+   "path": "products/fr3.html",
+   "src": "vibrating-yoga-roller",
+   "imgs": [
+    "assets/img/fr3-1.webp",
+    "assets/img/fr3-2.webp",
+    "assets/img/fr3-3.webp",
+    "assets/img/fr3-4.webp"
+   ],
+   "n_img": 4,
+   "h1_en": "Electric Foam Roller — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 4,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fr3-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 4,
+   "price": [
+    2.0,
+    16.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 4,
+    "ja": 4,
+    "ko": 4,
+    "fr": 4,
+    "it": 4,
+    "es": 4
+   }
+  },
+  {
+   "slug": "fr4",
+   "path": "products/fr4.html",
+   "src": "eva-foam-roller",
+   "imgs": [
+    "assets/img/fr4-1.webp",
+    "assets/img/fr4-2.webp",
+    "assets/img/fr4-3.webp",
+    "assets/img/fr4-4.webp",
+    "assets/img/fr4-5.webp",
+    "assets/img/fr4-6.webp",
+    "assets/img/fr4-7.webp",
+    "assets/img/fr4-8.webp",
+    "assets/img/fr4-9.webp",
+    "assets/img/fr4-10.webp",
+    "assets/img/fr4-11.webp",
+    "assets/img/fr4-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "EVA Massage Rollers — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fr4-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    2.0,
+    16.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 12,
+    "ja": 12,
+    "ko": 12,
+    "fr": 12,
+    "it": 12,
+    "es": 12
+   }
+  },
+  {
+   "slug": "fr5",
+   "path": "products/fr5.html",
+   "src": "fascial-sphere-1",
+   "imgs": [
+    "assets/img/fr5-1.webp",
+    "assets/img/fr5-2.webp",
+    "assets/img/fr5-3.webp",
+    "assets/img/fr5-4.webp",
+    "assets/img/fr5-5.webp",
+    "assets/img/fr5-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Massage Ball — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/fr5-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    2.0,
+    16.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 6,
+    "ja": 6,
+    "ko": 6,
+    "fr": 6,
+    "it": 6,
+    "es": 6
+   }
+  },
+  {
+   "slug": "galaxy-gradient-suede-yoga-mat",
+   "path": "products/galaxy-gradient-suede-yoga-mat.html",
+   "src": "suede-yoga-mat-2",
+   "imgs": [
+    "assets/img/galaxy-gradient-suede-yoga-mat-1.webp",
+    "assets/img/galaxy-gradient-suede-yoga-mat-2.webp",
+    "assets/img/galaxy-gradient-suede-yoga-mat-3.webp",
+    "assets/img/galaxy-gradient-suede-yoga-mat-4.webp",
+    "assets/img/galaxy-gradient-suede-yoga-mat-5.webp",
+    "assets/img/galaxy-gradient-suede-yoga-mat-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Galaxy Gradient Suede Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/galaxy-gradient-suede-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "geometric-print-suede-tpe-yoga-mat",
+   "path": "products/geometric-print-suede-tpe-yoga-mat.html",
+   "src": "suede-tpe-yoga-mat",
+   "imgs": [
+    "assets/img/geometric-print-suede-tpe-yoga-mat-1.webp",
+    "assets/img/geometric-print-suede-tpe-yoga-mat-2.webp",
+    "assets/img/geometric-print-suede-tpe-yoga-mat-3.webp",
+    "assets/img/geometric-print-suede-tpe-yoga-mat-4.webp",
+    "assets/img/geometric-print-suede-tpe-yoga-mat-5.webp",
+    "assets/img/geometric-print-suede-tpe-yoga-mat-6.webp",
+    "assets/img/geometric-print-suede-tpe-yoga-mat-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "Geometric Print Suede TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/geometric-print-suede-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "gold-koi-foldable-suede-yoga-mat",
+   "path": "products/gold-koi-foldable-suede-yoga-mat.html",
+   "src": "suede-foldable-yoga-mat",
+   "imgs": [
+    "assets/img/gold-koi-foldable-suede-yoga-mat-1.webp",
+    "assets/img/gold-koi-foldable-suede-yoga-mat-2.webp",
+    "assets/img/gold-koi-foldable-suede-yoga-mat-3.webp",
+    "assets/img/gold-koi-foldable-suede-yoga-mat-4.webp",
+    "assets/img/gold-koi-foldable-suede-yoga-mat-5.webp"
+   ],
+   "n_img": 5,
+   "h1_en": "Gold Koi Foldable Suede Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 5,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/gold-koi-foldable-suede-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 5,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "gold-printed-pu-rubber-yoga-mat",
+   "path": "products/gold-printed-pu-rubber-yoga-mat.html",
+   "src": "pu-rubber-yoga-mat-7",
+   "imgs": [
+    "assets/img/gold-printed-pu-rubber-yoga-mat-1.webp",
+    "assets/img/gold-printed-pu-rubber-yoga-mat-2.webp",
+    "assets/img/gold-printed-pu-rubber-yoga-mat-3.webp",
+    "assets/img/gold-printed-pu-rubber-yoga-mat-4.webp",
+    "assets/img/gold-printed-pu-rubber-yoga-mat-5.webp",
+    "assets/img/gold-printed-pu-rubber-yoga-mat-6.webp",
+    "assets/img/gold-printed-pu-rubber-yoga-mat-7.webp",
+    "assets/img/gold-printed-pu-rubber-yoga-mat-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Gold Printed PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/gold-printed-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "gradient-line-art-pu-rubber-yoga-mat",
+   "path": "products/gradient-line-art-pu-rubber-yoga-mat.html",
+   "src": "pu-rubber-yoga-mat-12",
+   "imgs": [
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-1.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-2.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-3.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-4.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-5.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-6.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-7.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-8.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-9.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-10.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-11.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-12.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-13.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-14.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-15.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-16.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-17.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-18.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-19.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-20.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-21.webp",
+    "assets/img/gradient-line-art-pu-rubber-yoga-mat-22.webp"
+   ],
+   "n_img": 22,
+   "h1_en": "Gradient Line Art PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 22,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/gradient-line-art-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 22,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "gray-mandala-pu-rubber-yoga-mat",
+   "path": "products/gray-mandala-pu-rubber-yoga-mat.html",
+   "src": "pu-rubber-yoga-mat-4",
+   "imgs": [
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-1.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-2.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-3.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-4.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-5.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-6.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-7.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-8.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-9.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-10.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-11.webp",
+    "assets/img/gray-mandala-pu-rubber-yoga-mat-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "Gray Mandala PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/gray-mandala-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "lilac-tpe-yoga-mat",
+   "path": "products/lilac-tpe-yoga-mat.html",
+   "src": "tpe-yoga-mat-3",
+   "imgs": [
+    "assets/img/lilac-tpe-yoga-mat-1.webp",
+    "assets/img/lilac-tpe-yoga-mat-2.webp",
+    "assets/img/lilac-tpe-yoga-mat-3.webp",
+    "assets/img/lilac-tpe-yoga-mat-4.webp",
+    "assets/img/lilac-tpe-yoga-mat-5.webp",
+    "assets/img/lilac-tpe-yoga-mat-6.webp",
+    "assets/img/lilac-tpe-yoga-mat-7.webp",
+    "assets/img/lilac-tpe-yoga-mat-8.webp",
+    "assets/img/lilac-tpe-yoga-mat-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Lilac TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/lilac-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "mandala-meditation-mat",
+   "path": "products/mandala-meditation-mat.html",
+   "src": "meditation-mat-2",
+   "imgs": [
+    "assets/img/mandala-meditation-mat-1.webp",
+    "assets/img/mandala-meditation-mat-2.webp",
+    "assets/img/mandala-meditation-mat-3.webp",
+    "assets/img/mandala-meditation-mat-4.webp",
+    "assets/img/mandala-meditation-mat-5.webp",
+    "assets/img/mandala-meditation-mat-6.webp",
+    "assets/img/mandala-meditation-mat-7.webp",
+    "assets/img/mandala-meditation-mat-8.webp",
+    "assets/img/mandala-meditation-mat-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Mandala Meditation Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/mandala-meditation-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "marble-print-pu-rubber-yoga-mat",
+   "path": "products/marble-print-pu-rubber-yoga-mat.html",
+   "src": "pu-rubber-yoga-mat-10",
+   "imgs": [
+    "assets/img/marble-print-pu-rubber-yoga-mat-1.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-2.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-3.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-4.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-5.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-6.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-7.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-8.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-9.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-10.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-11.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-12.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-13.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-14.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-15.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-16.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-17.webp",
+    "assets/img/marble-print-pu-rubber-yoga-mat-18.webp"
+   ],
+   "n_img": 18,
+   "h1_en": "Marble Print PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 18,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/marble-print-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 18,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "massage-stick-2",
+   "path": "products/massage-stick-2.html",
+   "src": "massage-stick-2",
+   "imgs": [
+    "assets/img/massage-stick-2-1.webp",
+    "assets/img/massage-stick-2-2.webp",
+    "assets/img/massage-stick-2-3.webp",
+    "assets/img/massage-stick-2-4.webp",
+    "assets/img/massage-stick-2-5.webp",
+    "assets/img/massage-stick-2-6.webp",
+    "assets/img/massage-stick-2-7.webp",
+    "assets/img/massage-stick-2-8.webp",
+    "assets/img/massage-stick-2-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Massage Stick 32 cm — SANFAN",
+   "spec_rows": 8,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/massage-stick-2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "massage-stick",
+   "path": "products/massage-stick.html",
+   "src": "massage-stick",
+   "imgs": [
+    "assets/img/massage-stick-1.webp",
+    "assets/img/massage-stick-2.webp",
+    "assets/img/massage-stick-3.webp",
+    "assets/img/massage-stick-4.webp",
+    "assets/img/massage-stick-5.webp",
+    "assets/img/massage-stick-6.webp",
+    "assets/img/massage-stick-7.webp",
+    "assets/img/massage-stick-8.webp",
+    "assets/img/massage-stick-9.webp",
+    "assets/img/massage-stick-10.webp",
+    "assets/img/massage-stick-11.webp"
+   ],
+   "n_img": 11,
+   "h1_en": "Massage Stick 34 cm — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 11,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/massage-stick-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 11,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "massager-1",
+   "path": "products/massager-1.html",
+   "src": "massager-1",
+   "imgs": [
+    "assets/img/massager-1-1.webp",
+    "assets/img/massager-1-2.webp",
+    "assets/img/massager-1-3.webp",
+    "assets/img/massager-1-4.webp",
+    "assets/img/massager-1-5.webp",
+    "assets/img/massager-1-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Spiral Massage Roller — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [
+    "massager-1-3.webp (800x720)"
+   ],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/massager-1-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "massager-2",
+   "path": "products/massager-2.html",
+   "src": "massager-2",
+   "imgs": [
+    "assets/img/massager-2-1.webp",
+    "assets/img/massager-2-2.webp",
+    "assets/img/massager-2-3.webp",
+    "assets/img/massager-2-4.webp",
+    "assets/img/massager-2-5.webp",
+    "assets/img/massager-2-6.webp",
+    "assets/img/massager-2-7.webp",
+    "assets/img/massager-2-8.webp",
+    "assets/img/massager-2-9.webp",
+    "assets/img/massager-2-10.webp",
+    "assets/img/massager-2-11.webp",
+    "assets/img/massager-2-12.webp",
+    "assets/img/massager-2-13.webp"
+   ],
+   "n_img": 13,
+   "h1_en": "Dual-Head Massage Stick — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 13,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/massager-2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 13,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "massager-3",
+   "path": "products/massager-3.html",
+   "src": "massager-3",
+   "imgs": [
+    "assets/img/massager-3-1.webp",
+    "assets/img/massager-3-2.webp",
+    "assets/img/massager-3-3.webp",
+    "assets/img/massager-3-4.webp",
+    "assets/img/massager-3-5.webp",
+    "assets/img/massager-3-6.webp",
+    "assets/img/massager-3-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "Beaded Massage Roller — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/massager-3-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "matte-pu-rubber-foldable-yoga-mat",
+   "path": "products/matte-pu-rubber-foldable-yoga-mat.html",
+   "src": "matte-pu-rubber-folding-yoga-mat",
+   "imgs": [
+    "assets/img/matte-pu-rubber-foldable-yoga-mat-1.webp",
+    "assets/img/matte-pu-rubber-foldable-yoga-mat-2.webp",
+    "assets/img/matte-pu-rubber-foldable-yoga-mat-3.webp",
+    "assets/img/matte-pu-rubber-foldable-yoga-mat-4.webp",
+    "assets/img/matte-pu-rubber-foldable-yoga-mat-5.webp",
+    "assets/img/matte-pu-rubber-foldable-yoga-mat-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Matte PU Rubber Foldable Yoga Mat — SANFAN",
+   "spec_rows": 7,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/matte-pu-rubber-foldable-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "monochrome-leaf-suede-tpe-yoga-mat",
+   "path": "products/monochrome-leaf-suede-tpe-yoga-mat.html",
+   "src": "suede-tpe-yoga-mat-3",
+   "imgs": [
+    "assets/img/monochrome-leaf-suede-tpe-yoga-mat-1.webp",
+    "assets/img/monochrome-leaf-suede-tpe-yoga-mat-2.webp",
+    "assets/img/monochrome-leaf-suede-tpe-yoga-mat-3.webp",
+    "assets/img/monochrome-leaf-suede-tpe-yoga-mat-4.webp",
+    "assets/img/monochrome-leaf-suede-tpe-yoga-mat-5.webp",
+    "assets/img/monochrome-leaf-suede-tpe-yoga-mat-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Monochrome Leaf Suede TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/monochrome-leaf-suede-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "mulinsen-3x-anti-slip-tpe-mat-90cm",
+   "path": "products/mulinsen-3x-anti-slip-tpe-mat-90cm.html",
+   "src": "tpe-yoga-mat-8",
+   "imgs": [
+    "assets/img/mulinsen-3x-anti-slip-tpe-mat-90cm-1.webp",
+    "assets/img/mulinsen-3x-anti-slip-tpe-mat-90cm-2.webp",
+    "assets/img/mulinsen-3x-anti-slip-tpe-mat-90cm-3.webp",
+    "assets/img/mulinsen-3x-anti-slip-tpe-mat-90cm-4.webp"
+   ],
+   "n_img": 4,
+   "h1_en": "MuLinSen 3x Anti-Slip TPE Mat 90cm — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 4,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/mulinsen-3x-anti-slip-tpe-mat-90cm-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 4,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "mulinsen-branded-tpe-yoga-mat-183cm",
+   "path": "products/mulinsen-branded-tpe-yoga-mat-183cm.html",
+   "src": "tpe-yoga-mat-5",
+   "imgs": [
+    "assets/img/mulinsen-branded-tpe-yoga-mat-183cm-1.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-183cm-2.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-183cm-3.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-183cm-4.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-183cm-5.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-183cm-6.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-183cm-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "MuLinSen Branded TPE Yoga Mat 183cm — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/mulinsen-branded-tpe-yoga-mat-183cm-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "mulinsen-branded-tpe-yoga-mat-61cm",
+   "path": "products/mulinsen-branded-tpe-yoga-mat-61cm.html",
+   "src": "tpe-yoga-mat-4",
+   "imgs": [
+    "assets/img/mulinsen-branded-tpe-yoga-mat-61cm-1.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-61cm-2.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-61cm-3.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-61cm-4.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-61cm-5.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-61cm-6.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-61cm-7.webp",
+    "assets/img/mulinsen-branded-tpe-yoga-mat-61cm-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "MuLinSen Branded TPE Yoga Mat 61cm — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/mulinsen-branded-tpe-yoga-mat-61cm-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "mulinsen-dual-sided-non-slip-tpe-mat",
+   "path": "products/mulinsen-dual-sided-non-slip-tpe-mat.html",
+   "src": "tpe-yoga-mat-6",
+   "imgs": [
+    "assets/img/mulinsen-dual-sided-non-slip-tpe-mat-1.webp",
+    "assets/img/mulinsen-dual-sided-non-slip-tpe-mat-2.webp"
+   ],
+   "n_img": 2,
+   "h1_en": "MuLinSen Dual-Sided Non-Slip TPE Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 2,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/mulinsen-dual-sided-non-slip-tpe-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 2,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "mulinsen-widened-anti-slip-tpe-mat-90cm",
+   "path": "products/mulinsen-widened-anti-slip-tpe-mat-90cm.html",
+   "src": "tpe-yoga-mat-7",
+   "imgs": [
+    "assets/img/mulinsen-widened-anti-slip-tpe-mat-90cm-1.webp",
+    "assets/img/mulinsen-widened-anti-slip-tpe-mat-90cm-2.webp",
+    "assets/img/mulinsen-widened-anti-slip-tpe-mat-90cm-3.webp",
+    "assets/img/mulinsen-widened-anti-slip-tpe-mat-90cm-4.webp"
+   ],
+   "n_img": 4,
+   "h1_en": "MuLinSen Widened Anti-Slip TPE Mat 90cm — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 4,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/mulinsen-widened-anti-slip-tpe-mat-90cm-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 4,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "multi-color-tpe-yoga-mat-bundle",
+   "path": "products/multi-color-tpe-yoga-mat-bundle.html",
+   "src": "tpe-yoga-mat-dual-color",
+   "imgs": [
+    "assets/img/multi-color-tpe-yoga-mat-bundle-1.webp",
+    "assets/img/multi-color-tpe-yoga-mat-bundle-2.webp",
+    "assets/img/multi-color-tpe-yoga-mat-bundle-3.webp",
+    "assets/img/multi-color-tpe-yoga-mat-bundle-4.webp",
+    "assets/img/multi-color-tpe-yoga-mat-bundle-5.webp",
+    "assets/img/multi-color-tpe-yoga-mat-bundle-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Multi-Color TPE Yoga Mat Bundle — SANFAN",
+   "spec_rows": 7,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/multi-color-tpe-yoga-mat-bundle-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "navy-botanical-suede-tpe-yoga-mat",
+   "path": "products/navy-botanical-suede-tpe-yoga-mat.html",
+   "src": "sude-tpe-yoga-mat",
+   "imgs": [
+    "assets/img/navy-botanical-suede-tpe-yoga-mat-1.webp",
+    "assets/img/navy-botanical-suede-tpe-yoga-mat-2.webp",
+    "assets/img/navy-botanical-suede-tpe-yoga-mat-3.webp",
+    "assets/img/navy-botanical-suede-tpe-yoga-mat-4.webp",
+    "assets/img/navy-botanical-suede-tpe-yoga-mat-5.webp",
+    "assets/img/navy-botanical-suede-tpe-yoga-mat-6.webp",
+    "assets/img/navy-botanical-suede-tpe-yoga-mat-7.webp",
+    "assets/img/navy-botanical-suede-tpe-yoga-mat-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Navy Botanical Suede TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/navy-botanical-suede-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "oil-painting-style-yoga-mat",
+   "path": "products/oil-painting-style-yoga-mat.html",
+   "src": "oil-painting-style-yoga-mat",
+   "imgs": [
+    "assets/img/oil-painting-style-yoga-mat-1.webp",
+    "assets/img/oil-painting-style-yoga-mat-2.webp",
+    "assets/img/oil-painting-style-yoga-mat-3.webp",
+    "assets/img/oil-painting-style-yoga-mat-4.webp",
+    "assets/img/oil-painting-style-yoga-mat-5.webp"
+   ],
+   "n_img": 5,
+   "h1_en": "Oil Painting Style Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 5,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/oil-painting-style-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 5,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "olive-foldable-rubber-yoga-mat",
+   "path": "products/olive-foldable-rubber-yoga-mat.html",
+   "src": "rubber-folding-yoga-mat",
+   "imgs": [
+    "assets/img/olive-foldable-rubber-yoga-mat-1.webp",
+    "assets/img/olive-foldable-rubber-yoga-mat-2.webp",
+    "assets/img/olive-foldable-rubber-yoga-mat-3.webp",
+    "assets/img/olive-foldable-rubber-yoga-mat-4.webp",
+    "assets/img/olive-foldable-rubber-yoga-mat-5.webp",
+    "assets/img/olive-foldable-rubber-yoga-mat-6.webp",
+    "assets/img/olive-foldable-rubber-yoga-mat-7.webp",
+    "assets/img/olive-foldable-rubber-yoga-mat-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Olive Foldable Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/olive-foldable-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pilates-reformer-mat-custom-logo",
+   "path": "products/pilates-reformer-mat-custom-logo.html",
+   "src": "pilates-reformer-mat",
+   "imgs": [
+    "assets/img/pilates-reformer-mat-custom-logo-1.webp"
+   ],
+   "n_img": 1,
+   "h1_en": "Pilates Reformer Mat (Custom Logo) — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 1,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pilates-reformer-mat-custom-logo-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 1,
+   "price": [
+    4.13,
+    7.67,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pilates-reformer-mat-mandala",
+   "path": "products/pilates-reformer-mat-mandala.html",
+   "src": "pilates-reformer-mat3",
+   "imgs": [
+    "assets/img/pilates-reformer-mat-mandala-1.webp"
+   ],
+   "n_img": 1,
+   "h1_en": "Pilates Reformer Mat (Mandala) — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 1,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pilates-reformer-mat-mandala-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 1,
+   "price": [
+    4.13,
+    7.67,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pilates-reformer-mat-tropical-print",
+   "path": "products/pilates-reformer-mat-tropical-print.html",
+   "src": "pilates-reformer-mat2",
+   "imgs": [
+    "assets/img/pilates-reformer-mat-tropical-print-1.webp"
+   ],
+   "n_img": 1,
+   "h1_en": "Pilates Reformer Mat (Tropical Print) — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 1,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pilates-reformer-mat-tropical-print-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 1,
+   "price": [
+    4.13,
+    7.67,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pilates-ring-2",
+   "path": "products/pilates-ring-2.html",
+   "src": "pilates-ring-2",
+   "imgs": [
+    "assets/img/pilates-ring-2-1.webp",
+    "assets/img/pilates-ring-2-2.webp",
+    "assets/img/pilates-ring-2-3.webp",
+    "assets/img/pilates-ring-2-4.webp",
+    "assets/img/pilates-ring-2-5.webp",
+    "assets/img/pilates-ring-2-6.webp",
+    "assets/img/pilates-ring-2-7.webp",
+    "assets/img/pilates-ring-2-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Pilates Ring 40 cm — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pilates-ring-2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    1.33,
+    2.47,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pilates-ring",
+   "path": "products/pilates-ring.html",
+   "src": "pilates-ring",
+   "imgs": [
+    "assets/img/pilates-ring-1.webp",
+    "assets/img/pilates-ring-2.webp",
+    "assets/img/pilates-ring-3.webp",
+    "assets/img/pilates-ring-4.webp",
+    "assets/img/pilates-ring-5.webp",
+    "assets/img/pilates-ring-6.webp",
+    "assets/img/pilates-ring-7.webp",
+    "assets/img/pilates-ring-8.webp",
+    "assets/img/pilates-ring-9.webp",
+    "assets/img/pilates-ring-10.webp",
+    "assets/img/pilates-ring-11.webp",
+    "assets/img/pilates-ring-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "Silicone Pilates Ring — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pilates-ring-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    4.48,
+    8.32,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pink-and-black-dual-color-tpe-yoga-mat",
+   "path": "products/pink-and-black-dual-color-tpe-yoga-mat.html",
+   "src": "tpe-yoga-mat-special-dual-color",
+   "imgs": [
+    "assets/img/pink-and-black-dual-color-tpe-yoga-mat-1.webp",
+    "assets/img/pink-and-black-dual-color-tpe-yoga-mat-2.webp",
+    "assets/img/pink-and-black-dual-color-tpe-yoga-mat-3.webp",
+    "assets/img/pink-and-black-dual-color-tpe-yoga-mat-4.webp",
+    "assets/img/pink-and-black-dual-color-tpe-yoga-mat-5.webp",
+    "assets/img/pink-and-black-dual-color-tpe-yoga-mat-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Pink &amp; Black Dual-Color TPE Yoga Mat — SANFAN",
+   "spec_rows": 7,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pink-and-black-dual-color-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pink-foldable-yoga-mat",
+   "path": "products/pink-foldable-yoga-mat.html",
+   "src": "folding-yoga-mat-2",
+   "imgs": [
+    "assets/img/pink-foldable-yoga-mat-1.webp",
+    "assets/img/pink-foldable-yoga-mat-2.webp",
+    "assets/img/pink-foldable-yoga-mat-3.webp",
+    "assets/img/pink-foldable-yoga-mat-4.webp",
+    "assets/img/pink-foldable-yoga-mat-5.webp",
+    "assets/img/pink-foldable-yoga-mat-6.webp",
+    "assets/img/pink-foldable-yoga-mat-7.webp",
+    "assets/img/pink-foldable-yoga-mat-8.webp",
+    "assets/img/pink-foldable-yoga-mat-9.webp",
+    "assets/img/pink-foldable-yoga-mat-10.webp",
+    "assets/img/pink-foldable-yoga-mat-11.webp"
+   ],
+   "n_img": 11,
+   "h1_en": "Pink Foldable Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 11,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pink-foldable-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 11,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pink-mandala-foldable-suede-tpe-mat",
+   "path": "products/pink-mandala-foldable-suede-tpe-mat.html",
+   "src": "suede-tpe-foldable-yoga-mat",
+   "imgs": [
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-1.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-2.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-3.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-4.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-5.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-6.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-7.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-8.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-9.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-10.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-11.webp",
+    "assets/img/pink-mandala-foldable-suede-tpe-mat-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "Pink Mandala Foldable Suede TPE Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pink-mandala-foldable-suede-tpe-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pink-mandala-pu-rubber-yoga-mat",
+   "path": "products/pink-mandala-pu-rubber-yoga-mat.html",
+   "src": "pu-rubber-yoga-mat-5",
+   "imgs": [
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-1.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-2.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-3.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-4.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-5.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-6.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-7.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-8.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-9.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-10.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-11.webp",
+    "assets/img/pink-mandala-pu-rubber-yoga-mat-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "Pink Mandala PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pink-mandala-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "power-band",
+   "path": "products/power-band.html",
+   "src": "power-band",
+   "imgs": [
+    "assets/img/power-band-1.webp",
+    "assets/img/power-band-2.webp",
+    "assets/img/power-band-3.webp",
+    "assets/img/power-band-4.webp",
+    "assets/img/power-band-5.webp",
+    "assets/img/power-band-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Power Band — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/power-band-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    2.45,
+    4.55,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pr1",
+   "path": "products/pr1.html",
+   "src": "yoga-hammock",
+   "imgs": [
+    "assets/img/pr1-1.webp",
+    "assets/img/pr1-2.webp",
+    "assets/img/pr1-3.webp",
+    "assets/img/pr1-4.webp",
+    "assets/img/pr1-5.webp",
+    "assets/img/pr1-6.webp",
+    "assets/img/pr1-7.webp",
+    "assets/img/pr1-8.webp",
+    "assets/img/pr1-9.webp",
+    "assets/img/pr1-10.webp",
+    "assets/img/pr1-11.webp",
+    "assets/img/pr1-12.webp",
+    "assets/img/pr1-13.webp"
+   ],
+   "n_img": 13,
+   "h1_en": "Aerial Yoga Hammock — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 13,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [
+    "pr1-1.webp (750x716)"
+   ],
+   "small": [
+    "pr1-2.webp (400x400)",
+    "pr1-3.webp (400x400)",
+    "pr1-4.webp (400x400)",
+    "pr1-5.webp (400x400)",
+    "pr1-6.webp (400x400)",
+    "pr1-7.webp (400x400)",
+    "pr1-8.webp (400x400)",
+    "pr1-9.webp (400x400)",
+    "pr1-10.webp (400x400)",
+    "pr1-11.webp (400x400)",
+    "pr1-12.webp (400x400)",
+    "pr1-13.webp (400x400)"
+   ],
+   "og": "https://fjsanfan.com/assets/img/pr1-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 13,
+   "price": [
+    1.5,
+    15.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 13,
+    "ja": 13,
+    "ko": 13,
+    "fr": 13,
+    "it": 13,
+    "es": 13
+   }
+  },
+  {
+   "slug": "pr3",
+   "path": "products/pr3.html",
+   "src": "yoga-bolster",
+   "imgs": [
+    "assets/img/pr3-1.webp",
+    "assets/img/pr3-2.webp",
+    "assets/img/pr3-3.webp",
+    "assets/img/pr3-4.webp",
+    "assets/img/pr3-5.webp",
+    "assets/img/pr3-6.webp",
+    "assets/img/pr3-7.webp",
+    "assets/img/pr3-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Meditation Mat & Yoga Bolster — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pr3-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    1.5,
+    15.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 8,
+    "ja": 8,
+    "ko": 8,
+    "fr": 8,
+    "it": 8,
+    "es": 8
+   }
+  },
+  {
+   "slug": "pr4",
+   "path": "products/pr4.html",
+   "src": "eva-yoga-block",
+   "imgs": [
+    "assets/img/pr4-1.webp",
+    "assets/img/pr4-2.webp",
+    "assets/img/pr4-3.webp",
+    "assets/img/pr4-4.webp",
+    "assets/img/pr4-5.webp",
+    "assets/img/pr4-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Yoga Blocks (EVA) — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pr4-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    1.5,
+    15.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 6,
+    "ja": 6,
+    "ko": 6,
+    "fr": 6,
+    "it": 6,
+    "es": 6
+   }
+  },
+  {
+   "slug": "pu-meditation-mat-set",
+   "path": "products/pu-meditation-mat-set.html",
+   "src": "pu-meditation-mat",
+   "imgs": [
+    "assets/img/pu-meditation-mat-set-1.webp",
+    "assets/img/pu-meditation-mat-set-2.webp",
+    "assets/img/pu-meditation-mat-set-3.webp",
+    "assets/img/pu-meditation-mat-set-4.webp",
+    "assets/img/pu-meditation-mat-set-5.webp",
+    "assets/img/pu-meditation-mat-set-6.webp",
+    "assets/img/pu-meditation-mat-set-7.webp",
+    "assets/img/pu-meditation-mat-set-8.webp",
+    "assets/img/pu-meditation-mat-set-9.webp",
+    "assets/img/pu-meditation-mat-set-10.webp"
+   ],
+   "n_img": 10,
+   "h1_en": "PU Meditation Mat Set — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 10,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pu-meditation-mat-set-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 10,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "pu-rubber-yoga-mat-with-alignment-lines",
+   "path": "products/pu-rubber-yoga-mat-with-alignment-lines.html",
+   "src": "rubber-yoga-mat",
+   "imgs": [
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-1.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-2.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-3.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-4.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-5.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-6.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-7.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-8.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-9.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-10.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-11.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-12.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-13.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-14.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-15.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-16.webp",
+    "assets/img/pu-rubber-yoga-mat-with-alignment-lines-17.webp"
+   ],
+   "n_img": 17,
+   "h1_en": "PU Rubber Yoga Mat with Alignment Lines — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 17,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/pu-rubber-yoga-mat-with-alignment-lines-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 17,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "purple-mandala-pu-rubber-yoga-mat",
+   "path": "products/purple-mandala-pu-rubber-yoga-mat.html",
+   "src": "pu-rubber-yoga-mat-3",
+   "imgs": [
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-1.webp",
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-2.webp",
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-3.webp",
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-4.webp",
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-5.webp",
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-6.webp",
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-7.webp",
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-8.webp",
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-9.webp",
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-10.webp",
+    "assets/img/purple-mandala-pu-rubber-yoga-mat-11.webp"
+   ],
+   "n_img": 11,
+   "h1_en": "Purple Mandala PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 11,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/purple-mandala-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 11,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "purple-tpe-yoga-mat",
+   "path": "products/purple-tpe-yoga-mat.html",
+   "src": "tpe-yoga-mat-2",
+   "imgs": [
+    "assets/img/purple-tpe-yoga-mat-1.webp",
+    "assets/img/purple-tpe-yoga-mat-2.webp",
+    "assets/img/purple-tpe-yoga-mat-3.webp",
+    "assets/img/purple-tpe-yoga-mat-4.webp",
+    "assets/img/purple-tpe-yoga-mat-5.webp",
+    "assets/img/purple-tpe-yoga-mat-6.webp",
+    "assets/img/purple-tpe-yoga-mat-7.webp",
+    "assets/img/purple-tpe-yoga-mat-8.webp",
+    "assets/img/purple-tpe-yoga-mat-9.webp",
+    "assets/img/purple-tpe-yoga-mat-10.webp",
+    "assets/img/purple-tpe-yoga-mat-11.webp",
+    "assets/img/purple-tpe-yoga-mat-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "Purple TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [
+    "purple-tpe-yoga-mat-3.webp (488x488)"
+   ],
+   "og": "https://fjsanfan.com/assets/img/purple-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "rb1",
+   "path": "products/rb1.html",
+   "src": "exercise-bands",
+   "imgs": [
+    "assets/img/rb1-1.webp",
+    "assets/img/rb1-2.webp",
+    "assets/img/rb1-3.webp",
+    "assets/img/rb1-4.webp",
+    "assets/img/rb1-5.webp",
+    "assets/img/rb1-6.webp",
+    "assets/img/rb1-7.webp",
+    "assets/img/rb1-8.webp",
+    "assets/img/rb1-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Resistance Bands — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/rb1-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    0.8,
+    10.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 9,
+    "ja": 9,
+    "ko": 9,
+    "fr": 9,
+    "it": 9,
+    "es": 9
+   }
+  },
+  {
+   "slug": "rb2",
+   "path": "products/rb2.html",
+   "src": "yoga-ball",
+   "imgs": [
+    "assets/img/rb2-1.webp",
+    "assets/img/rb2-2.webp",
+    "assets/img/rb2-3.webp",
+    "assets/img/rb2-4.webp"
+   ],
+   "n_img": 4,
+   "h1_en": "Mini Yoga Ball (25 cm (10\")) — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 4,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/rb2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 4,
+   "price": [
+    0.8,
+    10.0,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 4,
+    "ja": 4,
+    "ko": 4,
+    "fr": 4,
+    "it": 4,
+    "es": 4
+   }
+  },
+  {
+   "slug": "red-pu-rubber-yoga-mat",
+   "path": "products/red-pu-rubber-yoga-mat.html",
+   "src": "pu-rubber-yoga-mat-2",
+   "imgs": [
+    "assets/img/red-pu-rubber-yoga-mat-1.webp",
+    "assets/img/red-pu-rubber-yoga-mat-2.webp",
+    "assets/img/red-pu-rubber-yoga-mat-3.webp",
+    "assets/img/red-pu-rubber-yoga-mat-4.webp",
+    "assets/img/red-pu-rubber-yoga-mat-5.webp",
+    "assets/img/red-pu-rubber-yoga-mat-6.webp",
+    "assets/img/red-pu-rubber-yoga-mat-7.webp",
+    "assets/img/red-pu-rubber-yoga-mat-8.webp",
+    "assets/img/red-pu-rubber-yoga-mat-9.webp",
+    "assets/img/red-pu-rubber-yoga-mat-10.webp",
+    "assets/img/red-pu-rubber-yoga-mat-11.webp",
+    "assets/img/red-pu-rubber-yoga-mat-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "Red PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/red-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "resistance-band-2",
+   "path": "products/resistance-band-2.html",
+   "src": "resistance-band-2",
+   "imgs": [
+    "assets/img/resistance-band-2-1.webp",
+    "assets/img/resistance-band-2-2.webp",
+    "assets/img/resistance-band-2-3.webp",
+    "assets/img/resistance-band-2-4.webp",
+    "assets/img/resistance-band-2-5.webp",
+    "assets/img/resistance-band-2-6.webp",
+    "assets/img/resistance-band-2-7.webp",
+    "assets/img/resistance-band-2-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "TPE Resistance Band — SANFAN",
+   "spec_rows": 8,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/resistance-band-2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    2.45,
+    4.55,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "resistance-band",
+   "path": "products/resistance-band.html",
+   "src": "resistance-band",
+   "imgs": [
+    "assets/img/resistance-band-1.webp",
+    "assets/img/resistance-band-2.webp",
+    "assets/img/resistance-band-3.webp",
+    "assets/img/resistance-band-4.webp",
+    "assets/img/resistance-band-5.webp",
+    "assets/img/resistance-band-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Silicone Resistance Band — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/resistance-band-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "resistance-tube-2",
+   "path": "products/resistance-tube-2.html",
+   "src": "resistance-tube-2",
+   "imgs": [
+    "assets/img/resistance-tube-2-1.webp",
+    "assets/img/resistance-tube-2-2.webp",
+    "assets/img/resistance-tube-2-3.webp",
+    "assets/img/resistance-tube-2-4.webp",
+    "assets/img/resistance-tube-2-5.webp",
+    "assets/img/resistance-tube-2-6.webp",
+    "assets/img/resistance-tube-2-7.webp",
+    "assets/img/resistance-tube-2-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Resistance Tube — With Handles — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/resistance-tube-2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    2.45,
+    4.55,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "resistance-tube",
+   "path": "products/resistance-tube.html",
+   "src": "resistance-tube",
+   "imgs": [
+    "assets/img/resistance-tube-1.webp",
+    "assets/img/resistance-tube-2.webp",
+    "assets/img/resistance-tube-3.webp",
+    "assets/img/resistance-tube-4.webp",
+    "assets/img/resistance-tube-5.webp"
+   ],
+   "n_img": 5,
+   "h1_en": "Resistance Tube — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 5,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/resistance-tube-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 5,
+   "price": [
+    2.45,
+    4.55,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "round-mandala-meditation-mat",
+   "path": "products/round-mandala-meditation-mat.html",
+   "src": "meditation-mat",
+   "imgs": [
+    "assets/img/round-mandala-meditation-mat-1.webp",
+    "assets/img/round-mandala-meditation-mat-2.webp",
+    "assets/img/round-mandala-meditation-mat-3.webp",
+    "assets/img/round-mandala-meditation-mat-4.webp",
+    "assets/img/round-mandala-meditation-mat-5.webp",
+    "assets/img/round-mandala-meditation-mat-6.webp",
+    "assets/img/round-mandala-meditation-mat-7.webp",
+    "assets/img/round-mandala-meditation-mat-8.webp",
+    "assets/img/round-mandala-meditation-mat-9.webp",
+    "assets/img/round-mandala-meditation-mat-10.webp",
+    "assets/img/round-mandala-meditation-mat-11.webp",
+    "assets/img/round-mandala-meditation-mat-12.webp",
+    "assets/img/round-mandala-meditation-mat-13.webp",
+    "assets/img/round-mandala-meditation-mat-14.webp",
+    "assets/img/round-mandala-meditation-mat-15.webp",
+    "assets/img/round-mandala-meditation-mat-16.webp",
+    "assets/img/round-mandala-meditation-mat-17.webp",
+    "assets/img/round-mandala-meditation-mat-18.webp",
+    "assets/img/round-mandala-meditation-mat-19.webp",
+    "assets/img/round-mandala-meditation-mat-20.webp",
+    "assets/img/round-mandala-meditation-mat-21.webp",
+    "assets/img/round-mandala-meditation-mat-22.webp"
+   ],
+   "n_img": 22,
+   "h1_en": "Round Mandala Meditation Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 22,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/round-mandala-meditation-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 22,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "round-mandala-suede-tpe-yoga-mat",
+   "path": "products/round-mandala-suede-tpe-yoga-mat.html",
+   "src": "suede-tpe-yoga-mat-2",
+   "imgs": [
+    "assets/img/round-mandala-suede-tpe-yoga-mat-1.webp",
+    "assets/img/round-mandala-suede-tpe-yoga-mat-2.webp",
+    "assets/img/round-mandala-suede-tpe-yoga-mat-3.webp",
+    "assets/img/round-mandala-suede-tpe-yoga-mat-4.webp",
+    "assets/img/round-mandala-suede-tpe-yoga-mat-5.webp",
+    "assets/img/round-mandala-suede-tpe-yoga-mat-6.webp",
+    "assets/img/round-mandala-suede-tpe-yoga-mat-7.webp",
+    "assets/img/round-mandala-suede-tpe-yoga-mat-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Round Mandala Suede TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/round-mandala-suede-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "sage-green-pu-rubber-yoga-mat",
+   "path": "products/sage-green-pu-rubber-yoga-mat.html",
+   "src": "pu-rubber-yoga-mat-11",
+   "imgs": [
+    "assets/img/sage-green-pu-rubber-yoga-mat-1.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-2.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-3.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-4.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-5.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-6.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-7.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-8.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-9.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-10.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-11.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-12.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-13.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-14.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-15.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-16.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-17.webp",
+    "assets/img/sage-green-pu-rubber-yoga-mat-18.webp"
+   ],
+   "n_img": 18,
+   "h1_en": "Sage Green PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 18,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/sage-green-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 18,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "solid-black-pu-rubber-yoga-mat",
+   "path": "products/solid-black-pu-rubber-yoga-mat.html",
+   "src": "pu-rubber-yoga-mat-6",
+   "imgs": [
+    "assets/img/solid-black-pu-rubber-yoga-mat-1.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-2.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-3.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-4.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-5.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-6.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-7.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-8.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-9.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-10.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-11.webp",
+    "assets/img/solid-black-pu-rubber-yoga-mat-12.webp"
+   ],
+   "n_img": 12,
+   "h1_en": "Solid Black PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 12,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/solid-black-pu-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 12,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "spliced-color-tpe-yoga-mat",
+   "path": "products/spliced-color-tpe-yoga-mat.html",
+   "src": "tpe-spliced-color-yoga-mat",
+   "imgs": [
+    "assets/img/spliced-color-tpe-yoga-mat-1.webp",
+    "assets/img/spliced-color-tpe-yoga-mat-2.webp",
+    "assets/img/spliced-color-tpe-yoga-mat-3.webp",
+    "assets/img/spliced-color-tpe-yoga-mat-4.webp",
+    "assets/img/spliced-color-tpe-yoga-mat-5.webp",
+    "assets/img/spliced-color-tpe-yoga-mat-6.webp",
+    "assets/img/spliced-color-tpe-yoga-mat-7.webp",
+    "assets/img/spliced-color-tpe-yoga-mat-8.webp",
+    "assets/img/spliced-color-tpe-yoga-mat-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Spliced Color TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/spliced-color-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "starry-night-print-suede-yoga-mat",
+   "path": "products/starry-night-print-suede-yoga-mat.html",
+   "src": "suede-yoga-mat-4",
+   "imgs": [
+    "assets/img/starry-night-print-suede-yoga-mat-1.webp",
+    "assets/img/starry-night-print-suede-yoga-mat-2.webp",
+    "assets/img/starry-night-print-suede-yoga-mat-3.webp",
+    "assets/img/starry-night-print-suede-yoga-mat-4.webp",
+    "assets/img/starry-night-print-suede-yoga-mat-5.webp",
+    "assets/img/starry-night-print-suede-yoga-mat-6.webp",
+    "assets/img/starry-night-print-suede-yoga-mat-7.webp",
+    "assets/img/starry-night-print-suede-yoga-mat-8.webp",
+    "assets/img/starry-night-print-suede-yoga-mat-9.webp",
+    "assets/img/starry-night-print-suede-yoga-mat-10.webp"
+   ],
+   "n_img": 10,
+   "h1_en": "Starry Night Print Suede Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 10,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/starry-night-print-suede-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 10,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "stretch-board",
+   "path": "products/stretch-board.html",
+   "src": "stretch-board",
+   "imgs": [
+    "assets/img/stretch-board-1.webp",
+    "assets/img/stretch-board-2.webp",
+    "assets/img/stretch-board-3.webp",
+    "assets/img/stretch-board-4.webp",
+    "assets/img/stretch-board-5.webp",
+    "assets/img/stretch-board-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Stretch Board — SANFAN",
+   "spec_rows": 8,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/stretch-board-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "tpe-meditation-mat",
+   "path": "products/tpe-meditation-mat.html",
+   "src": "tpe-meditation-mat",
+   "imgs": [
+    "assets/img/tpe-meditation-mat-1.webp",
+    "assets/img/tpe-meditation-mat-2.webp",
+    "assets/img/tpe-meditation-mat-3.webp",
+    "assets/img/tpe-meditation-mat-4.webp",
+    "assets/img/tpe-meditation-mat-5.webp",
+    "assets/img/tpe-meditation-mat-6.webp",
+    "assets/img/tpe-meditation-mat-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "TPE Meditation Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/tpe-meditation-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "tpe-resistance-loop-band",
+   "path": "products/tpe-resistance-loop-band.html",
+   "src": "tpe-resistance-loop-band",
+   "imgs": [
+    "assets/img/tpe-resistance-loop-band-1.webp",
+    "assets/img/tpe-resistance-loop-band-2.webp",
+    "assets/img/tpe-resistance-loop-band-3.webp",
+    "assets/img/tpe-resistance-loop-band-4.webp",
+    "assets/img/tpe-resistance-loop-band-5.webp",
+    "assets/img/tpe-resistance-loop-band-6.webp",
+    "assets/img/tpe-resistance-loop-band-7.webp",
+    "assets/img/tpe-resistance-loop-band-8.webp",
+    "assets/img/tpe-resistance-loop-band-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "TPE Resistance Loop Band — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/tpe-resistance-loop-band-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    2.45,
+    4.55,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "tpe-rubber-yoga-mat",
+   "path": "products/tpe-rubber-yoga-mat.html",
+   "src": "yoga-mat",
+   "imgs": [
+    "assets/img/tpe-rubber-yoga-mat-1.webp",
+    "assets/img/tpe-rubber-yoga-mat-2.webp",
+    "assets/img/tpe-rubber-yoga-mat-3.webp",
+    "assets/img/tpe-rubber-yoga-mat-4.webp",
+    "assets/img/tpe-rubber-yoga-mat-5.webp",
+    "assets/img/tpe-rubber-yoga-mat-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "TPE Rubber Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/tpe-rubber-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "two-tone-cork-tpe-yoga-mat",
+   "path": "products/two-tone-cork-tpe-yoga-mat.html",
+   "src": "cork-tpe-yoga-mat-2",
+   "imgs": [
+    "assets/img/two-tone-cork-tpe-yoga-mat-1.webp",
+    "assets/img/two-tone-cork-tpe-yoga-mat-2.webp",
+    "assets/img/two-tone-cork-tpe-yoga-mat-3.webp",
+    "assets/img/two-tone-cork-tpe-yoga-mat-4.webp",
+    "assets/img/two-tone-cork-tpe-yoga-mat-5.webp",
+    "assets/img/two-tone-cork-tpe-yoga-mat-6.webp",
+    "assets/img/two-tone-cork-tpe-yoga-mat-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "Two-Tone Cork TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/two-tone-cork-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "two-tone-double-layer-tpe-yoga-mat",
+   "path": "products/two-tone-double-layer-tpe-yoga-mat.html",
+   "src": "tpe-double-yoga-mat",
+   "imgs": [
+    "assets/img/two-tone-double-layer-tpe-yoga-mat-1.webp",
+    "assets/img/two-tone-double-layer-tpe-yoga-mat-2.webp",
+    "assets/img/two-tone-double-layer-tpe-yoga-mat-3.webp",
+    "assets/img/two-tone-double-layer-tpe-yoga-mat-4.webp",
+    "assets/img/two-tone-double-layer-tpe-yoga-mat-5.webp",
+    "assets/img/two-tone-double-layer-tpe-yoga-mat-6.webp",
+    "assets/img/two-tone-double-layer-tpe-yoga-mat-7.webp",
+    "assets/img/two-tone-double-layer-tpe-yoga-mat-8.webp",
+    "assets/img/two-tone-double-layer-tpe-yoga-mat-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "Two-Tone Double Layer TPE Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/two-tone-double-layer-tpe-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "ultra-thin-pu-rubber-travel-mat",
+   "path": "products/ultra-thin-pu-rubber-travel-mat.html",
+   "src": "pu-rubber-yoga-mat-8",
+   "imgs": [
+    "assets/img/ultra-thin-pu-rubber-travel-mat-1.webp",
+    "assets/img/ultra-thin-pu-rubber-travel-mat-2.webp",
+    "assets/img/ultra-thin-pu-rubber-travel-mat-3.webp",
+    "assets/img/ultra-thin-pu-rubber-travel-mat-4.webp",
+    "assets/img/ultra-thin-pu-rubber-travel-mat-5.webp",
+    "assets/img/ultra-thin-pu-rubber-travel-mat-6.webp",
+    "assets/img/ultra-thin-pu-rubber-travel-mat-7.webp"
+   ],
+   "n_img": 7,
+   "h1_en": "Ultra-Thin PU Rubber Travel Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 7,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/ultra-thin-pu-rubber-travel-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 7,
+   "price": [
+    8.5,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "vibrating-foam-roller",
+   "path": "products/vibrating-foam-roller.html",
+   "src": "vibrating-foam-roller",
+   "imgs": [
+    "assets/img/vibrating-foam-roller-1.webp",
+    "assets/img/vibrating-foam-roller-2.webp",
+    "assets/img/vibrating-foam-roller-3.webp",
+    "assets/img/vibrating-foam-roller-4.webp",
+    "assets/img/vibrating-foam-roller-5.webp",
+    "assets/img/vibrating-foam-roller-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Vibrating Foam Roller — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/vibrating-foam-roller-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    1.76,
+    3.28,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "vibrating-yoga-roller",
+   "path": "products/vibrating-yoga-roller.html",
+   "src": "vibrating-yoga-roller",
+   "imgs": [
+    "assets/img/vibrating-yoga-roller-1.webp",
+    "assets/img/vibrating-yoga-roller-2.webp",
+    "assets/img/vibrating-yoga-roller-3.webp",
+    "assets/img/vibrating-yoga-roller-4.webp"
+   ],
+   "n_img": 4,
+   "h1_en": "Vibrating Yoga Roller — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 4,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/vibrating-yoga-roller-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 4,
+   "price": [
+    1.76,
+    3.28,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "watercolor-floral-suede-yoga-mat",
+   "path": "products/watercolor-floral-suede-yoga-mat.html",
+   "src": "suede-yoga-mat",
+   "imgs": [
+    "assets/img/watercolor-floral-suede-yoga-mat-1.webp",
+    "assets/img/watercolor-floral-suede-yoga-mat-2.webp",
+    "assets/img/watercolor-floral-suede-yoga-mat-3.webp",
+    "assets/img/watercolor-floral-suede-yoga-mat-4.webp",
+    "assets/img/watercolor-floral-suede-yoga-mat-5.webp"
+   ],
+   "n_img": 5,
+   "h1_en": "Watercolor Floral Suede Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 5,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/watercolor-floral-suede-yoga-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 5,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "ym1",
+   "path": "products/ym1.html",
+   "src": "tpe-yoga-mat",
+   "imgs": [
+    "assets/img/ym1-1.webp",
+    "assets/img/ym1-2.webp",
+    "assets/img/ym1-3.webp",
+    "assets/img/ym1-4.webp",
+    "assets/img/ym1-5.webp",
+    "assets/img/ym1-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "TPE Yoga Mat — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/ym1-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 6,
+    "ja": 6,
+    "ko": 6,
+    "fr": 6,
+    "it": 6,
+    "es": 6
+   }
+  },
+  {
+   "slug": "ym2",
+   "path": "products/ym2.html",
+   "src": "tpe-yoga-mat-4",
+   "imgs": [
+    "assets/img/ym2-1.webp",
+    "assets/img/ym2-2.webp",
+    "assets/img/ym2-3.webp",
+    "assets/img/ym2-4.webp",
+    "assets/img/ym2-5.webp",
+    "assets/img/ym2-6.webp",
+    "assets/img/ym2-7.webp",
+    "assets/img/ym2-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Wide TPE Yoga Mat — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/ym2-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 8,
+    "ja": 8,
+    "ko": 8,
+    "fr": 8,
+    "it": 8,
+    "es": 8
+   }
+  },
+  {
+   "slug": "ym3",
+   "path": "products/ym3.html",
+   "src": "tpe-double-yoga-mat",
+   "imgs": [
+    "assets/img/ym3-1.webp",
+    "assets/img/ym3-2.webp",
+    "assets/img/ym3-3.webp",
+    "assets/img/ym3-4.webp",
+    "assets/img/ym3-5.webp",
+    "assets/img/ym3-6.webp",
+    "assets/img/ym3-7.webp",
+    "assets/img/ym3-8.webp",
+    "assets/img/ym3-9.webp"
+   ],
+   "n_img": 9,
+   "h1_en": "TPE Double Yoga Mat — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 9,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/ym3-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 9,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 9,
+    "ja": 9,
+    "ko": 9,
+    "fr": 9,
+    "it": 9,
+    "es": 9
+   }
+  },
+  {
+   "slug": "ym4",
+   "path": "products/ym4.html",
+   "src": "folding-mat",
+   "imgs": [
+    "assets/img/ym4-1.webp",
+    "assets/img/ym4-2.webp",
+    "assets/img/ym4-3.webp",
+    "assets/img/ym4-4.webp",
+    "assets/img/ym4-5.webp",
+    "assets/img/ym4-6.webp",
+    "assets/img/ym4-7.webp",
+    "assets/img/ym4-8.webp",
+    "assets/img/ym4-9.webp",
+    "assets/img/ym4-10.webp",
+    "assets/img/ym4-11.webp"
+   ],
+   "n_img": 11,
+   "h1_en": "TPE Folding Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 11,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/ym4-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 11,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 11,
+    "ja": 11,
+    "ko": 11,
+    "fr": 11,
+    "it": 11,
+    "es": 11
+   }
+  },
+  {
+   "slug": "ym5",
+   "path": "products/ym5.html",
+   "src": "pu-rubber-yoga-mat",
+   "imgs": [
+    "assets/img/ym5-1.webp",
+    "assets/img/ym5-2.webp",
+    "assets/img/ym5-3.webp",
+    "assets/img/ym5-4.webp",
+    "assets/img/ym5-5.webp",
+    "assets/img/ym5-6.webp",
+    "assets/img/ym5-7.webp",
+    "assets/img/ym5-8.webp",
+    "assets/img/ym5-9.webp",
+    "assets/img/ym5-10.webp",
+    "assets/img/ym5-11.webp",
+    "assets/img/ym5-12.webp",
+    "assets/img/ym5-13.webp"
+   ],
+   "n_img": 13,
+   "h1_en": "PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 13,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/ym5-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 13,
+   "price": [
+    8.51,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 13,
+    "ja": 13,
+    "ko": 13,
+    "fr": 13,
+    "it": 13,
+    "es": 13
+   }
+  },
+  {
+   "slug": "ym6",
+   "path": "products/ym6.html",
+   "src": "matte-pu-rubber-yoga-mat",
+   "imgs": [
+    "assets/img/ym6-1.webp",
+    "assets/img/ym6-2.webp",
+    "assets/img/ym6-3.webp",
+    "assets/img/ym6-4.webp",
+    "assets/img/ym6-5.webp",
+    "assets/img/ym6-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "Matte PU Rubber Yoga Mat — SANFAN",
+   "spec_rows": 10,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/ym6-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    8.51,
+    15.8,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 6,
+    "ja": 6,
+    "ko": 6,
+    "fr": 6,
+    "it": 6,
+    "es": 6
+   }
+  },
+  {
+   "slug": "ym7",
+   "path": "products/ym7.html",
+   "src": "pu-rubber-yoga-mat-test",
+   "imgs": [
+    "assets/img/camouflage-tpe-mat-1.webp",
+    "assets/img/camouflage-tpe-mat-2.webp",
+    "assets/img/camouflage-tpe-mat-3.webp",
+    "assets/img/camouflage-tpe-mat-4.webp",
+    "assets/img/camouflage-tpe-mat-5.webp",
+    "assets/img/camouflage-tpe-mat-6.webp"
+   ],
+   "n_img": 6,
+   "h1_en": "TPE Camouflage Yoga Mat — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 6,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/camouflage-tpe-mat-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 6,
+   "price": [
+    4.12,
+    7.66,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": 6,
+    "ja": 6,
+    "ko": 6,
+    "fr": 6,
+    "it": 6,
+    "es": 6
+   }
+  },
+  {
+   "slug": "yoga-bag",
+   "path": "products/yoga-bag.html",
+   "src": "yoga-bag",
+   "imgs": [
+    "assets/img/yoga-bag-1.webp",
+    "assets/img/yoga-bag-2.webp",
+    "assets/img/yoga-bag-3.webp",
+    "assets/img/yoga-bag-4.webp",
+    "assets/img/yoga-bag-5.webp"
+   ],
+   "n_img": 5,
+   "h1_en": "Yoga Bag — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 5,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/yoga-bag-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 5,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "yoga-ball",
+   "path": "products/yoga-ball.html",
+   "src": "yoga-ball",
+   "imgs": [
+    "assets/img/yoga-ball-1.webp",
+    "assets/img/yoga-ball-2.webp",
+    "assets/img/yoga-ball-3.webp",
+    "assets/img/yoga-ball-4.webp"
+   ],
+   "n_img": 4,
+   "h1_en": "Anti-Burst Yoga Ball — SANFAN",
+   "spec_rows": 3,
+   "en_imgs": 4,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/yoga-ball-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 4,
+   "price": [
+    2.59,
+    4.81,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "yoga-block-cover",
+   "path": "products/yoga-block-cover.html",
+   "src": "yoga-block-cover",
+   "imgs": [
+    "assets/img/yoga-block-cover-1.webp",
+    "assets/img/yoga-block-cover-2.webp",
+    "assets/img/yoga-block-cover-3.webp",
+    "assets/img/yoga-block-cover-4.webp",
+    "assets/img/yoga-block-cover-5.webp",
+    "assets/img/yoga-block-cover-6.webp",
+    "assets/img/yoga-block-cover-7.webp",
+    "assets/img/yoga-block-cover-8.webp",
+    "assets/img/yoga-block-cover-9.webp",
+    "assets/img/yoga-block-cover-10.webp"
+   ],
+   "n_img": 10,
+   "h1_en": "Yoga Block Cover — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 10,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [
+    "yoga-block-cover-5.webp (831x800)",
+    "yoga-block-cover-6.webp (800x818)",
+    "yoga-block-cover-7.webp (831x800)",
+    "yoga-block-cover-8.webp (831x800)",
+    "yoga-block-cover-9.webp (831x800)",
+    "yoga-block-cover-10.webp (831x800)"
+   ],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/yoga-block-cover-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 10,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "yoga-bolster",
+   "path": "products/yoga-bolster.html",
+   "src": "yoga-bolster",
+   "imgs": [
+    "assets/img/yoga-bolster-1.webp",
+    "assets/img/yoga-bolster-2.webp",
+    "assets/img/yoga-bolster-3.webp",
+    "assets/img/yoga-bolster-4.webp",
+    "assets/img/yoga-bolster-5.webp",
+    "assets/img/yoga-bolster-6.webp",
+    "assets/img/yoga-bolster-7.webp",
+    "assets/img/yoga-bolster-8.webp"
+   ],
+   "n_img": 8,
+   "h1_en": "Yoga Bolster — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 8,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/yoga-bolster-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 8,
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  },
+  {
+   "slug": "yoga-ring",
+   "path": "products/yoga-ring.html",
+   "src": "yoga-ring",
+   "imgs": [
+    "assets/img/yoga-ring-1.webp",
+    "assets/img/yoga-ring-2.webp",
+    "assets/img/yoga-ring-3.webp",
+    "assets/img/yoga-ring-4.webp",
+    "assets/img/yoga-ring-5.webp",
+    "assets/img/yoga-ring-6.webp",
+    "assets/img/yoga-ring-7.webp",
+    "assets/img/yoga-ring-8.webp",
+    "assets/img/yoga-ring-9.webp",
+    "assets/img/yoga-ring-10.webp",
+    "assets/img/yoga-ring-11.webp"
+   ],
+   "n_img": 11,
+   "h1_en": "TPE Yoga Ring — SANFAN",
+   "spec_rows": 9,
+   "en_imgs": 11,
+   "sync_state": "ok",
+   "missing": [],
+   "odd_ratio": [],
+   "small": [],
+   "og": "https://fjsanfan.com/assets/img/yoga-ring-1.webp",
+   "has_product_ld": true,
+   "ld_imgs": 11,
+   "price": [
+    1.33,
+    2.47,
+    "USD"
+   ],
+   "n_ld": 1,
+   "langs": {
+    "de": "missing",
+    "ja": "missing",
+    "ko": "missing",
+    "fr": "missing",
+    "it": "missing",
+    "es": "missing"
+   }
+  }
+ ],
+ "issues": {
+  "abs-yoga-ring": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "advanced-yoga-roller": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "alignment-line-tpe-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "arched-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "aurora-gradient-suede-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "botanical-print-cork-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "circular-leg-clamps": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "cork-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "cork-suede-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "cork-surface-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "cork-tpe-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "dual-color-tpe-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "eco-friendly-tpe-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "eva-foam-roller-2": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "eva-foam-roller": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "eva-yoga-block": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "exercise-bands": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "fascia-gun-1": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "fascia-gun-2": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "fascia-gun-3": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "fascia-gun": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "fascial-sphere-1": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "fascial-sphere-2": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "fascial-sphere-3": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "figure-8-resistance-bands": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "flamingo-print-suede-rubber-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "foam-roller-2": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "foam-roller-3": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "foam-roller": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "foldable-yoga-mat-multi-color": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "foot-pedal-resistance-band": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "galaxy-gradient-suede-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "geometric-print-suede-tpe-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "gold-koi-foldable-suede-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "gold-printed-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "gradient-line-art-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "gray-mandala-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "lilac-tpe-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "mandala-meditation-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "marble-print-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "massage-stick-2": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "massage-stick": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "massager-1": [
+   [
+    "B-非方图",
+    "图片非 1:1，若容器为 1/1 会留白/裁切: massager-1-3.webp (800x720)"
+   ],
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "massager-2": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "massager-3": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "matte-pu-rubber-foldable-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "monochrome-leaf-suede-tpe-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "mulinsen-3x-anti-slip-tpe-mat-90cm": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "mulinsen-branded-tpe-yoga-mat-183cm": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "mulinsen-branded-tpe-yoga-mat-61cm": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "mulinsen-dual-sided-non-slip-tpe-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "mulinsen-widened-anti-slip-tpe-mat-90cm": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "multi-color-tpe-yoga-mat-bundle": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "navy-botanical-suede-tpe-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "oil-painting-style-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "olive-foldable-rubber-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pilates-reformer-mat-custom-logo": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pilates-reformer-mat-mandala": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pilates-reformer-mat-tropical-print": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pilates-ring-2": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pilates-ring": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pink-and-black-dual-color-tpe-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pink-foldable-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pink-mandala-foldable-suede-tpe-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pink-mandala-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "power-band": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pr1": [
+   [
+    "B-非方图",
+    "图片非 1:1，若容器为 1/1 会留白/裁切: pr1-1.webp (750x716)"
+   ],
+   [
+    "B-小图",
+    "图片短边 <500px: pr1-2.webp (400x400); pr1-3.webp (400x400); pr1-4.webp (400x400); pr1-5.webp (400x400); pr1-6.webp (400x400); pr1-7.webp (400x400)"
+   ]
+  ],
+  "pu-meditation-mat-set": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "pu-rubber-yoga-mat-with-alignment-lines": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "purple-mandala-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "purple-tpe-yoga-mat": [
+   [
+    "B-小图",
+    "图片短边 <500px: purple-tpe-yoga-mat-3.webp (488x488)"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "red-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "resistance-band-2": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "resistance-band": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "resistance-tube-2": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "resistance-tube": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "round-mandala-meditation-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "round-mandala-suede-tpe-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "sage-green-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "solid-black-pu-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "spliced-color-tpe-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "starry-night-print-suede-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "stretch-board": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "tpe-meditation-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "tpe-resistance-loop-band": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "tpe-rubber-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "two-tone-cork-tpe-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "two-tone-double-layer-tpe-yoga-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "ultra-thin-pu-rubber-travel-mat": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "vibrating-foam-roller": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "vibrating-yoga-roller": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "watercolor-floral-suede-yoga-mat": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "yoga-bag": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "yoga-ball": [
+   [
+    "F-规格薄",
+    "规格表仅 3 行"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "yoga-block-cover": [
+   [
+    "B-非方图",
+    "图片非 1:1，若容器为 1/1 会留白/裁切: yoga-block-cover-5.webp (831x800); yoga-block-cover-6.webp (800x818); yoga-block-cover-7.webp (831x800); yoga-block-cover-8.webp (831x800); yoga-block-cover-9.webp (831x800); yoga-block-cover-10.webp (831x800)"
+   ],
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "yoga-bolster": [
+   [
+    "E-无offers",
+    "Product 无 offers 字段"
+   ],
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ],
+  "yoga-ring": [
+   [
+    "G-缺语言",
+    "缺语言页: de,ja,ko,fr,it,es"
+   ]
+  ]
+ },
+ "dup_first": {},
+ "dup_any": {},
+ "not_in_list": [],
+ "ghost_card": [],
+ "dead_links": []
+}

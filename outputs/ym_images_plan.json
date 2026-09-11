@@ -1,0 +1,77 @@
+{
+  "ym1": {
+    "src": "tpe-yoga-mat",
+    "files": [
+      "ym1-1.webp",
+      "ym1-2.webp",
+      "ym1-3.webp",
+      "ym1-4.webp",
+      "ym1-5.webp",
+      "ym1-6.webp"
+    ],
+    "count": 6
+  },
+  "ym3": {
+    "src": "tpe-double-yoga-mat",
+    "files": [
+      "ym3-1.webp",
+      "ym3-2.webp",
+      "ym3-3.webp",
+      "ym3-4.webp",
+      "ym3-5.webp",
+      "ym3-6.webp",
+      "ym3-7.webp",
+      "ym3-8.webp",
+      "ym3-9.webp"
+    ],
+    "count": 9
+  },
+  "ym4": {
+    "src": "folding-mat",
+    "files": [
+      "ym4-1.webp",
+      "ym4-2.webp",
+      "ym4-3.webp",
+      "ym4-4.webp",
+      "ym4-5.webp",
+      "ym4-6.webp",
+      "ym4-7.webp",
+      "ym4-8.webp",
+      "ym4-9.webp",
+      "ym4-10.webp",
+      "ym4-11.webp"
+    ],
+    "count": 11
+  },
+  "ym5": {
+    "src": "pu-rubber-yoga-mat",
+    "files": [
+      "ym5-1.webp",
+      "ym5-2.webp",
+      "ym5-3.webp",
+      "ym5-4.webp",
+      "ym5-5.webp",
+      "ym5-6.webp",
+      "ym5-7.webp",
+      "ym5-8.webp",
+      "ym5-9.webp",
+      "ym5-10.webp",
+      "ym5-11.webp",
+      "ym5-12.webp",
+      "ym5-13.webp"
+    ],
+    "count": 13
+  },
+  "ym6": {
+    "src": "matte-pu-rubber-yoga-mat",
+    "files": [
+      "ym6-1.webp",
+      "ym6-2.webp",
+      "ym6-3.webp",
+      "ym6-4.webp",
+      "ym6-5.webp",
+      "ym6-6.webp"
+    ],
+    "count": 6
+  }
+}

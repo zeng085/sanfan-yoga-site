@@ -4,3 +4,15 @@ i18n_build/.indexnow_key
 i18n_build/cache/
 i18n_build/_pending/
 .DS_Store
+
+# Python 字节码
+__pycache__/
+*.pyc
+
+# 业务敏感数据（报价/成本表），绝不入公开仓库
+i18n_build/data/
+
+# 本地调色/对比/中间产物（体积大，非站点资产）
+outputs/_riskcheck/
+outputs/bgtest/
+outputs/card_bg_white/

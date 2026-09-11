@@ -75,6 +75,216 @@
       "source": "/es",
       "destination": "/es/",
       "permanent": true
+    },
+    {
+      "source": "/products/ym8.html",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/rb3.html",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/rb4.html",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/pr2.html",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/pr5.html",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/de/products/ym8.html",
+      "destination": "/de/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/de/products/rb3.html",
+      "destination": "/de/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/de/products/rb4.html",
+      "destination": "/de/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/de/products/pr2.html",
+      "destination": "/de/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/de/products/pr5.html",
+      "destination": "/de/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ja/products/ym8.html",
+      "destination": "/ja/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ja/products/rb3.html",
+      "destination": "/ja/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ja/products/rb4.html",
+      "destination": "/ja/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ja/products/pr2.html",
+      "destination": "/ja/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ja/products/pr5.html",
+      "destination": "/ja/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ko/products/ym8.html",
+      "destination": "/ko/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ko/products/rb3.html",
+      "destination": "/ko/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ko/products/rb4.html",
+      "destination": "/ko/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ko/products/pr2.html",
+      "destination": "/ko/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ko/products/pr5.html",
+      "destination": "/ko/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/products/ym8.html",
+      "destination": "/fr/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/products/rb3.html",
+      "destination": "/fr/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/products/rb4.html",
+      "destination": "/fr/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/products/pr2.html",
+      "destination": "/fr/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/products/pr5.html",
+      "destination": "/fr/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/it/products/ym8.html",
+      "destination": "/it/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/it/products/rb3.html",
+      "destination": "/it/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/it/products/rb4.html",
+      "destination": "/it/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/it/products/pr2.html",
+      "destination": "/it/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/it/products/pr5.html",
+      "destination": "/it/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/products/ym8.html",
+      "destination": "/es/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/products/rb3.html",
+      "destination": "/es/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/products/rb4.html",
+      "destination": "/es/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/products/pr2.html",
+      "destination": "/es/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/products/pr5.html",
+      "destination": "/es/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/fi1.html",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/de/products/fi1.html",
+      "destination": "/de/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ja/products/fi1.html",
+      "destination": "/ja/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/ko/products/fi1.html",
+      "destination": "/ko/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/products/fi1.html",
+      "destination": "/fr/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/it/products/fi1.html",
+      "destination": "/it/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/products/fi1.html",
+      "destination": "/es/products.html",
+      "permanent": true
     }
   ]
 }

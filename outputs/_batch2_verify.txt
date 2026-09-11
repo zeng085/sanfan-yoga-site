@@ -1,0 +1,45 @@
+[列表页] 卡片 117 张；重复图 0 组
+[列表页 390px] 横向溢出: 0px ✓
+✓ [01] foam-roller                        th=9  img=9  zh=18  price=1.76~3.28
+✓ [02] foam-roller-2                      th=9  img=9  zh=18  price=1.76~3.28
+✓ [03] foam-roller-3                      th=9  img=9  zh=18  price=1.76~3.28
+✗ [04] eva-foam-roller                    th=3  img=9  zh=12  price=1.76~3.28  ⟵ 规格表过少 th=3
+✓ [05] eva-foam-roller-2                  th=9  img=9  zh=18  price=1.76~3.28
+✗ [06] vibrating-foam-roller              th=3  img=7  zh=12  price=1.76~3.28  ⟵ 规格表过少 th=3
+✗ [07] vibrating-yoga-roller              th=3  img=5  zh=12  price=1.76~3.28  ⟵ 规格表过少 th=3
+✗ [08] advanced-yoga-roller               th=3  img=6  zh=12  price=1.76~3.28  ⟵ 规格表过少 th=3
+✓ [09] fascia-gun                         th=8  img=9  zh=17  price=-~-
+✗ [10] fascia-gun-1                       th=3  img=7  zh=12  price=-~-  ⟵ 规格表过少 th=3
+✗ [11] fascia-gun-2                       th=3  img=7  zh=12  price=-~-  ⟵ 规格表过少 th=3
+✗ [12] fascia-gun-3                       th=3  img=7  zh=12  price=-~-  ⟵ 规格表过少 th=3
+✗ [13] fascial-sphere-1                   th=3  img=7  zh=12  price=-~-  ⟵ 规格表过少 th=3
+✗ [14] fascial-sphere-2                   th=3  img=8  zh=12  price=-~-  ⟵ 规格表过少 th=3
+✗ [15] fascial-sphere-3                   th=3  img=8  zh=12  price=-~-  ⟵ 规格表过少 th=3
+✓ [16] massage-stick                      th=9  img=9  zh=18  price=-~-
+✓ [17] massage-stick-2                    th=8  img=9  zh=17  price=-~-
+✗ [18] massager-1                         th=3  img=7  zh=12  price=-~-  ⟵ 规格表过少 th=3
+✗ [19] massager-2                         th=3  img=9  zh=12  price=-~-  ⟵ 规格表过少 th=3
+✗ [20] massager-3                         th=3  img=8  zh=12  price=-~-  ⟵ 规格表过少 th=3
+✓ [21] circular-leg-clamps                th=8  img=6  zh=17  price=-~-
+✓ [22] resistance-band                    th=9  img=7  zh=18  price=-~-
+✓ [23] resistance-band-2                  th=8  img=9  zh=17  price=2.45~4.55
+✗ [24] resistance-tube                    th=3  img=6  zh=12  price=2.45~4.55  ⟵ 规格表过少 th=3
+✗ [25] resistance-tube-2                  th=3  img=9  zh=12  price=2.45~4.55  ⟵ 规格表过少 th=3
+✗ [26] power-band                         th=3  img=7  zh=12  price=2.45~4.55  ⟵ 规格表过少 th=3
+✓ [27] exercise-bands                     th=9  img=9  zh=18  price=4.06~7.54
+✓ [28] tpe-resistance-loop-band           th=9  img=9  zh=18  price=2.45~4.55
+✓ [29] figure-8-resistance-bands          th=8  img=9  zh=17  price=2.45~4.55
+✓ [30] foot-pedal-resistance-band         th=8  img=7  zh=17  price=2.45~4.55
+✗ [31] yoga-ball                          th=3  img=5  zh=12  price=2.59~4.81  ⟵ 规格表过少 th=3
+✗ [32] yoga-bag                           th=3  img=6  zh=12  price=-~-  ⟵ 规格表过少 th=3
+✓ [33] yoga-bolster                       th=9  img=9  zh=18  price=-~-
+✗ [34] eva-yoga-block                     th=3  img=7  zh=12  price=0.99~1.85  ⟵ 规格表过少 th=3
+✓ [35] yoga-block-cover                   th=9  img=9  zh=18  price=-~-
+✓ [36] pilates-ring                       th=10 img=9  zh=19  price=4.48~8.32
+✓ [37] pilates-ring-2                     th=10 img=9  zh=19  price=1.33~2.47
+✓ [38] abs-yoga-ring                      th=9  img=9  zh=18  price=1.33~2.47
+✓ [39] yoga-ring                          th=9  img=9  zh=18  price=1.33~2.47
+✓ [40] stretch-board                      th=8  img=7  zh=17  price=-~-
+
+结论：40 页中 21 页通过，19 页有问题
+问题页：eva-foam-roller, vibrating-foam-roller, vibrating-yoga-roller, advanced-yoga-roller, fascia-gun-1, fascia-gun-2, fascia-gun-3, fascial-sphere-1, fascial-sphere-2, fascial-sphere-3, massager-1, massager-2, massager-3, resistance-tube, resistance-tube-2, power-band, yoga-ball, yoga-bag, eva-yoga-block

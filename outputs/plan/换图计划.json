@@ -1,0 +1,114 @@
+[
+ {
+  "slug": "ym2",
+  "cls": "色块底",
+  "cur": "ym2-1.webp",
+  "new": "ym2-1w.webp",
+  "how": "算法换底(0.473)"
+ },
+ {
+  "slug": "ym3",
+  "cls": "色块底",
+  "cur": "ym3-1.webp",
+  "new": "ym3-9.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "arched-pu-rubber-yoga-mat",
+  "cls": "色块底",
+  "cur": "arched-pu-rubber-yoga-mat-1.webp",
+  "new": "arched-pu-rubber-yoga-mat-4.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "cork-tpe-yoga-mat",
+  "cls": "色块底",
+  "cur": "cork-tpe-yoga-mat-1.webp",
+  "new": "cork-tpe-yoga-mat-5.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "gray-mandala-pu-rubber-yoga-mat",
+  "cls": "色块底",
+  "cur": "gray-mandala-pu-rubber-yoga-mat-1.webp",
+  "new": "gray-mandala-pu-rubber-yoga-mat-1w.webp",
+  "how": "算法换底(0.711)"
+ },
+ {
+  "slug": "pink-mandala-pu-rubber-yoga-mat",
+  "cls": "色块底",
+  "cur": "pink-mandala-pu-rubber-yoga-mat-1.webp",
+  "new": "pink-mandala-pu-rubber-yoga-mat-1w.webp",
+  "how": "算法换底(0.711)"
+ },
+ {
+  "slug": "mulinsen-branded-tpe-yoga-mat-61cm",
+  "cls": "色块底",
+  "cur": "mulinsen-branded-tpe-yoga-mat-61cm-1.webp",
+  "new": "mulinsen-branded-tpe-yoga-mat-61cm-1w.webp",
+  "how": "算法换底(0.473)"
+ },
+ {
+  "slug": "alignment-line-tpe-yoga-mat",
+  "cls": "色块底",
+  "cur": "alignment-line-tpe-yoga-mat-1.webp",
+  "new": "alignment-line-tpe-yoga-mat-2.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "two-tone-double-layer-tpe-yoga-mat",
+  "cls": "色块底",
+  "cur": "two-tone-double-layer-tpe-yoga-mat-1.webp",
+  "new": "two-tone-double-layer-tpe-yoga-mat-9.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "massage-stick",
+  "cls": "色块底",
+  "cur": "massage-stick-1.webp",
+  "new": "massage-stick-2.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "massager-2",
+  "cls": "色块底",
+  "cur": "massager-2-1.webp",
+  "new": "massager-2-2.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "tpe-resistance-loop-band",
+  "cls": "色块底",
+  "cur": "tpe-resistance-loop-band-1.webp",
+  "new": "tpe-resistance-loop-band-2.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "ym5",
+  "cls": "照片/实景底",
+  "cur": "ym5-1.webp",
+  "new": "ym5-8.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "botanical-print-cork-rubber-yoga-mat",
+  "cls": "照片/实景底",
+  "cur": "botanical-print-cork-rubber-yoga-mat-1.webp",
+  "new": "botanical-print-cork-rubber-yoga-mat-4.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "pu-meditation-mat-set",
+  "cls": "照片/实景底",
+  "cur": "pu-meditation-mat-set-1.webp",
+  "new": "pu-meditation-mat-set-2.webp",
+  "how": "换白底原图"
+ },
+ {
+  "slug": "massage-stick-2",
+  "cls": "照片/实景底",
+  "cur": "massage-stick-2-1.webp",
+  "new": "massage-stick-2-2.webp",
+  "how": "换白底原图"
+ }
+]

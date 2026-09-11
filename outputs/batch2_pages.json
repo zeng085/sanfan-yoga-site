@@ -1,0 +1,984 @@
+[
+ {
+  "src": "foam-roller",
+  "new": "foam-roller",
+  "title_en": "EVA Foam Roller Set",
+  "title_zh": "EVA 泡沫轴套装",
+  "fam": "roller",
+  "sect": "rollers",
+  "base": 2.52,
+  "specs": {
+   "Material": "EVA",
+   "Size": "33cm / 45cm",
+   "Colors": "Customized",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customization Available",
+   "OEM": "Acceptale",
+   "Packaging": "Poly Bag+Carton or customized",
+   "Compliance": "ROHS / CE / ISO9001 / BSCI / REACH"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/foam-roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/foam-roller-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-purple-foam-roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-pink-foam-roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-green-foam-roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-blue-foam-roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-purple-foam-roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-pink-foam-roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-black-foam-roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-green-foam-roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-blue-foam-roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-black-foam-roller.webp"
+  ]
+ },
+ {
+  "src": "foam-roller-2",
+  "new": "foam-roller-2",
+  "title_en": "EVA Foam Roller — Pink",
+  "title_zh": "EVA 浮点泡沫轴（粉色）",
+  "fam": "roller",
+  "sect": "rollers",
+  "base": 2.52,
+  "specs": {
+   "Material": "EVA",
+   "Size": "30cm / 33cm / 45cm",
+   "Colors": "Customized",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customization Available",
+   "OEM": "Acceptale",
+   "Packaging": "Poly Bag+Carton or customized",
+   "Compliance": "ROHS / CE / ISO9001 / BSCI / REACH"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/foam-roler.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/foam-roler-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-purple-foam-roler.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-pink-foam-roler.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-green-foam-roler.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-blue-foam-roler.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-black-foam-roler.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-purple-foam-roler.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-pink-foam-roler.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-green-foam-roler.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-blue-foam-roler.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-black-foam-roler.webp"
+  ]
+ },
+ {
+  "src": "foam-roller-3",
+  "new": "foam-roller-3",
+  "title_en": "EVA Foam Roller — Purple",
+  "title_zh": "EVA 浮点泡沫轴（紫色）",
+  "fam": "roller",
+  "sect": "rollers",
+  "base": 2.52,
+  "specs": {
+   "Material": "EVA",
+   "Size": "33cm / 45cm",
+   "Colors": "Customized",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customization Available",
+   "OEM": "Acceptale",
+   "Packaging": "Poly Bag+Carton or customized",
+   "Compliance": "ROHS / CE / ISO9001 / BSCI / REACH"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/foam-roller-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/foam-roller-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-purple-foam-roller-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-pink-foam-roller-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/45cm-green-foam-roller-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-purple-foam-roller-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-pink-foam-roller-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/33cm-green-foam-roller-1.webp"
+  ]
+ },
+ {
+  "src": "eva-foam-roller",
+  "new": "eva-foam-roller",
+  "title_en": "EVA Wave Foam Roller",
+  "title_zh": "EVA 波浪纹泡沫轴",
+  "fam": "roller",
+  "sect": "rollers",
+  "base": 2.52,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-13.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-12.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-10.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-9.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/EVA-Foam-Roller-3.webp"
+  ]
+ },
+ {
+  "src": "eva-foam-roller-2",
+  "new": "eva-foam-roller-2",
+  "title_en": "EVA Foam Roller 33 / 45 cm",
+  "title_zh": "EVA 泡沫轴 33 / 45 cm",
+  "fam": "roller",
+  "sect": "rollers",
+  "base": 2.52,
+  "specs": {
+   "Material": "EVA",
+   "Size": "45*12.5CM / 33*12.5CM",
+   "Colors": "Customized",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customization Available",
+   "OEM": "Acceptale",
+   "Packaging": "Poly Bag+Carton or customized",
+   "Compliance": "ROHS / CE / ISO9001 / BSCI / REACH"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Foam-Roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Foam-Roller-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Foam-Roller-11.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/black-33cm.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/black-45cm.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/blue-33cm.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/blue-45cm.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/green-33cm.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/green-45cm.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/light-purple-35cm.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/light-purple-45cm.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/pink-35cm.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/pink-45cm.webp"
+  ]
+ },
+ {
+  "src": "vibrating-foam-roller",
+  "new": "vibrating-foam-roller",
+  "title_en": "Vibrating Foam Roller",
+  "title_zh": "震动泡沫轴",
+  "fam": "roller",
+  "sect": "rollers",
+  "base": 2.52,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibrating-Foam-Roller-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibrating-Foam-Roller-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibrating-Foam-Roller-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibrating-Foam-Roller-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibrating-Foam-Roller-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibrating-Foam-Roller-6.webp"
+  ]
+ },
+ {
+  "src": "vibrating-yoga-roller",
+  "new": "vibrating-yoga-roller",
+  "title_en": "Vibrating Yoga Roller",
+  "title_zh": "震动瑜伽柱",
+  "fam": "roller",
+  "sect": "rollers",
+  "base": 2.52,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2024/12/diandongyujiadian-1.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2024/12/diandongyujiadian-2.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2024/12/diandongyujiadian-3.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2024/12/diandongyujiadian-4.jpg"
+  ]
+ },
+ {
+  "src": "advanced-yoga-roller",
+  "new": "advanced-yoga-roller",
+  "title_en": "Advanced Yoga Roller",
+  "title_zh": "升级款瑜伽柱",
+  "fam": "roller",
+  "sect": "rollers",
+  "base": 2.52,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2024/12/33cm-green.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2024/12/33cm-pink.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2024/12/33cm-purple.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2024/12/33cm-blue.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2024/12/33cm-black.jpg"
+  ]
+ },
+ {
+  "src": "fascia-gun",
+  "new": "fascia-gun",
+  "title_en": "Fascia Gun (White)",
+  "title_zh": "筋膜枪（白色）",
+  "fam": "fascia_gun",
+  "sect": "rollers",
+  "base": null,
+  "specs": {
+   "Material": "ABS + Electronic Components",
+   "Size": "14*5.5*15cm",
+   "MassageHeads": "6 Massage Heads,8 Massage Heads",
+   "Colors": "Black, Gray, White",
+   "Logo": "Customized Logo Availale",
+   "Feature": "Multi-functional Stair Climber",
+   "Gender": "Unisex"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Fascia-Gun.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Fascia-Gun-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Fascia-Gun-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Fascia-Gun-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Fascia-Gun-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Fascia-Gun-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Fascia-Gun-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/black-Fascia-Gun.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/white-Fascia-Gun.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/gray-Fascia-Gun.webp"
+  ]
+ },
+ {
+  "src": "fascia-gun-1",
+  "new": "fascia-gun-1",
+  "title_en": "Fascia Gun (T-Shape)",
+  "title_zh": "筋膜枪 T 型",
+  "fam": "fascia_gun",
+  "sect": "rollers",
+  "base": null,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-6.webp"
+  ]
+ },
+ {
+  "src": "fascia-gun-2",
+  "new": "fascia-gun-2",
+  "title_en": "Fascia Gun (Ring Grip)",
+  "title_zh": "环形握把筋膜枪",
+  "fam": "fascia_gun",
+  "sect": "rollers",
+  "base": null,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-2-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-2-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-2-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-2-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-2-6.webp"
+  ]
+ },
+ {
+  "src": "fascia-gun-3",
+  "new": "fascia-gun-3",
+  "title_en": "Fascia Gun (Pro)",
+  "title_zh": "专业款筋膜枪",
+  "fam": "fascia_gun",
+  "sect": "rollers",
+  "base": null,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-3-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-3-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-3-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-3-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-3-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascia-Gun-3-6.webp"
+  ]
+ },
+ {
+  "src": "fascial-sphere-1",
+  "new": "fascial-sphere-1",
+  "title_en": "Fascial Sphere (Textured)",
+  "title_zh": "浮点筋膜球",
+  "fam": "fascia_ball",
+  "sect": "rollers",
+  "base": null,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-6.webp"
+  ]
+ },
+ {
+  "src": "fascial-sphere-2",
+  "new": "fascial-sphere-2",
+  "title_en": "Fascial Sphere (Smooth)",
+  "title_zh": "光面筋膜球",
+  "fam": "fascia_ball",
+  "sect": "rollers",
+  "base": null,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-2-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-2-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-2-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-2-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-2-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-2-7.webp"
+  ]
+ },
+ {
+  "src": "fascial-sphere-3",
+  "new": "fascial-sphere-3",
+  "title_en": "Fascial Sphere Set (6 Colours)",
+  "title_zh": "筋膜球套装（6 色）",
+  "fam": "fascia_ball",
+  "sect": "rollers",
+  "base": null,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-3-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-3-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-3-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-3-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-3-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-3-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Fascial-Sphere-3-7.webp"
+  ]
+ },
+ {
+  "src": "massage-stick",
+  "new": "massage-stick",
+  "title_en": "Massage Stick 34 cm",
+  "title_zh": "按摩棒 34 cm",
+  "fam": "massage",
+  "sect": "rollers",
+  "base": null,
+  "specs": {
+   "Material": "PP + Stainless Steel Pipe",
+   "Size": "34*5.5*5.5cm",
+   "Weight": "220g",
+   "Colors": "Pink, Purple, Blue, Green, Black",
+   "Feature": "Easy Operation",
+   "Logo": "MuLinSen or Customizable",
+   "GoodFor": "Muscle Massage"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Black-Massage-Stick.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Blue-Massage-Stick.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Green-Massage-Stick.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Pink-Massage-Stick.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Purple-Massage-Stick.webp"
+  ]
+ },
+ {
+  "src": "massage-stick-2",
+  "new": "massage-stick-2",
+  "title_en": "Massage Stick 32 cm",
+  "title_zh": "按摩棒 32 cm",
+  "fam": "massage",
+  "sect": "rollers",
+  "base": null,
+  "specs": {
+   "Material": "PP + Stainless Steel Pipe",
+   "Size": "32*4.5cm",
+   "MassageArea": "NECK, LEGS, BODY",
+   "Colors": "Orange, Purple, Green",
+   "Feature": "Easy Operation",
+   "Logo": "MuLinSen or Customizable",
+   "GoodFor": "Muscle Massage"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-1-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-5-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-4-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-3-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Massage-Stick-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Tiffany-Blue-Massage-Stick.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Sunset-Orange-Massage-Stick.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Haze-Purple-Massage-Stick.webp"
+  ]
+ },
+ {
+  "src": "massager-1",
+  "new": "massager-1",
+  "title_en": "Spiral Massage Roller",
+  "title_zh": "螺旋按摩棒",
+  "fam": "massage",
+  "sect": "rollers",
+  "base": null,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-6.webp"
+  ]
+ },
+ {
+  "src": "massager-2",
+  "new": "massager-2",
+  "title_en": "Dual-Head Massage Stick",
+  "title_zh": "双头按摩棒",
+  "fam": "massage",
+  "sect": "rollers",
+  "base": null,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-9.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-10.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-11.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-12.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-2-13.webp"
+  ]
+ },
+ {
+  "src": "massager-3",
+  "new": "massager-3",
+  "title_en": "Beaded Massage Roller",
+  "title_zh": "串珠按摩棒",
+  "fam": "massage",
+  "sect": "rollers",
+  "base": null,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-3-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-3-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-3-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-3-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-3-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-3-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Massage-Stick-3-7.webp"
+  ]
+ },
+ {
+  "src": "circular-leg-clamps",
+  "new": "circular-leg-clamps",
+  "title_en": "Circular Leg Massager",
+  "title_zh": "环形腿部按摩器",
+  "fam": "massage",
+  "sect": "rollers",
+  "base": null,
+  "specs": {
+   "Material": "PP + Stainless Steel Pipe",
+   "Size": "25*24*7cm / 25*24*9.7cm",
+   "RollerCount": "18-wheel / 29wheel",
+   "MassageArea": "NECK, LEGS, BODY",
+   "Colors": "Orange, Purple, Blue",
+   "Feature": "Easy Operation",
+   "Logo": "MuLinSen or Customizable",
+   "GoodFor": "Muscle Massage"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Circular-Leg-Clamps.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Circular-Leg-Clamps-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Circular-Leg-Clamps-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Circular-Leg-Clamps-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Circular-Leg-Clamps-3.webp"
+  ]
+ },
+ {
+  "src": "resistance-band",
+  "new": "resistance-band",
+  "title_en": "Silicone Resistance Band",
+  "title_zh": "硅胶弹力带",
+  "fam": "band",
+  "sect": "bands",
+  "base": null,
+  "specs": {
+   "Material": "Silicone",
+   "Size": "33*6.9cm",
+   "Resistance": "10-50 LBS",
+   "Colors": "Pink, Purple",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Resistance-Band.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/10-lbs.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/20-lbs.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/30-lbs.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/40-lbs.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/50-lbs.webp"
+  ]
+ },
+ {
+  "src": "resistance-band-2",
+  "new": "resistance-band-2",
+  "title_en": "TPE Resistance Band",
+  "title_zh": "TPE 弹力带",
+  "fam": "band",
+  "sect": "bands",
+  "base": 3.5,
+  "specs": {
+   "Material": "TPE",
+   "Size": "44cm*9.9cm*5mm",
+   "Colors": "Pink, Purple, Blue",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Resistance-Band.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Resistance-Band-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Resistance-Band-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Resistance-Band-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Resistance-Band-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/blue-Resistance-Band.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/pink-Resistance-Band.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/purple-Resistance-Band.webp"
+  ]
+ },
+ {
+  "src": "resistance-tube",
+  "new": "resistance-tube",
+  "title_en": "Resistance Tube",
+  "title_zh": "阻力管",
+  "fam": "band",
+  "sect": "bands",
+  "base": 3.5,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Tube-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Tube-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Tube-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Tube-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Tube-6.webp"
+  ]
+ },
+ {
+  "src": "resistance-tube-2",
+  "new": "resistance-tube-2",
+  "title_en": "Resistance Tube — With Handles",
+  "title_zh": "阻力管（带把手）",
+  "fam": "band",
+  "sect": "bands",
+  "base": 3.5,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Power-Band-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Power-Band-2-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Power-Band-2-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Power-Band-2-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Power-Band-2-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Power-Band-2-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Power-Band-2-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Power-Band-2-8.webp"
+  ]
+ },
+ {
+  "src": "power-band",
+  "new": "power-band",
+  "title_en": "Power Band",
+  "title_zh": "力量带",
+  "fam": "band",
+  "sect": "bands",
+  "base": 3.5,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Band-Loop-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Band-Loop-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Band-Loop-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Band-Loop-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Band-Loop-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Resistance-Band-Loop-6.webp"
+  ]
+ },
+ {
+  "src": "exercise-bands",
+  "new": "exercise-bands",
+  "title_en": "Exercise Bands Set",
+  "title_zh": "训练弹力带套装",
+  "fam": "band",
+  "sect": "bands",
+  "base": 5.8,
+  "specs": {
+   "Material": "TPE",
+   "Size": "1500*150*0.35mm / 0.45mm / 0.55mm",
+   "Strength": "15lbs, 25lbs, 35lbs",
+   "Colors": "Pink, Purple, Blue",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "OPP Bag",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Exercise-Bands.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Exercise-Bands-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Exercise-Bands-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Exercise-Bands-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Exercise-Bands-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Exercise-Bands-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Pink-Exercise-Bands.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Purple-Exercise-Bands.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Blue-Exercise-Bands.webp"
+  ]
+ },
+ {
+  "src": "tpe-resistance-loop-band",
+  "new": "tpe-resistance-loop-band",
+  "title_en": "TPE Resistance Loop Band",
+  "title_zh": "TPE 环形弹力带",
+  "fam": "band",
+  "sect": "bands",
+  "base": 3.5,
+  "specs": {
+   "Material": "TPE",
+   "Size": "600*50*0.8mm / 1mm / 1.2mm",
+   "Strength": "15lbs, 25lbs, 35lbs",
+   "Colors": "Pink, Purple, Green",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "OPP Bag",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/TPE-Resistance-Loop-Band.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/TPE-Resistance-Loop-Band-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/TPE-Resistance-Loop-Band-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/TPE-Resistance-Loop-Band-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/TPE-Resistance-Loop-Band-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/TPE-Resistance-Loop-Band-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Pink-TPE-Resistance-Loop-Band.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Purple-TPE-Resistance-Loop-Band.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/09/Green-TPE-Resistance-Loop-Band.webp"
+  ]
+ },
+ {
+  "src": "figure-8-resistance-bands",
+  "new": "figure-8-resistance-bands",
+  "title_en": "Figure 8 Resistance Bands",
+  "title_zh": "8 字弹力带",
+  "fam": "band",
+  "sect": "bands",
+  "base": 3.5,
+  "specs": {
+   "Material": "TPE",
+   "Size": "42*14cm",
+   "Colors": "Pink, Purple, Orange",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Figure-8-Resistance-Bands.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Figure-8-Resistance-Bands-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Figure-8-Resistance-Bands-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Figure-8-Resistance-Bands-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Figure-8-Resistance-Bands-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/purple-Figure-8-Resistance-Bands.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/pink-Figure-8-Resistance-Bands.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/orange-Figure-8-Resistance-Bands.webp"
+  ]
+ },
+ {
+  "src": "foot-pedal-resistance-band",
+  "new": "foot-pedal-resistance-band",
+  "title_en": "Foot Pedal Resistance Band",
+  "title_zh": "脚踏式弹力带",
+  "fam": "band",
+  "sect": "bands",
+  "base": 3.5,
+  "specs": {
+   "Material": "TPE",
+   "Size": "42*24cm",
+   "Colors": "Customized",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/Foot-Pedal-Resistance-Band-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/Foot-Pedal-Resistance-Band-1-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/Foot-Pedal-Resistance-Band-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/green-Foot-Pedal-Resistance-Band-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/pink-Foot-Pedal-Resistance-Band-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/purple-Foot-Pedal-Resistance-Band-1.webp"
+  ]
+ },
+ {
+  "src": "yoga-ball",
+  "new": "yoga-ball",
+  "title_en": "Anti-Burst Yoga Ball",
+  "title_zh": "防爆瑜伽球",
+  "fam": "yoga_ball",
+  "sect": "props",
+  "base": 3.7,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Frosted-Fitness-Ball-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Frosted-Fitness-Ball-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Frosted-Fitness-Ball-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Frosted-Fitness-Ball-7.webp"
+  ]
+ },
+ {
+  "src": "yoga-bag",
+  "new": "yoga-bag",
+  "title_en": "Yoga Bag",
+  "title_zh": "瑜伽包",
+  "fam": "yoga_bag",
+  "sect": "props",
+  "base": null,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Yoga-Mat-Mesh-Bag-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Yoga-Mat-Mesh-Bag-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Yoga-Mat-Mesh-Bag-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Yoga-Mat-Mesh-Bag-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Yoga-Mat-Mesh-Bag-5.webp"
+  ]
+ },
+ {
+  "src": "yoga-bolster",
+  "new": "yoga-bolster",
+  "title_en": "Yoga Bolster",
+  "title_zh": "瑜伽抱枕",
+  "fam": "yoga_bolster",
+  "sect": "props",
+  "base": null,
+  "specs": {
+   "Material": "100% Polyester + Sponge",
+   "Size": "64*24*13CM",
+   "Weight": "550g",
+   "Colors": "Beige, Gray, Pink, Purple",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customization Available"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Bolster.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Bolster-11.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Bolster-15.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Bolster-12.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Beige-10.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/gray-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-15.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/purple-5.webp"
+  ]
+ },
+ {
+  "src": "eva-yoga-block",
+  "new": "eva-yoga-block",
+  "title_en": "EVA Yoga Block",
+  "title_zh": "EVA 瑜伽砖",
+  "fam": "block",
+  "sect": "props",
+  "base": 1.42,
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2014/08/eva-6.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2014/08/eva-2.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2014/08/eva-3.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2014/08/eva-1.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2014/08/eva-4.jpg",
+   "https://www.sanfansport.com/wp-content/uploads/2014/08/eva-5.jpg"
+  ]
+ },
+ {
+  "src": "yoga-block-cover",
+  "new": "yoga-block-cover",
+  "title_en": "Yoga Block Cover",
+  "title_zh": "瑜伽砖套",
+  "fam": "block",
+  "sect": "props",
+  "base": null,
+  "specs": {
+   "Material": "Silicone",
+   "Size": "20*20cm",
+   "Colors": "Black, Nude Pink, Beige, Milk Tea, Gray Green, Pink",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Block-Cover.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Block-Cover-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Block-Cover-10.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Block-Cover-11.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Beige-9.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/black-9.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Gray-Green-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Milk-Tea-9.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Nude-Pink-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-11.webp"
+  ]
+ },
+ {
+  "src": "pilates-ring",
+  "new": "pilates-ring",
+  "title_en": "Silicone Pilates Ring",
+  "title_zh": "硅胶普拉提圈",
+  "fam": "ring",
+  "sect": "props",
+  "base": 6.4,
+  "specs": {
+   "Material": "Silicone + Fiberglass",
+   "Size": "Inner Diameter: 34 cm",
+   "Weight": "390g",
+   "Colors": "Black, Nude Pink, Beige, Milk Tea, Gray Green, Pink",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pilates-Ring-13.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pilates-Ring-10.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pilates-Ring-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pilates-Ring-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pilates-Ring-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pilates-Ring-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Beige-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/black-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/gray-green-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Milk-Tea-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Nude-Pink-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-9.webp"
+  ]
+ },
+ {
+  "src": "pilates-ring-2",
+  "new": "pilates-ring-2",
+  "title_en": "Pilates Ring 40 cm",
+  "title_zh": "普拉提圈 40 cm",
+  "fam": "ring",
+  "sect": "props",
+  "base": 1.9,
+  "specs": {
+   "Material": "PP + EVA + NBR Foam + Fiberglass",
+   "Size": "Diameter: 40 cm",
+   "Weight": "350g",
+   "Colors": "Purple, Green, Pink, Blue",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pilates-Circle.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pilates-Circle-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pilates-Circle-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pilates-Circle-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/blue-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/green-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-14.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/purple-4.webp"
+  ]
+ },
+ {
+  "src": "abs-yoga-ring",
+  "new": "abs-yoga-ring",
+  "title_en": "ABS Yoga Ring",
+  "title_zh": "ABS 瑜伽圈",
+  "fam": "ring",
+  "sect": "props",
+  "base": 1.9,
+  "specs": {
+   "Material": "ABS",
+   "Size": "22.5*11.5cm / 24*12.5cm",
+   "Weight": "178g",
+   "Colors": "Black, Green, Orange, Pink, Blue, Purple, Red, Yellow",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/yoga-ring-12.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/purple-2-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/black-10.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/blue-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/green-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/orange-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-13.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-2-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/purple-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/red.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/yellow-2.webp"
+  ]
+ },
+ {
+  "src": "yoga-ring",
+  "new": "yoga-ring",
+  "title_en": "TPE Yoga Ring",
+  "title_zh": "TPE 瑜伽圈",
+  "fam": "ring",
+  "sect": "props",
+  "base": 1.9,
+  "specs": {
+   "Material": "TPE",
+   "Size": "23.5*12.5cm / 24.5*12.5cm",
+   "Weight": "217g / 248g",
+   "Colors": "Pink, Blue, Purple, Yellow",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Ring.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Ring-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Ring-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Yoga-Ring-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/blue-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/blue-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-2-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-12.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/purple-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/purple-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/yellow-1.webp"
+  ]
+ },
+ {
+  "src": "stretch-board",
+  "new": "stretch-board",
+  "title_en": "Stretch Board",
+  "title_zh": "拉伸板",
+  "fam": "stretch_board",
+  "sect": "props",
+  "base": null,
+  "specs": {
+   "Material": "PP",
+   "Size": "27.5*26*3cm",
+   "Colors": "Pink, Blue, Green, Purple",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Customized",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/Stretch-board-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/Stretch-board-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/blue-Stretch-board.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/green-Stretch-board.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/pink-Stretch-board.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/11/purple-Stretch-board.webp"
+  ]
+ }
+]

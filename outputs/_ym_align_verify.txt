@@ -1,0 +1,51 @@
+✓ index.html
+     H1 EN: None
+     规格 0 行 | Size=None | Colors=None
+     卡片名: ['TPE Yoga Mat', 'Wide TPE Yoga Mat', 'TPE Double Yoga Mat', 'TPE Folding Yoga Mat', 'PU Rubber Yoga Mat', 'Matte PU Rubber Yoga Mat', 'TPE Camouflage Yoga Mat']
+
+✓ products.html
+     H1 EN: None
+     规格 0 行 | Size=None | Colors=None
+     卡片名: ['TPE Yoga Mat', 'Wide TPE Yoga Mat', 'TPE Double Yoga Mat', 'TPE Folding Yoga Mat', 'PU Rubber Yoga Mat', 'Matte PU Rubber Yoga Mat', 'TPE Camouflage Yoga Mat']
+
+✓ products/ym1.html
+     H1 EN: TPE Yoga Mat — SANFAN
+     H1 ZH: TPE 瑜伽垫 — 三梵   面包屑: Yoga Mats瑜伽垫
+     规格 10 行 | Size=183×61 / 183×66 / 183×80 / 183×90 cm | Colors=Purple / Blue / Black / Light Purple / Soft Pink / M
+     卡片名: ['Wide TPE Yoga Mat加宽 TPE 瑜伽垫', 'TPE Double Yoga MatTPE 双人瑜伽垫', 'TPE Folding Yoga MatTPE 折叠瑜伽垫', 'PU Rubber Yoga MatPU 橡胶瑜伽垫']
+
+✓ products/ym2.html
+     H1 EN: Wide TPE Yoga Mat — SANFAN
+     H1 ZH: 加宽 TPE 瑜伽垫 — 三梵   面包屑: Yoga Mats瑜伽垫
+     规格 10 行 | Size=183×80 / 183×90 cm | Colors=Purple / Blue / Black, dual-color combos & custom pr
+     卡片名: ['TPE Yoga MatTPE 瑜伽垫', 'TPE Double Yoga MatTPE 双人瑜伽垫', 'TPE Folding Yoga MatTPE 折叠瑜伽垫', 'PU Rubber Yoga MatPU 橡胶瑜伽垫']
+
+✓ products/ym3.html
+     H1 EN: TPE Double Yoga Mat — SANFAN
+     H1 ZH: TPE 双人瑜伽垫 — 三梵   面包屑: Yoga Mats瑜伽垫
+     规格 10 行 | Size=185×122 cm | Colors=Matcha Green + Dark Gray or Customized
+     卡片名: ['TPE Yoga MatTPE 瑜伽垫', 'Wide TPE Yoga Mat加宽 TPE 瑜伽垫', 'TPE Folding Yoga MatTPE 折叠瑜伽垫', 'PU Rubber Yoga MatPU 橡胶瑜伽垫']
+
+✓ products/ym4.html
+     H1 EN: TPE Folding Yoga Mat — SANFAN
+     H1 ZH: TPE 折叠瑜伽垫 — 三梵   面包屑: Yoga Mats瑜伽垫
+     规格 9 行 | Size=183×61 cm; folded 14×61 cm | Colors=Green / Blue / Pink / Purple / Red or Customized
+     卡片名: ['TPE Yoga MatTPE 瑜伽垫', 'Wide TPE Yoga Mat加宽 TPE 瑜伽垫', 'TPE Double Yoga MatTPE 双人瑜伽垫', 'PU Rubber Yoga MatPU 橡胶瑜伽垫']
+
+✓ products/ym5.html
+     H1 EN: PU Rubber Yoga Mat — SANFAN
+     H1 ZH: PU 橡胶瑜伽垫 — 三梵   面包屑: Yoga Mats瑜伽垫
+     规格 10 行 | Size=185×68 cm | Colors=Purple / Pink / Green / Black / Gray / Blue / Sky Bl
+     卡片名: ['TPE Yoga MatTPE 瑜伽垫', 'Wide TPE Yoga Mat加宽 TPE 瑜伽垫', 'TPE Double Yoga MatTPE 双人瑜伽垫', 'TPE Folding Yoga MatTPE 折叠瑜伽垫']
+
+✓ products/ym6.html
+     H1 EN: Matte PU Rubber Yoga Mat — SANFAN
+     H1 ZH: 磨砂 PU 橡胶瑜伽垫 — 三梵   面包屑: Yoga Mats瑜伽垫
+     规格 10 行 | Size=185×68 cm | Colors=Milk Tea / Dark Gray / Soft Pink / Light Purple / Ja
+     卡片名: ['TPE Yoga MatTPE 瑜伽垫', 'Wide TPE Yoga Mat加宽 TPE 瑜伽垫', 'TPE Double Yoga MatTPE 双人瑜伽垫', 'TPE Folding Yoga MatTPE 折叠瑜伽垫']
+
+✓ products/ym7.html
+     H1 EN: TPE Camouflage Yoga Mat — SANFAN
+     H1 ZH: TPE 迷彩瑜伽垫 — 三梵   面包屑: Yoga Mats瑜伽垫
+     规格 9 行 | Size=183×68 cm | Colors=Camouflage Pink / Camouflage Blue / Camouflage Purpl
+     卡片名: ['TPE Yoga MatTPE 瑜伽垫', 'Wide TPE Yoga Mat加宽 TPE 瑜伽垫', 'TPE Double Yoga MatTPE 双人瑜伽垫', 'TPE Folding Yoga MatTPE 折叠瑜伽垫']

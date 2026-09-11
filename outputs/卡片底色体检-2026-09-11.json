@@ -1,0 +1,1310 @@
+{
+ "白底": [
+  {
+   "slug": "ym1",
+   "img": "ym1-1.webp",
+   "wr": 1.0,
+   "sd": 0.4,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "ym2",
+   "img": "ym2-1w.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "ym3",
+   "img": "ym3-9.webp",
+   "wr": 1.0,
+   "sd": 0.1,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "ym4",
+   "img": "ym4-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "ym5",
+   "img": "ym5-8.webp",
+   "wr": 0.992,
+   "sd": 8.7,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "ym6",
+   "img": "ym6-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "ym7",
+   "img": "camouflage-tpe-mat-1.webp",
+   "wr": 0.992,
+   "sd": 8.4,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "arched-pu-rubber-yoga-mat",
+   "img": "arched-pu-rubber-yoga-mat-4.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "cork-rubber-yoga-mat",
+   "img": "cork-rubber-yoga-mat-1.webp",
+   "wr": 0.997,
+   "sd": 5.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "botanical-print-cork-rubber-yoga-mat",
+   "img": "botanical-print-cork-rubber-yoga-mat-4.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "cork-suede-yoga-mat",
+   "img": "cork-suede-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "cork-tpe-yoga-mat",
+   "img": "cork-tpe-yoga-mat-5.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "two-tone-cork-tpe-yoga-mat",
+   "img": "two-tone-cork-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pink-foldable-yoga-mat",
+   "img": "pink-foldable-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "matte-pu-rubber-foldable-yoga-mat",
+   "img": "matte-pu-rubber-foldable-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 1.3,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "round-mandala-meditation-mat",
+   "img": "round-mandala-meditation-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "mandala-meditation-mat",
+   "img": "mandala-meditation-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pilates-reformer-mat-custom-logo",
+   "img": "pilates-reformer-mat-custom-logo-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pilates-reformer-mat-tropical-print",
+   "img": "pilates-reformer-mat-tropical-print-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pu-meditation-mat-set",
+   "img": "pu-meditation-mat-set-2.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "marble-print-pu-rubber-yoga-mat",
+   "img": "marble-print-pu-rubber-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "sage-green-pu-rubber-yoga-mat",
+   "img": "sage-green-pu-rubber-yoga-mat-1.webp",
+   "wr": 0.998,
+   "sd": 1.2,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "gradient-line-art-pu-rubber-yoga-mat",
+   "img": "gradient-line-art-pu-rubber-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "red-pu-rubber-yoga-mat",
+   "img": "red-pu-rubber-yoga-mat-1.webp",
+   "wr": 0.975,
+   "sd": 26.7,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "purple-mandala-pu-rubber-yoga-mat",
+   "img": "purple-mandala-pu-rubber-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "gray-mandala-pu-rubber-yoga-mat",
+   "img": "gray-mandala-pu-rubber-yoga-mat-1w.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pink-mandala-pu-rubber-yoga-mat",
+   "img": "pink-mandala-pu-rubber-yoga-mat-1w.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "solid-black-pu-rubber-yoga-mat",
+   "img": "solid-black-pu-rubber-yoga-mat-1.webp",
+   "wr": 0.872,
+   "sd": 76.1,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "gold-printed-pu-rubber-yoga-mat",
+   "img": "gold-printed-pu-rubber-yoga-mat-1.webp",
+   "wr": 0.786,
+   "sd": 66.7,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "ultra-thin-pu-rubber-travel-mat",
+   "img": "ultra-thin-pu-rubber-travel-mat-1.webp",
+   "wr": 0.992,
+   "sd": 11.3,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "cork-surface-pu-rubber-yoga-mat",
+   "img": "cork-surface-pu-rubber-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "olive-foldable-rubber-yoga-mat",
+   "img": "olive-foldable-rubber-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "navy-botanical-suede-tpe-yoga-mat",
+   "img": "navy-botanical-suede-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "gold-koi-foldable-suede-yoga-mat",
+   "img": "gold-koi-foldable-suede-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 1.5,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "flamingo-print-suede-rubber-yoga-mat",
+   "img": "flamingo-print-suede-rubber-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.4,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "geometric-print-suede-tpe-yoga-mat",
+   "img": "geometric-print-suede-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "round-mandala-suede-tpe-yoga-mat",
+   "img": "round-mandala-suede-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "monochrome-leaf-suede-tpe-yoga-mat",
+   "img": "monochrome-leaf-suede-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.1,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "watercolor-floral-suede-yoga-mat",
+   "img": "watercolor-floral-suede-yoga-mat-1.webp",
+   "wr": 0.849,
+   "sd": 13.3,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "galaxy-gradient-suede-yoga-mat",
+   "img": "galaxy-gradient-suede-yoga-mat-1.webp",
+   "wr": 0.859,
+   "sd": 10.1,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "aurora-gradient-suede-yoga-mat",
+   "img": "aurora-gradient-suede-yoga-mat-1.webp",
+   "wr": 0.854,
+   "sd": 11.7,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "starry-night-print-suede-yoga-mat",
+   "img": "starry-night-print-suede-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "dual-color-tpe-yoga-mat",
+   "img": "dual-color-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "eco-friendly-tpe-yoga-mat",
+   "img": "eco-friendly-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "tpe-meditation-mat",
+   "img": "tpe-meditation-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "spliced-color-tpe-yoga-mat",
+   "img": "spliced-color-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "purple-tpe-yoga-mat",
+   "img": "purple-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "lilac-tpe-yoga-mat",
+   "img": "lilac-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "mulinsen-branded-tpe-yoga-mat-61cm",
+   "img": "mulinsen-branded-tpe-yoga-mat-61cm-1w.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pink-and-black-dual-color-tpe-yoga-mat",
+   "img": "pink-and-black-dual-color-tpe-yoga-mat-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "alignment-line-tpe-yoga-mat",
+   "img": "alignment-line-tpe-yoga-mat-2.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "tpe-rubber-yoga-mat",
+   "img": "tpe-rubber-yoga-mat-1.webp",
+   "wr": 0.997,
+   "sd": 2.9,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "two-tone-double-layer-tpe-yoga-mat",
+   "img": "two-tone-double-layer-tpe-yoga-mat-9.webp",
+   "wr": 1.0,
+   "sd": 0.1,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pr1",
+   "img": "pr1-1.webp",
+   "wr": 0.915,
+   "sd": 38.6,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pr3",
+   "img": "pr3-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pr4",
+   "img": "pr4-1.webp",
+   "wr": 0.382,
+   "sd": 8.4,
+   "bg": [
+    239,
+    236,
+    236
+   ]
+  },
+  {
+   "slug": "yoga-ball",
+   "img": "yoga-ball-1.webp",
+   "wr": 0.489,
+   "sd": 79.2,
+   "bg": [
+    203,
+    183,
+    212
+   ]
+  },
+  {
+   "slug": "yoga-bag",
+   "img": "yoga-bag-1.webp",
+   "wr": 1.0,
+   "sd": 2.5,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "yoga-bolster",
+   "img": "yoga-bolster-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "eva-yoga-block",
+   "img": "eva-yoga-block-1.webp",
+   "wr": 0.384,
+   "sd": 8.4,
+   "bg": [
+    239,
+    236,
+    236
+   ]
+  },
+  {
+   "slug": "yoga-block-cover",
+   "img": "yoga-block-cover-1.webp",
+   "wr": 0.841,
+   "sd": 27.1,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pilates-ring",
+   "img": "pilates-ring-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "pilates-ring-2",
+   "img": "pilates-ring-2-1.webp",
+   "wr": 0.973,
+   "sd": 18.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "abs-yoga-ring",
+   "img": "abs-yoga-ring-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "yoga-ring",
+   "img": "yoga-ring-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fr1",
+   "img": "fr1-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fr2",
+   "img": "fr2-1.webp",
+   "wr": 1.0,
+   "sd": 0.1,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fr4",
+   "img": "fr4-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fr5",
+   "img": "fr5-1.webp",
+   "wr": 1.0,
+   "sd": 0.3,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "foam-roller",
+   "img": "foam-roller-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "foam-roller-2",
+   "img": "foam-roller-2-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "foam-roller-3",
+   "img": "foam-roller-3-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "eva-foam-roller",
+   "img": "eva-foam-roller-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "eva-foam-roller-2",
+   "img": "eva-foam-roller-2-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "vibrating-foam-roller",
+   "img": "vibrating-foam-roller-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fascia-gun",
+   "img": "fascia-gun-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    250,
+    250,
+    250
+   ]
+  },
+  {
+   "slug": "fascia-gun-1",
+   "img": "fascia-gun-1-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fascia-gun-2",
+   "img": "fascia-gun-2-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fascia-gun-3",
+   "img": "fascia-gun-3-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fascial-sphere-1",
+   "img": "fascial-sphere-1-1.webp",
+   "wr": 1.0,
+   "sd": 0.3,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fascial-sphere-2",
+   "img": "fascial-sphere-2-1.webp",
+   "wr": 0.818,
+   "sd": 7.5,
+   "bg": [
+    245,
+    244,
+    249
+   ]
+  },
+  {
+   "slug": "fascial-sphere-3",
+   "img": "fascial-sphere-3-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "massage-stick",
+   "img": "massage-stick-2.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "massage-stick-2",
+   "img": "massage-stick-2-2.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "massager-1",
+   "img": "massager-1-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "massager-2",
+   "img": "massager-2-2.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "massager-3",
+   "img": "massager-3-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "rb1",
+   "img": "rb1-1.webp",
+   "wr": 0.987,
+   "sd": 2.4,
+   "bg": [
+    246,
+    246,
+    246
+   ]
+  },
+  {
+   "slug": "rb2",
+   "img": "rb2-1.webp",
+   "wr": 0.489,
+   "sd": 79.2,
+   "bg": [
+    202,
+    183,
+    211
+   ]
+  },
+  {
+   "slug": "resistance-band",
+   "img": "resistance-band-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "resistance-band-2",
+   "img": "resistance-band-2-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "resistance-tube",
+   "img": "resistance-tube-1.webp",
+   "wr": 0.657,
+   "sd": 64.2,
+   "bg": [
+    254,
+    254,
+    254
+   ]
+  },
+  {
+   "slug": "resistance-tube-2",
+   "img": "resistance-tube-2-1.webp",
+   "wr": 0.993,
+   "sd": 11.3,
+   "bg": [
+    254,
+    254,
+    254
+   ]
+  },
+  {
+   "slug": "power-band",
+   "img": "power-band-1.webp",
+   "wr": 0.997,
+   "sd": 2.3,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "exercise-bands",
+   "img": "exercise-bands-1.webp",
+   "wr": 0.987,
+   "sd": 2.1,
+   "bg": [
+    245,
+    245,
+    245
+   ]
+  },
+  {
+   "slug": "tpe-resistance-loop-band",
+   "img": "tpe-resistance-loop-band-2.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "foot-pedal-resistance-band",
+   "img": "foot-pedal-resistance-band-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fi2",
+   "img": "fi2-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fi3",
+   "img": "fi3-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fi4",
+   "img": "fi4-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "slug": "fi5",
+   "img": "fi5-1.webp",
+   "wr": 1.0,
+   "sd": 0.0,
+   "bg": [
+    255,
+    255,
+    255
+   ]
+  }
+ ],
+ "色块底": [],
+ "照片/实景底": [
+  {
+   "slug": "foldable-yoga-mat-multi-color",
+   "img": "foldable-yoga-mat-multi-color-1.webp",
+   "wr": 0.014,
+   "sd": 43.9,
+   "bg": [
+    207,
+    201,
+    202
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "oil-painting-style-yoga-mat",
+   "img": "oil-painting-style-yoga-mat-1.webp",
+   "wr": 0.001,
+   "sd": 36.2,
+   "bg": [
+    200,
+    187,
+    177
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "pilates-reformer-mat-mandala",
+   "img": "pilates-reformer-mat-mandala-1.webp",
+   "wr": 0.0,
+   "sd": 48.5,
+   "bg": [
+    162,
+    144,
+    117
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "pu-rubber-yoga-mat-with-alignment-lines",
+   "img": "pu-rubber-yoga-mat-with-alignment-lines-1.webp",
+   "wr": 0.0,
+   "sd": 37.7,
+   "bg": [
+    157,
+    163,
+    158
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "pink-mandala-foldable-suede-tpe-mat",
+   "img": "pink-mandala-foldable-suede-tpe-mat-1.webp",
+   "wr": 0.0,
+   "sd": 16.1,
+   "bg": [
+    110,
+    76,
+    87
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "mulinsen-branded-tpe-yoga-mat-183cm",
+   "img": "mulinsen-branded-tpe-yoga-mat-183cm-1.webp",
+   "wr": 0.0,
+   "sd": 26.5,
+   "bg": [
+    242,
+    208,
+    208
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "mulinsen-dual-sided-non-slip-tpe-mat",
+   "img": "mulinsen-dual-sided-non-slip-tpe-mat-1.webp",
+   "wr": 0.031,
+   "sd": 27.1,
+   "bg": [
+    230,
+    195,
+    195
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "mulinsen-widened-anti-slip-tpe-mat-90cm",
+   "img": "mulinsen-widened-anti-slip-tpe-mat-90cm-1.webp",
+   "wr": 0.0,
+   "sd": 15.8,
+   "bg": [
+    206,
+    182,
+    187
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "mulinsen-3x-anti-slip-tpe-mat-90cm",
+   "img": "mulinsen-3x-anti-slip-tpe-mat-90cm-1.webp",
+   "wr": 0.0,
+   "sd": 22.8,
+   "bg": [
+    210,
+    186,
+    172
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "multi-color-tpe-yoga-mat-bundle",
+   "img": "multi-color-tpe-yoga-mat-bundle-1.webp",
+   "wr": 0.112,
+   "sd": 66.3,
+   "bg": [
+    231,
+    222,
+    224
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "stretch-board",
+   "img": "stretch-board-1.webp",
+   "wr": 0.005,
+   "sd": 35.7,
+   "bg": [
+    217,
+    209,
+    206
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "fr3",
+   "img": "fr3-1.webp",
+   "wr": 0.0,
+   "sd": 39.0,
+   "bg": [
+    211,
+    133,
+    98
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "vibrating-yoga-roller",
+   "img": "vibrating-yoga-roller-1.webp",
+   "wr": 0.0,
+   "sd": 39.1,
+   "bg": [
+    210,
+    133,
+    98
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "advanced-yoga-roller",
+   "img": "advanced-yoga-roller-1.webp",
+   "wr": 0.0,
+   "sd": 35.6,
+   "bg": [
+    135,
+    159,
+    151
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "circular-leg-clamps",
+   "img": "circular-leg-clamps-1.webp",
+   "wr": 0.05,
+   "sd": 23.7,
+   "bg": [
+    248,
+    218,
+    199
+   ],
+   "white_candidates": []
+  },
+  {
+   "slug": "figure-8-resistance-bands",
+   "img": "figure-8-resistance-bands-1.webp",
+   "wr": 0.0,
+   "sd": 23.4,
+   "bg": [
+    230,
+    200,
+    196
+   ],
+   "white_candidates": []
+  }
+ ]
+}
