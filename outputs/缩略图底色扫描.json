@@ -1,0 +1,338 @@
+[
+ {
+  "tile": "TPE Yoga Mats",
+  "idx": 1,
+  "file": "ym1-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "TPE Yoga Mats",
+  "idx": 2,
+  "file": "ym2-1.webp",
+  "kind": "NEARWHITE",
+  "note": "近白底 avg=(214, 222, 218) 基本能融"
+ },
+ {
+  "tile": "TPE Yoga Mats",
+  "idx": 3,
+  "file": "ym3-1.webp",
+  "kind": "COLORED",
+  "note": "彩色底 avg=(237, 254, 236) 色度=18"
+ },
+ {
+  "tile": "TPE Yoga Mats",
+  "idx": 4,
+  "file": "ym4-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "TPE Yoga Mats",
+  "idx": 5,
+  "file": "camouflage-tpe-mat-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "TPE Yoga Mats",
+  "idx": 6,
+  "file": "alignment-line-tpe-yoga-mat-1.webp",
+  "kind": "COLORED",
+  "note": "彩色底 avg=(187, 139, 145) 色度=48"
+ },
+ {
+  "tile": "PU & Rubber Yoga Mats",
+  "idx": 1,
+  "file": "ym5-1.webp",
+  "kind": "COLORED",
+  "note": "彩色底 avg=(164, 190, 204) 色度=40"
+ },
+ {
+  "tile": "PU & Rubber Yoga Mats",
+  "idx": 2,
+  "file": "ym6-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "PU & Rubber Yoga Mats",
+  "idx": 3,
+  "file": "arched-pu-rubber-yoga-mat-1.webp",
+  "kind": "COLORED",
+  "note": "彩色底 avg=(225, 220, 208) 色度=17"
+ },
+ {
+  "tile": "PU & Rubber Yoga Mats",
+  "idx": 4,
+  "file": "cork-surface-pu-rubber-yoga-mat-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "PU & Rubber Yoga Mats",
+  "idx": 5,
+  "file": "gold-printed-pu-rubber-yoga-mat-1.webp",
+  "kind": "PHOTO",
+  "note": "实景照 spread=202"
+ },
+ {
+  "tile": "PU & Rubber Yoga Mats",
+  "idx": 6,
+  "file": "gradient-line-art-pu-rubber-yoga-mat-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Suede & Cork Yoga Mats",
+  "idx": 1,
+  "file": "aurora-gradient-suede-yoga-mat-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Suede & Cork Yoga Mats",
+  "idx": 2,
+  "file": "botanical-print-cork-rubber-yoga-mat-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(242, 238, 241) 会融进卡片色"
+ },
+ {
+  "tile": "Suede & Cork Yoga Mats",
+  "idx": 3,
+  "file": "cork-rubber-yoga-mat-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Suede & Cork Yoga Mats",
+  "idx": 4,
+  "file": "cork-suede-yoga-mat-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Suede & Cork Yoga Mats",
+  "idx": 5,
+  "file": "flamingo-print-suede-rubber-yoga-mat-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Suede & Cork Yoga Mats",
+  "idx": 6,
+  "file": "galaxy-gradient-suede-yoga-mat-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Meditation & Pilates Mats",
+  "idx": 1,
+  "file": "pr3-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Meditation & Pilates Mats",
+  "idx": 2,
+  "file": "mandala-meditation-mat-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Meditation & Pilates Mats",
+  "idx": 3,
+  "file": "pilates-reformer-mat-custom-logo-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Meditation & Pilates Mats",
+  "idx": 4,
+  "file": "pilates-reformer-mat-mandala-1.webp",
+  "kind": "COLORED",
+  "note": "彩色底 avg=(114, 101, 78) 色度=36"
+ },
+ {
+  "tile": "Meditation & Pilates Mats",
+  "idx": 5,
+  "file": "pilates-reformer-mat-tropical-print-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Meditation & Pilates Mats",
+  "idx": 6,
+  "file": "pu-meditation-mat-set-1.webp",
+  "kind": "PHOTO",
+  "note": "实景照 spread=137"
+ },
+ {
+  "tile": "Foam Rollers",
+  "idx": 1,
+  "file": "fr1-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Foam Rollers",
+  "idx": 2,
+  "file": "fr2-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Foam Rollers",
+  "idx": 3,
+  "file": "fr3-1.webp",
+  "kind": "COLORED",
+  "note": "彩色底 avg=(220, 138, 98) 色度=122"
+ },
+ {
+  "tile": "Foam Rollers",
+  "idx": 4,
+  "file": "fr4-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Foam Rollers",
+  "idx": 5,
+  "file": "advanced-yoga-roller-1.webp",
+  "kind": "PHOTO",
+  "note": "实景照 spread=80"
+ },
+ {
+  "tile": "Foam Rollers",
+  "idx": 6,
+  "file": "eva-foam-roller-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Massage & Recovery",
+  "idx": 1,
+  "file": "fr5-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Massage & Recovery",
+  "idx": 2,
+  "file": "circular-leg-clamps-1.webp",
+  "kind": "COLORED",
+  "note": "彩色底 avg=(244, 218, 205) 色度=39"
+ },
+ {
+  "tile": "Massage & Recovery",
+  "idx": 3,
+  "file": "fascia-gun-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(250, 250, 250) 会融进卡片色"
+ },
+ {
+  "tile": "Massage & Recovery",
+  "idx": 4,
+  "file": "fascia-gun-1-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Massage & Recovery",
+  "idx": 5,
+  "file": "fascia-gun-2-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Massage & Recovery",
+  "idx": 6,
+  "file": "fascia-gun-3-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Resistance Bands",
+  "idx": 1,
+  "file": "rb1-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(246, 246, 246) 会融进卡片色"
+ },
+ {
+  "tile": "Resistance Bands",
+  "idx": 2,
+  "file": "exercise-bands-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(245, 245, 245) 会融进卡片色"
+ },
+ {
+  "tile": "Resistance Bands",
+  "idx": 3,
+  "file": "figure-8-resistance-bands-1.webp",
+  "kind": "PHOTO",
+  "note": "实景照 spread=43"
+ },
+ {
+  "tile": "Resistance Bands",
+  "idx": 4,
+  "file": "foot-pedal-resistance-band-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Resistance Bands",
+  "idx": 5,
+  "file": "power-band-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(254, 254, 254) 会融进卡片色"
+ },
+ {
+  "tile": "Resistance Bands",
+  "idx": 6,
+  "file": "resistance-band-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Yoga Props & Accessories",
+  "idx": 1,
+  "file": "fi2-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Yoga Props & Accessories",
+  "idx": 2,
+  "file": "fi3-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Yoga Props & Accessories",
+  "idx": 3,
+  "file": "fi4-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Yoga Props & Accessories",
+  "idx": 4,
+  "file": "fi5-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(255, 255, 255) 会融进卡片色"
+ },
+ {
+  "tile": "Yoga Props & Accessories",
+  "idx": 5,
+  "file": "pr1-1.webp",
+  "kind": "WHITE",
+  "note": "白底 avg=(250, 250, 250) 会融进卡片色"
+ },
+ {
+  "tile": "Yoga Props & Accessories",
+  "idx": 6,
+  "file": "pr4-1.webp",
+  "kind": "NEARWHITE",
+  "note": "近白底 avg=(233, 231, 230) 基本能融"
+ }
+]

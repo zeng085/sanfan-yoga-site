@@ -7,7 +7,34 @@
 - 仓库 zeng085/sanfan-yoga-site，Vercel；B2B 瑜伽垫/健身器材 OEM/ODM 工厂站
 - EN 主站 + de/ja/ko/fr/it/es 6 语言 + 中文同页切换（无 /zh/ URL）
 - **页面结构**：117 产品页（`products/`）+ 8 分类页 + 总览 `products.html` + 首页
-- 改动流程：bump ?v= → push（github-api-push/push_api_v2.py，变更集对比**远端 parent**）
+- 改动流程：bump ?v= → push（`github-api-push/push_api_v3.py`，变更集对比**远端 parent**；
+  含二进制必须用 v3，且 diff 要带 `--no-renames`）
+- ⚠️ **推送前必查 `.gitignore`**：`i18n_build/data/`（报价表 16M）是商业机密，
+  绝不可进公开仓库；`outputs/{_riskcheck,bgtest,card_bg_white}/` 与 `__pycache__/` 已排除
+- ⭐ 推送走 git remote 里的 token **不存在**，在 `url.*.insteadOf` 里：
+  `git config --get-regexp '^url\.' | sed -n 's|.*https://\([^@]*\)@github.com.*|\1|p'`
+  （api.github.com 401 = 网络通但令牌错；000 才是断网）
+
+## 卡片视觉最终态（2026-09-11 定稿，?v20260911l）
+- 方案：暖纸卡 `--paper:#f9f7f2` + 图 `mix-blend-mode:multiply` + `object-fit:contain`
+  内缩 4%，**零描边零投影**；四类卡（prod-card / g-item / range-card / cat-tile）统一
+- ⭐ **16 张首图全部回归英文站原始素材**（先回 4 张算法抠底，再回 12 张换白底原图）——
+  结论：**multiply 已能兜住有色底，能换图就别抠图**，任何加工图都是多余
+- ❌ 已被用户否掉的两条路线：①把底全抠成白（不明智）②图外加边框（很土、不高级）
+- 工具：`swap_card_thumbs.py`（`--rollback` 反方向、`--only=关键词` 过滤 how）、
+  `unify_card_bg.py scan|strip` 体检换底、`final_check.py` 推送前全站体检
+
+## 缩略图网格 = 另一套规则（2026-09-12）
+- ⭐ **大图用原始素材，`products.html` 的 `.ct-thumbs` 6 格缩略图用白底素材** ——
+  两者要求不同：大图看质感（用户要"贴近原始素材"），3×2 密排小图看整齐（底色必须一致）
+- ⚠️ `.ct-thumbs a` 用 `contain` + `padding:8%`、`grid` 是 **3 列**（6 列时桌面仅 43px 看不清）。
+  图片若 `cover` 铺满，自带彩色底就会铺成方块，multiply 融不掉 → "有的有边框有的没有"
+- ⚠️ **`swap_card_thumbs.py` 的 `THUMB_RE` 会误伤 ct-thumbs**（把缩略图当卡片首图一起换）。
+  回滚/换图只针对大图时，别让它碰 `.ct-thumbs`
+- 工具：`edge_bg_test.py`（按图片**边缘一圈**判 Δ=multiply 后与卡片色的通道差，比四角准）、
+  `fix_ct_thumbs.py`（只改 ct-thumbs，且**只在 Δ 真的变小才换**——有的款换了反而更差）
+- 已知残留：英文站素材本身就是"彩色背景板/场景照"的产品（ym2、circular-leg-clamps、
+  pilates-reformer-mat-mandala、advanced-yoga-roller、figure-8-resistance-bands、fr3）无白底可换
 
 ## 产品分类（2026-09-11 拆页）
 - 原 `products.html` 117 卡平铺 **28 屏 → 8 分类页 + 总览页（2.6 屏）**。分类名即采购搜索词
@@ -34,6 +61,8 @@
   offers = **基准×0.7~×1.3**，正文不出数字。❌ 别用代发客户表/成本表。
 
 ## 产品页现状（09-11 体检后）
+- ✅ **以上已于 2026-09-11 推送上线**（commit `5519a354cd`，1504 文件；Vercel 已生效：
+  线上 `v20260911l`、下掉页 308 跳转、新图 200）
 - **117 页**；图片与英文站 **117/117 一致**（1000 张）；未进分类页 0、死链 0。
 - 已下掉 ym8/rb3/rb4/pr2/pr5/fi1。⚠️ fi4 有源曾误判无源 → **下掉前先目视对图**。
 - 待第三批 47 个（约 22 个空壳）。⭐ **ym1/ym2 是家族页非 1:1**（ym1↔14 个 TPE 垫），

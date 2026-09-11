@@ -16,3 +16,8 @@ i18n_build/data/
 outputs/_riskcheck/
 outputs/bgtest/
 outputs/card_bg_white/
+
+# 诊断/对比截图（只用于本地看图确认，不进站点仓库）
+outputs/*.png
+outputs/*.jpg
+outputs/*.jpeg

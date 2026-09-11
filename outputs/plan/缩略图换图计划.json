@@ -1,0 +1,58 @@
+[
+ {
+  "tile": "TPE Yoga Mats",
+  "idx": 3,
+  "cur": "ym3-1.webp",
+  "new": "ym3-9.webp",
+  "oldDiff": 19.0
+ },
+ {
+  "tile": "TPE Yoga Mats",
+  "idx": 6,
+  "cur": "alignment-line-tpe-yoga-mat-1.webp",
+  "new": "alignment-line-tpe-yoga-mat-2.webp",
+  "oldDiff": 112.4
+ },
+ {
+  "tile": "PU & Rubber Yoga Mats",
+  "idx": 1,
+  "cur": "ym5-1.webp",
+  "new": "ym5-10.webp",
+  "oldDiff": 81.0
+ },
+ {
+  "tile": "PU & Rubber Yoga Mats",
+  "idx": 3,
+  "cur": "arched-pu-rubber-yoga-mat-1.webp",
+  "new": "arched-pu-rubber-yoga-mat-2.webp",
+  "oldDiff": 44.6
+ },
+ {
+  "tile": "Suede & Cork Yoga Mats",
+  "idx": 2,
+  "cur": "botanical-print-cork-rubber-yoga-mat-1.webp",
+  "new": "botanical-print-cork-rubber-yoga-mat-10.webp",
+  "oldDiff": 34.9
+ },
+ {
+  "tile": "Meditation & Pilates Mats",
+  "idx": 6,
+  "cur": "pu-meditation-mat-set-1.webp",
+  "new": "pu-meditation-mat-set-10.webp",
+  "oldDiff": 26.4
+ },
+ {
+  "tile": "Resistance Bands",
+  "idx": 1,
+  "cur": "rb1-1.webp",
+  "new": "rb1-2.webp",
+  "oldDiff": 8.8
+ },
+ {
+  "tile": "Resistance Bands",
+  "idx": 2,
+  "cur": "exercise-bands-1.webp",
+  "new": "exercise-bands-2.webp",
+  "oldDiff": 9.8
+ }
+]
