@@ -6,11 +6,13 @@
 ## 概况
 - 仓库 zeng085/sanfan-yoga-site，Vercel；B2B 瑜伽垫/健身器材 OEM/ODM 工厂站
 - EN 主站 + de/ja/ko/fr/it/es 6 语言 + 中文同页切换（无 /zh/ URL）
-- **页面结构**：147 产品页（`products/`）+ 10 分类页 + 总览 `products.html` + 首页
-  + **6 场景页 `applications/` + `materials.html` 材质对比页**（09-12 新增，见下节）
-- **多语言覆盖（09-12 第一批后）**：6 语言站**各 76 页**（16 顶层含 10 分类 + 51 产品 + 9 blog）。
-  仍缺：7 场景页、`materials.html`、96 个产品页 —— 语言页对这些的链接**按设计回退英文页**
-  （用相对深度算足层级，不是死链）。⚠️ 判断"是否回退"别看单页，看**落英文链接数是否超过落语言版数**。
+- **页面结构**：147 产品页（`products/`）+ 10 分类页（⚠️ 在**根目录**，不在 products/）
+  + 总览 `products.html` + **6 场景页 `applications/` + `materials.html` 材质对比页** + 首页
+- **多语言覆盖（09-12 第四批后）**：6 语言站**各 84 页**（17 顶层 + 51 产品 + 9 blog
+  + 7 applications）= 504 页；分类页/材质页/场景页/blog 已 100% 覆盖。
+  **仍缺 96 个产品页** —— 其链接按设计回退到 `{lang}/products.html`（**本语言总览**，
+  不是英文页、也不是死链）。DeepL 额度已耗尽（剩 2,110 / 1,000,000），下批等下月重置。
+  ⚠️ 新增目录要同步 5 处清单、新增页后必须跑 `fix_i18n_links.py --fix`，见技能「坑 13/14」。
 - 改动流程：bump `?v=` → 合并成一个干净 commit → `github-api-push/push_api_v3.py --auto`
   ⭐ **用 v3 就不要再 `reset --soft` 对齐**——那是自造死局：本地 HEAD 退回旧 commit，
   而 github.com 不通 fetch 不到新对象 → 下次 `git diff <远端parent> HEAD` 报 bad object。
