@@ -10,21 +10,18 @@ import build_pages as B
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://fjsanfan.com"
-T1 = B.PAGES
-# 2026-08-31: blog 列表页 + 8 篇文章是后来生成的，不在 build_pages.PAGES 中，
-# 需要单独纳入 hreflang/sitemap，否则 Google 不会索引这些语言版页面。
-EXTRA_PAGES = [
-    "blog.html",
-    "blog/7day-sampling.html",
-    "blog/compliance.html",
-    "blog/custom-sizes.html",
-    "blog/moq-explained.html",
-    "blog/tpe-vs-pu.html",
-    "blog/vet-factory.html",
-    "blog/yoga-mat-materials.html",
-    "blog/yoga-mat-spec-guide.html",
-]
-PAGES = T1 + EXTRA_PAGES
+# 2026-09-12：build_pages.PAGES 已改造为动态发现 ALL_PAGES（原硬编码清单停留在
+# ym/pr/fr/rb/fi 老命名，与 147 产品页 / 10 分类页的现实脱节）。这里必须同步，
+# 否则新增页面不会进 hreflang 与 sitemap；更危险的是 update_sitemap() 会先把所有
+# (de|ja|ko|fr|it|es)/ 条目删掉再按 PAGES 重建 —— 清单过时 = 把已生成的语言页从
+# sitemap 里删掉。
+T1 = B.ALL_PAGES
+# blog 目录不在 build_pages 的发现范围内，改用扫描避免硬编码漏页
+EXTRA_PAGES = sorted(
+    os.path.relpath(p, ROOT).replace(os.sep, "/")
+    for p in glob.glob(os.path.join(ROOT, "blog", "*.html"))
+)
+PAGES = list(dict.fromkeys(T1 + EXTRA_PAGES))
 # 统一引用 build_pages 的语言集合，避免两处硬编码不一致导致 hreflang/sitemap 漏语言
 LANGS = B.LANGS
 

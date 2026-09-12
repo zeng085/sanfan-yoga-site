@@ -20,7 +20,12 @@ def all_html():
     for f in sorted(os.listdir(ROOT)):
         if f.endswith(".html"):
             out.append(f)
-    for d in ("products", "blog", "applications", "de", "ja", "ko", "fr", "it", "es"):
+    # ⚠️ 语言站必须递归到子目录：{lang}/products/ 与 {lang}/blog/ 各占 6 语言
+    # 共 360 个文件，只扫 {lang}/ 顶层会漏掉绝大部分语言页（2026-09-12 补）。
+    dirs = ["products", "blog", "applications"]
+    for lg in ("de", "ja", "ko", "fr", "it", "es"):
+        dirs += [lg, f"{lg}/products", f"{lg}/blog"]
+    for d in dirs:
         p = os.path.join(ROOT, d)
         if os.path.isdir(p):
             out += [f"{d}/{f}" for f in sorted(os.listdir(p)) if f.endswith(".html")]

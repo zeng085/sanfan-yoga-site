@@ -30,3 +30,9 @@ outputs/nav-preview/
 
 # 第四批通用款页面实拍（验收用，非站点资产）
 outputs/batch4-preview/
+
+# 多语言页实拍（验收用，非站点资产）
+outputs/i18n-preview/
+
+# 第一批多语言实拍（验收用，非站点资产）
+outputs/i18n-batch1/

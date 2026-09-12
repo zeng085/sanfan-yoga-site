@@ -1,0 +1,13 @@
+{
+ "pages": [
+  "blog.html",
+  "blog/7day-sampling.html",
+  "blog/compliance.html",
+  "blog/custom-sizes.html",
+  "blog/moq-explained.html",
+  "blog/tpe-vs-pu.html",
+  "blog/vet-factory.html",
+  "blog/yoga-mat-materials.html",
+  "blog/yoga-mat-spec-guide.html"
+ ]
+}

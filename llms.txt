@@ -27,6 +27,19 @@
 - Yoga mat materials compared, TPE vs PVC vs PU vs suede vs cork: https://fjsanfan.com/materials.html
 - Product categories: https://fjsanfan.com/products.html
 
+## Languages
+
+Core commerce pages — home, products overview, all 10 product categories and the 30 most-requested product pages — are also published in German, Japanese, Korean, French, Italian and Spanish (76 pages per language):
+
+- German: https://fjsanfan.com/de/products.html
+- Japanese: https://fjsanfan.com/ja/products.html
+- Korean: https://fjsanfan.com/ko/products.html
+- French: https://fjsanfan.com/fr/products.html
+- Italian: https://fjsanfan.com/it/products.html
+- Spanish: https://fjsanfan.com/es/products.html
+
+All 9 sourcing guides and the "Top 12 China yoga mat manufacturers" comparison are localized in the same six languages. The English pages above remain canonical — product specifications are most complete in English, and pages without a localized version fall back to English.
+
 ## Blog — sourcing guides for buyers
 
 - Top 12 yoga mat manufacturers in China compared by cluster (2026): https://fjsanfan.com/blog/top-12-china-yoga-mat-manufacturers.html

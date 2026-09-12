@@ -6,8 +6,11 @@
 ## 概况
 - 仓库 zeng085/sanfan-yoga-site，Vercel；B2B 瑜伽垫/健身器材 OEM/ODM 工厂站
 - EN 主站 + de/ja/ko/fr/it/es 6 语言 + 中文同页切换（无 /zh/ URL）
-- **页面结构**：141 产品页（`products/`）+ 10 分类页 + 总览 `products.html` + 首页
+- **页面结构**：147 产品页（`products/`）+ 10 分类页 + 总览 `products.html` + 首页
   + **6 场景页 `applications/` + `materials.html` 材质对比页**（09-12 新增，见下节）
+- **多语言覆盖（09-12 第一批后）**：6 语言站**各 76 页**（16 顶层含 10 分类 + 51 产品 + 9 blog）。
+  仍缺：7 场景页、`materials.html`、96 个产品页 —— 语言页对这些的链接**按设计回退英文页**
+  （用相对深度算足层级，不是死链）。⚠️ 判断"是否回退"别看单页，看**落英文链接数是否超过落语言版数**。
 - 改动流程：bump `?v=` → 合并成一个干净 commit → `github-api-push/push_api_v3.py --auto`
   ⭐ **用 v3 就不要再 `reset --soft` 对齐**——那是自造死局：本地 HEAD 退回旧 commit，
   而 github.com 不通 fetch 不到新对象 → 下次 `git diff <远端parent> HEAD` 报 bad object。
@@ -17,6 +20,17 @@
 - ⚠️ **推送前必查 `.gitignore`**：`i18n_build/data/`（报价表 16M）是商业机密，
   绝不可进公开仓库；`outputs/{_riskcheck,bgtest,card_bg_white}/`、`outputs/*.png|jpg`
   与 `__pycache__/` 已排除
+- ⭐ **仓库 public → private 可放心改**（2026-09-12 实测核查，非通用说法）：
+  owner 是**个人账号** `zeng085`（`type=User`，非 Org）→ Hobby **可以**部署个人私有仓库；
+  限制只针对「**组织**的私有仓库」。⚠️ 官方那句 "Hobby does not support collaboration for
+  private repositories" 说的是**多人协作**，极易被误读成"不能部署"。
+  PAT scope 是完整 `repo`（非 `public_repo`）→ `push_api_v3.py` 不受影响；
+  commit author `798508426@qq.com` 已由 GitHub 关联到 `zeng085` → 能过 Hobby 私有仓库的
+  「commit author = Vercel team owner」校验（⭐ public 仓库**不校验**这条，改私有后才生效）。
+  改前只需在面板确认两处：Vercel GitHub App 授权含该仓库、Vercel 账号绑了 GitHub `zeng085`；
+  另需确认 CloudStudio 是否靠 public 地址匿名拉取。
+  安全侧：历史 2067 个文件**从未提交过** `.deepl_key` / `.env` / 报价表 / xlsx，`git grep` 扫
+  `ghp_*`/`sk-*`/`AIza*` 0 命中 → **无泄漏需补救，改私有是纯收益**。
 - ⭐ 推送走 git remote 里的 token **不存在**，在 `url.*.insteadOf` 里：
   `git config --get-regexp '^url\.' | sed -n 's|.*https://\([^@]*\)@github.com.*|\1|p'`
   （api.github.com 401 = 网络通但令牌错；000 才是断网）
@@ -29,6 +43,21 @@
 - ❌ 已被用户否掉的两条路线：①把底全抠成白（不明智）②图外加边框（很土、不高级）
 - 工具：`swap_card_thumbs.py`（`--rollback` 反方向、`--only=关键词` 过滤 how）、
   `unify_card_bg.py scan|strip` 体检换底、`final_check.py` 推送前全站体检
+
+## ⭐⭐ 英文站不可达时的图片通道（2026-09-12 更新，重要）
+- 症状：首页与图片**全部 HTTP 000**（Cloudflare IP 级限流），DNS 正常解析到 CF IP。
+  直连 curl / urllib / Playwright `ctx.request` 全废；换 UA 完整头也没用。
+- **首选：`https://images.weserv.nl/?url=<host>/<path>`** → 200，40/40 张成功。
+  ⚠️⚠️ **不要传 `w=`/`h=`/`output=`/`q=`** —— 不传参数时它**透传原图字节**，
+  所以「最长边 900 + WebP q75」转码后 md5 仍与站内素材**可比**（查重有效）；加参数就失效。
+  并发 4 合适（8 吃限速）。脚本 `i18n_build/dl_common_products.py`。
+- 同期实测**不可用**：`wsrv.nl` 000 / `api.allorigins.win` 000 / `corsproxy.io` 403 /
+  `web.archive.org` 000。备选是 Playwright 浏览器同源代理（Chromium 网络栈能过）。
+- ⚠️ **建页前必须查图片名撞车（同名 ≠ 同图）**：新页图按 `<页slug>-<k>.webp` 命名，
+  站内若已存在 `<页slug>-1.webp` 会被 `shutil.copyfile` **静默覆盖**，而那个文件可能正被
+  几十处卡片引用且是**另一张图**。实例：`jump-rope-1.webp`（21 处引用）、`kettlebell-1.webp`。
+  实测与英文站同名图 MAD 25.5 / 67.2（>20 即不同图）→ 改页 slug 为
+  `beaded-jump-rope` / `color-kettlebell`。判同图用 32×32 平均通道差，别只看文件名。
 
 ## 缩略图网格 = 另一套规则（2026-09-12）
 - ⭐ **大图用原始素材，`products.html` 的 `.ct-thumbs` 6 格缩略图用白底素材** ——
@@ -91,12 +120,13 @@
 - 价格只认 `offer` 页（C=Spec / **D=FOB Xiamen USD**，`sanfan_offer.xlsx` 781 行仅 23 行有价）。
   offers = **基准×0.7~×1.3**，正文不出数字。❌ 别用代发客户表/成本表。
 
-## 产品页现状（09-12 第三批后）
-- ✅ 缩略图修复版已推（`ed8ff43645`，线上 `v20260912a`）
-- **141 页 / 10 分类页**（今 +24 页 +2 分类）；图片引用 2903 条 0 缺失；未进分类页 0、死链 0。
+## 产品页现状（09-12 全批推送后，线上 `v20260912d`）
+- ✅ commit `8b2f695ea9`（666 文件）；**147 页 / 10 分类页**；图片引用 3143 条 0 缺失、
+  未进分类页 0、站内内链 0 死链；线上 6 场景页 + 材质页 + 搜索 + 6 通用款全 200；sitemap 390 条。
 - 已下掉 ym8/rb3/rb4/pr2/pr5/fi1。⚠️ fi4 有源曾误判无源 → **下掉前先目视对图**。
-- 第三批 24 款（跳绳 6 + 力量训练 12 + 吊床 6）**本地已建好、未推送**（`v20260912b`）。
-- 剩 18 个未上，**全是空壳页** → 有真规格的已 100% 上线。
+- 剩 **12 个未建页，全是空壳**（英文站 content 空、0 条规格）：普拉提器械 11（Maple/Oak/金属系列）
+  + `yoga-hammock-2`。另有**排除 20**：18 服装类（B2B 站不上）+ 2 测试/重复页
+  （`dumbbel` 拼写错、`pu-rubber-yoga-mat-test`）。
 - ⭐ **ym1/ym2 是家族页非 1:1**（ym1↔14 个 TPE 垫），另有 12 个家族页映射见
   `pending_batch3.py` 的 `FAMILY`；对齐用「同族并集」。
   非错误：96 页缺 6 语言／22 页规格薄／37 页无价。
@@ -104,6 +134,10 @@
   本次 29 个有规格的产品里 5 个其实已被老页吞掉（`yoga-hammock→pr1`、`kettlebell-2→fi2`、
   `jump-rope-2→fi3`、`stair-climbers-3→fi4`、`dumbbell-2→fi5`），**多算了 5 个**。
   dHash 感知哈希会误判（球类匹配到瑜伽垫），必须 md5。
+  ⚠️ 同理**别用 slug 做差集**：英文站 `tpe-yoga-mat-2` 与站内自建描述性 slug 完全对不上，
+  直接比会得出 118 个"未上线"的假结果。权威只认 `batch*.json` 的 `src→new` 映射 + 图片 md5。
+- ⚠️ **每批建页的固定顺序**：`apply_batchN_listing` → `build_category_pages`
+  → **`fix_ct_thumbs`**（缩略图会被上一步覆盖）→ `build_navdata` → `bump_assets_ver` → `final_check`。
 
 ## 图片规则
 - ⭐ **容器必须 1:1**：`.pd-main img` = `1/1`+`contain`、`.prod-card .ph`、`.range-card .rc-img`。

@@ -736,8 +736,14 @@ if (form) {
   var QR_IMG = (function () {
     var stat = document.querySelector('img[src*="wechat-qr"]');
     if (stat) return stat.getAttribute('src');
-    var seg = location.pathname.split('/').filter(Boolean);
-    return '../'.repeat(Math.max(seg.length - 1, 0)) + 'assets/img/wechat-qr.webp';
+    // ⚠️ 目录形式 URL（/de/ 、/ja/）的最后一段是「语言目录」而不是文件名，
+    //    用 seg.length-1 会少算一层 → 请求 /de/assets/img/wechat-qr.webp（404）。
+    //    实测：语言站首页的浮动联系条二维码一直是破图。
+    var segs = location.pathname.split('/').filter(Boolean);
+    var depth = /\/$/.test(location.pathname)
+      ? segs.length                       // /de/ → 1 层
+      : Math.max(segs.length - 1, 0);     // /de/products.html → 1 层；/ → 0
+    return '../'.repeat(depth) + 'assets/img/wechat-qr.webp';
   })();
   var WX_TXT = {
     en: { scan: 'Scan this QR code in WeChat, or add us by ID:', copy: 'Copy WeChat ID' },
@@ -885,8 +891,10 @@ if (form) {
   var linkHref = linkEl ? (linkEl.getAttribute('href') || '') : '';
   var ROOT = linkHref.replace(/assets\/css\/styles\.css.*$/, '');
   if (!/^(\.\.\/)*$/.test(ROOT)) {
+    // 同 QR_IMG 的坑：目录形式 URL 的最后一段是目录，不能减 1
     var segs = location.pathname.split('/').filter(Boolean);
-    ROOT = new Array(Math.max(0, segs.length - 1) + 1).join('../');
+    var d = /\/$/.test(location.pathname) ? segs.length : Math.max(0, segs.length - 1);
+    ROOT = new Array(d + 1).join('../');
   }
   var vm = linkHref.match(/[?&]v([A-Za-z0-9]+)/);
   var VER = vm ? vm[1] : '1';

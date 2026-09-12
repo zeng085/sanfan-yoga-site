@@ -128,14 +128,15 @@ def lang_switcher(rel, lang=None, has_lang=True):
 
 
 def all_pages():
-    """需要切换器的全部页面：T1 页(有语言版) + 其余产品页(无语言版)"""
-    pages = [(rel, True) for rel in B.PAGES]
-    import glob
-    for p in sorted(glob.glob(os.path.join(ROOT, "products", "*.html"))):
-        rel = "products/" + os.path.basename(p)
-        if rel not in B.PAGES:
-            pages.append((rel, False))
-    return pages
+    """需要切换器的全部页面：(相对路径, 是否已有语言版)。
+
+    2026-09-12：改用 build_pages.ALL_PAGES + translated_set()。
+    原实现引用 B.PAGES —— 该硬编码清单（ym/pr/fr/rb/fi 老命名）已被动态发现取代，
+    留着会 AttributeError。has_lang 决定是否为该页生成语言版副本，
+    以及无语言版时切换器如何回退到目标语言的产品列表页。
+    """
+    translated = B.translated_set()
+    return [(rel, rel in translated) for rel in B.ALL_PAGES]
 
 
 def fix_switcher():

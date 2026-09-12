@@ -18,42 +18,52 @@ SITE = "https://fjsanfan.com"
 #       python3 build_pages.py fr it es
 LANGS = ["de", "ja", "ko", "fr", "it", "es"]
 
-# T1 试点页面清单（相对站点根）
-PAGES = [
-    "index.html",
-    "about.html",
-    "products.html",
-    "faq.html",
-    "contact.html",
-    "products/ym1.html",
-    "products/ym2.html",
-    "products/ym3.html",
-    "products/fr1.html",
-    "products/rb2.html",
-    "products/fi1.html",
-    "products/fi2.html",
-    "products/fi3.html",
-    "products/fi4.html",
-    "products/fi5.html",
-    "products/fr2.html",
-    "products/fr3.html",
-    "products/fr4.html",
-    "products/fr5.html",
-    "products/pr1.html",
-    "products/pr2.html",
-    "products/pr3.html",
-    "products/pr4.html",
-    "products/pr5.html",
-    "products/rb1.html",
-    "products/rb3.html",
-    "products/rb4.html",
-    "products/ym4.html",
-    "products/ym5.html",
-    "products/ym6.html",
-    "products/ym7.html",
-    "products/ym8.html",
-]
-T1_SET = set(PAGES)
+# ---------------------------------------------------------------- 页面发现
+# 2026-09-12 改造：原 PAGES 是硬编码的 T1 试点清单（ym/pr/fr/rb/fi 老命名，
+# 还含已下线的 ym8/rb3/rb4/pr2/pr5/fi1），与当前结构（147 产品页 + 10 分类页）
+# 严重脱节；新增页面不在清单里会导致 rewrite_rel 不生成语言版链接。改为动态发现。
+import glob as _glob
+
+
+def cat_pages():
+    """10 个分类页（位于站点根目录，如 tpe-yoga-mats.html）"""
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from category_map import CATS
+        return [c["key"] + ".html" for c in CATS]
+    except Exception:
+        return []
+
+
+def discover_all_pages():
+    """站上应有语言版的页面（blog/ 与 applications/ 结构不同，单独处理）"""
+    prods = sorted("products/" + os.path.basename(p)
+                   for p in _glob.glob(os.path.join(ROOT, "products", "*.html")))
+    return (["index.html", "about.html", "products.html", "faq.html",
+             "contact.html", "blog.html"] + cat_pages() + prods)
+
+
+ALL_PAGES = discover_all_pages()
+
+
+def translated_set():
+    """已存在语言版的页面路径 —— 取 6 语言**交集**，避免链接指向缺失页。
+    os.walk 扫描，自动涵盖历史已生成的 21 个产品页与 9 篇 blog。"""
+    sets = []
+    for lg in LANGS:
+        d = os.path.join(ROOT, lg)
+        if not os.path.isdir(d):
+            continue
+        s = set()
+        for dp, _, fs in os.walk(d):
+            for f in fs:
+                if f.endswith(".html"):
+                    s.add(os.path.relpath(os.path.join(dp, f), d).replace(os.sep, "/"))
+        sets.append(s)
+    return set.intersection(*sets) if sets else set()
+
+
+T1_SET = translated_set()
 
 VOID = {"img", "br", "hr", "input", "meta", "link", "source", "area", "base",
         "col", "embed", "param", "track", "wbr", "path", "circle", "rect"}
@@ -69,15 +79,8 @@ LD_KEYS = {"name", "description", "headline", "abstract", "text", "caption",
            "alternateName", "slogan", "disambiguatingDescription"}
 LD_SKIP_PARENTS = {"brand", "manufacturer"}
 
-# 产品 -> 分类锚点（未翻译时回退到语言站产品列表）
-PROD_CAT = {
-    'ym1': 'yoga', 'ym2': 'yoga', 'ym3': 'yoga', 'ym4': 'yoga',
-    'ym5': 'yoga', 'ym6': 'yoga', 'ym7': 'yoga', 'ym8': 'yoga',
-    'pr1': 'props', 'pr2': 'props', 'pr3': 'props', 'pr4': 'props', 'pr5': 'props',
-    'fr1': 'rollers', 'fr2': 'rollers', 'fr3': 'rollers', 'fr4': 'rollers', 'fr5': 'rollers',
-    'rb1': 'bands', 'rb2': 'bands', 'rb3': 'bands', 'rb4': 'bands',
-    'fi1': 'fitness', 'fi2': 'fitness', 'fi3': 'fitness', 'fi4': 'fitness', 'fi5': 'fitness',
-}
+# 2026-09-12：新结构是 10 个独立分类页，products.html 已改成分类导航页，
+# 不再有 #yoga / #props 之类的锚点，故下面的回退分支统一指向语言站 products.html。
 
 
 # ------------------------------------------------------------------ 工具
@@ -113,12 +116,8 @@ def rewrite_rel(u, cur_dir, src_dir, lang):
         # 分类页始终在当前语言站点打开
         target = lang + "/products.html" + suffix
     elif A.startswith("products/") and A.endswith(".html"):
-        prod = A[len("products/"):-len(".html")]
-        cat = PROD_CAT.get(prod)
-        if cat:
-            target = lang + "/products.html#" + cat
-        else:
-            target = A + suffix
+        # 走到这里说明该产品页尚无语言版（有则在上面的 T1_SET 分支命中）→ 回退总览页
+        target = lang + "/products.html" + suffix
     else:
         target = A + suffix
     return rel_from(cur_dir, target)
@@ -307,7 +306,10 @@ def build_one(rel_path, lang, verbose=True):
                 raw = v[1:-1] if q else v
                 dec = H.unescape(raw)
                 if dec in tr:
-                    nv = H.escape(tr[dec], quote=False)
+                    # ⚠️ 必须 quote=True：译文里的裸 " 若不转义，写回双引号属性会
+                    # 提前闭合属性值 → 畸形标签 → 属性重写器跳过该标签剩余属性
+                    # （实测：de/fr/it/es 的 alt="…(10")" 导致图片 src 少一层 ../ 而 404）
+                    nv = H.escape(tr[dec], quote=True)
                     return '%s=%s%s%s' % (am.group(1), q, nv, q)
                 return am.group(0)
 
@@ -328,7 +330,8 @@ def build_one(rel_path, lang, verbose=True):
         val = H.unescape(cm.group(1))
         if not re.search(r"[A-Za-z]", val):
             return tag
-        nv = H.escape(T.translate_one(val, lang), quote=False)
+        # 同属性转义问题：meta content 也是双引号属性，译文里的 " 必须转义
+        nv = H.escape(T.translate_one(val, lang), quote=True)
         return tag.replace(cm.group(0), 'content="%s"' % nv)
 
     h = re.sub(r"<meta\b[^>]*>", _meta, h, flags=re.I)
@@ -422,12 +425,10 @@ def build_one(rel_path, lang, verbose=True):
     h = re.sub(r'<html\s+lang="[^"]*"', '<html lang="%s"' % lang, h, count=1)
     h = re.sub(r'<html(?![^>]*lang=)', '<html lang="%s"' % lang, h, count=1)
 
-    # 8.5) 修正 <script src> 的相对路径。
-    # 语言页比英文原页深一级目录（fr/ 或 fr/products/），相对路径必须相应加深，
-    # 否则会引用到 fr/assets/js/main.js 这种不存在的路径，导致整页 JS 失效
-    # （移动端菜单、切换器交互、FAQ 折叠全废）。这个 bug 曾影响全部 30 个语言页。
-    h = re.sub(r'(<script[^>]*\ssrc=")((?:\.\./)*assets/[^"]+)(")',
-               lambda m: m.group(1) + '../' + m.group(2) + m.group(3), h)
+    # 8.5) 修正 <script src> 的相对路径 —— 实际修正见文末第 10.5 步。
+    # ⚠️ 不能写在这里：collect_texts 已把 <script>整块 stash 成占位符，
+    #    此处 h 里只剩 \x00P…\x00，下面的正则永远匹配不到。
+    #    （历史遗留失效点，2026-09-12 定位。原注释声称修过，实际从未生效。）
 
     # 切换器不在这里生成：由 fix_site.py 用「绝对路径」统一注入（幂等，覆盖英文原页+全部语言页）。
     # 原因：这里用相对路径容易算错层级（曾出现 ..// 这类错误），且旧 lang-btn 正则早已失效。
@@ -449,6 +450,13 @@ def build_one(rel_path, lang, verbose=True):
     for k, v in ph.items():
         h = h.replace(k, v)
 
+    # 10.5) 修正 <script src> 相对路径（必须在占位符回填**之后**执行）。
+    # 语言页比英文原页深一级目录（de/ 或 de/products/），相对路径要相应加深，
+    # 否则会指向 de/assets/js/main.js —— 该目录不存在 → main.js 404 →
+    # 移动端菜单、语言切换器、FAQ 折叠全部失效（全站交互都依赖它）。
+    h = re.sub(r'(<script[^>]*\ssrc=")((?:\.\./)*assets/[^"]+)(")',
+               lambda m: m.group(1) + '../' + m.group(2) + m.group(3), h)
+
     # 11) 落地
     out_path = os.path.join(ROOT, out_rel)
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
@@ -458,20 +466,86 @@ def build_one(rel_path, lang, verbose=True):
     return out_rel
 
 
+USAGE = """
+用法:
+  python3 build_pages.py                            全部 ALL_PAGES × 全部语言（量大，慎用）
+  python3 build_pages.py de ja                      只跑指定语言
+  python3 build_pages.py de --batch batch.json      只跑清单里的页面
+  python3 build_pages.py --dry --batch batch.json   只估算额度，不调 API
+批次清单 JSON: {"pages": ["products/ab-wheel.html", ...]}
+"""
+
+
 if __name__ == "__main__":
-    only = sys.argv[1:] or None
+    args = sys.argv[1:]
+    only, batch_file, dry = [], None, False
+    i = 0
+    while i < len(args):
+        a = args[i]
+        if a == "--batch" and i + 1 < len(args):
+            batch_file, i = args[i + 1], i + 2
+        elif a == "--dry":
+            dry, i = True, i + 1
+        elif a in ("-h", "--help"):
+            print(USAGE)
+            sys.exit(0)
+        else:
+            only.append(a)
+            i += 1
+
     langs = [l for l in LANGS if (not only or l in only)]
+    pages = json.load(open(batch_file, encoding="utf-8"))["pages"] if batch_file else list(ALL_PAGES)
+
+    # 本批页面视为「将有语言版」→ 链接直接指向语言版，避免生成完链接又指回英文
+    T1_SET.update(pages)
+
+    if dry:
+        print("页面 %d 个 × 语言 %s\n" % (len(pages), ",".join(langs)))
+        total = 0
+        for lang in langs:
+            chars = miss = hit = 0
+            for p in pages:
+                h = open(os.path.join(ROOT, p), encoding="utf-8").read()
+                h = remove_i18n_attrs(relax_lang_en(strip_lang_zh(h)))
+                _, _, texts, _, _ = collect_texts(h)
+                for _, raw in texts:
+                    s = H.unescape(raw.strip())
+                    if not s:
+                        continue
+                    if T._ck(s, lang) in T._cache:
+                        hit += 1
+                    else:
+                        miss += 1
+                        chars += len(s)
+            print("  %-3s 新增约 %8d 字符  (%d 条待译 / %d 条命中缓存)" % (lang, chars, miss, hit))
+            total += chars
+        u = T.usage()
+        print("\n  合计约 %d 字符（下限：未含 alt/meta/JSON-LD 文本）" % total)
+        if "character_count" in u:
+            used, lim = u["character_count"], u["character_limit"]
+            left = lim - used
+            print("  额度 已用 %s / %s，剩余 %s" % (f"{used:,}", f"{lim:,}", f"{left:,}"))
+            print("  %s" % ("✅ 在剩余额度内" if total <= left else
+                            "⚠️ 超出 %s 字符 —— 需缩量或分批" % f"{total - left:,}"))
+        else:
+            print("  额度查询失败:", u)
+        sys.exit(0)
+
+    print("开始：%d 页 × %d 语言 = %d 个页面\n" % (len(pages), len(langs), len(pages) * len(langs)))
+    ok = fail = 0
     for lang in langs:
-        for p in PAGES:
+        for p in pages:
             t0 = time.time()
             try:
                 build_one(p, lang)
+                ok += 1
                 print("     [%.1fs]" % (time.time() - t0), flush=True)
             except SystemExit:
                 T.flush()
                 print("中断：配额问题，已缓存进度")
                 sys.exit(1)
             except Exception as e:
+                fail += 1
                 print("  !! %s %s -> %s" % (lang, p, e))
     T.flush()
-    print("DONE")
+    print("DONE  ok=%d fail=%d  用量=%s" % (ok, fail, T.stats()))
