@@ -47,7 +47,8 @@ def main():
     for lg in LANGS:
         files = (sorted(glob.glob("%s/*.html" % lg))
                  + sorted(glob.glob("%s/products/*.html" % lg))
-                 + sorted(glob.glob("%s/blog/*.html" % lg)))
+                 + sorted(glob.glob("%s/blog/*.html" % lg))
+                 + sorted(glob.glob("%s/applications/*.html" % lg)))
         cross = 0
         for p in files:
             s = open(p, encoding="utf-8").read()

@@ -80,6 +80,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://fjsanfan.com/materials.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/materials.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://fjsanfan.com/tpe-yoga-mats.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/tpe-yoga-mats.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/tpe-yoga-mats.html"/>
@@ -1545,6 +1558,97 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://fjsanfan.com/applications/gyms-fitness-clubs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/applications/home-online-sellers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/applications/hotels-resorts-spas.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/applications/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/index.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/applications/recovery-physio.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/applications/retail-private-label.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/applications/yoga-pilates-studios.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://fjsanfan.com/blog/7day-sampling.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/7day-sampling.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/7day-sampling.html"/>
@@ -1736,6 +1840,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/materials.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/materials.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2533,6 +2650,97 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fjsanfan.com/de/applications/gyms-fitness-clubs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/applications/home-online-sellers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/applications/hotels-resorts-spas.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/applications/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/applications/recovery-physio.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/applications/retail-private-label.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/applications/yoga-pilates-studios.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fjsanfan.com/de/blog/7day-sampling.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/7day-sampling.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/7day-sampling.html"/>
@@ -2724,6 +2932,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/materials.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/materials.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3521,6 +3742,97 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fjsanfan.com/ja/applications/gyms-fitness-clubs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/applications/home-online-sellers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/applications/hotels-resorts-spas.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/applications/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/applications/recovery-physio.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/applications/retail-private-label.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/applications/yoga-pilates-studios.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fjsanfan.com/ja/blog/7day-sampling.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/7day-sampling.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/7day-sampling.html"/>
@@ -3712,6 +4024,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ko/materials.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/materials.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4509,6 +4834,97 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fjsanfan.com/ko/applications/gyms-fitness-clubs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ko/applications/home-online-sellers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ko/applications/hotels-resorts-spas.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ko/applications/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ko/applications/recovery-physio.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ko/applications/retail-private-label.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ko/applications/yoga-pilates-studios.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fjsanfan.com/ko/blog/7day-sampling.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/7day-sampling.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/7day-sampling.html"/>
@@ -4700,6 +5116,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/fr/materials.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/materials.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5497,6 +5926,97 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fjsanfan.com/fr/applications/gyms-fitness-clubs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/fr/applications/home-online-sellers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/fr/applications/hotels-resorts-spas.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/fr/applications/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/fr/applications/recovery-physio.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/fr/applications/retail-private-label.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/fr/applications/yoga-pilates-studios.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fjsanfan.com/fr/blog/7day-sampling.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/7day-sampling.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/7day-sampling.html"/>
@@ -5688,6 +6208,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/it/materials.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/materials.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -6485,6 +7018,97 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fjsanfan.com/it/applications/gyms-fitness-clubs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/it/applications/home-online-sellers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/it/applications/hotels-resorts-spas.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/it/applications/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/it/applications/recovery-physio.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/it/applications/retail-private-label.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/it/applications/yoga-pilates-studios.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fjsanfan.com/it/blog/7day-sampling.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/7day-sampling.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/7day-sampling.html"/>
@@ -6676,6 +7300,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/blog.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/es/materials.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/materials.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/materials.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -7473,6 +8110,97 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fjsanfan.com/es/applications/gyms-fitness-clubs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/gyms-fitness-clubs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/es/applications/home-online-sellers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/home-online-sellers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/es/applications/hotels-resorts-spas.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/hotels-resorts-spas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/es/applications/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/es/applications/recovery-physio.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/recovery-physio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/recovery-physio.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/es/applications/retail-private-label.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/retail-private-label.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/retail-private-label.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/es/applications/yoga-pilates-studios.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/applications/yoga-pilates-studios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fjsanfan.com/es/blog/7day-sampling.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/blog/7day-sampling.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/blog/7day-sampling.html"/>
@@ -7588,61 +8316,5 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/blog/yoga-mat-spec-guide.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fjsanfan.com/applications/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fjsanfan.com/applications/yoga-pilates-studios.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/yoga-pilates-studios.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fjsanfan.com/applications/gyms-fitness-clubs.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/gyms-fitness-clubs.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fjsanfan.com/applications/hotels-resorts-spas.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/hotels-resorts-spas.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fjsanfan.com/applications/retail-private-label.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/retail-private-label.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/retail-private-label.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fjsanfan.com/applications/recovery-physio.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/recovery-physio.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/recovery-physio.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fjsanfan.com/applications/home-online-sellers.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/applications/home-online-sellers.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fjsanfan.com/materials.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/materials.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/materials.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 </urlset>

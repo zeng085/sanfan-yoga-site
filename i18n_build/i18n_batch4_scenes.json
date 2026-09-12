@@ -1,0 +1,13 @@
+{
+  "_note": "第四批：场景采购页（applications/）+ 材质对比页 materials.html × 6 语言。B2B 采购方决策路径页。",
+  "pages": [
+    "materials.html",
+    "applications/index.html",
+    "applications/gyms-fitness-clubs.html",
+    "applications/home-online-sellers.html",
+    "applications/hotels-resorts-spas.html",
+    "applications/recovery-physio.html",
+    "applications/retail-private-label.html",
+    "applications/yoga-pilates-studios.html"
+  ]
+}

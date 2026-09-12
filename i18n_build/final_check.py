@@ -20,11 +20,13 @@ def all_html():
     for f in sorted(os.listdir(ROOT)):
         if f.endswith(".html"):
             out.append(f)
-    # ⚠️ 语言站必须递归到子目录：{lang}/products/ 与 {lang}/blog/ 各占 6 语言
-    # 共 360 个文件，只扫 {lang}/ 顶层会漏掉绝大部分语言页（2026-09-12 补）。
+    # ⚠️ 语言站必须递归到子目录：{lang}/products/、{lang}/blog/、{lang}/applications/
+    # 共 420+ 个文件，只扫 {lang}/ 顶层会漏掉绝大部分语言页（2026-09-12 补）。
+    # ⚠️ 英文侧与语言侧的目录清单必须对称 —— 曾出现英文有 applications、
+    #    语言侧漏掉 {lang}/applications 的情况（42 个页面逃过体检 = 假绿）。
     dirs = ["products", "blog", "applications"]
     for lg in ("de", "ja", "ko", "fr", "it", "es"):
-        dirs += [lg, f"{lg}/products", f"{lg}/blog"]
+        dirs += [lg, f"{lg}/products", f"{lg}/blog", f"{lg}/applications"]
     for d in dirs:
         p = os.path.join(ROOT, d)
         if os.path.isdir(p):

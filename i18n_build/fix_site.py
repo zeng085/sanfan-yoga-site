@@ -139,8 +139,44 @@ def all_pages():
     return [(rel, rel in translated) for rel in B.ALL_PAGES]
 
 
+NAV_OPEN = '<div class="nav-actions">'
+
+
+def replace_switcher(h, sw):
+    """把 nav-actions 里的语言切换器整体换成 sw（幂等）。
+
+    ⚠️ 为什么不用 re.sub(r'<div class="lang-switch">.*?</div>')：
+    lang-switch 内部还嵌着一层 <div class="lang-menu">…</div>，非贪婪 `.*?` 会
+    停在**内层** </div>，外层那个 </div> 被留在原地 → nav-actions 提前闭合，
+    紧随其后的 "Get a Quote" 按钮被挤出 flex 容器（样式错位），
+    而且 fix_site 每跑一次就再留一个，属于累积性破坏。
+    实测（2026-09-12）：638 个页面里 564 个带这个悬空 </div>。
+
+    正确做法：定位 nav-actions 起点与紧随的 btn-primary 链接，把两者之间的
+    全部内容（切换器 + 历史残留）一次性替换为 sw —— 既修新页也顺手清历史债。
+
+    ⚠️ 「插入」与「替换」必须走同一条路径。若插入分支只做 lstrip 而保留尾部原样，
+    刚由 build_pages 生成的新语言页会漏掉清理：build_pages 摘切换器时留下一个
+    悬空 </div>，插入分支把它原样保留 → nav-actions 仍然提前闭合。
+    实测（2026-09-12）：48 个新页面（8 页 ×6 语言）全部因此残留。
+    统一用 btn-primary 定位尾部即可天然覆盖两种情况。
+    """
+    i = h.find(NAV_OPEN)
+    if i < 0:
+        return h, False
+    body = i + len(NAV_OPEN)
+    j = h.find('class="btn btn-primary"', i)
+    if j < 0:
+        return h, False                      # 结构异常（无报价按钮）→ 保守不动
+    k = h.rfind("<a ", i, j)
+    if k <= body:
+        return h, False
+    # nav-actions 开头到 btn 之间的内容（切换器 + 悬空 </div> 等残留）一律丢弃
+    return h[:body] + sw + "\n        " + h[k:], True
+
+
 def fix_switcher():
-    """在 nav-actions 区插入/替换语言切换器（英文原页 + 产品页 + 三种语言页）"""
+    """在 nav-actions 区插入/替换语言切换器（英文原页 + 产品页 + 各语言页）"""
     n = m = 0
     for lang in [None] + LANGS:
         for rel, has_lang in all_pages():
@@ -151,14 +187,7 @@ def fix_switcher():
                 continue
             h = open(p, encoding="utf-8").read()
             sw = lang_switcher(rel, lang, has_lang)
-            if 'class="lang-switch"' in h:
-                # 已存在则整体替换，保持绝对路径版本一致
-                new = re.sub(r'<div class="lang-switch">.*?</div>',
-                             lambda _m: sw, h, count=1, flags=re.S)
-            else:
-                # 不存在则插入到导航操作区开头（英文页原有的 lang-btn 可能已被替换掉）
-                new = re.sub(r'(<div class="nav-actions">)',
-                             lambda _m: _m.group(1) + sw, h, count=1)
+            new, _ = replace_switcher(h, sw)
             if new != h:
                 open(p, "w", encoding="utf-8").write(new)
                 if lang is None:

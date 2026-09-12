@@ -35,12 +35,21 @@ def cat_pages():
         return []
 
 
+def apps_pages():
+    """场景采购页（applications/ 下一层目录）+ 场景总览 applications/index.html。
+    这些页是 B2B 采购方的决策路径页（瑜伽馆/酒店/健身房/经销商/贴牌），
+    必须与产品页同等对待，否则语言站上的入口会全部回退英文。"""
+    return sorted("applications/" + os.path.basename(p)
+                  for p in _glob.glob(os.path.join(ROOT, "applications", "*.html")))
+
+
 def discover_all_pages():
-    """站上应有语言版的页面（blog/ 与 applications/ 结构不同，单独处理）"""
+    """站上应有语言版的页面（blog/ 结构不同，单独处理）"""
     prods = sorted("products/" + os.path.basename(p)
                    for p in _glob.glob(os.path.join(ROOT, "products", "*.html")))
     return (["index.html", "about.html", "products.html", "faq.html",
-             "contact.html", "blog.html"] + cat_pages() + prods)
+             "contact.html", "blog.html", "materials.html"]
+            + cat_pages() + prods + apps_pages())
 
 
 ALL_PAGES = discover_all_pages()

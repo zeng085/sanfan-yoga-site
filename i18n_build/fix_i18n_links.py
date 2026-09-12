@@ -19,7 +19,11 @@
   1. 解析后的目标落在语言目录之外（即当前会跳到英文页）
   2. 对应的语言版文件真实存在（`{lang}/{目标}`）
 绝对路径（`/...`，语言切换器用的形式）一律不碰；
-语言版确实不存在的目标（场景页 / 材质页 / 未翻译产品页）保持回退英文的设计。
+语言版确实不存在的目标（未翻译产品页）保持回退英文的设计。
+
+⚠️ 2026-09-12 更新：场景采购页（applications/）与材质页（materials.html）已有 6 语言版，
+不再是"保持回退英文"的对象；本脚本的 targets() 也必须覆盖 applications/ 子目录，
+否则新生成场景页内部的互链不会被纠偏。
 
 用法：python3 i18n_build/fix_i18n_links.py          # 体检
       python3 i18n_build/fix_i18n_links.py --fix    # 就地修复
@@ -45,6 +49,7 @@ def targets():
         out += sorted(glob.glob("%s/*.html" % lg))
         out += sorted(glob.glob("%s/products/*.html" % lg))
         out += sorted(glob.glob("%s/blog/*.html" % lg))
+        out += sorted(glob.glob("%s/applications/*.html" % lg))
     return out
 
 

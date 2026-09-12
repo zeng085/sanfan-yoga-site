@@ -1,0 +1,9 @@
+{
+  "_note": "第四批 A：材质页 + 场景总览 + 2 场景页",
+  "pages": [
+    "materials.html",
+    "applications/index.html",
+    "applications/yoga-pilates-studios.html",
+    "applications/gyms-fitness-clubs.html"
+  ]
+}
