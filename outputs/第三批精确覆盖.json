@@ -1,0 +1,193 @@
+{
+ "ab-roller": {
+  "total": 8,
+  "hit": 0,
+  "files": []
+ },
+ "ab-roller-2": {
+  "total": 6,
+  "hit": 0,
+  "files": []
+ },
+ "ab-roller-set": {
+  "total": 8,
+  "hit": 0,
+  "files": []
+ },
+ "fitness-board": {
+  "total": 7,
+  "hit": 0,
+  "files": []
+ },
+ "p3-fitness-board": {
+  "total": 7,
+  "hit": 0,
+  "files": []
+ },
+ "barbell": {
+  "total": 11,
+  "hit": 0,
+  "files": []
+ },
+ "cordless-jump-rope": {
+  "total": 4,
+  "hit": 0,
+  "files": []
+ },
+ "dumbbell": {
+  "total": 8,
+  "hit": 0,
+  "files": []
+ },
+ "dumbbell-2": {
+  "total": 11,
+  "hit": 11,
+  "files": [
+   "fi5-1.webp",
+   "fi5-2.webp",
+   "fi5-3.webp",
+   "fi5-4.webp",
+   "fi5-5.webp",
+   "fi5-6.webp",
+   "fi5-7.webp",
+   "fi5-8.webp",
+   "fi5-9.webp",
+   "fi5-10.webp",
+   "fi5-11.webp"
+  ]
+ },
+ "electronic-counting-skip-rope": {
+  "total": 4,
+  "hit": 0,
+  "files": []
+ },
+ "jump-rope-2": {
+  "total": 9,
+  "hit": 9,
+  "files": [
+   "fi3-1.webp",
+   "fi3-2.webp",
+   "fi3-3.webp",
+   "fi3-4.webp",
+   "fi3-5.webp",
+   "fi3-6.webp",
+   "fi3-7.webp",
+   "fi3-8.webp",
+   "fi3-9.webp"
+  ]
+ },
+ "jump-rope-3": {
+  "total": 6,
+  "hit": 0,
+  "files": []
+ },
+ "jump-rope-kids": {
+  "total": 9,
+  "hit": 0,
+  "files": []
+ },
+ "kettlebell-2": {
+  "total": 7,
+  "hit": 7,
+  "files": [
+   "fi2-1.webp",
+   "fi2-2.webp",
+   "fi2-3.webp",
+   "fi2-4.webp",
+   "fi2-5.webp",
+   "fi2-6.webp",
+   "fi2-7.webp"
+  ]
+ },
+ "smart-counting-jump-rope": {
+  "total": 4,
+  "hit": 0,
+  "files": []
+ },
+ "speed-jump-rope": {
+  "total": 8,
+  "hit": 0,
+  "files": []
+ },
+ "weighted-ball": {
+  "total": 8,
+  "hit": 0,
+  "files": []
+ },
+ "weighted-ring": {
+  "total": 14,
+  "hit": 0,
+  "files": []
+ },
+ "wrist-weights": {
+  "total": 14,
+  "hit": 0,
+  "files": []
+ },
+ "stair-climbers": {
+  "total": 6,
+  "hit": 0,
+  "files": []
+ },
+ "stair-climbers-2": {
+  "total": 7,
+  "hit": 0,
+  "files": []
+ },
+ "stair-climbers-3": {
+  "total": 1,
+  "hit": 1,
+  "files": [
+   "fi4-1.webp"
+  ]
+ },
+ "gradient-color-yoga-hammock": {
+  "total": 6,
+  "hit": 0,
+  "files": []
+ },
+ "solid-color-yoga-hammock": {
+  "total": 5,
+  "hit": 0,
+  "files": []
+ },
+ "yoga-hammock": {
+  "total": 13,
+  "hit": 13,
+  "files": [
+   "pr1-1.webp",
+   "pr1-2.webp",
+   "pr1-3.webp",
+   "pr1-4.webp",
+   "pr1-5.webp",
+   "pr1-6.webp",
+   "pr1-7.webp",
+   "pr1-8.webp",
+   "pr1-9.webp",
+   "pr1-10.webp",
+   "pr1-11.webp",
+   "pr1-12.webp",
+   "pr1-13.webp"
+  ]
+ },
+ "yoga-hammock-3": {
+  "total": 6,
+  "hit": 0,
+  "files": []
+ },
+ "yoga-hammock-4": {
+  "total": 9,
+  "hit": 0,
+  "files": []
+ },
+ "yoga-hammock-5": {
+  "total": 6,
+  "hit": 0,
+  "files": []
+ },
+ "yoga-hammock-with-handles": {
+  "total": 18,
+  "hit": 0,
+  "files": []
+ }
+}

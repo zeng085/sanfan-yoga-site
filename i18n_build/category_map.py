@@ -125,6 +125,34 @@ CATS = [
         "h1_en": "Yoga Props & Accessories",
         "h1_zh": "瑜伽辅具与配件",
     },
+    {
+        "key": "jump-ropes",
+        "en": "Jump Ropes",
+        "zh": "跳绳",
+        "kw_en": "Speed · Counting · Cordless · Kids",
+        "kw_zh": "速度款 · 计数款 · 无绳款 · 儿童款",
+        "desc_en": "PVC-coated and steel-wire jump ropes with ABS, aluminium and EVA handles. "
+                   "LCD counting, mechanical counting, cordless and kids builds, with rope length, "
+                   "grip colour and logo all set per order.",
+        "desc_zh": "PVC 包覆绳与钢丝绳跳绳，配 ABS、铝合金与 EVA 握柄。"
+                   "含 LCD 计数、机械计数、无绳与儿童款，绳长、握把颜色与 Logo 均可按订单定制。",
+        "h1_en": "Jump Ropes",
+        "h1_zh": "跳绳",
+    },
+    {
+        "key": "strength-training",
+        "en": "Strength & Fitness",
+        "zh": "力量与健身",
+        "kw_en": "Silicone Weights · Ab Rollers · Boards · Steppers",
+        "kw_zh": "硅胶配重 · 健腹轮 · 训练板 · 登山机",
+        "desc_en": "Silicone-skinned cast-iron balls, rings, dumbbells and barbells, plus ab "
+                   "rollers, training boards and compact hydraulic steppers. One colour system "
+                   "across the whole range, private-label ready.",
+        "desc_zh": "硅胶包覆配重球、配重环、哑铃与杠铃，以及健腹轮、训练板与紧凑型液压登山机。"
+                   "全系列共用一套配色体系，支持贴牌。",
+        "h1_en": "Strength & Fitness",
+        "h1_zh": "力量与健身",
+    },
 ]
 
 CAT_BY_KEY = {c["key"]: c for c in CATS}
@@ -158,9 +186,44 @@ MANUAL = {
     "pr1": "yoga-props-accessories", "pr4": "yoga-props-accessories",
     "rb2": "yoga-props-accessories", "yoga-block-cover": "yoga-props-accessories",
     "stretch-board": "yoga-props-accessories",
-    # --- 健身小件 ---
+    # --- 健身小件（老页，保持原位）---
     "fi2": "yoga-props-accessories", "fi3": "yoga-props-accessories",
     "fi4": "yoga-props-accessories", "fi5": "yoga-props-accessories",
+    # --- 第三批：跳绳 → jump-ropes ---
+    "speed-jump-rope": "jump-ropes",
+    "two-tone-kids-jump-rope": "jump-ropes",
+    "kids-jump-rope": "jump-ropes",
+    "cordless-jump-rope": "jump-ropes",
+    "electronic-counting-jump-rope": "jump-ropes",
+    "smart-counting-jump-rope": "jump-ropes",
+    # --- 第三批：力量与健身 → strength-training ---
+    "ab-roller-with-resistance-band": "strength-training",
+    "giant-ab-roller": "strength-training",
+    "ab-roller-training-set": "strength-training",
+    "wave-silicone-barbell": "strength-training",
+    "triangular-silicone-dumbbell": "strength-training",
+    "weighted-training-ball": "strength-training",
+    "weighted-training-ring": "strength-training",
+    "silicone-wrist-ankle-weights": "strength-training",
+    "multi-function-fitness-board": "strength-training",
+    "p3-smart-fitness-board": "strength-training",
+    "adjustable-stair-climber": "strength-training",
+    "compact-stair-climber": "strength-training",
+    # --- 第三批：空中瑜伽吊床 → 并入既有辅具分类 ---
+    "gradient-aerial-yoga-hammock": "yoga-props-accessories",
+    "solid-color-aerial-yoga-hammock": "yoga-props-accessories",
+    "colorful-aerial-yoga-hammock": "yoga-props-accessories",
+    "ombre-aerial-yoga-hammock": "yoga-props-accessories",
+    "large-aerial-yoga-hammock": "yoga-props-accessories",
+    "aerial-yoga-hammock-with-handles": "yoga-props-accessories",
+    # --- 第四批：品类通用款（英文站空壳页，2026-09-12 补）---
+    # 必须显式登记：FALLBACK 的 "ball"/"roller" 等关键词会把这几个误判或漏判。
+    "ab-wheel": "strength-training",
+    "adjustable-dumbbell": "strength-training",
+    "color-kettlebell": "strength-training",
+    "suspension-training": "strength-training",
+    "beaded-jump-rope": "jump-ropes",
+    "vibration-machine": "massage-recovery",
 }
 
 # ---------------------------------------------------------------- 规则

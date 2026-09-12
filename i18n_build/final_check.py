@@ -20,7 +20,7 @@ def all_html():
     for f in sorted(os.listdir(ROOT)):
         if f.endswith(".html"):
             out.append(f)
-    for d in ("products", "blog", "de", "ja", "ko", "fr", "it", "es"):
+    for d in ("products", "blog", "applications", "de", "ja", "ko", "fr", "it", "es"):
         p = os.path.join(ROOT, d)
         if os.path.isdir(p):
             out += [f"{d}/{f}" for f in sorted(os.listdir(p)) if f.endswith(".html")]
@@ -88,8 +88,29 @@ def main():
     for src, rs in list(missing.items())[:10]:
         print(f"      {src}  ← {rs[0]} ({len(rs)}处)")
 
-    print("\n" + ("✅ 全部通过，可以推送" if not bad1 and not bad2 and not missing and not bad3
-                  else "⚠️ 存在未通过项，见上"))
+    # 5. 内链检查：站内 .html 链接是否都指向真实文件
+    # 新加的页面（场景页 / 材质页）最容易出这类问题：目录层级一变，
+    # "../products.html" 就变成死链，而浏览器不报错、只看页面完全正常。
+    href_re = re.compile(r'href="([^"]+\.html)"')
+    dead = {}
+    nlinks = 0
+    for r, h in htmls.items():
+        base = os.path.dirname(os.path.join(ROOT, r))
+        for href in href_re.findall(h):
+            if href.startswith(("http", "//", "mailto:")):
+                continue
+            nlinks += 1
+            p = (os.path.join(ROOT, href.lstrip("/")) if href.startswith("/")
+                 else os.path.normpath(os.path.join(base, href)))
+            if not os.path.exists(p):
+                dead.setdefault(href, []).append(r)
+    print(f"[5] 站内 .html 内链 {nlinks} 条，死链 {len(dead)} 个 " +
+          ("✅" if not dead else "❌"))
+    for href, rs in list(dead.items())[:10]:
+        print(f"      {href}  ← {rs[0]} ({len(rs)}处)")
+
+    ok = not bad1 and not bad2 and not missing and not bad3 and not dead
+    print("\n" + ("✅ 全部通过，可以推送" if ok else "⚠️ 存在未通过项，见上"))
 
 
 if __name__ == "__main__":

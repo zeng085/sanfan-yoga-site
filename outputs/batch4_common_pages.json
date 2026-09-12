@@ -1,0 +1,108 @@
+[
+ {
+  "src": "ab-wheel",
+  "new": "ab-wheel",
+  "title_en": "Ab Wheel",
+  "title_zh": "健腹轮",
+  "fam": "ab_wheel",
+  "sect": "strength-training",
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/AB-Wheel-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/AB-Wheel-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/AB-Wheel-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/AB-Wheel-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/AB-Wheel-2.webp"
+  ]
+ },
+ {
+  "src": "adjustable-dumbbell",
+  "new": "adjustable-dumbbell",
+  "title_en": "Adjustable Dumbbell",
+  "title_zh": "可调式哑铃",
+  "fam": "adj_dumbbell",
+  "sect": "strength-training",
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Adjustable-Dumbbell-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Adjustable-Dumbbell-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Adjustable-Dumbbell-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Adjustable-Dumbbell-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Adjustable-Dumbbell-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Adjustable-Dumbbell-6.webp"
+  ]
+ },
+ {
+  "src": "jump-rope",
+  "new": "beaded-jump-rope",
+  "title_en": "Beaded Jump Rope",
+  "title_zh": "珠节跳绳",
+  "fam": "beaded_rope",
+  "sect": "jump-ropes",
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Jump-Rope-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Jump-Rope-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Jump-Rope-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Jump-Rope-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Jump-Rope-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Jump-Rope-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Jump-Rope-7.webp"
+  ]
+ },
+ {
+  "src": "kettlebell",
+  "new": "color-kettlebell",
+  "title_en": "Color Kettlebell",
+  "title_zh": "彩色壶铃",
+  "fam": "kettlebell",
+  "sect": "strength-training",
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Kettlebell-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Kettlebell-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Kettlebell-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Kettlebell-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Kettlebell-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Kettlebell-6.webp"
+  ]
+ },
+ {
+  "src": "suspension-training",
+  "new": "suspension-training",
+  "title_en": "Suspension Training Kit",
+  "title_zh": "悬吊训练套装",
+  "fam": "suspension",
+  "sect": "strength-training",
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Suspension-Training-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Suspension-Training-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Suspension-Training-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Suspension-Training-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Suspension-Training-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Suspension-Training-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Suspension-Training-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Suspension-Training-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Suspension-Training-9.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Suspension-Training-10.webp"
+  ]
+ },
+ {
+  "src": "vibration-machine",
+  "new": "vibration-machine",
+  "title_en": "Vibration Plate",
+  "title_zh": "振动踏板",
+  "fam": "vibration",
+  "sect": "massage-recovery",
+  "specs": {},
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibration-Machine-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibration-Machine-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibration-Machine-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibration-Machine-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibration-Machine-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/02/Vibration-Machine-6.webp"
+  ]
+ }
+]

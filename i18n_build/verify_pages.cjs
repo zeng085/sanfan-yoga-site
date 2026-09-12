@@ -7,6 +7,10 @@ const ROOT = process.cwd();
 const PAGES = [
   'index.html', 'products.html', 'tpe-yoga-mats.html',
   'products/ym1.html', 'de/index.html', 'de/products.html',
+  // 第三批新增的分类页与代表性产品页
+  'jump-ropes.html', 'strength-training.html',
+  'products/speed-jump-rope.html', 'products/giant-ab-roller.html',
+  'products/gradient-aerial-yoga-hammock.html',
 ];
 const VIEWPORTS = [
   { name: 'desktop', width: 1440, height: 900 },

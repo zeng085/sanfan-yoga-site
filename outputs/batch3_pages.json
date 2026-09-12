@@ -1,0 +1,686 @@
+[
+ {
+  "src": "speed-jump-rope",
+  "new": "speed-jump-rope",
+  "title_en": "Speed Jump Rope",
+  "title_zh": "速度跳绳",
+  "fam": "jump_rope",
+  "sect": "jump-ropes",
+  "base": null,
+  "specs": {
+   "Material": "PP, PVC, Soft Rubber",
+   "Size": "Handle 14.8*2.5cm",
+   "RopeLength": "3m",
+   "Colors": "Blue, Purple",
+   "ApplicableUsers": "Children",
+   "Logo": "Customized Logo Availabled",
+   "Packaging": "Customized Package"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Speed-Jump-Rope.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Speed-Jump-Rope-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Speed-Jump-Rope-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Speed-Jump-Rope-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Speed-Jump-Rope-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Speed-Jump-Rope-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/blue-Speed-Jump-Rope.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/purplr-Speed-Jump-Rope.webp"
+  ]
+ },
+ {
+  "src": "jump-rope-3",
+  "new": "two-tone-kids-jump-rope",
+  "title_en": "Two-Tone Kids Jump Rope",
+  "title_zh": "双色儿童跳绳",
+  "fam": "jump_rope",
+  "sect": "jump-ropes",
+  "base": null,
+  "specs": {
+   "Material": "ABS, PVC",
+   "Size": "Handle 14.5*5.2cm",
+   "RopeLength": "2.8m",
+   "Colors": "Pink Blue, Green Orange, Green Pink",
+   "ApplicableUsers": "Children",
+   "Logo": "Customized Logo Availabled",
+   "Packaging": "Customized Package"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/jump-rope-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/jump-rope-3-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/jump-rope-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/blue-jump-rope-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/orange-jump-rope.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/pink-jump-rope.webp"
+  ]
+ },
+ {
+  "src": "jump-rope-kids",
+  "new": "kids-jump-rope",
+  "title_en": "Kids Jump Rope",
+  "title_zh": "儿童跳绳",
+  "fam": "jump_rope",
+  "sect": "jump-ropes",
+  "base": null,
+  "specs": {
+   "Material": "PVC + ABS",
+   "Size": "Handle 12*2cm",
+   "RopeLength": "2.2m",
+   "Colors": "Yellow, Purple, Green",
+   "ApplicableUsers": "Children",
+   "Logo": "Customized Logo Availabled",
+   "Packaging": "Customized Package"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Jump-Rope-Kids.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Jump-Rope-Kids-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Jump-Rope-Kids-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Jump-Rope-Kids-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Jump-Rope-Kids-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Jump-Rope-Kids-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Yellow-Jump-Rope-Kids.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Purple-Jump-Rope-Kids.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Green-Jump-Rope-Kids.webp"
+  ]
+ },
+ {
+  "src": "cordless-jump-rope",
+  "new": "cordless-jump-rope",
+  "title_en": "Cordless Jump Rope",
+  "title_zh": "无绳跳绳",
+  "fam": "jump_rope",
+  "sect": "jump-ropes",
+  "base": null,
+  "specs": {
+   "Material": "ABS, EVA",
+   "Size": "Handle 19.3*3.1cm",
+   "BallDiameter": "6.5cm",
+   "Colors": "Pink, Blue, Black",
+   "ApplicableUsers": "Children",
+   "Logo": "Customized Logo Availabled",
+   "Packaging": "Customized Package"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/blue-Cordless-Jump-Rope.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Cordless-Jump-Rope-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/orange-Cordless-Jump-Rope.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/pink-Cordless-Jump-Rope.webp"
+  ]
+ },
+ {
+  "src": "electronic-counting-skip-rope",
+  "new": "electronic-counting-jump-rope",
+  "title_en": "Electronic Counting Jump Rope",
+  "title_zh": "电子计数跳绳",
+  "fam": "jump_rope",
+  "sect": "jump-ropes",
+  "base": null,
+  "specs": {
+   "Material": "ABS+PVC+PC+TPE, PVC",
+   "RopeLength": "2.8m",
+   "Colors": "Customized Color",
+   "ApplicableUsers": "Children",
+   "Logo": "Customized Logo Availabled",
+   "Packaging": "Customized Package"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Electronic-Counting-Skip-Rope.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/blue-Electronic-Counting-Skip-Rope.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/orange-Electronic-Counting-Skip-Rope.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/pink-Electronic-Counting-Skip-Rope.webp"
+  ]
+ },
+ {
+  "src": "smart-counting-jump-rope",
+  "new": "smart-counting-jump-rope",
+  "title_en": "Smart Counting Jump Rope",
+  "title_zh": "智能计数跳绳",
+  "fam": "jump_rope",
+  "sect": "jump-ropes",
+  "base": null,
+  "specs": {
+   "Material": "ABS+PVC+PC+TPE",
+   "RopeLength": "3m",
+   "Colors": "Customized Color",
+   "ApplicableUsers": "Children",
+   "Logo": "Customized Logo Availabled",
+   "Packaging": "Customized Package"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Smart-Counting-Jump-Rope.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/Smart-Counting-Jump-Rope-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/pink-Smart-Counting-Jump-Rope.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/10/black-Smart-Counting-Jump-Rope.webp"
+  ]
+ },
+ {
+  "src": "ab-roller",
+  "new": "ab-roller-with-resistance-band",
+  "title_en": "Ab Roller with Resistance Band",
+  "title_zh": "带阻力带健腹轮",
+  "fam": "ab_roller",
+  "sect": "strength-training",
+  "base": null,
+  "specs": {
+   "Material": "ABS+PP",
+   "Size": "14.5*40cm",
+   "Colors": "Black",
+   "Wheels": "Two Wheels",
+   "Service": "Delivery Service",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Multifunctional-Ab-Roller.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Multifunctional-Ab-Roller-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Multifunctional-Ab-Roller-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Multifunctional-Ab-Roller-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Multifunctional-Ab-Roller-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Multifunctional-Ab-Roller-9.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Multifunctional-Ab-Roller-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Multifunctional-Ab-Roller-1.webp"
+  ]
+ },
+ {
+  "src": "ab-roller-2",
+  "new": "giant-ab-roller",
+  "title_en": "Giant Ab Roller",
+  "title_zh": "加大轮健腹轮",
+  "fam": "ab_roller",
+  "sect": "strength-training",
+  "base": null,
+  "specs": {
+   "Material": "TPR",
+   "PackageSize": "45*21*14CM",
+   "Colors": "Black Purple, Red Black, Black White",
+   "Weight": "1.75kg",
+   "Service": "Delivery Service",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Color Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/balck-white.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/ab-wheel-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/ab-wheel-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/ab-wheel.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/black-purple.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/red.webp"
+  ]
+ },
+ {
+  "src": "ab-roller-set",
+  "new": "ab-roller-training-set",
+  "title_en": "AB Roller Training Set",
+  "title_zh": "健腹轮训练套装",
+  "fam": "ab_roller",
+  "sect": "strength-training",
+  "base": null,
+  "specs": {
+   "Material": "PP, ABS, PVC",
+   "PackageSize": "38*20*7CM",
+   "Colors": "Blue, Grey, Red",
+   "Wheels": "Two Wheels",
+   "Service": "Delivery Service",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Color Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Ab-roller-set.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Ab-roller-set-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Ab-roller-set-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Ab-roller-set-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Ab-roller-set-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Ab-roller-set-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Ab-roller-set-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Ab-roller-set-5.webp"
+  ]
+ },
+ {
+  "src": "barbell",
+  "new": "wave-silicone-barbell",
+  "title_en": "Wave Silicone Barbell",
+  "title_zh": "波浪形硅胶杠铃",
+  "fam": "strength",
+  "sect": "strength-training",
+  "base": 27.5,
+  "specs": {
+   "Material": "Silicone + Cast Iron",
+   "Size": "91cm / 110cm",
+   "Weight": "15lbs / 25lbs",
+   "Colors": "Black, Nude Pink, Beige, Milk Tea, Gray Green, Pink",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Barbell-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Barbell-18.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Barbell-17.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Barbell-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Barbell-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Beige-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/black-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/gray-green-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/milk-tea-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/nude-pink-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-8.webp"
+  ]
+ },
+ {
+  "src": "dumbbell",
+  "new": "triangular-silicone-dumbbell",
+  "title_en": "Triangular Silicone Dumbbell",
+  "title_zh": "三角硅胶哑铃",
+  "fam": "strength",
+  "sect": "strength-training",
+  "base": null,
+  "specs": {
+   "Material": "Silicone + Cast Iron",
+   "Size": "26*24*28cm / 36*32*20cm",
+   "Weight": "3kg / 4.5kg",
+   "Colors": "Black, Nude Pink, Beige, Milk Tea, Gray Green, Pink",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Dumbbell-6-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Dumbbell-18.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Beige-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Black-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Gray-Green-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Milk-Tea-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Nude-Pink-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pink-6.webp"
+  ]
+ },
+ {
+  "src": "weighted-ball",
+  "new": "weighted-training-ball",
+  "title_en": "Weighted Training Ball",
+  "title_zh": "负重训练球",
+  "fam": "strength",
+  "sect": "strength-training",
+  "base": null,
+  "specs": {
+   "Material": "Silicone + Cast Iron",
+   "Size": "8.5cm",
+   "Weight": "1.5kg",
+   "Colors": "Black, Nude Pink, Beige, Milk Tea, Gray Green, Pink",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Weighted-Ball-12.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Weighted-Ball-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Beige-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/black-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Gray-Green-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Milk-Tea-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Nude-Pink-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-5.webp"
+  ]
+ },
+ {
+  "src": "weighted-ring",
+  "new": "weighted-training-ring",
+  "title_en": "Weighted Training Ring",
+  "title_zh": "负重训练环",
+  "fam": "strength",
+  "sect": "strength-training",
+  "base": null,
+  "specs": {
+   "Material": "Silicone + Cast Iron",
+   "Size": "17cm / 32cm",
+   "Weight": "5 lbs / 10 lbs",
+   "Colors": "Black, Pink, Beige, Milk Tea, Gray, Nude Pink",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Dumbbell-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Dumbbell-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Beige-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Beige-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Black-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Black-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Gray-Green.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Gray-Green-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Milk-Tea-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Milk-Tea-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Nude-Pink.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Nude-Pink-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pink-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Pink-2-1.webp"
+  ]
+ },
+ {
+  "src": "wrist-weights",
+  "new": "silicone-wrist-ankle-weights",
+  "title_en": "Silicone Wrist & Ankle Weights",
+  "title_zh": "硅胶腕部与踝部沙袋",
+  "fam": "strength",
+  "sect": "strength-training",
+  "base": 7.15,
+  "specs": {
+   "Material": "Silicone + Cast Iron",
+   "Size": "29*7cm",
+   "Weight": "900g（2LB）",
+   "Colors": "Multiple Colors",
+   "Feature": "Non-slip, Eco Friendly, Wear-Resistant",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Wrist-Weights.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Wrist-Weights-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Wrist-Weights-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Beige-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/black-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Dark-Blue.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Dark-Gray.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Dark-Green.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Gray-Green-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Milk-Tea-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Mint-Green.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Nude-Pink-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/pink-10.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/white-1.webp"
+  ]
+ },
+ {
+  "src": "fitness-board",
+  "new": "multi-function-fitness-board",
+  "title_en": "Multi-Function Fitness Board",
+  "title_zh": "多功能健身板",
+  "fam": "fitness_board",
+  "sect": "strength-training",
+  "base": null,
+  "specs": {
+   "Material": "PP + Foam",
+   "Size": "106cm*41cm*7cm",
+   "Colors": "Purple",
+   "Service": "Delivery Service",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-8.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-12.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-14.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-15.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/purple-6.webp"
+  ]
+ },
+ {
+  "src": "p3-fitness-board",
+  "new": "p3-smart-fitness-board",
+  "title_en": "P3 Smart Fitness Board",
+  "title_zh": "P3 智能健身板",
+  "fam": "fitness_board",
+  "sect": "strength-training",
+  "base": null,
+  "specs": {
+   "Material": "PP+TPE",
+   "Size": "59cmx31cmx11cm",
+   "Colors": "White / Black",
+   "Weight": "850g",
+   "Style": "Smart Style",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-9-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-7-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-5-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-4-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-3-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/Fitness-Board-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/04/white-2.webp"
+  ]
+ },
+ {
+  "src": "stair-climbers",
+  "new": "adjustable-stair-climber",
+  "title_en": "Adjustable Stair Climber",
+  "title_zh": "可调式登山机",
+  "fam": "stepper",
+  "sect": "strength-training",
+  "base": null,
+  "specs": {
+   "Material": "Steel + Plastic",
+   "Size": "45*56*85cm*145cm",
+   "CartonSize": "98*51*13.5cm",
+   "Colors": "White",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Feature": "Multi-functional Stair Climber",
+   "Gender": "Unisex",
+   "Application": "Universal"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climber-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climber-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climber-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climber-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climber-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climber-5.webp"
+  ]
+ },
+ {
+  "src": "stair-climbers-2",
+  "new": "compact-stair-climber",
+  "title_en": "Compact Stair Climber",
+  "title_zh": "紧凑型登山机",
+  "fam": "stepper",
+  "sect": "strength-training",
+  "base": null,
+  "specs": {
+   "Material": "Steel + Plastic",
+   "Size": "80*51*116cm",
+   "CartonSize": "86*11*53cm",
+   "Colors": "Gray",
+   "Logo": "Customized Logo Availale",
+   "Packaging": "Kraft Paper Box",
+   "Feature": "Multi-functional Stair Climber",
+   "Gender": "Unisex"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climbers.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climbers-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climbers-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climbers-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Stair-Climbers-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Gray.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Gray-Counting-Version.webp"
+  ]
+ },
+ {
+  "src": "gradient-color-yoga-hammock",
+  "new": "gradient-aerial-yoga-hammock",
+  "title_en": "Gradient Aerial Yoga Hammock",
+  "title_zh": "渐变色空中瑜伽吊床",
+  "fam": "hammock",
+  "sect": "yoga-props-accessories",
+  "base": null,
+  "specs": {
+   "Material": "Polyester",
+   "Size": "5*2.7 or Customized",
+   "Colors": "Customized",
+   "Feature": "Durable",
+   "Logo": "Customization Available",
+   "Packaging": "OPP Bag + Kraft Paper Box"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gradient-Color-Yoga-Hammock.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Blue-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Orange-Red-Yellow.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Pink-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Purple-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Yellow-Green.webp"
+  ]
+ },
+ {
+  "src": "solid-color-yoga-hammock",
+  "new": "solid-color-aerial-yoga-hammock",
+  "title_en": "Solid Color Aerial Yoga Hammock",
+  "title_zh": "纯色空中瑜伽吊床",
+  "fam": "hammock",
+  "sect": "yoga-props-accessories",
+  "base": null,
+  "specs": {
+   "Material": "Polyester",
+   "Size": "1*2.6m / 5*2.6m or Customized",
+   "Colors": "Customized",
+   "FabricWeight": "100gsm",
+   "Feature": "Durable",
+   "Logo": "Customization Available"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Yoga-Hammock-3-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Colors-Of-The-Yoga-Hammock.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Yoga-Hammock-1-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Yoga-Hammock-2-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Yoga-Hammock-4-1.webp"
+  ]
+ },
+ {
+  "src": "yoga-hammock-3",
+  "new": "colorful-aerial-yoga-hammock",
+  "title_en": "Colorful Aerial Yoga Hammock",
+  "title_zh": "彩虹色空中瑜伽吊床",
+  "fam": "hammock",
+  "sect": "yoga-props-accessories",
+  "base": null,
+  "specs": {
+   "Material": "Polyester",
+   "Size": "1*2.6m / 5*2.6m or Customized",
+   "Colors": "Customized",
+   "FabricWeight": "100gsm",
+   "Feature": "Durable",
+   "Logo": "Customization Available"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Colorful-Yoga-Hammock.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Colorful-Yoga-Hammock-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Colorful-Yoga-Hammock-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Colorful-Yoga-Hammock-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Colorful-Yoga-Hammock-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Colors-Of-The-Colorful-Yoga-Hammock.webp"
+  ]
+ },
+ {
+  "src": "yoga-hammock-4",
+  "new": "ombre-aerial-yoga-hammock",
+  "title_en": "Ombre Aerial Yoga Hammock",
+  "title_zh": "渐变拼色空中瑜伽吊床",
+  "fam": "hammock",
+  "sect": "yoga-props-accessories",
+  "base": null,
+  "specs": {
+   "Material": "Polyester",
+   "Size": "1*2.6m / 5*2.6m or Customized",
+   "Colors": "Customized",
+   "FabricWeight": "100gsm",
+   "Feature": "Durable",
+   "Logo": "Customization Available"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gradient-Color-Yoga-Hammock-9.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gradient-Color-Yoga-Hammock-1-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gradient-Color-Yoga-Hammock-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gradient-Color-Yoga-Hammock-3-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gradient-Color-Yoga-Hammock-4-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gradient-Color-Yoga-Hammock-5.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gradient-Color-Yoga-Hammock-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gradient-Color-Yoga-Hammock-7.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gradient-Color-Yoga-Hammock-8.webp"
+  ]
+ },
+ {
+  "src": "yoga-hammock-5",
+  "new": "large-aerial-yoga-hammock",
+  "title_en": "Large Aerial Yoga Hammock 5 × 2.8 m",
+  "title_zh": "大尺寸空中瑜伽吊床 5×2.8 m",
+  "fam": "hammock",
+  "sect": "yoga-props-accessories",
+  "base": null,
+  "specs": {
+   "Material": "Polyester",
+   "Size": "5*2.8m or Customized",
+   "Colors": "Customized",
+   "Feature": "Durable",
+   "Logo": "Customization Available",
+   "Packaging": "OPP Bag + Kraft Paper Box"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Yoga-Hammock-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Yoga-Hammock-Colors.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Yoga-Hammock-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Yoga-Hammock-6.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Yoga-Hammock-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/06/Yoga-Hammock-2.webp"
+  ]
+ },
+ {
+  "src": "yoga-hammock-with-handles",
+  "new": "aerial-yoga-hammock-with-handles",
+  "title_en": "Aerial Yoga Hammock with Handles",
+  "title_zh": "带手柄空中瑜伽吊床",
+  "fam": "hammock",
+  "sect": "yoga-props-accessories",
+  "base": null,
+  "specs": {
+   "Material": "210T Nylon Taffeta",
+   "Size": "250x150cm or Customized",
+   "Colors": "Customized",
+   "Weight": "1.2kg",
+   "Feature": "Durable",
+   "Logo": "Customization Available",
+   "Packaging": "OPP Bag"
+  },
+  "imgs": [
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Aerial-Yoga-Hammock.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Black-2.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Bright-Red-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Bright-Yellow.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Deep-Purple.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Dual-Tone-Blue.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Dual-Tone-Purple.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Dual-Tone-Red.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Fruit-Green.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Gray-With-Pink.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Ink-Green.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Orange-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Pink-4.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Purple-3.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Royal-Blue-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Sky-Blue-With-Fruit-Green.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/Sky-Blue-1.webp",
+   "https://www.sanfansport.com/wp-content/uploads/2025/05/White.webp"
+  ]
+ }
+]

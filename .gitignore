@@ -21,3 +21,12 @@ outputs/card_bg_white/
 outputs/*.png
 outputs/*.jpg
 outputs/*.jpeg
+
+# 方案预览页（导航/分类引导 demo，非站点页面）
+outputs/nav-guide/
+
+# 导航/搜索/场景页的本地实拍截图（验收用，非站点资产）
+outputs/nav-preview/
+
+# 第四批通用款页面实拍（验收用，非站点资产）
+outputs/batch4-preview/

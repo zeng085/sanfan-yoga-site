@@ -48,14 +48,14 @@ const I18N = {
     'factory.media': 'SANFAN factory building',
 
     // Product range (5 cards)
-    // Product range (8 category cards — 双语 span，无需字典)
+    // Product range (10 category cards — 双语 span，无需字典)
     'range.title': 'Our Product Range',
     'range.sub': 'From yoga essentials to full fitness lines — all factory-direct and customizable.',
 
     // Featured products (12 款跨分类主推)
     'featured.title': 'Featured Products',
-    'featured.sub': 'A hand-picked selection across our 8 product lines — every one customizable with your logo, size, thickness and packaging.',
-    'featured.cta': 'Browse all 117 products',
+    'featured.sub': 'A hand-picked selection across our 10 product lines — every one customizable with your logo, size, thickness and packaging.',
+    'featured.cta': 'Browse all 141 products',
 
     // Certifications
     'cert.title': 'Certifications',
@@ -306,8 +306,8 @@ const I18N = {
 
     // 精选产品（12 款跨分类主推）
     'featured.title': '精选产品',
-    'featured.sub': '横跨 8 条产品线的精选主推款 —— 每一款都支持 logo、尺寸、厚度与包装定制。',
-    'featured.cta': '浏览全部 117 款产品',
+    'featured.sub': '横跨 10 条产品线的精选主推款 —— 每一款都支持 logo、尺寸、厚度与包装定制。',
+    'featured.cta': '浏览全部 141 款产品',
     'cert.title': '资质认证',
     'cert.sub': 'ISO 9001、SGS、BSCI、1688 超级工厂及中国制造网认证。',
     'cert1.n': 'ISO 9001', 'cert1.s': '质量管理体系',
@@ -860,4 +860,369 @@ if (form) {
     upd();
     setInterval(upd, 30000);
   }
+})();
+
+// =====================================================================
+// 导航引导 + 全站搜索（2026-09-12）
+//   L1  Products 下拉（Mega Menu）：品类 3 分组 + 按用途入口
+//   搜索  头部放大镜 → 浮层，索引放 assets/data/navdata.js，懒加载
+// 说明：只在英文/中文同页生效。分语言 URL（/de/ /fr/ …）有自己的一套静态导航，
+//      跳进去注入会生成一堆指向英文页的死链，所以直接跳过。
+// =====================================================================
+(function () {
+  var cur = (document.documentElement.lang || '').toLowerCase();
+  if (cur && cur !== 'en' && cur.indexOf('zh') !== 0) return;
+
+  var header = document.querySelector('.site-header');
+  var navActions = document.querySelector('.nav-actions');
+  var navLinks = document.querySelector('.nav-links');
+  if (!header || !navActions || !navLinks) return;
+
+  // 相对前缀：直接从 <link href> 上取，而不是数 pathname 层级。
+  // file:// 下 pathname 是整个磁盘路径（/Users/…/index.html），数层级会得到
+  // 一串 ../ 直接冲出站点目录；从样式表 href 反推 '' / '../' 两种都成立。
+  var linkEl = document.querySelector('link[href*="styles.css"]');
+  var linkHref = linkEl ? (linkEl.getAttribute('href') || '') : '';
+  var ROOT = linkHref.replace(/assets\/css\/styles\.css.*$/, '');
+  if (!/^(\.\.\/)*$/.test(ROOT)) {
+    var segs = location.pathname.split('/').filter(Boolean);
+    ROOT = new Array(Math.max(0, segs.length - 1) + 1).join('../');
+  }
+  var vm = linkHref.match(/[?&]v([A-Za-z0-9]+)/);
+  var VER = vm ? vm[1] : '1';
+
+  function isZh() { return document.documentElement.classList.contains('show-zh'); }
+  function L(en, zh) { return isZh() ? zh : en; }
+  function nameOf(e) { return isZh() ? (e.z || e.t) : e.t; }
+
+  var ICON_SEARCH = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+    '<circle cx="11" cy="11" r="6.4" stroke="currentColor" stroke-width="1.9"/>' +
+    '<path d="M15.8 15.8 20 20" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>';
+
+  // ------------------------------------------------------------ 数据懒加载
+  var dataPromise = null;
+  function loadData() {
+    if (window.SANFAN_NAV) return Promise.resolve(window.SANFAN_NAV);
+    if (dataPromise) return dataPromise;
+    dataPromise = new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      // file:// 下 Chrome 不认带查询串的资源路径（会 ERR_FILE_NOT_FOUND），
+      // 本地预览时省掉 ?v；线上照常带版本号。
+      s.src = ROOT + 'assets/data/navdata.js' +
+              (location.protocol === 'file:' ? '' : '?v=' + VER);
+      s.onload = function () { window.SANFAN_NAV ? resolve(window.SANFAN_NAV) : reject(); };
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
+    return dataPromise;
+  }
+
+  // ------------------------------------------------------------ L1 Mega Menu
+  var mega = null;
+  var hideTimer = null;
+  var prodLink = null;
+  navLinks.querySelectorAll('a').forEach(function (a) {
+    if ((a.getAttribute('data-i18n') || '') === 'nav.products') prodLink = a;
+  });
+
+  function closeMega() {
+    if (mega) mega.hidden = true;
+    if (prodLink) prodLink.classList.remove('mm-active');
+  }
+  function scheduleClose() {
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(closeMega, 160);
+  }
+  function cancelClose() { clearTimeout(hideTimer); }
+
+  function renderMega(D) {
+    var byKey = {};
+    D.cats.forEach(function (c) { byKey[c.k] = c; });
+    var groups = D.groups.map(function (g) {
+      var items = g.items.map(function (k) {
+        var c = byKey[k];
+        if (!c) return '';
+        return '<a href="' + ROOT + c.k + '.html">' + L(c.en, c.zh) +
+               '<em>' + c.n + '</em></a>';
+      }).join('');
+      return '<div class="mm-group"><span class="mm-glabel">' + L(g.en, g.zh) + '</span>' +
+             '<div class="mm-links">' + items + '</div></div>';
+    }).join('');
+    var apps = D.apps.map(function (a) {
+      return '<a href="' + ROOT + 'applications/' + a.k + '.html">' +
+             '<span class="an">' + L(a.en, a.zh) + '</span>' +
+             '<span class="ad">' + L(a.d, a.dz) + '</span></a>';
+    }).join('');
+    var html =
+      '<div class="mm-panel">' +
+        '<div class="mm-cats">' +
+          '<p class="mm-eyebrow">' + L('Shop by category', '按品类选购') + '</p>' +
+          groups +
+          '<div class="mm-all"><a href="' + ROOT + 'products.html">' +
+            L('View all ' + D.total + ' products', '查看全部 ' + D.total + ' 款') + ' &rarr;</a>' +
+            ' &nbsp;·&nbsp; <a href="' + ROOT + 'materials.html">' +
+            L('Compare materials', '材质对比') + ' &rarr;</a>' +
+          '</div>' +
+        '</div>' +
+        '<aside class="mm-apps">' +
+          '<p class="mm-eyebrow">' + L('Shop by application', '按用途选购') + '</p>' +
+          apps +
+          '<div class="mm-foot"><a href="' + ROOT + 'contact.html">' +
+            L('Not sure which spec?', '不确定选什么规格？') +
+            '<span>' + L('Send your target price — we quote in 24h',
+                         '把目标价发给我们 —— 24 小时内报价') + '</span></a></div>' +
+        '</aside>' +
+      '</div>';
+    if (mega) mega.innerHTML = html;
+  }
+
+  function ensureMega(D) {
+    if (!mega) {
+      mega = document.createElement('div');
+      mega.className = 'mm-wrap';
+      mega.hidden = true;
+      mega.addEventListener('mouseenter', cancelClose);
+      mega.addEventListener('mouseleave', scheduleClose);
+      header.appendChild(mega);
+    }
+    renderMega(D);
+  }
+
+  if (prodLink) {
+    prodLink.addEventListener('mouseenter', function () {
+      if (window.innerWidth <= 920) return;
+      cancelClose();
+      loadData().then(function (D) {
+        ensureMega(D);
+        if (prodLink.matches(':hover')) {
+          mega.hidden = false;
+          prodLink.classList.add('mm-active');
+        }
+      }).catch(function () {});
+    });
+    prodLink.addEventListener('mouseleave', scheduleClose);
+    prodLink.addEventListener('focus', function () {
+      if (window.innerWidth <= 920) return;
+      loadData().then(function (D) {
+        ensureMega(D); mega.hidden = false; prodLink.classList.add('mm-active');
+      }).catch(function () {});
+    });
+  }
+
+  // ------------------------------------------------------------ 搜索
+  var modal = document.createElement('div');
+  modal.className = 'sr-modal';
+  modal.hidden = true;
+  modal.innerHTML =
+    '<div class="sr-box" role="dialog" aria-modal="true">' +
+      '<div class="sr-inputrow">' + ICON_SEARCH +
+        '<input class="sr-input" type="search" autocomplete="off" ' +
+        'placeholder="' + L('Search 141 products, categories, applications…',
+                            '搜索 141 款产品、分类、应用场景…') + '">' +
+        '<span class="sr-esc">ESC</span>' +
+      '</div>' +
+      '<div class="sr-results"></div>' +
+      '<div class="sr-hints"><p class="h-cap"></p><div class="h-row"></div></div>' +
+    '</div>';
+  document.body.appendChild(modal);   // 必须挂进 DOM，否则 hidden 切换看不到任何东西
+
+  var srBtn = document.createElement('button');
+  srBtn.type = 'button';
+  srBtn.className = 'sr-btn';
+  srBtn.setAttribute('aria-label', L('Search', '搜索'));
+  srBtn.innerHTML = ICON_SEARCH;
+  navActions.insertBefore(srBtn, navActions.firstChild);
+
+  // 窄屏：导航栏放不下图标 → 改成移动菜单里的一项
+  var menuItem = document.createElement('a');
+  menuItem.className = 'nav-search-item';
+  menuItem.href = '#';
+  menuItem.textContent = L('Search products', '搜索产品');
+  navLinks.insertBefore(menuItem, navLinks.firstChild);
+
+  var input = modal.querySelector('.sr-input');
+  var resultsEl = modal.querySelector('.sr-results');
+  var hintsEl = modal.querySelector('.sr-hints');
+  var D = null;
+  var items = [];
+  var active = -1;
+
+  var HOT = function () {
+    return isZh()
+      ? ['TPE 瑜伽垫', '高温瑜伽', '泡沫轴', '跳绳', '筋膜枪', '瑜伽馆', '材质对比', '贴牌']
+      : ['TPE yoga mat', 'hot yoga', 'foam roller', 'jump rope', 'fascia gun',
+         'studio', 'materials', 'private label'];
+  };
+
+  var TYPE_LABEL = {
+    product: ['Product', '产品'],
+    category: ['Category', '分类'],
+    application: ['Solution', '方案'],
+    page: ['Page', '页面']
+  };
+
+  function norm(s) { return (s || '').toLowerCase(); }
+
+  function scoreOne(e, q) {
+    var t = norm(e.t), z = norm(e.z), c = norm(e.c), cz = norm(e.cz), k = norm(e.k), s = 0;
+    if (t === q) s += 100; else if (t.indexOf(q) === 0) s += 84; else if (t.indexOf(q) >= 0) s += 62;
+    if (z) { if (z === q) s += 96; else if (z.indexOf(q) >= 0) s += 74; }
+    if (cz && cz.indexOf(q) >= 0) s += 48;
+    if (c && c.indexOf(q) >= 0) s += 44;
+    if (k && k.indexOf(q) >= 0) s += 30;
+    return s;
+  }
+
+  // 中文说法 ↔ 英文说法互通：搜「泡沫轴」也能出 foam roller，
+  // 否则中文用户只会搜到中文里恰好含这三个字的产品名。
+  function expandToken(tok) {
+    var out = [tok];
+    var syn = (D && D.syn) || {};
+    for (var key in syn) {
+      if (key === tok || tok.indexOf(key) >= 0 || key.indexOf(tok) >= 0) out.push(syn[key]);
+    }
+    return out;
+  }
+
+  function search(q) {
+    if (!D) return [];
+    var toks = norm(q).split(/[\s,，、]+/).filter(Boolean).map(expandToken);
+    if (!toks.length) return [];
+    var hits = [];
+    for (var i = 0; i < D.idx.length; i++) {
+      var e = D.idx[i], total = 0, ok = true;
+      for (var j = 0; j < toks.length; j++) {
+        var best = 0;
+        for (var m = 0; m < toks[j].length; m++) {
+          var v = scoreOne(e, toks[j][m]);
+          if (v > best) best = v;
+        }
+        if (!best) { ok = false; break; }
+        total += best;
+      }
+      if (ok) {
+        // 产品优先于分类/页面：同分时客户要的是具体款，不是导航页
+        hits.push({ e: e, s: total + (e.y === 'product' ? 12 : e.y === 'category' ? 8 : 0) });
+      }
+    }
+    hits.sort(function (a, b) { return b.s - a.s; });
+    return hits.slice(0, 9).map(function (h) { return h.e; });
+  }
+
+  function thumbHTML(e) {
+    if (e.img) {
+      return '<span class="sr-thumb"><img src="' + ROOT + e.img +
+             '" alt="" loading="lazy"></span>';
+    }
+    var ch = (nameOf(e) || '?').replace(/[^A-Za-z0-9\u4e00-\u9fff]/, '').charAt(0).toUpperCase();
+    return '<span class="sr-thumb sr-thumb-txt">' + ch + '</span>';
+  }
+
+  function render(q) {
+    var sub = '';
+    if (!q) {
+      resultsEl.innerHTML = '';
+      var hot = HOT();
+      hintsEl.querySelector('.h-cap').textContent = L('Popular searches', '热门搜索');
+      hintsEl.querySelector('.h-row').innerHTML = hot.map(function (h) {
+        return '<button type="button" data-q="' + h + '">' + h + '</button>';
+      }).join('');
+      hintsEl.style.display = '';
+      items = []; active = -1;
+      return;
+    }
+    items = search(q);
+    hintsEl.style.display = 'none';
+    if (!items.length) {
+      resultsEl.innerHTML = '<div class="sr-empty">' +
+        L('No match for “' + q + '”. Tell us the spec and we will build it — ' +
+          'or ask us directly on WhatsApp.',
+          '没有匹配「' + q + '」的结果。把规格发给我们，我们来做 —— 或直接 WhatsApp 联系我们。') +
+        '</div>';
+      active = -1;
+      return;
+    }
+    resultsEl.innerHTML = items.map(function (e, i) {
+      var tl = TYPE_LABEL[e.y] || TYPE_LABEL.page;
+      sub = isZh() ? (e.cz || '') : (e.c || '');
+      return '<a class="sr-item' + (i === 0 ? ' on' : '') + '" href="' + ROOT + e.u + '">' +
+        thumbHTML(e) +
+        '<span class="sr-txt"><span class="sr-t">' + nameOf(e) + '</span>' +
+        '<span class="sr-s">' + sub + '</span></span>' +
+        '<span class="sr-badge">' + L(tl[0], tl[1]) + '</span></a>';
+    }).join('');
+    active = 0;
+  }
+
+  function highlight(i) {
+    var list = resultsEl.querySelectorAll('.sr-item');
+    if (!list.length) return;
+    if (i < 0) i = list.length - 1;
+    if (i >= list.length) i = 0;
+    list.forEach(function (a, n) { a.classList.toggle('on', n === i); });
+    active = i;
+    if (list[i].scrollIntoView) list[i].scrollIntoView({ block: 'nearest' });
+  }
+
+  function openSearch() {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    loadData().then(function (d) {
+      D = d;
+      render(input.value.trim());
+    }).catch(function () {});
+    render('');
+    setTimeout(function () { input.focus(); }, 30);
+  }
+  function closeSearch() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  srBtn.addEventListener('click', openSearch);
+  menuItem.addEventListener('click', function (ev) { ev.preventDefault(); navLinks.classList.remove('open'); openSearch(); });
+  modal.addEventListener('click', function (ev) { if (ev.target === modal) closeSearch(); });
+  modal.querySelector('.sr-esc').addEventListener('click', closeSearch);
+
+  input.addEventListener('input', function () { render(input.value.trim()); });
+  input.addEventListener('keydown', function (ev) {
+    if (ev.key === 'ArrowDown') { ev.preventDefault(); highlight(active + 1); }
+    else if (ev.key === 'ArrowUp') { ev.preventDefault(); highlight(active - 1); }
+    else if (ev.key === 'Enter') {
+      var on = resultsEl.querySelector('.sr-item.on') || resultsEl.querySelector('.sr-item');
+      if (on) { ev.preventDefault(); location.href = on.getAttribute('href'); }
+    } else if (ev.key === 'Escape') { closeSearch(); }
+  });
+  hintsEl.addEventListener('click', function (ev) {
+    var b = ev.target.closest ? ev.target.closest('button[data-q]') : null;
+    if (!b) return;
+    input.value = b.getAttribute('data-q');
+    render(input.value.trim());
+    input.focus();
+  });
+
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key === 'Escape' && !modal.hidden) { closeSearch(); return; }
+    var tag = (ev.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+    if (ev.key === '/' || ((ev.metaKey || ev.ctrlKey) && (ev.key === 'k' || ev.key === 'K'))) {
+      ev.preventDefault();
+      openSearch();
+    }
+  });
+
+  // ------------------------------------------------------------ 语言切换后重建
+  window.addEventListener('sanfan-langchange', function () {
+    srBtn.setAttribute('aria-label', L('Search', '搜索'));
+    menuItem.textContent = L('Search products', '搜索产品');
+    input.setAttribute('placeholder',
+      L('Search 141 products, categories, applications…', '搜索 141 款产品、分类、应用场景…'));
+    if (!modal.hidden) render(input.value.trim());
+    if (D) renderMega(D);
+  });
+
+  // 页面空闲时预热，让首次悬停 / 首次搜索即时响应
+  function warm() { loadData().then(function (d) { D = d; ensureMega(d); }).catch(function () {}); }
+  if (window.requestIdleCallback) window.requestIdleCallback(warm, { timeout: 3000 });
+  else window.addEventListener('load', function () { setTimeout(warm, 1200); });
 })();

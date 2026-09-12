@@ -6,11 +6,17 @@
 ## 概况
 - 仓库 zeng085/sanfan-yoga-site，Vercel；B2B 瑜伽垫/健身器材 OEM/ODM 工厂站
 - EN 主站 + de/ja/ko/fr/it/es 6 语言 + 中文同页切换（无 /zh/ URL）
-- **页面结构**：117 产品页（`products/`）+ 8 分类页 + 总览 `products.html` + 首页
-- 改动流程：bump ?v= → push（`github-api-push/push_api_v3.py`，变更集对比**远端 parent**；
-  含二进制必须用 v3，且 diff 要带 `--no-renames`）
+- **页面结构**：141 产品页（`products/`）+ 10 分类页 + 总览 `products.html` + 首页
+  + **6 场景页 `applications/` + `materials.html` 材质对比页**（09-12 新增，见下节）
+- 改动流程：bump `?v=` → 合并成一个干净 commit → `github-api-push/push_api_v3.py --auto`
+  ⭐ **用 v3 就不要再 `reset --soft` 对齐**——那是自造死局：本地 HEAD 退回旧 commit，
+  而 github.com 不通 fetch 不到新对象 → 下次 `git diff <远端parent> HEAD` 报 bad object。
+  v3 已内置 **tree 逐 blob 比对**回退（本地 `ls-tree -r HEAD` vs 远程 recursive tree，
+  git blob sha 与 GitHub 一致可直接比），精度等价、能识别删除、不依赖本地远程对象。
+  diff 仍要带 `--no-renames`（否则 rename 不删旧路径）
 - ⚠️ **推送前必查 `.gitignore`**：`i18n_build/data/`（报价表 16M）是商业机密，
-  绝不可进公开仓库；`outputs/{_riskcheck,bgtest,card_bg_white}/` 与 `__pycache__/` 已排除
+  绝不可进公开仓库；`outputs/{_riskcheck,bgtest,card_bg_white}/`、`outputs/*.png|jpg`
+  与 `__pycache__/` 已排除
 - ⭐ 推送走 git remote 里的 token **不存在**，在 `url.*.insteadOf` 里：
   `git config --get-regexp '^url\.' | sed -n 's|.*https://\([^@]*\)@github.com.*|\1|p'`
   （api.github.com 401 = 网络通但令牌错；000 才是断网）
@@ -36,14 +42,39 @@
 - 已知残留：英文站素材本身就是"彩色背景板/场景照"的产品（ym2、circular-leg-clamps、
   pilates-reformer-mat-mandala、advanced-yoga-roller、figure-8-resistance-bands、fr3）无白底可换
 
-## 产品分类（2026-09-11 拆页）
-- 原 `products.html` 117 卡平铺 **28 屏 → 8 分类页 + 总览页（2.6 屏）**。分类名即采购搜索词
-  （垫类 4 + foam-rollers/massage-recovery/resistance-bands/yoga-props-accessories）。
-  生成脚本**幂等**（卡片池 `outputs/product_cards.json`）。
+## 产品分类（2026-09-11 拆页，09-12 扩至 10 类）
+- 原 `products.html` 117 卡平铺 **28 屏 → 分类页 + 总览页**。分类名即采购搜索词
+  （垫类 4 + foam-rollers/massage-recovery/resistance-bands/yoga-props-accessories；
+  09-12 +**jump-ropes / strength-training**）。生成脚本**幂等**（卡片池 `outputs/product_cards.json`）。
+- ⚠️ 重新生成顺序：`build_category_pages.py` → `fix_ct_thumbs.py`（缩略图会被前者覆盖）。
 - ⚠️ 分类格**不能用 `<a>` 包住缩略图链接块**（HTML 不允许 a 嵌 a）→ 用 `<div class="cat-tile">`。
 
+## 导航引导三层 + 搜索 + 材质页（2026-09-12 落地，`?v20260912c`）
+- **问题**：原导航只有一条找货路径（懂规格的人），不懂规格的买方（"我开瑜伽馆要配齐"）无入口。
+- **L1** Mega Menu：Products 下拉左「Shop by category」10 分类分 3 组带计数、右深绿「Shop by application」6 场景、底部报价 CTA
+- **L2** 分组分类条 `.cat-nav-grouped`（Mats / Training / Recovery & Props 三组）+ `.needrow` 场景快捷行
+- **L3** ⭐ `applications/` 6 个按生意类型的采购方案页：`yoga-pilates-studios`(20款) /
+  `gyms-fitness-clubs`(23) / `hotels-resorts-spas`(18) / `retail-private-label`(24) /
+  `recovery-physio`(25) / `home-online-sellers`(26) —— **只从既有 141 SKU 里挑，永不新增产品**
+- **搜索**：头部放大镜 → 浮层；索引 `assets/data/navdata.js`（**classic script 非 JSON**，
+  规避 file:// 的 fetch CORS）163 条；`SYNONYMS` 做中英互通（搜"泡沫轴"出 foam roller）；
+  `main.js` 懒加载 + `requestIdleCallback` 预热；**跳过非 en/zh 页**（`documentElement.lang`）
+- **材质对比**：`materials.html` 8 材质（TPE/PVC/NBR/PU橡胶/麂皮/软木/EVA/EPP）× 9 维度静态表 + FAQ
+- ⭐ **`i18n_build/site_templates.py` 是全站唯一模板源**（`prefix` 参数控相对路径
+  `""`(根) vs `"../"`(子目录)）：HEAD/NAV/FOOTER/CTA/分类条/场景卡/信任条。新建页面**必须走它**，
+  否则模板漂移。生成器全幂等：`build_application_pages.py` / `build_materials_page.py` /
+  `build_navdata.py` / `apply_nav_listing.py`（接 sitemap+llms.txt）
+- ⚠️ **百分比 padding 的包含块是父容器宽度不是自身** → `.sr-thumb{padding:8%}`(容器 584px)
+  单边 46.7px 把 44px 框撑成 93px、`img` 实际 `width:0px`（缩略图全空白）→ **改 `padding:4px`**
+- ⚠️ **file:// 验收不可靠**：classic script 带 `?v` 被拒、预取误报 →
+  用 `python3 -m http.server 8848` 起本地 http；navdata 路径**去前导 `/`**，JS 用 `ROOT` 拼
+  （`ROOT` 从 `link[href*="styles.css"]` 反推，别数 pathname 层级）
+- ⚠️ footer 5 列会让老页（4 列）右侧空轨 → `.footer-grid:has(> div:nth-child(5))` 条件切换
+- 验收：`final_check.py` 5 项全过（含新增第[5]项**站内 .html 内链死链**，5038 条 0 死链）；
+  截图脚本 `shot_nav_live.cjs` → `outputs/nav-preview/`（已 .gitignore）
+
 ## 首页区块（2026-09-11）
-- 上区 range-grid = **8 格分类导航**；下区原「Full Product Gallery」（20 张老页卡）与上区
+- 上区 range-grid = **分类导航**（09-11 是 8 格，09-12 扩到 **10 格**）；下区原「Full Product Gallery」（20 张老页卡）与上区
   **撞图 7 张** + `pr1` 重复 → 改「Featured Products」**12 款跨分类主推**（`featured-grid` 4 列，
   取卡片池新页卡）。脚本 `build_featured_section.py`（幂等）。
 - ⚠️ 两区**首图绝不能重复**（range 用的老页：ym1/ym5/pr3/fr1/fr5/rb1/fi2/aurora-gradient-suede-yoga-mat）。
@@ -60,13 +91,19 @@
 - 价格只认 `offer` 页（C=Spec / **D=FOB Xiamen USD**，`sanfan_offer.xlsx` 781 行仅 23 行有价）。
   offers = **基准×0.7~×1.3**，正文不出数字。❌ 别用代发客户表/成本表。
 
-## 产品页现状（09-11 体检后）
-- ✅ **以上已于 2026-09-11 推送上线**（commit `5519a354cd`，1504 文件；Vercel 已生效：
-  线上 `v20260911l`、下掉页 308 跳转、新图 200）
-- **117 页**；图片与英文站 **117/117 一致**（1000 张）；未进分类页 0、死链 0。
+## 产品页现状（09-12 第三批后）
+- ✅ 缩略图修复版已推（`ed8ff43645`，线上 `v20260912a`）
+- **141 页 / 10 分类页**（今 +24 页 +2 分类）；图片引用 2903 条 0 缺失；未进分类页 0、死链 0。
 - 已下掉 ym8/rb3/rb4/pr2/pr5/fi1。⚠️ fi4 有源曾误判无源 → **下掉前先目视对图**。
-- 待第三批 47 个（约 22 个空壳）。⭐ **ym1/ym2 是家族页非 1:1**（ym1↔14 个 TPE 垫），
-  对齐用「同族并集」。非错误：96 页缺 6 语言／22 页规格薄／37 页无价。
+- 第三批 24 款（跳绳 6 + 力量训练 12 + 吊床 6）**本地已建好、未推送**（`v20260912b`）。
+- 剩 18 个未上，**全是空壳页** → 有真规格的已 100% 上线。
+- ⭐ **ym1/ym2 是家族页非 1:1**（ym1↔14 个 TPE 垫），另有 12 个家族页映射见
+  `pending_batch3.py` 的 `FAMILY`；对齐用「同族并集」。
+  非错误：96 页缺 6 语言／22 页规格薄／37 页无价。
+- ⭐⭐ **判「是否已上线」别用规格数或 slug，用 `probe_md5.py` 的 md5 精确比对**：
+  本次 29 个有规格的产品里 5 个其实已被老页吞掉（`yoga-hammock→pr1`、`kettlebell-2→fi2`、
+  `jump-rope-2→fi3`、`stair-climbers-3→fi4`、`dumbbell-2→fi5`），**多算了 5 个**。
+  dHash 感知哈希会误判（球类匹配到瑜伽垫），必须 md5。
 
 ## 图片规则
 - ⭐ **容器必须 1:1**：`.pd-main img` = `1/1`+`contain`、`.prod-card .ph`、`.range-card .rc-img`。

@@ -1,0 +1,84 @@
+{
+ "ab-wheel": {
+  "total": 5,
+  "hit": 0,
+  "hit_files": [],
+  "fresh_k": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "adjustable-dumbbell": {
+  "total": 6,
+  "hit": 0,
+  "hit_files": [],
+  "fresh_k": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ },
+ "jump-rope": {
+  "total": 7,
+  "hit": 0,
+  "hit_files": [],
+  "fresh_k": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ "kettlebell": {
+  "total": 6,
+  "hit": 0,
+  "hit_files": [],
+  "fresh_k": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ },
+ "suspension-training": {
+  "total": 10,
+  "hit": 0,
+  "hit_files": [],
+  "fresh_k": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ]
+ },
+ "vibration-machine": {
+  "total": 6,
+  "hit": 0,
+  "hit_files": [],
+  "fresh_k": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ }
+}
