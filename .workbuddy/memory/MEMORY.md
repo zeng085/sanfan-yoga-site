@@ -189,6 +189,9 @@
 - ⭐ **下载英文站图片用 Python `urllib` + 浏览器 UA + Referer**：curl 全废（exit 35/52）。
 - ⚠️ **BSD grep 的 `\|` 交替匹配静默失效**（假阴性）→ 多关键词/中文用 Python str.count()。
 - ⚠️ **产品页没有 `<main>`**：选择器用 `.pd-gallery img` / `table.spec-table th`。
+- ⚠️ **语言版生成时标题→slug 匹配失败会静默回退到 products.html**（09-13 发现 1086 条/204 文件，
+  EN 版 0 条；缩略图/产品卡能显示但点不进详情）。已修：`i18n_build/fix_lang_card_links.py`
+  （EN 建「图片 basename→products/slug.html」映射反查改写，--dry 预演）。**再生成语言页后必复扫此回退**。
 
 ## DNS / GEO
 - DNS 在 Cloudflare，主域**灰云直连 Vercel**（CF 规则不生效）；`www.` NXDOMAIN 待修。

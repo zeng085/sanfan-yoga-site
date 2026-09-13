@@ -1,0 +1,37 @@
+==============================================================
+[A] Schema 政策校验 —— 1029 个产品页（7 语言）
+    Critical=0 High=714 Medium=4830 Info=1029
+    真问题 0 条；B2B 设计内豁免（询价无价/无会员/AggregateOffer 价格区间） 2772 条
+==============================================================
+[B] 内容质量分（QRG 对齐）—— 31 个 EN 页面，均分 89.8/100，阈值 70
+     82/100  applications/index.html  -
+     82/100  blog/compliance.html  -
+     82/100  blog/tpe-vs-pu.html  -
+     82/100  blog/vet-factory.html  -
+     82/100  blog/yoga-mat-materials.html  -
+     83/100  materials.html  -
+     84/100  blog/7day-sampling.html  -
+     86/100  suede-cork-yoga-mats.html  repetitive
+    低于阈值: 0 页
+==============================================================
+[C] GEO 可引用性 —— 19 个内容页
+    有问题式标题 19/19  有 120-180 词可引用段 0/19  有 FAQPage 17/19
+    OK  q标题=3  可引段=0  最长段=75  faq=Y  applications/gyms-fitness-clubs.html
+    OK  q标题=3  可引段=0  最长段=97  faq=Y  applications/home-online-sellers.html
+    OK  q标题=3  可引段=0  最长段=90  faq=Y  applications/hotels-resorts-spas.html
+    OK  q标题=1  可引段=0  最长段=44  faq=-  applications/index.html
+    OK  q标题=3  可引段=0  最长段=93  faq=Y  applications/recovery-physio.html
+    OK  q标题=3  可引段=0  最长段=89  faq=Y  applications/retail-private-label.html
+    OK  q标题=3  可引段=0  最长段=86  faq=Y  applications/yoga-pilates-studios.html
+    OK  q标题=15 可引段=0  最长段=70  faq=Y  blog/7day-sampling.html
+    OK  q标题=11 可引段=0  最长段=69  faq=Y  blog/compliance.html
+    OK  q标题=10 可引段=0  最长段=63  faq=Y  blog/custom-sizes.html
+    OK  q标题=13 可引段=0  最长段=71  faq=Y  blog/moq-explained.html
+    OK  q标题=1  可引段=0  最长段=82  faq=Y  blog/top-12-china-yoga-mat-manufacturers.html
+    OK  q标题=17 可引段=0  最长段=73  faq=Y  blog/tpe-vs-pu.html
+    OK  q标题=18 可引段=0  最长段=85  faq=Y  blog/vet-factory.html
+    OK  q标题=14 可引段=0  最长段=68  faq=Y  blog/yoga-mat-materials.html
+    OK  q标题=10 可引段=0  最长段=60  faq=Y  blog/yoga-mat-spec-guide.html
+    OK  q标题=2  可引段=0  最长段=28  faq=Y  faq.html
+    OK  q标题=3  可引段=0  最长段=39  faq=-  index.html
+    OK  q标题=3  可引段=0  最长段=59  faq=Y  materials.html
