@@ -871,13 +871,17 @@ if (form) {
 // =====================================================================
 // 导航引导 + 全站搜索（2026-09-12）
 //   L1  Products 下拉（Mega Menu）：品类 3 分组 + 按用途入口
-//   搜索  头部放大镜 → 浮层，索引放 assets/data/navdata.js，懒加载
-// 说明：只在英文/中文同页生效。分语言 URL（/de/ /fr/ …）有自己的一套静态导航，
-//      跳进去注入会生成一堆指向英文页的死链，所以直接跳过。
+//   搜索  头部放大镜 → 浮层，索引懒加载
+// 2026-09-12 起**分语言站也启用**：索引不再是英文一份 —— 每个语言有
+// assets/data/navdata.<lang>.js，里面的产品名/分类名取自该语言的静态页面，
+// 链接统一加 BASE 前缀（'de/'），所以不会出现指向英文页的死链。
+//   英文 / 中文同页  -> navdata.js          -> window.SANFAN_NAV
+//   de/ja/ko/fr/it/es -> navdata.<lang>.js  -> window.SANFAN_NAV_<LANG>
 // =====================================================================
 (function () {
-  var cur = (document.documentElement.lang || '').toLowerCase();
-  if (cur && cur !== 'en' && cur.indexOf('zh') !== 0) return;
+  var cur = (document.documentElement.lang || 'en').toLowerCase();
+  var LKEY = (cur && cur !== 'en' && cur.indexOf('zh') !== 0) ? cur.slice(0, 2) : '';
+  var BASE = LKEY ? LKEY + '/' : '';        // 语言子目录前缀，拼在站内路径前
 
   var header = document.querySelector('.site-header');
   var navActions = document.querySelector('.nav-actions');
@@ -903,27 +907,48 @@ if (form) {
   function L(en, zh) { return isZh() ? zh : en; }
   function nameOf(e) { return isZh() ? (e.z || e.t) : e.t; }
 
+  // 语言站的 UI 文案来自该语言索引里的 ui 字段（build_navdata_i18n.py 生成）；
+  // 英文/中文同页没有 ui，退回内置双语串。rep 用来替换 {n}（产品总数）/ {q}（查询词）。
+  var UI = null;
+  function T(key, en, zh, rep) {
+    var s = (UI && UI[key] != null) ? UI[key] : L(en, zh);
+    if (rep) { for (var k in rep) s = s.split('{' + k + '}').join(rep[k]); }
+    return s;
+  }
+
   var ICON_SEARCH = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
     '<circle cx="11" cy="11" r="6.4" stroke="currentColor" stroke-width="1.9"/>' +
     '<path d="M15.8 15.8 20 20" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>';
 
   // ------------------------------------------------------------ 数据懒加载
   var dataPromise = null;
+  var GLOBAL = LKEY ? 'SANFAN_NAV_' + LKEY.toUpperCase() : 'SANFAN_NAV';
   function loadData() {
-    if (window.SANFAN_NAV) return Promise.resolve(window.SANFAN_NAV);
+    if (window[GLOBAL]) return Promise.resolve(window[GLOBAL]);
     if (dataPromise) return dataPromise;
     dataPromise = new Promise(function (resolve, reject) {
       var s = document.createElement('script');
       // file:// 下 Chrome 不认带查询串的资源路径（会 ERR_FILE_NOT_FOUND），
       // 本地预览时省掉 ?v；线上照常带版本号。
-      s.src = ROOT + 'assets/data/navdata.js' +
+      s.src = ROOT + 'assets/data/navdata' + (LKEY ? '.' + LKEY : '') + '.js' +
               (location.protocol === 'file:' ? '' : '?v=' + VER);
-      s.onload = function () { window.SANFAN_NAV ? resolve(window.SANFAN_NAV) : reject(); };
+      s.onload = function () { window[GLOBAL] ? resolve(window[GLOBAL]) : reject(); };
       s.onerror = reject;
       document.head.appendChild(s);
     });
     return dataPromise;
   }
+
+  // 数据到手后再套用文案：产品总数 {n} 来自索引，未加载前只能给个兜底
+  function applyUI(D) {
+    if (D) { D_ = D; UI = D.ui || null; }
+    var n = (D_ && D_.total) || 147;
+    input.setAttribute('placeholder', T('ph', 'Search ' + n + ' products, categories, applications…',
+                                        '搜索 ' + n + ' 款产品、分类、应用场景…', { n: n }));
+    srBtn.setAttribute('aria-label', T('aria', 'Search', '搜索'));
+    menuItem.textContent = T('menu', 'Search products', '搜索产品');
+  }
+  var D_ = null;
 
   // ------------------------------------------------------------ L1 Mega Menu
   var mega = null;
@@ -932,6 +957,12 @@ if (form) {
   navLinks.querySelectorAll('a').forEach(function (a) {
     if ((a.getAttribute('data-i18n') || '') === 'nav.products') prodLink = a;
   });
+  // 语言页是静态翻译的，没有 data-i18n 锚点 → 退按 href 找「产品」入口
+  if (!prodLink) {
+    navLinks.querySelectorAll('a').forEach(function (a) {
+      if (!prodLink && /products\.html$/.test(a.getAttribute('href') || '')) prodLink = a;
+    });
+  }
 
   function closeMega() {
     if (mega) mega.hidden = true;
@@ -950,35 +981,35 @@ if (form) {
       var items = g.items.map(function (k) {
         var c = byKey[k];
         if (!c) return '';
-        return '<a href="' + ROOT + c.k + '.html">' + L(c.en, c.zh) +
+        return '<a href="' + ROOT + BASE + c.k + '.html">' + L(c.en, c.zh) +
                '<em>' + c.n + '</em></a>';
       }).join('');
       return '<div class="mm-group"><span class="mm-glabel">' + L(g.en, g.zh) + '</span>' +
              '<div class="mm-links">' + items + '</div></div>';
     }).join('');
     var apps = D.apps.map(function (a) {
-      return '<a href="' + ROOT + 'applications/' + a.k + '.html">' +
+      return '<a href="' + ROOT + BASE + 'applications/' + a.k + '.html">' +
              '<span class="an">' + L(a.en, a.zh) + '</span>' +
              '<span class="ad">' + L(a.d, a.dz) + '</span></a>';
     }).join('');
     var html =
       '<div class="mm-panel">' +
         '<div class="mm-cats">' +
-          '<p class="mm-eyebrow">' + L('Shop by category', '按品类选购') + '</p>' +
+          '<p class="mm-eyebrow">' + T('shop_cat', 'Shop by category', '按品类选购') + '</p>' +
           groups +
-          '<div class="mm-all"><a href="' + ROOT + 'products.html">' +
-            L('View all ' + D.total + ' products', '查看全部 ' + D.total + ' 款') + ' &rarr;</a>' +
-            ' &nbsp;·&nbsp; <a href="' + ROOT + 'materials.html">' +
-            L('Compare materials', '材质对比') + ' &rarr;</a>' +
+          '<div class="mm-all"><a href="' + ROOT + BASE + 'products.html">' +
+            T('view_all', 'View all ' + D.total + ' products', '查看全部 ' + D.total + ' 款', { n: D.total }) + ' &rarr;</a>' +
+            ' &nbsp;·&nbsp; <a href="' + ROOT + BASE + 'materials.html">' +
+            T('compare', 'Compare materials', '材质对比') + ' &rarr;</a>' +
           '</div>' +
         '</div>' +
         '<aside class="mm-apps">' +
-          '<p class="mm-eyebrow">' + L('Shop by application', '按用途选购') + '</p>' +
+          '<p class="mm-eyebrow">' + T('shop_app', 'Shop by application', '按用途选购') + '</p>' +
           apps +
-          '<div class="mm-foot"><a href="' + ROOT + 'contact.html">' +
-            L('Not sure which spec?', '不确定选什么规格？') +
-            '<span>' + L('Send your target price — we quote in 24h',
-                         '把目标价发给我们 —— 24 小时内报价') + '</span></a></div>' +
+          '<div class="mm-foot"><a href="' + ROOT + BASE + 'contact.html">' +
+            T('not_sure', 'Not sure which spec?', '不确定选什么规格？') +
+            '<span>' + T('send_price', 'Send your target price — we quote in 24h',
+                            '把目标价发给我们 —— 24 小时内报价') + '</span></a></div>' +
         '</aside>' +
       '</div>';
     if (mega) mega.innerHTML = html;
@@ -1001,7 +1032,7 @@ if (form) {
       if (window.innerWidth <= 920) return;
       cancelClose();
       loadData().then(function (D) {
-        ensureMega(D);
+        D_ = D; UI = D.ui || null; applyUI(D); ensureMega(D);
         if (prodLink.matches(':hover')) {
           mega.hidden = false;
           prodLink.classList.add('mm-active');
@@ -1012,6 +1043,7 @@ if (form) {
     prodLink.addEventListener('focus', function () {
       if (window.innerWidth <= 920) return;
       loadData().then(function (D) {
+        D_ = D; UI = D.ui || null; applyUI(D);
         ensureMega(D); mega.hidden = false; prodLink.classList.add('mm-active');
       }).catch(function () {});
     });
@@ -1025,8 +1057,8 @@ if (form) {
     '<div class="sr-box" role="dialog" aria-modal="true">' +
       '<div class="sr-inputrow">' + ICON_SEARCH +
         '<input class="sr-input" type="search" autocomplete="off" ' +
-        'placeholder="' + L('Search 141 products, categories, applications…',
-                            '搜索 141 款产品、分类、应用场景…') + '">' +
+        'placeholder="' + L('Search 147 products, categories, applications…',
+                            '搜索 147 款产品、分类、应用场景…') + '">' +
         '<span class="sr-esc">ESC</span>' +
       '</div>' +
       '<div class="sr-results"></div>' +
@@ -1052,21 +1084,26 @@ if (form) {
   var resultsEl = modal.querySelector('.sr-results');
   var hintsEl = modal.querySelector('.sr-hints');
   var D = null;
+  applyUI(null);          // 先套一次；索引加载后会用 {n} 的真实值再套一次
   var items = [];
   var active = -1;
 
+  // 热门词：语言站用索引里译好的（ui.hot），英文/中文同页用内置双语
   var HOT = function () {
+    if (UI && UI.hot && UI.hot.length) return UI.hot;
     return isZh()
       ? ['TPE 瑜伽垫', '高温瑜伽', '泡沫轴', '跳绳', '筋膜枪', '瑜伽馆', '材质对比', '贴牌']
       : ['TPE yoga mat', 'hot yoga', 'foam roller', 'jump rope', 'fascia gun',
          'studio', 'materials', 'private label'];
   };
 
-  var TYPE_LABEL = {
-    product: ['Product', '产品'],
-    category: ['Category', '分类'],
-    application: ['Solution', '方案'],
-    page: ['Page', '页面']
+  var TYPE_KEY = {
+    product: 't_product', category: 't_category',
+    application: 't_application', page: 't_page'
+  };
+  var TYPE_FALLBACK = {
+    product: ['Product', '产品'], category: ['Category', '分类'],
+    application: ['Solution', '方案'], page: ['Page', '页面']
   };
 
   function norm(s) { return (s || '').toLowerCase(); }
@@ -1131,7 +1168,7 @@ if (form) {
     if (!q) {
       resultsEl.innerHTML = '';
       var hot = HOT();
-      hintsEl.querySelector('.h-cap').textContent = L('Popular searches', '热门搜索');
+      hintsEl.querySelector('.h-cap').textContent = T('popular', 'Popular searches', '热门搜索');
       hintsEl.querySelector('.h-row').innerHTML = hot.map(function (h) {
         return '<button type="button" data-q="' + h + '">' + h + '</button>';
       }).join('');
@@ -1143,21 +1180,23 @@ if (form) {
     hintsEl.style.display = 'none';
     if (!items.length) {
       resultsEl.innerHTML = '<div class="sr-empty">' +
-        L('No match for “' + q + '”. Tell us the spec and we will build it — ' +
+        T('empty',
+          'No match for “' + q + '”. Tell us the spec and we will build it — ' +
           'or ask us directly on WhatsApp.',
-          '没有匹配「' + q + '」的结果。把规格发给我们，我们来做 —— 或直接 WhatsApp 联系我们。') +
+          '没有匹配「' + q + '」的结果。把规格发给我们，我们来做 —— 或直接 WhatsApp 联系我们。',
+          { q: q }) +
         '</div>';
       active = -1;
       return;
     }
     resultsEl.innerHTML = items.map(function (e, i) {
-      var tl = TYPE_LABEL[e.y] || TYPE_LABEL.page;
+      var tf = TYPE_FALLBACK[e.y] || TYPE_FALLBACK.page;
       sub = isZh() ? (e.cz || '') : (e.c || '');
-      return '<a class="sr-item' + (i === 0 ? ' on' : '') + '" href="' + ROOT + e.u + '">' +
+      return '<a class="sr-item' + (i === 0 ? ' on' : '') + '" href="' + ROOT + BASE + e.u + '">' +
         thumbHTML(e) +
         '<span class="sr-txt"><span class="sr-t">' + nameOf(e) + '</span>' +
         '<span class="sr-s">' + sub + '</span></span>' +
-        '<span class="sr-badge">' + L(tl[0], tl[1]) + '</span></a>';
+        '<span class="sr-badge">' + T(TYPE_KEY[e.y] || TYPE_KEY.page, tf[0], tf[1]) + '</span></a>';
     }).join('');
     active = 0;
   }
@@ -1173,6 +1212,7 @@ if (form) {
   }
 
   function openSearch() {
+    loadData().then(function (d) { D = d; D_ = d; UI = d.ui || null; applyUI(d); }).catch(function () {});
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
     loadData().then(function (d) {
@@ -1221,16 +1261,17 @@ if (form) {
 
   // ------------------------------------------------------------ 语言切换后重建
   window.addEventListener('sanfan-langchange', function () {
-    srBtn.setAttribute('aria-label', L('Search', '搜索'));
-    menuItem.textContent = L('Search products', '搜索产品');
-    input.setAttribute('placeholder',
-      L('Search 141 products, categories, applications…', '搜索 141 款产品、分类、应用场景…'));
+    applyUI(D);
     if (!modal.hidden) render(input.value.trim());
     if (D) renderMega(D);
   });
 
   // 页面空闲时预热，让首次悬停 / 首次搜索即时响应
-  function warm() { loadData().then(function (d) { D = d; ensureMega(d); }).catch(function () {}); }
+  function warm() {
+    loadData().then(function (d) {
+      D = d; applyUI(d); ensureMega(d);
+    }).catch(function () {});
+  }
   if (window.requestIdleCallback) window.requestIdleCallback(warm, { timeout: 3000 });
   else window.addEventListener('load', function () { setTimeout(warm, 1200); });
 })();

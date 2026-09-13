@@ -442,6 +442,9 @@ html.show-zh .prod-card .info h4 { font-weight: 600; }
   .split { gap: 32px; }
   .media-band { height: 340px; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 26px; }
+  /* 必须带上 :has() —— 下面那条 5 列规则特异性更高，媒体查询里的 .footer-grid
+     压不住它，窄屏会继续按 5 列排，第 4/5 列被 html 的 overflow-x:clip 直接裁掉。 */
+  .footer-grid:has(> div:nth-child(5)) { grid-template-columns: repeat(2, 1fr); gap: 26px; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
   .prod-grid { grid-template-columns: repeat(2, 1fr); }
   .product-detail { grid-template-columns: 1fr; gap: 28px; }
@@ -464,6 +467,14 @@ html.show-zh .prod-card .info h4 { font-weight: 600; }
   /* 移动端保留报价按钮：这是全站核心转化入口，藏掉后 header 右侧空一大块。
      改缩小版常驻（padding/font 收紧），不占爆窄屏。 */
   .nav-actions .btn { padding: 10px 16px; font-size: 13.5px; }
+  /* 触控目标 ≥40px：实测 Logo 38 / 语言切换 27 / 汉堡 29，手指容易点空。
+     只补 min-height，不改变视觉密度（边框内文字尺寸没动）。 */
+  .nav-brand { min-height: 40px; }
+  .lang-current { min-height: 40px; }
+  .menu-toggle {
+    min-width: 40px; min-height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
 }
 /* ≤560px：进一步压缩 —— 把 logo "SANFAN" 文字缩到 14px（仍可见填满左侧），
    按钮 padding/font 再收一档，避免在 420px 屏溢出。
@@ -480,6 +491,10 @@ html.show-zh .prod-card .info h4 { font-weight: 600; }
   .gallery, .cert-grid, .grid-3, .grid-4, .grid-5, .prod-grid, .stat-grid, .steps { grid-template-columns: repeat(2, 1fr); }
   .media-band { height: 300px; }
   .footer-grid { grid-template-columns: 1fr; gap: 22px; }
+  .footer-grid:has(> div:nth-child(5)) { grid-template-columns: 1fr; gap: 22px; }
+  .site-footer .contact-line, .site-footer ul li { overflow-wrap: anywhere; }
+  /* 页脚链接行高只有 23px，加大可点区到 ~31px（含 li 间距 9px ≈ 40px 触控节奏） */
+  .site-footer ul li a { display: inline-block; padding: 4px 0; }
   .stat-card { padding: 22px 14px; min-height: 100px; }
   .stat-card .num { font-size: 28px; }
   .cap-table th, .cap-table td { padding: 10px 12px; font-size: 13.5px; }

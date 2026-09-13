@@ -174,16 +174,29 @@ ENGINE_TAG = "deepl"
 
 
 def _ck(text, lang, src="EN"):
-    return "%s:%s>%s:%s" % (ENGINE_TAG, src.lower(), lang,
+    """⚠️ lang/src 必须统一大小写：2026-09-12 曾因调用方一会儿传 'de' 一会儿传 'DE'，
+    同一个句子在缓存里存成两套键（en>de 2411 条 vs en>DE 122 条），
+    而写入 'de' 的那批正好是兜底引擎的回声（英文），导致重跑永远命中脏缓存。"""
+    return "%s:%s>%s:%s" % (ENGINE_TAG, src.lower(), lang.lower(),
                             hashlib.md5(text.encode("utf-8")).hexdigest())
 
 
 # ---------------------------------------------------------------- DeepL
+# 不是实体的裸 & （后面不是 amp; / lt; / #123; 之类）
+_BARE_AMP = re.compile(r"&(?!(?:amp|lt|gt|quot|apos|#\d+|#x[0-9A-Fa-f]+);)")
+
+
 def _deepl_call(texts, lang, src="EN"):
     """texts: 原文列表 -> (译文列表, error)。lang: 目标语 de/ja/ko/en；src: 源语"""
     prepped, max_idx = [], -1
     for t in texts:
         p, mi = protect(t, lang)
+        # ⭐ 裸 & 在 tag_handling=xml 下是非法 XML，DeepL 会**原样返回整句**
+        # （不报错、不降级，静默回声）——2026-09-12 有 53 个产品页的标题/正文
+        # 因为 "…Yoga & Fitness Manufacturer" 里的 & 全部没翻。
+        # 只要 protect() 加了 <x0> 标签就会走 xml 模式，所以统一把裸 & 转义。
+        if mi >= 0:
+            p = _BARE_AMP.sub("&amp;", p)
         prepped.append(p)
         max_idx = max(max_idx, mi)
     body = {"text": prepped, "source_lang": src.upper(), "target_lang": lang.upper()}
@@ -243,6 +256,20 @@ def _call_batch(texts, lang, src="EN"):
     return res
 
 
+def _looks_translatable(s):
+    """是否「应该被翻掉」——用于识别回声。
+
+    品牌名/材质缩写（SANFAN、TPE、EVA、6 mm）本来就该原样保留，
+    译文等于原文是正常的；只有「多词长句也原样返回」才是引擎失败。
+    """
+    s = (s or "").strip()
+    if len(s) < 8:
+        return False
+    if not re.search(r"[A-Za-z]{3,}", s):
+        return False
+    return len(s.split()) >= 2 or len(s) >= 16
+
+
 def translate_lines(lines, lang, verbose=False, src="EN"):
     """批量翻译 -> 同长度列表。src 为源语言（回译验证时需指定为目标语）"""
     if lang.lower() == src.lower():
@@ -272,6 +299,15 @@ def translate_lines(lines, lang, verbose=False, src="EN"):
             return 0
         with _lock:
             for i, v in zip(batch, res):
+                if v is None:
+                    v = lines[i]
+                # ⭐ 防「回声污染缓存」：兜底引擎 MyMemory 失败时会原样返回英文，
+                # 2026-09-12 第五批就是这样把 54 个产品页写成未翻译的 —— 而且一旦
+                # 写进缓存，下次命中缓存连 API 都不调（deepl=0），错误永久固化。
+                if _looks_translatable(lines[i]) and v.strip() == lines[i].strip():
+                    out[i] = lines[i]
+                    _stats["fail"] += 1     # 不写缓存，下次还能重翻
+                    continue
                 out[i] = v
                 _cache[_ck(lines[i], lang, src)] = v
         return len(batch)

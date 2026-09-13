@@ -8,10 +8,14 @@
 - EN 主站 + de/ja/ko/fr/it/es 6 语言 + 中文同页切换（无 /zh/ URL）
 - **页面结构**：147 产品页（`products/`）+ 10 分类页（⚠️ 在**根目录**，不在 products/）
   + 总览 `products.html` + **6 场景页 `applications/` + `materials.html` 材质对比页** + 首页
-- **多语言覆盖（09-12 第四批后）**：6 语言站**各 84 页**（17 顶层 + 51 产品 + 9 blog
-  + 7 applications）= 504 页；分类页/材质页/场景页/blog 已 100% 覆盖。
-  **仍缺 96 个产品页** —— 其链接按设计回退到 `{lang}/products.html`（**本语言总览**，
-  不是英文页、也不是死链）。DeepL 额度已耗尽（剩 2,110 / 1,000,000），下批等下月重置。
+- ✅ **多语言覆盖（09-12 第五批后）：6 语言站各 180 页，与 EN 完全对齐，100% 覆盖**
+  （147 产品 + 10 分类 + 7 场景 + materials + 9 blog + 门面）= 1080 页；sitemap 1260 条 0 重复。
+  五批耗字符：第一批 18.9 万 / 第四批 16.4 万 / 第五批 8.3 万（576 页产品，缓存命中率极高）。
+  ⭐ **第二个 DeepL key 已启用**（全新 100 万/月，第五批后余约 91 万）。换 key 只覆写
+  `i18n_build/.deepl_key`；**翻译缓存按文本命中，换 key 不损失缓存**。
+  ⚠️ `.gitignore` 已补 `i18n_build/.deepl_key*` 通配（备份文件曾漏网，会被 `git add -A` 带进公开仓）。
+  ⚠️ 页面上千后 `update_seo/bump_assets_ver/final_check/scan_bad_attrs` 都会前台超时（exit 137），
+  一律后台跑（幂等，可重跑）。
   ⚠️ 新增目录要同步 5 处清单、新增页后必须跑 `fix_i18n_links.py --fix`，见技能「坑 13/14」。
 - 改动流程：bump `?v=` → 合并成一个干净 commit → `github-api-push/push_api_v3.py --auto`
   ⭐ **用 v3 就不要再 `reset --soft` 对齐**——那是自造死局：本地 HEAD 退回旧 commit，
