@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+⚠️ 2026-09-13 起本脚本已冻结，不要重跑（脚本末尾有运行时护栏）。
+   榜单页对比表已改为人工译文（机翻会把 Capacity 译成「収容人数」、把 "4 lines" 译成
+   「4 行」、把厂商名转写成凭空捏造的「株式会社」），EN 页也补了中文内容块。
+   重跑会把人工译文、中文块、描述与 og 修正一起冲掉。
+   要改榜单页请用 i18n_build/fix_listicle_20260913.py（幂等，数据表都在里面）。
+
 build_listicle.py — 从英文榜单页生成 de/ja/ko/fr/it/es 6 个语言版
 
 用法: python3 build_listicle.py
@@ -86,6 +92,13 @@ def write(p, s):
 
 # ---------------------------------------------------------------- 解析 EN 页
 en = read(EN_PATH)
+
+# 运行时护栏：EN 源页已有中文内容块 = 已被人工维护过，重跑会冲掉人工译文与中文块
+if '<div class="lang-zh">' in en:
+    raise SystemExit(
+        "已冻结：EN 源页含中文内容块，说明榜单页已人工维护过。\n"
+        "重跑本脚本会覆盖 6 个语言版的人工译文（含对比表）与 og/描述修正。\n"
+        "请改用 i18n_build/fix_listicle_20260913.py。")
 
 def _re1(pat, s=en, flags=0):
     m = re.search(pat, s, flags)
