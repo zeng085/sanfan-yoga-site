@@ -17,10 +17,10 @@ const CASES = [
   { name: 'blog-sampling-ZH', url: '/blog/7day-sampling.html', lang: 'zh', shot: null },
   { name: 'blog-compliance-ZH', url: '/blog/compliance.html', lang: 'zh', shot: null },
   { name: 'blog-customsizes-ZH', url: '/blog/custom-sizes.html', lang: 'zh', shot: null },
-  { name: 'blog-tpevspu-ZH', url: '/blog/tpe-vs-pu.html', lang: 'zh', shot: null },
+  { name: 'blog-tpevspu-ZH', url: '/blog/tpe-vs-pu.html', lang: 'zh', shot: 'blog-tpevspu-zh-mode.png' },
   { name: 'blog-vetfactory-ZH', url: '/blog/vet-factory.html', lang: 'zh', shot: null },
-  { name: 'blog-materials-ZH', url: '/blog/yoga-mat-materials.html', lang: 'zh', shot: null },
-  { name: 'blog-specguide-ZH', url: '/blog/yoga-mat-spec-guide.html', lang: 'zh', shot: null },
+  { name: 'blog-materials-ZH', url: '/blog/yoga-mat-materials.html', lang: 'zh', shot: 'blog-materials-zh-mode.png' },
+  { name: 'blog-specguide-ZH', url: '/blog/yoga-mat-spec-guide.html', lang: 'zh', shot: 'blog-specguide-zh-mode.png' },
   { name: 'blog-flagship-ZH', url: '/blog/private-label-yoga-mats.html', lang: 'zh', shot: 'blog-private-zh-mode.png' },
   { name: 'blog-flagship-EN', url: '/blog/private-label-yoga-mats.html', lang: 'en', shot: null },
 ];
