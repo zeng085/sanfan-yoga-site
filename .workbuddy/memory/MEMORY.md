@@ -31,6 +31,12 @@
    单边页即故障：only-en → 切中文整篇白页（`html.show-zh .lang-en{display:none}`）；
    only-zh → 中文模式英文正文不隐藏、两个 h1 并列。09-13 修 10 篇，验收 `verify_listicle.cjs`
 7. ⭐ `build_listicle.py` 已冻结（EN 页含 `.lang-zh` 即拒跑）；改榜单页走 `fix_listicle_20260913.py`
+8. ⭐ 两种语言机制别混：products/applications/首页/blog 卡片用**行内配对 span**（天然成对，182 页 0 失衡）；
+   **块级 `div.lang-zh` 只在 10 个 blog 文章页** —— 中文残块只会出在这。
+   ⭐ 中/英字符比**已标定**：站内 1237 组人工忠实配对实测中位 **0.353**（四分位 0.30–0.44），
+   即忠实中文译文本来就≈英文的 1/3（JA/EN 段级 0.54–0.67，CJK 天然密）。
+   判定：**<0.25 = 残块 FAIL，<0.30 = 偏薄**。检查脚本 `i18n_build/check_zh_parity.py`（静态）+ `verify_listicle.cjs`（浏览器）。
+   ⚠️ 比字符数前必须先标定，别拿错误直觉去"修"正常内容
 
 ## 坑清单
 - BSD grep `\|` 交替静默失效 → 用 Python；CJK 相邻 `\b` 失效，替换要枚举语言后缀
