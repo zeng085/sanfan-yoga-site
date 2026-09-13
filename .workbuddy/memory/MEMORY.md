@@ -68,3 +68,11 @@
 
 ## DNS
 - Cloudflare 灰云直连 Vercel；`www.` NXDOMAIN 待修
+
+## 博客多语言（09-13 全同步）
+- 10 篇博客 × 7 语言全齐（70 语言版页），sitemap 1267 条；旗舰卡已插 6 语言 blog.html。
+- ⭐ build_pages.py 删 lang-switch 曾用 `.*?</div>` 致孤儿闭合（lang-switch 内嵌 lang-menu），
+  已修为 drop_div_by_class() token 配对。**全站 600/1080 语言页 div 失衡待重生成**
+  （缓存命中后仅 ~3 分钟）；博客 54 页已平衡。
+- ⚠️ CJK 答案块/字数检查按字符数（≥350 字符），split() 词数失效。
+- 重生成入口：build_pages.py --batch；索引卡幂等脚本 blog_sync_index.py。
