@@ -37,3 +37,4 @@ outputs/i18n-preview/
 # 第一批多语言实拍（验收用，非站点资产）
 outputs/i18n-batch1/
 i18n_build/.deepl_key*
+outputs/blog_check/
