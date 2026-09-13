@@ -196,6 +196,36 @@ def remove_i18n_attrs(h):
     return h
 
 
+def drop_div_by_class(h, class_name):
+    """整块删除 class 含 class_name 的 div —— 按 token 配对，正确处理嵌套。"""
+    depth, start = 0, None
+    for m in TAG_RE.finditer(h):
+        close, name, attrs, selfclose = m.group(1), m.group(2).lower(), m.group(3), m.group(4)
+        if name != "div":
+            continue
+        if not close:
+            if selfclose:
+                if start is None and class_name in attrs:      # 自闭合（罕见）
+                    return h[:m.start()] + h[m.end():]
+                continue
+            if start is None:
+                if class_name in attrs:
+                    start = m.start()
+                    depth = 1
+            else:
+                depth += 1
+        else:
+            if start is not None:
+                depth -= 1
+                if depth == 0:
+                    # 连同前导空白一起删
+                    s = start
+                    while s > 0 and h[s - 1] in " \t\n":
+                        s -= 1
+                    return h[:s] + h[m.end():]
+    return h      # 找不到配对则原样返回（保守）
+
+
 # ------------------------------------------------------------------ 主流程
 def collect_texts(h):
     """返回 (占位化后的html, 文本列表, ld占位映射)"""
@@ -442,7 +472,10 @@ def build_one(rel_path, lang, verbose=True):
     # 切换器不在这里生成：由 fix_site.py 用「绝对路径」统一注入（幂等，覆盖英文原页+全部语言页）。
     # 原因：这里用相对路径容易算错层级（曾出现 ..// 这类错误），且旧 lang-btn 正则早已失效。
     # 翻译会把旧切换器的 "EN"/"DE" 等标签也翻掉，所以先整块摘掉，避免残留被译文污染的切换器。
-    h = re.sub(r'\s*<div class="lang-switch">.*?</div>', '', h, count=1, flags=re.S)
+    # ⚠️ 2026-09-13：旧写法 `.*?</div>` 只删到第一个 </div> —— 而 lang-switch 内嵌
+    # lang-menu div，外层 </div> 成为孤儿闭合（每页多一个 </div>，de/index 等历史页同样中招）。
+    # 改为按标签 token 配对的整块删除（正确处理嵌套）。
+    h = drop_div_by_class(h, "lang-switch")
     h = re.sub(r'\s*<button class="lang-btn"[^>]*>.*?</button>', '', h, count=1, flags=re.S)
 
     # 9) 回填 JSON-LD（翻译内部字符串）

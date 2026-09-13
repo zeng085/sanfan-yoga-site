@@ -1,198 +1,70 @@
-# 三梵独立站 fjsanfan.com 长期笔记
+# 三梵独立站 fjsanfan.com 长期笔记（精简版 2026-09-13）
 
-> 完整工作流已固化到技能 **`sanfansport-catalog-sync`**（产品/图片同步·体检·改名落点）与
-> **`fjsanfan-multilang-spec-sync`**（多语言）。本文件只留索引与坑。
+> 完整工作流已固化到技能 **`sanfansport-catalog-sync`** 与 **`fjsanfan-multilang-spec-sync`**。
+> 详细历史见 `memory/` 日志（2026-09-11/12/13.md）。
 
 ## 概况
-- 仓库 zeng085/sanfan-yoga-site，Vercel；B2B 瑜伽垫/健身器材 OEM/ODM 工厂站
-- EN 主站 + de/ja/ko/fr/it/es 6 语言 + 中文同页切换（无 /zh/ URL）
-- **页面结构**：147 产品页（`products/`）+ 10 分类页（⚠️ 在**根目录**，不在 products/）
-  + 总览 `products.html` + **6 场景页 `applications/` + `materials.html` 材质对比页** + 首页
-- ✅ **多语言覆盖（09-12 第五批后）：6 语言站各 180 页，与 EN 完全对齐，100% 覆盖**
-  （147 产品 + 10 分类 + 7 场景 + materials + 9 blog + 门面）= 1080 页；sitemap 1260 条 0 重复。
-  五批耗字符：第一批 18.9 万 / 第四批 16.4 万 / 第五批 8.3 万（576 页产品，缓存命中率极高）。
-  ⭐ **第二个 DeepL key 已启用**（全新 100 万/月，第五批后余约 91 万）。换 key 只覆写
-  `i18n_build/.deepl_key`；**翻译缓存按文本命中，换 key 不损失缓存**。
-  ⚠️ `.gitignore` 已补 `i18n_build/.deepl_key*` 通配（备份文件曾漏网，会被 `git add -A` 带进公开仓）。
-  ⚠️ 页面上千后 `update_seo/bump_assets_ver/final_check/scan_bad_attrs` 都会前台超时（exit 137），
-  一律后台跑（幂等，可重跑）。
-  ⚠️ 新增目录要同步 5 处清单、新增页后必须跑 `fix_i18n_links.py --fix`，见技能「坑 13/14」。
-- 改动流程：bump `?v=` → 合并成一个干净 commit → `github-api-push/push_api_v3.py --auto`
-  ⭐ **用 v3 就不要再 `reset --soft` 对齐**——那是自造死局：本地 HEAD 退回旧 commit，
-  而 github.com 不通 fetch 不到新对象 → 下次 `git diff <远端parent> HEAD` 报 bad object。
-  v3 已内置 **tree 逐 blob 比对**回退（本地 `ls-tree -r HEAD` vs 远程 recursive tree，
-  git blob sha 与 GitHub 一致可直接比），精度等价、能识别删除、不依赖本地远程对象。
-  diff 仍要带 `--no-renames`（否则 rename 不删旧路径）
-- ⚠️ **推送前必查 `.gitignore`**：`i18n_build/data/`（报价表 16M）是商业机密，
-  绝不可进公开仓库；`outputs/{_riskcheck,bgtest,card_bg_white}/`、`outputs/*.png|jpg`
-  与 `__pycache__/` 已排除
-- ⭐ **仓库 public → private 可放心改**（2026-09-12 实测核查，非通用说法）：
-  owner 是**个人账号** `zeng085`（`type=User`，非 Org）→ Hobby **可以**部署个人私有仓库；
-  限制只针对「**组织**的私有仓库」。⚠️ 官方那句 "Hobby does not support collaboration for
-  private repositories" 说的是**多人协作**，极易被误读成"不能部署"。
-  PAT scope 是完整 `repo`（非 `public_repo`）→ `push_api_v3.py` 不受影响；
-  commit author `798508426@qq.com` 已由 GitHub 关联到 `zeng085` → 能过 Hobby 私有仓库的
-  「commit author = Vercel team owner」校验（⭐ public 仓库**不校验**这条，改私有后才生效）。
-  改前只需在面板确认两处：Vercel GitHub App 授权含该仓库、Vercel 账号绑了 GitHub `zeng085`；
-  另需确认 CloudStudio 是否靠 public 地址匿名拉取。
-  安全侧：历史 2067 个文件**从未提交过** `.deepl_key` / `.env` / 报价表 / xlsx，`git grep` 扫
-  `ghp_*`/`sk-*`/`AIza*` 0 命中 → **无泄漏需补救，改私有是纯收益**。
-- ⭐ 推送走 git remote 里的 token **不存在**，在 `url.*.insteadOf` 里：
-  `git config --get-regexp '^url\.' | sed -n 's|.*https://\([^@]*\)@github.com.*|\1|p'`
-  （api.github.com 401 = 网络通但令牌错；000 才是断网）
+- 仓库 zeng085/sanfan-yoga-site（可改 private，已核查），Vercel 部署；B2B OEM/ODM 瑜伽垫/健身器材厂站
+- EN 主站 + de/ja/ko/fr/it/es 6 语言子目录 + 中文同页 CSS 切换（无 /zh/ URL）
+- 结构：147 产品页（products/）+ 10 分类页（**根目录**非 products/）+ products.html 总览
+  + 6 场景页（applications/，只从既有 SKU 挑，永不新增产品）+ materials.html + 9 blog + 首页
+- 多语言 100% 对齐：每语言 180 页，sitemap 1260 条 0 重复
+- DeepL 第二个 key 已启用（约 91 万字符/月余量）；翻译缓存按文本命中，换 key 不丢缓存
+- ⚠️ `.gitignore` 已排除 `i18n_build/.deepl_key*`、`i18n_build/data/`（报价表 16M 商业机密）
+- 体检工具：`final_check.py`（5 项）、`seo_deep_audit.py`（13 类）、`seo_skill_checks.py`
+  （Schema 政策+内容质量+GEO 可引用性，vendor 自 claude-seo MIT）——页面上千后一律**后台跑**（超时 137）
 
-## 卡片视觉最终态（2026-09-11 定稿，?v20260911l）
-- 方案：暖纸卡 `--paper:#f9f7f2` + 图 `mix-blend-mode:multiply` + `object-fit:contain`
-  内缩 4%，**零描边零投影**；四类卡（prod-card / g-item / range-card / cat-tile）统一
-- ⭐ **16 张首图全部回归英文站原始素材**（先回 4 张算法抠底，再回 12 张换白底原图）——
-  结论：**multiply 已能兜住有色底，能换图就别抠图**，任何加工图都是多余
-- ❌ 已被用户否掉的两条路线：①把底全抠成白（不明智）②图外加边框（很土、不高级）
-- 工具：`swap_card_thumbs.py`（`--rollback` 反方向、`--only=关键词` 过滤 how）、
-  `unify_card_bg.py scan|strip` 体检换底、`final_check.py` 推送前全站体检
-
-## ⭐⭐ 英文站不可达时的图片通道（2026-09-12 更新，重要）
-- 症状：首页与图片**全部 HTTP 000**（Cloudflare IP 级限流），DNS 正常解析到 CF IP。
-  直连 curl / urllib / Playwright `ctx.request` 全废；换 UA 完整头也没用。
-- **首选：`https://images.weserv.nl/?url=<host>/<path>`** → 200，40/40 张成功。
-  ⚠️⚠️ **不要传 `w=`/`h=`/`output=`/`q=`** —— 不传参数时它**透传原图字节**，
-  所以「最长边 900 + WebP q75」转码后 md5 仍与站内素材**可比**（查重有效）；加参数就失效。
-  并发 4 合适（8 吃限速）。脚本 `i18n_build/dl_common_products.py`。
-- 同期实测**不可用**：`wsrv.nl` 000 / `api.allorigins.win` 000 / `corsproxy.io` 403 /
-  `web.archive.org` 000。备选是 Playwright 浏览器同源代理（Chromium 网络栈能过）。
-- ⚠️ **建页前必须查图片名撞车（同名 ≠ 同图）**：新页图按 `<页slug>-<k>.webp` 命名，
-  站内若已存在 `<页slug>-1.webp` 会被 `shutil.copyfile` **静默覆盖**，而那个文件可能正被
-  几十处卡片引用且是**另一张图**。实例：`jump-rope-1.webp`（21 处引用）、`kettlebell-1.webp`。
-  实测与英文站同名图 MAD 25.5 / 67.2（>20 即不同图）→ 改页 slug 为
-  `beaded-jump-rope` / `color-kettlebell`。判同图用 32×32 平均通道差，别只看文件名。
-
-## 缩略图网格 = 另一套规则（2026-09-12）
-- ⭐ **大图用原始素材，`products.html` 的 `.ct-thumbs` 6 格缩略图用白底素材** ——
-  两者要求不同：大图看质感（用户要"贴近原始素材"），3×2 密排小图看整齐（底色必须一致）
-- ⚠️ `.ct-thumbs a` 用 `contain` + `padding:8%`、`grid` 是 **3 列**（6 列时桌面仅 43px 看不清）。
-  图片若 `cover` 铺满，自带彩色底就会铺成方块，multiply 融不掉 → "有的有边框有的没有"
-- ⚠️ **`swap_card_thumbs.py` 的 `THUMB_RE` 会误伤 ct-thumbs**（把缩略图当卡片首图一起换）。
-  回滚/换图只针对大图时，别让它碰 `.ct-thumbs`
-- 工具：`edge_bg_test.py`（按图片**边缘一圈**判 Δ=multiply 后与卡片色的通道差，比四角准）、
-  `fix_ct_thumbs.py`（只改 ct-thumbs，且**只在 Δ 真的变小才换**——有的款换了反而更差）
-- 已知残留：英文站素材本身就是"彩色背景板/场景照"的产品（ym2、circular-leg-clamps、
-  pilates-reformer-mat-mandala、advanced-yoga-roller、figure-8-resistance-bands、fr3）无白底可换
-
-## 产品分类（2026-09-11 拆页，09-12 扩至 10 类）
-- 原 `products.html` 117 卡平铺 **28 屏 → 分类页 + 总览页**。分类名即采购搜索词
-  （垫类 4 + foam-rollers/massage-recovery/resistance-bands/yoga-props-accessories；
-  09-12 +**jump-ropes / strength-training**）。生成脚本**幂等**（卡片池 `outputs/product_cards.json`）。
-- ⚠️ 重新生成顺序：`build_category_pages.py` → `fix_ct_thumbs.py`（缩略图会被前者覆盖）。
-- ⚠️ 分类格**不能用 `<a>` 包住缩略图链接块**（HTML 不允许 a 嵌 a）→ 用 `<div class="cat-tile">`。
-
-## 导航引导三层 + 搜索 + 材质页（2026-09-12 落地，`?v20260912c`）
-- **问题**：原导航只有一条找货路径（懂规格的人），不懂规格的买方（"我开瑜伽馆要配齐"）无入口。
-- **L1** Mega Menu：Products 下拉左「Shop by category」10 分类分 3 组带计数、右深绿「Shop by application」6 场景、底部报价 CTA
-- **L2** 分组分类条 `.cat-nav-grouped`（Mats / Training / Recovery & Props 三组）+ `.needrow` 场景快捷行
-- **L3** ⭐ `applications/` 6 个按生意类型的采购方案页：`yoga-pilates-studios`(20款) /
-  `gyms-fitness-clubs`(23) / `hotels-resorts-spas`(18) / `retail-private-label`(24) /
-  `recovery-physio`(25) / `home-online-sellers`(26) —— **只从既有 141 SKU 里挑，永不新增产品**
-- **搜索**：头部放大镜 → 浮层；索引 `assets/data/navdata.js`（**classic script 非 JSON**，
-  规避 file:// 的 fetch CORS）163 条；`SYNONYMS` 做中英互通（搜"泡沫轴"出 foam roller）；
-  `main.js` 懒加载 + `requestIdleCallback` 预热；**跳过非 en/zh 页**（`documentElement.lang`）
-- **材质对比**：`materials.html` 8 材质（TPE/PVC/NBR/PU橡胶/麂皮/软木/EVA/EPP）× 9 维度静态表 + FAQ
-- ⭐ **`i18n_build/site_templates.py` 是全站唯一模板源**（`prefix` 参数控相对路径
-  `""`(根) vs `"../"`(子目录)）：HEAD/NAV/FOOTER/CTA/分类条/场景卡/信任条。新建页面**必须走它**，
-  否则模板漂移。生成器全幂等：`build_application_pages.py` / `build_materials_page.py` /
-  `build_navdata.py` / `apply_nav_listing.py`（接 sitemap+llms.txt）
-- ⚠️ **百分比 padding 的包含块是父容器宽度不是自身** → `.sr-thumb{padding:8%}`(容器 584px)
-  单边 46.7px 把 44px 框撑成 93px、`img` 实际 `width:0px`（缩略图全空白）→ **改 `padding:4px`**
-- ⚠️ **file:// 验收不可靠**：classic script 带 `?v` 被拒、预取误报 →
-  用 `python3 -m http.server 8848` 起本地 http；navdata 路径**去前导 `/`**，JS 用 `ROOT` 拼
-  （`ROOT` 从 `link[href*="styles.css"]` 反推，别数 pathname 层级）
-- ⚠️ footer 5 列会让老页（4 列）右侧空轨 → `.footer-grid:has(> div:nth-child(5))` 条件切换
-- 验收：`final_check.py` 5 项全过（含新增第[5]项**站内 .html 内链死链**，5038 条 0 死链）；
-  截图脚本 `shot_nav_live.cjs` → `outputs/nav-preview/`（已 .gitignore）
-
-## 首页区块（2026-09-11）
-- 上区 range-grid = **分类导航**（09-11 是 8 格，09-12 扩到 **10 格**）；下区原「Full Product Gallery」（20 张老页卡）与上区
-  **撞图 7 张** + `pr1` 重复 → 改「Featured Products」**12 款跨分类主推**（`featured-grid` 4 列，
-  取卡片池新页卡）。脚本 `build_featured_section.py`（幂等）。
-- ⚠️ 两区**首图绝不能重复**（range 用的老页：ym1/ym5/pr3/fr1/fr5/rb1/fi2/aurora-gradient-suede-yoga-mat）。
-- 孤儿键 `gallery.*`/`gN.*`/`rangeN.*` 已从 main.js 删，补 `featured.*`；`.gallery/.g-item` CSS
-  **不能删**（6 语言站仍用）。
-- ⚠️ 空壳页使卡片描述中英同为 "Made to order" → 中文 span 改「按单定制」（22 张）。
+## 改动与推送流程
+- bump `?v=`（`bump_assets_ver.py`，写法 `?v20260911f` 无等号；改 CSS/JS 必 bump）→ 一个干净 commit
+  → `GH_PAT=$(git config --get-regexp '^url\.' | sed -n 's|.*https://\([^@]*\)@github.com.*|\1|p' | head -1)`
+  → `push_api_v3.py zeng085/sanfan-yoga-site /abs/repo --auto`（参数顺序！裸 --auto 会 404）
+  ⭐ v3 有 tree 逐 blob 比对回退，**不要再 `reset --soft`**（自造死局）；diff 带 `--no-renames`
+- 每批建页固定顺序：`apply_batchN_listing` → `build_category_pages` → **`fix_ct_thumbs`** →
+  `build_navdata` → `bump_assets_ver` → `final_check`
 
 ## 英文站 sanfansport.com（产品数据唯一权威源）
-- WordPress+WooCommerce；REST 全开放 `/wp-json/wp/v2/product`（167）。规格在 `content.rendered`
-  两列表格；**无 MOQ**；认证 = `ROHS / CE / ISO9001/ BSCI / REACH`。
-- ⭐ **核心规则**：产品以英文站为准 —— **我们独有的 → 下掉**；**英文站有我们缺的 → 补上**；
-  分批，**先 EN+中文**。⭐⭐ **41/167（25%）空壳页**（content 空、前端 0 table，Yoast schema
-  的 "Specification" 是陷阱）→ **绝不编造数值**，只上兜底 3 行。
-- 价格只认 `offer` 页（C=Spec / **D=FOB Xiamen USD**，`sanfan_offer.xlsx` 781 行仅 23 行有价）。
-  offers = **基准×0.7~×1.3**，正文不出数字。❌ 别用代发客户表/成本表。
+- WordPress+WooCommerce，REST `/wp-json/wp/v2/product`（167）；规格在 content.rendered 两列表格
+- ⭐⭐ **41/167 空壳页**（content 空、0 规格）→ 绝不编造数值，只上兜底 3 行
+- 剩 12 个未建页全是空壳（普拉提器械 11 + yoga-hammock-2），**暂停堆产品**
+- 价格只认 offer 页（FOB Xiamen USD），offers = 基准×0.7~1.3，正文不出数字
+- 判「是否已上线」用 `probe_md5.py` md5 精确比对，**别用 slug 差集**（对不上会假报 118 个未上线）
 
-## 产品页现状（09-12 全批推送后，线上 `v20260912d`）
-- ✅ commit `8b2f695ea9`（666 文件）；**147 页 / 10 分类页**；图片引用 3143 条 0 缺失、
-  未进分类页 0、站内内链 0 死链；线上 6 场景页 + 材质页 + 搜索 + 6 通用款全 200；sitemap 390 条。
-- 已下掉 ym8/rb3/rb4/pr2/pr5/fi1。⚠️ fi4 有源曾误判无源 → **下掉前先目视对图**。
-- 剩 **12 个未建页，全是空壳**（英文站 content 空、0 条规格）：普拉提器械 11（Maple/Oak/金属系列）
-  + `yoga-hammock-2`。另有**排除 20**：18 服装类（B2B 站不上）+ 2 测试/重复页
-  （`dumbbel` 拼写错、`pu-rubber-yoga-mat-test`）。
-- ⭐ **ym1/ym2 是家族页非 1:1**（ym1↔14 个 TPE 垫），另有 12 个家族页映射见
-  `pending_batch3.py` 的 `FAMILY`；对齐用「同族并集」。
-  非错误：96 页缺 6 语言／22 页规格薄／37 页无价。
-- ⭐⭐ **判「是否已上线」别用规格数或 slug，用 `probe_md5.py` 的 md5 精确比对**：
-  本次 29 个有规格的产品里 5 个其实已被老页吞掉（`yoga-hammock→pr1`、`kettlebell-2→fi2`、
-  `jump-rope-2→fi3`、`stair-climbers-3→fi4`、`dumbbell-2→fi5`），**多算了 5 个**。
-  dHash 感知哈希会误判（球类匹配到瑜伽垫），必须 md5。
-  ⚠️ 同理**别用 slug 做差集**：英文站 `tpe-yoga-mat-2` 与站内自建描述性 slug 完全对不上，
-  直接比会得出 118 个"未上线"的假结果。权威只认 `batch*.json` 的 `src→new` 映射 + 图片 md5。
-- ⚠️ **每批建页的固定顺序**：`apply_batchN_listing` → `build_category_pages`
-  → **`fix_ct_thumbs`**（缩略图会被上一步覆盖）→ `build_navdata` → `bump_assets_ver` → `final_check`。
-
-## 图片规则
-- ⭐ **容器必须 1:1**：`.pd-main img` = `1/1`+`contain`、`.prod-card .ph`、`.range-card .rc-img`。
-- 命名 `<页slug>-<k>.webp`（k=1=英文站原序）；WebP q75、最大边 900（venv Pillow）。
-- ⚠️ 下图前查同名（曾撞名 → 两卡同图）；旧图**不删不覆盖**。部分图带「MuLinSen 木林森」
-  水印（已批复可上）；部分图**文件名与内容不符** → 复用前先目视。
-- 改图集同步 **4 处**：pd-gallery + og/twitter + JSON-LD image + 全站卡片首图（按 href 匹配）。
-- ⭐ **卡片底色问题的最终解法：暖纸卡 + `mix-blend-mode:multiply`**（2026-09-11 第 3 版定稿）
-  问题本质 = 同一网格里素材底色不同源（白底/彩色块/实景），**不是"图太白"**。
-  前两版被否：①全抠白图（成本高、丢素材）②白卡+浅底画框+描边（用户：「加边框很土，不够高级」）。
-  定稿：卡片 `--paper:#f9f7f2` 暖纸色 + 图 `multiply` → 白×纸=纸（白底图融进纸面）、
-  彩色×纸=印刷色块，四类底色自动同源，**一条 CSS 替代 12 张换图**。零描边零投影，
-  层次靠「纸卡 vs 白页」+ 字体层级（品名 16px/500、说明 12.3px/降饱和），中文态升 600。
-  ⚠️ **页底色必须回白**（与第 2 版结论相反）：纸卡落在冷绿 `section soft` 上会脏。
-  ⚠️ 语言站 `<section class="section soft" id="xxx">` **带 id**，正则漏写会静默匹配 0 处。
-  调色只改 `--paper` 一个值；对比页 `outputs/bgtest/premium.html`（机制）+`premium2.html`（纸色五档）。
-  纸色深浅：`#fdfcfa` 看不出边界 / `#f9f7f2` 甜点 / `#f3efe7` 产品压暗发闷。
-  工具 `i18n_build/swap_card_thumbs.py`（4 套卡片结构一次改完；`--dry` 预演 / `--rollback` 回滚）、
-  `unify_card_bg.py scan|strip`（换底，**已非主路径**）、
-  `shot.py`（Chrome 截图，规避带空格路径的 shell 引号坑）、`verify_pages.cjs`（双视口页内校验）。
-  ⚠️ 「白底候选」判据要加 `sd<30`，否则会把白墙实景照当成白底图。
-- ⭐ **能换图就别抠图**（2026-09-11 深夜定论）：用户要求"贴近原始素材"，4 张算法抠底图
-  （ym2 / gray·pink-mandala / mulinsen-61cm）**已全部回滚**为原始素材，`*-1w.webp` 已移出
-  （备份 `/tmp/bgcheck/rolled_back_thumbs/`）。原因：抠底留下"白框套色块"痕迹，原始素材是
-  一张**完整的图**，在 multiply 纸卡上反而更自然。**「换白底原图」的 12 张保留**（用的是英文站
-  本就有的另一张素材，非加工品；ym5 封面换白底后才干净）。
-  ⚠️ `--rollback` 只反转 `how` 含「算法换底」的条目，**别改成全量反转**。
-  ⚠️ 换图/回滚后必须重跑 `build_category_pages.py`（分类页从卡片池生成、会覆盖手改）→ 再 bump 版本。
-- 🗑️ **已废弃（2026-09-11 第 2 版方案，勿照做）**：「section 铺浅底 + 白卡 + 图区内嵌画框
-  `--ph-bg:#f7f9f8` + `inset 0 0 0 1px` 描边 + 品名下品牌色短线」。用户评：「在图片外面加
-  个边框，看起来很土，不够高级」。教训：**分层不该靠加装饰**；正确解法见上一条（暖纸卡 +
-  multiply）。这条留档只为避免把 `--ph-bg/--ph-line` 三个变量再加回来。
-  ⚠️ file:// 下必报 `wechat-qr.webp` 加载失败 → main.js 按 pathname 层级拼路径，本地算爆，线上正常。
+## 视觉定稿（2026-09-11，勿翻案）
+- 暖纸卡 `--paper:#f9f7f2` + 图 `mix-blend-mode:multiply` + contain 内缩 4%，零描边零投影
+- ⭐ **能换图就别抠图**（算法抠底 4 张已全部回滚）；「换白底原图」12 张保留
+- ❌ 被用户否掉：①全抠白 ②图外加边框（「很土，不高级」）③纸色更深 `#f3efe7`（发闷）
+- 大图用原始素材；`products.html` 的 `.ct-thumbs` 6 格缩略图用白底素材（另一套规则）
+- 图片：WebP q75、最大边 900、命名 `<slug>-<k>.webp`；下图前必查**同名撞车**（同名≠同图，
+  用 32×32 通道差判，>20 即不同图；实例 jump-rope-1/kettlebell-1）
+- 英文站图片不可达时用 `images.weserv.nl/?url=`（**不带任何参数**才透传原图字节，md5 可比）
 
 ## 关键约定
-1. 语言：localStorage+cookie 双写 `siteLang`；`.lang-zh` 默认 `display:none`，`html.show-zh` 切换。
-2. 尺寸：英文公制+英制（`6 mm (1/4")`），欧/日韩纯公制；`"` 进 JSON-LD 转义。
-3. **改 CSS/JS 必 bump `?v=`**（`bump_assets_ver.py`）；写法 `?v20260911f`**无等号**。
-4. JSON-LD：@graph 包 Product+BreadcrumbList；offers 用 AggregateOffer（勿放 availability）。
-   **hreflang 已健康勿动**；下掉页在 `vercel.json` 加 301。GA4 `G-RMSNDR5S06`。
+1. 语言切换：`siteLang` 双写；`.lang-zh` 默认隐藏
+2. 英文公制+英制，欧日韩纯公制；`"` 进 JSON-LD 转义
+3. JSON-LD @graph Product+BreadcrumbList，offers=AggregateOffer（勿放 availability）
+4. hreflang 已健康勿动；GA4 G-RMSNDR5S06
+5. ⭐ `i18n_build/site_templates.py` 是全站唯一模板源，新页面必须走它
 
-## 最容易踩的坑
-- ⭐ **下载英文站图片用 Python `urllib` + 浏览器 UA + Referer**：curl 全废（exit 35/52）。
-- ⚠️ **BSD grep 的 `\|` 交替匹配静默失效**（假阴性）→ 多关键词/中文用 Python str.count()。
-- ⚠️ **产品页没有 `<main>`**：选择器用 `.pd-gallery img` / `table.spec-table th`。
-- ⚠️ **语言版生成时标题→slug 匹配失败会静默回退到 products.html**（09-13 发现 1086 条/204 文件，
-  EN 版 0 条；缩略图/产品卡能显示但点不进详情）。已修：`i18n_build/fix_lang_card_links.py`
-  （EN 建「图片 basename→products/slug.html」映射反查改写，--dry 预演）。**再生成语言页后必复扫此回退**。
+## ⭐ 坑清单（高频踩）
+- BSD grep `\|` 交替静默失效 → 多关键词/中文用 Python；CJK 相邻 `\b` 失效，替换要枚举语言后缀
+- 产品页无 `<main>`：选择器用 `.pd-gallery img` / `table.spec-table th`
+- **语言版生成标题→slug 匹配失败静默回退 products.html**（09-13 修 1086 条/204 文件）；
+  再生成语言页后必跑 `fix_lang_card_links.py` 复扫
+- file:// 验收不可靠（classic script + ?v 被拒）→ 用 `python3 -m http.server 8848`
+- 百分比 padding 包含块是父容器宽度 → `.sr-thumb` 用 `padding:4px`
+- 页面上千后前台脚本超时 137 → 一律后台跑（幂等）
+- 全站计数文案（products/SKU 数）分散在首页+6 场景页 7 语言 ≈ 57 文件，改产品数要全局替换
 
-## DNS / GEO
-- DNS 在 Cloudflare，主域**灰云直连 Vercel**（CF 规则不生效）；`www.` NXDOMAIN 待修。
-- GEO 站内已及格（AI 爬虫 200、llms.txt、FAQPage）；胜负在**可被引用的榜单/对比表资产**。
+## SEO/GEO 现状（2026-09-13）
+- 站内：canonical/hreflang/sitemap 全部健康；SEO 深检 0 问题；Schema 政策真问题 0
+  （AggregateOffer 714 条为 B2B 设计内豁免）；内容质量 89.8 分
+- **GEO 短板：全站 0 个 120–180 词自包含答案块（最长段 97 词）** → 指南型长文补
+- FAQPage 保留不动（富结果 2026-05 退役，但对 AI 引用仍有用）；llms.txt 别指望起排名
+- 排名抽查：8 个核心词全部未进前 5；**品牌词 "SANFAN" 被 sanfanyoga.com（厦门同业）截流**
+  → 对外统一用全称 "FUJIAN SANFAN Sports Products"
+- **对标站 htsyoga.com**（张家港浩通）：private label 指南长文排 "private label yoga mats" 第 3
+  → 指南型长文路线已验证，是我们的内容迭代模板
+- 第一优先级数据 = 用户 GSC 截图（Indexed/not indexed 状态）
+
+## DNS
+- Cloudflare 灰云直连 Vercel；`www.` NXDOMAIN 待修
