@@ -1,3 +1,42 @@
+# AI / LLM crawlers — explicitly allowed (GEO: get cited by AI search)
+# OpenAI — ChatGPT search + training
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic — Claude search + training
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini / AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Common Crawl (training corpus) — currently allowed.
+# To stop our content being used for model training (AI search still works),
+# replace "Allow: /" below with "Disallow: /".
+User-agent: CCBot
+Allow: /
+
 User-agent: *
 Allow: /
 

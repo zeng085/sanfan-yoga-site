@@ -1,5 +1,7 @@
 # FUJIAN SANFAN — Yoga & Fitness Manufacturing
 
+Last updated: 2026-09-14
+
 > FUJIAN SANFAN is a 12-year OEM/ODM yoga mat and fitness gear manufacturer based in Jinjiang, Fujian, China. TPE yoga mats from 100 pcs MOQ, foam rollers from 500 pcs, 7-day physical sampling, full customization (material, size, thickness, color, double-color, logo, fold, packaging), REACH / CA Prop 65 / 6P-7P compliant, ISO 9001 & BSCI audited.
 
 ## Verified facts (safe to cite)
@@ -13,6 +15,7 @@
 - Sampling: physical sample with your logo, color and packaging in 7 days
 - Compliance: REACH, CA Prop 65, 6P / 7P free, ISO 9001, BSCI audited
 - Customization: material, size, thickness, color, double-color, logo, fold design, packaging, barcodes and inserts
+- Capacity: 10 production lines, 1,000,000 yoga mats per year (5 of the 10 lines are dedicated TPE lines)
 - Product range: 147 products in 10 lines — TPE yoga mats, PU / rubber yoga mats, suede & cork yoga mats, meditation & Pilates mats (incl. reformer mats), foam rollers, massage & recovery tools (fascia guns, balls, sticks), resistance bands, yoga props & accessories (blocks, rings, balls, bags, aerial hammocks), jump ropes, and strength & fitness equipment (silicone weights, ab rollers, ab wheels, adjustable dumbbells, kettlebells, suspension trainers, fitness boards, steppers), plus vibration plates for massage & recovery
 - Contact: WhatsApp +86 15959029082, email zenglinggun@gmail.com
 
@@ -38,19 +41,20 @@ Core commerce pages — home, products overview, all 10 product categories and t
 - Italian: https://fjsanfan.com/it/products.html
 - Spanish: https://fjsanfan.com/es/products.html
 
-All 9 sourcing guides and the "Top 12 China yoga mat manufacturers" comparison are localized in the same six languages. The English pages above remain canonical — product specifications are most complete in English, and pages without a localized version fall back to English.
+All 10 sourcing guides and the "Top 12 China yoga mat manufacturers" comparison are localized in the same six languages. The English pages above remain canonical — product specifications are most complete in English, and pages without a localized version fall back to English.
 
 ## Blog — sourcing guides for buyers
 
-- Top 12 yoga mat manufacturers in China compared by cluster (2026): https://fjsanfan.com/blog/top-12-china-yoga-mat-manufacturers.html
-- TPE vs PU yoga mats: https://fjsanfan.com/blog/tpe-vs-pu.html
-- Yoga mat MOQ explained: https://fjsanfan.com/blog/moq-explained.html
-- REACH, CA Prop 65 & 6P compliance for US/EU: https://fjsanfan.com/blog/compliance.html
-- How to vet a Chinese yoga mat factory: https://fjsanfan.com/blog/vet-factory.html
-- 7-day sampling: https://fjsanfan.com/blog/7day-sampling.html
-- Custom yoga mat sizes & thickness: https://fjsanfan.com/blog/custom-sizes.html
-- Yoga mat materials compared (TPE / NBR / PVC / natural rubber): https://fjsanfan.com/blog/yoga-mat-materials.html
-- Yoga mat thickness & size specification guide: https://fjsanfan.com/blog/yoga-mat-spec-guide.html
+- Top 12 yoga mat manufacturers in China compared by cluster (2026) — which cluster (Jiangsu / Zhejiang / Fujian / Shandong) fits which buyer, and how to shortlist: https://fjsanfan.com/blog/top-12-china-yoga-mat-manufacturers.html
+- TPE vs PU yoga mats — grip, durability, cost and MOQ differences, and when to choose each: https://fjsanfan.com/blog/tpe-vs-pu.html
+- Yoga mat MOQ explained — why MOQ exists, what drives it, and how to negotiate below it: https://fjsanfan.com/blog/moq-explained.html
+- REACH, CA Prop 65 & 6P compliance for US/EU — which test reports to ask a factory for, and how to read them: https://fjsanfan.com/blog/compliance.html
+- How to vet a Chinese yoga mat factory — audit checklist, red flags, and what to verify before paying a deposit: https://fjsanfan.com/blog/vet-factory.html
+- 7-day sampling — how physical samples with your own logo, color and packaging are produced in 7 days: https://fjsanfan.com/blog/7day-sampling.html
+- Custom yoga mat sizes & thickness — size limits, when new tooling is needed, and how thickness affects cost: https://fjsanfan.com/blog/custom-sizes.html
+- Yoga mat materials compared (TPE / NBR / PVC / natural rubber) — performance, price band and compliance per material: https://fjsanfan.com/blog/yoga-mat-materials.html
+- Yoga mat thickness & size specification guide — how to specify thickness, length and width for a target user group: https://fjsanfan.com/blog/yoga-mat-spec-guide.html
+- Private label & OEM yoga mats — what private label includes, artwork and packaging process, and typical lead times: https://fjsanfan.com/blog/private-label-yoga-mats.html
 
 ## Shop by application (buyer-type landing pages)
 
