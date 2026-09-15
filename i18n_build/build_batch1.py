@@ -296,7 +296,7 @@ HEAD = """<!DOCTYPE html>
       <a href="/" class="nav-brand"><img src="../assets/img/logo.webp" width="500" height="500" alt="SANFAN" /><span>SAN<span class="accent">FAN</span></span></a>
       <nav class="nav-links">
         <a href="/" data-i18n="nav.home">Home</a>
-        <a href="../products.html" data-i18n="nav.products">Products</a>
+        <a href="../products.html" data-i18n="nav.products">Yoga Mats &amp; Gear</a>
         <a href="../about.html" data-i18n="nav.about">About</a>
         <a href="../faq.html" data-i18n="nav.faq">FAQ</a>
         <a href="../blog.html" data-i18n="nav.blog">Blog</a>

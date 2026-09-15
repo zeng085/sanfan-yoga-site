@@ -9,10 +9,10 @@ if (toggle && links) {
 // ---------- Bilingual (EN / 中文) ----------
 const I18N = {
   en: {
-    'nav.home': 'Home', 'nav.products': 'Products', 'nav.about': 'About',
+    'nav.home': 'Home', 'nav.products': 'Yoga Mats & Gear', 'nav.about': 'About',
     'nav.contact': 'Contact', 'nav.quote': 'Get a Quote', 'nav.blog': 'Blog',
     // Pilates 器械一级入口（/pilates/ 独立板块，与 Products 平行）
-    'nav.pilates': 'Pilates',
+    'nav.pilates': 'Pilates Equipment',
     'nav.pl.reformer': 'Pilates Reformer',
     'nav.pl.cadillac': 'Pilates Cadillac',
     'nav.pl.wunda-chair': 'Pilates Wunda Chair',
@@ -190,7 +190,7 @@ const I18N = {
     // Footer
     'f.home': 'Home', 'f.products': 'Products', 'f.about': 'About', 'f.contact': 'Contact',
     'f.brand': 'SANFAN', 'f.tag': 'OEM / ODM yoga & fitness manufacturer.',
-    'foot.products': 'Products', 'foot.company': 'Company', 'foot.contact': 'Contact',
+    'foot.products': 'Yoga Mats & Gear', 'foot.company': 'Company', 'foot.contact': 'Contact',
     'foot.addr': 'Address', 'foot.email': 'Email', 'foot.phone': 'WhatsApp',
     'foot.copyright': '© 2026 FUJIAN SANFAN Sports Products Co., Ltd. All rights reserved.',
 
@@ -275,7 +275,7 @@ const I18N = {
   },
 
   zh: {
-    'nav.home': '首页', 'nav.products': '产品', 'nav.about': '关于',
+    'nav.home': '首页', 'nav.products': '瑜伽垫与健身', 'nav.about': '关于',
     'nav.contact': '联系', 'nav.quote': '获取报价', 'nav.blog': '博客',
     // Pilates 器械一级入口（与「产品」平行的独立板块）
     'nav.pilates': '普拉提器械',
@@ -443,7 +443,7 @@ const I18N = {
 
     'f.home': '首页', 'f.products': '产品', 'f.about': '关于', 'f.contact': '联系',
     'f.brand': '三梵 SANFAN', 'f.tag': '瑜伽 & 健身器材 OEM / ODM 制造工厂。',
-    'foot.products': '产品', 'foot.company': '公司', 'foot.contact': '联系',
+    'foot.products': '瑜伽垫与健身', 'foot.company': '公司', 'foot.contact': '联系',
     'foot.addr': '地址', 'foot.email': '邮箱', 'foot.phone': 'WhatsApp',
     'foot.copyright': '© 2026 福建三梵体育用品有限公司 版权所有。',
 

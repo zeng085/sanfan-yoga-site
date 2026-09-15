@@ -96,7 +96,7 @@ NAV = """  <header class="site-header">
       <a href="/" class="nav-brand"><img src="%(pf)sassets/img/logo.webp" width="500" height="500" alt="SANFAN" /><span>SAN<span class="accent">FAN</span></span></a>
       <nav class="nav-links">
         <a href="/" data-i18n="nav.home">Home</a>
-        <a href="%(pf)sproducts.html"%(cur)s data-i18n="nav.products">Products</a>
+        <a href="%(pf)sproducts.html"%(cur)s data-i18n="nav.products">Yoga Mats &amp; Gear</a>
         <a href="%(pf)sabout.html" data-i18n="nav.about">About</a>
         <a href="%(pf)sfaq.html" data-i18n="nav.faq">FAQ</a>
         <a href="%(pf)sblog.html" data-i18n="nav.blog">Blog</a>
@@ -116,7 +116,7 @@ FOOTER = """  <footer class="site-footer">
         <div class="brand"><img src="%(pf)sassets/img/logo.webp" width="500" height="500" loading="lazy" alt="SANFAN" /> <span>SAN<span style="color:var(--brand-2)">FAN</span></span></div>
         <p style="font-size:14px;max-width:300px" data-i18n="f.tag">OEM / ODM yoga &amp; fitness manufacturer.</p>
       </div>
-      <div><h5 data-i18n="foot.products">Products</h5><ul>
+      <div><h5 data-i18n="foot.products">Yoga Mats &amp; Gear</h5><ul>
 %(foot_cats)s      </ul></div>
       <div><h5 data-i18n="foot.apps">Shop by Application</h5><ul>
 %(foot_apps)s      </ul></div>
