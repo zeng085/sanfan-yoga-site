@@ -9,13 +9,16 @@ r"""把 Pilates 一级入口注入全站导航（幂等，可反复跑）。
     EN 页（根目录 / products / applications / blog / pilates）
         <div class="nav-drop"> …一级链接… + 8 族下拉 + All </div>
         文案走 data-i18n（字典在 assets/js/main.js），切中文自动变「普拉提器械」
-    语言页（de/ja/ko/fr/it/es，共 6×181 页）
-        只给裸链接 <a href="/pilates/">Pilates</a>
-        理由：器械族的语言版还没建，下拉里 8 个 EN 目标对德语/日语读者更别扭；
-        而「Pilates」在 6 个目标语言里都是同一个词，不需要翻译。
-        等语言版铺完再换成带下拉的形态即可（本脚本重跑一次就替换）。
+    语言页（de/ja/ko/fr/it/es）
+        2026-09-15 起同样是带 8 族下拉的 nav-drop，但**链接指向本语言版**
+        （/de/pilates/…），文案是从该语言板块首页的 nav 里**抄**来的本地化族名。
+        语言页不能用 data-i18n —— main.js 的 applyLang() 对语言页直接 return
+        （isLocalizedPage()），字典根本不会生效，所以必须是静态译好的文案。
 
-幂等：nav 块里已出现 href="/pilates/" 就跳过；因此会跳过已建好的 9 个 pilates 页。
+幂等：nav 块里已出现入口 href（EN 页 `/pilates/`、语言页 `/<lang>/pilates/`）就摘掉重插，
+所以改标记后重跑一次即可全站升级。
+
+⚠️ 会跳过 `pilates/` 与 `<lang>/pilates/` 目录自身的页面（由建页脚本生成，带 aria-current）。
 
 用法
     python3 i18n_build/inject_pilates_nav.py --dry-run
@@ -68,11 +71,46 @@ def full_drop():
 
 BARE = '        <a href="/pilates/"><span data-i18n="nav.pilates">Pilates</span></a>\n'
 
-# 已存在的旧块（用于替换升级）：EN 的 nav-drop + 语言页的裸链接
+# ---------------------------------------------------------------- 语言页下拉
+# 2026-09-15：器械板块的 6 个语言版（<lang>/pilates/，各 9 页）建成后，
+# 语言页的「裸入口」升级为完整下拉 —— 8 个目标都有真实语言版可落，
+# 不再是「8 个 EN 目标对德语读者更别扭」的状态。
+# 文案不另起一套：直接**抄**该语言板块首页 nav 里已经生成好的那个 nav-drop 块
+# （build_pages 翻好的本地化族名 + /<lang>/pilates/... 链接），去掉 aria-current
+# （那只在板块首页本身成立）。这样语言页与板块页的导航文案永远同源，不会漂移。
+NAV_DROP_RE = re.compile(r'<div class="nav-drop">[\s\S]*?</div>\s*</div>')
+_LANG_DROP = {}
+
+
+def lang_drop(lang):
+    if lang in _LANG_DROP:
+        return _LANG_DROP[lang]
+    src = ROOT / lang / "pilates" / "index.html"
+    if not src.exists():
+        return None
+    t = src.read_text(encoding="utf-8", errors="ignore")
+    m = NAV_RE.search(t)
+    if not m:
+        return None
+    d = NAV_DROP_RE.search(m.group(2))
+    if not d:
+        return None
+    blk = d.group(0)
+    blk = blk.replace(' aria-current="page"', "")
+    # 缩进对齐其它一级项（原块在板块页里缩进 8 空格）
+    _LANG_DROP[lang] = "\n".join("        " + ln.strip() if ln.strip() else ln
+                                 for ln in blk.splitlines()) + "\n"
+    return _LANG_DROP[lang]
+
+# 已存在的旧块（用于替换升级）：
+#   ① EN 页的 nav-drop（入口 href="/pilates/"）
+#   ② 语言页的裸链接（href="/pilates/"）
+#   ③ 语言页升级后的新式下拉（入口 href="/<lang>/pilates/"）
+# 三态都要能摘掉，脚本才是「替换式」而非「只补缺」。
 OLD_DROP = re.compile(
-    r'\s*<div class="nav-drop">\s*<a href="/pilates/"[^>]*>[\s\S]*?</a>\s*'
+    r'\s*<div class="nav-drop">\s*<a href="(?:/[a-z]{2})?/pilates/"[^>]*>[\s\S]*?</a>\s*'
     r'<div class="nav-drop-menu">[\s\S]*?</div>\s*</div>')
-OLD_BARE = re.compile(r'\s*<a href="/pilates/">[\s\S]*?</a>')
+OLD_BARE = re.compile(r'\s*<a href="(?:/[a-z]{2})?/pilates/">[\s\S]*?</a>')
 
 
 def main():
@@ -85,10 +123,17 @@ def main():
 
     files = sorted(p for p in ROOT.rglob("*.html")
                    if not any(s in p.parts for s in SKIP_DIRS))
+
+    def is_pilates_own(rel):
+        """pilates/ 目录自身的页面（英语原页 + 6 个语言版）。
+        这些由 build_pilates_section.py / build_pages.py 生成，块内带 aria-current，
+        而且语言版导航文案是从这里**抄**出去的 —— 在这里改会把源头改坏。"""
+        return (rel.parts[0] == "pilates"
+                or (rel.parts[0] in LANGS and len(rel.parts) > 1 and rel.parts[1] == "pilates"))
+
     for p in files:
         rel = p.relative_to(ROOT)
-        # pilates/ 目录由 build_pilates_section.py 生成，块内还带 aria-current，别在这里改
-        if rel.parts[0] == "pilates":
+        if is_pilates_own(rel):
             stats["skip_done"] += 1
             skipped_done.append(str(rel))
             continue
@@ -100,12 +145,13 @@ def main():
             continue
 
         inner = m.group(2)
-        had = 'href="/pilates/"' in inner
+        nav_href = ("/%s/pilates/" % rel.parts[0]) if is_lang else "/pilates/"
+        had = ('href="%s"' % nav_href) in inner
 
         # 先摘掉旧块（无论形态），再按当前规范重插
         if had:
             new_inner_body = OLD_BARE.sub("", OLD_DROP.sub("", inner))
-            if 'href="/pilates/"' in new_inner_body:      # 兜底：仍残留就别动
+            if ('href="%s"' % nav_href) in new_inner_body:   # 兜底：仍残留就别动
                 stats["skip_nonav"] += 1
                 continue
             inner = new_inner_body
@@ -116,7 +162,10 @@ def main():
             stats["skip_nonav"] += 1
             continue
         at = i + len("</a>")
-        ins = "\n" + (BARE if is_lang else full_drop())
+        if is_lang:
+            ins = "\n" + (lang_drop(rel.parts[0]) or BARE)
+        else:
+            ins = "\n" + full_drop()
         new_inner = inner[:at] + ins + inner[at:].lstrip("\n")
         new_t = t[:m.start(2)] + new_inner + t[m.end(2):]
         if new_t == t:
@@ -143,7 +192,7 @@ def main():
     bad = []
     for p in files:
         rel = p.relative_to(ROOT)
-        if rel.parts[0] == "pilates":
+        if is_pilates_own(rel):
             continue
         t = p.read_text(encoding="utf-8", errors="ignore")
         m = NAV_RE.search(t)
@@ -152,19 +201,19 @@ def main():
         if t.count('<nav class="nav-links">') != 1:
             bad.append((str(rel), "nav-links 不是 1 个"))
         inner = m.group(2)
-        if 'href="/pilates/"' not in inner:
+        nav_href = ("/%s/pilates/" % rel.parts[0]) if rel.parts[0] in LANGS else "/pilates/"
+        if ('href="%s"' % nav_href) not in inner:
             bad.append((str(rel), "注入未生效"))
-        elif inner.count('href="/pilates/"') > 11:
-            bad.append((str(rel), "重复注入 %d 处" % inner.count('href="/pilates/"')))
+        # 无论 EN 页还是语言页，现在都应是「一个 nav-drop」而不是裸链接：
+        # 2026-09-15 语言页升级为完整下拉（语言版已建，8 个目标都有真实落点）。
+        if inner.count('<div class="nav-drop">') != 1:
+            bad.append((str(rel), "nav-drop 数量 = %d（需 1）" % inner.count('<div class="nav-drop">')))
         # 箭头必须是真实元素：伪元素会被站内悬停下划线规则拉成斜线
+        if inner.count('class="nd-caret"') != 1:
+            bad.append((str(rel), "nd-caret 数量 = %d（需 1）" % inner.count('class="nd-caret"')))
         if rel.parts[0] not in LANGS:
-            if inner.count('class="nd-caret"') != 1:
-                bad.append((str(rel), "nd-caret 数量 = %d（需 1）" % inner.count('class="nd-caret"')))
             if inner.count('<span data-i18n="nav.pilates">Pilates</span>') != 1:
                 bad.append((str(rel), "入口文案 span 异常"))
-        else:
-            if 'class="nd-caret"' in inner:
-                bad.append((str(rel), "语言页不该有下拉箭头"))
         # div 标签平衡
         if len(re.findall(r"<div[\s>]", t)) != len(re.findall(r"</div>", t)):
             bad.append((str(rel), "div 失衡"))

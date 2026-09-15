@@ -1,6 +1,6 @@
 # FUJIAN SANFAN — Yoga & Fitness Manufacturing
 
-Last updated: 2026-09-14
+Last updated: 2026-09-15
 
 > FUJIAN SANFAN is a 12-year OEM/ODM yoga mat and fitness gear manufacturer based in Jinjiang, Fujian, China. TPE yoga mats from 100 pcs MOQ, foam rollers from 500 pcs, 7-day physical sampling, full customization (material, size, thickness, color, double-color, logo, fold, packaging), REACH / CA Prop 65 / 6P-7P compliant, ISO 9001 & BSCI audited.
 
@@ -17,6 +17,7 @@ Last updated: 2026-09-14
 - Customization: material, size, thickness, color, double-color, logo, fold design, packaging, barcodes and inserts
 - Capacity: 10 production lines, 1,000,000 yoga mats per year (5 of the 10 lines are dedicated TPE lines)
 - Product range: 147 products in 10 lines — TPE yoga mats, PU / rubber yoga mats, suede & cork yoga mats, meditation & Pilates mats (incl. reformer mats), foam rollers, massage & recovery tools (fascia guns, balls, sticks), resistance bands, yoga props & accessories (blocks, rings, balls, bags, aerial hammocks), jump ropes, and strength & fitness equipment (silicone weights, ab rollers, ab wheels, adjustable dumbbells, kettlebells, suspension trainers, fitness boards, steppers), plus vibration plates for massage & recovery
+- Pilates apparatus line: 41 wooden studio models across 8 families — reformer, cadillac, wunda chair, ladder barrel, spine corrector, reformer tower & 3-in-1, studio set and specialty builds; imported rubberwood, FAS white maple, Croatian beech, aluminium and 316 stainless hardware, piano lacquer finish, made on a separate line from the yoga mats
 - Contact: WhatsApp +86 15959029082, email zenglinggun@gmail.com
 
 ## Core pages
@@ -30,9 +31,23 @@ Last updated: 2026-09-14
 - Yoga mat materials compared, TPE vs PVC vs PU vs suede vs cork: https://fjsanfan.com/materials.html
 - Product categories: https://fjsanfan.com/products.html
 
+## Pilates apparatus (wooden studio equipment)
+
+A dedicated 63-page section (9 English pages + 9 in each of the six languages) covering the OEM/ODM wooden Pilates line — 41 models, 8 families, specs, materials and customization options:
+
+- Pilates apparatus overview — all 8 families, materials and customization: https://fjsanfan.com/pilates/
+- Pilates Reformer: https://fjsanfan.com/pilates/pilates-reformer.html
+- Pilates Cadillac: https://fjsanfan.com/pilates/pilates-cadillac.html
+- Pilates Wunda Chair: https://fjsanfan.com/pilates/pilates-wunda-chair.html
+- Pilates Ladder Barrel: https://fjsanfan.com/pilates/pilates-ladder-barrel.html
+- Pilates Spine Corrector: https://fjsanfan.com/pilates/pilates-spine-corrector.html
+- Reformer Tower & 3-in-1: https://fjsanfan.com/pilates/pilates-reformer-tower.html
+- Pilates Studio Set: https://fjsanfan.com/pilates/pilates-studio-set.html
+- Pilates Specialty: https://fjsanfan.com/pilates/pilates-specialty.html
+
 ## Languages
 
-Core commerce pages — home, products overview, all 10 product categories and the 30 most-requested product pages — are also published in German, Japanese, Korean, French, Italian and Spanish (76 pages per language):
+Core commerce pages — home, products overview, all 10 product categories, all 147 product pages, the 7 application pages, the 10 sourcing guides and the whole Pilates apparatus section — are also published in German, Japanese, Korean, French, Italian and Spanish (190 pages per language):
 
 - German: https://fjsanfan.com/de/products.html
 - Japanese: https://fjsanfan.com/ja/products.html
@@ -41,7 +56,7 @@ Core commerce pages — home, products overview, all 10 product categories and t
 - Italian: https://fjsanfan.com/it/products.html
 - Spanish: https://fjsanfan.com/es/products.html
 
-All 10 sourcing guides and the "Top 12 China yoga mat manufacturers" comparison are localized in the same six languages. The English pages above remain canonical — product specifications are most complete in English, and pages without a localized version fall back to English.
+The Pilates apparatus section is fully localized, e.g. https://fjsanfan.com/de/pilates/ (also /ja/, /ko/, /fr/, /it/, /es/). All 10 sourcing guides and the "Top 12 China yoga mat manufacturers" comparison are localized in the same six languages. The English pages above remain canonical — product specifications are most complete in English, and pages without a localized version fall back to English.
 
 ## Blog — sourcing guides for buyers
 

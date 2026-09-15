@@ -103,6 +103,56 @@ GLOSSARY = {
         r"factory direct": "공장 직거래",
     },
 }
+
+# ---------------------------------------------------------------- 普拉提器械专名
+# 2026-09-15 实测：不加表时 DeepL 会按**字面**硬译器械名 ——
+#   de: "Pilates Wunda Chair" → "Pilates-Wunda-Stuhl"（Wunda 是创始品牌名，不是"椅子"）
+#       "Pilates Ladder Barrel" → "Pilates-Leiter-Fass"（Leiter-Fass = 梯子+桶，纯字面）
+#   ja/ko 反而译得对（ワンダチェア / 래더 배럴），但同样要固定下来免得漂移。
+# 这些是**行业内既有的叫法**，不是新造词：欧陆一律沿用英文原名（Deutsch 的采购
+# 目录里就是 "Wunda Chair"/"Ladder Barrel"），日语、韩语用各自片假名/谚文表记。
+# 走 GLOSSARY 通道 → 被包成 <xN> 保护标签，引擎原样保留，不做词形变化。
+PILATES_TERMS = {}
+_PL_LANGS = ("de", "fr", "it", "es", "ja", "ko")
+
+# ⭐ 整族名必须**整体**保护，不能只护词根。
+#   2026-09-15 实测：只护 "wunda chair" 时法语会把碎片当名词短语补介词 ——
+#     "Pilates Wunda Chair" → "Pilates àWunda Chair"（à 直接粘在词上）
+#     "Pilates Ladder Barrel" → "Pilates à l'Ladder Barrel"
+#   把「Pilates + 器械名」当一整个受保护单元后，引擎没有插入介词的位置。
+# ⚠️ 顺序即优先级：本表**全部**排在 _PL_SHORT 之前，长词先匹配。
+_PL_FAMILY = [
+    #                EN（全族名）                de                        fr                        it                        es                         ja                          ko
+    ("pilates reformer",        "Pilates-Reformer",        "Pilates Reformer",        "Pilates Reformer",        "Pilates Reformer",        "ピラティス リフォーマー",     "필라테스 리포머"),
+    ("pilates cadillac",        "Pilates-Cadillac",        "Pilates Cadillac",        "Pilates Cadillac",        "Pilates Cadillac",        "ピラティス キャデラック",     "필라테스 캐딜락"),
+    ("pilates wunda chair",     "Pilates-Wunda Chair",     "Pilates Wunda Chair",     "Pilates Wunda Chair",     "Pilates Wunda Chair",     "ピラティス ワンダチェア",     "필라테스 원다 체어"),
+    ("pilates ladder barrel",   "Pilates-Ladder Barrel",   "Pilates Ladder Barrel",   "Pilates Ladder Barrel",   "Pilates Ladder Barrel",   "ピラティス ラダーバレル",     "필라테스 래더 배럴"),
+    ("pilates spine corrector", "Pilates-Spine Corrector", "Pilates Spine Corrector", "Pilates Spine Corrector", "Pilates Spine Corrector", "ピラティス スパインコレクター", "필라테스 스파인 코렉터"),
+    ("pilates studio set",      "Pilates-Studio-Set",      "Pilates Studio Set",      "Pilates Studio Set",      "Pilates Studio Set",      "ピラティス スタジオセット",   "필라테스 스튜디오 세트"),
+    # "Specialty" 是本族的产品线名（双向梯床 + Gyrotonic 塔等非常规件）。
+    # 直译会错：de 得到 "Spezialisierung"（专精化）、ja 得到 "専門コース"（专业课）。
+    ("pilates specialty",       "Pilates-Spezialgeräte",   "Pilates Spécialités",     "Pilates Specialità",      "Pilates Especialidades",  "ピラティス スペシャルティ",   "필라테스 스페셜티"),
+    ("reformer tower & 3-in-1", "Reformer Tower & 3-in-1", "Reformer Tower & 3-in-1", "Reformer Tower & 3-in-1", "Reformer Tower & 3-in-1", "リフォーマー タワー＆3-in-1", "리포머 타워 & 3-in-1"),
+]
+# 词根级：用于「Pilates Wunda Chair」以外的散用（如 "Rubberwood Cadillac"、"
+# Trapeze Table" 旁注），以及导航/规格表里的单独出现。
+_PL_SHORT = [
+    ("wunda chair",     "Wunda Chair",     "Wunda Chair",     "Wunda Chair",     "Wunda Chair",     "ワンダチェア",       "원다 체어"),
+    ("ladder barrel",   "Ladder Barrel",   "Ladder Barrel",   "Ladder Barrel",   "Ladder Barrel",   "ラダーバレル",       "래더 배럴"),
+    ("spine corrector", "Spine Corrector", "Spine Corrector", "Spine Corrector", "Spine Corrector", "スパインコレクター", "스파인 코렉터"),
+    ("ladder bed",      "Ladder Bed",      "Ladder Bed",      "Ladder Bed",      "Ladder Bed",      "ラダーベッド",       "래더 베드"),
+    ("reformer",        "Reformer",        "Reformer",        "Reformer",        "Reformer",        "リフォーマー",       "리포머"),
+    ("cadillac",        "Cadillac",        "Cadillac",        "Cadillac",        "Cadillac",        "キャデラック",       "캐딜락"),
+    ("gyrotonic",       "Gyrotonic",       "Gyrotonic",       "Gyrotonic",       "Gyrotonic",       "ジャイロトニック",   "자이로토닉"),
+]
+for _row in _PL_FAMILY + _PL_SHORT:
+    for _i, _lg in enumerate(_PL_LANGS):
+        PILATES_TERMS.setdefault(_lg, {})[_row[0]] = _row[_i + 1]
+
+for _lg, _terms in PILATES_TERMS.items():
+    GLOSSARY.setdefault(_lg, {}).update(_terms)
+del _lg, _terms, _row, _i
+
 _GLOSS_RE = {lg: re.compile("|".join("(?P<g%d>%s)" % (i, p) for i, p in enumerate(pats)), re.I)
              for lg, pats in GLOSSARY.items()}
 

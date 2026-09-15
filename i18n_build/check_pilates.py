@@ -41,6 +41,9 @@ MAT_CLASSES = [
 OK, WARN, FAIL = "ok", "warn", "fail"
 ROWS = []
 
+# 器械板块的语言版语言码（顺序与 build_pilates_section.LANGS_META 一致）
+LANGS_ORDER = ["de", "ja", "ko", "fr", "it", "es"]
+
 
 def add(page, level, item, detail=""):
     ROWS.append((page, level, item, detail))
@@ -114,16 +117,50 @@ def check_meta(t, page, full):
     if can and "/pilates/" not in can.group(1):
         add(page, FAIL, "canonical 分区", "未落在 /pilates/")
     hl = re.findall(r'<link rel="alternate" hreflang="([^"]+)"', t)
-    bad = [h for h in hl if h not in ("en", "x-default")]
-    if bad:
-        add(page, FAIL, "hreflang", "语言版未建却声明了 %s（会判指向 404）" % bad)
+    # 2026-09-15 起：6 语言版已建成，EN 原页**必须**声明全部 7 语言 + x-default。
+    # 只声明 en + x-default 会让语言页单向指向 EN（hreflang 非对称，
+    # GSC 报「no return tag」）—— 旧实现把「多声明」判 FAIL，正好反了。
+    want = ["en"] + sorted(LANGS_ORDER) + ["x-default"]
+    miss_hl = [h for h in want if h not in hl]
+    extra = [h for h in hl if h not in want]
+    if miss_hl:
+        add(page, FAIL, "hreflang", "缺 %s（语言版已建成，需 7 语言互链）" % miss_hl)
+    elif extra:
+        add(page, WARN, "hreflang", "多出 %s" % extra)
     else:
-        add(page, OK, "hreflang", "+".join(hl) or "无")
-    # 语言切换器的 <a hreflang> 必须指向各语言 products.html，不能指向未建的 /xx/pilates/
+        add(page, OK, "hreflang", "7 语言 + x-default")
+    # 声明的语言 URL 必须与语言版页面的自指 hreflang 完全一致（互链对称）
+    for lg in LANGS_ORDER:
+        m2 = re.search(r'<link rel="alternate" hreflang="%s" href="([^"]+)"' % lg, t)
+        # ⚠️ page 形如 "pilates/pilates-wunda-chair.html"，而**位置参数**是
+        #    <lang>/pilates/<basename> —— 直接 join(ROOT, lg, "pilates", page)
+        #    会变成 <lang>/pilates/pilates/… 永远查不到（2026-09-15 踩过）。
+        fp = os.path.join(ROOT, lg, "pilates", os.path.basename(page))
+        if not m2:
+            continue
+        if not os.path.exists(fp):
+            add(page, FAIL, "hreflang=%s" % lg, "语言版文件不存在（404）")
+        else:
+            self_url = re.search(r'<link rel="canonical" href="([^"]+)"',
+                                 open(fp, encoding="utf-8").read())
+            if self_url and self_url.group(1) != m2.group(1):
+                add(page, FAIL, "hreflang=%s 不对称" % lg,
+                    "EN 声明 %s，语言版 canonical %s" % (m2.group(1), self_url.group(1)))
+    # 语言切换器的 <a hreflang> 指向的语言版页面**必须真实存在**。
+    # 2026-09-15 变更：器械板块的 6 语言版已建成（<lang>/pilates/，各 9 页），
+    # 切换器指向 /<lang>/pilates/… 现在是**正确**行为；旧实现在此把正确写法判成
+    # FAIL（当时语言版确实没有，指向即 404）。改为逐个查文件是否存在 ——
+    # 既能放过已建成的语言版，又仍能抓住「指向 404」的真问题。
     sw = re.findall(r'<a href="([^"]+)" hreflang="(de|ja|ko|fr|it|es)"', t)
-    swbad = [u for u, _ in sw if "/pilates/" in u]
+    swbad = []
+    for u, _ in sw:
+        rel = u.lstrip("/")
+        fp = os.path.join(ROOT, rel if rel.endswith(".html")
+                          else os.path.join(rel, "index.html"))
+        if not os.path.exists(fp):
+            swbad.append(u)
     if swbad:
-        add(page, FAIL, "语言切换器", "指向未建的语言版 pilates：%s" % swbad)
+        add(page, FAIL, "语言切换器", "指向不存在的语言版页面（404）：%s" % swbad)
     elif sw:
         add(page, OK, "语言切换器", "%d 个语言入口均指向已建页面" % len(sw))
     ti = re.search(r"<title>(.*?)</title>", t, re.S)

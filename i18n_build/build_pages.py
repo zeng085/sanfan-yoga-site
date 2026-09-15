@@ -49,7 +49,22 @@ def discover_all_pages():
                    for p in _glob.glob(os.path.join(ROOT, "products", "*.html")))
     return (["index.html", "about.html", "products.html", "faq.html",
              "contact.html", "blog.html", "materials.html"]
-            + cat_pages() + prods + apps_pages())
+            + cat_pages() + prods + apps_pages() + pilates_pages())
+
+
+def pilates_pages():
+    """普拉提器械板块的 9 页（pilates/ 独立目录，与垫类物理分区）。
+
+    2026-09-15 加入：板块的语言版没建之前不能列进来（hreflang 会指向 404）。
+    一旦列入，三个下游同时生效 ——
+      ① build_pages 的 T1_SET 会把语言页里的 /pilates/ 链接指到 /<lang>/pilates/；
+      ② fix_site.fix_switcher 会给这 9 页 + 54 个语言页注入正确的切换器；
+      ③ update_seo 的 hreflang 互链与 sitemap 会带上语言 URL。
+    ⚠️ 别把 pilates 和 `meditation-pilates-mats.html` 搞混 —— 后者是垫类分类页，
+    属 cat_pages()，一直在 ALL_PAGES 里（历史上的 "pilates in ALL_PAGES" 误判就来自它）。
+    """
+    return sorted("pilates/" + os.path.basename(p)
+                  for p in _glob.glob(os.path.join(ROOT, "pilates", "*.html")))
 
 
 ALL_PAGES = discover_all_pages()
@@ -115,6 +130,39 @@ def rewrite_rel(u, cur_dir, src_dir, lang):
     m = re.match(r'^([^#?]*)([?#].*)?$', s)
     base = m.group(1) or ''
     suffix = m.group(2) or ''
+
+    # ⭐ 站内绝对路径（/about.html、/pilates/、/blog/x.html）单独处理。
+    # 2026-09-15 新增。原实现把 '/about.html' 丢进 posixpath.join(src_dir, base)：
+    # join 遇到绝对路径会**丢弃前一段**，A 变成 '/about.html' —— 与 T1_SET 里的
+    # 'about.html' 不相等 → 落到 else 保持原样 → 再经 rel_from 拼成
+    # '../..//about.html'（双斜杠）。后果有二：语言页上所有绝对链接仍留在英文站
+    # （德语页的 About 点进去是英文页），且 URL 畸形。
+    # 垫类页面用的是相对路径所以一直没暴露；pilates 板块整体使用绝对路径 → 集中爆发。
+    # 这里直接产出绝对语言 URL，不再过 rel_from（避免 "..//"）。
+    if base.startswith("/"):
+        A = posixpath.normpath(base).lstrip("/")
+        if A == ".":
+            A = "index.html"
+        elif base == "/":
+            # ⭐ 站根：必须单独判，否则会一路走到末尾拼成 "//"
+            # （2026-09-15 实测：pilates 语言页的 Home 链接全部变成 <a href="//">）
+            return "/" + lang + "/" + suffix
+        elif base.endswith("/"):
+            # 目录形式：有语言版则补 index.html 落页，没有则保留目录形式
+            A = (A + "/index.html") if (A + "/index.html") in T1_SET else (A + "/")
+        if A in T1_SET:
+            # 子目录首页用**目录形式**，与 canonical 一致：
+            # /de/pilates/ 而不是 /de/pilates/index.html（同页两种 URL 会把
+            # 内链权重拆到两个地址上）。
+            if A.endswith("/index.html"):
+                return "/" + lang + "/" + A[:-len("index.html")] + suffix
+            return "/" + lang + "/" + A + suffix
+        if A == "products.html":
+            return "/" + lang + "/products.html" + suffix
+        if A.startswith("products/") and A.endswith(".html"):
+            return "/" + lang + "/products.html" + suffix
+        return "/" + A + suffix          # 无语言版：保持绝对，指向英文原页
+
     A = posixpath.normpath(posixpath.join(src_dir, base)) if src_dir else posixpath.normpath(base)
     if A in ("/", "", "."):
         # 站点根 -> 语言站根（用绝对路径，避免 rel_from 对 "/" 产生 "..//"）
@@ -133,20 +181,38 @@ def rewrite_rel(u, cur_dir, src_dir, lang):
 
 
 def rewrite_abs(u, lang):
-    """重写绝对站点 URL：T1 页加语言前缀"""
+    """重写绝对站点 URL：T1 页加语言前缀
+
+    ⚠️ 2026-09-15 修复：**目录形式**必须归一成 index.html 再去查 T1_SET。
+    英文原页的 head 里 canonical/og:url/JSON-LD 的板块首页写的是目录形式
+    `https://fjsanfan.com/pilates/`（这正是 EN 端 canonical 的写法），而
+    T1_SET 里存的是 `pilates/index.html` → 查表必然落空 → 语言版首页的
+    canonical / og:url / JSON-LD url+item 全部退回**英文地址**，
+    等于 6 个语言版首页都在向 Google 声明英文页为规范版本（致命）。
+    族页 `.../pilates/pilates-cadillac.html` 不含尾斜杠所以一直正常，
+    只有板块首页中招 —— 与「只有 index 坏」的现象吻合。
+    """
     if not u or not u.startswith(SITE):
         return u
     path = u[len(SITE):].lstrip("/")
     if path == "":
         path = "index.html"          # 根 URL 即首页
+    elif path.endswith("/"):
+        path = path + "index.html"   # 目录形式 -> 对齐 T1_SET 的 index.html
     if path in T1_SET:
         return norm_lang_url(SITE + "/" + lang + "/" + path)
     return u
 
 
 def norm_lang_url(u):
-    """把 /de/index.html 规范为 /de/（首页语言版用目录形式）"""
-    return re.sub(r"(https?://[^/]+/[a-z]{2})/index\.html$", r"\1/", u)
+    """把 /de/index.html 规范为 /de/（首页语言版用目录形式）
+
+    2026-09-15 放宽：原正则要求 index.html **紧跟在两位语言码之后**，
+    所以深一级的 /de/pilates/index.html 匹配不到 → 该页 canonical 写成
+    ".../index.html"，而英文原页写的是目录形式 ".../pilates/"，
+    同一页两种写法。改为允许语言码之后带任意一层子目录。
+    """
+    return re.sub(r"(https?://[^/]+/[a-z]{2}(?:/[^/]*)?)/index\.html$", r"\1/", u)
 
 
 # ------------------------------------------------------------------ 语言块剥离
@@ -449,7 +515,13 @@ def build_one(rel_path, lang, verbose=True):
     #    把英文 URL 同时声明成 en 和 zh 是冲突信号。中文走页面内切换器，不是独立语言版本。
     def _u(lg):
         if lg is None:      # en / x-default -> 英文原页
-            return SITE + "/" if rel_path == "index.html" else SITE + "/" + rel_path
+            if rel_path == "index.html":
+                return SITE + "/"
+            if rel_path.endswith("/index.html"):
+                # 子目录首页用目录形式（pilates/index.html -> /pilates/），
+                # 否则英文原页与语言版会是两种写法（/pilates/ vs /de/pilates/）。
+                return SITE + "/" + rel_path[:-len("index.html")]
+            return SITE + "/" + rel_path
         return norm_lang_url(SITE + "/" + lg + "/" + rel_path)
 
     variants = [("en", _u(None))] + [(lg, _u(lg)) for lg in LANGS] + \

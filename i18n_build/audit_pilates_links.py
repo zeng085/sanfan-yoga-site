@@ -18,6 +18,9 @@ EXT_OK = ("google-analytics.com", "googletagmanager.com", "google.com", "gstatic
           "doubleclick.net", "clarity.ms", "bing.com", "facebook.net")
 SKIP_DIRS = {"outputs", ".git", "node_modules", "i18n_build", ".workbuddy"}
 
+# 器械板块语言版语言码（与 build_pilates_section.LANGS_META 同序）
+LANGS_ORDER = ["de", "ja", "ko", "fr", "it", "es"]
+
 fail, warn = [], []
 
 
@@ -173,10 +176,25 @@ def main():
             if want.rstrip("/") != can.group(1).rstrip("/"):
                 add("fail", "%s canonical 不自指：%s（应为 %s）" % (page, can.group(1), want))
 
-        # ---------- 7. hreflang 只许 en + x-default ----------
-        for m in re.finditer(r'<link rel="alternate" hreflang="([^"]+)"', t):
-            if m.group(1) not in ("en", "x-default"):
-                add("fail", "%s 声明了未建的语言版 hreflang=%s" % (page, m.group(1)))
+        # ---------- 7. hreflang：语言版已建成（54 页），必须声明 7 语言 + x-default，
+        #             且每条都要落到**真实存在**的文件上（2026-09-15 起）。
+        #             旧实现写死「只许 en + x-default」，那是因为当时语言版不存在；
+        #             现在语言版齐了却仍按旧规则判，会把正确声明全判成 FAIL。
+        hl = dict(re.findall(r'<link rel="alternate" hreflang="([^"]+)"\s+href="([^"]+)"', t))
+        want = ["en"] + LANGS_ORDER + ["x-default"]
+        miss = [h for h in want if h not in hl]
+        if miss:
+            add("fail", "%s 缺 hreflang %s（语言版已建成，需 7 语言互链）" % (page, miss))
+        slug = page.replace("pilates/", "")
+        for lg in LANGS_ORDER:
+            u = hl.get(lg)
+            if not u:
+                continue
+            rel = u.replace("https://fjsanfan.com/", "")
+            fp = os.path.join(ROOT, rel if rel.endswith(".html")
+                              else os.path.join(rel.rstrip("/"), "index.html"))
+            if not os.path.exists(fp):
+                add("fail", "%s 的 hreflang=%s 指向不存在的页面：%s" % (page, lg, u))
 
         # ---------- 8. 图片 alt 与路径 ----------
         for m in re.finditer(r'<img\s+([^>]+)>', t):

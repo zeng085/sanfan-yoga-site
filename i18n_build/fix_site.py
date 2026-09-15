@@ -83,14 +83,20 @@ def fix_gallery(path, lang=None):
 def lang_switcher(rel, lang=None, has_lang=True):
     """生成切换器 HTML。lang=None 表示英文原页。首页统一用目录形式(/de/)与 canonical 一致。
     has_lang=False 表示该页没有语言版，DE/JA/KO 退回到对应语言的产品列表页。"""
+    def dirform(p):
+        """子目录首页用目录形式：pilates/index.html -> pilates/
+        2026-09-15 新增。器械板块首页的 canonical 是 /pilates/、/de/pilates/，
+        切换器若写 .../index.html 会让同一页出现两种 URL。"""
+        return re.sub(r"(?:^|(?<=/))index\.html$", "", p)
+
     def url(lg):
         if lg is None:
-            return "/" if rel == "index.html" else "/" + rel
+            return "/" if rel == "index.html" else "/" + dirform(rel)
         if rel == "index.html":
             return "/%s/" % lg
         if not has_lang:                      # 无语言版 -> 指向该语言的产品列表
             return "/%s/products.html" % lg
-        return "/%s/%s" % (lg, rel)
+        return "/%s/%s" % (lg, dirform(rel))
 
     LBL = {"de": "DE", "ja": "JA", "ko": "KO", "fr": "FR", "it": "IT", "es": "ES"}
     NAME = {"de": "Deutsch", "ja": "日本語", "ko": "한국어",

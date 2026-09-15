@@ -13,9 +13,9 @@
     · 分类条换成器械自己的 8 族 chip（不出现垫类 10 分类）
     · 面包屑指向 /pilates/，与 /products/ 不交叉
 
-⚠️ hreflang 只声明 en + x-default：de/ja/ko/fr/it/es 版本还没建，
-   声明不存在的 URL 会被 Search Console 判为「指向 404 的 hreflang」。
-   等语言版铺完再跑 --hreflang 补全。
+⚠️ hreflang 2026-09-15 起声明全部 6 语言 + en + x-default：
+   de/ja/ko/fr/it/es 的语言版已建成（9 页 ×6 = 54 页，落在 <lang>/pilates/），
+   此前只声明 en + x-default 是因为语言版不存在、声明会指向 404。
 
 用法
     python3 i18n_build/build_pilates_section.py --only index,pilates-reformer
@@ -38,6 +38,26 @@ MODELS = os.path.join(HERE, "data", "pilates_models.json")
 IMAGES = os.path.join(HERE, "data", "pilates_images.json")
 
 PILATES_URL = SITE + "/pilates/"
+
+# 非英语语言版（<lang>/pilates/ 下的对应页）。切换器与 hreflang 共用一份。
+LANGS_META = [("de", "Deutsch"), ("ja", "日本語"), ("ko", "한국어"),
+              ("fr", "Français"), ("it", "Italiano"), ("es", "Español")]
+
+# 当前正在渲染的页面文件名（由 build_index / build_family 赋值）。
+# 语言版 URL 要跟着它走，所以 header/head 里必须能读到。
+CUR_PAGE = "index.html"
+
+
+def lang_url(lg):
+    """本页在某语言下的 URL。
+
+    板块首页落到**目录形式** /de/pilates/，与 canonical 写法一致
+    （写 /de/pilates/index.html 会出现同页两种 URL）。
+    族页照原名：/de/pilates/pilates-reformer.html
+    """
+    if CUR_PAGE == "index.html":
+        return "/%s/pilates/" % lg
+    return "/%s/pilates/%s" % (lg, CUR_PAGE)
 
 
 def ver():
@@ -100,17 +120,17 @@ def nav(active_family=None, active_index=False):
   </header>
 """ % {"pf": "../",
        "drop": drop,
-       # 器械页的语言版还没建。指向各语言**首页**（有效、不 404），而不是 products.html ——
-       # 站内惯例是切换器指向「自身对应的语言版」，指到 products.html 会让德语读者
-       # 以为器械板块的德语版就是瑜伽垫页。语言版铺完后改指 /<lang>/pilates/。
-       "langs": "".join('<a href="/%s/" hreflang="%s" title="%s">%s</a>'
-                        % (l, l, t, l.upper())
-                        for l, t in [("de", "Deutsch"), ("ja", "日本語"), ("ko", "한국어"),
-                                     ("fr", "Français"), ("it", "Italiano"), ("es", "Español")])}
+       # 语言版已建成（54 页），切换器直接指本页对应的语言版：
+       # 族页 → /de/pilates/pilates-reformer.html，首页 → /de/pilates/
+       "langs": "".join('<a href="%s" hreflang="%s" title="%s">%s</a>'
+                        % (lang_url(l), l, t, l.upper())
+                        for l, t in LANGS_META)}
 
 
 def head(title, desc, url, og_img, jsonld):
-    """只声明 en + x-default：语言版页面尚未生成，声明它们会指向 404。"""
+    """声明 en + 6 语言 + x-default（语言版 54 页已建成，声明是实链接）。"""
+    hl = "\n".join('  <link rel="alternate" hreflang="%s" href="%s" />' % (l, lang_url(l))
+                   for l, _ in LANGS_META)
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,6 +140,7 @@ def head(title, desc, url, og_img, jsonld):
   <meta name="description" content="%s" />
   <link rel="canonical" href="%s" />
   <link rel="alternate" hreflang="en" href="%s" />
+%s
   <link rel="alternate" hreflang="x-default" href="%s" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="%s" />
@@ -145,7 +166,7 @@ def head(title, desc, url, og_img, jsonld):
 </script>
 </head>
 <body>
-""" % (esc(title), esc(desc), url, url, url, esc(title), esc(desc), og_img, url,
+""" % (esc(title), esc(desc), url, url, hl, url, esc(title), esc(desc), og_img, url,
        esc(title), esc(desc), og_img, VER, jsonld)
 
 
@@ -444,6 +465,8 @@ def apply_block():
 
 # ------------------------------------------------------------------ 页面
 def build_family(fam, imgmap):
+    global CUR_PAGE
+    CUR_PAGE = fam["key"] + ".html"      # lang_url() 据此拼 /<lang>/pilates/<key>.html
     url = PILATES_URL + fam["key"] + ".html"
     hero_img = imgmap.get(fam["models"][0]["code"])
     og = SITE + "/assets/img/" + (hero_img or "logo.webp")
@@ -542,6 +565,8 @@ def build_family(fam, imgmap):
 
 
 def build_index(imgmap):
+    global CUR_PAGE
+    CUR_PAGE = "index.html"          # lang_url() 据此拼 /<lang>/pilates/
     url = PILATES_URL
     og = SITE + "/assets/img/" + (imgmap.get("NIC102") or "logo.webp")
     total = DATA["total_models"]
