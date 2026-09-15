@@ -74,8 +74,22 @@
 - 8 篇旧文已重写去 AI 味并补答案块，老博客页补了 GA4
 - ⚠️ CJK 答案块/字数检查按字符数（≥350），`split()` 词数失效
 
+## 器械板块 /pilates/（2026-09-15 起 63 页）
+- 9 页 EN（`pilates/`）+ 6 语言各 9 页（`<lang>/pilates/`）；sitemap 共 63 条器械 URL（全站 1330 条）
+- ⭐ 板块**首页**用目录形式 `/<lang>/pilates/`（= canonical）；族页照原名。导航一级入口恒指 `/<lang>/pilates/`
+- ⭐ `build_pages.rewrite_abs()` 必须把目录形式补成 `index.html` 再查 `T1_SET`，
+  否则语言版首页 canonical/og:url/JSON-LD 会退回英文地址（等于声明英文为规范版）→ 只有首页中招
+- ⭐ hreflang 双向对等：EN 页也要声明 6 语言（建早了的 EN 页只声明 en+x-default 是缺陷，GSC 报 no return tag）
+- ⭐ **改管线脚本要等落盘再启动构建**（抢 11 秒就用上旧代码，产出 54 页错误链接）
+- 体检：`check_pilates_langs.py`（54 语言页）/ `check_pilates.py`（9 EN 页）/ `audit_pilates_links.py` /
+  `audit_pilates_langs_render.cjs`（6 语言多视口）；URL 修补 `fix_pilates_lang_urls.py`（幂等）
+- ⚠️ 假失败三件套：切换器 EN/中文项本就指英文（扫内链前剔 `lang-menu`）；
+  lazy 图不滚到视口 `naturalWidth=0`（滚到底+等 `complete`）；写死「某页还没建」的断言会过期 → 改查文件是否存在
+
 ## SEO/GEO 现状
-- canonical/hreflang/sitemap 健康；SEO 深检 0 问题；Schema 政策真问题 0（AggregateOffer = B2B 豁免）
+- canonical/hreflang/sitemap 健康；Schema 政策真问题 0（AggregateOffer = B2B 豁免）
+- ⭐ 新增待办：语言版 **title>80 字 411 处 / description>170 字 483 处**（译文天然更长，摘要会被截断）
+- 10 篇博客「多个 h1」（EN 与中文块各一，浏览器互斥显示，审计按源码计数）
 - FAQPage 保留（富结果已退役，AI 引用仍有用）；榜单页仍零外链来源，待补
 - 排名：8 核心词均未进前 5；**"SANFAN" 被 sanfanyoga.com（厦门同业）截流** → 对外用全称
   "FUJIAN SANFAN Sports Products"；对标 htsyoga.com（张家港浩通）的指南型长文路线
