@@ -11,6 +11,17 @@ const I18N = {
   en: {
     'nav.home': 'Home', 'nav.products': 'Products', 'nav.about': 'About',
     'nav.contact': 'Contact', 'nav.quote': 'Get a Quote', 'nav.blog': 'Blog',
+    // Pilates 器械一级入口（/pilates/ 独立板块，与 Products 平行）
+    'nav.pilates': 'Pilates',
+    'nav.pl.reformer': 'Pilates Reformer',
+    'nav.pl.cadillac': 'Pilates Cadillac',
+    'nav.pl.wunda-chair': 'Pilates Wunda Chair',
+    'nav.pl.ladder-barrel': 'Pilates Ladder Barrel',
+    'nav.pl.spine-corrector': 'Pilates Spine Corrector',
+    'nav.pl.reformer-tower': 'Reformer Tower & 3-in-1',
+    'nav.pl.studio-set': 'Pilates Studio Set',
+    'nav.pl.specialty': 'Pilates Specialty',
+    'nav.pl.all': 'All Pilates apparatus',
 
     // Hero
     'hero.eyebrow': 'OEM / ODM Yoga & Fitness Manufacturer',
@@ -266,6 +277,17 @@ const I18N = {
   zh: {
     'nav.home': '首页', 'nav.products': '产品', 'nav.about': '关于',
     'nav.contact': '联系', 'nav.quote': '获取报价', 'nav.blog': '博客',
+    // Pilates 器械一级入口（与「产品」平行的独立板块）
+    'nav.pilates': '普拉提器械',
+    'nav.pl.reformer': '普拉提核心床',
+    'nav.pl.cadillac': '普拉提凯迪拉克床',
+    'nav.pl.wunda-chair': '普拉提稳踏椅',
+    'nav.pl.ladder-barrel': '普拉提梯桶',
+    'nav.pl.spine-corrector': '普拉提矫正器',
+    'nav.pl.reformer-tower': '半高架与三合一',
+    'nav.pl.studio-set': '普拉提五件套',
+    'nav.pl.specialty': '普拉提特殊器械',
+    'nav.pl.all': '全部普拉提器械',
 
     'hero.eyebrow': '瑜伽 & 健身器材 OEM / ODM 制造工厂',
     'hero.title': '福建三梵 — 你的瑜伽与健身器材直供工厂',

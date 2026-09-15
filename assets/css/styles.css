@@ -1057,3 +1057,192 @@ html.show-zh .app-card h4 { font-weight: 600; }
 @media (max-width: 640px) {
   .sr-btn { display: none; }
 }
+
+/* ===========================================================================
+   PILATES APPARATUS —— 独立板块（/pilates/）
+   与垫类刻意分色：垫类走品牌青绿亮色，器械走「深墨 + 实木色」，对应实木床身。
+   全部用 .pl- 前缀，不覆盖任何既有选择器。
+   =========================================================================== */
+:root {
+  --pl-ink: #17130f;
+  --pl-ink-2: #2b241d;
+  --pl-wood: #b07c42;
+  --pl-wood-2: #d9b183;
+  --pl-paper: #faf6f0;
+  --pl-line: #e9dfd1;
+  --pl-muted: #6f6355;
+}
+
+/* --- 导航一级入口（带 8 族下拉）--- */
+.nav-drop { position: relative; }
+.nav-drop > a { display: inline-flex; align-items: center; gap: 5px; }
+/* ⚠️ 下拉箭头必须是真实元素，不能用 .nav-drop > a::after ——
+   站内 `.nav-links a::after` 是悬停下划线（position:absolute; bottom:-6px），
+   且 `.nav-links a:hover::after{width:100%}` 优先级高于单类选择器，
+   用伪元素做箭头会被拉成一条贯穿文字的斜线。 */
+.nav-drop > a .nd-caret {
+  width: 5px; height: 5px; margin-left: 5px; margin-top: -3px;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg); opacity: .5; transition: transform .18s, opacity .18s;
+}
+.nav-drop:hover > a .nd-caret { transform: rotate(225deg); margin-top: 2px; opacity: .85; }
+.nav-drop-menu {
+  display: none; position: absolute; top: calc(100% + 12px); left: 50%;
+  transform: translateX(-50%); min-width: 232px; padding: 8px;
+  background: #fff; border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: var(--shadow); z-index: 60;
+}
+.nav-drop:hover .nav-drop-menu,
+.nav-drop:focus-within .nav-drop-menu { display: grid; gap: 2px; }
+.nav-drop-menu a {
+  padding: 8px 10px; border-radius: 8px; font-size: 13.5px; font-weight: 400;
+  color: var(--ink); white-space: nowrap;
+}
+.nav-drop-menu a:hover { background: var(--pl-paper); color: var(--pl-wood); }
+.nav-drop-menu a::after { display: none; }
+.nav-drop-menu .nd-all {
+  border-top: 1px solid var(--line); margin-top: 4px; padding-top: 10px;
+  font-weight: 500; color: var(--pl-wood);
+}
+@media (max-width: 920px) {
+  .nav-drop-menu {
+    position: static; transform: none; box-shadow: none; border: 0;
+    padding: 0 0 0 14px; min-width: 0;
+  }
+  .nav-drop:hover .nav-drop-menu { display: grid; }
+  .nav-drop-menu a { padding: 8px 0; border-bottom: 1px solid var(--line); }
+}
+
+/* --- 板块 hero（深墨）--- */
+.pl-hero {
+  background: var(--pl-ink); color: #f3ece3;
+  background-image: radial-gradient(circle at 88% 12%, rgba(176, 124, 66, .22), transparent 46%);
+}
+/* ⚠️ 只写上下内边距：用 padding 简写会把 .container 的左右 40px（移动端 20px）清成 0 */
+.pl-hero-inner { position: relative; z-index: 2; padding-top: 74px; padding-bottom: 62px; }
+.pl-hero .bc, .pl-hero .breadcrumb a, .pl-hero .breadcrumb .bc-sep { color: var(--pl-wood-2); }
+.pl-hero .breadcrumb .bc-cat { color: #a99c8b; }
+.pl-eyebrow {
+  display: inline-block; font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--pl-wood-2); margin-bottom: 14px;
+}
+.pl-hero h1 {
+  font-size: clamp(30px, 4.6vw, 50px); line-height: 1.14; margin: 0 0 16px;
+  max-width: 800px; color: #fff;
+}
+.pl-hero p.lead {
+  font-size: clamp(15px, 1.8vw, 18px); color: #cdc2b4; max-width: 660px; margin: 0 0 28px;
+}
+.pl-hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+.pl-hero .btn-ghost { border-color: rgba(217, 177, 131, .5); color: var(--pl-wood-2); }
+.pl-hero .btn-ghost:hover { border-color: var(--pl-wood-2); color: #fff; }
+.pl-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  margin-top: 40px; background: rgba(217, 177, 131, .22); border-radius: 12px; overflow: hidden;
+}
+.pl-stats .hs { background: var(--pl-ink-2); padding: 20px 16px; text-align: center; }
+.pl-stats .num { font-size: 27px; font-weight: 700; color: var(--pl-wood-2); }
+.pl-stats .lab { font-size: 12.5px; color: #b7aa99; margin-top: 4px; }
+
+/* --- 器械族分类条（替代垫类 10 分类）--- */
+.pl-bar {
+  background: var(--pl-paper); border-bottom: 1px solid var(--pl-line);
+  padding: 14px 0;
+}
+.pl-bar-inner { display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 920px) {
+  .pl-bar-inner { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .pl-bar-inner::-webkit-scrollbar { display: none; }
+}
+.pl-chip {
+  flex: 0 0 auto; padding: 8px 14px; border-radius: 999px; font-size: 13.5px;
+  background: #fff; border: 1px solid var(--pl-line); color: var(--pl-ink);
+  white-space: nowrap;
+}
+.pl-chip:hover { border-color: var(--pl-wood); color: var(--pl-wood); }
+.pl-chip-active { background: var(--pl-wood); border-color: var(--pl-wood); color: #fff; }
+.pl-chip-active:hover { color: #fff; }
+.pl-bar-note { font-size: 12.5px; color: var(--pl-muted); padding: 0 0 10px; }
+
+/* --- 器械族卡片 --- */
+.pl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.pl-card {
+  display: block; background: #fff; border: 1px solid var(--pl-line);
+  border-radius: var(--radius); overflow: hidden; transition: border-color .18s, transform .18s;
+}
+.pl-card:hover { border-color: var(--pl-wood); transform: translateY(-3px); }
+.pl-card .ph {
+  background: var(--pl-paper); aspect-ratio: 4 / 3; display: flex;
+  align-items: center; justify-content: center; padding: 14px;
+}
+.pl-card .ph img { max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.pl-card .bd { padding: 16px 18px 18px; }
+.pl-card h3 { font-size: 16px; margin: 0 0 6px; }
+.pl-card .cnt { font-size: 12.5px; color: var(--pl-wood); margin: 0 0 8px; }
+.pl-card p { font-size: 13.5px; color: var(--pl-muted); margin: 0; line-height: 1.55; }
+
+/* --- 型号规格对比表 --- */
+.pl-spec-wrap { overflow-x: auto; border: 1px solid var(--pl-line); border-radius: 12px; background: #fff; }
+table.pl-spec { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 860px; }
+table.pl-spec th, table.pl-spec td {
+  padding: 11px 13px; text-align: left; border-bottom: 1px solid var(--pl-line);
+  vertical-align: top;
+}
+table.pl-spec thead th {
+  background: var(--pl-paper); font-weight: 500; font-size: 12.5px;
+  color: var(--pl-muted); letter-spacing: .04em; text-transform: uppercase;
+  position: sticky; top: 0; z-index: 2;
+}
+table.pl-spec tbody tr:hover { background: var(--pl-paper); }
+table.pl-spec td.model { font-weight: 500; color: var(--pl-ink); min-width: 190px; }
+table.pl-spec td.code { font-family: var(--font-mono, monospace); font-size: 12.5px; color: var(--pl-wood); white-space: nowrap; }
+table.pl-spec td.size { white-space: nowrap; }
+table.pl-spec td.note { color: var(--pl-muted); font-size: 12.5px; }
+.pl-spec-cap { font-size: 12.5px; color: var(--pl-muted); margin: 10px 0 0; }
+
+/* --- 图文交替的器械族区块 --- */
+.pl-block { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
+.pl-block .im {
+  background: var(--pl-paper); border-radius: var(--radius); padding: 22px;
+  display: flex; align-items: center; justify-content: center; min-height: 280px;
+}
+.pl-block .im img { max-width: 100%; max-height: 340px; object-fit: contain; mix-blend-mode: multiply; }
+.pl-block h2 { font-size: clamp(22px, 3vw, 30px); margin: 0 0 14px; }
+.pl-block p { color: var(--pl-muted); line-height: 1.7; margin: 0 0 16px; }
+.pl-block ul { margin: 0; padding-left: 18px; color: var(--pl-muted); line-height: 1.8; }
+.pl-block.rev .im { order: 2; }
+.pl-tag {
+  display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px;
+  background: var(--pl-paper); border: 1px solid var(--pl-line); color: var(--pl-wood);
+  margin: 0 6px 6px 0;
+}
+/* 器械版的「软」底色 */
+.pl-soft { background: var(--pl-paper); }
+
+/* --- 与垫类互相导流的分隔带 --- */
+.pl-cross {
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  padding: 20px 24px; border-radius: var(--radius);
+  background: var(--pl-ink); color: #e8dfd3; flex-wrap: wrap;
+}
+.pl-cross b { font-weight: 500; }
+.pl-cross a { color: var(--pl-wood-2); font-weight: 500; }
+.pl-cross a:hover { color: #fff; }
+
+@media (max-width: 1000px) {
+  .pl-grid { grid-template-columns: repeat(2, 1fr); }
+  .pl-block { grid-template-columns: 1fr; gap: 20px; }
+  .pl-block.rev .im { order: 0; }
+}
+@media (max-width: 640px) {
+  .pl-grid { grid-template-columns: 1fr; }
+  .pl-stats { grid-template-columns: repeat(2, 1fr); }
+  .pl-hero-inner { padding-top: 48px; padding-bottom: 40px; }
+}
+
+/* 英文站叫法括注：Reformer ↔ Core Bed / Wunda Chair ↔ Pilates Chair / Cadillac ↔ Cadillac Bed。
+   主词保留国际通用名（Reformer 是全球核心搜索词），括注自家英文站 sanfansport.com 的叫法，
+   免得同一台器械在两个站看起来是两样东西。 */
+.pl-alias { margin: -8px 0 20px; font-size: 14.5px; color: var(--pl-wood-2); letter-spacing: .01em; }
+.pl-alias strong { color: #fff; font-weight: 600; }
+.pl-card .alias { font-size: 12.5px; color: var(--pl-wood); margin: 0 0 6px; letter-spacing: .02em; }
