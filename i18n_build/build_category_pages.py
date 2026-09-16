@@ -99,7 +99,16 @@ def main():
         m = re.search(r'<h4[^>]*>([\s\S]*?)</h4>', cards[slug])
         if not m:
             return slug
-        t = re.sub(r"<[^>]+>", " ", m.group(1))
+        # ⭐ 必须先摘掉中文配对 span（2026-09-16 修）：
+        #    EN 页卡片用的是「行内配对 span」双语机制 ——
+        #      <h4><span class="lang-en">Alignment Line TPE Yoga Mat</span>
+        #          <span class="lang-zh">带体位线 TPE 瑜伽垫</span></h4>
+        #    原先直接剥标签，于是得到双语串 `Alignment Line TPE Yoga Mat 带体位线 TPE 瑜伽垫`，
+        #    它被写进 JSON-LD 的 ItemList name 和 products.html 缩略图的 title/alt；
+        #    再经翻译管线 → EN 半被翻成 de/fr/…，中文半原样留着，
+        #    7 个语言版本的结构化数据里都混进了中文（实测 de 分类页 23 条里 17 条中招）。
+        h = re.sub(r'<span class="lang-zh">[\s\S]*?</span>', " ", m.group(1))
+        t = re.sub(r"<[^>]+>", " ", h)
         return " ".join(t.split())
 
     written = []

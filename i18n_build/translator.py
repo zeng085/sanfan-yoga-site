@@ -71,6 +71,14 @@ _PROT_RE = re.compile(
     "|".join("(?:%s)" % p for p in PHRASE_TERMS) + r")", re.IGNORECASE)
 
 # 行业术语表：避免机翻错译（如 aerial yoga hammock 被翻成普通"吊床"）
+# ---------------------------------------------------------------- 行业术语表
+# ⚠️ 2026-09-16 补 fr / it / es 三语（原先只有 de/ja/ko）：
+#    同一批品类词在三语里没有背书，DeepL 各译各的，站内出现多种说法；
+#    下列译法**取自站内已上线且正确的页面**（不是新造），目的是把它们固定下来。
+# ⚠️ 同时补 `figure 8` —— 实测 de/fr/it/es/ja/ko 全把这个"8 字"理解成"插图 8"：
+#    `Figure 8 Resistance Bands` → de「Abbildung 8: Widerstandsbänder」、
+#    fr「Figure 8 : Bandes de résistance」、ja「図8 レジスタンスバンド」，
+#    6 个语言版本全错。这是**形状**不是**图号**，必须锁住。
 GLOSSARY = {
     "de": {
         r"aerial yoga hammocks?": "Aerial-Yoga-Tücher",
@@ -81,6 +89,10 @@ GLOSSARY = {
         r"7-day sampling": "Muster in 7 Tagen",
         r"free samples?": "kostenlose Muster",
         r"factory direct": "direkt ab Werk",
+        r"figure[- ]?8 resistance bands?": "Widerstandsbänder in Achtform",
+        r"resistance loop bands?": "Widerstandsschlaufe",
+        r"resistance tubes?": "Widerstandsschlauch",
+        r"power bands?": "Power Band",
     },
     "ja": {
         r"aerial yoga hammocks?": "エアリアルヨガハンモック",
@@ -91,6 +103,10 @@ GLOSSARY = {
         r"7-day sampling": "7日間サンプル作成",
         r"free samples?": "無料サンプル",
         r"factory direct": "工場直販",
+        r"figure[- ]?8 resistance bands?": "8の字レジスタンスバンド",
+        r"resistance loop bands?": "レジスタンスループバンド",
+        r"resistance tubes?": "レジスタンスチューブ",
+        r"power bands?": "パワーバンド",
     },
     "ko": {
         r"aerial yoga hammocks?": "에어리얼 요가 해먹",
@@ -101,6 +117,55 @@ GLOSSARY = {
         r"7-day sampling": "7일 샘플 제작",
         r"free samples?": "무료 샘플",
         r"factory direct": "공장 직거래",
+        r"figure[- ]?8 resistance bands?": "8자 저항 밴드",
+        r"resistance loop bands?": "저항 루프 밴드",
+        r"resistance tubes?": "저항 튜브",
+        r"power bands?": "파워 밴드",
+    },
+    "fr": {
+        r"aerial yoga hammocks?": "hamacs de yoga aérien",
+        r"yoga hammocks?": "hamacs de yoga",
+        r"foam rollers?": "rouleaux en mousse",
+        r"yoga props?": "accessoires de yoga",
+        r"resistance bands?": "bandes de résistance",
+        r"7-day sampling": "échantillons en 7 jours",
+        r"free samples?": "échantillons gratuits",
+        r"factory direct": "direct d'usine",
+        r"figure[- ]?8 resistance bands?": "bandes de résistance en huit",
+        r"resistance loop bands?": "bande élastique de résistance",
+        r"resistance tubes?": "tube de résistance",
+        r"exercise bands?": "bandes d'entraînement",
+        r"power bands?": "Power Band",
+    },
+    "it": {
+        r"aerial yoga hammocks?": "amache da yoga aeree",
+        r"yoga hammocks?": "amache da yoga",
+        r"foam rollers?": "rulli in schiuma",
+        r"yoga props?": "accessori yoga",
+        r"resistance bands?": "fasce elastiche",
+        r"7-day sampling": "campionatura in 7 giorni",
+        r"free samples?": "campioni gratuiti",
+        r"factory direct": "direttamente dalla fabbrica",
+        r"figure[- ]?8 resistance bands?": "fasce elastiche a forma di 8",
+        r"resistance loop bands?": "fascia elastica ad anello",
+        r"resistance tubes?": "elastico di resistenza",
+        r"exercise bands?": "fasce elastiche per esercizi",
+        r"power bands?": "Power Band",
+    },
+    "es": {
+        r"aerial yoga hammocks?": "hamacas de yoga aéreas",
+        r"yoga hammocks?": "hamacas de yoga",
+        r"foam rollers?": "rodillos de espuma",
+        r"yoga props?": "accesorios de yoga",
+        r"resistance bands?": "bandas elásticas de resistencia",
+        r"7-day sampling": "muestras en 7 días",
+        r"free samples?": "muestras gratuitas",
+        r"factory direct": "directo de fábrica",
+        r"figure[- ]?8 resistance bands?": "bandas de resistencia en forma de 8",
+        r"resistance loop bands?": "banda elástica de resistencia",
+        r"resistance tubes?": "tubo de resistencia",
+        r"exercise bands?": "bandas elásticas para ejercicio",
+        r"power bands?": "Power Band",
     },
 }
 
@@ -306,6 +371,28 @@ def _call_batch(texts, lang, src="EN"):
     return res
 
 
+# ---------------------------------------------------------------- 译文出口修复
+# ⭐ 规则表在 term_repair.py（与 i18n_build/fix_glue_20260916.py 共用同一份）。
+# 为什么病根在管线：受保护术语被包成 <xN>…</xN> 后交给 DeepL ignore_tags，
+# 引擎**看不到术语首字母**，于是自己猜语法 ——
+#   fr `Tapis de yoga « Lilac » d'TPE`（应 TPE «Lilac»；d' 是错的省音）
+#   it `in gommPUe`（应 in gomma PU）、es `«Alignment Line»TPE`（漏空格）
+#   es `No contiene bifeniloPVC`（EN 只是 contains no PVC，bifenilo「联苯」是凭空编的）
+# 只修存量页面不够 —— 重生成会原样再犯，所以必须在译文出口拦一道。
+from term_repair import repair as _repair_term
+
+
+def _repair_out(values, lang):
+    """对一批译文套用该语言的修复规则。
+
+    ⚠️ 必须放在**出口**而不是入口：缓存里存的是历史译文，其中有大量未修的坏串。
+       若只在「新翻译」上修，命中缓存的老页面依旧带病。放出口则
+       「新翻 / 缓存命中 / 回退英文」三条路径一次覆盖。
+    ⚠️ 必须先于缓存写入做，也不能改历史缓存键 —— repair() 幂等，重复套用无副作用。
+    """
+    return [_repair_term(v, lang) if v else v for v in values]
+
+
 def _looks_translatable(s):
     """是否「应该被翻掉」——用于识别回声。
 
@@ -336,7 +423,7 @@ def translate_lines(lines, lang, verbose=False, src="EN"):
         else:
             todo.append(i)
     if not todo:
-        return out
+        return _repair_out(out, lang)
 
     batches = [todo[i:i + DEEPL_BATCH] for i in range(0, len(todo), DEEPL_BATCH)]
 
@@ -377,7 +464,7 @@ def translate_lines(lines, lang, verbose=False, src="EN"):
     _save_cache(force=True)
     if missing:
         print("[WARN] %s: %d/%d 条未取得译文，已回退英文" % (lang, missing, len(lines)))
-    return out
+    return _repair_out(out, lang)
 
 
 def translate_one(text, lang):
