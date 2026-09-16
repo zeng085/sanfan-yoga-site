@@ -12,6 +12,41 @@
       "permanent": true
     },
     {
+      "source": "/applications/index.html",
+      "destination": "/applications/",
+      "permanent": true
+    },
+    {
+      "source": "/de/applications/index.html",
+      "destination": "/de/applications/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/applications/index.html",
+      "destination": "/ja/applications/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/applications/index.html",
+      "destination": "/ko/applications/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/applications/index.html",
+      "destination": "/fr/applications/",
+      "permanent": true
+    },
+    {
+      "source": "/it/applications/index.html",
+      "destination": "/it/applications/",
+      "permanent": true
+    },
+    {
+      "source": "/es/applications/index.html",
+      "destination": "/es/applications/",
+      "permanent": true
+    },
+    {
       "source": "/index.html",
       "destination": "/",
       "permanent": true

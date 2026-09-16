@@ -85,12 +85,42 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255,255,255,.92); backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
+/* ⚠️ 头部导航**用满视口宽度**，不吃 .container 的 --maxw:1180px。
+   为什么必须这样：导航是「品牌 + 8 个一级项 + 语言切换 + 报价按钮」的一条横线，
+   非英语语言的标签天然更长（es「Esterillas de yoga & fitness」189px、
+   it「Attrezzature per il Pilates」192px）。浏览器实测（audit_nav_layout.cjs）：
+   容器锁死 1180 时，de/ja/ko/fr/it/es **任何桌面宽度都放不下** —— flex 会把
+   每个项压到换行（实测项高 50~74px，本该 25px），并让首项压到 Logo 上。
+   把 header 放开到整个视口后，1440 屏可用 1384px，各语言方才落得下。 */
+.site-header > .container.nav {
+  max-width: 100%;
+  padding-left: 28px; padding-right: 28px;
+}
 .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
 .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; color: var(--ink); }
 .nav-brand img { height: 38px; width: auto; border-radius: 8px; }
 .nav-brand .accent { color: var(--brand); }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a { font-weight: 500; font-size: 15px; color: var(--ink); position: relative; }
+/* 一级导航项**永不换行、永不收缩**。
+   默认 flex-shrink:1 会让放不下的项按比例缩窄 → 文字折成 2~3 行（实测 de 的
+   「Häufig gestellte Fragen」折成 3 行 74px 高、「Pilates-Geräte」折成 2 行），
+   整条导航随之与 Logo 重叠。宁可让它在极端宽度下溢出，也不要折行。 */
+.nav-links > a,
+.nav-drop { white-space: nowrap; flex: none; }
+/* 分级收紧：非英语语言标签长，靠这几档把「放得下的视口宽度」从 1440+ 压到 1240。
+   数值由 probe_nav_fit.cjs 扫描实测确定，不是估的（最宽的 es 在 1240 仍有 21px 余量）。 */
+@media (max-width: 1580px) { .nav-links { gap: 20px; } }
+@media (max-width: 1480px) { .nav-links { gap: 17px; } .nav-links a { font-size: 14.5px; } }
+@media (max-width: 1360px) {
+  .site-header > .container.nav { padding-left: 22px; padding-right: 22px; }
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 14px; }
+  .nav-actions { gap: 8px; }
+  .nav-actions .btn { padding: 11px 16px; font-size: 13px; }
+  .nav-brand { font-size: 17px; }
+  .nav-brand img { height: 34px; }
+}
 .nav-links a:hover { color: var(--brand); }
 .nav-links a::after {
   content: ""; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0;
@@ -450,14 +480,21 @@ html.show-zh .prod-card .info h4 { font-weight: 600; }
   .product-detail { grid-template-columns: 1fr; gap: 28px; }
   .pd-gallery { position: static; }
 }
-@media (max-width: 920px) {
-  /* Nav 自有断点：6 个链接 + 语言切换 + 获取报价按钮总宽容易撑爆（实测 768px iPad portrait
-     会让 "Home" 与 logo 重叠）。把 nav 转 hamburger 提前到 ≤920px，比 .gallery/.cert-grid
-     整体 980px 更激进，避免 iPad 挤爆。 */
+@media (max-width: 1279px) {
+  /* Nav 自有断点（2026-09-16 由 920 上调到 1279）。
+     旧值 920 是「能塞下英文」的年代定的：英文 1093px 就够，所以 921~1180 一直
+     没人发现 —— 但 de/ja/ko/fr/it/es 需要 1220~1436px，在 921~1279 区间里
+     6 个语言全部折行 + 首项压在 Logo 上（用户截图所示）。
+     新值由 probe_nav_fit.cjs 实测标定：最宽的 es 需要 1220px，取 1280 为切换点，
+     1280 视口下最紧的语言仍有 37px 余量（跨浏览器字体度量差异约 2~3%，可覆盖）。 */
   .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0;
     flex-direction: column; gap: 0; background: #fff; border-bottom: 1px solid var(--line);
     padding: 8px 22px 16px; z-index: 49; }
   .nav-links.open { display: flex; }
+  /* 汉堡菜单里每项恢复可换行（竖排面板宽度固定，长标签折行是正常的），
+     并撤掉桌面端的 flex:none，否则最后一项会被挤到面板外。 */
+  .nav-links > a,
+  .nav-drop { white-space: normal; flex: initial; }
   .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--line); }
   .nav-links a.active { color: var(--brand); font-weight: 700; }
   .menu-toggle { display: block; }
@@ -774,6 +811,17 @@ html.show-zh .ct-more .lang-en { display: none; }
   background: #fff; border: 1px solid var(--line); border-radius: 14px;
   box-shadow: var(--shadow-card); overflow: hidden;
   display: grid; grid-template-columns: 1fr 296px;
+  /* 面板高度随语言浮动很大（2026-09-16 实测 1440×900：en 508 / it 659 / es 738 /
+     fr 780 / de 792 / ko 754 / **ja 944**）—— 日语面板比视口还高 112px，
+     底部「应用场景」链接与询价 CTA 直接被切掉且**无法滚到**（.mm-wrap 是绝对定位，
+     超出视口的部分没有任何滚动容器）。限高 + 两列各自滚动，任何语言/屏高都能看全。
+     ⚠️ max-height 必须同时挂在两列上：只挂 .mm-panel 时网格行仍按内容撑高，
+        子元素的 overflow:auto 拿不到可滚高度（撑不出滚动条），等于没限。 */
+  max-height: calc(100vh - 84px);
+}
+.mm-cats, .mm-apps {
+  max-height: calc(100vh - 84px);
+  overflow-y: auto; overscroll-behavior: contain;
 }
 .mm-cats { padding: 24px 26px 20px; display: flex; flex-direction: column; }
 .mm-eyebrow {
@@ -1049,9 +1097,10 @@ html.show-zh .app-card h4 { font-weight: 600; }
 }
 
 /* 搜索结果：把移动菜单里的「搜索」项也纳入 nav-links 的链接样式，
-   只在 nav-links 展开（≤920px）时可见；桌面端用头部放大镜图标。 */
+   只在 nav-links 展开（≤1279px）时可见；桌面端用头部放大镜图标。
+   断点必须与 nav 的 hamburger 断点一致，否则 921~1279 会出现「找不到搜索入口」。 */
 .nav-search-item { display: none; }
-@media (max-width: 920px) {
+@media (max-width: 1279px) {
   .nav-search-item { display: block; }
 }
 @media (max-width: 640px) {
@@ -1086,6 +1135,16 @@ html.show-zh .app-card h4 { font-weight: 600; }
   transform: rotate(45deg); opacity: .5; transition: transform .18s, opacity .18s;
 }
 .nav-drop:hover > a .nd-caret { transform: rotate(225deg); margin-top: 2px; opacity: .85; }
+/* ⚠️ 不可见「桥」：菜单 top 是 calc(100% + 12px)，触发项与菜单之间留了 12px
+   纯背景。鼠标从项往下走去点菜单时，指针在这 12px 里既不在项上也不在菜单上，
+   :hover 当场失效 → 菜单在鼠标到达前就消失（用户反馈「还没选中就跑隐藏了」）。
+   用一个撑满这段空隙的透明伪元素把 hover 连通。
+   为什么不做在 .nav-drop-menu::before：菜单展开时是 display:grid，伪元素会占掉
+   一个网格单元，多出一行 14px 的空白。做在父级 .nav-drop 上则完全不影响布局。 */
+.nav-drop::before {
+  content: ""; position: absolute; left: -14px; right: -14px;
+  top: 100%; height: 16px;
+}
 .nav-drop-menu {
   display: none; position: absolute; top: calc(100% + 12px); left: 50%;
   transform: translateX(-50%); min-width: 232px; padding: 8px;
@@ -1104,13 +1163,16 @@ html.show-zh .app-card h4 { font-weight: 600; }
   border-top: 1px solid var(--line); margin-top: 4px; padding-top: 10px;
   font-weight: 500; color: var(--pl-wood);
 }
-@media (max-width: 920px) {
+/* 汉堡面板里下拉改为静态展开（断点与 nav 的 hamburger 断点保持一致，2026-09-16 由 920 上调） */
+@media (max-width: 1279px) {
   .nav-drop-menu {
     position: static; transform: none; box-shadow: none; border: 0;
     padding: 0 0 0 14px; min-width: 0;
   }
   .nav-drop:hover .nav-drop-menu { display: grid; }
   .nav-drop-menu a { padding: 8px 0; border-bottom: 1px solid var(--line); }
+  /* 竖排面板里父子之间没有缝隙，桥多余 */
+  .nav-drop::before { display: none; }
 }
 
 /* --- 板块 hero（深墨）--- */

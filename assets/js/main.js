@@ -985,16 +985,52 @@ if (form) {
       if (!prodLink && /products\.html$/.test(a.getAttribute('href') || '')) prodLink = a;
     });
   }
+  if (prodLink) {
+    prodLink.setAttribute('aria-haspopup', 'true');
+    prodLink.setAttribute('aria-expanded', 'false');
+    prodLink.setAttribute('aria-controls', 'mm-mega');
+  }
+
+  // 关闭延迟（hover-intent）。旧值 160ms 太短：鼠标从「产品」项下移到面板要穿过
+  // 约 23px 的 header 空白（项高 22px、header 68px、面板贴 header 下沿），
+  // 手速稍慢就被判成"已离开"，面板在指针到达前消失。
+  var MEGA_CLOSE_DELAY = 320;
+  // 与 CSS 的 hamburger 断点严格保持一致（2026-09-16 由 920 上调到 1279）
+  var MEGA_BP = 1279;
 
   function closeMega() {
+    clearTimeout(hideTimer);
     if (mega) mega.hidden = true;
-    if (prodLink) prodLink.classList.remove('mm-active');
+    if (prodLink) {
+      prodLink.classList.remove('mm-active');
+      prodLink.setAttribute('aria-expanded', 'false');
+    }
   }
   function scheduleClose() {
     clearTimeout(hideTimer);
-    hideTimer = setTimeout(closeMega, 160);
+    hideTimer = setTimeout(closeMega, MEGA_CLOSE_DELAY);
   }
   function cancelClose() { clearTimeout(hideTimer); }
+  function megaOpen() { return !!(mega && !mega.hidden); }
+
+  // 兜底关闭路径。旧代码只挂了 prodLink 与 mega 各自的 mouseleave ——
+  // focus（Tab 键或点击触发项）打开面板后，若指针从没进过面板，mouseleave
+  // 永不触发，菜单就**永远关不掉**（用户反馈「鼠标移到外围时导航栏不自动收缩」）。
+  document.addEventListener('mouseover', function (e) {
+    if (!megaOpen()) return;
+    if (mega.contains(e.target) || (prodLink && prodLink.contains(e.target))) return;
+    scheduleClose();                       // 移到「触发项 + 面板」之外 → 延时收起
+  });
+  document.addEventListener('mouseout', function (e) {  // 指针移出窗口
+    if (!e.relatedTarget && !e.toElement) closeMega();
+  });
+  document.documentElement.addEventListener('mouseleave', closeMega);
+  window.addEventListener('blur', closeMega);
+  document.addEventListener('visibilitychange', function () { if (document.hidden) closeMega(); });
+  window.addEventListener('scroll', closeMega, { passive: true });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' || e.keyCode === 27) closeMega();
+  });
 
   function renderMega(D) {
     var byKey = {};
@@ -1041,6 +1077,7 @@ if (form) {
     if (!mega) {
       mega = document.createElement('div');
       mega.className = 'mm-wrap';
+      mega.id = 'mm-mega';
       mega.hidden = true;
       mega.addEventListener('mouseenter', cancelClose);
       mega.addEventListener('mouseleave', scheduleClose);
@@ -1051,22 +1088,24 @@ if (form) {
 
   if (prodLink) {
     prodLink.addEventListener('mouseenter', function () {
-      if (window.innerWidth <= 920) return;
+      if (window.innerWidth <= MEGA_BP) return;
       cancelClose();
       loadData().then(function (D) {
         D_ = D; UI = D.ui || null; applyUI(D); ensureMega(D);
         if (prodLink.matches(':hover')) {
           mega.hidden = false;
           prodLink.classList.add('mm-active');
+          prodLink.setAttribute('aria-expanded', 'true');
         }
       }).catch(function () {});
     });
     prodLink.addEventListener('mouseleave', scheduleClose);
     prodLink.addEventListener('focus', function () {
-      if (window.innerWidth <= 920) return;
+      if (window.innerWidth <= MEGA_BP) return;
       loadData().then(function (D) {
         D_ = D; UI = D.ui || null; applyUI(D);
         ensureMega(D); mega.hidden = false; prodLink.classList.add('mm-active');
+        prodLink.setAttribute('aria-expanded', 'true');
       }).catch(function () {});
     });
   }

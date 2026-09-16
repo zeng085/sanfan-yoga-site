@@ -12,11 +12,24 @@ r"""全站资源版本号 bump。改过 CSS/JS 后必跑。
 """
 import argparse
 import collections
+import os
 import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAT = re.compile(r'\?v([A-Za-z0-9]+)')
+# 必须剪枝的目录：.git（338M）/ outputs（143M）会让 rglob 慢到被超时杀掉
+PRUNE = {".git", "outputs", "node_modules", "__pycache__"}
+
+
+def html_files():
+    out = []
+    for dirpath, dirnames, filenames in os.walk(ROOT):
+        dirnames[:] = [d for d in dirnames if d not in PRUNE]
+        for fn in filenames:
+            if fn.endswith(".html"):
+                out.append(pathlib.Path(dirpath) / fn)
+    return out
 
 
 def main():
@@ -28,8 +41,7 @@ def main():
     new = args.to.lstrip("v")
     before = collections.Counter()
     changed = 0
-    files = [p for p in ROOT.rglob("*.html")
-             if "outputs" not in p.parts and ".git" not in p.parts]
+    files = html_files()
 
     for p in files:
         t0 = p.read_text(encoding="utf-8", errors="ignore")
