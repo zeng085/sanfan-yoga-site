@@ -186,6 +186,23 @@ GLOBAL_SUBS = [
 
     # ⑧ ja 卡片名把 Cork 写成拉丁文并与 TPE 粘连 → 按日语习惯用片假名
     ("ja", "CorkTPEヨガマット", "コルクTPEヨガマット", "Ja 卡片名：Cork→コルク + 去粘连"),
+
+    # ⑨ ⭐ 实心 EVA 被译成「实木」（第二轮·正文层）------------------------------
+    #    上一轮只修了 fr2 的 meta 三处 + h2，**漏了正文**：产品卡 / pd-overview 里
+    #    仍有 9 处 `EVA-Rolle aus Vollholz`。Vollholz=实木，产品是实心 EVA 泡棉，
+    #    属**事实错误**，德语文案里最伤信任的一类。
+    #    ⚠️ 只替换「EVA-Rolle aus Vollholz」这个完整短语 —— 不能对着
+    #       `Vollholz|Massivholz` 全局替换：Pilates Ladder Barrel 的
+    #       `Massivholz-Bogen`（实木弧形靠背）是**真的实木**，改了反而错。
+    ("de", "EVA-Rolle aus Vollholz", "EVA-Faszienrolle", "De 事实错：实心EVA→「实木」"),
+
+    # ⑩ ⭐⭐ `<title>` 与 og/h1 措辞分歧（第二例，独立信号）-----------------------
+    #    de/fr2 的 <title> 是 `Faszienrollen von Solid` —— DeepL 把商品名 Solid
+    #    当成品牌名译成「von Solid」（=由 Solid 出品）。而同页 og / twitter / h1 /
+    #    JSON-LD / h2 **五处全是** `Solide EVA-Faszienrolle`。
+    #    这与 es/figure-8 的 `Bandas de resistencia` vs `Bandas elásticas` 是**同一模式**：
+    #    「页内 title 与 og/h1 分歧」应当作为**独立扫描项**，不要只当长度问题。
+    ("de", "Faszienrollen von Solid", "Solide EVA-Faszienrolle", "De title：Solid 被当品牌名"),
 ]
 
 
