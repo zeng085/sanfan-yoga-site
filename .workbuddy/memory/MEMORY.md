@@ -15,6 +15,30 @@
 - ⚠️ `.gitignore` 必须排除 `i18n_build/.deepl_key*`、`i18n_build/data/`（报价表 16M 商业机密）
 - 体检脚本 `final_check` / `seo_deep_audit` / `seo_skill_checks` / `bump_assets_ver` /
   `inject_pilates_nav` —— 页面上千后一律**后台跑**（前台 SIGTERM 137，单次约 4.5 分钟）
+- ⭐ **收尾轮终检 6 件套（2026-09-16 定稿，可反复跑）**：
+  `audit_links_20260916.py`（404/跨语言/坏锚点/空 href，全 0）·
+  `audit_seo_20260916.py`（13 项，仅剩 10 页双语块双 h1）·
+  `audit_structure_20260916.py`（div 失衡 / `<a>` 嵌套 / 重复 id，全 0）·
+  `verify_round_20260916.py`（六项内容指标，全 0）·
+  `audit_nav_layout.cjs`（140 组合，0 异常）·
+  `verify_nav_hover.cjs`（7 语言 × 5 交互，35/35 PASS）。线上版加 `BASE=https://fjsanfan.com`
+
+## 导航（2026-09-16 定稿，勿翻案）
+- ⭐ **`.site-header > .container.nav` 不能锁 `--maxw`**：原来继承 1180px，flex 放不下时
+  浏览器不滚动而是**换行并把 `.nav-links` 挤到 logo 上** → 只有 en/zh 看着正常。
+  定稿：`max-width:100%` + `.nav-links > a,.nav-drop{white-space:nowrap;flex:none}` +
+  1580/1480/1360 三档 gap/字号收缩
+- ⭐ **汉堡断点 = 1279px**（实测标定，不是猜）：各语言最小需求 en 1093 / ko 1038 / fr 1216 /
+  de 1299 / ja 1342 / it 1427 / **es 1436**；`measure_nav_need.cjs` 量需求、`probe_nav_fit.cjs` 标定断点。
+  断点内**必须把 nowrap/flex:none 还原**（竖排面板长标签要能折行）
+- ⭐ **下拉三件套**：①`.nav-drop::before` 隐形桥补 `top:calc(100%+12px)` 的 12px 死缝
+  （汉堡态禁用）②`MEGA_CLOSE_DELAY=320ms`③mega 关闭路径 7 条（mouseover 落点判定 /
+  mouseout 移出窗口 / html mouseleave / window blur / visibilitychange / scroll / Esc）——
+  只有 mouseleave 时 **focus 打开的面板会永久卡开**
+- ja mega 面板 944px > 900px 视口会被切 → `.mm-panel{max-height:calc(100vh-84px)}` + 两列 `overflow-y:auto`
+- ⭐ **目录索引 URL 只用 `/x/` 形式**：canonical / hreflang / og:url / sitemap / 内链**一律**，
+  `/x/index.html` 会被 vercel 301（本站 vercel.json 已补 7 条 applications 301，共 63 条重定向）。
+  内链写法：根级 `href="./"`、子目录 `applications/`，`assets/data/navdata*.js` 里的 `"u"` 也要同步
 
 ## 改动与推送
 - 改 CSS/JS 必 bump `?v=`（`bump_assets_ver.py`，写法 `?v20260911f` 无等号）→ 一个干净 commit →
@@ -55,6 +79,12 @@
    - 09-16 成效：title>60宽 **979→163（-83%）**，products 目录 EN/ko 清零
 
 ## 坑清单
+- ⭐ **替换式脚本的自伤写法要当场断言**：`'%shref="%s%s"' % (m.group(1),…)` 而 `m.group(1)`
+  已含 `href="` → 产出 `href="href="../x.html"`（本站一次毁 1078 文件 / 10780 处，
+  目录计数还正常）。落盘前 `assert 'href="href="' not in out`，并用 `repr()` 抽 3 个样本肉眼看
+- ⭐ **审计脚本自己要先被审计**：`url_path()` 对**裸 `index.html`** 没映射成 `/` → 首页被误报
+  「未进 sitemap / hreflang 互指不对称」；显式 `noindex` 的孤立页（`product.html` 是 JS 模板）
+  不该要求 hreflang/JSON-LD/sitemap；`i18n_build/` 整目录（构建产物）应从链接审计里剔除
 - ⭐ **导航里别用 `::after` 加装饰**：`.nav-links a::after` 是悬停下划线（`position:absolute; bottom:-6px`），
   且 `.nav-links a:hover::after{width:100%}` 优先级更高 → 伪元素装饰会被拉成一条贯穿文字的斜线。用真实元素。
 - ⭐ **带 `data-i18n` 的元素不能有子元素**：main.js 的 `applyLang` 对无标签值走 `el.textContent = val`，
@@ -106,9 +136,15 @@
   lazy 图不滚到视口 `naturalWidth=0`（滚到底+等 `complete`）；写死「某页还没建」的断言会过期 → 改查文件是否存在
 
 ## SEO/GEO 现状
-- canonical/hreflang/sitemap 健康；Schema 政策真问题 0（AggregateOffer = B2B 豁免）
-- ⭐ 新增待办：语言版 **title>80 字 411 处 / description>170 字 483 处**（译文天然更长，摘要会被截断）
-- 10 篇博客「多个 h1」（EN 与中文块各一，浏览器互斥显示，审计按源码计数）
+- canonical/hreflang/sitemap 健康（09-16 收尾：applications 索引统一 `/x/` 形式后，
+  canonical 非自指 7→0、hreflang 目标不存在 56→0）；Schema 政策真问题 0（AggregateOffer = B2B 豁免）
+- ⭐ **页脚两代模板并存**是历史病根：老版 5 条 `products.html#yoga|props|rollers|bands|fit`
+  是死锚点（`products.html` 只有 `id="applications"`）；面包屑 `item3` 曾用同一批死锚点且语言页写 EN 路径。
+  09-16 已统一为 10 分类目录链（语言正确相对前缀）+ 真实分类页 URL（819 处）
+- ⭐ 语言版 title>60 宽 / desc>155 宽属**自觉取舍**（译文天然更长，Google 省略号截断），
+  不是缺陷；desc>220 宽的 302 页同理，批量回切会丢转化信息
+- 10 篇博客「多个 h1」（EN 与中文块各一，`.lang-zh` 默认 `display:none`，浏览器互斥显示）——
+  **设计如此，审计据此说明，不为清零改结构**；博客索引页（7 语言）09-16 已补 `Blog`+`ItemList` JSON-LD
 - FAQPage 保留（富结果已退役，AI 引用仍有用）；榜单页仍零外链来源，待补
 - 排名：8 核心词均未进前 5；**"SANFAN" 被 sanfanyoga.com（厦门同业）截流** → 对外用全称
   "FUJIAN SANFAN Sports Products"；对标 htsyoga.com（张家港浩通）的指南型长文路线
