@@ -43,6 +43,21 @@ HREF_RE = re.compile(r'<a\b[^>]*href="([^"]*)"', re.I)
 def text_of(s):
     """去标签 + 反转义 + 压空白：长度统计必须基于反转义后的文本。"""
     return " ".join(re.sub(r"<[^>]+>", " ", html.unescape(s)).split())
+
+
+def dw(s):
+    """显示宽度：CJK/全角算 2，其余算 1。
+
+    ⚠️ 长度类判据必须按**宽度**而不是字符数。Google 按像素截断（title ~600px、
+    description ~920px），CJK 一个字符约占西文两倍宽，用 len() 会**双向失真**：
+      · title 过短：ja「会社概要 — SANFAN ヨガ・フィットネス」23 字被判过短，
+        实际 36 宽（完全够用）→ 假报（2026-09-16 实测 17 处全是假报）
+      · title 过长：ja/ko 标题 79 字其实 158 宽（严重超长）却判为正常 → 漏报
+    描述那侧早就按语言折算过阈值，title 这侧一直漏改。
+    """
+    return sum(2 if ord(c) > 0x2E80 else 1 for c in s)
+
+
 IMG_RE = re.compile(r"<img\b[^>]*>", re.I)
 
 
@@ -131,14 +146,15 @@ def main():
         if not title:
             add("title 缺失", rel)
         else:
-            titles[title].append(rel)
+            titles[(lg, title)].append(rel)
             title = html.unescape(title)
-            if len(title) < 25:
-                add("title 过短(<25)", rel, "%d字 %s" % (len(title), title))
-            elif len(title) > 80:
-                # 阈值取 80 而非常见的 70：Google 按**像素**（~600px）截断，70~80 字
-                # 的西文标题通常还显示得全；超过 80 字才必然被切，那才需要改。
-                add("title 过长(>80)", rel, "%d字 %s" % (len(title), title[:40]))
+            tw = dw(title)
+            if tw < 25:
+                add("title 过短(<25宽)", rel, "%d宽 %s" % (tw, title))
+            elif tw > 80:
+                # 阈值取 80 而非常见的 70：Google 按**像素**（~600px）截断，70~80 宽
+                # 的西文标题通常还显示得全；超过 80 宽才必然被切，那才需要改。
+                add("title 过长(>80宽)", rel, "%d宽 %s" % (tw, title[:40]))
         # --- description
         desc = meta_content(h, "description")
         if desc:
@@ -146,14 +162,15 @@ def main():
         if not desc:
             add("description 缺失", rel)
         else:
-            descs[desc].append(rel)
-            # 阈值按语言折算：日/韩语一个字的信息量 ≈ 西文 2~3 个字符，
-            # 用统一的 55 会把「日本語 40 字」这种正常描述误报成过短。
-            minlen = 30 if lg in ("ja", "ko") else 55
-            if len(desc) < minlen:
-                add("description 过短", rel, "%d字（%s 阈值 %d）" % (len(desc), lg, minlen))
-            elif len(desc) > 170:
-                add("description 过长(>170)", rel, "%d字" % len(desc))
+            descs[(lg, desc)].append(rel)
+            # 阈值按显示宽度折算（CJK×2）：统一 55 宽 ≈ 西文 55 字，
+            # 日/韩语给 60 宽（≈30 字），与改宽度前「ja/ko 30 字」的口径基本一致。
+            minlen = 60 if lg in ("ja", "ko") else 55
+            dwn = dw(desc)
+            if dwn < minlen:
+                add("description 过短", rel, "%d宽（%s 阈值 %d）" % (dwn, lg, minlen))
+            elif dwn > 170:
+                add("description 过长(>170宽)", rel, "%d宽" % dwn)
         # --- h1
         h1s = [text_of(x) for x in H1_RE.findall(h)]
         h1s = [x for x in h1s if x]
@@ -268,12 +285,16 @@ def main():
                 add("hreflang 未互指", rel, "%s → %s 未回指" % (l, other))
 
     # --- title / description 重复
-    for t, rs in titles.items():
+    # ⚠️ 必须**按语言分组**再比。原来 titles/descs 是全局字典、按文本做键，
+    #    于是「Ab Wheel — SANFAN Yoga & Fitness OEM」在 EN 与 de 各出现一次
+    #    就被判成重复 —— 不同语言页面靠 hreflang 相互区分，同名完全正常。
+    #    实测这个假报贡献了 16 组「title 重复」里的 15 组（2026-09-16）。
+    for (lg, t), rs in titles.items():
         if len(rs) > 1:
-            add("title 重复", rs[0], "×%d: %s" % (len(rs), t[:50]))
-    for d, rs in descs.items():
+            add("title 重复", rs[0], "×%d [%s]: %s" % (len(rs), lg, t[:50]))
+    for (lg, d), rs in descs.items():
         if len(rs) > 1:
-            add("description 重复", rs[0], "×%d" % len(rs))
+            add("description 重复", rs[0], "×%d [%s]" % (len(rs), lg))
 
     # --- robots.txt
     rp = os.path.join(ROOT, "robots.txt")
