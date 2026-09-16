@@ -45,6 +45,14 @@
    09-14 已把 9 篇博客中文块全量补齐（0.36–0.44，结构逐一相等），全站 158 页 0 FAIL。
    灌稿走 `i18n_build/apply_zh_blocks.py`（中文稿存 `i18n_build/zhblocks/`，只改 article-body 内层）
    ⚠️ 比字符数前必须先标定，别拿错误直觉去"修"正常内容
+9. ⭐ **meta 长度一律按「显示宽度」（CJK×2），不按字符数**：title 预算 **60 宽**、desc **155 宽**
+   （Google 按像素截断）。按 `len()` 双向失真：ja 36 宽的标题被误判过短、ja/ko 158 宽的漏报。
+   体检 `i18n_build/stats_meta.py`；清洗 `i18n_build/trim_meta_20260915.py`（幂等，--dry-run/--check/--desc）。
+   - title 后缀：products 曾用长版 `— SANFAN Yoga & Fitness Manufacturer`，是**全站唯一**与
+     og:title 及其余 5 个目录不一致的地方 → 09-16 统一为品牌后缀，**两级**（主体短用长档、主体长用 `— SANFAN`）
+   - desc 截断先过 `KEEP_RE` 闸（MOQ / 打样 / OEM / 贴牌 / 认证 / 报价 / 联系方式各语言词干），
+     且**只检查实际被丢弃的那一段**；缺这道闸时 32 处里 14 处切掉了转化信息
+   - 09-16 成效：title>60宽 **979→163（-83%）**，products 目录 EN/ko 清零
 
 ## 坑清单
 - ⭐ **导航里别用 `::after` 加装饰**：`.nav-links a::after` 是悬停下划线（`position:absolute; bottom:-6px`），
@@ -55,6 +63,17 @@
   nav 里 `.lang-zh` 会拿到 `display:block` 而打散行；lang span 只用于正文/chip。
 - ⭐ 全站注入/替换脚本要写成**替换式**（先摘旧块再重插），别写成「只补缺」——否则改了标记后改不动存量页。
 - BSD grep `\|` 交替静默失效 → 用 Python 或 `grep -E`；CJK 相邻 `\b` 失效，替换要枚举语言后缀
+- ⭐ **长度/数量类判据先自问「`len()` 对 CJK 成立吗」**（见约定 9）；
+  「重复」类判据必须**按语言分组**再比 —— 跨语言同名靠 hreflang 区分，不是重复
+  （审计脚本里 titles/descs 曾是全局字典 → 16 组重复里 15 组假报）
+- ⭐ **EN 页的 `|` / `—` 常写成 HTML 实体**（`&#124;`、`&#8212;`）。正则只认字面字符时
+  会静默漏掉整个 EN 站（删 OEM 段时 81 处改动全落语言版，EN 一处没动）
+- ⭐ 机翻会把品牌后缀**展开成从句**：冒号引出（es `… «X»TPE: fabricante … «SANFAN»`）、
+  夹在两个破折号之间（de `– SANFAN – OEM-Hersteller …`）。判据须**同时**要求
+  「含品牌名 + 制造商类词」，只认品牌名会切掉博客副标题（实测 47 处中招）
+- ⭐ 规则型清洗脚本要**迭代到不动点**：多规则互相影响（一条削短后另一条又填回去 → 不幂等）
+- ⭐ 清洗脚本落盘后发现规则有误 → **必须回滚错误改动再重跑**，新规则改不了已落盘的
+  （`i18n_build/restore_desc_20260916.py` 是范例：只还原 description、保留正确的 title 改动）
 - Playwright 本机验收：**别用 `networkidle`**（GA 请求挂住永久超时）→ 拦 GA 路由 + `domcontentloaded`；
   中文态验收必须 `localStorage.siteLang='zh'` 后重载（`classList.add('show-zh')` 不触发 applyLang）
 - 断言别写死导航下标：main.js 会往 `.nav-links` 最前面插 `.nav-search-item`（Home 是 1，Pilates 是 2）
