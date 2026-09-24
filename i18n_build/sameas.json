@@ -1,5 +1,17 @@
 {
-  "_note": "只填真实属于 FUJIAN SANFAN（fjsanfan.com）自己控制的官方主页。填错会把同名同业 sanfanyoga.com / SANFAN FITNESS 的身份混进来。2026-09-24 已由用户确认：facebook.com/sanfanyoga 的 About 官网栏填的是 fjsanfan.com，属本尊。",
+  "_note": "sameAs = 实体同一性声明，只填本司（FUJIAN SANFAN Sports Products / fjsanfan.com）自己控制的官方主页。填错等于主动把同名同业的身份挂到自己名下，比不填更糟。",
+  "_confirmed": {
+    "https://www.facebook.com/sanfanyoga": "2026-09-24 用户本人确认：由其亲自创建并拥有（非厦门同业页面）"
+  },
+  "_blacklist": [
+    "sanfanyoga.com",
+    "sanfanfitness.com",
+    "linkedin.com/company/sanfanyoga",
+    "Xiamen-sanfan-fitness"
+  ],
+  "_excluded": {
+    "yogasanfan.en.alibaba.com": "2026-09-24 用户明确不加。店铺正文公司名与本司一致，但运营主体未经用户确认，不写进 sameAs。"
+  },
   "sameAs": [
     "https://www.facebook.com/sanfanyoga"
   ]

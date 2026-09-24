@@ -23,10 +23,30 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = os.path.join(ROOT, 'i18n_build', 'sameas.json')
 APPLY = '--apply' in sys.argv
 
+# ⛔ 黑名单：同名同业 XIAMEN SANFAN FITNESS / sanfanyoga.com 的自有主页。
+# 写进 sameAs = 主动向 Google 声明"我们和那家是同一实体"，比不填更糟。命中即拒跑。
+BLACKLIST = [
+    'sanfanyoga.com',                # 厦门同业官网
+    'sanfanfitness.com',             # 厦门同业备用域名
+    'linkedin.com/company/sanfanyoga',   # 同业 LinkedIn（handle 与本司 FB 同名，最易误填）
+    'Xiamen-sanfan-fitness',         # 同业 Facebook 页
+    'xiamensanfan',
+]
+
 SAMEAS = json.load(open(CFG, encoding='utf-8'))['sameAs'] if os.path.exists(CFG) else []
 if not SAMEAS:
     print('sameas.json 为空 —— 先填入 URL 再跑。')
     sys.exit(1)
+
+for _u in SAMEAS:
+    if not _u.startswith('https://'):
+        print(f'⛔ sameAs 必须是 https:// 绝对地址：{_u}')
+        sys.exit(1)
+    for _b in BLACKLIST:
+        if _b.lower() in _u.lower():
+            print(f'⛔ sameAs 命中同业黑名单 [{_b}]，拒绝写入：{_u}')
+            print('   那是 XIAMEN SANFAN FITNESS 的自有主页，属于同名同业，不是本司实体。')
+            sys.exit(1)
 
 
 def inject(node):
