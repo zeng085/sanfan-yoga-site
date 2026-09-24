@@ -1,12 +1,12 @@
-# 三梵独立站 fjsanfan.com 长期笔记（精简 2026-09-24）
+# 三梵独立站 fjsanfan.com 长期笔记（2026-09-24）
 
-> 细节全在技能 `sanfansport-catalog-sync` / `fjsanfan-multilang-spec-sync` / `fjsanfan-pilates-section`；本文件只留**跨轮复用率最高**的判断。
+> 细节全在技能 `sanfansport-catalog-sync` / `fjsanfan-multilang-spec-sync` / `fjsanfan-pilates-section`；只留**复用率最高**的判断。
 
 ## 概况
 - 仓库 zeng085/sanfan-yoga-site → Vercel；B2B OEM/ODM 瑜伽垫/健身器材厂站；全站 1331 页
 - EN 主站 + de/ja/ko/fr/it/es 子目录 + 中文同页 CSS 切换（无 /zh/ URL）；sitemap 1330 条
-- ⚠️ `.gitignore` 必须排除 `i18n_build/.deepl_key*`、`i18n_build/data/`（16M 报价表商业机密）
-- ⭐ 全站脚本**一律后台跑**（前台 120s SIGTERM，单次约 4.5 分钟）
+- ⚠️ `.gitignore` 排除 `i18n_build/.deepl_key*`、`i18n_build/data/`（16M 报价表机密）
+- ⭐ 全站脚本**一律后台跑**（前台 120s SIGTERM）
 
 ## 推送（git 直推必败；细节见技能 github-api-push）
 改 CSS/JS 先 `bump_assets_ver.py`（`?v20260911f` 无等号）→ 干净 commit →
@@ -19,18 +19,18 @@
 ## 导航（2026-09-16 定稿，勿翻案；全细节见技能 §14）
 - ⭐ `.container.nav` **不能锁 `--maxw`**（放不下会换行、把 `.nav-links` 挤到 logo 上）；
   **汉堡断点 1279px** 是实测标定不是猜（最宽的 es 需 1436），断点内必须还原 `nowrap/flex:none`
-- ⭐ 下拉三件套：`::before` 补 12px 死缝 / `MEGA_CLOSE_DELAY=320ms` / 关闭路径 7 条
-  （只留 mouseleave 时 focus 打开的面板会永久卡开）
+- ⭐ 下拉三件套：`::before` 补 12px 死缝 / `MEGA_CLOSE_DELAY=320ms` / 关闭路径 7 条（少一条则 focus 面板永久卡开）
 - ⭐ **目录索引 URL 一律用 `/x/`**（canonical/hreflang/og:url/sitemap/内链），`/x/index.html` 会被 301
 
 ## 判据铁律（错一次毁一批页）
-1. ⭐ **长度/重复类判据先问「`len()` 对 CJK 成立吗」**：meta 一律按**显示宽度**（CJK×2），title 预算 60 宽 / desc 155 宽；按字符数双向失真。「重复」须**按语言分组**再比（跨语言同名靠 hreflang 区分）——曾 16 组假报 15 组。
-2. ⭐ **中英字符比已标定：中位 0.353（四分位 0.30–0.44）**，<0.25=残块 FAIL、<0.30=偏薄。比字数前先标定，别拿错误直觉去「修」正常内容。
+1. ⭐ **长度/重复判据先问「`len()` 对 CJK 成立吗」**：meta 按**显示宽度**（CJK×2），title 60 宽 / desc 155 宽；「重复」须**按语言分组**（跨语言同名靠 hreflang 区分）——曾 16 组假报 15 组。
+2. ⭐ **中英字符比已标定：中位 0.353（四分位 0.30–0.44）**，<0.25=残块 FAIL、<0.30=偏薄。比字数前先标定。
 3. ⭐ **EN 页的 `|`/`—` 常写成 HTML 实体**（`&#124;`/`&#8212;`）→ 正则只认字面会静默漏掉整个 EN 站。
 4. BSD grep `\|` 交替**静默失效** → 用 `grep -E` 或 Python；CJK 相邻 `\b` 也失效。
-5. ⭐ 替换式脚本：落盘前 `assert 'href="href="' not in out`（曾一次毁 1078 文件而计数正常）；要写**先摘旧块再重插**，不是「只补缺」；规则型清洗**迭代到不动点**，落盘后发现规则错**先回滚再重跑**。
-6. ⭐ **审计脚本自己要先被审计**：`url_path()` 漏映射裸 `index.html` → 首页被误报；`noindex` 孤立页不该要求 hreflang；`i18n_build/` 是构建产物应剔除。
-7. Playwright：**别用 `networkidle`**（GA 挂住永久超时）→ 拦 GA + `domcontentloaded`；中文态必须 `localStorage.siteLang='zh'` 后重载。
+5. ⭐ 替换式脚本：落盘前 `assert 'href="href="' not in out`（曾毁 1078 文件）；写**先摘旧块再重插**；规则清洗**迭代到不动点**，规则错**先回滚再重跑**。
+6. ⭐ **审计脚本先自审**：`url_path()` 漏映射裸 `index.html` → 首页误报；`noindex` 页不该要求 hreflang；`i18n_build/` 是构建产物应剔除。
+7. ⭐ **判据现「恒定等差」先怀疑判据本身**（曾把剥 script 后残留的 8 个空白当成全站 DIFF）。
+8. Playwright：**别用 `networkidle`**（GA 挂住超时）→ 拦 GA + `domcontentloaded`；中文态须 `localStorage.siteLang='zh'` 后重载。
 
 ## 内容层结构（两种语言机制勿混）
 - 行内配对 span：products/applications/首页/blog 卡片（天然成对）；块级 `div.lang-zh` **只在 10 个 blog 文章页**且须在 `.container` 内 —— 单边页即故障
@@ -40,9 +40,10 @@
 - ⚠️ 机翻会吃受保护术语旁的词尾（`alfombrTPEes`），也会把品牌后缀展开成从句
 
 ## SEO/GEO 现状（2026-09-24 复核）
-- 技术层已修平：404/跨语言/坏锚点/**结构全 0**；canonical 非自指 0、hreflang 目标不存在 0
-- ⭐ **sameAs 定稿 = 单条** `facebook.com/sanfanyoga`（用户新建并确认；98 页 Organization）。
-  阿里**明确不加**；`add_sameas.py` 有写入前同业黑名单闸（命中拒跑，名单见 sameas.json）。对外用全称 "FUJIAN SANFAN Sports Products"
-- 已做：robots 11 个 AI UA / dateModified 70 页 / llms.txt / sameAs / FAQ **1029 产品页 + 63 pilates 页**（线上校验 PASS）
-- 未做（拿分主力，GEO 46/100）：答案块 134–167 词（现中位 45 词）/ 一手来源外链 / Person 作者 / 多模态 / 原创数据
-- ⚠️ 每周 AI 曝光自检**从未执行**（清单已备，日志 0 次）——唯一能证明动作真换来引用的环节
+- 技术层已修平：404 / 跨语言 / 坏锚点 / 结构 / canonical / hreflang 全 0
+- ⭐ **实体层铺满全站**：Organization + `@id=…/#organization` + sameAs 覆盖 **1330 页**（改前仅 103 页有 Org）。
+  脚本 `add_org_sameas_20260924.py`；模板**自动取字段最全节点**（实测 about.html 而非首页）；黑名单闸唯一源 `sameas_guard.py`。
+  sameAs=单条 `facebook.com/sanfanyoga`（用户确认）；阿里**不加**；对外用全称 "FUJIAN SANFAN Sports Products"
+- 已做（均已上线）：robots 11 AI UA / dateModified 70 页 / llms.txt / FAQ **1092 页** / 实体层 1330 页
+- 未做（拿分主力，GEO 46/100）：答案块 134–167 词 / 一手来源外链 / Person 作者 / 多模态 / 原创数据 / Product 缺 `manufacturer`
+- ⚠️ 每周 AI 曝光自检**从未执行**（清单已备，日志 0 次）——唯一能证明引用真来的环节
