@@ -91,12 +91,24 @@ def words(t):
 
 # ⭐ 译文 lint：本站在 protect() 包裹术语后，DeepL 会咬掉相邻词的词尾/吞掉空格。
 # 既有体检脚本（verify_round 的「术语粘连」）只认「术语+小写」，测不出下面第 2 类。
-# 2026-09-24 实测中招：it `in gomm PVC`（gomma→gomm）、`compositi PUa base`（PU + a 粘住）。
-TERM = r'(TPE|PVC|PU|EVA|NBR|MOQ)'
+# 2026-09-24 实测中招：it `in gomm PVC`（gomma→gomm）、`compositi PUa base`（PU 与 a 粘住）。
+#
+# ⚠️ 两条使用边界（都踩过）：
+#   1) 只对**译文串**跑，别拿去扫整页 —— 全站扫会命中语言切换器的「中文 / 日本語」
+#      标签和 contact 页的「微信」，190 处全是假阳性。
+#   2) 术语后跟复数 `-s/-es` 是**合法英文/法文**（`MOQs` / `EVAs`），要白名单放行，
+#      否则 16 处假阳性。真正的咬词尾长这样：`PUa`（应为 `PU a`）。
+#   3) ⛔ **不要试图加规则去抓「带空格的咬词尾」**（如 `gomm PVC`）。已实测：
+#      抽样 150 个语言页得 33 处命中，**全是假阳性**（vs / chez / oder / cual /
+#      für / por / mejor / cuir / tapis 都是正常词）。无词典无法区分，
+#      中文/日文/韩文页更是无从判断。→ 这类只能**人工通读译文**一遍，
+#      脚本的职责是减少要看的量，不是代替判决。
+TERM = r'(?:TPE|PVC|PU|EVA|NBR|MOQ)'
+PLURAL_OK = {'s', 'es'}
 LINT = [
-    (re.compile(TERM + r'(?=[a-z\u00e0-\u00ff]{1,3}\b)'), '术语后紧跟小写词尾'),
+    (re.compile(TERM + r'(?=([a-z\u00e0-\u00ff]{1,3})\b)'), '术语后紧跟小写词尾', PLURAL_OK),
     (re.compile(r'(?<![A-Za-z\u00e0-\u00ff])[a-z\u00e0-\u00ff]{2,6}(?=' + TERM + r')'),
-     '术语前紧贴小写残词（词尾被咬）'),
+     '术语前紧贴小写残词（词尾被咬）', None),
 ]
 HAN = re.compile(r'[\u4e00-\u9fff]')
 
@@ -106,8 +118,11 @@ def lint_translations(data):
     issues = []
     for lg in LANGS:
         t = data.get(lg) or ''
-        for rx, desc in LINT:
+        for rx, desc, allow in LINT:
             for m in rx.finditer(t):
+                sfx = m.group(1) if m.groups() else None
+                if allow and sfx and sfx.lower() in allow:
+                    continue
                 issues.append((lg, f'{desc}: …{t[max(0, m.start()-24):m.end()+14]}…'))
         if lg == 'ko':
             han = HAN.findall(t)
