@@ -52,7 +52,7 @@ def process(path):
     n = 0
 
     def repl(m):
-        global n
+        nonlocal n
         body = m.group(1).strip()
         if '"Organization"' not in body:
             return m.group(0)

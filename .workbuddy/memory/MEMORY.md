@@ -1,6 +1,6 @@
 # 三梵独立站 fjsanfan.com 长期笔记（精简 2026-09-24）
 
-> 细节全在技能：`sanfansport-catalog-sync`（产品/建页）、`fjsanfan-multilang-spec-sync`（多语言/博客）、`fjsanfan-pilates-section`（器械板块）。本文件只留**跨轮复用率最高**的判断。
+> 细节全在技能 `sanfansport-catalog-sync` / `fjsanfan-multilang-spec-sync` / `fjsanfan-pilates-section`；本文件只留**跨轮复用率最高**的判断。
 
 ## 概况
 - 仓库 zeng085/sanfan-yoga-site → Vercel；B2B OEM/ODM 瑜伽垫/健身器材厂站；全站 1331 页
@@ -41,8 +41,9 @@
 
 ## SEO/GEO 现状（2026-09-24 复核）
 - 技术层已修平：404/跨语言/坏锚点/**结构全 0**；canonical 非自指 0、hreflang 目标不存在 0
-- ⭐ **唯一阻塞 = sameAs 的 3 个 URL**（用户未给）。⚠️ 绝不能填 `sanfanyoga.com` / `SANFAN FITNESS`（厦门同名同业，正在截流 "SANFAN" 品牌词）→ 对外用全称 "FUJIAN SANFAN Sports Products"
-- 已做（均已上线，commit `8817b3dcbd`）：robots 11 个 AI UA / dateModified 70 页 / llms.txt /
-  FAQ 覆盖 **1029 产品页 + 63 pilates 页**（1092 页有 FAQPage，线上深层校验 PASS 4/0）
-- 未做（拿分主力，GEO 46/100）：答案块 134–167 词（现中位 45 词，0% 命中）/ 一手来源外链（0）/ Person 作者 / 多模态 / 原创数据
-- ⚠️ 每周 AI 曝光自检**从未执行**（清单已备 5 组词，日志 0 次）——唯一能证明动作真换来引用的环节
+- ⭐ **sameAs 已补** `facebook.com/sanfanyoga`（98 页 Organization；用户确认 About 官网栏=fjsanfan.com）。
+  ❌ 黑名单：`sanfanyoga.com` / `sanfanfitness.com` / `linkedin.com/company/sanfanyoga`（厦门同名同业）
+  → 对外用全称 "FUJIAN SANFAN Sports Products"
+- 已做：robots 11 个 AI UA / dateModified 70 页 / llms.txt / sameAs / FAQ **1029 产品页 + 63 pilates 页**（线上校验 PASS）
+- 未做（拿分主力，GEO 46/100）：答案块 134–167 词（现中位 45 词）/ 一手来源外链 / Person 作者 / 多模态 / 原创数据
+- ⚠️ 每周 AI 曝光自检**从未执行**（清单已备，日志 0 次）——唯一能证明动作真换来引用的环节
