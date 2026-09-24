@@ -743,6 +743,15 @@ def main():
                                     os.path.getsize(p) / 1024))
     print("生成 %d 页" % len(written))
 
+    # GEO 三件套（WebPage dateModified + FAQPage + 可见 FAQ 区块）
+    # ⚠️ 本脚本重建页面会覆盖 GEO 内容，故构建后自动重注入（幂等，替换式）。
+    # 语言版（<lang>/pilates/）由多语言管线单独产出，重跑后需自行执行：
+    #   python3 i18n_build/add_pilates_geo_20260924.py --apply
+    import subprocess
+    r = subprocess.run([sys.executable, os.path.join(HERE, "add_pilates_geo_20260924.py"),
+                        "--langs", "en", "--apply"], cwd=ROOT)
+    print("  GEO 重注入退出码：%d" % r.returncode)
+
 
 if __name__ == "__main__":
     main()
