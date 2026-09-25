@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "lastModified": "2026-09-25",
+  "name": "FUJIAN SANFAN Sports Products Co., Ltd.",
+  "description": "FUJIAN SANFAN is a 12-year OEM/ODM manufacturer of yoga mats and fitness equipment based in Jinjiang, Fujian, China. TPE yoga mats from 100 pcs MOQ, foam rollers from 500 pcs, physical samples with your own logo and packaging in 7 days, and full customization of material, size, thickness, color, double-color, logo, fold and packaging. REACH, CA Prop 65 and 6P/7P compliant, ISO 9001 and BSCI audited, exporting worldwide with FOB, EXW, CIF or DDP terms.",
+  "summary": "FUJIAN SANFAN is a 12-year OEM/ODM manufacturer of yoga mats and fitness equipment based in Jinjiang, Fujian, China. TPE yoga mats from 100 pcs MOQ, foam rollers from 500 pcs, physical samples with your own logo and packaging in 7 days, and full customization of material, size, thickness, color, double-color, logo, fold and packaging. REACH, CA Prop 65 and 6P/7P compliant, ISO 9001 and BSCI audited, exporting worldwide with FOB, EXW, CIF or DDP terms.",
+  "url": "https://fjsanfan.com",
+  "keyFeatures": [
+    "12 years of yoga mat and fitness gear manufacturing (founded 2013)",
+    "TPE yoga mats from 100 pcs MOQ per design and color",
+    "Physical sample with your logo, color and packaging in 7 days",
+    "Vertically integrated factory — R&D, foaming, cutting, molding, printing and QC in-house",
+    "10 production lines, about 1,000,000 yoga mats per year",
+    "147 products across 10 lines, plus 41 wooden Pilates studio models",
+    "REACH, CA Prop 65, 6P/7P free, ISO 9001 and BSCI audited",
+    "OEM, ODM and private label with full packaging customization",
+    "Direct shipping to Amazon FBA fulfillment centers"
+  ],
+  "targetAudience": [
+    "Brand owners and private-label sellers",
+    "Retail chains and importers",
+    "Yoga and Pilates studios",
+    "Gyms and fitness clubs",
+    "Hotels, resorts and spas",
+    "Recovery and physiotherapy clinics",
+    "Amazon and e-commerce sellers"
+  ],
+  "primaryUseCases": [
+    "OEM/ODM yoga mat manufacturing",
+    "Private label yoga mat production",
+    "Fitness equipment sourcing from China",
+    "Custom Pilates apparatus manufacturing",
+    "Amazon FBA-ready production and labeling"
+  ],
+  "endpoints": {
+    "llms": "https://fjsanfan.com/llms.txt",
+    "llmsFull": "https://fjsanfan.com/llms-full.txt",
+    "faq": "https://fjsanfan.com/ai/faq.json",
+    "service": "https://fjsanfan.com/ai/service.json",
+    "aiTxt": "https://fjsanfan.com/.well-known/ai.txt",
+    "sitemap": "https://fjsanfan.com/sitemap.xml"
+  },
+  "contact": {
+    "whatsapp": "+86 15959029082",
+    "email": "zenglinggun@gmail.com",
+    "page": "https://fjsanfan.com/contact.html"
+  }
+}

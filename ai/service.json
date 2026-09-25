@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "lastModified": "2026-09-25",
+  "name": "FUJIAN SANFAN — OEM/ODM Yoga Mat & Fitness Equipment Manufacturing",
+  "capabilities": [
+    "OEM manufacturing — produce to buyer specification and design",
+    "ODM manufacturing — existing designs branded under buyer label",
+    "Private label production with custom logo and packaging",
+    "TPE yoga mat manufacturing from 100 pcs MOQ",
+    "PU / rubber yoga mat manufacturing",
+    "Suede and cork yoga mat manufacturing",
+    "Meditation and Pilates mat manufacturing (including reformer mats)",
+    "Foam roller and massage / recovery tool manufacturing",
+    "Wooden Pilates apparatus manufacturing — 41 studio models",
+    "Resistance band, yoga prop and accessory manufacturing",
+    "Strength and fitness equipment manufacturing",
+    "In-house R&D, tooling and new product development from sample or sketch",
+    "Physical sampling with buyer logo, color and packaging in 7 days",
+    "Custom packaging design, barcodes, QR codes and inserts",
+    "Batch-traceable QC with incoming, in-process and final AQL inspection",
+    "Export documentation and worldwide logistics (FOB, EXW, CIF, DDP)",
+    "Amazon FBA-compliant labeling, cartons and direct fulfillment-center shipping"
+  ],
+  "service": {
+    "name": "FUJIAN SANFAN — OEM/ODM Yoga Mat & Fitness Equipment Manufacturing",
+    "type": "manufacturing-oem-odm",
+    "description": "Chinese vertically integrated manufacturer of yoga mats, wooden Pilates apparatus and fitness equipment, supplying brands, retailers, studios, gyms and hotels worldwide since 2013.",
+    "url": "https://fjsanfan.com",
+    "capabilities": [
+      "OEM manufacturing — produce to buyer specification and design",
+      "ODM manufacturing — existing designs branded under buyer label",
+      "Private label production with custom logo and packaging",
+      "TPE yoga mat manufacturing from 100 pcs MOQ",
+      "PU / rubber yoga mat manufacturing",
+      "Suede and cork yoga mat manufacturing",
+      "Meditation and Pilates mat manufacturing (including reformer mats)",
+      "Foam roller and massage / recovery tool manufacturing",
+      "Wooden Pilates apparatus manufacturing — 41 studio models",
+      "Resistance band, yoga prop and accessory manufacturing",
+      "Strength and fitness equipment manufacturing",
+      "In-house R&D, tooling and new product development from sample or sketch",
+      "Physical sampling with buyer logo, color and packaging in 7 days",
+      "Custom packaging design, barcodes, QR codes and inserts",
+      "Batch-traceable QC with incoming, in-process and final AQL inspection",
+      "Export documentation and worldwide logistics (FOB, EXW, CIF, DDP)",
+      "Amazon FBA-compliant labeling, cartons and direct fulfillment-center shipping"
+    ],
+    "endpoints": {
+      "home": "/",
+      "products": "/products.html",
+      "applications": "/applications/",
+      "materials": "/materials.html",
+      "pilates": "/pilates/",
+      "faq": "/faq.html",
+      "contact": "/contact.html",
+      "quote": "/contact.html"
+    },
+    "moq": {
+      "tpeYogaMats": "100 pcs per design and color",
+      "foamRollersAndBlocks": "500 pcs",
+      "mostAccessories": "500–1,000 pcs"
+    },
+    "sampling": "physical sample with buyer logo, color and packaging in about 7 days",
+    "certifications": [
+      "REACH",
+      "CA Prop 65",
+      "6P / 7P free",
+      "ROHS",
+      "CE",
+      "ISO 9001",
+      "BSCI audited"
+    ],
+    "incoterms": [
+      "FOB",
+      "EXW",
+      "CIF",
+      "DDP"
+    ],
+    "languages": [
+      "en",
+      "de",
+      "ja",
+      "ko",
+      "fr",
+      "it",
+      "es"
+    ],
+    "contact": {
+      "whatsapp": "+86 15959029082",
+      "email": "zenglinggun@gmail.com"
+    },
+    "pricing": "quote-based; MOQ from 100 pcs on TPE yoga mats",
+    "availability": "Monday to Saturday, China Standard Time (UTC+8)"
+  }
+}

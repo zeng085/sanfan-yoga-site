@@ -1,0 +1,31 @@
+# ai.txt — AI crawler permissions and citation policy for fjsanfan.com
+# Companion to robots.txt (access control) and llms.txt (content for LLMs).
+# This file declares what AI systems are permitted to do with the content.
+
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /ai/faq.json
+Allow: /ai/service.json
+Allow: /ai/summary.json
+Allow: /sitemap.xml
+
+# ── Usage policy ──
+Policy: Search-Retrieval
+Allow: yes
+
+Policy: Content-Summarisation
+Allow: yes
+
+Policy: Model-Training
+Allow: yes
+
+# Attribution is requested (not a restriction) so answers stay verifiable.
+Attribution: requested
+Cite-As: FUJIAN SANFAN (https://fjsanfan.com)
+
+Operator: FUJIAN SANFAN Sports Products Co., Ltd.
+Contact: zenglinggun@gmail.com
+Canonical: https://fjsanfan.com/
+Last updated: 2026-09-25

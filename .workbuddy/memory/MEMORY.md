@@ -45,6 +45,9 @@
 11. ⭐ **清理类判据收紧到「引号内侧只有术语本身」**：`„TPE-Matte, violett, 6 mm“` / `«MOQ 100»` / `“EVA yoga mat”` / `"ROHS"` 都是**合法引用**，宽判据（"术语附近有引号"）会误杀。全站实测：105 处该清 / 27+231 处**不动**
 12. ⭐ **「某语言独有」的形态先跨语言对照再定性**：「德语给标准名加引号」看着合语法，但 7 语言只有 de 有 → 机翻产物。**一致性才是口径**，不是语法
 13. ⭐ **该不该换标签 → 先搜 CSS 有没有为「目标形态」准备好的选择器**：`site.css` 里 `.article h1, .article .lang-zh h2.post-title` 并列 → 中文块本就用 h2，是 HTML 误用。改后验 computed `font-size` 两态一致（40px/40px）
+14. ⭐⭐ **源码审计归零 ≠ DOM 干净**：JS `createElement`/改属性产生的缺陷（如 `main.js:1140` 的 `menuItem.href='#'`）**不在 HTML 里**，`audit_links` 结构上不可能看到 → 必须补浏览器级探针 `querySelectorAll('a[href="#"], a:not([href])')`，且**按视口分别查**（1279px 断点内的元素桌面态不可见）
+15. ⭐⭐ **「该改成什么」先搜同处现成写法，别推理**：`product.html` 的 wa 按钮 → 看 `products/*.html` 的 `#pd-wa-en` 与 `build_batch1.py` 模板；`menuItem.href` → 看**同文件** `main.js:1058`。搜到即用，天然与全站一致
+16. ⭐⭐ **说「惯例」前先量化，且只在同类元素内成立**：WhatsApp 外链里 `c-link`（文字链）1317 处**带** `target="_blank"`，而同类按钮 `btn btn-ghost` **1029 处全不带** → 跨类对比会得出相反结论。清理类改动**只修缺陷**，行为变更单列征询
 
 ## 内容层结构（两种语言机制勿混）
 - 行内配对 span：products/applications/首页/blog 卡片；块级 `div.lang-zh` **只在 10 个 blog 文章页**且在 `.container` 内
@@ -54,14 +57,23 @@
   缓存命中不调 API，投毒后重跑不自愈 → 语言版改动手写译文直接注入
 - ⚠️ 机翻吃术语旁词尾（`alfombrTPEes`）→ 过 lint
 
-## SEO/GEO 现状（2026-09-24 复查）
-- 技术层已修平：404 / 跨语言 / 坏锚点 / 结构 / canonical / hreflang / **h1>1 全 0**；title>60 宽 **0**
-- ✅ 存量清理（2026-09-25，本地 `c694be5a`，**未推送**）：全站「引号紧贴术语」**105 处已清**
-  （de/pilates 90 + 6 个 blog 15）；EN 博客 **10 页双 h1 已降 h2.post-title**。
-  `audit_seo` **首次 0 处**。脚本：`fix_quote_wrap_20260925.py` / `fix_blog_dual_h1_20260925.py`
-- ⚠️ 「存量清零」后仍剩：`product.html` 空 `href="#"` 1 处（既有，未处理）
+## SEO/GEO 现状（2026-09-25 收口）
+- 技术层已修平：404 / 跨语言 / 坏锚点 / 结构 / canonical / hreflang / **h1>1 全 0**；
+  title>60 宽 **0**；**空 href 0**（三项审计全归零）
+- ✅ 存量清理（2026-09-25 **已推送 `e416d1bc10`**）：
+  「引号紧贴术语」**105 处已清**（de/pilates 90 + 6 个 blog 15）；
+  EN 博客 **10 页双 h1 已降 h2.post-title**；**空 href 2 处已清**（见下）
+  `audit_seo` **0 处**。脚本：`fix_quote_wrap_20260925.py` / `fix_blog_dual_h1_20260925.py`
+- ⭐ 资源版本号现为 **`20260925a`**（改 JS 必 bump）
+- ⚠️ 空 href 那 2 处**不在源码里**（一层是动态页兜底、一层是 JS `createElement`）：
+  `product.html` 的 `#pd-wa` / `main.js:1140` 的 `menuItem.href`
 - ⭐ **实体层铺满全站**：Organization + `@id=…/#organization` + sameAs 覆盖 1330 页；
   1085 个含 `Product` 的页补 `manufacturer`。sameAs 只放 `facebook.com/sanfanyoga`
 - 已做：robots 11 AI UA / dateModified 70 页 / llms.txt / FAQ 1092 页
+- ✅ **GEO 端点已补齐（2026-09-25）**：llms.txt 41 处裸 URL → markdown 链接（工具只认
+  `[text](url)`，裸 URL 计 0）、新建 `llms-full.txt` + `.well-known/ai.txt` +
+  `ai/{summary,faq,service}.json`；geo 判分 **22/22**（ai_discovery 6/6 + llms 16/16）
+  ⚠️ **本地审不了**（geo 有反 SSRF，拒私网）→ 用 `verify_geo_endpoints_*.py` 抓响应喂解析函数
+  ⚠️ **改 `faq.html` 后必须重跑** `geo_ai_endpoints_20260925.py`（faq.json 从它抽取）
 - ⚠️ **`desc>155 宽` 仍有 799 页（占 60%）** ← 全站最大存量缺口，尚未处理
 - ⚠️ 「答案块 134–167 词」是 EN 专属判据（fr/de/es/it 146–214、ja/ko 按字符），别跨语言套带宽

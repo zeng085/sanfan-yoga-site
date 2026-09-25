@@ -90,12 +90,16 @@ def update_llms():
 
     s = re.sub(r"Product range: \d+ products in \d+ lines",
                "Product range: %d products in 10 lines" % n_pages, s)
-    s = s.replace(
-        "fitness boards, steppers)",
-        "fitness boards, steppers), plus vibration plates for massage & recovery")
-    s = s.replace(
-        "silicone weights, ab rollers,",
-        "silicone weights, ab rollers, ab wheels, adjustable dumbbells, kettlebells, suspension trainers,")
+    # ⚠️ 幂等：这两处必须用负向断言，不能用裸 str.replace。
+    # 因为替换后的文本仍以原串为前缀（`fitness boards, steppers), plus ...` 里依旧含
+    # `fitness boards, steppers)`），裸 replace 重跑会给 llms.txt 塞进第二遍品类描述
+    # —— 而 llms.txt 是站点对外的 AI 事实来源，重复文本会直接污染 AI 引用。
+    s = re.sub(
+        r"fitness boards, steppers\)(?!, plus vibration plates)",
+        "fitness boards, steppers), plus vibration plates for massage & recovery", s)
+    s = re.sub(
+        r"silicone weights, ab rollers,(?! ab wheels)",
+        "silicone weights, ab rollers, ab wheels, adjustable dumbbells, kettlebells, suspension trainers,", s)
 
     if s != orig:
         open(p, "w", encoding="utf-8").write(s)
