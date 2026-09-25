@@ -46,6 +46,13 @@ APOS = r"(?:['’]|&#x27;|&#39;|&rsquo;|&#8217;)"
 TERM_CONS_C = r"(TPE|PVC|PU|NBR|ROHS|REACH|MOQ)"
 # 需要取回术语本身时用这个（带捕获组的版本）
 TERM_C = r"(TPE|PVC|PU|NBR|EVA)"
+# ⭐ 成对引号（各语言引擎惯用的排版引号，含日式「」『』）。**不含 ASCII 直引号 `"`**：
+#    直引号在 HTML 属性（`content="TPE"`）与 JSON-LD（`"material": "TPE"`）里是
+#    语法字符，通用规则会把页面直接改坏。纯文本上下文的直引号由调用方单独处理。
+Q = r"[„“”«»‹›‘’「」『』]"
+# 会被引擎「加引号」的术语集合（材质/认证/商业缩写）。必须整体护住带空格的写法。
+TERM_QUOTED = (r"(?:TPEE|TPE|PVC|PU|NBR|EVA|SBR|EEP|ROHS|REACH|SGS|BSCI|MOQ|OEM|ODM|CE"
+               r"|ISO\s?9001|CA\s?Prop\s?65|EN\s?71|OEKO-?TEX|CPSIA|Intertek|TUV)")
 # 引号内容「本身就是术语」时不能用产品名语序规则 —— 那是术语引用，不是图案名。
 # 实测反例：fr/suede-cork-yoga-mats.html 的 JSON-LD 原文已是
 #   `Tapis de yoga en daim botanique bleu marine «TPE » TPE`
@@ -80,6 +87,21 @@ def reorder_es(m):
 # 结构：(语言, 正则, 替换, 说明)。语言 "" = 全语言通用。
 # ⚠️ 顺序即优先级 —— 短语级规则必须排在通用规则之前。
 RULES = [
+    # ---- ⓪ 受保护术语被多加一对引号（2026-09-25 新增）-------------------------
+    # 成因：术语被包成 <xN>…</xN> 交给 DeepL 的 ignore_tags 后，引擎**看不见**它，
+    #   就把它当成「被引用的字眼」，自动补了一对引号。实测（本轮 TPE/PU 分类页 FAQ）：
+    #     de  `Woraus besteht eine „TPE“-Yogamatte?`   ja  `「TPE」マットの注文には`
+    #     fr  `un tapis «TPE»` / `« TPE »`            it  `un tappetino “TPE”`
+    #     es  `una esterilla «TPE»`                   de  `„ISO 9001“-Audits`
+    #   站内德语页面此前已人工清过一轮同类多余引号（09-17），这里在**译文出口**拦死，
+    #   免得每批新内容都要再手工清一遍。
+    # ⚠️ 只认**材质/认证代码**，且只认「成对引号**紧贴**术语」这一种形态 ——
+    #   站内合法的书名号包的是**图案名**（`« Gradient Line Art »`、`«Gray Mandala»`），
+    #   那类引号有意义，误清会把产品名拆坏；引号与术语之间有别的字就不匹配。
+    # ⚠️ 顺序：必须排在「产品名语序」之前 —— 否则 `«TPE»` 会先被语序规则看成图案名。
+    #    （语序规则自带 _not_a_name 守卫，但先清引号能从根上避免竞争。）
+    ("", Q + r"\s*(" + TERM_QUOTED + r")\s*" + Q, r"\1", "术语被多加一对引号"),
+
     # ============ 产品名语序（必须在通用「补空格」之前）============
     # 机翻把材料术语甩到书名号**后面**：`Tapis de yoga en caoutchouc « Gradient Line Art »PU`
     # 法语/西语的自然语序是「材料 + 品类 + 图案名」，术语应前置。
