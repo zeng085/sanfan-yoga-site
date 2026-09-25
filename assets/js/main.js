@@ -1135,9 +1135,12 @@ if (form) {
   navActions.insertBefore(srBtn, navActions.firstChild);
 
   // 窄屏：导航栏放不下图标 → 改成移动菜单里的一项
+  // href 指向真实的产品总览页（与 mega menu 的「全部产品」入口同目标）。
+  // 点击由下方 preventDefault 接管去开搜索框；而中键 / 新标签 / 脚本未跑到这里时
+  // 落到产品总览，而不是 href="#" 跳回页顶。
   var menuItem = document.createElement('a');
   menuItem.className = 'nav-search-item';
-  menuItem.href = '#';
+  menuItem.href = ROOT + BASE + 'products.html';
   menuItem.textContent = L('Search products', '搜索产品');
   navLinks.insertBefore(menuItem, navLinks.firstChild);
 

@@ -23,7 +23,7 @@
 - ⚠️ 「EVA 独立板块」整版方案**已否决、全量回退**。真实意图只有一条：**行业口语里
   「EVA 瑜伽垫」就是同类 TPE 垫**，搜 EVA 落到 TPE 垫页。**不建 URL、不动页脚/实体层/sitemap**
 - ✅ 落地：`tpe-yoga-mats.html`×7 加小节 + FAQPage + 描述补 EVA；`materials.html`×7 EVA 行改
-  「EVA 名义下的垫按 TPE 供货」。**本地两个 commit 已改，均未推送**
+  「EVA 名义下的垫按 TPE 供货」。**已推送（d0c4075213）**
 - ⚠️ 措辞**不能**写「EVA 与 TPE 同一种材料」→ 只讲**叫法混用 + 按 TPE 报样 + EVA 专线做配件**
 
 ## 判据铁律
@@ -41,7 +41,10 @@
 8. ⭐ **审计脚本先自审**：`url_path()` 漏映射裸 `index.html` → 首页误报；`noindex` 页不要求 hreflang
 9. ⭐ **新内容别放进 `<!-- orgref:v1 -->` 标记区间**：`add_org_sameas_20260924.py` 会
    剥离整个区间再重建，区间内内容**静默丢失**；站内 328 个 FAQPage 都在标记之前
-10. Playwright：**别用 `networkidle`**（拦 GA + `domcontentloaded`）；中文态须 `localStorage.siteLang='zh'` 后重载；折叠 `<details>` 的 `innerText` 展开前为空
+10. Playwright：**别用 `networkidle`**（拦 GA + `domcontentloaded`）；中文态须 `localStorage.siteLang='zh'` 后重载（**localStorage + cookie 双通道都设**）；折叠 `<details>` 展开前 `innerText` 为空；`evaluate` 必须**传函数引用+参数**（`f, x`）—— 写成 `f(x)` 会在 Node 端求值 → `localStorage is not defined`
+11. ⭐ **清理类判据收紧到「引号内侧只有术语本身」**：`„TPE-Matte, violett, 6 mm“` / `«MOQ 100»` / `“EVA yoga mat”` / `"ROHS"` 都是**合法引用**，宽判据（"术语附近有引号"）会误杀。全站实测：105 处该清 / 27+231 处**不动**
+12. ⭐ **「某语言独有」的形态先跨语言对照再定性**：「德语给标准名加引号」看着合语法，但 7 语言只有 de 有 → 机翻产物。**一致性才是口径**，不是语法
+13. ⭐ **该不该换标签 → 先搜 CSS 有没有为「目标形态」准备好的选择器**：`site.css` 里 `.article h1, .article .lang-zh h2.post-title` 并列 → 中文块本就用 h2，是 HTML 误用。改后验 computed `font-size` 两态一致（40px/40px）
 
 ## 内容层结构（两种语言机制勿混）
 - 行内配对 span：products/applications/首页/blog 卡片；块级 `div.lang-zh` **只在 10 个 blog 文章页**且在 `.container` 内
@@ -52,7 +55,11 @@
 - ⚠️ 机翻吃术语旁词尾（`alfombrTPEes`）→ 过 lint
 
 ## SEO/GEO 现状（2026-09-24 复查）
-- 技术层已修平：404 / 跨语言 / 坏锚点 / 结构 / canonical / hreflang 全 0；title>60 宽 **0**
+- 技术层已修平：404 / 跨语言 / 坏锚点 / 结构 / canonical / hreflang / **h1>1 全 0**；title>60 宽 **0**
+- ✅ 存量清理（2026-09-25，本地 `c694be5a`，**未推送**）：全站「引号紧贴术语」**105 处已清**
+  （de/pilates 90 + 6 个 blog 15）；EN 博客 **10 页双 h1 已降 h2.post-title**。
+  `audit_seo` **首次 0 处**。脚本：`fix_quote_wrap_20260925.py` / `fix_blog_dual_h1_20260925.py`
+- ⚠️ 「存量清零」后仍剩：`product.html` 空 `href="#"` 1 处（既有，未处理）
 - ⭐ **实体层铺满全站**：Organization + `@id=…/#organization` + sameAs 覆盖 1330 页；
   1085 个含 `Product` 的页补 `manufacturer`。sameAs 只放 `facebook.com/sanfanyoga`
 - 已做：robots 11 AI UA / dateModified 70 页 / llms.txt / FAQ 1092 页
