@@ -1,0 +1,191 @@
+{
+ "stamp": "2026-09-25",
+ "counts": {
+  "serp_queries": 9,
+  "ai_samples": 4,
+  "ai_failed": 3,
+  "serp_result_slots": 60,
+  "owned_slots": 3
+ },
+ "freq_by_engine": {
+  "ddg": {
+   "pureasanayoga.com": 5,
+   "alibaba.com": 4,
+   "yewayoga.com": 3,
+   "made-in-china.com": 3,
+   "htsyoga.com": 3,
+   "theyogamats.com": 2,
+   "yanrefitness.com": 1,
+   "chinahappyfitness.com": 1,
+   "mingyogamat.com": 1,
+   "torquepilates.com": 1,
+   "fdmyoga.com": 1,
+   "aurayogamat.com": 1,
+   "wavar.com": 1,
+   "thelunayoga.com": 1,
+   "tcyogamat.com": 1,
+   "nicegoodyoga.com": 1
+  },
+  "hosted": {
+   "yogamatmanufacturers.com": 3,
+   "made-in-china.com": 3,
+   "sanfanyoga.com": 3,
+   "baidu.com": 3,
+   "fdmsport.com": 2,
+   "ecocorker.com": 2,
+   "accio.com": 2,
+   "b2b168.org": 2,
+   "yoga-supplies.com": 1,
+   "yogamatcustom.com": 1,
+   "pureasanayoga.com": 1,
+   "wellfitsource.com": 1,
+   "htsyoga.com": 1,
+   "bsmyogamats.com": 1,
+   "archiyoga.com": 1,
+   "tianleicork.com": 1,
+   "realcorkwood.com": 1,
+   "finalscout.com": 1
+  }
+ },
+ "types": {
+  "competitor-site": 39,
+  "marketplace": 15,
+  "owned": 3,
+  "ai-aggregator": 3
+ },
+ "owned": {
+  "slots": {
+   "sanfanyoga.com": 3
+  },
+  "queries_hit": {
+   "sanfanyoga.com": 2
+  }
+ },
+ "ai": {
+  "mentions": {
+   "sanfan": 2,
+   "fjsanfan": 0,
+   "sanfanyoga": 1
+  },
+  "detail": [
+   {
+    "q": "OEM yoga mat manufacturer in China private label",
+    "run": "A",
+    "brand": true,
+    "brand_attrib": "阿里巴巴（说成「在阿里巴巴上提供 TPE 瑜伽垫定制，MOQ 10 件起」）",
+    "cited_old": false,
+    "cited_new": false,
+    "src_domains": [],
+    "note": "答案正文点名 Xiamen Sanfan，但叙事完全来自平台页"
+   },
+   {
+    "q": "OEM yoga mat manufacturer in China private label",
+    "run": "B",
+    "brand": false,
+    "brand_attrib": "",
+    "cited_old": false,
+    "cited_new": false,
+    "src_domains": [
+     "alibaba.com",
+     "china.cn",
+     "goldsupplier.com",
+     "made-in-china.com",
+     "shengde.net.cn"
+    ],
+    "note": "同一问题两次采样，来源池已不同 → AI 答案非确定性，需多次采样"
+   },
+   {
+    "q": "best yoga mat manufacturers in China",
+    "run": "B",
+    "brand": false,
+    "brand_attrib": "",
+    "cited_old": false,
+    "cited_new": false,
+    "src_domains": [
+     "china.cn",
+     "goldsupplier.com",
+     "jd.com",
+     "mouldsnet.com",
+     "smzdm.com",
+     "taobao.com"
+    ],
+    "note": "答案列举厦门瑞盛/安徽Camper/苏州ProCircle 等，来源多为中文站"
+   },
+   {
+    "q": "cork yoga mat manufacturer OEM factory",
+    "run": "A",
+    "brand": true,
+    "brand_attrib": "自有站（来源即 sanfanyoga.com）",
+    "cited_old": true,
+    "cited_new": false,
+    "src_domains": [
+     "sanfanyoga.com",
+     "made-in-china.com"
+    ],
+    "note": "★ 铁证：来源 favicon 请求 cdn.metaso.cn/favicon/sanfanyoga.com.ico；答案正文写「厦门桑凡体育用品有限公司（Xiamen Sanfan）」"
+   }
+  ],
+  "src_domain_freq": {
+   "china.cn": 2,
+   "goldsupplier.com": 2,
+   "made-in-china.com": 2,
+   "alibaba.com": 1,
+   "shengde.net.cn": 1,
+   "jd.com": 1,
+   "mouldsnet.com": 1,
+   "smzdm.com": 1,
+   "taobao.com": 1,
+   "sanfanyoga.com": 1
+  }
+ },
+ "ai_failed": [
+  {
+   "q": "wholesale TPE yoga mat supplier private label",
+   "reason": "返回 137 字符空壳（限流）"
+  },
+  {
+   "q": "custom printed yoga mats factory MOQ 100",
+   "reason": "返回 132 字符空壳（限流）"
+  },
+  {
+   "q": "cork yoga mat manufacturer OEM factory",
+   "reason": "第二次采样被限流（仅 run A 有效）"
+  }
+ ],
+ "audit": [
+  "  ✓ 全部声明与来源域一致（引用的域名都出现在 favicon 采集结果里）"
+ ],
+ "examples": {
+  "pureasanayoga.com": "https://pureasanayoga.com/",
+  "yewayoga.com": "https://yewayoga.com/",
+  "made-in-china.com": "https://www.made-in-china.com/factory/yoga-mats.html",
+  "alibaba.com": "https://www.alibaba.com/private-label-yoga-mat-suppliers.html",
+  "yanrefitness.com": "https://www.yanrefitness.com/yoga-mat-factories-china/",
+  "chinahappyfitness.com": "https://www.chinahappyfitness.com/private-label-yoga-mat.html",
+  "htsyoga.com": "https://htsyoga.com/",
+  "mingyogamat.com": "https://mingyogamat.com/wholesale-custom-yoga-mats/",
+  "torquepilates.com": "https://www.torquepilates.com/",
+  "fdmyoga.com": "https://www.fdmyoga.com/",
+  "aurayogamat.com": "https://www.aurayogamat.com/blog/private-label-yoga-mat-manufacturing",
+  "wavar.com": "https://www.wavar.com/yoga-mats/",
+  "thelunayoga.com": "https://thelunayoga.com/",
+  "theyogamats.com": "https://theyogamats.com/rubber-yoga-mats/",
+  "tcyogamat.com": "https://www.tcyogamat.com/products",
+  "nicegoodyoga.com": "https://www.nicegoodyoga.com/yoga-and-pilates-mats/",
+  "yoga-supplies.com": "https://www.yoga-supplies.com/?p=771/",
+  "yogamatmanufacturers.com": "https://www.yogamatmanufacturers.com/",
+  "yogamatcustom.com": "https://yogamatcustom.com/our-factory/",
+  "wellfitsource.com": "https://wellfitsource.com/es/about",
+  "bsmyogamats.com": "https://www.bsmyogamats.com/wholesale-foldable-custom-printed-tpe-yoga-mat_p130.html",
+  "fdmsport.com": "https://fdmsport.com/custom-yoga-mats",
+  "sanfanyoga.com": "https://www.sanfanyoga.com/Custom-Print-Soft-Natural-Eco-Friendly-Exercise-Yoga-Mats-pd72800777.html",
+  "archiyoga.com": "https://www.archiyoga.com/product/personalized-tpe-yoga-mats-with-full-surface-printing",
+  "ecocorker.com": "https://www.ecocorker.com/product/cork-for-yoga-sports/cork-yoga-mat/",
+  "tianleicork.com": "https://www.tianleicork.com/info/cork-yoga-fitness-gear-revolution-how-a-chi-103375495.html",
+  "realcorkwood.com": "https://www.realcorkwood.com/aboutus.html",
+  "baidu.com": "https://b2bdata.baidu.com/rank/all-area/sports-gear/yoga-supplies/yoga-mat",
+  "accio.com": "https://www.accio.com/supplier/yoga-mat-china-manufacturer",
+  "finalscout.com": "https://finalscout.com/company/sanfan_fitness",
+  "b2b168.org": "https://m.b2b168.org/huangye/8715728"
+ }
+}

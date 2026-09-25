@@ -155,6 +155,27 @@ CAT_OUT = {
     'pu-rubber-yoga-mats.html': ['btpepu', 'bmats', 'bspec'],
     'materials.html': ['bmats', 'btpepu', 'bcompl'],
     'products.html': ['bcustom', 'bmoq', 'bspec', 'bprivate'],
+    # 2026-09-25：8 个一级分类页补正文内链（与 add_category_content 同批）。
+    # ⚠️ 这 8 页此前**一处标记都没有**，所以必须**先跑本脚本**再跑 contents 脚本 ——
+    #    cfaq 的插入锚点写死就是 `<!-- ilink:v1 -->`。
+    'foam-rollers.html': ['bmoq', 'bcustom', 'bprivate'],
+    'massage-recovery.html': ['bmoq', 'bcustom', 'bprivate'],
+    'strength-training.html': ['bmoq', 'bcustom', 'bprivate'],
+    'jump-ropes.html': ['bmoq', 'bcustom', 'products'],
+    'resistance-bands.html': ['bmoq', 'bcustom', 'products'],
+    'yoga-props-accessories.html': ['bmoq', 'bcustom', 'products'],
+    'suede-cork-yoga-mats.html': ['bmats', 'bspec', 'btpepu'],
+    'meditation-pilates-mats.html': ['bcustom', 'bspec', 'bmoq'],
+}
+
+# ⚠️ `cat_h2` 的原文案是「Further reading on choosing a mat / 选垫子之前…」——
+#    对垫类分类页正确，但**泡沫轴 / 跳绳 / 弹力带 / 辅具 / 力量 / 恢复**这 6 页
+#    并不是垫，标题会读成「怎么选垫子」，页面自我矛盾。
+#    故按页面族分两组文案；下列 6 页走 gear 组，其余（含已上线的 tpe/pu/materials/products）
+#    保持原 `cat_h2` 不变，避免动到已上线页面。
+CAT_GEAR_PAGES = {
+    'foam-rollers.html', 'jump-ropes.html', 'resistance-bands.html',
+    'yoga-props-accessories.html', 'strength-training.html', 'massage-recovery.html',
 }
 
 # ------------------------------------------------------------------ 结构文案
@@ -183,6 +204,17 @@ TXT = {
         'fr': 'Pour aller plus loin dans le choix du tapis',
         'it': 'Per approfondire la scelta del tappetino',
         'es': 'Para profundizar en la elección de la esterilla',
+    },
+    # 非垫类分类页（泡沫轴 / 跳绳 / 弹力带 / 辅具 / 力量 / 恢复）用这组。
+    'cat_h2_gear': {
+        'en': 'Sourcing guides for buyers',
+        'zh': '采购环节最常问的问题，都写在这里',
+        'de': 'Leitfäden für Einkäufer',
+        'ja': '購買担当者向けガイド',
+        'ko': '구매 담당자를 위한 가이드',
+        'fr': 'Guides pour les acheteurs',
+        'it': 'Guide per gli acquirenti',
+        'es': 'Guías para compradores',
     },
     'cat_intro': {
         'en': 'The buyer guides we get the most questions about, written from our own production lines:',
@@ -236,7 +268,8 @@ def build_block(page, lang, kind, out_ids, indent):
         L.append(indent + '</ul>')
     else:
         bi = (lang == 'en')
-        h2 = pair(TXT['cat_h2']['en'], TXT['cat_h2']['zh']) if bi else TXT['cat_h2'][lang]
+        h2_key = 'cat_h2_gear' if page in CAT_GEAR_PAGES else 'cat_h2'
+        h2 = pair(TXT[h2_key]['en'], TXT[h2_key]['zh']) if bi else TXT[h2_key][lang]
         intro = pair(TXT['cat_intro']['en'], TXT['cat_intro']['zh']) if bi else TXT['cat_intro'][lang]
         L.append(indent + '<section class="section">')
         L.append(indent + '  <div class="container">')

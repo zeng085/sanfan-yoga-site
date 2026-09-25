@@ -46,3 +46,6 @@ outputs/pilates-langs-preview/
 
 # 导航改名前后对比实拍（验收用，非站点资产）
 outputs/nav-rename/
+
+# 8 个一级分类页三块内容（导语/FAQ/内链）多语言实拍（验收用，非站点资产）
+outputs/catcontent-preview/
