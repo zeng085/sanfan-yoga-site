@@ -713,7 +713,13 @@ if (form) {
         okBox.style.color = '';
         okBox.style.borderColor = '';
         okBox.textContent = I18N[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en']['form.ok'];
-        okBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // 尊重系统「减弱动态效果」：CSS 里的 prefers-reduced-motion 管不到 JS 显式写了
+        // behavior:'smooth' 的 scrollIntoView（规范里显式 behavior 优先于 CSS scroll-behavior），
+        // 所以这里必须自己判一次偏好，否则开关打开后这一跳仍然是动画。
+        okBox.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'center'
+        });
       } else {
         throw new Error('bad');
       }

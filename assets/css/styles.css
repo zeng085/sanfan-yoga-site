@@ -29,6 +29,31 @@
 }
 
 * { box-sizing: border-box; }
+/* 触控：消除移动端「双击缩放」带来的 300ms 点击延迟 —— 这是「点了没反应／点两下才生效」
+   手感的直接来源。touch-action: manipulation 只禁用 double-tap-to-zoom，
+   **双指捏合缩放（pinch-zoom）与页面滚动仍然完全可用**，故不损害可访问性
+   （NEVER user-scalable=no 那条仍然遵守，html 里没写任何禁缩放）。
+   覆盖范围含 <summary>（FAQ 折叠用 <details>）与 label（扩大点击区）。
+   实测改前为 0 处、2001 个可点元素 computed 全 auto。
+   Vercel Web Interface Guidelines: MUST touch-action: manipulation */
+a, button, [role="button"], input, select, textarea, label, summary {
+  touch-action: manipulation;
+}
+/* 键盘焦点必须可见。
+   Vercel Web Interface Guidelines: MUST 焦点状态可见 / SHOULD 用 :focus-visible。
+   改前用真实 Tab 实测：.sr-input（JS 注入的搜索框）聚焦后 outline / border / background /
+   box-shadow **四项全无变化** → 键盘用户完全看不出焦点在哪；.field 组只有 1px 边框变色（偏弱）。
+   用 :focus-visible 而非 :focus：**鼠标点击不出现焦点环**（不弄脏 UI），只有键盘 Tab 才显示。
+   ⚠️ 特异性陷阱：不能整体套 :where() —— :where() 记 0 分，于是
+   .sr-input{outline:0}（0,1,0）会压过 :where(input):focus-visible（0,1,0 → 平局看先后，
+   而 :where 那组在文件更前面）→ 环根本不出现。这里直接用元素选择器（0,1,1）稳稳压过。
+   .field 组是 (0,2,1)，需同特异性就近覆盖，见下方 .field …:focus-visible。 */
+a:focus-visible, button:focus-visible, summary:focus-visible,
+[role="button"]:focus-visible, [tabindex]:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
 /* iOS Safari: keep layout viewport locked to device width so a pinch-zoom
    (especially on the longer English copy) can never leave the page "stuck"
    at a wider size; also stop iOS auto-inflating font sizes after zoom/rotate. */
@@ -97,6 +122,14 @@ a { color: inherit; text-decoration: none; }
   padding-left: 28px; padding-right: 28px;
 }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+/* 页内锚点必须避让固定头部。.site-header 是 position:sticky、高 69px（.nav 68px + 1px 底边）。
+   改前实测（**等平滑滚动真正停稳再量**，否则会把「还在滚」误判成遮挡）：
+   pilates/index.html#lines 落下后目标 top=0、头部 bottom=69 → 标题被盖住 69px，
+   390x844 与 1280x800 两个视口完全一致。
+   挂在 [id] 上而非 :target —— :target 只在导航后成立，跨浏览器时机不可靠；
+   且这样外部深链（搜索引擎/邮件里的 #faq 等）也一并受益。
+   82px = 68px 导航 + 1px 底边 + 13px 呼吸。⚠️ 将来改 .nav 高度要同步此值。 */
+[id] { scroll-margin-top: 82px; }
 .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; color: var(--ink); }
 .nav-brand img { height: 38px; width: auto; border-radius: 8px; }
 .nav-brand .accent { color: var(--brand); }
@@ -434,10 +467,23 @@ html.show-zh .prod-card .info h4 { font-weight: 600; }
 .field label { display: block; font-size: 13.5px; font-weight: 600; margin-bottom: 6px; }
 .field input, .field select, .field textarea {
   width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm);
-  font-family: inherit; font-size: 15px; color: var(--ink); background: #fff;
+  font-family: inherit; color: var(--ink); background: #fff;
   overflow-wrap: anywhere;
+  /* 移动端输入控件字号必须 ≥16px：iOS Safari 在聚焦 font-size < 16px 的
+     输入框时会强制放大整个视口（用户填完表单要手动缩回去）。
+     桌面端不需要这条，但 16px 与 15px 视觉差异可忽略，故不做媒体查询分支。
+     Vercel Web Interface Guidelines: MUST ≥16px on mobile. */
+  font-size: 16px;
 }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); }
+/* 上面一行用「1px 边框变色」换掉焦点环 —— 对键盘用户太弱（对比度低、且 select 的箭头
+   与 textarea 的大面积边框变化都不明显）。键盘聚焦时补回实心环。
+   与上一行**同特异性**（都是 0,2,1），写在后面 → :focus-visible 时后者胜出；
+   鼠标点击时 :focus-visible 不成立，仍走只有边框变色的原样式。 */
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
 .field textarea { resize: vertical; min-height: 110px; }
 .form-note { color: var(--muted); font-size: 12.5px; margin-top: 12px; }
 #form-ok { display: none; margin-top: 16px; padding: 14px 16px; border-radius: var(--radius-sm); background: #e8f6f0; border: 1px solid #bfe3d6; color: var(--brand-ink); font-weight: 600; }
@@ -487,9 +533,21 @@ html.show-zh .prod-card .info h4 { font-weight: 600; }
      6 个语言全部折行 + 首项压在 Logo 上（用户截图所示）。
      新值由 probe_nav_fit.cjs 实测标定：最宽的 es 需要 1220px，取 1280 为切换点，
      1280 视口下最紧的语言仍有 37px 余量（跨浏览器字体度量差异约 2~3%，可覆盖）。 */
+  /* ⚠️ max-height + overflow-y 不是可选项：header 是 position:sticky，抽屉
+     absolute 相对 header 定位，**页面滚动时抽屉跟着 header 一起固定**。
+     横屏 844×390 实测：抽屉内容 410px > 可用高 322px，最后一项 bottom=461
+     → 越界 71px，且「滚到底」也永远是 461（页面滚了 header 不动）→ **永久不可达**。
+     加 max-height 让面板自身可滚，最后一项才够得着。
+     overscroll-behavior:contain 防止滚到面板底部时把手势交给页面（穿透滚动）。
+     dvh 优先（移动端地址栏收起/展开时不跳变），vh 作旧浏览器兜底。 */
   .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0;
     flex-direction: column; gap: 0; background: #fff; border-bottom: 1px solid var(--line);
-    padding: 8px 22px 16px; z-index: 49; }
+    padding: 8px 22px 16px; z-index: 49;
+    max-height: calc(100vh - 68px);
+    max-height: calc(100dvh - 68px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch; }
   .nav-links.open { display: flex; }
   /* 汉堡菜单里每项恢复可换行（竖排面板宽度固定，长标签折行是正常的），
      并撤掉桌面端的 flex:none，否则最后一项会被挤到面板外。 */
@@ -504,12 +562,14 @@ html.show-zh .prod-card .info h4 { font-weight: 600; }
   /* 移动端保留报价按钮：这是全站核心转化入口，藏掉后 header 右侧空一大块。
      改缩小版常驻（padding/font 收紧），不占爆窄屏。 */
   .nav-actions .btn { padding: 10px 16px; font-size: 13.5px; }
-  /* 触控目标 ≥40px：实测 Logo 38 / 语言切换 27 / 汉堡 29，手指容易点空。
-     只补 min-height，不改变视觉密度（边框内文字尺寸没动）。 */
-  .nav-brand { min-height: 40px; }
-  .lang-current { min-height: 40px; }
+  /* 触控目标 ≥44px：Vercel Web Interface Guidelines MUST。
+     实测原值 Logo 38 / 语言切换 27 / 汉堡 29，手指容易点空；上一轮补到 40
+     仍差 4px → 本轮按规范提到 44。只补 min-height/min-width，**不改变视觉密度**
+     （边框内文字尺寸未动）。.nav 是固定 height:68px，44 < 68，不会撑高 header。 */
+  .nav-brand { min-height: 44px; }
+  .lang-current { min-height: 44px; }
   .menu-toggle {
-    min-width: 40px; min-height: 40px;
+    min-width: 44px; min-height: 44px;
     display: inline-flex; align-items: center; justify-content: center;
   }
 }
@@ -612,6 +672,15 @@ html.show-zh .lang-en { display: none; }
 .cbar .cb-lab { display: none; }
 @media (max-width: 920px) {
   body { padding-bottom: 58px; }
+  /* ⚠️ 抽屉必须再让开 .cbar 的高度，否则「能滚了但滚到底还是看不见最后一项」。
+     .cbar 是 JS 注入的（HTML 里搜不到），≤920px 变底部通栏 54px、z-index:60
+     > 抽屉的 49，实测横屏 844×390 会把最后一项盖住 37px。
+     这里的 54px 与下面 .cbar a/button 的 height:54px 必须同步。
+     921~1279px 不适用：那区间 .cbar 仍是右下角竖排浮动按钮，不横跨全宽。 */
+  .nav-links {
+    max-height: calc(100vh - 68px - 54px);
+    max-height: calc(100dvh - 68px - 54px);
+  }
   .cbar { left: 0; right: 0; bottom: 0; flex-direction: row; gap: 0; box-shadow: 0 -2px 12px rgba(0,0,0,.14); }
   .cbar a, .cbar button { flex: 1; width: auto; height: 54px; border-radius: 0; box-shadow: none; font-size: 13.5px; gap: 7px; }
   .cbar .cb-lab { display: inline; }
@@ -1308,3 +1377,21 @@ table.pl-spec td.note { color: var(--pl-muted); font-size: 12.5px; }
 .pl-alias { margin: -8px 0 20px; font-size: 14.5px; color: var(--pl-wood-2); letter-spacing: .01em; }
 .pl-alias strong { color: #fff; font-weight: 600; }
 .pl-card .alias { font-size: 12.5px; color: var(--pl-wood); margin: 0 0 6px; letter-spacing: .02em; }
+
+/* ---------- 减弱动态效果（prefers-reduced-motion）----------
+   系统层开关（iOS 辅助功能-减弱动态效果 / Android 移除动画 / macOS 减弱动态效果）打开时，
+   必须尊重。改前实测（Playwright reducedMotion:'reduce' 上下文）：
+   html 仍是 scroll-behavior:smooth，且带过渡的元素 **106/106 个照旧是 0.15~0.9s**
+   → 该偏好完全没被理睬。Vercel Web Interface Guidelines: MUST 尊重 prefers-reduced-motion。
+   用 .01ms 而非 0：既等同「瞬间完成」，又保留 transitionend 事件（站内不依赖它，纯保险）。
+   本块放文件末尾 + !important，确保压过前面所有 :hover / .9s cubic-bezier 之类。
+   ⚠️ JS 侧的 scrollIntoView({behavior:'smooth'}) CSS 管不到，已在 main.js 里同步判偏好。 */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
