@@ -38,6 +38,10 @@ RE_SIZE_BARE = re.compile(r"^\s*(\d[\d\s*×x.,]*mm)\s*$", re.I)
 #   实测出现的前缀：AL / AL1 / Fold / Wood / Chair / Ladder Barre / Maple / OAK / metal
 #                   / classics / Gyrotonic / Two-Way / Wall(-mounted) / Pilates
 # 反例（不能当型号）：含冒号的都是规格行；含 mm 的是尺寸；纯数字是页码。
+# ⚠️ 前缀里的 Gyrotonic 是**为了认出画册图上印的原词**（画册确实印了它），
+#    不代表我们要保留该型号：解析出的那台在 parse_catalog_models_v2_*.py 的
+#    EXCLUDE_MODELS 里被剔除。**不要因为「全站要清 Gyrotonic」而删掉这个匹配项**，
+#    删了会导致该页 OCR 归组错乱（它仍参与字段归组）。
 RE_MODEL_HEAD = re.compile(
     r"^(AL\d?|Fold|Wood|Chair|Ladder|Maple|OAK|Oak|metal|Metal|classics|Classics"
     r"|Gyrotonic|Two-Way|Wall|Pilates|Reformer|Cadillac)\b", re.I)

@@ -1345,3 +1345,73 @@ if (form) {
   if (window.requestIdleCallback) window.requestIdleCallback(warm, { timeout: 3000 });
   else window.addEventListener('load', function () { setTimeout(warm, 1200); });
 })();
+
+/* ---------------------------------------------------------------- 画册图灯箱
+   2026 画册页搬进族页后，图上印的规格字很小，采购商需要放大看。
+   做法：事件委托 + 惰性建 DOM —— 全站 1331 页共用 main.js，
+   没有 .cat-fig 的页面零开销、零副作用（不建节点、不绑元素级监听）。
+   键盘：Esc 关闭；打开时焦点落到关闭按钮，关闭后归还触发元素。
+   ⚠️ .cat-zoom 本身是 <a href="原图">，这里 preventDefault 后接管 ——
+      无 JS 或脚本报错时仍按原链接新窗口打开，功能不丢。 */
+(function () {
+  var lb, im, cap, lastFocus;
+
+  function build() {
+    lb = document.createElement('div');
+    lb.className = 'lb';
+    lb.setAttribute('role', 'dialog');
+    lb.setAttribute('aria-modal', 'true');
+    lb.setAttribute('aria-label', 'Catalogue page');
+    lb.innerHTML = '<button class="lb-close" type="button" aria-label="Close">\u00d7</button>' +
+                   '<img alt="" /><p class="lb-cap"></p>';
+    document.body.appendChild(lb);
+    im = lb.querySelector('img');
+    cap = lb.querySelector('.lb-cap');
+    lb.querySelector('.lb-close').addEventListener('click', close);
+    lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  }
+
+  function open(src, alt, caption) {
+    if (!lb) build();
+    lastFocus = document.activeElement;
+    im.setAttribute('src', src);
+    im.setAttribute('alt', alt || '');
+    cap.textContent = caption || '';
+    lb.classList.add('is-open');
+    document.body.classList.add('lb-open');
+    lb.querySelector('.lb-close').focus();
+  }
+
+  function close() {
+    if (!lb || !lb.classList.contains('is-open')) return;
+    lb.classList.remove('is-open');
+    document.body.classList.remove('lb-open');
+    im.removeAttribute('src');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  function fromFig(fig, src) {
+    if (!fig) return;
+    var i = fig.querySelector('img');
+    var c = fig.querySelector('figcaption');
+    open(src || (i && (i.currentSrc || i.src)), i && i.getAttribute('alt'),
+         c ? c.textContent.replace(/\s+/g, ' ').trim() : '');
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target;
+    if (!el || !el.closest) return;
+    var a = el.closest('.cat-zoom');           // 「放大查看」链接 → 就地放大
+    if (a) {
+      e.preventDefault();
+      fromFig(a.closest('.cat-fig'), a.getAttribute('href'));
+      return;
+    }
+    var img = el.closest('.cat-fig img');      // 点图本身 → 同样放大
+    if (img) fromFig(img.closest('.cat-fig'), null);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' || e.keyCode === 27) close();
+  });
+})();

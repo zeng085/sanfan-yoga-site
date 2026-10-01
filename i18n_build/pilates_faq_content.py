@@ -49,13 +49,16 @@ CORE = [
     ),
     (
         "Are the materials and compliance documents suitable for the US and EU?",
-        "Frames are built in imported rubberwood, FAS-grade white maple, piano-lacquer white "
-        "maple and Croatian beech, with rails, springs and bearings specified for studio "
-        "duty. Products are tested against REACH, CA Prop 65 and 6P/7P, and the factory is "
+        "Material is set per model — see the material column in the model table above for "
+        "the code you are considering; we machine in solid timber, aluminium and steel. For "
+        "OEM and ODM programmes we build to the material and finish specification your own "
+        "brand already uses. Rails, springs and bearings are specified for studio duty. "
+        "Products are tested against REACH, CA Prop 65 and 6P/7P, and the factory is "
         "ISO 9001 and BSCI audited. Test reports ship with the order.",
         "材料与合规文件能满足美国与欧盟要求吗？",
-        "床架采用进口橡胶木、FAS 级白枫木、钢琴漆白枫木与克罗地亚榉木，导轨、弹簧与轴承"
-        "按场馆级使用选型。产品按 REACH、加州 65 号提案与 6P/7P 送检，工厂通过 "
+        "材质按型号确定——请见上方型号表中该编号对应的材质列；我们的加工覆盖实木、"
+        "铝合金与钢材。OEM/ODM 项目可直接按你品牌现用的材质与表面工艺生产。导轨、弹簧"
+        "与轴承按场馆级使用选型。产品按 REACH、加州 65 号提案与 6P/7P 送检，工厂通过 "
         "ISO 9001 与 BSCI 审核，检测报告随货提供。",
     ),
     (

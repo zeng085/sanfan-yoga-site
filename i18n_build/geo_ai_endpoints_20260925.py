@@ -279,8 +279,8 @@ def build_llms_full() -> str:
     A(
         "A dedicated 63-page section (9 English pages plus 9 in each of the six languages) "
         "covers the OEM/ODM wooden Pilates line. It is made on a separate production line from "
-        "the yoga mats. Materials: imported rubberwood, FAS white maple, Croatian beech, "
-        "aluminium and 316 stainless hardware, piano lacquer finish."
+        "the yoga mats. Materials: set per model — solid timber, aluminium and 316 "
+        "stainless hardware."
     )
     A("")
     A("Families: reformer, cadillac, wunda chair, ladder barrel, spine corrector, reformer tower and 3-in-1, studio set, specialty builds.")

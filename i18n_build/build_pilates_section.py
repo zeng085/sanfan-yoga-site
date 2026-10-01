@@ -20,6 +20,19 @@
 用法
     python3 i18n_build/build_pilates_section.py --only index,pilates-reformer
     python3 i18n_build/build_pilates_section.py            # 全部 9 页
+
+⛔⛔ 重跑前必读：`pilates/pilates-ladder-barrel.html` 已**不再是本脚本的产物** ⛔⛔
+    该页 2026-10-01 已改为「**2026 画册体系**」的样板页（手工建）：
+      · 型号表换成画册 parse 出来的 7 台（不再用 data/pilates_models.json 的 41 台体系）
+      · 新增画册图区 `.cat-unit` / `.model-card`（一页一图 + 可索引的 <dl> 规格）
+      · hero lead / pl-tags / FAQ 都改成画册口径
+    **本脚本没有 .cat-* 的模板** —— 直接全量重跑会把这 278 行新块整段抹掉。
+      · 若确实要重跑全量，先 `git stash` 或备份该页，重跑后**手工还原画册区块**。
+      · 该页现在的正确核验入口是：
+          python3 i18n_build/verify_pilates_data_sync_20261001.py \
+                  pilates/pilates-ladder-barrel.html "E. Ladder"
+          node i18n_build/probe_catalog_blocks_20261001.cjs
+    其余 7 族页仍在旧体系，等 user 对「旧 41 台体系去留」拍板后再一并迁移。
 """
 import html
 import json
@@ -371,8 +384,8 @@ CUSTOM = {
     "h_zh": "可以定制什么",
     "items": [
         ("Timber &amp; finish", "木种与表面",
-         "Domestic or imported rubberwood, FAS-grade white maple, piano lacquer, "
-         "Croatian beech, aluminium or 316 steel.",
+         "Solid timber, aluminium or steel; or we build to the material and finish "
+         "spec your own brand already uses.",
          "国产或进口橡胶木、FAS 级白枫木、钢琴烤漆、克罗地亚榉木、铝合金或 316 钢。"),
         ("Upholstery", "皮革与坐垫",
          "Microfibre, thickened PU, eco silicone leather or PU leather, with "
@@ -604,8 +617,8 @@ def build_index(imgmap):
        bi("Wooden Pilates apparatus, built to order",
           "实木普拉提大器械 · 按单定制"),
        bi("Reformer, Cadillac, Wunda chair, ladder barrel, spine corrector, studio sets "
-          "and the special pieces — %d models across %d lines, in imported rubberwood, "
-          "FAS-grade white maple, piano lacquer, Croatian beech, aluminium and 316 steel. "
+          "and the special pieces — %d models across %d lines, in solid timber, "
+          "aluminium and 316 steel. "
           "Same factory as our yoga mat line, different bench." % (total, len(DATA["families"])),
           "核心床、凯迪拉克、稳踏椅、梯桶、矫正器、五件套与特殊器械 —— %d 个型号、%d 条器械线，"
           "材质覆盖进口橡胶木、FAS 级白枫木、钢琴烤漆、克罗地亚榉木、铝合金与 316 钢。"
@@ -685,8 +698,8 @@ def build_index(imgmap):
           "studio order and a mat order can be consolidated, and one QC team signs off both.",
           "福建三梵做瑜伽与健身产品已十余年。器械线是从同一套木材与皮革供应链里长出来的 —— "
           "所以开馆订单与垫类订单可以并柜，同一支品控团队签字放行。"),
-       bi("Imported rubberwood, FAS-grade white maple, piano lacquer, Croatian beech",
-          "进口橡胶木、FAS 级白枫木、钢琴烤漆、克罗地亚榉木"),
+       bi("Solid timber, aluminium or steel",
+          "实木、铝合金或钢材"),
        bi("German Wagner / Korean Sangbo / domestic carbon-steel spring options",
           "德国瓦格纳 / 韩国象牌 / 国产碳钢弹簧可选"),
        bi("Stainless-steel rails, sealed-bearing silent rollers, 3-position spring bars",

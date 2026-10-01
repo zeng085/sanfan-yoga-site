@@ -15,7 +15,9 @@ const { execSync } = require('child_process');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const BASE = 'http://127.0.0.1:8851';
+// 端口可覆盖：仓库里同时可能开着多个预览服务（8848/8851/8866），
+// 写死端口会在服务换端口后整批 ERR_CONNECTION_REFUSED 假失败（实测踩过）。
+const BASE = process.env.BASE || 'http://127.0.0.1:8851';
 const vpArg = process.argv.find(a => a.startsWith('--vp='));
 const VW = vpArg ? parseInt(vpArg.split('=')[1], 10) : 390;
 const limitArg = process.argv.find(a => a.startsWith('--limit='));

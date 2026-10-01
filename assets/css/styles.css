@@ -1378,6 +1378,169 @@ table.pl-spec td.note { color: var(--pl-muted); font-size: 12.5px; }
 .pl-alias strong { color: #fff; font-weight: 600; }
 .pl-card .alias { font-size: 12.5px; color: var(--pl-wood); margin: 0 0 6px; letter-spacing: .02em; }
 
+/* ===========================================================
+   2026 画册型号块（.cat-* / .model-card）
+   -----------------------------------------------------------
+   用途：把 2026 英文画册的产品页（一页一图，1~3 台器械）搬进族页。
+   分工是刻意的：**图给采购商看**（画册页本身就是设计好的产品页），
+   **同一份数据另以 <dl> / <table> 写进 DOM 给搜索引擎与 AI 读**
+   —— 图上文字是像素，不可翻译、不可索引；DOM 里的才是可索引的。
+   · 一页一图 = 零加工（自动/人工裁剪都试过，多台页无法稳定定位）
+   · 型号锚点 id 直接落在 .model-card 上，可深链（#ladder-barre-3）
+   · 新类名，全站零冲突（.mc-sub 已被 .mat-card 占用，故用 .model-card-sub）
+   =========================================================== */
+.cat-unit {
+  display: grid;
+  grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+}
+.cat-unit:first-of-type { border-top: 0; padding-top: 6px; }
+.cat-fig { margin: 0; }
+.cat-fig img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: #fff;
+}
+.cat-fig figcaption {
+  margin-top: 10px; font-size: 13px; color: var(--muted); text-align: center;
+}
+/* 双语内联：全局 .lang-zh 是 display:block，会让「查看原图」掉到下一行。
+   与既有 .cat-chip / .cat-tile 的处理方式一致（见本文件上方同名注释）。 */
+.cat-fig figcaption .lang-zh { display: none; }
+html.show-zh .cat-fig figcaption .lang-zh { display: inline; }
+.cat-fig figcaption a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; }
+.cat-models { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+
+.model-card {
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: #fff; padding: 20px 22px 22px;
+}
+.model-card > h3 { margin: 0 0 4px; font-size: 19px; letter-spacing: .01em; }
+.model-card-sub { margin: 0 0 14px; font-size: 13px; color: var(--muted); }
+.model-card dl {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  gap: 7px 16px; margin: 0 0 18px;
+}
+.model-card dt { font-size: 13.5px; color: var(--muted); }
+.model-card dd {
+  margin: 0; font-size: 13.5px; font-weight: 600;
+  font-variant-numeric: tabular-nums;   /* 尺寸/重量数字等宽，纵向对齐 */
+}
+.model-card .btn { padding: 9px 16px; font-size: 13.5px; }
+
+/* 规格总表：数字列等宽对齐（P2 项，顺手补） */
+table.pl-spec td, table.pl-spec th { font-variant-numeric: tabular-nums; }
+
+/* 桌面端让画册图跟随滚动（与右侧型号卡同屏比对）；窄屏取消，避免占满屏高 */
+@media (min-width: 921px) {
+  .cat-fig { position: sticky; top: 96px; }
+}
+@media (max-width: 920px) {
+  .cat-unit { grid-template-columns: 1fr; gap: 22px; padding: 26px 0; }
+  .model-card { padding: 18px 16px 20px; }
+}
+
+/* ---------- 产品线概览卡（.line-*）----------
+   用途：族页顶部回答「这个族有几条线、各多少台、各多少张画册页」，
+   点进去锚到下方规格表的对应分组行。
+   ⚠️ 锚点只指向规格表，不指向画册页区块 —— 画册页是**按页排的、
+   线在页内混排**（如 p25 同页既有 AL 4 CL Tower 又有 Wood 4-KM），
+   按线切不出连续区块，硬切会把同一页图引用两次。
+   ⚠️ .lang-zh 全局是 display:block，行内混排处必须逐处改回 inline
+   （同 .cat-chip / .cat-tile / .cat-fig 的既有处理）。 */
+.line-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+.line-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  padding: 22px 24px 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.line-card:hover { border-color: var(--brand); transform: translateY(-2px); }
+.line-card-n {
+  font-size: 34px; line-height: 1; font-weight: 600;
+  color: var(--brand); font-variant-numeric: tabular-nums;
+}
+.line-card h3 { margin: 10px 0 8px; font-size: 16px; }
+.line-card p { margin: 0 0 12px; font-size: 13.5px; color: var(--muted); }
+.line-card-meta { font-size: 12.5px; color: var(--pl-muted, var(--muted)); letter-spacing: .02em; }
+.line-card-meta .lang-zh { display: none; }
+html.show-zh .line-card-meta .lang-zh { display: inline; }
+html.show-zh .line-card-meta .lang-en { display: none; }
+
+/* ---------- 规格表的分组行（按产品线分段）----------
+   scroll-margin-top 让锚点跳转不被 69px 固定 header 压住。 */
+table.pl-spec tr.line-row > td {
+  background: var(--pl-paper);
+  border-bottom: 1px solid var(--pl-line);
+  font-size: 13px; font-weight: 500;
+  color: var(--pl-ink); letter-spacing: .02em;
+  scroll-margin-top: 96px;
+}
+table.pl-spec tr.line-row .lang-zh { display: none; }
+html.show-zh table.pl-spec tr.line-row .lang-zh { display: inline; }
+html.show-zh table.pl-spec tr.line-row .lang-en { display: none; }
+/* 6 列（多一列 Line）比梯桶页的 5 列宽，放宽最小宽度避免挤压 */
+table.pl-spec { min-width: 940px; }
+/* 单线族（Chair / Cadillac / Specialty）没有 Line 列，5 列不需要 6 列的宽度 */
+table.pl-spec-5 { min-width: 800px; }
+/* 可定制页的确认清单只有 2 列（确认项 / 需要什么） */
+table.pl-spec-3 { min-width: 560px; }
+
+/* ---------- 画册页的线别标签（.cat-line）----------
+   双族页会出两个以上标签（打印页 24 同页既有 AL 4 CL Tower 又有 Wood 4-KM），
+   故用 flex-wrap，不预设个数。 */
+.cat-line-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.cat-line {
+  display: inline-block; padding: 3px 9px;
+  font-size: 11.5px; font-weight: 600; letter-spacing: .06em;
+  color: var(--brand); background: var(--pl-paper);
+  border: 1px solid var(--line); border-radius: 999px;
+}
+
+/* ---------- 画册图灯箱（点击放大）----------
+   无 JS 时「放大查看」按 href 新窗口打开原图 —— 天然降级，不需要额外分支。
+   有 JS 时由 main.js 拦截改为就地放大。
+   遮罩用深色是查看器惯例（与站点浅色主题不冲突：此刻画面主体是图）。
+   .lb-close 取 44×44 —— 与汉堡按钮同一触达判据。 */
+.cat-fig img { cursor: zoom-in; }
+.lb {
+  position: fixed; inset: 0; z-index: 999;
+  display: none; align-items: center; justify-content: center;
+  padding: 3vmin; background: rgba(18, 16, 14, .9);
+}
+.lb.is-open { display: flex; }
+.lb img {
+  width: auto; height: auto; max-width: 100%; max-height: 100%;
+  border-radius: var(--radius-sm); background: #fff;
+}
+.lb-close {
+  position: absolute; top: 14px; right: 16px;
+  width: 44px; height: 44px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; line-height: 1; color: #fff;
+  background: rgba(0, 0, 0, .35);
+  border: 1px solid rgba(255, 255, 255, .35); border-radius: 50%;
+  cursor: pointer;
+}
+.lb-cap {
+  position: absolute; left: 0; right: 0; bottom: 16px;
+  margin: 0; padding: 0 60px; text-align: center;
+  font-size: 13px; color: rgba(255, 255, 255, .85);
+}
+body.lb-open { overflow: hidden; }   /* 打开时锁背景滚动，避免 iOS 背景跟着滑 */
+
 /* ---------- 减弱动态效果（prefers-reduced-motion）----------
    系统层开关（iOS 辅助功能-减弱动态效果 / Android 移除动画 / macOS 减弱动态效果）打开时，
    必须尊重。改前实测（Playwright reducedMotion:'reduce' 上下文）：

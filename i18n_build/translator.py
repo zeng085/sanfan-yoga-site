@@ -194,7 +194,7 @@ _PL_FAMILY = [
     ("pilates ladder barrel",   "Pilates-Ladder Barrel",   "Pilates Ladder Barrel",   "Pilates Ladder Barrel",   "Pilates Ladder Barrel",   "ピラティス ラダーバレル",     "필라테스 래더 배럴"),
     ("pilates spine corrector", "Pilates-Spine Corrector", "Pilates Spine Corrector", "Pilates Spine Corrector", "Pilates Spine Corrector", "ピラティス スパインコレクター", "필라테스 스파인 코렉터"),
     ("pilates studio set",      "Pilates-Studio-Set",      "Pilates Studio Set",      "Pilates Studio Set",      "Pilates Studio Set",      "ピラティス スタジオセット",   "필라테스 스튜디오 세트"),
-    # "Specialty" 是本族的产品线名（双向梯床 + Gyrotonic 塔等非常规件）。
+    # "Specialty" 是本族的产品线名（双向梯床 + 回旋仪塔架等非常规件）。
     # 直译会错：de 得到 "Spezialisierung"（专精化）、ja 得到 "専門コース"（专业课）。
     ("pilates specialty",       "Pilates-Spezialgeräte",   "Pilates Spécialités",     "Pilates Specialità",      "Pilates Especialidades",  "ピラティス スペシャルティ",   "필라테스 스페셜티"),
     ("reformer tower & 3-in-1", "Reformer Tower & 3-in-1", "Reformer Tower & 3-in-1", "Reformer Tower & 3-in-1", "Reformer Tower & 3-in-1", "リフォーマー タワー＆3-in-1", "리포머 타워 & 3-in-1"),
@@ -208,7 +208,9 @@ _PL_SHORT = [
     ("ladder bed",      "Ladder Bed",      "Ladder Bed",      "Ladder Bed",      "Ladder Bed",      "ラダーベッド",       "래더 베드"),
     ("reformer",        "Reformer",        "Reformer",        "Reformer",        "Reformer",        "リフォーマー",       "리포머"),
     ("cadillac",        "Cadillac",        "Cadillac",        "Cadillac",        "Cadillac",        "キャデラック",       "캐딜락"),
-    ("gyrotonic",       "Gyrotonic",       "Gyrotonic",       "Gyrotonic",       "Gyrotonic",       "ジャイロトニック",   "자이로토닉"),
+    # ⛔ 2026-10-01 移除 "gyrotonic" 条：该词是美国注册商标，已全站剔除。
+    #    术语保护表里留着它 = 「随时可能被翻译管线重新注入」。
+    #    不再保护的词，才不会被带回来。
 ]
 for _row in _PL_FAMILY + _PL_SHORT:
     for _i, _lg in enumerate(_PL_LANGS):

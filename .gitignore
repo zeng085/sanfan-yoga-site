@@ -41,11 +41,27 @@ outputs/blog_check/
 
 # 普拉提板块多视口实拍（验收用，非站点资产）
 outputs/pilates-preview/
+# 普拉提梯桶线画册块预览 / 渲染确认（验收用，非站点资产）
+# ⚠️ 本仓无 .vercelignore → 未被忽略的 outputs/*.html 会被 Vercel 当公开页发布，
+#    预览页(含内部标注)绝不可上站，故逐个目录显式忽略。
+outputs/pilates_block_v2/
+outputs/pilates_block_review_20261001/
 # 普拉提板块 6 语言版多视口实拍（验收用，非站点资产）
 outputs/pilates-langs-preview/
+# 板块重构：族页画册区块生成物与实拍（验收用，非站点资产）
+outputs/pilates_family_*/
+outputs/pilates_rebuild_20261001/
 
 # 导航改名前后对比实拍（验收用，非站点资产）
 outputs/nav-rename/
 
 # 8 个一级分类页三块内容（导语/FAQ/内链）多语言实拍（验收用，非站点资产）
 outputs/catcontent-preview/
+
+# 仓库内备份文件（会被 Vercel 当静态页发布，禁止入库/上站）
+*.bak_*
+
+# 画册 OCR / 裁图 / 探针的过程产物（56MB，含大量中间切片与整页大图）
+# ⚠️ 这里已有 24 个文件在忽略规则之前就入了库，gitignore 不影响已跟踪文件，
+#    它们继续正常跟踪；此规则只拦新增的过程产物，避免仓库被中间切片撑大。
+i18n_build/reports/

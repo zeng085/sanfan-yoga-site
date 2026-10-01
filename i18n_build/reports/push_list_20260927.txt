@@ -1,0 +1,9 @@
+.workbuddy/memory/2026-09-27.md
+.workbuddy/memory/MEMORY.md
+i18n_build/check_deploy_after_push_20260927.py
+i18n_build/reference/site_rules_full_20260927.md
+i18n_build/reports/pilates_catalog_2026_models.csv
+i18n_build/reports/push_list_20260927.txt
+i18n_build/scan_push_secrets_20260927.py
+i18n_build/verify_p0_fixes_20260927.cjs
+i18n_build/verify_push_scope_20260927.py

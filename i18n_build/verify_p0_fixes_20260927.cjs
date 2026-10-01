@@ -1,8 +1,9 @@
-/* P0 四条修复的前后对比探针（单文件 CSS → 改动即全站生效，故用「多页 × 多视口」验证）
-   用法: node verify_p0_fixes_20260927.cjs [--tag=before|after] */
+/* P0/P1 修复的前后对比探针（单文件 CSS → 改动即全站生效，故用「多页 × 多视口」验证）
+   用法: node verify_p0_fixes_20260927.cjs [--tag=before|after] [--base=<url|file://路径>]
+   --base 用于线上复核：--base=https://fjsanfan.com（默认本地 file://） */
 const { chromium } = require('playwright');
-const BASE = 'file:///Users/mac-zlg/WorkBuddy/2026-08-20-16-43-16';
 const arg = (k, d) => { const m = process.argv.find(s => s.startsWith('--' + k + '=')); return m ? m.split('=')[1] : d; };
+const BASE = arg('base', 'file:///Users/mac-zlg/WorkBuddy/2026-08-20-16-43-16');
 const TAG = arg('tag', 'before');
 
 const VPS = [[390, 844], [320, 568], [844, 390]];

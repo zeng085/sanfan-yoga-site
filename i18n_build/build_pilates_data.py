@@ -29,12 +29,12 @@ FAMILIES = [
         # 自家英文站 sanfansport.com 的叫法（那边把 Reformer 叫 Core Bed）。
         # 主词仍用国际通用名保 SEO，括注英文站叫法让两边对得上。
         "alias_en": "Core Bed",
-        "lead_en": "The reformer is the machine a studio is built around. We build it on imported "
-                   "rubberwood, piano-lacquer or FAS-grade white maple and Croatian beech, with "
+        "lead_en": "The reformer is the machine a studio is built around. We build it on solid "
+                   "timber or aluminium, with "
                    "stainless-steel rails, silent bearing rollers and adjustable spring bars. "
                    "Australian and European geometries, full-track and foldable builds, and the "
                    "M-series for large commercial studios.",
-        "lead_zh": "核心床是普拉提馆的立馆之本。我们用进口橡胶木、钢琴烤漆或 FAS 级白枫木、克罗地亚榉木做床身，"
+        "lead_zh": "核心床是普拉提馆的立馆之本。我们用实木或铝合金做床身，"
                    "配不锈钢轨道、静音轴承滑轮与可调挂簧板。澳版、欧版两种几何，另有全轨道、可折叠与"
                    "适合大型商业馆的 M 系列。",
     },
@@ -117,13 +117,13 @@ FAMILIES = [
         "key": "pilates-specialty",
         "en": "Pilates Specialty",
         "zh": "普拉提特殊器械",
-        "tag_en": "Bidirectional Bed · Gyrotonic Tower",
-        "tag_zh": "双向梯床 · 禅柔塔架",
+        "tag_en": "Bidirectional Bed · Rotator & Tower Set",
+        "tag_zh": "双向梯床 · 回旋仪塔架",
         "lead_en": "Beyond the five classical pieces: the bidirectional ladder bed for high-volume "
-                   "rehab and the Gyrotonic tower set (rotator + pulley tower) for three-dimensional "
+                   "rehab and the rotator + pulley tower set for three-dimensional "
                    "spinal work. Built to order on the same timber platform as the rest of the range.",
-        "lead_zh": "五件套之外的两件：面向高频康复的双向梯床，以及做三维脊柱训练的禅柔组合"
-                   "（回旋仪 + 滑轮塔）。与其余器械共用同一套实木工艺，按单定制。",
+        "lead_zh": "五件套之外的两件：面向高频康复的双向梯床，以及做三维脊柱训练的回旋仪 + 滑轮塔组合"
+                   "。与其余器械共用同一套实木工艺，按单定制。",
     },
 ]
 
@@ -261,8 +261,8 @@ MODELS = [
 
     ("NIS101", "pilates-specialty", "FAS White Maple Bidirectional Ladder Bed",
      "FAS 白枫木双向梯床", "FAS白枫木", "Rehab bed"),
-    ("NIS102", "pilates-specialty", "FAS White Maple Gyrotonic Tower Set (Classic)",
-     "FAS 白枫木经典款禅柔（回旋仪 + 滑轮塔）", "白枫木+多层板", "Rotator + pulley tower"),
+    ("NIS102", "pilates-specialty", "FAS White Maple Rotator & Tower Set (Classic)",
+     "FAS 白枫木回旋仪 + 滑轮塔（经典款）", "白枫木+多层板", "Rotator + pulley tower"),
 ]
 
 # 规格条目里的通用件（几乎每款都有）→ 英文标准描述
@@ -402,7 +402,7 @@ def springs_of(bullets):
     return kept
 
 
-# 五件套 / 禅柔：尺寸写在「1、核心床：…」这种分行里，或一组设备有两个尺寸
+# 五件套 / 回旋仪塔架：尺寸写在「1、核心床：…」这种分行里，或一组设备有两个尺寸
 COMPONENTS = {
     "NIW101": [("Reformer", "核心床", "2.35 × 0.7 × 0.35 m"),
                ("Ladder Barrel", "梯桶", "1.13 × 0.69 × 1.03 m"),
