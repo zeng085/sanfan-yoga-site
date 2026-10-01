@@ -74,7 +74,11 @@ body {
   overflow-x: clip;
   overflow-wrap: break-word;
 }
-img, table, iframe, video { max-width: 100%; display: block; }
+/* ⚠️ table 绝不能进 display:block 名单：块级化后匿名表格按内容收缩，
+   width:100% 只作用于块盒，列永不拉伸填满容器（表头底色/行边框中途断开）。
+   2026-10-01 实测修复：pl-spec 桌面右侧留白、产品页 spec-table 同根源。 */
+img, iframe, video { max-width: 100%; display: block; }
+table { max-width: 100%; }
 /* 配合 <img width/height> 属性：保留固有宽高比防 CLS，同时不被属性固定高度拉变形。
    更具体的规则（如 .rc-img img{height:100%}）优先级更高，不受影响。 */
 img { height: auto; }
@@ -1314,7 +1318,10 @@ html.show-zh .app-card h4 { font-weight: 600; }
 
 /* --- 型号规格对比表 --- */
 .pl-spec-wrap { overflow-x: auto; border: 1px solid var(--pl-line); border-radius: 12px; background: #fff; }
-table.pl-spec { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 860px; }
+/* ⚠️ 全局规则（本文件 77 行）把 table 设成 display:block，会破坏表格式布局：
+   匿名表格按内容收缩，列不再拉伸填满容器（桌面右侧留白、移动端滚动区右半空）。
+   这里必须显式恢复 display:table。 */
+table.pl-spec { display: table; width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 860px; }
 table.pl-spec th, table.pl-spec td {
   padding: 11px 13px; text-align: left; border-bottom: 1px solid var(--pl-line);
   vertical-align: top;
@@ -1439,8 +1446,25 @@ table.pl-spec td, table.pl-spec th { font-variant-numeric: tabular-nums; }
   .cat-fig { position: sticky; top: 96px; }
 }
 @media (max-width: 920px) {
-  .cat-unit { grid-template-columns: 1fr; gap: 22px; padding: 26px 0; }
-  .model-card { padding: 18px 16px 20px; }
+  .cat-unit { grid-template-columns: 1fr; gap: 18px; padding: 22px 0; }
+  .cat-models { gap: 12px; }
+  /* 型号卡紧凑化：三项规格由「3 行两列」改为「标签一行 + 数值一行」的两行三列，
+     卡片高度 252px → 约 190px（实测），移动端整段明显变短 */
+  .model-card { padding: 15px 14px 16px; }
+  .model-card > h3 { font-size: 17px; margin: 0 0 2px; }
+  .model-card-sub { margin: 0 0 10px; font-size: 12.5px; }
+  .model-card dl {
+    /* DOM 里 dt/dd 交错（dt1 dd1 dt2 dd2 …）→ 必须按列填充，
+       才能得到「标签行 / 数值行」的两行三列 */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    gap: 3px 10px;
+    margin: 0 0 12px;
+  }
+  .model-card dt { font-size: 12px; }
+  .model-card dd { font-size: 13px; }
+  .model-card .btn { padding: 8px 14px; font-size: 13px; }
 }
 
 /* ---------- 产品线概览卡（.line-*）----------

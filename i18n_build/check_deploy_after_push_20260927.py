@@ -8,6 +8,7 @@
 """
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -50,14 +51,16 @@ print(f"\n✅ deployment 已创建  {found['created_at']}  env={found.get('envir
 
 print("\n--- 线上资源版本号复核 ---")
 want = WANT_VER
-# ⚠️ 本项目的版本号写法是 ?v20261001b —— **没有等号**，别按直觉写 ?v=
-CAND = ["v20260925c", "v20260927a", "v20260927b", "v20261001a", "v20261001b"]
+# ⚠️ 两个坑，都踩过：
+#   ① 本项目写法是 ?v20261001c —— **没有等号**，别按直觉写 ?v=
+#   ② 不要维护「候选版本号白名单」：白名单漏掉本次版本时，永远匹配不上，
+#      12 轮全返回 [] 会被误判成「部署还没好」。改成通用提取再比对。
+VER_RE = re.compile(r"(?:styles\.css|main\.js)\?(v[0-9a-z]+)")
 for i in range(1, 13):
     out = subprocess.run(
         ["curl", "-s", f"https://fjsanfan.com/?cb={os.urandom(4).hex()}",
          "--max-time", "25"], capture_output=True).stdout.decode("utf-8", "ignore")
-    vers = sorted({t for t in (("styles.css?" + p) for p in CAND) if t in out}
-                  | {t for t in (("main.js?" + p) for p in CAND) if t in out})
+    vers = sorted(set(VER_RE.findall(out)))
     print(f"  [{i:2d}] {vers}")
     if any(want in v for v in vers):
         print(f"\n✅ 线上已切到 {want}")
@@ -65,12 +68,15 @@ for i in range(1, 13):
         break
     time.sleep(20)
 else:
-    print(f"\n⚠ 线上仍未切到 {want}（部署可能仍在 build）")
+    print(f"\n⚠ 线上仍未切到 {want}（部署可能仍在 build，或线上仍是旧版本号）")
     sys.exit(4)
 
 # 线上 CSS 内容级复核：P0/P1 关键声明是否真的到了 CDN
+# ⚠️ URL 要拼成 styles.css?v20261001c（want 本身已含 v；本项目**没有等号**）。
+#    写成 ?v={want} 会得到 ?v=v20261001c —— 查询串不同 = 缓存键不同，
+#    将来加了长缓存就会取到另一份副本，属于会咬人的写法。
 css = subprocess.run(
-    ["curl", "-s", f"https://fjsanfan.com/assets/css/styles.css?v={want}&cb={os.urandom(4).hex()}",
+    ["curl", "-s", f"https://fjsanfan.com/assets/css/styles.css?{want}&cb={os.urandom(4).hex()}",
      "--max-time", "30"], capture_output=True).stdout.decode("utf-8", "ignore")
 print(f"\n--- 线上 styles.css 内容复核（{len(css)} 字节）---")
 checks = [
@@ -89,11 +95,12 @@ checks = [
     ("NEW-3 灯箱图片样式", ".lb img" in css),
 ]
 
-# 本轮新增的 HTML/JS 侧钩子：只能从 HTML 与 main.js 里查
+# 本轮新增的 HTML 侧钩子：只能从 HTML 与 main.js 里查
+# ⚠️ 别在首页查页面级钩子（cat-zoom 只存在于 pilates 6 页）——
+#    那样会得到一个假的 ✗，浪费一轮排查。页面级检查走
+#    verify_live_assets_20261001.py 与 probe_lightbox_caption_20261001.cjs。
 html_checks = [
-    ("NEW-4 卡片可放大钩子 cat-zoom", "cat-zoom" in html),
-    ("NEW-5 画册图 lazy 加载", 'loading="lazy"' in html),
-    ("NEW-6 资源版本号已切", f"?{want}" in html),
+    ("NEW-4 资源版本号已切到线上 HTML", f"?{want}" in html),
 ]
 for name, ok in checks:
     print(f"  {'✓' if ok else '✗'} {name}")
