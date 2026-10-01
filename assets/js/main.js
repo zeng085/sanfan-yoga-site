@@ -1390,12 +1390,29 @@ if (form) {
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
 
+  /* ⚠️ figcaption 里同时放着 .lang-en / .lang-zh 两套文本，靠 CSS display 切换。
+     直接取 textContent 会把两种语言连同「查看原图 / 放大查看」的链接文案一起读出来，
+     得到 "2026 catalogue · page 032026 画册 · 第 03 页 · view larger放大查看"
+     （两个 span 首尾相连，连空格都没有）。只取**当前可见**语言、且**不在 <a> 内**的
+     直接子 span。末行是兜底：万一结构变了，宁可标题啰嗦也不能是空的。 */
+  function capText(fig) {
+    var c = fig.querySelector('figcaption');
+    if (!c) return '';
+    var spans = c.querySelectorAll(':scope > span.lang-en, :scope > span.lang-zh');
+    for (var k = 0; k < spans.length; k++) {
+      var st = window.getComputedStyle(spans[k]);
+      if (st.display !== 'none' && st.visibility !== 'hidden') {
+        return spans[k].textContent.replace(/\s+/g, ' ').trim();
+      }
+    }
+    return c.textContent.replace(/\s+/g, ' ').trim();
+  }
+
   function fromFig(fig, src) {
     if (!fig) return;
     var i = fig.querySelector('img');
-    var c = fig.querySelector('figcaption');
     open(src || (i && (i.currentSrc || i.src)), i && i.getAttribute('alt'),
-         c ? c.textContent.replace(/\s+/g, ' ').trim() : '');
+         capText(fig));
   }
 
   document.addEventListener('click', function (e) {
