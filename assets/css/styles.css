@@ -1445,9 +1445,52 @@ table.pl-spec td, table.pl-spec th { font-variant-numeric: tabular-nums; }
 @media (min-width: 921px) {
   .cat-fig { position: sticky; top: 96px; }
 }
+/* --- 画册长列表折叠（渐进增强：无 JS 时不显示控制条、内容完整可见）--- */
+.cat-fold-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0 0 28px; }
+.cat-fold-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.cat-chip {
+  display: inline-flex; align-items: center; padding: 7px 14px;
+  border: 1px solid var(--pl-line, var(--line)); border-radius: 999px;
+  font-size: 13.5px; color: var(--ink); background: #fff; text-decoration: none;
+  transition: border-color .15s, color .15s;
+}
+.cat-chip:hover { border-color: var(--brand); color: var(--brand-ink); }
+.cat-fold-body.is-folded { display: none; }
+/* 折叠体展开后 chips 跳转的落点：让出 sticky 头部高度 */
+.cat-unit { scroll-margin-top: 84px; }
+#models-compared, .pl-spec tr[id] { scroll-margin-top: 84px; }
+
+/* --- 展开态 = 缩略图墙（.cat-grid-mode）---
+   解决「一展开又恢复原始长页面」：浏览意图是翻画册找型号，
+   看大图走 .cat-zoom 灯箱，看参数走下方规格对比表（其自身也默认折叠）。
+   27 单元 4 列（移动 3 列）→ 展开后整段仅约 2-3 屏。
+   型号卡在网格态隐藏（display:none），DOM 保留，无 JS / 爬虫不受影响。 */
+.cat-fold-body.cat-grid-mode {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px 16px;
+}
+.cat-fold-body.cat-grid-mode .cat-unit {
+  display: block; border-top: 0; padding: 0; cursor: pointer;
+}
+.cat-fold-body.cat-grid-mode .cat-unit:first-of-type { padding-top: 0; }
+.cat-fold-body.cat-grid-mode .cat-fig { position: static; }
+.cat-fold-body.cat-grid-mode .cat-models { display: none; }
+.cat-fold-body.cat-grid-mode .cat-fig figcaption {
+  margin-top: 6px; font-size: 12px; line-height: 1.45;
+}
+@media (max-width: 920px) {
+  .cat-fold-body.cat-grid-mode {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px 10px;
+  }
+  .cat-fold-body.cat-grid-mode .cat-fig figcaption { margin-top: 4px; font-size: 11px; }
+}
 @media (max-width: 920px) {
   .cat-unit { grid-template-columns: 1fr; gap: 18px; padding: 22px 0; }
   .cat-models { gap: 12px; }
+  .cat-fold-bar { gap: 10px; margin-bottom: 22px; }
+  .cat-chip { padding: 6px 12px; font-size: 13px; }
   /* 型号卡紧凑化：三项规格由「3 行两列」改为「标签一行 + 数值一行」的两行三列，
      卡片高度 252px → 约 190px（实测），移动端整段明显变短 */
   .model-card { padding: 15px 14px 16px; }

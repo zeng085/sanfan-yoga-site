@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="Pilates Reformer — OEM/ODM Manufacturer | SANFAN" />
   <meta name="twitter:description" content="Custom Pilates Reformer OEM/ODM: 46 models in aluminium, foldable &amp; solid wood, with packed size and gross weight for every model. Request a quote." />
   <meta name="twitter:image" content="https://fjsanfan.com/assets/img/pilates-reformer-1.webp" />
-  <link rel="stylesheet" href="../assets/css/styles.css?v20261001e" />
+  <link rel="stylesheet" href="../assets/css/styles.css?v20261001g" />
   <link rel="icon" href="../assets/img/logo.webp" />
   <script type="application/ld+json">
 {
@@ -597,6 +597,19 @@
         <p><span class="lang-en">Each image is a catalogue page exactly as printed. The specification burned into the picture is repeated as text underneath — so it can be searched, translated and pasted straight into a purchase order.</span><span class="lang-zh">下面每张图都是画册原页。印在图上的规格，我们在下方以文字重写一遍 —— 便于搜索、翻译，也可直接复制进采购单。</span></p>
       </div>
 
+      <div class="cat-fold-bar" data-fold="cat-all" data-fold-grid hidden>
+        <button type="button" id="cat-fold-toggle" class="btn btn-primary cat-fold-toggle" aria-expanded="false" aria-controls="cat-all">
+          <span class="lang-en">Browse the catalogue — 27 pages, 46 models</span><span class="lang-zh">浏览画册 —— 27 页 · 46 台</span>
+        </button>
+        <nav class="cat-fold-chips" aria-label="Jump to a product line">
+          <a href="#cat-p04" class="cat-chip" data-jump><span class="lang-en">AL aluminium</span><span class="lang-zh">AL 铝合金</span></a>
+          <a href="#cat-p11" class="cat-chip" data-jump><span class="lang-en">Foldable</span><span class="lang-zh">可折叠</span></a>
+          <a href="#cat-p19" class="cat-chip" data-jump><span class="lang-en">Solid wood</span><span class="lang-zh">实木</span></a>
+          <a href="#models-compared" class="cat-chip"><span class="lang-en">Spec table</span><span class="lang-zh">规格对比表</span></a>
+        </nav>
+      </div>
+
+      <div class="cat-fold-body" id="cat-all">
       <div class="cat-unit" id="cat-p04">
         <figure class="cat-fig">
           <div class="cat-line-tags"><span class="cat-line">AL</span></div>
@@ -1294,6 +1307,7 @@
           </article>
         </div>
       </div>
+      </div><!-- /cat-fold-body -->
     </div>
   </section>
 
@@ -1304,7 +1318,12 @@
         <h2><span class="lang-en">46 models, compared</span><span class="lang-zh">46 个型号对比</span></h2>
         <p><span class="lang-en">Grouped by line, in catalogue order. Dashes mean the catalogue does not print that figure — we confirm per order.</span><span class="lang-zh">按产品线分组，依画册顺序。空白即画册上未印该数据 —— 按单确认。</span></p>
       </div>
-      <div class="pl-spec-wrap">
+      <div class="cat-fold-bar" data-fold="spec-all" hidden>
+        <button type="button" class="btn btn-primary cat-fold-toggle" aria-expanded="false" aria-controls="spec-all">
+          <span class="lang-en">Show the full spec table — 46 models</span><span class="lang-zh">展开规格对比表 —— 46 个型号</span>
+        </button>
+      </div>
+      <div class="pl-spec-wrap cat-fold-body" id="spec-all">
       <table class="pl-spec">
         <thead>
           <tr>
@@ -1495,6 +1514,6 @@
     <div class="container footer-bottom" data-i18n="foot.copyright">© 2026 FUJIAN SANFAN Sports Products Co., Ltd. All rights reserved.</div>
   </footer>
 
-  <script src="../assets/js/main.js?v20261001e"></script>
+  <script src="../assets/js/main.js?v20261001g"></script>
 </body>
 </html>

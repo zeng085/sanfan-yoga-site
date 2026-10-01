@@ -10,7 +10,7 @@
 - EN 主站 + de/ja/ko/fr/it/es 子目录 + 中文同页切换（无 /zh/ URL）；sitemap 1330 条
 - ⚠️ `.gitignore` 排除 `i18n_build/.deepl_key*`、`i18n_build/data/`（16M 报价表机密）
 - ⭐ 全站脚本**一律后台跑**
-- ⭐ **资源版本号 = `20261001c`**；写法 `?v20261001c`（**没有等号**）；**改 CSS/JS 必 bump，且必须与改动同一个 commit**（漏 bump = 用户命中缓存旧 CSS，HTML 改了但看着没变）
+- ⭐ **资源版本号 = `20261001e`**；写法 `?v20261001e`（**没有等号**）；**改 CSS/JS 必 bump，且必须与改动同一个 commit**（漏 bump = 用户命中缓存旧 CSS，HTML 改了但看着没变）
 
 ## 推送（细节见技能 `github-api-push`）
 改 CSS/JS 先 `bump_assets_ver.py` → 干净 commit →
@@ -24,10 +24,10 @@
 - **已推起点表**（下次用最新的）：`0d10b7d9`→`b94f9879d5`（分类页 1381 文件，09-26）；
   `41e1ff5a`→`ba4fa0cc52`（移动端 P0+P1，1370 文件，09-27）；
   ⭐ `a19e4a0b`→`7705a32b6d`（**普拉提 9 页画册重构，1445 文件，10-01**）；
-  ⭐ `02d6e1ab`→`1188a4c463`（**灯箱标题修复，1336 文件，10-01**）
-- ⚠️ 推送管道会把文本 **CRLF 归一为 LF**：全仓唯一 CRLF 文件
-  `i18n_build/reports/pilates_catalog_2026_models.csv` 每次推送都成 **1 个假差异**
-  （内容逐字节相同仅行尾不同，无害）→ 下次推送顺手转 LF 提交即可根除
+  ⭐ `02d6e1ab`→`1188a4c463`（**灯箱标题修复，1336 文件，10-01**）；
+  ⭐ `f53ca5a1`→`b57d64c7ce`（**排版修复+全站表格+desc 改写+CSV 转 LF，1339 文件，10-01**）
+- ⚠️ ~~推送管道会把文本 CRLF 归一为 LF~~（已根除 10-01：`pilates_catalog_2026_models.csv`
+  本地转 LF 随 `f53ca5a1` 推送，此后不再产生假差异）
 - ⚠️ 推送成功日志末尾的「本地对齐：git reset --soft …」是 v2 残留提示，**照做=死局**
 - 推送后必查：`i18n_build/check_deploy_after_push_20260927.py <sha> <版本号>`
   （轮询 deployment + curl 线上复核；已参数化）。⚠️ Vercel webhook 会漏触发 → 救法 = **同一棵树发空提交**

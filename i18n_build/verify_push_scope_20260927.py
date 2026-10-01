@@ -17,11 +17,13 @@ import urllib.request
 
 REPO = "zeng085/sanfan-yoga-site"
 ROOT = "/Users/mac-zlg/WorkBuddy/2026-08-20-16-43-16"
-START = "41e1ff5a"          # 上次已推的本地 commit（起点）
+START = "f53ca5a1"          # 上次已推的本地 commit（起点）
 # ⚠️ 起点表（本地 commit → 远程 sha），每次推送成功后更新这里 + MEMORY.md：
 #   0d10b7d9 → b94f9879d5   （分类页 1381 文件，09-26）
 #   41e1ff5a → ba4fa0cc52   （移动端 P0 五处 + P1 三项，1370 文件，09-27）
-#   注：ea117b96 是在那次推送之后做的收尾提交（9 个工具/记忆文件），尚未推送。
+#   a19e4a0b → 7705a32b6d   （普拉提 9 页画册重构，1445 文件，10-01）
+#   02d6e1ab → 1188a4c463   （灯箱标题修复 + ladder-barrel 接灯箱，1336 文件，10-01）
+#   f53ca5a1 → b57d64c7ce   （排版修复 + 全站表格 + desc 改写 + CSV 转 LF，1339 文件，10-01）
 OUT = "i18n_build/reports/push_list_20260927.txt"
 
 PAT = os.environ["GH_PAT"]

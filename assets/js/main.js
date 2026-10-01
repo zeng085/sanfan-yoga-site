@@ -1432,3 +1432,78 @@ if (form) {
     if (e.key === 'Escape' || e.keyCode === 27) close();
   });
 })();
+
+/* ============================================================
+   画册 / 规格对比表折叠（pilates 族页；渐进增强）
+   - HTML 默认完整可见，JS 加载后才加 .is-folded 折叠
+     → 无 JS / 爬虫 / AI 读取原始 HTML 时内容完整，SEO/GEO 零影响
+   - 控制条 .cat-fold-bar 自带 hidden，JS 可用时才显示
+   - data-fold="<bodyId>" 声明该控制条管理的折叠体；一页可有多组
+     （画册 #cat-all、规格对比表 #spec-all）
+   - data-fold-grid：展开态切换为缩略图墙（.cat-grid-mode），而不是
+     恢复原始大图纵排 —— 否则一展开整页又回到 26 屏（实测教训）
+   - 页内锚点指向折叠体内部（如 #line-* 行）或含折叠体的区块
+     （如 #models-compared）时：先自动展开，再平滑滚动
+   ============================================================ */
+(function () {
+  var FOLDED = 'is-folded', GRID = 'cat-grid-mode';
+  var bars = document.querySelectorAll('.cat-fold-bar[data-fold]');
+  if (!bars.length) return;
+
+  Array.prototype.forEach.call(bars, function (bar) {
+    var body = document.getElementById(bar.getAttribute('data-fold'));
+    if (!body) return;
+    bar.hidden = false;
+    var grid = bar.hasAttribute('data-fold-grid');
+    var toggle = bar.querySelector('.cat-fold-toggle');
+    body.classList.add(FOLDED);
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+
+    bar._expand = function () {
+      body.classList.remove(FOLDED);
+      if (grid) body.classList.add(GRID);
+      if (toggle) toggle.setAttribute('aria-expanded', 'true');
+    };
+    bar._fold = function () {
+      body.classList.add(FOLDED);
+      body.classList.remove(GRID);
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    };
+    if (toggle) toggle.addEventListener('click', function () {
+      if (body.classList.contains(FOLDED)) bar._expand(); else bar._fold();
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target || !e.target.closest) return;
+
+    // 缩略图墙：点击缩略图 = 打开该页大图（复用既有 .cat-zoom 灯箱）；
+    // 点在链接本身（放大查看）时不接管
+    var fig = e.target.closest('.cat-fig');
+    if (fig && fig.closest('.cat-grid-mode')) {
+      var zoom = fig.querySelector('a.cat-zoom');
+      if (zoom && !e.target.closest('a')) { e.preventDefault(); zoom.click(); }
+      return;
+    }
+
+    // 锚点代理：data-jump 的 chips 始终平滑滚动；
+    // 指向折叠体内部 / 含折叠体的区块时先展开
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = (a.getAttribute('href') || '').slice(1);
+    var target = id && document.getElementById(id);
+    if (!target) return;
+    var inFold = target.closest('.cat-fold-body');
+    var host = (inFold && inFold.classList.contains(FOLDED)) ? inFold
+      : (target.querySelector ? target.querySelector('.cat-fold-body.' + FOLDED) : null);
+    if (!a.hasAttribute('data-jump') && !host) return;
+    e.preventDefault();
+    if (host) {
+      Array.prototype.forEach.call(bars, function (b) {
+        if (b.getAttribute('data-fold') === host.id && b._expand) b._expand();
+      });
+    }
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (history.replaceState) history.replaceState(null, '', '#' + id);
+  });
+})();
