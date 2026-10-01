@@ -1456,18 +1456,34 @@ if (form) {
     bar.hidden = false;
     var grid = bar.hasAttribute('data-fold-grid');
     var toggle = bar.querySelector('.cat-fold-toggle');
-    body.classList.add(FOLDED);
-    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    // 缩略图墙（data-fold-grid）默认直接显示（用户设定：画册浏览区默认可见），
+    // 按钮用于收起/再展开；其余折叠体（规格对比表）默认收起、按需展开
+    body.classList.add(grid ? GRID : FOLDED);
+    if (toggle) toggle.setAttribute('aria-expanded', grid ? 'true' : 'false');
+
+    // 按钮文案随状态切换：非默认态显示「收起」，回到默认态显示原文案
+    var labEN = toggle ? toggle.querySelector('.lang-en') : null;
+    var labZH = toggle ? toggle.querySelector('.lang-zh') : null;
+    var initEN = labEN ? labEN.textContent : '';
+    var initZH = labZH ? labZH.textContent : '';
+    function setLabel(collapsed) {
+      if (!labEN) return;
+      labEN.textContent = collapsed ? initEN : 'Collapse';
+      labZH.textContent = collapsed ? initZH : '\u6536\u8d77';
+    }
+    setLabel(!grid);
 
     bar._expand = function () {
       body.classList.remove(FOLDED);
       if (grid) body.classList.add(GRID);
       if (toggle) toggle.setAttribute('aria-expanded', 'true');
+      setLabel(false);
     };
     bar._fold = function () {
       body.classList.add(FOLDED);
       body.classList.remove(GRID);
       if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      setLabel(true);
     };
     if (toggle) toggle.addEventListener('click', function () {
       if (body.classList.contains(FOLDED)) bar._expand(); else bar._fold();
