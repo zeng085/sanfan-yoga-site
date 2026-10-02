@@ -19,6 +19,17 @@ Allow: /
 User-agent: Claude-User
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+# Google — classic search + AI Overviews
+User-agent: Googlebot
+Allow: /
+
+# Apple — Siri / Spotlight / Safari search suggestions
+User-agent: Applebot
+Allow: /
+
 # Perplexity
 User-agent: PerplexityBot
 Allow: /

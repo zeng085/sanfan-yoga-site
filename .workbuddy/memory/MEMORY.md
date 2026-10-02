@@ -21,12 +21,15 @@
   **逐 blob 比对**，三类差异必须全 0 → ③ 清单两法交叉验证（远程树 vs 本地 HEAD 树 / `git diff`）
 - ⚠️ **本地 `origin/main` 是陈旧缓存**：API 建独立 commit，不更新本地 ref → `git log origin/main..HEAD`
   报「待推 65 个」**全是假象**
-- **已推起点表**（下次用最新的）：`0d10b7d9`→`b94f9879d5`（分类页 1381 文件，09-26）；
+- **已推起点表**（按时间序，下次取**最后一行**）：`0d10b7d9`→`b94f9879d5`（分类页 1381 文件，09-26）；
   `41e1ff5a`→`ba4fa0cc52`（移动端 P0+P1，1370 文件，09-27）；
-  ⭐ `a19e4a0b`→`7705a32b6d`（**普拉提 9 页画册重构，1445 文件，10-01**）；
-  ⭐ `02d6e1ab`→`1188a4c463`（**灯箱标题修复，1336 文件，10-01**）；
-  ⭐ `1853d5a2`→`8b31f81a2a`（**缩略图墙+规格表折叠，1340 文件，10-01**）；
-  ⭐ `f53ca5a1`→`b57d64c7ce`（**排版修复+全站表格+desc 改写+CSV 转 LF，1339 文件，10-01**）
+  `a19e4a0b`→`7705a32b6d`（普拉提 9 页画册重构，1445 文件，10-01）；
+  `02d6e1ab`→`1188a4c463`（灯箱标题修复，1336 文件，10-01）；
+  `f53ca5a1`→`b57d64c7ce`（排版修复+全站表格+desc 改写+CSV 转 LF，1339 文件，10-01）；
+  `1853d5a2`→`8b31f81a2a`（缩略图墙+规格表折叠，1340 文件，10-01）；
+  ⭐ `f7760479`→`5556e3a39b`（**画册墙改默认显示，1336 文件，10-01**）→ **当前 START = `f7760479`**
+  ⚠️ 起点脚本 `verify_push_scope_20260927.py` 的 `START` 曾忘更新（留在已推的 `1853d5a2`）
+  → **推送成功后第一件事就是改 `START` + 补起点表注释 + 同步 MEMORY.md**（10-02 已修正）
 - ⚠️ ~~推送管道会把文本 CRLF 归一为 LF~~（已根除 10-01：`pilates_catalog_2026_models.csv`
   本地转 LF 随 `f53ca5a1` 推送，此后不再产生假差异）
 - ⚠️ 推送成功日志末尾的「本地对齐：git reset --soft …」是 v2 残留提示，**照做=死局**
@@ -37,7 +40,50 @@
 - ⚠️ 闸二（内容级扫密钥）**别自己逐文件读**（1370 文件 → SIGTERM）→ 用 `git grep -n -I -E … HEAD -- .`；
   且 `git grep …| head` 的 `$?` 是 head 的退出码，不能当判据
 
-## 判据铁律（Top 16，全 25 条见全量版）
+## GEO 审计工具链（2026-10-02 建立）
+- ⭐ **唯一带可执行引擎的技能是 `geo-optimizer` v4.18.3**（`geo` CLI + Python API，47 项引用度）。
+  **其余 `seo-*` 技能只有 SKILL.md、无脚本**（其内文引用的 `${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo`
+  本机不存在）→ 只能当 rubric 用，别期待能跑。`seo-ops` 带 `gsc_client.py`（真实收录数据唯一来源）
+  但**未授权**（需 `GOOGLE_CLIENT_ID/SECRET`，本机无 token）→ 真实收录/排名**拿不到**。
+- ⭐⭐ **引擎对本地地址恒判 0 分**：`geo audit` 与所有 `audit_*` 都走 `utils.http.fetch_url`，
+  该函数**内置反 SSRF** → 传 `http://127.0.0.1:8866` 得 `None,"Unsafe URL"`
+  （实测 `audit_robots_txt` 得 `found=False`，而 curl 同址 200）。
+  **解法 = `i18n_build/_geo_local_harness.py`**：把 `sys.modules` 里所有 `geo_optimizer*`
+  的 `fetch_url` 换成**磁盘垫片**（URL→仓库文件，返回带 `.status_code/.text/.headers` 的对象），
+  但 **base_url 仍传 `https://fjsanfan.com`** → canonical/内链/hreflang 判据看到生产形态 URL
+  → 可直接调官方编排器 `run_full_audit`，判分与线上同构，**无需起服务器**。
+- ⭐⭐ **总分不能当单页质量证明**：8 类目里 5 个**全站同值**
+  （robots / llms / ai_discovery / signals / schema = **54/85，占 64%**，补 robots 前是 51/82=62%），
+  页面级只有 meta + content + brand_entity + negative_penalty ≈ 27–31 分。
+  → 全站 81→85 的差距只来自页面级那几分。**判单页质量看 47 项引用度（区分度 41–60）与目标 query 覆盖。**
+- ⭐⭐ **`Statistics Addition` 对本站是假阴性**：`_STAT_PATTERNS` 只匹配 `%`/千分位/`$`/`million`/`Nx`
+  → **`1190 × 700 × 1170 mm`、`85 kg`、装箱件数全抓不到**（`tables_with_data` 复用同一正则，规格表也不计）。
+  实测「看不见的规格数字」（补方法论段后）：layout 117 / reformers 67 / oem 51 / commercial 24。
+  → **别改数字格式**；要补的是**句子级**一手事实陈述。
+- ✅ **`citation_bots_explicit` 判据**：`CITATION_BOTS = {Googlebot, Claude-SearchBot, Applebot,
+  PerplexityBot, OAI-SearchBot}`，**必须每个都有显式 `User-agent` 规则**（通配 `*` 兜着不算）。
+  10-02 已补 3 个 → `True`（站点级 +3 分）。新增 bot 时记得同步这里。
+- ⭐⭐ **一手数据 / 引用来源两项的判据（读源码确认，别凭猜）**——
+  `core/citability.py::detect_first_party_data` 三项累加（上限 4）：
+  ① `_FIRST_PARTY_PATTERNS`（`our research`/`we analyzed`/`our data shows`/`we found`/`we tested`/
+     `we measured`…）**≥2 命中 +2、≥1 +1**；
+  ② `_OWN_DATA_RE` = `\b(?:we|our team|our company)\s+\w+\s+\d+` —— **必须「we + 一个词 + 数字」紧邻**，
+     中间夹别的词就不算（所以 `We measured 220 kg…` 行，`our team recorded the spread across…` 不行）；+1；
+  ③ Methodology 标题：`h_text` **恰好等于** `our methodology`/`methodology` 等（带别的字不算）+1。
+  `cite_sources`：`权威外链×2 + 外链×1 + <cite>×2 + References/Sources 标题×2`，上限 6；
+  `wikipedia.org` 在 `_AUTHORITATIVE_DOMAINS` 内，`.org/.edu/.gov` 也算权威 TLD。
+  → 实测：加 1 段 `Our methodology` + 2 个 Wikipedia 外链，`First-Party Data` 0/4→**4/4**、
+  `Cite Sources` 1/6→**6/6**。总 +4 分，页面级得分 27→31。
+- ⭐⭐ **数字溯源 SSOT：`i18n_build/pilates_figures_20261002.py`**（详见铁律 26–28）——
+  基准是**已上线族页**（不是 reports 里的 CSV，那份缺行），两种形态（总表 `<tr>` + 型号卡）都要抓；
+  提供 `verify_numbers`（尺寸/毛重集合归属）与 `verify_superlatives`（最高级断言 = 算出的极值）。
+  已接入 `verify_pilates_blog_20261002.py`。**改普拉提文案后必跑。**
+- ⭐ **双语 DOM 对照法**：站点每页内嵌 `.lang-en`+`.lang-zh`，判「中文副本有没有污染判分」
+  = 移除 `.lang-zh` 后重跑引用度。实测**仅英文一律更低（−1~−6）且基线页同幅** → 对照公平、无虚高。
+- 审计脚本：`i18n_build/audit_pilates_blog_geo_20261002.py`（支持 `--render-only` 免重算引擎；
+  **入链扫描必须单次遍历**——6 次遍历 2500 文件让耗时从 1m07s 涨到 5m02s）
+
+## 判据铁律（本表 33 条，⚠️ 编号 13/14/15 有重复，按内容判读；全量版见 reference）
 1. ⭐ **同一文件的多个 Edit 不能并行**：只有最后一个落盘，另几处静默丢失
 2. ⭐ **「同串同步」先数清有几份**：HTML 转义形态不同就不算同串（meta 的 `&amp;` vs JSON-LD 的 `&`）
 3. ⭐ 替换式脚本：落盘前 `assert 'href="href="' not in out`；**先摘旧块再重插**；错则先回滚再重跑
@@ -108,6 +154,41 @@
     并存、靠 CSS 切换，`figcaption.textContent` 会读出两套语言+链接文案粘连
     （线上实测 `"2026 catalogue · page 032026 画册 · 第 03 页 · view larger放大查看"`）
     → 修法 `main.js capText()`：`:scope > span.lang-*` + `getComputedStyle().display!=='none'`
+22. ⭐⭐ **FAQPage 结构化数据必须有可见内容对应**：站内既有 10 篇博客**只放 LD、不放可见问答**
+    → 属不合规（富结果会被判 spam）。新篇一律「题作 `<h3>`、答作 `<p>`」，
+    校验断言「LD 里的题 N/N 在可见正文出现」；FAQ 内容要写**真实采购决策问句**（GEO 引用友好），
+    不是关键词堆
+23. ⭐⭐ **`git grep` 不覆盖未跟踪文件** → 新增文件的密钥闸必须换**直接检索**（否则闸二假绿）。
+    配套三条 grep 坑（本轮又各踩一次）：
+    ① BSD grep 的 `\|` 交替**失效** → 一律 `grep -E`（曾误判「MEMORY.md 起点表没更新」）
+    ② `grep -c` 数的是**行数**不是次数 → 精确计数用 `-o … | wc -l`
+    ③ 增删行配对自检时 `grep -vE '^---'` 会**漏掉内容本身以 `-` 开头的行**（如 `.md` 列表项
+       `-- Pilates apparatus line: …`）→ 差额要人工复核，别用计数当判据
+24. ⭐⭐ **「自己的旧文案是错的」也要修，但要修成可验证的分项口径**：站点既有
+    「41 wooden studio models」与实况（80 型号，含铝合金线）矛盾 → 改写为
+    「80 models（46 reformer / 11 tower / 9 chair / 7 barrel / 4 cadillac / 3 specialty）」
+    → **数字要能对上 `model-card` 实测计数**，别只换一个更大的数
+25. ⭐ **推送成功后第一件事：更新起点脚本 `START` + 起点表注释 + MEMORY.md**（三处同步）。
+    实测漏更新（留在已推的 `1853d5a2`）→ 下一轮三步法会从**已推点**开始比对，
+    表现为「三类差异=0 但清单多出一整批」的诡异结论
+26. ⭐⭐ **极值/统计类断言必须从 SSOT 算，不能手写**（本轮最贵的一课，代价是两处已发布文案出错）：
+    手写的「最长 2570 mm」「最高 860 mm」都脱离了数据源 —— 真值 **2800 mm（AL 13 MC）**、
+    塔架类 **2000 mm**（860 只是 AL 12-CR 自身高度）。→ 建立
+    `i18n_build/pilates_figures_20261002.py`：从已上线族页算 `longest/widest/tallest/heaviest`，
+    页面里**每个尺寸/毛重必须能溯源**（集合归属），**最高级断言必须等于算出的极值**。
+    校验器写完必须 **A/B 实证**（把旧错误塞回临时副本，确认真能报出且原件零误报）——
+    实测 4/4 抓到、零误报
+27. ⭐⭐ **选基准先问「这份数据完整吗」**（两个坑都在本轮踩过）：
+    ① 别用 `reports/pilates_catalog_2026_models.csv` —— 缺行（69 vs 真 80），
+       会把 AL 19-F / AL 8-Y 这类**合法数字判成「无据」**（假警报）；
+    ② 别只用型号总表 `<tr><td class="model">` —— **梯桶族页只有型号卡没有总表**，
+       必须两种形态都抓（`_ROW_RE` + `_CARD_RE`），按型号名去重后才得 80 个型号。
+    → 「页面上有这个数字」≠「数据源里有」，反之亦然；**基准错 = 整个闸门没有意义**
+28. ⭐ **正则式探针必须先把「不该匹配的形态」剔除，并先测再定阈值**：
+    「最长的 2800 × 680 × 450 mm」会被匹配到三元组末尾的 `450 mm`（假警报）
+    → 跑最高级检查前先 `_TRIPLE_RE.sub()` 剔除三级尺寸；
+    且间隔符要**紧**（`[^.,;:]` 不容逗号），否则「the longest side, so a standard 900 mm door」
+    被读成「最长=900」。**先跑一遍看误报清单，逐个判完再定稿**
 
 ## 内容层结构（两种语言机制勿混）
 - 行内配对 span：products/applications/首页/blog 卡片；块级 `div.lang-zh` **只在 10 个 blog 文章页**
@@ -127,11 +208,33 @@
   → `main.js capText()` 按 computed display 取当前语言、排除 `<a>` 内文案；
   ladder-barrel 3 处放大链接补 `cat-zoom`（此前走原生新窗口，与另 5 页不一致）
   ⭐ `cat-zoom` 只存在于 pilates 6 页 —— 别在首页查页面级钩子（假 ✗）
-- ✅ **折叠方案 v2 已上线（8b31f81a2a）**：画册展开=缩略图墙（cat-grid-mode，
+- ✅ **折叠方案 v3 已上线（5556e3a39b）**：画册展开=缩略图墙（cat-grid-mode，
   点图复用灯箱）、6 个 EN 族页规格对比表默认折叠（#spec-all）、
-  main.js 折叠泛化 + 锚点代理自动展开；版本号 `20261001g`
+  main.js 折叠泛化 + 锚点代理自动展开；版本号 `20261001h`；
+  **画册墙默认直接显示**（data-fold-grid 初始即 GRID，按钮文案随状态切换「收起/Collapse」）
   ⚠️ 探针：**父级 display:none 时子元素 computed display 不变**（查容器不查卡片）
   ⏸ **6 语言版 pilates 页仍是旧体系**（用户：先做好英文，不急）
+- ✅ **普拉提板块 6 篇 SEO/GEO 博客已写好（10-02，已提交未推送）**：此前板块页挂的博客引用位
+  **目标页根本不存在（死链）**，现补齐 6 篇（`blog/pilates-reformer-buyers-guide|apparatus-differences|
+  studio-equipment-list|oem-pilates-equipment-china|studio-layout-guide|equipment-commercial-use`）。
+  双语同页；9 类校验全绿（含 **FAQ 题 5/5 在可见正文出现**——站内旧 10 篇只放 LD 不放可见问答=不合规）；
+  E 级信息零命中；接入 blog.html 索引卡 / sitemap / llms.txt+llms-full.txt / pilates 首页 `#buyer-guides`。
+  ⭐ **型号数口径修正 41 → 80**（旧文案「41 wooden models」不实，新文案带分项 46/11/9/7/4/3）
+  ⭐ **未引用商标/认证/价格/MOQ/弹簧/承重**（延续器械页无主张口径）
+  ⏸ 6 语言译文待 DeepL 额度（**主 key 500k 已耗尽；备份 key 仅剩 39,732**；用户称有第 3 个 key
+  但磁盘/历史会话未找到 → 等提供。工作量：9 个 EN 页正文 98,458 字符 ×6 语言 ≈ 59 万）
+- ✅ **6 篇博客已过 GEO/SEO 审核 + P1/P2/P3 全部实施（10-02）**：
+  · 改进后总分 **84–85**（good；基线 81–85）；47 项引用度 **55–60**（原 41–56）；
+    `First-Party Data` 0/4→**3–4/4**、`Cite Sources` 1/6→**6/6**（加 `Our methodology` 段 +
+    2 个 Wikipedia 外链）；站点级 54（补 robots 后 +3）
+  · 负面信号 0（仅 oem 页 −1：`model` 密度 3.2%/severity low，可辩护）；
+    **36/36 目标 query 可检索**（H2/H3 或正文 ≥0.75），标题层锚定 15 条（42%）；
+    可发现性 6/6 全绿（sitemap/canonical/hreflang/llms/JSON-LD/各 2 入链）
+  · ⚠️ **总分 64% 是全站同值 → 不能当单页质量证明**（详见「GEO 审计工具链」节）
+  · ⚠️ **真实收录/排名/AI 引用一项都验不了**（页面未部署 + GSC 无凭据）→ 部署后才能验
+  · ⚠️ 2 个 Wikipedia 外链**可达性未实测**（沙箱无外网）→ 部署后复核
+  · ⚪️ 仍待用户定：**引语（Quotation +41%，影响最高）**——引不存在的专家=编造，不做
+  · 本轮只改 6 个博客页 + `robots.txt`，**未 bump 版本号**（新段落全用既有 `.article-body` 样式）
 - ⏸ 13 台缺材质/毛重（画册未印）→ 等工厂；`i18n_build/__pycache__/translator.cpython-313.pyc`
   已被跟踪，建议 `git rm --cached`
 - ✅ **移动端 P0 五处 + P1 三项已上线**（远程 `ba4fa0cc52`，线上 `?v20260927b`；

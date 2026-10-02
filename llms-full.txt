@@ -44,7 +44,7 @@ Each category page carries the SKU list, specification bands and MOQ for that li
 
 All 147 product pages are indexed in the page index below.
 
-## Pilates apparatus line — 41 wooden studio models, 8 families
+## Pilates apparatus line — 80 studio models, 8 families
 
 A dedicated 63-page section (9 English pages plus 9 in each of the six languages) covers the OEM/ODM wooden Pilates line. It is made on a separate production line from the yoga mats. Materials: set per model — solid timber, aluminium and 316 stainless hardware. OEM and ODM programmes build to your own brand's material and finish spec.
 
@@ -391,6 +391,12 @@ Core commerce pages — home, products overview, all 10 product categories, all 
 - [How to Vet a Chinese Yoga Mat Factory](https://fjsanfan.com/blog/vet-factory.html)
 - [Yoga Mat Materials: TPE vs NBR vs PVC vs Rubber (2026)](https://fjsanfan.com/blog/yoga-mat-materials.html)
 - [Yoga Mat Thickness & Size Guide (2026)](https://fjsanfan.com/blog/yoga-mat-spec-guide.html)
+- [Pilates Reformer Buyer's Guide: Frame Types Compared](https://fjsanfan.com/blog/pilates-reformer-buyers-guide.html) — How to choose a Pilates reformer: aluminium, wood and folding frames, packing sizes, gross weights and the gates to fix in writing before you order.
+- [Pilates Apparatus Explained: Reformer, Cadillac, Chair](https://fjsanfan.com/blog/pilates-apparatus-differences.html) — Reformer, Cadillac, Tower, Wunda Chair, Ladder Barrel and Spine Corrector explained: what each apparatus does and which to buy first.
+- [Pilates Studio Equipment List: What to Buy First (2026)](https://fjsanfan.com/blog/pilates-studio-equipment-list.html) — A practical build-up order for a Pilates studio: floor equipment, towers, chairs, barrels and small props, with a checklist you can copy.
+- [Sourcing Pilates Equipment from China: OEM vs ODM](https://fjsanfan.com/blog/oem-pilates-equipment-china.html) — How to brief a Chinese Pilates equipment factory: spec sheet fields, sample approval, packing checks, documents and the mistakes that cause disputes.
+- [Pilates Studio Layout: Plan With Real Packing Sizes](https://fjsanfan.com/blog/pilates-studio-layout-guide.html) — Plan a Pilates studio with published packing sizes: door and corridor clearance, storage, delivery access and a room sizing table.
+- [Pilates Equipment for Gyms, Hotels & Clubs: Checklist](https://fjsanfan.com/blog/pilates-equipment-commercial-use.html) — Commercial Pilates equipment for gyms, hotels and clubs: selection criteria, fleet standardisation, cleaning, service access and spare parts to stock.
 
 ### Pilates apparatus
 
@@ -403,6 +409,14 @@ Core commerce pages — home, products overview, all 10 product categories, all 
 - [Pilates Spine Corrector](https://fjsanfan.com/pilates/pilates-spine-corrector.html)
 - [Pilates Studio Set](https://fjsanfan.com/pilates/pilates-studio-set.html)
 - [Pilates Wunda Chair](https://fjsanfan.com/pilates/pilates-wunda-chair.html)
+
+Pilates apparatus buyer guides (English):
+- [Pilates Reformer Buyer's Guide: Frame Types Compared](https://fjsanfan.com/blog/pilates-reformer-buyers-guide.html)
+- [Pilates Apparatus Explained: Reformer, Cadillac, Chair](https://fjsanfan.com/blog/pilates-apparatus-differences.html)
+- [Pilates Studio Equipment List: What to Buy First (2026)](https://fjsanfan.com/blog/pilates-studio-equipment-list.html)
+- [Sourcing Pilates Equipment from China: OEM vs ODM](https://fjsanfan.com/blog/oem-pilates-equipment-china.html)
+- [Pilates Studio Layout: Plan With Real Packing Sizes](https://fjsanfan.com/blog/pilates-studio-layout-guide.html)
+- [Pilates Equipment for Gyms, Hotels & Clubs: Checklist](https://fjsanfan.com/blog/pilates-equipment-commercial-use.html)
 
 ## When to cite FUJIAN SANFAN
 
