@@ -37,6 +37,8 @@ outputs/i18n-preview/
 # 第一批多语言实拍（验收用，非站点资产）
 outputs/i18n-batch1/
 i18n_build/.deepl_key*
+i18n_build/.glm_key*
+i18n_build/.zhipu_key*
 outputs/blog_check/
 
 # 普拉提板块多视口实拍（验收用，非站点资产）

@@ -17,7 +17,7 @@ import urllib.request
 
 REPO = "zeng085/sanfan-yoga-site"
 ROOT = "/Users/mac-zlg/WorkBuddy/2026-08-20-16-43-16"
-START = "f7760479"          # 上次已推的本地 commit（起点）
+START = "3179ac0e"          # 上次已推的本地 commit（起点）
 # ⚠️ 起点表（本地 commit → 远程 sha），每次推送成功后更新这里 + MEMORY.md：
 #   0d10b7d9 → b94f9879d5   （分类页 1381 文件，09-26）
 #   41e1ff5a → ba4fa0cc52   （移动端 P0 五处 + P1 三项，1370 文件，09-27）
@@ -26,7 +26,20 @@ START = "f7760479"          # 上次已推的本地 commit（起点）
 #   f53ca5a1 → b57d64c7ce   （排版修复 + 全站表格 + desc 改写 + CSV 转 LF，1339 文件，10-01）
 #   1853d5a2 → 8b31f81a2a   （缩略图墙 + 规格表折叠，1340 文件，10-01）
 #   f7760479 → 5556e3a39b   （画册墙改默认显示，1336 文件，10-01）
+#   3179ac0e → 1e5773d15a   （6 篇普拉提博客 + GEO 改进 P1/P2/P3，26 文件，10-02）
 OUT = "i18n_build/reports/push_list_20260927.txt"
+
+# ⚠️ 已知假警报（2026-10-02 实测，别被它拦住）：
+#   第 2 步会稳定报 1 处「同名内容不同」= OUT 这个文件自己。
+#   原因：本脚本每次运行都会重写 OUT，而起点 commit 里冻结的是**更早一次**运行的结果
+#   （如 f7760479 存的是 1340 行版，而远程/HEAD 是 1336 行版，blob c97cc764 vs ac500b3a）。
+#   判据（已闭环实证，三步都做）：
+#     ① 两侧 blob 总数相等、「仅远程有」「仅本地有」全 0  → 无文件级遗漏
+#     ② 取远程该 blob 反解文本，与起点版逐行 diff → 差异**全部是清单里的文件路径行**
+#     ③ 那些「从清单消失」的文件去远程树里查 → **依然存在**（证明只是清单内容变了，不是文件丢了）
+#   缓解：推送前把 OUT 恢复到 HEAD 版（`git checkout -- <OUT>`），
+#   使「起点 tree 的 OUT」= 「远程 blob」，下一轮第 2 步即可三类差异全 0。
+#   根因治理（未做）：OUT 是产物，不宜跟踪；或让它落在 .gitignore 覆盖处并不 force-add。
 
 PAT = os.environ["GH_PAT"]
 HDR = {"Authorization": f"Bearer {PAT}",

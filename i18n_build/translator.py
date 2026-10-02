@@ -3,8 +3,9 @@
 """
 SANFAN 多语言翻译引擎
 
-主引擎 : DeepL API (tag_handling=xml + ignore_tags 保护术语，质量最佳)
-备引擎 : MyMemory Public API (无 key，质量一般且每日配额有限)
+主引擎 : GLM glm-5.3-flash（2026-10-02 起；行号锚定+完整性校验，见 translator_glm.py）
+备引擎 : DeepL API（双 key 额度均已耗尽，仅作 GLM 失败时的备胎）→ MyMemory Public API
+术语   : GLM 走 system prompt（GLOSSARY 原样交付）；DeepL 走 <xN> 标签 + ignore_tags
 
 术语保护机制:
   把受保护内容包成 <x0>TPE</x0> 形式，配合 DeepL 的 ignore_tags 让引擎原样保留。
@@ -44,7 +45,7 @@ _opener = urllib.request.build_opener(urllib.request.ProxyHandler({"http": _prox
 _lock = threading.Lock()
 _cache = {}
 _dirty = {"n": 0}
-_stats = {"deepl": 0, "mymemory": 0, "fail": 0, "chars": 0}
+_stats = {"glm": 0, "deepl": 0, "mymemory": 0, "fail": 0, "chars": 0}
 _quota_exhausted = False
 
 # ---------------------------------------------------------------- 术语保护
@@ -347,8 +348,54 @@ def _mymemory_call(texts, lang):
     return out, None
 
 
+# 2026-10-02 起主引擎 = GLM（DeepL 免费额度双 key 均已耗尽）；GLM 内部自带
+# 行号锚定 + 完整性校验 + 重试，校验不过返回 None 才轮到 DeepL/MyMemory。
+from translator_glm import glm_call as _glm_call, GLM_KEY as _GLM_KEY, \
+    _EN_MARK as _EN_MARK_SRC
+
+# 型号 SKU 保护（10-02 全量跑批实测）：型号名任何语言都原样保留。
+# "Chair 1-A" 被翻成 "Stuhl 1-A" 才是真错误——型号是编号不是词。
+# 数据源 = pilates_figures（80 个已上线型号，与站点 SSOT 同源）。
+try:
+    from pilates_figures_20261002 import ROWS as _PF_ROWS
+    _PF_IDENT = {m.strip(): m.strip() for m, _tr, _kg, _pg in _PF_ROWS
+                 if 2 <= len(m.strip()) <= 40}
+except Exception:
+    _PF_IDENT = {}
+_GLOSSARY_GLM = ({lg: {**d, **_PF_IDENT} for lg, d in GLOSSARY.items()}
+                 if _PF_IDENT else GLOSSARY)
+
+
 def _call_batch(texts, lang, src="EN"):
-    """主引擎失败则降级备引擎"""
+    """主引擎失败则降级备引擎（2026-10-02 起：GLM → DeepL → MyMemory）
+
+    ⚠️ GLM 路线不走 protect()/`<xN>` 标签：术语以 system prompt 交付（见 translator_glm）。
+    ⚠️ 缓存键 ENGINE_TAG 仍是历史值 "deepl"，**故意不改**——改了 = 全站缓存失效 =
+       下次构建把几千个已上线页面全部重翻（回归风险）。标签名不代表引擎。
+    """
+    if _GLM_KEY:
+        try:
+            res, err = _glm_call(texts, lang, src=src, glossary=_GLOSSARY_GLM)
+            if res is not None:
+                with _lock:
+                    _stats["glm"] += len(texts)
+                    _stats["chars"] += sum(len(t) for t in texts)
+                return res
+            print("[GLM] 批次校验未过: %s" % err)
+        except Exception as e:
+            print("[GLM] %s: %s" % (type(e).__name__, str(e)[:100]))
+        # ⭐ 拆分重试（10-02）：批校验不过/异常 → 对半拆各自重试，拆到单行为止。
+        #   es 轮实测两种整批降级：25 行批输出截断（finish=length）、12 行批
+        #   模型丢行（重喂 3 次仍缺 #12）。整批降级 = MyMemory 污染缓存；
+        #   拆到单行后几乎不可能失败 → GLM 纯度 100%，备引擎只剩
+        #   「单行仍失败」这一极窄路径。
+        if len(texts) > 1:
+            mid = len(texts) // 2
+            a = _call_batch(texts[:mid], lang, src=src)
+            b = _call_batch(texts[mid:], lang, src=src)
+            if a is not None and b is not None:
+                return a + b
+            return None          # 某单行仍失败 → 整批按失败走（不写缓存）
     try:
         res, err = _deepl_call(texts, lang, src=src)
         if not err:
@@ -427,7 +474,11 @@ def translate_lines(lines, lang, verbose=False, src="EN"):
     if not todo:
         return _repair_out(out, lang)
 
-    batches = [todo[i:i + DEEPL_BATCH] for i in range(0, len(todo), DEEPL_BATCH)]
+    # GLM 主引擎时批次上限 12：25 行实测出现过 finish=length 截断
+    # （长博客段落批，10-02 es 轮），截断 → 校验不过 → 降级污染缓存。
+    # 50 行实测必超时降级（10-02）；小批次 × 4 并发吞吐反而更高。
+    _batch = 12 if _GLM_KEY else DEEPL_BATCH
+    batches = [todo[i:i + _batch] for i in range(0, len(todo), _batch)]
 
     def _do(batch):
         texts = [lines[i] for i in batch]
@@ -443,9 +494,15 @@ def translate_lines(lines, lang, verbose=False, src="EN"):
                 # ⭐ 防「回声污染缓存」：兜底引擎 MyMemory 失败时会原样返回英文，
                 # 2026-09-12 第五批就是这样把 54 个产品页写成未翻译的 —— 而且一旦
                 # 写进缓存，下次命中缓存连 API 都不调（deepl=0），错误永久固化。
+                # 10-02 口径对齐：含英文功能词的回声 = 真失败（不写缓存）；
+                # 不含的 = 良性回声（型号 SKU/国际术语，原样即正确）→ 照常写缓存。
                 if _looks_translatable(lines[i]) and v.strip() == lines[i].strip():
-                    out[i] = lines[i]
-                    _stats["fail"] += 1     # 不写缓存，下次还能重翻
+                    if _EN_MARK_SRC.search(lines[i]):
+                        out[i] = lines[i]
+                        _stats["fail"] += 1     # 不写缓存，下次还能重翻
+                        continue
+                    out[i] = v
+                    _cache[_ck(lines[i], lang, src)] = v
                     continue
                 out[i] = v
                 _cache[_ck(lines[i], lang, src)] = v
@@ -490,7 +547,18 @@ def usage():
 
 
 def stats():
-    return dict(_stats)
+    d = dict(_stats)
+    try:
+        from translator_glm import USAGE as _u
+        d["glm_requests"] = _u["requests"]
+        d["glm_prompt_tok"] = _u["prompt_tokens"]
+        d["glm_completion_tok"] = _u["completion_tokens"]
+        d["glm_reasoning_tok"] = _u["reasoning_tokens"]
+        d["glm_retries"] = _u["retries"]
+        d["glm_fallbacks"] = _u["fallbacks"]
+    except Exception:
+        pass
+    return d
 
 
 def flush():

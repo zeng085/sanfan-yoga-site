@@ -467,8 +467,8 @@ def main():
     summary = {
         "generated": "2026-10-02",
         "site": SITE,
-        "note": ("本地就绪度审计。不能证明已被 Google/AI 收录或引用——"
-                 "页面尚未部署，且 GSC 未配置（无凭据）。"),
+        "note": ("本地就绪度审计。已部署（远程 1e5773d15a；线上⇄本地 12/12 逐字节一致），"
+                 "但不能证明已被 Google/AI 收录或引用——GSC 未配置（无凭据）。"),
         "targets": targets,
         "new_pages": NEW_PAGES,
         "engine": results,
@@ -559,9 +559,10 @@ def render(summary: dict) -> None:
     A("")
     A(f"日期 2026-10-02 · 站点 {SITE} · 判分引擎 geo-optimizer v4.18.3（官方编排器 `run_full_audit`）")
     A("")
-    A("> ⚠️ **本报告是「就绪度」审计。** 6 个页面**尚未部署**，GSC 也未配置凭据")
-    A("> （`seo-ops/gsc_auth.py` 需 `GOOGLE_CLIENT_ID`/`SECRET`，本机无 token 文件）")
-    A("> → **无法验证真实收录、排名与 AI 引用**。可验证部分见 §B–§E，不可验证部分见 §F。")
+    A("> ⚠️ **本报告是「就绪度」审计。** 6 个页面已于 2026-10-02 部署上线")
+    A("> （远程 `1e5773d15a`；已复核线上⇄本地 **12/12 逐字节一致**、6 页静态资源 9/9 HTTP 200）。")
+    A("> 但 `seo-ops/gsc_auth.py` 需 `GOOGLE_CLIENT_ID`/`SECRET`，本机无 token 文件")
+    A("> → **真实收录、排名与 AI 引用仍无法验证**。可验证部分见 §B–§E，不可验证部分见 §F。")
     A("")
 
     # ── 结论速览 ──
@@ -824,12 +825,16 @@ def render(summary: dict) -> None:
     A("")
     A("| 想验证的事 | 为什么现在验不了 | 什么时候能验 |")
     A("|---|---|---|")
-    A("| Google 是否收录这 6 个 URL | 页面**尚未部署**；GSC 未配置凭据 | 推送 + 部署后，用 GSC URL Inspection |")
+    A("| Google 是否收录这 6 个 URL | 页面**已部署**（10-02），但 GSC 未配置凭据 | 配 GSC 后，用 URL Inspection |")
     A("| 目标关键词是否有排名 | 同上 | 部署后 2–4 周看 GSC 查询报告 |")
-    A("| AI（ChatGPT/Perplexity/Gemini）是否引用 | 页面不在线上，AI 检索不到 | 部署后测；`geo citations` 需 LLM API key |")
+    A("| AI（ChatGPT/Perplexity/Gemini）是否引用 | 页面已在线，但 `geo citations` 需 LLM API key | 配 key 后测 |")
     A("| 真实流量/曝光 | 无 GSC / 无分析埋点数据 | 配 GSC 后 |")
     A("")
-    A("**可以现在就确定的**：§A–§E 全部是确定性判据（不依赖线上状态）。")
+    A("**已经确定的**：① §A–§E 全部是确定性判据（不依赖线上状态）；")
+    A("② **部署一致性已验**——本轮未改 CSS/JS（因而不 bump 版本号，「看资源版本号」这个常规判据失效），")
+    A("改用**本地⇄线上逐字节比对**：6 个博客页 + `blog.html` + `pilates/index.html` + `robots.txt` +")
+    A("`sitemap.xml` + `llms.txt` + `llms-full.txt` = **12/12 一致**（长度逐一相符，两侧均做 CRLF→LF 归一）；")
+    A("③ 6 页引用的静态资源（按 `/blog/` 解析相对路径后）**9/9 HTTP 200**。")
     A("")
 
     A("## G. 建议动作（按性价比排序）—— 状态已更新")
@@ -853,9 +858,13 @@ def render(summary: dict) -> None:
       "**需要你决定引谁**：引不存在的专家＝编造，不做 |")
     A("| ⏸ 未动 | — | 6 语言译文（等 DeepL 额度） | 覆盖 de / ja / ko / fr / it / es | — |")
     A("")
-    A("> 本轮只改了 6 个博客页与 `robots.txt`，未触碰任何族页 / 首页 / 语言版。")
-    A("> ⚠️ 两处外链的**可达性未能在本地实测**（沙箱无外网：`curl` 与 WebFetch 均超时）——"
-      "选用的是 Wikipedia 的稳定条目，但严格说这一步是「未验证」，部署后应复核一次。")
+    A("> ✅ **已上线**：远程 `1e5773d15a`（26 文件；部署状态 `success`）。")
+    A("> 本轮只改了 6 个博客页、`blog.html`、`pilates/index.html`、`robots.txt`、`sitemap.xml`、")
+    A("> `llms.txt` / `llms-full.txt` 与工具脚本，**未触碰任何族页 / 首页主体 / 语言版**。")
+    A("> ⚠️ 两处外链的**可达性仍未能实测**：本机 DNS 把 `en.wikipedia.org` 解析到 `31.13.88.169`")
+    A("> （Meta 网段）——**DNS 污染**，TCP 连接挂死；直连 `curl` 与 WebFetch 两条路都失败。")
+    A("> 这是**本机网络环境**问题、与站点无关（`fjsanfan.com` 与 `api.github.com` 均正常）。")
+    A("> 选用的是 Wikipedia 的稳定条目，但严格说这一步仍应标为「未验证」——部署后换个网络复核一次即可闭合。")
     A("")
 
     REPORT_MD.parent.mkdir(parents=True, exist_ok=True)

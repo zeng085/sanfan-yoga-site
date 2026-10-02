@@ -221,8 +221,17 @@ a { color: inherit; text-decoration: none; }
 }
 .hero::after {
   content: ""; position: absolute; inset: 0;
-  background: url("../../assets/img/factory-building.webp") center/cover no-repeat;
+  /* ⚠️ 素材是一张带中文标语/认证卡/数据条的营销海报（不是纯实拍）。
+     放大裁剪只取右侧厂房楼体，把左侧中文与底部数据条出框（10-02 买家视角审计）。
+     换新厂照（无文字）时可恢复 center/cover。 */
+  background: url("../../assets/img/factory-building.webp") no-repeat;
+  background-size: 220%;
+  background-position: 100% 30%;
   opacity: .22; mix-blend-mode: multiply;
+}
+@media (max-width: 768px) {
+  /* 移动端 hero 接近方形，190% 缩放会露出海报底部数据条 → 加大裁切、贴顶 */
+  .hero::after { background-size: 320%; background-position: 100% 10%; }
 }
 .hero-inner { position: relative; z-index: 2; padding: 84px 0 92px; }
 .hero .eyebrow {
