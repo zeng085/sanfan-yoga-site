@@ -29,6 +29,7 @@ import os
 import re
 import json
 import time
+import socket
 import urllib.request
 import urllib.error
 
@@ -56,6 +57,8 @@ GLM_TIMEOUT = int(os.environ.get("GLM_TIMEOUT", "480"))
 # 单请求要 2–6 分钟；120s 必超时 → 降级链会拿 MyMemory 顶上并污染缓存（10-02 实测踩坑）。
 GLM_RETRIES = 2            # 校验失败后的重试次数（首次 + 2 = 最多 3 次请求）
 GLM_MAX_TOKENS = int(os.environ.get("GLM_MAX_TOKENS", "16384"))
+# 思考强度（顶层 reasoning_effort）：low / medium / high。默认 low —— 见 _http_call 注释。
+REASONING_EFFORT = os.environ.get("GLM_REASONING_EFFORT", "low")
 
 _LANG_NAME = {"de": "German", "ja": "Japanese", "ko": "Korean",
               "fr": "French", "it": "Italian", "es": "Spanish",
@@ -218,13 +221,23 @@ def validate_batch(sources, vals, lang):
 def _http_call(messages, n_lines):
     body = {"model": GLM_MODEL, "temperature": 0, "max_tokens": GLM_MAX_TOKENS,
             "messages": messages}
+    # ⭐⭐ 思考强度：glm-5.3-flash **始终思考**，`thinking` 参数各种写法全 400
+    #   （code 1210，错误信息还误导人）。真正的旋钮是顶层 `reasoning_effort`。
+    #   实测同一批 12 行：默认 → 8268 reasoning tok / 156s（偶尔撞 max_tokens 截断）；
+    #   reasoning_effort=low → **0 reasoning tok / 4.2s**。这是本链路的最大提速点。
+    if REASONING_EFFORT:
+        body["reasoning_effort"] = REASONING_EFFORT
     req = urllib.request.Request(
         GLM_URL, data=json.dumps(body).encode("utf-8"),
         headers={"Authorization": "Bearer " + GLM_KEY, "Content-Type": "application/json"})
     last_err = None
+    # 超时按批量三档缩放（10-02 实测：一条挂死请求会把整页拖住 577s）：
+    #   n>8 → 180s ／ 4<n≤8 → 120s ／ n≤4 → 90s
+    # 拆批后的每一级都比上一级更快失败，级联总代价有界。
+    _timeout = GLM_TIMEOUT if n_lines > 8 else (120 if n_lines > 4 else 90)
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=GLM_TIMEOUT) as r:
+            with urllib.request.urlopen(req, timeout=_timeout) as r:
                 d = json.loads(r.read().decode("utf-8"))
             USAGE["requests"] += 1
             u = d.get("usage") or {}
@@ -250,6 +263,11 @@ def _http_call(messages, n_lines):
             return None, "HTTP %s %s" % (e.code, detail)
         except Exception as e:
             last_err = "%s: %s" % (type(e).__name__, str(e)[:100])
+            # ⭐ 超时**不在本层重试**：同批同超时重试只会把墙钟时间翻 3 倍
+            #   （实测 3×180s = 577s 卡死整页）。交给上层拆批器 —— 拆小后
+            #   单请求更快，且小批次超时只有 90s。
+            if isinstance(e, (TimeoutError, socket.timeout)) or "timed out" in str(e).lower():
+                return None, "超时（%ds，n=%d）→ 拆批" % (_timeout, n_lines)
             time.sleep(2 * (attempt + 1))
     return None, last_err
 
@@ -283,7 +301,12 @@ def glm_call(texts, lang, src="EN", glossary=None):
                 return vals, None
             last_problems = problems
         USAGE["retries"] += 1
-        if attempt < GLM_RETRIES:
+        # ⭐ 结构性问题（模型丢行/编号不齐）**重试同批次命中率极低**：10-02 实测
+        #    es 轮同一 12 行批重喂 3 次仍缺同一行，而拆半后必然成功（译文里没有
+        #    该行可丢）。所以结构性问题只重试 1 次就交给拆批器，省下约 60s/批。
+        #    截断（finish=length）更早：_http_call 直接返回 err，不走重试。
+        structural = any(("编号" in p or "缺[" in p or "段，" in p) for p in last_problems)
+        if attempt < GLM_RETRIES and not (structural and attempt >= 1):
             # 第二次起把失败原因回喂，并加严措辞
             messages = messages[:2] + [
                 {"role": "assistant", "content": content or ""},

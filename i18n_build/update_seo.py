@@ -32,14 +32,26 @@ def exists(rel, lg):
     return os.path.exists(p)
 
 
+def norm_dir(u):
+    """把 `.../index.html` 收成目录形式 `.../`。
+
+    ⚠️ 2026-10-02 修：本脚本原先直接 `SITE + "/" + rel`，对 `pilates/index.html`
+    这类子目录首页会写出 `.../pilates/index.html`，而页面自己的 canonical 与
+    build_pages.norm_lang_url 用的都是目录形式 `.../pilates/` —— 同一页两种 URL
+    （canonical 一个形、hreflang/sitemap 另一个形）会被判重复内容。
+    三处必须同形，所以统一在这里收口。
+    """
+    return re.sub(r"index\.html$", "", u)
+
+
 def variants(rel):
     """只列出真实存在的语言版本。
     注意：不再声明 hreflang="zh"——站点没有独立 /zh/ 目录，
     把英文 URL 同时声明成 en 和 zh 是冲突信号。中文走页面内切换器，不是独立语言版本。"""
     def u(lg):
         if lg is None:
-            return SITE + "/" if rel == "index.html" else SITE + "/" + rel
-        return (SITE + "/" + lg + "/") if rel == "index.html" else (SITE + "/" + lg + "/" + rel)
+            return SITE + "/" if rel == "index.html" else norm_dir(SITE + "/" + rel)
+        return (SITE + "/" + lg + "/") if rel == "index.html" else norm_dir(SITE + "/" + lg + "/" + rel)
     out = [("en", u(None))]
     for lg in LANGS:
         if exists(rel, lg):
@@ -100,7 +112,15 @@ def update_sitemap():
     keep = []
     for e in entries:
         loc = re.search(r"<loc>(.*?)</loc>", e).group(1)
-        path = loc[len(SITE):].lstrip("/") or "index.html"
+        path = loc[len(SITE):].lstrip("/")
+        # ⚠️ 2026-10-02：旧条目里子目录首页是**目录形式**（`pilates/`），而 PAGES 存的是
+        #   `pilates/index.html` → 直接比较会漏判 → 旧条目被 keep 留下 → 重建后又加一条
+        #   目录形式 → sitemap 里同页两条（实测 applications/ 与 pilates/ 各重复一次）。
+        #   先把 path 归一到 PAGES 的写法再比。
+        if not path:
+            path = "index.html"
+        elif path.endswith("/"):
+            path += "index.html"
         if path in PAGES or re.match(r"^(de|ja|ko|fr|it|es)/", path):
             continue
         keep.append(e)
@@ -108,7 +128,7 @@ def update_sitemap():
     out = [head.rstrip()]
     # 英文原页 + hreflang
     for rel in PAGES:
-        loc = SITE + "/" if rel == "index.html" else SITE + "/" + rel
+        loc = norm_dir(SITE + "/") if rel == "index.html" else norm_dir(SITE + "/" + rel)
         links = "\n".join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (l, u)
                           for l, u in variants(rel))
         out.append("  <url>\n    <loc>%s</loc>\n%s\n    <changefreq>weekly</changefreq>\n"
@@ -119,7 +139,8 @@ def update_sitemap():
         for rel in PAGES:
             if not exists(rel, lg):
                 continue
-            loc = (SITE + "/" + lg + "/") if rel == "index.html" else (SITE + "/" + lg + "/" + rel)
+            loc = norm_dir((SITE + "/" + lg + "/") if rel == "index.html"
+                           else (SITE + "/" + lg + "/" + rel))
             links = "\n".join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (l, u)
                               for l, u in variants(rel))
             out.append("  <url>\n    <loc>%s</loc>\n%s\n    <changefreq>monthly</changefreq>\n"

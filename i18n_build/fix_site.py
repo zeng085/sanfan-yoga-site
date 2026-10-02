@@ -140,9 +140,17 @@ def all_pages():
     原实现引用 B.PAGES —— 该硬编码清单（ym/pr/fr/rb/fi 老命名）已被动态发现取代，
     留着会 AttributeError。has_lang 决定是否为该页生成语言版副本，
     以及无语言版时切换器如何回退到目标语言的产品列表页。
+
+    ⚠️ 2026-10-02 补 blog 文章页：B.ALL_PAGES 只含 blog.html 索引（不含 blog/*.html），
+    于是新生成的 90 个语言版页面没有切换器（既有博客语言页的切换器是早期另一次注入的，
+    属于历史缺口）。按 glob 动态发现，避免再漏。
     """
+    import glob as _g
     translated = B.translated_set()
-    return [(rel, rel in translated) for rel in B.ALL_PAGES]
+    pages = list(B.ALL_PAGES) + sorted(
+        os.path.relpath(p, ROOT).replace(os.sep, "/")
+        for p in _g.glob(os.path.join(ROOT, "blog", "*.html")))
+    return [(rel, rel in translated) for rel in pages]
 
 
 NAV_OPEN = '<div class="nav-actions">'

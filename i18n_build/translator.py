@@ -35,6 +35,9 @@ DEEPL_URL = ("https://api-free.deepl.com/v2/translate"
              if DEEPL_KEY.endswith(":fx") else "https://api.deepl.com/v2/translate")
 DEEPL_BATCH = 50          # 单次请求最多 50 条 text
 DEEPL_WORKERS = 4         # 并发
+# GLM 主引擎的并发：思考模型单请求延迟高（10-20s/批），实测 4 并发下
+# 90 页生成要数小时 → 提到 8。429 由 _glm_call 的退避重试兜住。
+GLM_WORKERS = int(os.environ.get("GLM_WORKERS", "8"))
 MYMEMORY_EMAIL = "zenglinggun@gmail.com"
 MYMEMORY_API = "https://api.mymemory.translated.net/get"
 
@@ -94,6 +97,7 @@ GLOSSARY = {
         r"resistance loop bands?": "Widerstandsschlaufe",
         r"resistance tubes?": "Widerstandsschlauch",
         r"power bands?": "Power Band",
+        r"packing lists?": "Packliste",
     },
     "ja": {
         r"aerial yoga hammocks?": "エアリアルヨガハンモック",
@@ -108,6 +112,7 @@ GLOSSARY = {
         r"resistance loop bands?": "レジスタンスループバンド",
         r"resistance tubes?": "レジスタンスチューブ",
         r"power bands?": "パワーバンド",
+        r"packing lists?": "パッキングリスト",
     },
     "ko": {
         r"aerial yoga hammocks?": "에어리얼 요가 해먹",
@@ -122,6 +127,7 @@ GLOSSARY = {
         r"resistance loop bands?": "저항 루프 밴드",
         r"resistance tubes?": "저항 튜브",
         r"power bands?": "파워 밴드",
+        r"packing lists?": "패킹 리스트",
     },
     "fr": {
         r"aerial yoga hammocks?": "hamacs de yoga aérien",
@@ -136,6 +142,7 @@ GLOSSARY = {
         r"resistance loop bands?": "bande élastique de résistance",
         r"resistance tubes?": "tube de résistance",
         r"exercise bands?": "bandes d'entraînement",
+        r"packing lists?": "liste de colisage",
         r"power bands?": "Power Band",
     },
     "it": {
@@ -151,6 +158,7 @@ GLOSSARY = {
         r"resistance loop bands?": "fascia elastica ad anello",
         r"resistance tubes?": "elastico di resistenza",
         r"exercise bands?": "fasce elastiche per esercizi",
+        r"packing lists?": "lista di imballaggio",
         r"power bands?": "Power Band",
     },
     "es": {
@@ -166,6 +174,7 @@ GLOSSARY = {
         r"resistance loop bands?": "banda elástica de resistencia",
         r"resistance tubes?": "tubo de resistencia",
         r"exercise bands?": "bandas elásticas para ejercicio",
+        r"packing lists?": "lista de embalaje",
         r"power bands?": "Power Band",
     },
 }
@@ -478,6 +487,7 @@ def translate_lines(lines, lang, verbose=False, src="EN"):
     # （长博客段落批，10-02 es 轮），截断 → 校验不过 → 降级污染缓存。
     # 50 行实测必超时降级（10-02）；小批次 × 4 并发吞吐反而更高。
     _batch = 12 if _GLM_KEY else DEEPL_BATCH
+    _workers = GLM_WORKERS if _GLM_KEY else DEEPL_WORKERS
     batches = [todo[i:i + _batch] for i in range(0, len(todo), _batch)]
 
     def _do(batch):
@@ -509,7 +519,7 @@ def translate_lines(lines, lang, verbose=False, src="EN"):
         return len(batch)
 
     from concurrent.futures import ThreadPoolExecutor
-    with ThreadPoolExecutor(max_workers=min(DEEPL_WORKERS, len(batches))) as ex:
+    with ThreadPoolExecutor(max_workers=min(_workers, len(batches))) as ex:
         done = 0
         for n in ex.map(_do, batches):
             done += n
