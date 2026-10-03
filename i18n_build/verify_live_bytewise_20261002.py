@@ -93,6 +93,21 @@ def main():
     print(f"起点 {start} → HEAD；待复核 {len(paths)} 个文件")
     print(f"{'文件':52s} {'HTTP':>5s} {'线上':>9s} {'本地':>9s}  判定")
     bad = []
+    # ⭐ 2026-10-03：新增 .vercelignore 之后，「被排除的内部文件线上 404」是**预期结果**，
+    #    不是部署失败。首版没区分，1417 个文件里把 28 个内部文件报成「不一致」，
+    #    差点被当成线上事故。现在按 .vercelignore 判定：命中排除规则的，
+    #    要求线上必须是 404；未命中的，仍要求 200 + 逐字节一致。
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "vps", os.path.join(ROOT, "i18n_build", "verify_public_surface_20261003.py"))
+    vps = importlib.util.module_from_spec(spec)
+    try:
+        spec.loader.exec_module(vps)
+        ignore_pats = vps.read_lines(vps.IGNORE_FILE)
+    except Exception:
+        ignore_pats = []
+    is_excluded = (lambda p: vps.ignored(p, ignore_pats)) if ignore_pats else (lambda p: False)
+    n_excluded_ok = 0
     for p in paths:
         local_path = os.path.join(ROOT, p)
         if not os.path.exists(local_path):
@@ -101,18 +116,26 @@ def main():
         st, body = fetch(p)
         lb = norm(open(local_path, "rb").read())
         rb = norm(body)
-        ok = st == 200 and rb == lb
+        if is_excluded(p):
+            # 设计如此：这类文件不该上线，线上必须拿不到
+            ok = st in (403, 404, 401)
+            n_excluded_ok += 1 if ok else 0
+            label = "✓ 已按设计排除" if ok else "✗ 应排除却仍可下载"
+        else:
+            ok = st == 200 and rb == lb
+            label = "✓ 一致" if ok else "✗ 不一致"
         if not ok:
             bad.append((p, st, len(rb), len(lb)))
-        print(f"{p:52s} {st:>5} {len(rb):>9} {len(lb):>9}  {'✓ 一致' if ok else '✗ 不一致'}")
+        print(f"{p:52s} {st:>5} {len(rb):>9} {len(lb):>9}  {label}")
 
     print()
+    print(f"（其中 {n_excluded_ok} 个文件按 .vercelignore 设计不上线，线上 404 即正确）")
     if bad:
         print(f"✗ {len(bad)} 个文件不一致：")
         for p, st, a, b in bad:
             print(f"   {p}  HTTP {st}  线上 {a}B / 本地 {b}B")
         return 1
-    print("★ 全部逐字节一致 —— 部署产物 == 本地产物")
+    print("★ 全部逐字节一致 —— 部署产物 == 本地产物（内部文件按设计未上线）")
     return 0
 
 

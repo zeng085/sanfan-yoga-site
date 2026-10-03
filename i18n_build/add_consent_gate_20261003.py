@@ -99,6 +99,16 @@ def main():
             print("   ✗ %s" % r)
         return 1 if residue else 0
 
+    # ⭐ 空集硬失败（2026-10-03 补）
+    # 2026-10-03 真实事故：剥完 GA 后我用 `grep "googletagmanager\|gtag("` 复查，
+    # **BSD grep 不支持 `\|`**，静默返回 0 → 我据此宣布「全站 GA 已清零」并上线。
+    # 实际有 7 个联系页从未被剥（原因见 git log：修表单翻车后 `git checkout --` 回滚，
+    # 而剥 GA 只是未提交的工作区改动，索引里还是含 GA 的 HEAD 版本 → 一起被恢复）。
+    # 教训：判据自身出错时，静默「通过」比误报更危险。空集必须报错。
+    if not files:
+        print("✗ 未扫描到任何 HTML 页面 —— 判据空集，拒绝判「通过」")
+        return 3
+
     print("实际改动页面 = %d（删除 GA script 块 %d 个）" % (len(changed), total_blocks))
     if mode == "--dry-run":
         for p in changed[:10]:
@@ -113,6 +123,7 @@ def main():
             print("   ✗ %s" % r)
         return 1
     print("✓ 全站 HTML 已无 GA/gtag 痕迹（同意后由 main.js 动态注入）")
+    print("  扫描 %d 页 / 改动 %d 页 —— 请用 Python 正则复查，不要用 grep \"a\\|b\"（BSD 不支持 \\|）" % (len(files), len(changed)))
     return 0
 
 
