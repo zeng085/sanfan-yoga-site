@@ -1586,7 +1586,13 @@ if (form) {
     if (loaded) return;
     loaded = true;
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { window.dataLayer.push(arguments); };
+    // ⭐ dataLayer 条目必须是**数组**，不是 arguments 对象（2026-10-03 修）
+    // 症状：客户提交表单看到「已发送」，但 GA 里 generate_lead 事件永远不出现
+    //      （page_view / form_start 正常，因为那两个是 GA 内部自动采集的）。
+    // 原因：官方 gtag.js 只解析 `['event', name, params]` 形式的数组；
+    //      push(arguments) 得到的是类 Arguments 对象，GA 收到后静默丢弃。
+    //      —— 静默丢弃是最坏的一种失败：没有报错、没有 4xx，只是数据永远不来。
+    window.gtag = function () { window.dataLayer.push(Array.prototype.slice.call(arguments)); };
     window.gtag('js', new Date());
     window.gtag('config', GA_ID);
     var s = document.createElement('script');

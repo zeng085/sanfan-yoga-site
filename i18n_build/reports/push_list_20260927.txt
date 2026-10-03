@@ -1,4 +1,4 @@
-.workbuddy/memory/2026-10-01.md
+.workbuddy/memory/2026-10-03.md
 .workbuddy/memory/MEMORY.md
 about.html
 applications/gyms-fitness-clubs.html
@@ -14,6 +14,12 @@ blog/7day-sampling.html
 blog/compliance.html
 blog/custom-sizes.html
 blog/moq-explained.html
+blog/oem-pilates-equipment-china.html
+blog/pilates-apparatus-differences.html
+blog/pilates-equipment-commercial-use.html
+blog/pilates-reformer-buyers-guide.html
+blog/pilates-studio-equipment-list.html
+blog/pilates-studio-layout-guide.html
 blog/private-label-yoga-mats.html
 blog/top-12-china-yoga-mat-manufacturers.html
 blog/tpe-vs-pu.html
@@ -34,6 +40,12 @@ de/blog/7day-sampling.html
 de/blog/compliance.html
 de/blog/custom-sizes.html
 de/blog/moq-explained.html
+de/blog/oem-pilates-equipment-china.html
+de/blog/pilates-apparatus-differences.html
+de/blog/pilates-equipment-commercial-use.html
+de/blog/pilates-reformer-buyers-guide.html
+de/blog/pilates-studio-equipment-list.html
+de/blog/pilates-studio-layout-guide.html
 de/blog/private-label-yoga-mats.html
 de/blog/top-12-china-yoga-mat-manufacturers.html
 de/blog/tpe-vs-pu.html
@@ -43,6 +55,7 @@ de/blog/yoga-mat-spec-guide.html
 de/contact.html
 de/faq.html
 de/foam-rollers.html
+de/impressum.html
 de/index.html
 de/jump-ropes.html
 de/massage-recovery.html
@@ -57,6 +70,7 @@ de/pilates/pilates-specialty.html
 de/pilates/pilates-spine-corrector.html
 de/pilates/pilates-studio-set.html
 de/pilates/pilates-wunda-chair.html
+de/privacy.html
 de/products.html
 de/products/ab-roller-training-set.html
 de/products/ab-roller-with-resistance-band.html
@@ -224,6 +238,12 @@ es/blog/7day-sampling.html
 es/blog/compliance.html
 es/blog/custom-sizes.html
 es/blog/moq-explained.html
+es/blog/oem-pilates-equipment-china.html
+es/blog/pilates-apparatus-differences.html
+es/blog/pilates-equipment-commercial-use.html
+es/blog/pilates-reformer-buyers-guide.html
+es/blog/pilates-studio-equipment-list.html
+es/blog/pilates-studio-layout-guide.html
 es/blog/private-label-yoga-mats.html
 es/blog/top-12-china-yoga-mat-manufacturers.html
 es/blog/tpe-vs-pu.html
@@ -233,6 +253,7 @@ es/blog/yoga-mat-spec-guide.html
 es/contact.html
 es/faq.html
 es/foam-rollers.html
+es/impressum.html
 es/index.html
 es/jump-ropes.html
 es/massage-recovery.html
@@ -247,6 +268,7 @@ es/pilates/pilates-specialty.html
 es/pilates/pilates-spine-corrector.html
 es/pilates/pilates-studio-set.html
 es/pilates/pilates-wunda-chair.html
+es/privacy.html
 es/products.html
 es/products/ab-roller-training-set.html
 es/products/ab-roller-with-resistance-band.html
@@ -416,6 +438,12 @@ fr/blog/7day-sampling.html
 fr/blog/compliance.html
 fr/blog/custom-sizes.html
 fr/blog/moq-explained.html
+fr/blog/oem-pilates-equipment-china.html
+fr/blog/pilates-apparatus-differences.html
+fr/blog/pilates-equipment-commercial-use.html
+fr/blog/pilates-reformer-buyers-guide.html
+fr/blog/pilates-studio-equipment-list.html
+fr/blog/pilates-studio-layout-guide.html
 fr/blog/private-label-yoga-mats.html
 fr/blog/top-12-china-yoga-mat-manufacturers.html
 fr/blog/tpe-vs-pu.html
@@ -425,6 +453,7 @@ fr/blog/yoga-mat-spec-guide.html
 fr/contact.html
 fr/faq.html
 fr/foam-rollers.html
+fr/impressum.html
 fr/index.html
 fr/jump-ropes.html
 fr/massage-recovery.html
@@ -439,6 +468,7 @@ fr/pilates/pilates-specialty.html
 fr/pilates/pilates-spine-corrector.html
 fr/pilates/pilates-studio-set.html
 fr/pilates/pilates-wunda-chair.html
+fr/privacy.html
 fr/products.html
 fr/products/ab-roller-training-set.html
 fr/products/ab-roller-with-resistance-band.html
@@ -593,8 +623,8 @@ fr/strength-training.html
 fr/suede-cork-yoga-mats.html
 fr/tpe-yoga-mats.html
 fr/yoga-props-accessories.html
-i18n_build/probe_reformer_grid_default_20261001.cjs
-i18n_build/reports/push_list_20260927.txt
+i18n_build/verify_push_scope_20260927.py
+impressum.html
 index.html
 it/about.html
 it/applications/gyms-fitness-clubs.html
@@ -609,6 +639,12 @@ it/blog/7day-sampling.html
 it/blog/compliance.html
 it/blog/custom-sizes.html
 it/blog/moq-explained.html
+it/blog/oem-pilates-equipment-china.html
+it/blog/pilates-apparatus-differences.html
+it/blog/pilates-equipment-commercial-use.html
+it/blog/pilates-reformer-buyers-guide.html
+it/blog/pilates-studio-equipment-list.html
+it/blog/pilates-studio-layout-guide.html
 it/blog/private-label-yoga-mats.html
 it/blog/top-12-china-yoga-mat-manufacturers.html
 it/blog/tpe-vs-pu.html
@@ -618,6 +654,7 @@ it/blog/yoga-mat-spec-guide.html
 it/contact.html
 it/faq.html
 it/foam-rollers.html
+it/impressum.html
 it/index.html
 it/jump-ropes.html
 it/massage-recovery.html
@@ -632,6 +669,7 @@ it/pilates/pilates-specialty.html
 it/pilates/pilates-spine-corrector.html
 it/pilates/pilates-studio-set.html
 it/pilates/pilates-wunda-chair.html
+it/privacy.html
 it/products.html
 it/products/ab-roller-training-set.html
 it/products/ab-roller-with-resistance-band.html
@@ -799,6 +837,12 @@ ja/blog/7day-sampling.html
 ja/blog/compliance.html
 ja/blog/custom-sizes.html
 ja/blog/moq-explained.html
+ja/blog/oem-pilates-equipment-china.html
+ja/blog/pilates-apparatus-differences.html
+ja/blog/pilates-equipment-commercial-use.html
+ja/blog/pilates-reformer-buyers-guide.html
+ja/blog/pilates-studio-equipment-list.html
+ja/blog/pilates-studio-layout-guide.html
 ja/blog/private-label-yoga-mats.html
 ja/blog/top-12-china-yoga-mat-manufacturers.html
 ja/blog/tpe-vs-pu.html
@@ -808,6 +852,7 @@ ja/blog/yoga-mat-spec-guide.html
 ja/contact.html
 ja/faq.html
 ja/foam-rollers.html
+ja/impressum.html
 ja/index.html
 ja/jump-ropes.html
 ja/massage-recovery.html
@@ -822,6 +867,7 @@ ja/pilates/pilates-specialty.html
 ja/pilates/pilates-spine-corrector.html
 ja/pilates/pilates-studio-set.html
 ja/pilates/pilates-wunda-chair.html
+ja/privacy.html
 ja/products.html
 ja/products/ab-roller-training-set.html
 ja/products/ab-roller-with-resistance-band.html
@@ -990,6 +1036,12 @@ ko/blog/7day-sampling.html
 ko/blog/compliance.html
 ko/blog/custom-sizes.html
 ko/blog/moq-explained.html
+ko/blog/oem-pilates-equipment-china.html
+ko/blog/pilates-apparatus-differences.html
+ko/blog/pilates-equipment-commercial-use.html
+ko/blog/pilates-reformer-buyers-guide.html
+ko/blog/pilates-studio-equipment-list.html
+ko/blog/pilates-studio-layout-guide.html
 ko/blog/private-label-yoga-mats.html
 ko/blog/top-12-china-yoga-mat-manufacturers.html
 ko/blog/tpe-vs-pu.html
@@ -999,6 +1051,7 @@ ko/blog/yoga-mat-spec-guide.html
 ko/contact.html
 ko/faq.html
 ko/foam-rollers.html
+ko/impressum.html
 ko/index.html
 ko/jump-ropes.html
 ko/massage-recovery.html
@@ -1013,6 +1066,7 @@ ko/pilates/pilates-specialty.html
 ko/pilates/pilates-spine-corrector.html
 ko/pilates/pilates-studio-set.html
 ko/pilates/pilates-wunda-chair.html
+ko/privacy.html
 ko/products.html
 ko/products/ab-roller-training-set.html
 ko/products/ab-roller-with-resistance-band.html
@@ -1179,6 +1233,7 @@ pilates/pilates-specialty.html
 pilates/pilates-spine-corrector.html
 pilates/pilates-studio-set.html
 pilates/pilates-wunda-chair.html
+privacy.html
 product.html
 products.html
 products/ab-roller-training-set.html

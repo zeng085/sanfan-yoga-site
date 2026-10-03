@@ -14,7 +14,7 @@
 
 ## 推送（细节见技能 github-api-push）
 bump（先 `--dry-run`）→ 干净 commit → `push_api_v3.py … --auto`；**不要 `reset --soft`**
-- 起点三步法（`verify_push_scope_20260927.py`）；**当前 START = `cb482b8f`**（远程 `217b42a4`）；
+- 起点三步法（`verify_push_scope_20260927.py`）；**当前 START = `58f42c92`**（远程 `580f850aca`）；
   成功后先更新 START（两脚本）+ 起点表 + 本文件
 - ⚠️ 假警报：`push_list_20260927.txt` 自引用（推送前 `git checkout --`）；`origin/main` 陈旧；
   `check_deploy_after_push` 假阴性 → 直查 `deployments` + `commits/<sha>/status`
@@ -33,17 +33,15 @@ bump（先 `--dry-run`）→ 干净 commit → `push_api_v3.py … --auto`；**�
 - 生成链路：`build_pages.py`(节点级翻译+保 SEO) → `fix_site.py`(切换器) →
   `update_seo.py`(hreflang+sitemap，`norm_dir()` 归一)；缓存 `cache/translations.json`
 
-## 合规 / 安全 / 移动（10-03 审计后已修，明细见 2026-10-03.md）
-- ✅ 公开面：`.vercelignore`（公开 2793 / 排除 591）+ `verify_public_surface_20261003.py` 六道闸
-- ✅ GA 门控：1373 页剥除 GA（`add_consent_gate_*.py`），`main.js` 同意后才动态加载，拒绝也记录
-- ✅ 法律页：impressum / privacy × 7 语言（`gen_legal_pages_*.py`）+ 全站页脚入口 + sitemap 1386
-- ✅ 产能表 `.cap-wrap` 独立滚动（119 页/246 表），320px 整表放得下
-- ✅ 表单：6/6 label 关联、`_gotcha` 诱饵、提交禁用按钮、`aria-live` + 7 语言 `data-msg-*`
-- ✅ Organization.description 英文残留 835 页已本地化；vercel.json 加 CSP 等 6 个安全头
-- ⚠️ **待用户补 3 个法律事实**（页面用 ［…］ 标出）：法定代表人 / §18 MStV 内容负责人 / 管辖与仲裁
-- ⚠️ 存量：48 页缺 `</article>`（起点版既有）；13 台缺材质毛重；`knowsAbout` 仍英文；desc>155 767 页
-- ⚠️ CSP 的 `script-src` 暂留 `'unsafe-inline'`：1029 页有 147 种形态的内联图集脚本，
-  抽成外部文件属侵入式重构，另案处理
+## 合规 / 移动（10-03 三轮审计后；明细见 2026-10-03.md）
+- ✅ 公开面：`.vercelignore` + `verify_public_surface_*.py`（六道闸门；Vercel 只在它
+  **不存在**时回退用 `.gitignore` → 必须合并全部密钥规则）
+- ✅ GA 门控：`add_consent_gate_*.py` 剥 1373 页；`main.js` 同意后才动态加载
+- ✅ 法律页 14 页 + 全站页脚入口 + sitemap 1386；Organization.description 全站本地化
+- ✅ 产能表 `.cap-wrap`（320px 整表放得下）；表单 6/6 label + 诱饵 + aria-live + 7 语言提示
+- ✅ 安全头 CSP 等 6 项；语言串站 0；系统语言自动匹配；数字书写修复
+- ⚠️ **待用户 3 个法律事实**（页面用 ［…］ 标出）+ 无文字厂照 / 客户证言 / 价格带口径
+- ⚠️ 存量：48 页缺 `</article>`；`knowsAbout` 19 词仍英文；13 台缺材质毛重；desc>155 共 767 页
 
 ## 判据铁律速览（完整 35+ 条见 reference；高频）
 同文件多 Edit 不能并行｜改标签必须成对｜**非自闭合元素（textarea/select）不能加 `/>`**｜
