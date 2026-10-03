@@ -1586,13 +1586,15 @@ if (form) {
     if (loaded) return;
     loaded = true;
     window.dataLayer = window.dataLayer || [];
-    // ⭐ dataLayer 条目必须是**数组**，不是 arguments 对象（2026-10-03 修）
-    // 症状：客户提交表单看到「已发送」，但 GA 里 generate_lead 事件永远不出现
-    //      （page_view / form_start 正常，因为那两个是 GA 内部自动采集的）。
-    // 原因：官方 gtag.js 只解析 `['event', name, params]` 形式的数组；
-    //      push(arguments) 得到的是类 Arguments 对象，GA 收到后静默丢弃。
-    //      —— 静默丢弃是最坏的一种失败：没有报错、没有 4xx，只是数据永远不来。
-    window.gtag = function () { window.dataLayer.push(Array.prototype.slice.call(arguments)); };
+    // 桩写法**必须**与 Google 官方一致：`dataLayer.push(arguments)`。
+    // 2026-10-03 教训（我在这里犯过一次错误并已回退）：
+    //   先怀疑「arguments 对象会被 GA 丢弃」→ 改成 push(Array.prototype.slice.call(arguments))
+    //   → 实测**反而更糟**（连 page_view 都没了），回退才恢复。
+    //   官方 gtag.js 认的就是 arguments 对象；它内部会把 arguments 归一化成数组。
+    //   判据教训：同一段实验先后两次给出相反结论（隔离环境 vs 真实站点），
+    //   说明**隔离环境不可信**（gtag.js 在沙箱模式下无法用 eval 注入复现）。
+    //   验 GA 桩只能在真实站点上做，且必须重复 ≥5 轮看稳定性。
+    window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
     window.gtag('config', GA_ID);
     var s = document.createElement('script');
