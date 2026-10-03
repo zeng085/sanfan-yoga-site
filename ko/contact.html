@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="연락처 — SANFAN 요가 및 피트니스 제품 OEM/ODM 제조업체" />
   <meta name="twitter:description" content="요가 매트, 액세서리 및 피트니스 기기의 OEM/ODM 견적을 원하시면 푸젠 SANFAN로 문의해 주십시오. 이메일: zenglinggun@gmail.com, WhatsApp: +86 15959029082." />
   <meta name="twitter:image" content="https://fjsanfan.com/assets/img/showroom.webp" />
-  <link rel="stylesheet" href="../assets/css/styles.css?v20261002a" />
+  <link rel="stylesheet" href="../assets/css/styles.css?v20261003c" />
   <link rel="icon" href="../assets/img/logo.webp" />
 
   <script type="application/ld+json">
@@ -53,7 +53,7 @@
     "alternateName": "SANFAN",
     "url": "https://fjsanfan.com/",
     "logo": "https://fjsanfan.com/assets/img/logo.webp",
-    "description": "Vertically integrated OEM/ODM manufacturer of TPE, PU and rubber yoga mats plus yoga and fitness accessories. Founded 2013 in Jinjiang, Fujian, China. In-house foaming and finishing across three owned plants.",
+    "description": "TPE·PU·천연 고무 요가매트와 요가·피트니스용품을 수직 통합하는 OEM/ODM 제조업체. 2013년 중국 푸젠성 진강시에 설립. 3개 자사 공장에서 발泡부터 마감까지 내재화.",
     "foundingDate": "2013-01-01",
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
@@ -208,20 +208,20 @@
       <div class="form-card">
         <form id="inquiry-form" action="https://formspree.io/f/maewkpvo" method="POST">
           <div class="field">
-            <label>이름</label>
-            <input type="text" name="name" required />
+            <label for="inq-name">이름</label>
+            <input type="text" name="name" required id="inq-name" />
           </div>
           <div class="field">
-            <label>회사</label>
-            <input type="text" name="company" />
+            <label for="inq-company">회사</label>
+            <input type="text" name="company" id="inq-company" />
           </div>
           <div class="field">
-            <label>이메일</label>
-            <input type="email" name="email" required />
+            <label for="inq-email">이메일</label>
+            <input type="email" name="email" required id="inq-email" />
           </div>
           <div class="field">
-            <label>관심 있는 제품</label>
-            <select name="product">
+            <label for="inq-product">관심 있는 제품</label>
+            <select name="product" id="inq-product">
               <option value="yoga">요가 매트</option>
               <option value="props">요가 소품 &amp; 액세서리</option>
               <option value="rollers">폼롤러 &amp; 마사지</option>
@@ -231,16 +231,18 @@
             </select>
           </div>
           <div class="field">
-            <label>예상 수량</label>
-            <input type="text" name="qty" placeholder="예: 1,000개" />
+            <label for="inq-qty">예상 수량</label>
+            <input type="text" name="qty" placeholder="예: 1,000개" id="inq-qty" />
           </div>
           <div class="field">
-            <label>메시지</label>
-            <textarea name="message" placeholder="사양, 목표 시장, 일정..."></textarea>
+            <label for="inq-message">메시지</label>
+            <textarea name="message" placeholder="사양, 목표 시장, 일정..." id="inq-message"></textarea>
           </div>
+          
+          <input class="form-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">문의 보내기</button>
           <p class="form-note">당사는 귀하의 정보를 절대 제3자에게 제공하지 않습니다.</p>
-          <div id="form-ok"></div>
+          <div id="form-ok" aria-live="polite" role="status" data-msg-ok="감사합니다. 문의가 접수되었습니다. 영업일 기준 1일 이내에 답변드리겠습니다." data-msg-fail="전송 중 오류가 발생했습니다. 이메일로 직접 문의해 주세요."></div>
         </form>
       </div>
     </div>
@@ -272,6 +274,8 @@
         <li><a href="about.html">소개</a></li>
         <li><a href="about.html">생산 공정</a></li>
         <li><a href="contact.html">문의하기</a></li>
+        <li><a href="/ko/privacy.html">개인정보처리방침</a></li>
+        <li><a href="/ko/impressum.html">운영자 정보</a></li>
       </ul></div>
       <div><h5>문의하기</h5>
         <div class="contact-line"><span>주소</span>: 중국 푸젠성 취안저우시 진장시 시빈진 유에진 산업단지 하이광로 8호</div>
@@ -282,6 +286,6 @@
     <div class="container footer-bottom">© 2026 푸젠 SANFAN 스포츠 제품 유한공사. 모든 권리 보유.</div>
   </footer>
 
-  <script src="../assets/js/main.js?v20261002a"></script>
+  <script src="../assets/js/main.js?v20261003c"></script>
 </body>
 </html>

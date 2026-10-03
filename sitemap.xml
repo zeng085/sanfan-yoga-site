@@ -17837,4 +17837,186 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://fjsanfan.com/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/impressum.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/privacy.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/impressum.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/impressum.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ko/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/impressum.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/fr/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/impressum.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/it/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/impressum.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/es/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/impressum.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/de/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/privacy.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ja/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/privacy.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/ko/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/privacy.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/fr/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/privacy.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/it/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/privacy.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fjsanfan.com/es/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fjsanfan.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://fjsanfan.com/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fjsanfan.com/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://fjsanfan.com/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fjsanfan.com/fr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://fjsanfan.com/it/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://fjsanfan.com/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fjsanfan.com/privacy.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

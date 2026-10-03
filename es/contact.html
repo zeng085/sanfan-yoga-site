@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="Contacto — SANFAN Fabricante OEM/ODM de productos de yoga y fitness" />
   <meta name="twitter:description" content="Ponte en contacto con FUJIAN SANFAN para solicitar presupuestos de fabricación OEM/ODM de esterillas de yoga, accesorios y equipamiento deportivo. Envía un correo electrónico a zenglinggun@gmail.com o un mensaje de WhatsApp al +86 15959029082." />
   <meta name="twitter:image" content="https://fjsanfan.com/assets/img/showroom.webp" />
-  <link rel="stylesheet" href="../assets/css/styles.css?v20261002a" />
+  <link rel="stylesheet" href="../assets/css/styles.css?v20261003c" />
   <link rel="icon" href="../assets/img/logo.webp" />
 
   <script type="application/ld+json">
@@ -53,7 +53,7 @@
     "alternateName": "SANFAN",
     "url": "https://fjsanfan.com/",
     "logo": "https://fjsanfan.com/assets/img/logo.webp",
-    "description": "Vertically integrated OEM/ODM manufacturer of TPE, PU and rubber yoga mats plus yoga and fitness accessories. Founded 2013 in Jinjiang, Fujian, China. In-house foaming and finishing across three owned plants.",
+    "description": "Fabricante OEM/ODM verticalmente integrado de esterillas de yoga de TPE, PU y caucho natural, además de accesorios de yoga y fitness. Fundado en 2013 en Jinjiang, Fujian, China. Espumación y acabado realizados internamente en tres plantas propias.",
     "foundingDate": "2013-01-01",
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
@@ -208,20 +208,20 @@
       <div class="form-card">
         <form id="inquiry-form" action="https://formspree.io/f/maewkpvo" method="POST">
           <div class="field">
-            <label>Tu nombre</label>
-            <input type="text" name="name" required />
+            <label for="inq-name">Tu nombre</label>
+            <input type="text" name="name" required id="inq-name" />
           </div>
           <div class="field">
-            <label>Empresa</label>
-            <input type="text" name="company" />
+            <label for="inq-company">Empresa</label>
+            <input type="text" name="company" id="inq-company" />
           </div>
           <div class="field">
-            <label>Correo electrónico</label>
-            <input type="email" name="email" required />
+            <label for="inq-email">Correo electrónico</label>
+            <input type="email" name="email" required id="inq-email" />
           </div>
           <div class="field">
-            <label>Producto destacado</label>
-            <select name="product">
+            <label for="inq-product">Producto destacado</label>
+            <select name="product" id="inq-product">
               <option value="yoga">Esterillas de yoga</option>
               <option value="props">Accesorios y material para yoga</option>
               <option value="rollers">Rodillos de espuma y masajes</option>
@@ -231,16 +231,18 @@
             </select>
           </div>
           <div class="field">
-            <label>Cantidad estimada</label>
-            <input type="text" name="qty" placeholder="p. ej., 1.000 unidades" />
+            <label for="inq-qty">Cantidad estimada</label>
+            <input type="text" name="qty" placeholder="p. ej., 1.000 unidades" id="inq-qty" />
           </div>
           <div class="field">
-            <label>Mensaje</label>
-            <textarea name="message" placeholder="Características técnicas, mercado objetivo, calendario..."></textarea>
+            <label for="inq-message">Mensaje</label>
+            <textarea name="message" placeholder="Características técnicas, mercado objetivo, calendario..." id="inq-message"></textarea>
           </div>
+          
+          <input class="form-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Enviar consulta</button>
           <p class="form-note">Nunca compartimos tu información.</p>
-          <div id="form-ok"></div>
+          <div id="form-ok" aria-live="polite" role="status" data-msg-ok="¡Gracias! Hemos recibido su consulta. Responderemos en un día laborable." data-msg-fail="Se ha producido un error. Por favor, escríbanos directamente."></div>
         </form>
       </div>
     </div>
@@ -272,6 +274,8 @@
         <li><a href="about.html">Acerca de</a></li>
         <li><a href="about.html">Proceso de producción</a></li>
         <li><a href="contact.html">Contacto</a></li>
+        <li><a href="/es/privacy.html">Privacidad</a></li>
+        <li><a href="/es/impressum.html">Aviso legal</a></li>
       </ul></div>
       <div><h5>Contacto</h5>
         <div class="contact-line"><span>Dirección</span>: N.º 8, calle Haiguang, zona industrial de Yuejin, localidad de Xibin, Jinjiang, Quanzhou, Fujian, China</div>
@@ -282,6 +286,6 @@
     <div class="container footer-bottom">© 2026 FUJIAN SANFAN Sports Products Co., Ltd. Todos los derechos reservados.</div>
   </footer>
 
-  <script src="../assets/js/main.js?v20261002a"></script>
+  <script src="../assets/js/main.js?v20261003c"></script>
 </body>
 </html>

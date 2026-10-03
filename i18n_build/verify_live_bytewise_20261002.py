@@ -41,7 +41,7 @@ import urllib.request
 
 BASE = "https://fjsanfan.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-START_DEFAULT = "7d293b52"      # 与 verify_push_scope_20260927.py 的 START 同步
+START_DEFAULT = "4f500138"      # 与 verify_push_scope_20260927.py 的 START 同步
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                     "AppleWebKit/537.36 Chrome/120 Safari/537.36"}
 TIMEOUT = 45

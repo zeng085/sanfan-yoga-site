@@ -1,50 +1,50 @@
 {
  "per_lang": {
   "en": {
-   "files": 191,
+   "files": 197,
    "zoom_disabled": 0,
    "dots": 0,
    "trans_no": 0
   },
   "de": {
-   "files": 190,
+   "files": 196,
    "zoom_disabled": 0,
    "dots": 0,
    "trans_no": 0
   },
   "es": {
-   "files": 190,
+   "files": 196,
    "zoom_disabled": 0,
    "dots": 0,
    "trans_no": 0
   },
   "fr": {
-   "files": 190,
+   "files": 196,
    "zoom_disabled": 0,
    "dots": 0,
    "trans_no": 0
   },
   "it": {
-   "files": 190,
+   "files": 196,
    "zoom_disabled": 0,
    "dots": 0,
    "trans_no": 0
   },
   "ja": {
-   "files": 190,
+   "files": 196,
    "zoom_disabled": 0,
    "dots": 0,
    "trans_no": 0
   },
   "ko": {
-   "files": 190,
+   "files": 196,
    "zoom_disabled": 0,
    "dots": 0,
    "trans_no": 0
   }
  },
- "img_total": 19109,
- "files": 1331,
+ "img_total": 19591,
+ "files": 1373,
  "results": [
   {
    "id": "WIG-01",
@@ -64,15 +64,15 @@
    "id": "WIG-03",
    "clause": "SHOULD <meta theme-color> 匹配页背景",
    "level": "SHOULD",
-   "verdict": "0/1331 页有（0%）",
+   "verdict": "0/1373 页有（0%）",
    "detail": ""
   },
   {
    "id": "WIG-04",
    "clause": "MUST touch-action: manipulation",
    "level": "MUST",
-   "verdict": "❌ 缺失（0 处）",
-   "detail": "styles.css 0 命中"
+   "verdict": "✅ 有（3 处）",
+   "detail": ""
   },
   {
    "id": "WIG-05",
@@ -92,36 +92,36 @@
    "id": "WIG-07",
    "clause": "MUST overscroll-behavior: contain（抽屉/弹层）",
    "level": "MUST",
-   "verdict": "⚠️ 仅 1 处（位置待核）",
-   "detail": ".mm-cats, .mm-apps   ← 未见 .nav-links 移动抽屉"
+   "verdict": "⚠️ 仅 2 处（位置待核）",
+   "detail": "/* Nav 自有断点（2026-09-16 由 920 上调到 1279）。 旧值 920; .mm-cats, .mm-apps   ← 未见 .nav-links 移动抽屉"
   },
   {
    "id": "WIG-08",
    "clause": "MUST prefers-reduced-motion",
    "level": "MUST",
-   "verdict": "❌ 缺失（0 处）",
-   "detail": "styles.css 0 命中"
+   "verdict": "✅ 有（3 处）",
+   "detail": ""
   },
   {
    "id": "WIG-09",
    "clause": "MUST :focus-visible 焦点环",
    "level": "MUST",
-   "verdict": "❌ 缺失（0 处）",
-   "detail": "styles.css 0 命中"
+   "verdict": "✅ 有（17 处）",
+   "detail": ""
   },
   {
    "id": "WIG-10",
    "clause": "MUST scroll-margin-top（头部遮锚点）",
    "level": "MUST",
-   "verdict": "❌ 缺失（0 处）",
-   "detail": "styles.css 0 命中"
+   "verdict": "✅ 有（5 处）",
+   "detail": ""
   },
   {
    "id": "WIG-11",
    "clause": "MUST tabular-nums（规格数字对比）",
    "level": "MUST",
-   "verdict": "❌ 缺失（0 处）",
-   "detail": "styles.css 0 命中"
+   "verdict": "✅ 有（3 处）",
+   "detail": ""
   },
   {
    "id": "WIG-12",
@@ -142,20 +142,20 @@
    "clause": "NEVER outline:none 无可见焦点替代",
    "level": "NEVER",
    "verdict": "✅ 通过",
-   "detail": "outline:none/0 共 2 处（:focus 内 1），余为常驻控件去环"
+   "detail": "outline:none/0 共 3 处（:focus 内 1），余为常驻控件去环"
   },
   {
    "id": "WIG-15",
    "clause": "MUST 移动端 input font-size ≥16px（防 iOS 放大）",
    "level": "MUST",
-   "verdict": "⚠️ 1 条 <16px",
-   "detail": ".field input, .field select, .field textarea=15px"
+   "verdict": "✅ 通过",
+   "detail": "无 input 小字号规则"
   },
   {
    "id": "WIG-16",
    "clause": "SHOULD 品牌名加 translate=\"no\"（防机翻）",
    "level": "SHOULD",
-   "verdict": "0/1331 页有",
+   "verdict": "0/1373 页有",
    "detail": "⚠️ 8 语言站刚需"
   },
   {
@@ -169,22 +169,22 @@
    "id": "WIG-18",
    "clause": "MUST 非断空格（10&nbsp;MB / 品牌名）",
    "level": "MUST",
-   "verdict": "11/1331 页有 &nbsp;",
+   "verdict": "11/1373 页有 &nbsp;",
    "detail": ""
   },
   {
    "id": "WIG-19",
    "clause": "MUST 图片显式尺寸（防 CLS）",
    "level": "MUST",
-   "verdict": "⚠️ 491/19109 张 img 缺 width+height",
-   "detail": "img 总数 19109"
+   "verdict": "⚠️ 491/19591 张 img 缺 width+height",
+   "detail": "img 总数 19591"
   },
   {
    "id": "WIG-20",
    "clause": "MUST 首屏图 preload、其余 lazy-load",
    "level": "MUST",
-   "verdict": "16692/19109 张 img 带 loading=lazy(87%)",
-   "detail": "0/1331 页有 preconnect"
+   "verdict": "17132/19591 张 img 带 loading=lazy(87%)",
+   "detail": "0/1373 页有 preconnect"
   },
   {
    "id": "WIG-21",

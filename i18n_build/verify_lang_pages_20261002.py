@@ -30,7 +30,10 @@ VOID = {"img", "br", "hr", "input", "meta", "link", "source", "area", "base",
         "col", "embed", "param", "track", "wbr", "path", "circle", "rect"}
 SIG = {"ja": re.compile(r"[\u3040-\u30ff]"), "ko": re.compile(r"[\uac00-\ud7af]")}
 NUM = re.compile(r"\d{1,3}(?:[.,\u00a0\u202f ]\d{3})+(?:[.,]\d+)?|\d+(?:[.,]\d+)?")
-CJK_MULT = {"万": 10 ** 4, "萬": 10 ** 4, "億": 10 ** 8, "亿": 10 ** 8}
+CJK_MULT = {"万": 10 ** 4, "萬": 10 ** 4, "億": 10 ** 8, "亿": 10 ** 8,
+            "만": 10 ** 4, "억": 10 ** 8}
+# 英文量级缩写：200K / 1.2M / 3B
+MAG = {"K": 10 ** 3, "M": 10 ** 6, "B": 10 ** 9}
 
 
 def canon_nums(text):
@@ -44,8 +47,13 @@ def canon_nums(text):
     归一规则：
       ① 千分位分组（分隔符后**恰好 3 位数字**）整体吸收 —— `1,000,000` / `1.000.000` / `1 000 000` → `1000000`
          （必须要求「恰好 3 位」，否则 EN 的 `since 2013. 3 owned plants` 会跨句拼成假 token `20133`）
-      ② CJK 计数单位 万/億 换算 —— `100万` → `1000000`
-      ③ 其余非数字字符剔除；仅保留 ≥3 位（1–2 位是样式/层级噪声）
+      ② CJK / 韩文计数单位换算 —— `100万`（中/日）、`100만`（韩）→ `1000000`
+         ⚠️ 2026-10-03 补韩文：ko/faq.html 把 1,000,000 写成「100만」，此前漏了만
+         → 误报「数字丢失 1000000」
+      ③ 英文量级缩写 K/M/B —— `200K+` → `200000`，**同时保留原样 `200`**
+         （缩写与全写必须能互认，否则 EN 的 `200K+` 会把德语页的 `200.000+`
+          判成「丢了 200」——2026-10-03 实测 de/index.html 因此误报）
+      ④ 其余非数字字符剔除；仅保留 ≥3 位（1–2 位是样式/层级噪声）
     """
     text = re.sub(r"&#x?[0-9a-fA-F]+;", " ", text)
     out = set()
@@ -57,7 +65,16 @@ def canon_nums(text):
             continue
         if mult:
             out.add(str(int(digits) * mult))
-        elif len(digits) >= 3:
+            continue
+        mm = re.match(r"\s*([KkMmBb])(?![A-Za-z])", text[m.end():])
+        if mm:
+            out.add(digits)                    # 原样保留，缩写 ↔ 全写互认
+            try:
+                out.add(str(int(float(tok.replace(",", "")) * MAG[mm.group(1).upper()])))
+            except ValueError:
+                pass
+            continue
+        if len(digits) >= 3:
             out.add(digits)
     return out
 
@@ -137,15 +154,22 @@ def check_links(path):
 
 
 def _clean_for_numbers(path):
-    """取数字前先洗掉三类噪声（否则误报）：
+    """取数字前先洗掉四类噪声（否则误报）：
     ① script/style/注释 —— 生成器会整块重写，不是内容
     ② HTML 实体 `&#9662;`（切换器 ▾）—— 该块被生成器有意丢弃（fix_site 重新注入）
     ③ 十六进制实体
+    ④ **HTML 标签本身**（2026-10-03 补）—— 只剩正文文本。
+       为什么必须剥：属性里的数字全是噪声，且各语言页的文件名/属性天然不同：
+       `hero-1.webp`、`width="500"`、`data-i18n="hero.stat1.n"` …
+       实测 EN 首页因此凭空多出数字 `1`（来自图片名与 `width="1"`），
+       而语言页的图片名不一样 → 误报「数字丢失 1」。
+       判据要的是「**客户能看到的正文数字**不能被翻译丢掉」，属性不属于正文。
     """
     h = open(path, encoding="utf-8").read()
     h = re.sub(r"<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>|<!--.*?-->",
                " ", h, flags=re.S)
     h = re.sub(r"&#x?[0-9a-fA-F]+;", " ", h)
+    h = re.sub(r"<[^>]+>", " ", h)          # ← 只保留正文文本
     return h
 
 

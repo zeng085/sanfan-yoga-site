@@ -30,7 +30,7 @@ const I18N = {
     'hero.cta1': 'Request a Quote', 'hero.cta2': 'Explore Products',
     'hero.stat1.n': '2013', 'hero.stat1.l': 'Established',
     'hero.stat2.n': '600+', 'hero.stat2.l': 'Skilled Workers',
-    'hero.stat3.n': '200K+', 'hero.stat3.l': 'Mats / Month',
+    'hero.stat3.n': '1,000,000+', 'hero.stat3.l': 'Mats / Year',
     'hero.stat4.n': '24/7', 'hero.stat4.l': 'Service Team',
     'hero.media': 'SANFAN factory',
 
@@ -295,7 +295,7 @@ const I18N = {
     'hero.cta1': '立即询价', 'hero.cta2': '浏览产品',
     'hero.stat1.n': '2013', 'hero.stat1.l': '成立年份',
     'hero.stat2.n': '600+', 'hero.stat2.l': '熟练工人',
-    'hero.stat3.n': '20万+', 'hero.stat3.l': '垫子/月',
+    'hero.stat3.n': '100万+', 'hero.stat3.l': '垫子/年',
     'hero.stat4.n': '24/7', 'hero.stat4.l': '服务团队',
     'hero.media': '三梵工厂',
 
@@ -602,7 +602,13 @@ function applyLang(lang) {
   });
   const btn = document.querySelector('.lang-btn');
   if (btn) btn.textContent = lang === 'zh' ? 'EN' : '中文';
-  setLangPref(lang);      // 记住选择，后续页面沿用
+  // ⚠️ 这里**不要**写 setLangPref（2026-10-03 移除）。
+  //   原因：`applyLang()` 每次页面加载都会被调用（见下方 `applyLang(getLangPref()...)`），
+  //   在这里写偏好等于把「默认值」冒充成「用户的选择」——后果有两个：
+  //     ① 新增的「按系统语言自动进对应语言站」永远判成"已选过"，直接失效；
+  //     ② 每个访客每次浏览都被种一颗 siteLang Cookie，哪怕他从未点过切换器
+  //        （既没意义，又和刚做完的同意机制自相矛盾）。
+  //   偏好只应在**用户真的点了切换器**时写入（见 `[data-setlang]` 的点击处理）。
   window.dispatchEvent(new Event('sanfan-langchange'));
 }
 
@@ -675,14 +681,22 @@ document.querySelectorAll('[data-setlang]').forEach(el => {
 // 多语言"跟随"：访客此前选过 6 国之一，进入根页（英文/中文同页）时，
 // 自动跳到对应语言站的同页，保证"选了 de 整站一路德文，直到手动改"。
 // 例：siteLang=de 访问 /blog.html → 跳 /de/blog.html；/products/ym1.html → 跳 /de/products/ym1.html。
+//
+// ⭐ 2026-10-03 修正：旧实现直接拼 '/' + pref + pathname。对**没有语言版的页面**
+//   （全站只有 product.html 这一张：孤立页、noindex、不在 sitemap）
+//   会跳到 /de/product.html 这种不存在的地址 → 客户吃一个 404。
+//   现在改成取**本页语言切换器里指向该语言的真实链接**：目标必然存在，顺带天然支持
+//   目录形态（/de/ 而不是 /de/index.html）。
 (function followPreferredLang() {
   var pref = getLangPref();
   var LANGS = ['de', 'ja', 'ko', 'fr', 'it', 'es'];
   if (LANGS.indexOf(pref) === -1) return;            // 仅 6 国需要跟随跳转
   var p = location.pathname;
   if (p.indexOf('/' + pref + '/') === 0) return;     // 已在对应语言站内则不跳
-  var target = '/' + pref + (p.charAt(0) === '/' ? p : '/' + p);
-  if (target !== p) location.replace(target);        // 替换历史，避免后退成死循环
+  var link = document.querySelector('.lang-menu a[hreflang="' + pref + '"]');
+  if (!link) return;                                  // 本页没有该语言版 → 不跳（防 404）
+  var target = link.getAttribute('href');
+  if (target && target !== p) location.replace(target);
 })();
 // 沿用访客上次选择的语言；没选过（或选过但存储不可用）则默认英文。
 applyLang(getLangPref() === 'zh' ? 'zh' : 'en');
@@ -691,45 +705,70 @@ applyLang(getLangPref() === 'zh' ? 'zh' : 'en');
 const form = document.getElementById('inquiry-form');
 if (form) {
   const okBox = document.getElementById('form-ok');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  // 页面语言对应的「发送中」文案（表单页有 7 个语言版本，而 I18N 只有 en/zh）
+  const SENDING = {
+    en: 'Sending…', de: 'Wird gesendet…', ja: '送信中…', ko: '전송 중…',
+    fr: 'Envoi…', it: 'Invio…', es: 'Enviando…', zh: '发送中…'
+  };
+  const pageLang = (document.documentElement.lang || 'en').toLowerCase().slice(0, 2);
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    // ① 反垃圾：诱饵字段（.form-hp，人看不见也点不到）被填 → 判定为机器人。
+    //    静默丢弃（不给反馈，否则脚本会换招），但要把焦点还给真人能填的字段。
+    const hp = form.querySelector('.form-hp');
+    if (hp && hp.value) { form.reset(); return; }
+    // ② 提交期间禁用按钮：否则采购商网络慢时会连点，Formspree 会收到重复询盘
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.dataset.prevText = submitBtn.textContent;
+      submitBtn.textContent = SENDING[pageLang] || SENDING.en;
+    }
     const data = new FormData(form);
     const endpoint = form.getAttribute('action');
+    const say = (box, msg, bad) => {
+      if (!box) return;
+      box.style.display = 'block';
+      box.style.background = bad ? '#fdecec' : '';
+      box.style.color = bad ? '#a32d2d' : '';
+      box.style.borderColor = bad ? '#f3b5b5' : '';
+      box.textContent = msg;
+    };
     try {
       const res = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
-      if (res.ok) {
-        // GA4 转化事件：只有表单真正提交成功才记，避免把失败也算成询盘
-        if (typeof gtag === 'function') {
-          gtag('event', 'generate_lead', {
-            form_name: 'inquiry',
-            product_interest: data.get('product') || 'unspecified',
-            page_language: document.documentElement.lang || 'en',
-            page_path: location.pathname
-          });
-        }
-        form.reset();
-        okBox.style.display = 'block';
-        okBox.style.background = '';
-        okBox.style.color = '';
-        okBox.style.borderColor = '';
-        okBox.textContent = I18N[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en']['form.ok'];
-        // 尊重系统「减弱动态效果」：CSS 里的 prefers-reduced-motion 管不到 JS 显式写了
-        // behavior:'smooth' 的 scrollIntoView（规范里显式 behavior 优先于 CSS scroll-behavior），
-        // 所以这里必须自己判一次偏好，否则开关打开后这一跳仍然是动画。
+      if (!res.ok) throw new Error('bad');
+      // GA4 转化事件：只有表单真正提交成功才记，避免把失败也算成询盘
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          form_name: 'inquiry',
+          product_interest: data.get('product') || 'unspecified',
+          page_language: document.documentElement.lang || 'en',
+          page_path: location.pathname
+        });
+      }
+      form.reset();
+      // 提示文案优先取页面自带的 data-msg-*（语言页有本地化文案），
+      // 回退到 I18N 的 en/zh —— 修「德语页提交成功却显示英文」
+      const fb = I18N[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en'];
+      say(okBox, (okBox && okBox.dataset.msgOk) || fb['form.ok'], false);
+      // 尊重系统「减弱动态效果」：CSS 里的 prefers-reduced-motion 管不到 JS 显式写了
+      // behavior:'smooth' 的 scrollIntoView（规范里显式 behavior 优先于 CSS scroll-behavior），
+      // 所以这里必须自己判一次偏好，否则开关打开后这一跳仍然是动画。
+      if (okBox) {
         okBox.scrollIntoView({
           behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
           block: 'center'
         });
-      } else {
-        throw new Error('bad');
       }
     } catch (err) {
-      const fail = I18N[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en']['form.fail'];
-      okBox.style.display = 'block';
-      okBox.style.background = '#fdecec';
-      okBox.style.color = '#a32d2d';
-      okBox.style.borderColor = '#f3b5b5';
-      okBox.textContent = fail;
+      const fb = I18N[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en'];
+      say(okBox, (okBox && okBox.dataset.msgFail) || fb['form.fail'], true);
+    } finally {
+      // ③ 无论成败都恢复按钮，否则失败后客户无法重试
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        if (submitBtn.dataset.prevText) submitBtn.textContent = submitBtn.dataset.prevText;
+      }
     }
   });
 }
@@ -1522,4 +1561,157 @@ if (form) {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     if (history.replaceState) history.replaceState(null, '', '#' + id);
   });
+})();
+
+/* ---------- Cookie 同意 + GA4 按需加载（2026-10-03） ----------
+   背景：`googletagmanager.com` 曾硬编码在 **1373/1373 页**的 HTML 里，而全站没有任何
+   同意横幅。德国已有 de 版在服务买家，欧盟市场（DSGVO + ePrivacy TTDSG §25）要求
+   Google Analytics 这类非必要 Cookie 必须**前置同意** —— 这是合规 P0，不是「优化项」。
+
+   现在的做法：
+     · HTML 里不再有任何 GA 痕迹（由 i18n_build/add_consent_gate_20261003.py 剥除）
+     · 客户点「同意」后，本段才动态插入 GA 脚本；点「拒绝」也记住状态，不再追问
+     · 选择存 localStorage，隐私政策页可查
+   为什么横幅由 JS 注入、而不是写进 1373 页：改动面最小、全站口径统一、回归风险最低。
+
+   ⚠️ 顺序要求：本段必须在页面其它逻辑之后跑（附在文件末尾），
+      否则横幅插入会与 i18n 文案切换（applyLang）抢时机。 */
+(function () {
+  var GA_ID = 'G-RMSNDR5S06';
+  var KEY = 'sanfan_consent';            // 'granted' | 'denied'
+  var loaded = false;
+
+  // 同意后才加载 GA；重复调用只生效一次
+  function loadGA() {
+    if (loaded) return;
+    loaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+  window.__gaConsentLoad = loadGA;       // 暴露给其它模块复用
+
+  var lang = (document.documentElement.lang || 'en').toLowerCase().slice(0, 2);
+  var TXT = {
+    en: { t: 'We use Google Analytics to understand how visitors use this site. No personal data is sold. You can accept or decline; declining still gives you the full site.',
+          ok: 'Accept', no: 'Decline', link: 'Privacy Policy' },
+    de: { t: 'Wir nutzen Google Analytics, um zu verstehen, wie Besucher diese Seite nutzen. Es werden keine personenbezogenen Daten verkauft. Sie können zustimmen oder ablehnen — bei Ablehnung bleibt die Seite vollständig nutzbar.',
+          ok: 'Zustimmen', no: 'Ablehnen', link: 'Datenschutzerklärung' },
+    ja: { t: '訪問者がこのサイトを利用する状況を理解するために Google Analytics を使用しています。個人情報は販売しません。同意または拒否を選べます。拒否してもサイトのすべての機能が利用できます。',
+          ok: '同意する', no: '拒否する', link: 'プライバシーポリシー' },
+    ko: { t: '방문자가 이 사이트를 이용하는 방식을 이해하기 위해 Google Analytics를 사용합니다. 개인정보를 판매하지 않습니다. 동의 또는 거부를 선택할 수 있으며, 거부해도 사이트의 모든 기능을 이용할 수 있습니다.',
+          ok: '동의', no: '거부', link: '개인정보처리방침' },
+    fr: { t: 'Nous utilisons Google Analytics pour comprendre l\'utilisation du site. Aucune donnée personnelle n\'est vendue. Vous pouvez accepter ou refuser ; en cas de refus, le site reste entièrement accessible.',
+          ok: 'Accepter', no: 'Refuser', link: 'Politique de confidentialité' },
+    it: { t: 'Utilizziamo Google Analytics per capire come i visitatori usano il sito. Non vendiamo dati personali. Puoi accettare o rifiutare; rifiutando il sito resta completamente utilizzabile.',
+          ok: 'Accetta', no: 'Rifiuta', link: 'Informativa sulla privacy' },
+    es: { t: 'Usamos Google Analytics para entender cómo usan el sitio los visitantes. No se venden datos personales. Puedes aceptar o rechazar; si rechazas, el sitio sigue siendo totalmente utilizable.',
+          ok: 'Aceptar', no: 'Rechazar', link: 'Política de privacidad' },
+    zh: { t: '我们使用 Google Analytics 了解访客如何使用本站，不出售任何个人数据。您可以接受或拒绝；拒绝后本站功能不受影响。',
+          ok: '接受', no: '拒绝', link: '隐私政策' }
+  };
+  var T = TXT[lang] || TXT.en;
+  var privacyHref = (lang === 'de' || lang === 'ja' || lang === 'ko' || lang === 'fr' || lang === 'it' || lang === 'es')
+    ? '/' + lang + '/privacy.html' : '/privacy.html';
+
+  function readConsent() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function saveConsent(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  function closeBar() {
+    var b = document.getElementById('consent-bar');
+    if (b && b.parentNode) b.parentNode.removeChild(b);
+    document.body.classList.remove('consent-open');
+  }
+
+  function decide(v) {
+    saveConsent(v);
+    closeBar();
+    if (v === 'granted') loadGA();
+  }
+
+  var state = readConsent();
+  if (state === 'granted') { loadGA(); return; }
+  if (state === 'denied') return;      // 已拒绝：不再打扰（GDPR 允许不再询问）
+
+  // 未选择 → 插横幅。延迟到 DOM 就绪后，且不阻塞首屏渲染
+  function mount() {
+    var bar = document.createElement('div');
+    bar.className = 'consent-bar';
+    bar.id = 'consent-bar';
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', T.link);
+    bar.innerHTML =
+      '<div class="cb-in">' +
+        '<p>' + T.t + ' <a href="' + privacyHref + '">' + T.link + '</a></p>' +
+        '<div class="cb-act">' +
+          '<button type="button" class="cb-no" data-consent="denied">' + T.no + '</button>' +
+          '<button type="button" class="cb-ok" data-consent="granted">' + T.ok + '</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(bar);
+    document.body.classList.add('consent-open');
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest ? e.target.closest('button[data-consent]') : null;
+      if (b) decide(b.getAttribute('data-consent'));
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mount);
+  } else {
+    mount();
+  }
+})();
+
+/* ---------- theme-color（WIG-03 SHOULD）----------
+   静态层此前 0/1373 页有 <meta name="theme-color">，而移动端浏览器地址栏/下拉区
+   用的是系统默认色，与白底页面割裂。meta 可以由 JS 注入，等效且省掉一次全站模板改写。 */
+(function () {
+  if (document.querySelector('meta[name="theme-color"]')) return;
+  var m = document.createElement('meta');
+  m.name = 'theme-color';
+  m.content = '#ffffff';
+  document.head.appendChild(m);
+})();
+
+/* ---------- 按访客「系统语言」自动进入对应语言站（2026-10-03） ----------
+   客户视角的缺口：第一次从 Google 或直接输网址进来的人，**看到的永远是英文**
+   （老逻辑只有「访客点过切换器」才会跟随）。德国买家要自己找到 DE 才看到德文，
+   这一步流失很实在。
+
+   为什么用 navigator.languages（浏览器系统语言）而不是查 IP 定位：
+     · 静态托管拿不到「客户端 IP 属于哪个国家」——Vercel 只把 geo 头给 Edge/Serverless，
+       不给静态文件；要 IP 定位就得引入 Edge 中间件或第三方查询服务
+     · 第三方 IP 查询 = 又把刚做完的 DSGVO 同意机制推翻（又引入第三方 Cookie 风险）
+     · 系统语言是**纯本地信息**：零网络请求、零 Cookie、零隐私成本，
+       而且更贴近「他此刻想读哪种语言」
+   目标地址取自**本页自己的语言切换器链接** → 零硬编码、目标必然存在（不会 404）。
+
+   三道保护，避免任何意外：
+     ① 访客点过切换器（localStorage / cookie 里有 siteLang）→ 完全不干预
+     ② 只在英文页生效（语言页本身就是目标语言）
+     ③ 单次会话最多自动跳一次（sessionStorage 标记）→ 即使有异常也不会来回弹
+   中文用户不跳：留在英文页用现有的「中文」对照切换（站内没有 /zh/ 站，跳过去反而 404）。 */
+(function autoLangBySystem() {
+  var LANGS = ['de', 'ja', 'ko', 'fr', 'it', 'es'];
+  if (getLangPref()) return;                                  // ① 已明确选过
+  var cur = (document.documentElement.lang || 'en').toLowerCase();
+  if (cur && cur.indexOf('en') !== 0) return;                 // ② 已在语言站
+  try { if (sessionStorage.getItem('autoLangDone')) return; } catch (e) {}   // ③ 本会话已自动处理过
+  var nav = (navigator.languages && navigator.languages.length)
+    ? navigator.languages[0] : (navigator.language || '');
+  nav = (nav || '').toLowerCase();
+  var m = nav.match(/^(de|ja|ko|fr|it|es)(-[a-z0-9]+)?$/);
+  if (!m) return;                                             // 中文 / 其它语言：不动
+  var link = document.querySelector('.lang-menu a[hreflang="' + m[1] + '"]');
+  if (!link) return;                                          // 本页没有该语言版 → 不跳
+  var target = link.getAttribute('href');
+  if (!target || target === location.pathname) return;
+  try { sessionStorage.setItem('autoLangDone', '1'); } catch (e) {}
+  location.replace(target);                                   // 替换历史，避免后退又跳
 })();

@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="お問い合わせ — SANFAN OEM／ODM ヨガ・フィットネス製品メーカー" />
   <meta name="twitter:description" content="ヨガマット、アクセサリー、フィットネス機器のOEM/ODMに関するお見積もりについては、FUJIAN SANFAN までお問い合わせください。メール：zenglinggun@gmail.com、WhatsApp：+86 15959029082。" />
   <meta name="twitter:image" content="https://fjsanfan.com/assets/img/showroom.webp" />
-  <link rel="stylesheet" href="../assets/css/styles.css?v20261002a" />
+  <link rel="stylesheet" href="../assets/css/styles.css?v20261003c" />
   <link rel="icon" href="../assets/img/logo.webp" />
 
   <script type="application/ld+json">
@@ -53,7 +53,7 @@
     "alternateName": "SANFAN",
     "url": "https://fjsanfan.com/",
     "logo": "https://fjsanfan.com/assets/img/logo.webp",
-    "description": "Vertically integrated OEM/ODM manufacturer of TPE, PU and rubber yoga mats plus yoga and fitness accessories. Founded 2013 in Jinjiang, Fujian, China. In-house foaming and finishing across three owned plants.",
+    "description": "TPE・PU・天然ゴム製ヨガマット、ヨガ用品・フィットネス用品の垂直統合型OEM/ODMメーカー。2013年に中国福建省晋江市で設立。3つの自社工場で発泡から仕上げまで一貫生産。",
     "foundingDate": "2013-01-01",
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
@@ -208,20 +208,20 @@
       <div class="form-card">
         <form id="inquiry-form" action="https://formspree.io/f/maewkpvo" method="POST">
           <div class="field">
-            <label>お名前</label>
-            <input type="text" name="name" required />
+            <label for="inq-name">お名前</label>
+            <input type="text" name="name" required id="inq-name" />
           </div>
           <div class="field">
-            <label>会社</label>
-            <input type="text" name="company" />
+            <label for="inq-company">会社</label>
+            <input type="text" name="company" id="inq-company" />
           </div>
           <div class="field">
-            <label>電子メール</label>
-            <input type="email" name="email" required />
+            <label for="inq-email">電子メール</label>
+            <input type="email" name="email" required id="inq-email" />
           </div>
           <div class="field">
-            <label>注目商品</label>
-            <select name="product">
+            <label for="inq-product">注目商品</label>
+            <select name="product" id="inq-product">
               <option value="yoga">ヨガマット</option>
               <option value="props">ヨガプロップス &amp; アクセサリー</option>
               <option value="rollers">フォームローラー &amp; マッサージ</option>
@@ -231,16 +231,18 @@
             </select>
           </div>
           <div class="field">
-            <label>見込み数量</label>
-            <input type="text" name="qty" placeholder="例：1,000個" />
+            <label for="inq-qty">見込み数量</label>
+            <input type="text" name="qty" placeholder="例：1,000個" id="inq-qty" />
           </div>
           <div class="field">
-            <label>メッセージ</label>
-            <textarea name="message" placeholder="仕様、ターゲット市場、スケジュール……"></textarea>
+            <label for="inq-message">メッセージ</label>
+            <textarea name="message" placeholder="仕様、ターゲット市場、スケジュール……" id="inq-message"></textarea>
           </div>
+          
+          <input class="form-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">お問い合わせを送信する</button>
           <p class="form-note">当社はお客様の情報を一切第三者に提供することはありません。</p>
-          <div id="form-ok"></div>
+          <div id="form-ok" aria-live="polite" role="status" data-msg-ok="ありがとうございます。お問い合わせを受け付けました。1 営業日以内にご返信します。" data-msg-fail="送信中にエラーが発生しました。直接メールでお問い合わせください。"></div>
         </form>
       </div>
     </div>
@@ -272,6 +274,8 @@
         <li><a href="about.html">概要</a></li>
         <li><a href="about.html">製造工程</a></li>
         <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="/ja/privacy.html">プライバシーポリシー</a></li>
+        <li><a href="/ja/impressum.html">運営者情報</a></li>
       </ul></div>
       <div><h5>お問い合わせ</h5>
         <div class="contact-line"><span>住所</span>: 中国福建省泉州市晋江市西浜鎮悦進工業団地海光路8号</div>
@@ -282,6 +286,6 @@
     <div class="container footer-bottom">© 2026 福建SANFANスポーツ製品有限公司。無断転載・複製を禁じます。</div>
   </footer>
 
-  <script src="../assets/js/main.js?v20261002a"></script>
+  <script src="../assets/js/main.js?v20261003c"></script>
 </body>
 </html>

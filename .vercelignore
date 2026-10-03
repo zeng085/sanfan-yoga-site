@@ -1,0 +1,43 @@
+# ============================================================
+# 静态部署下，Vercel 会把仓库里**每一个文件**都变成公开可下载的 URL
+# （没有服务端 ACL）。本仓是「站点 + 构建工具/内部资料」混在一起，
+# 所以必须显式划出不对外的那一面。
+#
+# ⚠️⚠️ 一旦本文件存在，Vercel 就**不再回退使用 .gitignore**
+#    → 下面 ① 段必须逐条保留 .gitignore 里的密钥保护规则，
+#      否则等于把它们重新对全世界放开。
+#    校验工具：i18n_build/verify_public_surface_20261003.py
+# ============================================================
+
+# ── ① 密钥、本地缓存、业务敏感数据（= .gitignore 的保护项，逐条保留）──
+i18n_build/.deepl_key
+i18n_build/.deepl_key*
+i18n_build/.glm_key*
+i18n_build/.zhipu_key*
+i18n_build/.indexnow_key
+i18n_build/cache/
+i18n_build/_pending/
+i18n_build/data/
+__pycache__/
+*.pyc
+.DS_Store
+*.bak_*
+
+# ── ② 内部工作区（记忆笔记、构建脚本、报告、截图、中间产物）──
+.workbuddy/
+i18n_build/
+outputs/
+
+# ── ③ 根目录的工具脚本与内部文档（页面目录里不存在这类文件，根锚定即可）──
+/*.py
+/*.js
+/*.md
+/*.csv
+/92c62d163567679a15cfefe662a3eb43.txt
+
+# ── ④ 显式保留（只为 review 时一眼看出没误伤；Vercel 默认放行未列出的文件）──
+# 页面：根 *.html + de/ ja/ ko/ fr/ it/ es/ blog/ products/ pilates/ applications/
+# 资产：assets/
+# GEO：ai/、.well-known/、llms.txt、llms-full.txt
+# 检索：robots.txt、sitemap.xml、rss.xml
+# 部署：vercel.json

@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="Contact — SANFAN OEM / ODM Yoga &amp; Fitness Manufacturer" />
   <meta name="twitter:description" content="Contact FUJIAN SANFAN for yoga mat, accessory and fitness equipment OEM/ODM quotes. Email zenglinggun@gmail.com, WhatsApp +86 15959029082." />
   <meta name="twitter:image" content="https://fjsanfan.com/assets/img/showroom.webp" />
-  <link rel="stylesheet" href="assets/css/styles.css?v20261002a" />
+  <link rel="stylesheet" href="assets/css/styles.css?v20261003c" />
   <link rel="icon" href="assets/img/logo.webp" />
 
   <script type="application/ld+json">
@@ -194,20 +194,20 @@
       <div class="form-card">
         <form id="inquiry-form" action="https://formspree.io/f/maewkpvo" method="POST">
           <div class="field">
-            <label data-i18n="form.name">Your Name</label>
-            <input type="text" name="name" required />
+            <label for="inq-name" data-i18n="form.name">Your Name</label>
+            <input type="text" name="name" required id="inq-name" />
           </div>
           <div class="field">
-            <label data-i18n="form.company">Company</label>
-            <input type="text" name="company" />
+            <label for="inq-company" data-i18n="form.company">Company</label>
+            <input type="text" name="company" id="inq-company" />
           </div>
           <div class="field">
-            <label data-i18n="form.email">Email</label>
-            <input type="email" name="email" required />
+            <label for="inq-email" data-i18n="form.email">Email</label>
+            <input type="email" name="email" required id="inq-email" />
           </div>
           <div class="field">
-            <label data-i18n="form.product">Product of Interest</label>
-            <select name="product">
+            <label for="inq-product" data-i18n="form.product">Product of Interest</label>
+            <select name="product" id="inq-product">
               <option value="yoga" data-i18n="form.opt.yoga">Yoga Mats</option>
               <option value="props" data-i18n="form.opt.props">Yoga Props &amp; Accessories</option>
               <option value="rollers" data-i18n="form.opt.rollers">Foam Rollers &amp; Massage</option>
@@ -217,16 +217,18 @@
             </select>
           </div>
           <div class="field">
-            <label data-i18n="form.qty">Estimated Quantity</label>
-            <input type="text" name="qty" placeholder="e.g. 1,000 pcs" />
+            <label for="inq-qty" data-i18n="form.qty">Estimated Quantity</label>
+            <input type="text" name="qty" placeholder="e.g. 1,000 pcs" id="inq-qty" />
           </div>
           <div class="field">
-            <label data-i18n="form.msg">Message</label>
-            <textarea name="message" placeholder="Specs, target market, timeline..."></textarea>
+            <label for="inq-message" data-i18n="form.msg">Message</label>
+            <textarea name="message" placeholder="Specs, target market, timeline..." id="inq-message"></textarea>
           </div>
+          
+          <input class="form-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center" data-i18n="form.send">Send Inquiry</button>
           <p class="form-note" data-i18n="form.note">We never share your information.</p>
-          <div id="form-ok"></div>
+          <div id="form-ok" aria-live="polite" role="status" data-msg-ok="Thanks! Your inquiry has been sent. We will reply within 1 business day." data-msg-fail="Something went wrong. Please email us directly."></div>
         </form>
       </div>
     </div>
@@ -258,6 +260,8 @@
         <li><a href="about.html" data-i18n="nav.about">About</a></li>
         <li><a href="about.html" data-i18n="process.title">Production Process</a></li>
         <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/impressum.html">Imprint</a></li>
       </ul></div>
       <div><h5 data-i18n="foot.contact">Contact</h5>
         <div class="contact-line"><span data-i18n="foot.addr">Address</span>: No. 8 Haiguang Road, Yuejin Industrial Zone, Xibin Town, Jinjiang, Quanzhou, Fujian, China</div>
@@ -268,6 +272,6 @@
     <div class="container footer-bottom" data-i18n="foot.copyright">© 2026 FUJIAN SANFAN Sports Products Co., Ltd. All rights reserved.</div>
   </footer>
 
-  <script src="assets/js/main.js?v20261002a"></script>
+  <script src="assets/js/main.js?v20261003c"></script>
 </body>
 </html>

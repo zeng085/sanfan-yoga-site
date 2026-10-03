@@ -1617,6 +1617,72 @@ table.pl-spec-3 { min-width: 560px; }
 }
 body.lb-open { overflow: hidden; }   /* 打开时锁背景滚动，避免 iOS 背景跟着滑 */
 
+/* ---------- 产能表：独立横向滚动容器（2026-10-03）----------
+   客户视角实测：≤360px 视口下表格宽 377px、超出 57px，而根上是
+   html,body{overflow-x:clip} → 客户**看不到横向滚动条，右侧产能数字直接消失**。
+   根因：td.val{white-space:nowrap} 让「1.000.000 Stück pro Jahr」这类长串不换行。
+   修法沿用本仓既有的 .kit-wrap / .mat-wrap 模式：外层容器自己滚，表格保持原始列宽。 */
+.cap-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin-top: 22px;
+}
+.cap-wrap .cap-table { margin-top: 0; border: 0; }
+.cap-wrap .cap-table th:first-child, .cap-wrap .cap-table td:first-child { padding-left: 14px; }
+.cap-wrap .cap-table th:last-child,  .cap-wrap .cap-table td:last-child  { padding-right: 14px; }
+
+/* 窄屏：先尽量让它不用滑就装下（装不下再滑，而不是被裁掉看不见） */
+@media (max-width: 420px) {
+  .cap-wrap .cap-table th,
+  .cap-wrap .cap-table td { padding: 9px 10px; font-size: 13px; }
+  .cap-wrap .cap-table td.val { white-space: normal; }   /* 关键：让长串能换行 */
+}
+
+/* ---------- Cookie 同意横幅（2026-10-03）----------
+   GA4 已从 1373 页 HTML 里移除，改由 main.js 在**客户同意后**动态注入
+   （DSGVO / ePrivacy TTDSG：Google Analytics 属非必要 Cookie，须前置同意）。
+   横幅硬要求：① 触控目标 ≥44px ② 不遮住底部联系条 .cbar ③ 键盘可达。 */
+.consent-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 80;
+  background: #fff; border-top: 1px solid var(--line);
+  box-shadow: 0 -6px 24px rgba(15, 23, 42, .10);
+  padding: 14px 16px;
+}
+.consent-bar .cb-in {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center;
+}
+.consent-bar p { margin: 0; font-size: 14.5px; line-height: 1.6; color: #1f2937; flex: 1 1 320px; }
+.consent-bar p a { color: var(--brand); text-decoration: underline; }
+.consent-bar .cb-act { display: flex; gap: 10px; flex: 0 0 auto; }
+.consent-bar button {
+  min-height: 44px; padding: 0 18px; border-radius: 10px;
+  font-size: 15px; font-weight: 600; cursor: pointer;
+  border: 1px solid var(--line); background: #fff; color: #1f2937;
+}
+.consent-bar .cb-ok { background: var(--brand); border-color: var(--brand); color: #fff; }
+/* 移动端：同意条是底部通栏，会压住 .cbar → 让 .cbar 上移让位 */
+@media (max-width: 920px) { body.consent-open .cbar { bottom: 120px; } }
+
+/* ---------- 表单：反垃圾诱饵（honeypot）----------
+   真实机器人按标签顺序填表，会把隐藏字段也填上；人看不见也点不到。
+   提交时由 main.js 检查该字段，非空即判定为机器人，直接静默丢弃。 */
+.form-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* ---------- WIG-05：可点元素的点击高亮（WIG SHOULD，静态层此前 0 处）----------
+   实测 720 个可点元素的 computed 值全是 Chrome 默认 rgba(0,0,0,.18)，
+   深色底图上会显脏。改成品牌色的淡反馈，肉眼几乎无感但不发灰。 */
+a, button, [role="button"], input, select, textarea, summary, .pd-thumb, .cat-zoom {
+  -webkit-tap-highlight-color: rgba(15, 118, 110, .14);
+}
+
+/* ---------- WIG-12：标题断行平衡（text-wrap: balance）----------
+   标题在窄屏下末行常只剩一两个词（如「…Stück pro Jahr」被甩到下一行）。
+   balance 让浏览器尽量均分行宽；不支持的浏览器直接忽略，无副作用。 */
+h1, h2, h3, .section-title { text-wrap: balance; }
+
 /* ---------- 减弱动态效果（prefers-reduced-motion）----------
    系统层开关（iOS 辅助功能-减弱动态效果 / Android 移除动画 / macOS 减弱动态效果）打开时，
    必须尊重。改前实测（Playwright reducedMotion:'reduce' 上下文）：
