@@ -31,12 +31,26 @@ SAMEAS = load_sameas()
 
 
 def inject(node):
-    """递归：给 Organization 节点加 sameAs，返回是否改动"""
+    """递归：给 Organization 节点补齐 sameAs，返回是否改动。
+
+    2026-10-20 改：原实现只在节点"没有 sameAs"时注入，导致新增资产（如 YouTube）
+    无法进入已有节点（全站 1085 页早已带 facebook 那一条）。现改为**合并追加**：
+    保留节点已有 URL，只补 sameas.json 里缺的，绝不删除既有条目。
+    """
     changed = False
     if isinstance(node, dict):
-        if node.get('@type') == 'Organization' and 'sameAs' not in node:
-            node['sameAs'] = list(SAMEAS)
-            changed = True
+        if node.get('@type') == 'Organization':
+            want = list(SAMEAS)
+            cur = node.get('sameAs')
+            if cur is None:
+                node['sameAs'] = want
+                changed = True
+            else:
+                cur_list = cur if isinstance(cur, list) else [cur]
+                added = [u for u in want if u not in cur_list]
+                if added:
+                    node['sameAs'] = cur_list + added
+                    changed = True
         for v in node.values():
             if inject(v):
                 changed = True

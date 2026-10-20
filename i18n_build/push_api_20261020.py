@@ -26,7 +26,7 @@ import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO = "zeng085/sanfan-yoga-site"
-BASE_COMMIT = "52782ceb"   # 本地起点（树 == 远端树）
+BASE_COMMIT = "aa334352"   # 本地起点（树 == 远端树）
 BRANCH = "main"
 PAT_FILE = os.path.expanduser("~/.workbuddy/secrets/gh_pat")
 

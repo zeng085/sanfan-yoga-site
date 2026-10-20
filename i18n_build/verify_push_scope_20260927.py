@@ -17,7 +17,7 @@ import urllib.request
 
 REPO = "zeng085/sanfan-yoga-site"
 ROOT = "/Users/mac-zlg/WorkBuddy/2026-08-20-16-43-16"
-START = "52782ceb"          # 上次已推的本地 commit（起点）
+START = "aa334352"          # 上次已推的本地 commit（起点）
 # ⚠️ 起点表（本地 commit → 远程 sha），每次推送成功后更新这里 + MEMORY.md：
 #   0d10b7d9 → b94f9879d5   （分类页 1381 文件，09-26）
 #   41e1ff5a → ba4fa0cc52   （移动端 P0 五处 + P1 三项，1370 文件，09-27）
@@ -35,6 +35,7 @@ START = "52782ceb"          # 上次已推的本地 commit（起点）
 #   da719c95 → 1d28299048   （GA 桩误改 → 回退；bump 20261003d/e，1388 文件，10-03）
 #   4f1334c1 → d6f5131651   （起点自动定位工具 + 记忆，1390 文件，10-03）
 #   52782ceb → 121176993077 （摘除 Product.offers 消 GSC 商品告警，1079 文件，10-20）
+#   aa334352 → 36bdda4f83   （GSC确诊后修爬取浪费：sitemap 1386条lastmod + 74处index.html内链，48 文件，10-20）
 OUT = "i18n_build/reports/push_list_20260927.txt"
 
 # ⚠️ 已知假警报（2026-10-02 实测，别被它拦住）：
