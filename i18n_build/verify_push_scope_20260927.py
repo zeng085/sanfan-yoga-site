@@ -17,7 +17,7 @@ import urllib.request
 
 REPO = "zeng085/sanfan-yoga-site"
 ROOT = "/Users/mac-zlg/WorkBuddy/2026-08-20-16-43-16"
-START = "da719c95"          # 上次已推的本地 commit（起点）
+START = "4f1334c1"          # 上次已推的本地 commit（起点）
 # ⚠️ 起点表（本地 commit → 远程 sha），每次推送成功后更新这里 + MEMORY.md：
 #   0d10b7d9 → b94f9879d5   （分类页 1381 文件，09-26）
 #   41e1ff5a → ba4fa0cc52   （移动端 P0 五处 + P1 三项，1370 文件，09-27）
@@ -33,6 +33,7 @@ START = "da719c95"          # 上次已推的本地 commit（起点）
 #                            系统语言自动匹配 + 数字书写修复，1417 文件，10-03）
 #   fa92d5b0 → 580f850aca   （补剥 7 个联系页 GA + 起点表补记，12 文件，10-03）
 #   da719c95 → 1d28299048   （GA 桩误改 → 回退；bump 20261003d/e，1388 文件，10-03）
+#   4f1334c1 → d6f5131651   （起点自动定位工具 + 记忆，1390 文件，10-03）
 OUT = "i18n_build/reports/push_list_20260927.txt"
 
 # ⚠️ 已知假警报（2026-10-02 实测，别被它拦住）：
