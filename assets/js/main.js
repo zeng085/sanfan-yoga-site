@@ -1646,6 +1646,9 @@ if (form) {
   var state = readConsent();
   if (state === 'granted') { loadGA(); return; }
   if (state === 'denied') return;      // 已拒绝：不再打扰（GDPR 允许不再询问）
+  // 2026-10-23：只有欧洲（GDPR/英国）访客需要先同意；其他地区直接统计，否则几乎收不到数据
+  var tz = ''; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+  if (tz && !/^(Europe\/|Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe))/.test(tz)) { loadGA(); return; }
 
   // 未选择 → 插横幅。延迟到 DOM 就绪后，且不阻塞首屏渲染
   function mount() {
