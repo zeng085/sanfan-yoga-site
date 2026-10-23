@@ -22,7 +22,7 @@ INDEX_JSON = {
                 "addressRegion": "Fujian",
                 "addressCountry": "CN"
             },
-            "email": "zenglinggun@gmail.com"
+            "email": "sales@fjsanfan.com"
         },
         {
             "@type": "WebSite",
@@ -53,7 +53,7 @@ CONTACT_JSON = {
     "@type": "LocalBusiness",
     "name": "FUJIAN SANFAN Sports Products Co., Ltd.",
     "url": D + "/contact.html",
-    "email": "zenglinggun@gmail.com",
+    "email": "sales@fjsanfan.com",
     "telephone": "+86 15959029082",
     "address": {
         "@type": "PostalAddress",

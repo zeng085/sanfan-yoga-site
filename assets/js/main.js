@@ -26,12 +26,12 @@ const I18N = {
     // Hero
     'hero.eyebrow': 'OEM / ODM Yoga & Fitness Manufacturer',
     'hero.title': 'FUJIAN SANFAN — Your Direct Factory for Yoga & Fitness Gear',
-    'hero.lead': 'Since 2013, a leading OEM/ODM manufacturer of yoga mats, aerial yoga hammocks, yoga props, foam rollers, resistance bands and fitness equipment. 600+ skilled workers, monthly capacity of 200,000+ yoga mats, 24-hour service team. MOQ from 100 pcs, 7-day sampling.',
+    'hero.lead': 'Since 2013, a leading OEM/ODM manufacturer of yoga mats, aerial yoga hammocks, yoga props, foam rollers, resistance bands and fitness equipment. 600+ skilled workers, monthly capacity of 200,000+ yoga mats, replies within 2 hours on working days. MOQ from 100 pcs, 7-day sampling.',
     'hero.cta1': 'Request a Quote', 'hero.cta2': 'Explore Products',
     'hero.stat1.n': '2013', 'hero.stat1.l': 'Established',
     'hero.stat2.n': '600+', 'hero.stat2.l': 'Skilled Workers',
     'hero.stat3.n': '1,000,000+', 'hero.stat3.l': 'Mats / Year',
-    'hero.stat4.n': '24/7', 'hero.stat4.l': 'Service Team',
+    'hero.stat4.n': '<2 h', 'hero.stat4.l': 'Reply Time',
     'hero.media': 'SANFAN factory',
 
     // Why choose us
@@ -165,7 +165,7 @@ const I18N = {
     'about.h1': 'FUJIAN SANFAN Sports Products Co., Ltd.',
     'about.p1': 'Founded in 2013 and headquartered in Xiamen, Fujian, SANFAN is a leading OEM/ODM manufacturer of yoga mats and sports products, with our manufacturing base in Jinjiang — the heart of China’s sporting-goods belt.',
     'about.p2': 'We provide customized designing, developing, manufacturing and exporting for customers worldwide. Our range covers yoga mats, aerial yoga hammocks, yoga wheels, foam rollers, blocks, balls, resistance bands and a broad selection of fitness gear.',
-    'about.p3': 'With 600+ skilled workers and high-tech machines, we guarantee high-output, high-quality production and on-time delivery at competitive prices. Our service team is on standby 24 hours to support our customers.',
+    'about.p3': 'With 600+ skilled workers and high-tech machines, we guarantee high-output, high-quality production and on-time delivery at competitive prices. Our sales team replies within 2 hours on working days (Mon–Sat, 09:00–22:00 China time).',
     'about.cap.title': 'Core Capabilities',
     'about.cap.l1': 'Material formulation & product development',
     'about.cap.l2': 'Custom size, thickness, color & surface finish',
@@ -296,7 +296,7 @@ const I18N = {
     'hero.stat1.n': '2013', 'hero.stat1.l': '成立年份',
     'hero.stat2.n': '600+', 'hero.stat2.l': '熟练工人',
     'hero.stat3.n': '100万+', 'hero.stat3.l': '垫子/年',
-    'hero.stat4.n': '24/7', 'hero.stat4.l': '服务团队',
+    'hero.stat4.n': '<2 小时', 'hero.stat4.l': '回复时效',
     'hero.media': '三梵工厂',
 
     'str.title': '为什么选择三梵',
@@ -778,7 +778,7 @@ if (form) {
 (function () {
   var WA_NUM = '8615959029082';
   var TEL_TXT = '+86 15959029082';
-  var MAIL = 'zenglinggun@gmail.com';
+  var MAIL = 'sales@fjsanfan.com';
   var lang = (document.documentElement.lang || 'en').toLowerCase();
   var MSG = {
     en: "Hi SANFAN, I found your website and I'm interested in your yoga mats. Could you share MOQ, price and sampling time?",

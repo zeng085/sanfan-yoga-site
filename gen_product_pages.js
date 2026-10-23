@@ -332,7 +332,7 @@ ${gallery.map((s, i) => '          <button type="button" class="pd-thumb' + (i =
       </ul></div>
       <div><h5 data-i18n="foot.contact">Contact</h5>
         <div class="contact-line"><span data-i18n="foot.addr">Address</span>: No. 8 Haiguang Road, Yuejin Industrial Zone, Xibin Town, Jinjiang, Quanzhou, Fujian, China</div>
-        <div class="contact-line"><span data-i18n="foot.email">Email</span>: zenglinggun@gmail.com</div>
+        <div class="contact-line"><span data-i18n="foot.email">Email</span>: sales@fjsanfan.com</div>
         <div class="contact-line"><span data-i18n="foot.phone">WhatsApp</span>: +86 15959029082</div>
       </div>
     </div>
