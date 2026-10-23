@@ -563,6 +563,7 @@ function isLocalizedPage() {
 }
 
 function applyLang(lang) {
+  if (lang === 'zh') lang = 'en'; // 2026-10-23 英文页已移除隐藏中文
   // 分语言 URL 页面（/de/ /fr/ 等）本身就是目标语言，中英文切换对它们无意义。
   // 如果不整体返回，用户在英文页选过中文后，访问法语页会把中文内容混进去。
   if (isLocalizedPage()) return;
