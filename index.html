@@ -25,7 +25,8 @@
   <meta name="twitter:image" content="https://fjsanfan.com/assets/img/tpe-mat-1.webp" />
   <link rel="stylesheet" href="assets/css/styles.css?v20261024p" />
   <link rel="preload" href="assets/fonts/archivo-var-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/home-v2.css?v20261024r" />
+  <link rel="preload" href="assets/fonts/public-sans-var-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/home-v2.css?v20261024m3" />
   <link rel="icon" href="assets/img/logo.webp" />
   <link rel="alternate" type="application/rss+xml" title="FUJIAN SANFAN Blog" href="rss.xml" />
 
@@ -103,21 +104,20 @@
   </header>
 
   <main id="main" class="hv">
-
-    <!-- ===== Hero: the product in bulk, facts on a production tag ===== -->
+    <!-- ===== Hero: full-bleed booth photo, headline over it, facts strip ===== -->
     <section class="hv-hero" aria-labelledby="hv-title">
+      <div class="hv-hero-media"><img class="hv-hero-img" src="assets/img/home/hero-v4.webp" srcset="assets/img/home/hero-v4-720.webp 720w, assets/img/home/hero-v4.webp 1200w" sizes="100vw" width="1200" height="851" fetchpriority="high" alt="SANFAN booth display wall with rolled TPE yoga mats and custom-printed suede yoga mats" /></div>
       <div class="hv-wrap hv-hero-grid">
         <div class="hv-hero-copy">
           <h1 id="hv-title"><span class="hv-kicker">FUJIAN SANFAN<span class="hv-sr"> — </span></span> Your Direct Factory for Yoga &amp; Fitness Gear</h1>
-          <p class="hv-lead">Since 2013, a leading OEM/ODM manufacturer of yoga mats, aerial yoga hammocks, yoga props, foam rollers, resistance bands and fitness equipment. 600+ skilled workers, annual capacity of 1,000,000+ yoga mats, replies within 2 hours on working days. MOQ from 100 pcs, 7-day sampling.</p>
+          <p class="hv-lead" data-clamp>Since 2013, a leading OEM/ODM manufacturer of yoga mats, aerial yoga hammocks, yoga props, foam rollers, resistance bands and fitness equipment. 600+ skilled workers, annual capacity of 1,000,000+ yoga mats, replies within 2 hours on working days. MOQ from 100 pcs, 7-day sampling.</p>
           <div class="hv-actions">
             <a href="contact.html" class="hv-btn hv-btn-primary">Request a quote</a>
             <a href="products.html" class="hv-btn hv-btn-quiet">Explore products</a>
           </div>
         </div>
-        <div class="hv-hero-media">
-          <img class="hv-hero-img" src="assets/img/home/hero-v4.webp" srcset="assets/img/home/hero-v4-720.webp 720w, assets/img/home/hero-v4.webp 1200w" sizes="(max-width: 900px) 100vw, 44vw" width="1200" height="851" fetchpriority="high" alt="SANFAN booth display wall with rolled TPE yoga mats and custom-printed suede yoga mats" />
-          <div class="hv-tag" role="group" aria-label="Factory facts">
+      </div>
+      <div class="hv-strip"><div class="hv-wrap"><div class="hv-tag" role="group" aria-label="Factory facts">
             <dl>
               <div><dt>Established</dt><dd>2013</dd></div>
               <div><dt>Skilled workers</dt><dd>600+</dd></div>
@@ -126,18 +126,44 @@
               <div><dt>Physical samples</dt><dd>7 days</dd></div>
               <div><dt>Reply time, working days</dt><dd>&lt;2 h</dd></div>
             </dl>
-          </div>
+          </div></div></div>
+    </section>
+
+    <!-- ===== Product range: colour-block category carousel ===== -->
+    <section class="hv-sec hv-range" aria-labelledby="hv-range-title">
+      <div class="hv-wrap">
+        <div class="hv-split-head hv-head-nav">
+          <h2 id="hv-range-title">Our product range</h2>
+          <p>From yoga essentials to full fitness lines — all factory-direct and customizable.</p>
+          <div class="hv-rail-nav" hidden><button type="button" class="hv-rail-btn" data-dir="-1" aria-label="Scroll back"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button type="button" class="hv-rail-btn" data-dir="1" aria-label="Scroll forward"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
         </div>
+      </div>
+      <div class="hv-rail hv-rail-cats" role="region" aria-label="Product range, scroll sideways" tabindex="0">
+        <ul class="hv-tiles">
+          <li><a class="hv-tile hv-c-lilac" href="tpe-yoga-mats.html"><span class="hv-tile-img"><img src="assets/img/ym1-1.webp" width="480" height="480" loading="lazy" alt="TPE Yoga Mats" /></span><span class="hv-tile-name">TPE Yoga Mats</span><span class="hv-tile-sub">Eco TPE · Single &amp; Double Layer · 61–90 cm</span><span class="hv-tile-count">23 products</span></a></li>
+          <li><a class="hv-tile hv-c-sage" href="pu-rubber-yoga-mats.html"><span class="hv-tile-img hv-photo"><img src="assets/img/home/tile-pu-printed.webp" width="480" height="480" loading="lazy" alt="Printed PU rubber yoga mats rolled on a SANFAN display wall" /></span><span class="hv-tile-name">PU &amp; Rubber Yoga Mats</span><span class="hv-tile-sub">PU Top · Natural Rubber Base · Hot Yoga</span><span class="hv-tile-count">18 products</span></a></li>
+          <li><a class="hv-tile hv-c-cork" href="suede-cork-yoga-mats.html"><span class="hv-tile-img"><img src="assets/img/aurora-gradient-suede-yoga-mat-1.webp" width="480" height="480" loading="lazy" alt="Suede &amp; Cork Yoga Mats" /></span><span class="hv-tile-name">Suede &amp; Cork Yoga Mats</span><span class="hv-tile-sub">Suede / Cork Surface · Print-Ready</span><span class="hv-tile-count">14 products</span></a></li>
+          <li><a class="hv-tile hv-c-pink" href="meditation-pilates-mats.html"><span class="hv-tile-img"><img src="assets/img/pr3-1.webp" width="480" height="480" loading="lazy" alt="Meditation &amp; Pilates Mats" /></span><span class="hv-tile-name">Meditation &amp; Pilates Mats</span><span class="hv-tile-sub">Round · Mandala · Reformer Mat</span><span class="hv-tile-count">9 products</span></a></li>
+          <li><a class="hv-tile hv-c-mist" href="foam-rollers.html"><span class="hv-tile-img"><img src="assets/img/fr1-1.webp" width="480" height="480" loading="lazy" alt="Foam Rollers" /></span><span class="hv-tile-name">Foam Rollers</span><span class="hv-tile-sub">EVA / EPP · Solid &amp; Hollow · Vibrating</span><span class="hv-tile-count">12 products</span></a></li>
+          <li><a class="hv-tile hv-c-lilac" href="massage-recovery.html"><span class="hv-tile-img"><img src="assets/img/fr5-1.webp" width="480" height="480" loading="lazy" alt="Massage &amp; Recovery" /></span><span class="hv-tile-name">Massage &amp; Recovery</span><span class="hv-tile-sub">Fascia Gun · Fascia Ball · Massage Tools</span><span class="hv-tile-count">14 products</span></a></li>
+          <li><a class="hv-tile hv-c-sage" href="resistance-bands.html"><span class="hv-tile-img"><img src="assets/img/rb1-1.webp" width="480" height="480" loading="lazy" alt="Resistance Bands" /></span><span class="hv-tile-name">Resistance Bands</span><span class="hv-tile-sub">Loop · Tube · Figure-8 · Power Band</span><span class="hv-tile-count">10 products</span></a></li>
+          <li><a class="hv-tile hv-c-pink" href="yoga-props-accessories.html"><span class="hv-tile-img"><img src="assets/img/fi2-1.webp" width="480" height="480" loading="lazy" alt="Yoga Props &amp; Accessories" /></span><span class="hv-tile-name">Yoga Props &amp; Accessories</span><span class="hv-tile-sub">Blocks · Balls · Rings · Bags · Hammock</span><span class="hv-tile-count">23 products</span></a></li>
+          <li><a class="hv-tile hv-c-mist" href="jump-ropes.html"><span class="hv-tile-img hv-photo"><img src="assets/img/cordless-jump-rope-1.webp" width="480" height="480" loading="lazy" alt="Jump Ropes" /></span><span class="hv-tile-name">Jump Ropes</span><span class="hv-tile-sub">Speed · Counting · Cordless · Kids</span><span class="hv-tile-count">6 products</span></a></li>
+          <li><a class="hv-tile hv-c-cork" href="strength-training.html"><span class="hv-tile-img"><img src="assets/img/ab-roller-training-set-1.webp" width="480" height="480" loading="lazy" alt="Strength &amp; Fitness" /></span><span class="hv-tile-name">Strength &amp; Fitness</span><span class="hv-tile-sub">Silicone Weights · Ab Rollers · Boards · Steppers</span><span class="hv-tile-count">12 products</span></a></li>
+        </ul>
       </div>
     </section>
 
     <!-- ===== Process: real sequence, real frames ===== -->
     <section class="hv-sec hv-process" aria-labelledby="hv-process-title">
       <div class="hv-wrap">
-        <div class="hv-split-head">
+        <div class="hv-split-head hv-head-nav">
           <h2 id="hv-process-title">From raw foam to finished mat, under our own roof</h2>
-          <p><strong>In-house from foaming to finishing.</strong> We operate three owned plants — two dedicated to TPE yoga mats and one to PU / rubber mats — running 6 foaming machines and 10 production lines. Because foaming, the most capacity-critical step, happens inside our own factories, we hold a steady annual output of about 1,000,000 mats and control quality from raw material through to the finished mat.</p>
+          <p data-clamp><strong>In-house from foaming to finishing.</strong> We operate three owned plants — two dedicated to TPE yoga mats and one to PU / rubber mats — running 6 foaming machines and 10 production lines. Because foaming, the most capacity-critical step, happens inside our own factories, we hold a steady annual output of about 1,000,000 mats and control quality from raw material through to the finished mat.</p>
+          <div class="hv-rail-nav" hidden><button type="button" class="hv-rail-btn" data-dir="-1" aria-label="Scroll back"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button type="button" class="hv-rail-btn" data-dir="1" aria-label="Scroll forward"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
         </div>
+      </div>
+      <div class="hv-bleed">
         <div class="hv-rail" role="region" aria-label="Production steps, scroll sideways" tabindex="0">
           <ol class="hv-steps">
             <li><figure><img src="assets/img/home/step-foaming.webp" width="720" height="900" loading="lazy" alt="Foaming press number 2 on the SANFAN foaming line" /><figcaption><span class="hv-num" aria-hidden="true">01</span><h3>Foaming</h3><p>Material foamed to spec on our own presses.</p></figcaption></figure></li>
@@ -150,8 +176,41 @@
       </div>
     </section>
 
+    <!-- ===== Featured products ===== -->
+    <section class="hv-sec hv-featured" aria-labelledby="hv-featured-title">
+      <div class="hv-wrap">
+        <div class="hv-split-head hv-head-nav">
+          <h2 id="hv-featured-title">Featured products</h2>
+          <p>A hand-picked selection across our 10 product lines — every one customizable with your logo, size, thickness and packaging.</p>
+          <div class="hv-rail-nav" hidden><button type="button" class="hv-rail-btn" data-dir="-1" aria-label="Scroll back"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button type="button" class="hv-rail-btn" data-dir="1" aria-label="Scroll forward"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+        </div>
+        <p class="hv-swipe-hint" aria-hidden="true">Swipe &rarr;</p>
+        </div>
+      <div class="hv-bleed">
+        <div class="hv-rail hv-rail-products" role="region" aria-label="Featured products, scroll sideways" tabindex="0">
+          <ul class="hv-prods">
+            <li><a class="hv-prod" href="products/two-tone-double-layer-tpe-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/two-tone-double-layer-tpe-yoga-mat-1.webp" width="480" height="480" loading="lazy" alt="Two-Tone Double Layer TPE Yoga Mat" /></span><span class="hv-prod-name">Two-Tone Double Layer TPE Yoga Mat</span><span class="hv-prod-spec">TPE · 185x122cm</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#2a2b2d"></i><i style="--sw:#b9dcb8"></i></span></a></li>
+            <li><a class="hv-prod" href="products/cork-tpe-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/cork-tpe-yoga-mat-1.webp" width="600" height="600" loading="lazy" alt="Cork TPE Yoga Mat" /></span><span class="hv-prod-name">Cork TPE Yoga Mat</span><span class="hv-prod-spec">Cork+TPE · 183cm*66cm*6mm</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#c89f72"></i><i style="--sw:#8cc56d"></i></span></a></li>
+            <li><a class="hv-prod" href="products/red-pu-rubber-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/red-pu-rubber-yoga-mat-1.webp" width="1000" height="1000" loading="lazy" alt="Red PU Rubber Yoga Mat" /></span><span class="hv-prod-name">Red PU Rubber Yoga Mat</span><span class="hv-prod-spec">PU+Rubber · 183x68cm</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#d8262b"></i><i style="--sw:#2a2b2d"></i></span></a></li>
+            <li><a class="hv-prod" href="products/marble-print-pu-rubber-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/marble-print-pu-rubber-yoga-mat-1.webp" width="800" height="800" loading="lazy" alt="Marble Print PU Rubber Yoga Mat" /></span><span class="hv-prod-name">Marble Print PU Rubber Yoga Mat</span><span class="hv-prod-spec">PU+Rubber · 185x68cm</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#7f9a63"></i><i style="--sw:#e9eadf"></i></span></a></li>
+            <li><a class="hv-prod" href="products/flamingo-print-suede-rubber-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/flamingo-print-suede-rubber-yoga-mat-1.webp" width="1000" height="1000" loading="lazy" alt="Flamingo Print Suede Rubber Yoga Mat" /></span><span class="hv-prod-name">Flamingo Print Suede Rubber Yoga Mat</span><span class="hv-prod-spec">Suede+Rubber · 185x68cm</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#f2b6c3"></i><i style="--sw:#b79bd6"></i></span></a></li>
+            <li><a class="hv-prod" href="products/starry-night-print-suede-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/starry-night-print-suede-yoga-mat-1.webp" width="800" height="800" loading="lazy" alt="Starry Night Print Suede Yoga Mat" /></span><span class="hv-prod-name">Starry Night Print Suede Yoga Mat</span><span class="hv-prod-spec">Suede+Rubber · 185x68cm</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#22407a"></i><i style="--sw:#e2b93b"></i></span></a></li>
+            <li><a class="hv-prod" href="products/round-mandala-meditation-mat.html"><span class="hv-prod-img"><img src="assets/img/round-mandala-meditation-mat-1.webp" width="800" height="800" loading="lazy" alt="Round Mandala Meditation Mat" /></span><span class="hv-prod-name">Round Mandala Meditation Mat</span><span class="hv-prod-spec">Suede+Rubber · 68cm</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#7cc6c8"></i><i style="--sw:#c98c4f"></i></span></a></li>
+            <li><a class="hv-prod" href="products/pilates-reformer-mat-custom-logo.html"><span class="hv-prod-img"><img src="assets/img/pilates-reformer-mat-custom-logo-1.webp" width="800" height="800" loading="lazy" alt="Pilates Reformer Mat (Custom Logo)" /></span><span class="hv-prod-name">Pilates Reformer Mat (Custom Logo)</span><span class="hv-prod-spec">Made to order</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#1e1f22"></i><i style="--sw:#8e7cc3"></i></span></a></li>
+            <li><a class="hv-prod" href="products/vibrating-foam-roller.html"><span class="hv-prod-img"><img src="assets/img/vibrating-foam-roller-1.webp" width="800" height="800" loading="lazy" alt="Vibrating Foam Roller" /></span><span class="hv-prod-name">Vibrating Foam Roller</span><span class="hv-prod-spec">Made to order</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#f26b1d"></i></span></a></li>
+            <li><a class="hv-prod" href="products/fascia-gun.html"><span class="hv-prod-img"><img src="assets/img/fascia-gun-1.webp" width="800" height="800" loading="lazy" alt="Fascia Gun (White)" /></span><span class="hv-prod-name">Fascia Gun (White)</span><span class="hv-prod-spec">ABS + Electronic Components · 14*5.5*15cm</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#f2f2f2"></i><i style="--sw:#2a2b2d"></i></span></a></li>
+            <li><a class="hv-prod" href="products/figure-8-resistance-bands.html"><span class="hv-prod-img"><img src="assets/img/figure-8-resistance-bands-1.webp" width="800" height="800" loading="lazy" alt="Figure 8 Resistance Bands" /></span><span class="hv-prod-name">Figure 8 Resistance Bands</span><span class="hv-prod-spec">TPE · 42*14cm</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#c9c3c3"></i><i style="--sw:#f07fa7"></i></span></a></li>
+            <li><a class="hv-prod" href="products/eva-yoga-block.html"><span class="hv-prod-img"><img src="assets/img/eva-yoga-block-1.webp" width="600" height="600" loading="lazy" alt="EVA Yoga Block" /></span><span class="hv-prod-name">EVA Yoga Block</span><span class="hv-prod-spec">Made to order</span><span class="hv-swatches" aria-hidden="true"><i style="--sw:#f0a9a0"></i><i style="--sw:#9cc0e4"></i></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hv-wrap">
+        <p class="hv-after"><a class="hv-btn hv-btn-outline" href="products.html">Browse all 147 products</a></p>
+      </div>
+    </section>
+
     <!-- ===== Factory video (2026-10-23) ===== -->
-    <section class="hv-sec hv-video" id="factory-video" aria-labelledby="hv-video-title">
+    <section class="hv-sec hv-video hv-dark" id="factory-video" aria-labelledby="hv-video-title">
       <div class="hv-wrap">
         <div class="hv-split-head">
           <h2 id="hv-video-title">See our factory on video</h2>
@@ -167,7 +226,7 @@
     </section>
 
     <!-- ===== Real footage strip (2026-10-24) ===== -->
-    <section class="hv-sec" id="real-footage" aria-labelledby="hv-real-title">
+    <section class="hv-sec hv-footage hv-dark" id="real-footage" aria-labelledby="hv-real-title">
       <div class="hv-wrap">
         <div class="hv-split-head">
           <h2 id="hv-real-title">Real footage from our Jinjiang factory</h2>
@@ -185,11 +244,12 @@
           <h2 id="hv-why-title">Why buyers choose Sanfan</h2>
           <p>A flexible supply chain engineered for private-label success.</p>
         </div>
+        <figure class="hv-why-media"><img src="assets/img/factory/printed-pu-rolls-display.webp" width="1200" height="652" loading="lazy" alt="Rolls of custom-printed PU rubber yoga mats on a SANFAN display rack" /></figure>
         <div class="hv-why-list">
           <div><h3>Proven track record</h3><p>Since 2013 we have supplied yoga and fitness brands across North America, Europe and Australia — 600+ workers, 1,000,000+ mats/year, stable reorders.</p></div>
           <div><h3>Quality you can verify</h3><p>In-house QC with batch traceability, an ISO 9001:2015-certified quality system, RoHS 2.0 and Prop 65 tested mats, and an amfori BSCI audit (2025, renewal in progress). Not just a promise — documented.</p></div>
           <div><h3>Low MOQ, fast lead time</h3><p>TPE mats from 100 pcs and 7-day sampling with flexible production. Test the market, then scale without heavy inventory risk. Need just one? <a href="custom-printed-pu-yoga-mat.html">Custom-printed PU rubber yoga mats from 1 piece &rarr;</a></p></div>
-          <div><h3>Full customization</h3><p>Material, size, thickness, color, double-color, logo, fold and packaging — engineered to your exact spec.</p></div>
+          <div><h3>Full customization</h3><p>Material, size, thickness, color, double-color, logo, fold and packaging — engineered to your exact spec.</p><span class="hv-swatches hv-swatches-lg" aria-hidden="true"><i style="--sw:#9fb59a"></i><i style="--sw:#cbbfe4"></i><i style="--sw:#f2c6cc"></i><i style="--sw:#c89f72"></i><i style="--sw:#2b3330"></i><i style="--sw:#e9ecea"></i></span></div>
         </div>
       </div>
     </section>
@@ -223,56 +283,6 @@
       </div>
     </section>
 
-    <!-- ===== Product range ===== -->
-    <section class="hv-sec hv-range" aria-labelledby="hv-range-title">
-      <div class="hv-wrap">
-        <div class="hv-split-head">
-          <h2 id="hv-range-title">Our product range</h2>
-          <p>From yoga essentials to full fitness lines — all factory-direct and customizable.</p>
-        </div>
-        <ul class="hv-tiles">
-          <li><a class="hv-tile" href="tpe-yoga-mats.html"><span class="hv-tile-img"><img src="assets/img/ym1-1.webp" width="480" height="480" loading="lazy" alt="TPE Yoga Mats" /></span><span class="hv-tile-name">TPE Yoga Mats</span><span class="hv-tile-sub">Eco TPE · Single &amp; Double Layer · 61–90 cm</span><span class="hv-tile-count">23 products</span></a></li>
-          <li><a class="hv-tile" href="pu-rubber-yoga-mats.html"><span class="hv-tile-img"><img src="assets/img/home/tile-pu-printed.webp" width="480" height="480" loading="lazy" alt="Printed PU rubber yoga mats rolled on a SANFAN display wall" /></span><span class="hv-tile-name">PU &amp; Rubber Yoga Mats</span><span class="hv-tile-sub">PU Top · Natural Rubber Base · Hot Yoga</span><span class="hv-tile-count">18 products</span></a></li>
-          <li><a class="hv-tile" href="suede-cork-yoga-mats.html"><span class="hv-tile-img"><img src="assets/img/aurora-gradient-suede-yoga-mat-1.webp" width="480" height="480" loading="lazy" alt="Suede &amp; Cork Yoga Mats" /></span><span class="hv-tile-name">Suede &amp; Cork Yoga Mats</span><span class="hv-tile-sub">Suede / Cork Surface · Print-Ready</span><span class="hv-tile-count">14 products</span></a></li>
-          <li><a class="hv-tile" href="meditation-pilates-mats.html"><span class="hv-tile-img"><img src="assets/img/pr3-1.webp" width="480" height="480" loading="lazy" alt="Meditation &amp; Pilates Mats" /></span><span class="hv-tile-name">Meditation &amp; Pilates Mats</span><span class="hv-tile-sub">Round · Mandala · Reformer Mat</span><span class="hv-tile-count">9 products</span></a></li>
-          <li><a class="hv-tile" href="foam-rollers.html"><span class="hv-tile-img"><img src="assets/img/fr1-1.webp" width="480" height="480" loading="lazy" alt="Foam Rollers" /></span><span class="hv-tile-name">Foam Rollers</span><span class="hv-tile-sub">EVA / EPP · Solid &amp; Hollow · Vibrating</span><span class="hv-tile-count">12 products</span></a></li>
-          <li><a class="hv-tile" href="massage-recovery.html"><span class="hv-tile-img"><img src="assets/img/fr5-1.webp" width="480" height="480" loading="lazy" alt="Massage &amp; Recovery" /></span><span class="hv-tile-name">Massage &amp; Recovery</span><span class="hv-tile-sub">Fascia Gun · Fascia Ball · Massage Tools</span><span class="hv-tile-count">14 products</span></a></li>
-          <li><a class="hv-tile" href="resistance-bands.html"><span class="hv-tile-img"><img src="assets/img/rb1-1.webp" width="480" height="480" loading="lazy" alt="Resistance Bands" /></span><span class="hv-tile-name">Resistance Bands</span><span class="hv-tile-sub">Loop · Tube · Figure-8 · Power Band</span><span class="hv-tile-count">10 products</span></a></li>
-          <li><a class="hv-tile" href="yoga-props-accessories.html"><span class="hv-tile-img"><img src="assets/img/fi2-1.webp" width="480" height="480" loading="lazy" alt="Yoga Props &amp; Accessories" /></span><span class="hv-tile-name">Yoga Props &amp; Accessories</span><span class="hv-tile-sub">Blocks · Balls · Rings · Bags · Hammock</span><span class="hv-tile-count">23 products</span></a></li>
-          <li><a class="hv-tile" href="jump-ropes.html"><span class="hv-tile-img"><img src="assets/img/cordless-jump-rope-1.webp" width="480" height="480" loading="lazy" alt="Jump Ropes" /></span><span class="hv-tile-name">Jump Ropes</span><span class="hv-tile-sub">Speed · Counting · Cordless · Kids</span><span class="hv-tile-count">6 products</span></a></li>
-          <li><a class="hv-tile" href="strength-training.html"><span class="hv-tile-img"><img src="assets/img/ab-roller-training-set-1.webp" width="480" height="480" loading="lazy" alt="Strength &amp; Fitness" /></span><span class="hv-tile-name">Strength &amp; Fitness</span><span class="hv-tile-sub">Silicone Weights · Ab Rollers · Boards · Steppers</span><span class="hv-tile-count">12 products</span></a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== Featured products ===== -->
-    <section class="hv-sec hv-featured" aria-labelledby="hv-featured-title">
-      <div class="hv-wrap">
-        <div class="hv-split-head">
-          <h2 id="hv-featured-title">Featured products</h2>
-          <p>A hand-picked selection across our 10 product lines — every one customizable with your logo, size, thickness and packaging.</p>
-        </div>
-        <p class="hv-swipe-hint" aria-hidden="true">Swipe &rarr;</p>
-        <div class="hv-rail hv-rail-products" role="region" aria-label="Featured products, scroll sideways" tabindex="0">
-          <ul class="hv-prods">
-            <li><a class="hv-prod" href="products/two-tone-double-layer-tpe-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/two-tone-double-layer-tpe-yoga-mat-1.webp" width="480" height="480" loading="lazy" alt="Two-Tone Double Layer TPE Yoga Mat" /></span><span class="hv-prod-name">Two-Tone Double Layer TPE Yoga Mat</span><span class="hv-prod-spec">TPE · 185x122cm</span></a></li>
-            <li><a class="hv-prod" href="products/cork-tpe-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/cork-tpe-yoga-mat-1.webp" width="600" height="600" loading="lazy" alt="Cork TPE Yoga Mat" /></span><span class="hv-prod-name">Cork TPE Yoga Mat</span><span class="hv-prod-spec">Cork+TPE · 183cm*66cm*6mm</span></a></li>
-            <li><a class="hv-prod" href="products/red-pu-rubber-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/red-pu-rubber-yoga-mat-1.webp" width="1000" height="1000" loading="lazy" alt="Red PU Rubber Yoga Mat" /></span><span class="hv-prod-name">Red PU Rubber Yoga Mat</span><span class="hv-prod-spec">PU+Rubber · 183x68cm</span></a></li>
-            <li><a class="hv-prod" href="products/marble-print-pu-rubber-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/marble-print-pu-rubber-yoga-mat-1.webp" width="800" height="800" loading="lazy" alt="Marble Print PU Rubber Yoga Mat" /></span><span class="hv-prod-name">Marble Print PU Rubber Yoga Mat</span><span class="hv-prod-spec">PU+Rubber · 185x68cm</span></a></li>
-            <li><a class="hv-prod" href="products/flamingo-print-suede-rubber-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/flamingo-print-suede-rubber-yoga-mat-1.webp" width="1000" height="1000" loading="lazy" alt="Flamingo Print Suede Rubber Yoga Mat" /></span><span class="hv-prod-name">Flamingo Print Suede Rubber Yoga Mat</span><span class="hv-prod-spec">Suede+Rubber · 185x68cm</span></a></li>
-            <li><a class="hv-prod" href="products/starry-night-print-suede-yoga-mat.html"><span class="hv-prod-img"><img src="assets/img/starry-night-print-suede-yoga-mat-1.webp" width="800" height="800" loading="lazy" alt="Starry Night Print Suede Yoga Mat" /></span><span class="hv-prod-name">Starry Night Print Suede Yoga Mat</span><span class="hv-prod-spec">Suede+Rubber · 185x68cm</span></a></li>
-            <li><a class="hv-prod" href="products/round-mandala-meditation-mat.html"><span class="hv-prod-img"><img src="assets/img/round-mandala-meditation-mat-1.webp" width="800" height="800" loading="lazy" alt="Round Mandala Meditation Mat" /></span><span class="hv-prod-name">Round Mandala Meditation Mat</span><span class="hv-prod-spec">Suede+Rubber · 68cm</span></a></li>
-            <li><a class="hv-prod" href="products/pilates-reformer-mat-custom-logo.html"><span class="hv-prod-img"><img src="assets/img/pilates-reformer-mat-custom-logo-1.webp" width="800" height="800" loading="lazy" alt="Pilates Reformer Mat (Custom Logo)" /></span><span class="hv-prod-name">Pilates Reformer Mat (Custom Logo)</span><span class="hv-prod-spec">Made to order</span></a></li>
-            <li><a class="hv-prod" href="products/vibrating-foam-roller.html"><span class="hv-prod-img"><img src="assets/img/vibrating-foam-roller-1.webp" width="800" height="800" loading="lazy" alt="Vibrating Foam Roller" /></span><span class="hv-prod-name">Vibrating Foam Roller</span><span class="hv-prod-spec">Made to order</span></a></li>
-            <li><a class="hv-prod" href="products/fascia-gun.html"><span class="hv-prod-img"><img src="assets/img/fascia-gun-1.webp" width="800" height="800" loading="lazy" alt="Fascia Gun (White)" /></span><span class="hv-prod-name">Fascia Gun (White)</span><span class="hv-prod-spec">ABS + Electronic Components · 14*5.5*15cm</span></a></li>
-            <li><a class="hv-prod" href="products/figure-8-resistance-bands.html"><span class="hv-prod-img"><img src="assets/img/figure-8-resistance-bands-1.webp" width="800" height="800" loading="lazy" alt="Figure 8 Resistance Bands" /></span><span class="hv-prod-name">Figure 8 Resistance Bands</span><span class="hv-prod-spec">TPE · 42*14cm</span></a></li>
-            <li><a class="hv-prod" href="products/eva-yoga-block.html"><span class="hv-prod-img"><img src="assets/img/eva-yoga-block-1.webp" width="600" height="600" loading="lazy" alt="EVA Yoga Block" /></span><span class="hv-prod-name">EVA Yoga Block</span><span class="hv-prod-spec">Made to order</span></a></li>
-          </ul>
-        </div>
-        <p class="hv-after"><a class="hv-btn hv-btn-outline" href="products.html">Browse all 147 products</a></p>
-      </div>
-    </section>
-
     <!-- ===== Applications ===== -->
     <section class="hv-sec hv-apps" id="applications" aria-labelledby="hv-apps-title">
       <div class="hv-wrap">
@@ -281,12 +291,12 @@
           <p>Every range below is the same factory, the same colour system and one PO. Pick the one that matches your buyer and we will spec the whole kit.</p>
         </div>
         <ul class="hv-app-list">
-          <li><a class="hv-app" href="applications/yoga-pilates-studios.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="9" width="18" height="4" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M6 13v7M18 13v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Yoga &amp; Pilates Studios</h3><p>Opening a studio or refitting one — mats, blocks, bolsters, straps and hammocks bundled so they arrive together, in your colours.</p><p class="hv-app-kit">Mats · blocks · bolsters · straps · hammocks · reformer mats</p><span class="hv-app-go">See the range</span></a></li>
-          <li><a class="hv-app" href="applications/gyms-fitness-clubs.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6M8 7v10M16 7v10M20 9v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 12h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Gyms &amp; Fitness Clubs</h3><p>Free weights, floor mats, ropes, bands and recovery tools — one supplier, one colour system, ready for your own branding.</p><p class="hv-app-kit">Silicone weights · mats · ropes · bands · rollers · recovery</p><span class="hv-app-go">See the range</span></a></li>
-          <li><a class="hv-app" href="applications/hotels-resorts-spas.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Hotels, Resorts &amp; Spas</h3><p>Quiet, low-odour mats and props with your logo — the in-room yoga kit and the spa retail range.</p><p class="hv-app-kit">In-room mats · meditation rounds · cork &amp; suede retail · travel mats</p><span class="hv-app-go">See the range</span></a></li>
-          <li><a class="hv-app" href="applications/retail-private-label.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8h16l-1 12H5L4 8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Retail &amp; Private Label</h3><p>The whole catalogue with OEM/ODM — your colour, your logo, your packaging, one factory and one PO per season.</p><p class="hv-app-kit">Full range · custom logo · colour system · packaging &amp; barcodes</p><span class="hv-app-go">See the range</span></a></li>
-          <li><a class="hv-app" href="applications/recovery-physio.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="8" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="9" r="2.6" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="16" r="2.6" stroke="currentColor" stroke-width="1.8"/></svg></span><h3>Recovery &amp; Physio</h3><p>Rollers, fascia guns, balls and sticks — density, texture and colour specified per order for clinics and recovery studios.</p><p class="hv-app-kit">Rollers · fascia guns · balls · sticks · mobility tools</p><span class="hv-app-go">See the range</span></a></li>
-          <li><a class="hv-app" href="applications/home-online-sellers.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.8" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="18" r="1.8" stroke="currentColor" stroke-width="1.6"/></svg></span><h3>Home &amp; Online Sellers</h3><p>Light, high-turn SKUs that ship cheaply — ropes, bands, balls, blocks and travel mats, built for marketplace and DTC sellers.</p><p class="hv-app-kit">Ropes · bands · balls · blocks · travel mats · bundles</p><span class="hv-app-go">See the range</span></a></li>
+          <li><a class="hv-app hv-c-sage" href="applications/yoga-pilates-studios.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="9" width="18" height="4" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M6 13v7M18 13v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Yoga &amp; Pilates Studios</h3><p>Opening a studio or refitting one — mats, blocks, bolsters, straps and hammocks bundled so they arrive together, in your colours.</p><p class="hv-app-kit">Mats · blocks · bolsters · straps · hammocks · reformer mats</p><span class="hv-app-go">See the range</span></a></li>
+          <li><a class="hv-app hv-c-mist" href="applications/gyms-fitness-clubs.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6M8 7v10M16 7v10M20 9v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 12h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Gyms &amp; Fitness Clubs</h3><p>Free weights, floor mats, ropes, bands and recovery tools — one supplier, one colour system, ready for your own branding.</p><p class="hv-app-kit">Silicone weights · mats · ropes · bands · rollers · recovery</p><span class="hv-app-go">See the range</span></a></li>
+          <li><a class="hv-app hv-c-cork" href="applications/hotels-resorts-spas.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Hotels, Resorts &amp; Spas</h3><p>Quiet, low-odour mats and props with your logo — the in-room yoga kit and the spa retail range.</p><p class="hv-app-kit">In-room mats · meditation rounds · cork &amp; suede retail · travel mats</p><span class="hv-app-go">See the range</span></a></li>
+          <li><a class="hv-app hv-c-lilac" href="applications/retail-private-label.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8h16l-1 12H5L4 8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Retail &amp; Private Label</h3><p>The whole catalogue with OEM/ODM — your colour, your logo, your packaging, one factory and one PO per season.</p><p class="hv-app-kit">Full range · custom logo · colour system · packaging &amp; barcodes</p><span class="hv-app-go">See the range</span></a></li>
+          <li><a class="hv-app hv-c-pink" href="applications/recovery-physio.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="8" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="9" r="2.6" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="16" r="2.6" stroke="currentColor" stroke-width="1.8"/></svg></span><h3>Recovery &amp; Physio</h3><p>Rollers, fascia guns, balls and sticks — density, texture and colour specified per order for clinics and recovery studios.</p><p class="hv-app-kit">Rollers · fascia guns · balls · sticks · mobility tools</p><span class="hv-app-go">See the range</span></a></li>
+          <li><a class="hv-app hv-c-sage" href="applications/home-online-sellers.html"><span class="hv-app-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.8" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="18" r="1.8" stroke="currentColor" stroke-width="1.6"/></svg></span><h3>Home &amp; Online Sellers</h3><p>Light, high-turn SKUs that ship cheaply — ropes, bands, balls, blocks and travel mats, built for marketplace and DTC sellers.</p><p class="hv-app-kit">Ropes · bands · balls · blocks · travel mats · bundles</p><span class="hv-app-go">See the range</span></a></li>
         </ul>
         <p class="hv-note">Not sure which material fits the price band? <a class="hv-link" href="materials.html">Compare all 8 materials</a> or <a class="hv-link" href="products.html">browse the full catalogue</a>.</p>
       </div>
@@ -334,6 +344,22 @@
       </div>
     </section>
 
+
+    <script>
+    (function(){var d=document;d.documentElement.classList.add('hv-js');
+      d.querySelectorAll('.hv-head-nav .hv-rail-nav').forEach(function(nav){
+        var sec=nav.closest('section'),rail=sec&&sec.querySelector('.hv-rail');if(!rail)return;nav.hidden=false;
+        var b=nav.querySelectorAll('button');
+        function upd(){b[0].disabled=rail.scrollLeft<8;b[1].disabled=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-8;}
+        b.forEach(function(x){x.addEventListener('click',function(){rail.scrollBy({left:x.getAttribute('data-dir')*rail.clientWidth*.8,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});});
+        rail.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();});
+      d.querySelectorAll('[data-clamp]').forEach(function(p){
+        if(p.scrollHeight<=p.clientHeight+2)return;
+        var btn=d.createElement('button');btn.type='button';btn.className='hv-more';btn.setAttribute('aria-expanded','false');btn.textContent='Read more';
+        btn.addEventListener('click',function(){var o=p.classList.toggle('is-open');btn.setAttribute('aria-expanded',o);btn.textContent=o?'Show less':'Read more';});
+        p.after(btn);});
+    })();
+    </script>
   </main>
 
 
