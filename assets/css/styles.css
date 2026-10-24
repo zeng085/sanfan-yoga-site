@@ -1700,3 +1700,88 @@ h1, h2, h3, .section-title { text-wrap: balance; }
     scroll-behavior: auto !important;
   }
 }
+
+/* ---------- Mobile UX fixes (2026-10-24, branch mobile-ux-fixes) ----------
+   纯 CSS、只做加法：不改任何文字、结构、URL、SEO 标签。实测基准 390px / 360px。 */
+
+/* ① 页头 hero 文字贴屏幕左边（0px 边距）：.hero-inner 的 padding 简写
+   (84px 0 92px / 52px 0 56px，部分页面还写在 inline style 里，故用 !important) 把 .container 的左右内边距清成了 0。
+   ≥1261px 时 .container 已居中，视觉无差，所以只在 ≤1260px 补回。 */
+@media (max-width: 1260px) {
+  .container.hero-inner { padding-left: 40px !important; padding-right: 40px !important; }
+}
+@media (max-width: 640px) {
+  .container.hero-inner { padding-left: 20px !important; padding-right: 20px !important; }
+}
+
+/* ② 竖版 YouTube（custom-printed 页 9:16、宽 340px）手机上高 ~600px 占满一屏多：
+   高度封顶 60vh，按 9:16 同步缩宽，比例不变。用属性选择器是因为尺寸写在 inline style 里。 */
+@media (max-width: 760px) {
+  .vid[style*="max-width:340px"][style*="9/16"] {
+    max-width: min(340px, calc(60vh * 9 / 16)) !important;
+    max-width: min(340px, calc(60svh * 9 / 16)) !important;
+  }
+}
+
+/* ③ 欧盟访客首访：同意横幅（高 ~200px）把底部联系条 .cbar 整个盖住（.cbar 只上移 120px）。
+   改为横幅叠在联系条之上，联系条始终可点；正文底部同步让位。 */
+@media (max-width: 920px) {
+  body.consent-open .cbar { bottom: 0; }
+  body.consent-open .consent-bar { bottom: 54px; }
+  body.consent-open { padding-bottom: 270px; }
+}
+
+/* ④ 手机正文字号：卡片说明 11.5–13.5px、FAQ 答案 14.5px 偏小，抬到 14–16px；
+   两列小卡（产品卡/证书）只抬到 14/13px，避免挤爆。 */
+@media (max-width: 640px) {
+  .card p, .step p { font-size: 15px; line-height: 1.6; }
+  .range-card p { font-size: 14.5px; }
+  .range-card .rc-more, .ac-go { font-size: 14px; }
+  .app-card p { font-size: 15px; }
+  .ac-kit { font-size: 13.5px; }
+  .prod-card .info p { font-size: 14px; line-height: 1.55; }
+  .g-item .meta .s { font-size: 13.5px; }
+  .cert .name { font-size: 14px; }
+  .cert .sub { font-size: 13px; }
+  .faq-item summary { font-size: 16px; }
+  .faq-a { font-size: 16px; }
+  .cap-table th, .cap-table td { font-size: 14.5px; }
+  .spec-table th, .spec-table td { font-size: 15.5px; }
+  .pd-features li, .pd-custom-list { font-size: 16px; }
+  .pc-body p { font-size: 15px; }
+  .field label { font-size: 15px; }
+  .form-note { font-size: 14px; }
+  .wx-card-static .wx-info .d { font-size: 14.5px; }
+  .cg-cap { font-size: 12px; }
+  .site-footer ul li { font-size: 15px; }
+}
+
+/* ⑤ 触控目标 ≥44px：按钮 41px、分类 chip 40px、页脚链接 31px、返回链接 26px。 */
+@media (max-width: 920px) {
+  .btn { min-height: 44px; justify-content: center; }
+  .cat-chip { min-height: 44px; display: inline-flex; align-items: center; }
+  .back-link { display: inline-flex; align-items: center; min-height: 44px; }
+}
+@media (max-width: 640px) {
+  .site-footer ul li { margin-bottom: 0; }
+  .site-footer ul li a { display: inline-flex; align-items: center; min-height: 44px; padding: 0; }
+}
+@media (max-width: 920px) {
+  .needrow a { min-height: 44px; display: inline-flex; align-items: center; }
+  .breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; }
+  .breadcrumb { margin-top: -10px; margin-bottom: 6px; }
+  .cta-row a, .cta-row button { min-height: 44px; }
+}
+@media (max-width: 640px) {
+  .step { min-width: 0; }
+  .step h3, .step h4, .step p { overflow-wrap: break-word; hyphens: auto; }
+}
+/* ⑥ 360px 窄屏：底部联系条 4 个按钮放不下，「Copy」被挤出屏幕 4px（改前已存在） */
+@media (max-width: 380px) {
+  .cbar a, .cbar button { min-width: 0; padding: 0 2px; gap: 4px; font-size: 12px; letter-spacing: -.01em; }
+  .cbar svg { width: 19px; height: 19px; }
+}
+@media (max-width: 640px) {
+  /* 长文案按钮（ES/DE CTA）nowrap 会撑出屏幕：手机上允许换行 */
+  .btn { white-space: normal; text-align: center; max-width: 100%; }
+}
