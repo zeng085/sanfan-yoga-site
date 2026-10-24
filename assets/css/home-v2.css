@@ -305,3 +305,54 @@ body.home-v2 .site-footer { background: var(--hv-ink); border-top: 1px solid rgb
   .hv-hero-img, .hv-tag { animation: none !important; }
   .hv-tile-img img { transition: none; }
 }
+
+/* ---------------- Phone layout (2026-10-24 v3): shorter page, bigger taps; no text removed ---------------- */
+@media (max-width: 640px) {
+  .hv-sec { padding: 52px 0; }
+  .hv-split-head { margin-bottom: 24px; gap: 14px; }
+  /* hero: tighter headline, wider image, facts as a 2x3 grid */
+  .hv-hero { padding: 20px 0 40px; }
+  .hv-hero-grid { gap: 24px; }
+  .hv-hero h1 { font-size: clamp(34px, 10vw, 44px); }
+  .hv-kicker { font-size: 15px; margin-bottom: 10px; }
+  .hv-hero-img { aspect-ratio: 4 / 3; }
+  .hv-tag { margin: -36px 12px 0; padding: 14px 16px 10px 26px; }
+  .hv-tag dl { display: grid; grid-template-columns: 1fr 1fr; column-gap: 16px; }
+  .hv-tag dl > div { display: flex; flex-direction: column-reverse; align-items: flex-start; justify-content: flex-end; gap: 2px; padding: 8px 0; border-bottom: 1px dashed rgba(0,0,0,.12); }
+  .hv-tag dl > div:nth-last-child(-n+2) { border-bottom: 0; }
+  .hv-tag dd { font-size: 22px; }
+  .hv-tag dt { font-size: 14px; }
+  /* videos: one swipe row instead of three stacked frames */
+  .hv-vid-grid { display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 46%; gap: 12px; align-items: start; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 calc(-1 * var(--hv-gutter)); padding: 0 var(--hv-gutter) 10px; scroll-padding-left: var(--hv-gutter); }
+  .hv-vid { scroll-snap-align: start; }
+  .hv-vid-wide { grid-column: auto; aspect-ratio: 9 / 16; }
+  .hv-video .hv-split-head p .hv-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 0; }
+  .hv-video { padding-bottom: 44px; }
+  /* footage links: full-height taps */
+  .fm-more a { display: flex; align-items: center; min-height: 44px; }
+  .hv-why-list { gap: 20px; }
+  /* factory at a glance: building photo hidden on phones (user 2026-10-24) */
+  .hv-glance-media { display: none; }
+  .hv-glance { padding-top: 8px; }
+  /* product range: compact list rows instead of big square tiles */
+  .hv-tiles { grid-template-columns: 1fr; gap: 0; }
+  .hv-tiles li { border-top: 1px solid rgba(0,0,0,.1); }
+  .hv-tiles li:last-child { border-bottom: 1px solid rgba(0,0,0,.1); }
+  .hv-tile { display: grid; grid-template-columns: 76px 1fr; column-gap: 14px; align-items: center; padding: 12px 0; min-height: 100px; }
+  .hv-tile-img { grid-row: 1 / span 3; width: 76px; }
+  .hv-tile-name { margin-top: 0; font-size: 17px; }
+  .hv-tile-sub, .hv-tile-count { margin-top: 2px; font-size: 14px; }
+  /* applications: swipe cards */
+  .hv-app-list { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 80%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 calc(-1 * var(--hv-gutter)); padding: 0 var(--hv-gutter) 12px; scroll-padding-left: var(--hv-gutter); }
+  .hv-app-list li { scroll-snap-align: start; }
+  .hv-app { padding: 20px 18px 18px; background: #fff; border-top-width: 3px; border-radius: 3px; }
+  .hv-app-go { display: flex; align-items: center; min-height: 44px; padding-top: 6px; }
+  .hv-apps .hv-split-head::after { content: "Swipe \2192"; display: block; text-align: right; font-size: 14px; font-weight: 650; color: var(--hv-muted); }
+  /* inline text links: 44px tap area without moving the text */
+  .hv-note .hv-link, .hv-cert .hv-link, .hv-why-list a, .hv-cta a:not(.hv-btn), body.home-v2 .site-footer a.c-link, body.home-v2 .site-footer p a { display: inline; padding: 13px 0; margin: 0; }
+  .hv-cert-wall img { max-height: 320px; }
+  .hv-steps { grid-auto-columns: 60%; }
+  .hv-steps img { aspect-ratio: 1 / 1; object-fit: cover; height: auto; }
+  .hv-cert-list strong { font-size: 18px; }
+  body.home-v2 .site-header .btn-primary { font-size: 14px; }
+}
