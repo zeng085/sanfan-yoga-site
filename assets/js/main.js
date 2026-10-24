@@ -1723,3 +1723,24 @@ if (form) {
   try { sessionStorage.setItem('autoLangDone', '1'); } catch (e) {}
   location.replace(target);                                   // 替换历史，避免后退又跳
 })();
+
+/* 手机页脚折叠（2026-10-24）：带链接列表的页脚栏加 .fcol，标题可点开/收起（样式只在 ≤640px 生效）。 */
+(function footerAccordion() {
+  var cols = document.querySelectorAll('.site-footer .footer-grid > div');
+  Array.prototype.forEach.call(cols, function (col) {
+    var h = col.querySelector('h5'), ul = col.querySelector('ul');
+    if (!h || !ul || h.parentNode !== col || ul.parentNode !== col) return;
+    col.classList.add('fcol');
+    h.setAttribute('role', 'button');
+    h.setAttribute('tabindex', '0');
+    h.setAttribute('aria-expanded', 'false');
+    function toggle() {
+      var open = col.classList.toggle('open');
+      h.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    h.addEventListener('click', toggle);
+    h.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+})();

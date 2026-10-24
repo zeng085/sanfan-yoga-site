@@ -1814,3 +1814,20 @@ h1, h2, h3, .section-title { text-wrap: balance; }
   .cert-docs-cta .btn { width: 100%; justify-content: center; }
 }
 @media (prefers-reduced-motion: reduce) { .cert-doc-thumb { transition: none; } }
+
+/* ⑦ 手机页脚折叠（2026-10-24）：产品 / 应用 / 公司三栏默认收起，点标题展开；展开后链接两列。
+   仅在 main.js 加上 .fcol 后生效（无 JS 时链接照常全部显示，链接一直在 HTML 里，不影响收录）。 */
+@media (max-width: 640px) {
+  .site-footer { padding-top: 36px; }
+  .footer-grid, .footer-grid:has(> div:nth-child(5)) { gap: 0; }
+  .footer-grid > div:first-child { margin-bottom: 14px; }
+  .site-footer .fcol { border-top: 1px solid rgba(255,255,255,.12); }
+  .site-footer .fcol + div:not(.fcol) { border-top: 1px solid rgba(255,255,255,.12); padding-top: 18px; }
+  .site-footer .fcol > h5 { display: flex; align-items: center; justify-content: space-between; min-height: 52px; margin: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none; }
+  .site-footer .fcol > h5::after { content: ""; width: 9px; height: 9px; border-right: 2px solid #cdd9d4; border-bottom: 2px solid #cdd9d4; transform: rotate(45deg) translateY(-3px); transition: transform .2s; margin-right: 6px; }
+  .site-footer .fcol.open > h5::after { transform: rotate(-135deg) translateY(-3px); }
+  .site-footer .fcol:not(.open) > ul { display: none; }
+  .site-footer .fcol.open > ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: 14px; padding-bottom: 10px; }
+  .site-footer .fcol.open > ul li a { line-height: 1.3; }
+  .footer-bottom { margin-top: 22px; }
+}
