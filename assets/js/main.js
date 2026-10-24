@@ -225,7 +225,7 @@ const I18N = {
     'faq.cat4': 'Lead Time & Shipping',
     'faq.cat5': 'Why Fujian SANFAN',
     'faq.q1': 'What is the minimum order quantity (MOQ) for custom yoga mats?',
-    'faq.a1': 'TPE yoga mats start at 100 pcs per design and color; foam rollers and EVA yoga blocks from 500 pcs; most accessories 500–1,000 pcs. Low MOQ lets new and small brands test the market with minimal inventory risk.',
+    'faq.a1': 'TPE yoga mats start at 100 pcs per design and color; bulk OEM PU/rubber mats from 300 pcs; foam rollers and EVA yoga blocks from 500 pcs; most accessories 500–1,000 pcs. Custom-printed PU rubber yoga mats (your photo, logo, name or artwork) start from just 1 piece. Low MOQ lets new and small brands test the market with minimal inventory risk.',
     'faq.q2': 'Can I order a small batch of yoga mats to test a new brand?',
     'faq.a2': 'Yes. Our 100-pcs MOQ on TPE mats is designed for brand launches and market testing. You can start with one color and size, validate demand, then scale up.',
     'faq.q3': 'Where are the best yoga mat manufacturers in China?',
