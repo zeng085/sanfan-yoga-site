@@ -64,6 +64,10 @@
     var ticking = false;
     function stack() {
       ticking = false;
+      if (getComputedStyle(cards[0]).position !== 'sticky') { /* phone: cards swipe sideways, nothing stacks */
+        cards.forEach(function (c) { c.firstElementChild.style.removeProperty('--s'); c.firstElementChild.style.removeProperty('--dim'); });
+        return;
+      }
       for (var i = 0; i < cards.length - 1; i++) {
         var a = cards[i].getBoundingClientRect(), b = cards[i + 1].getBoundingClientRect();
         var p = 1 - Math.min(Math.max((b.top - a.top) / a.height, 0), 1); /* 0 = next card far, 1 = fully over */
