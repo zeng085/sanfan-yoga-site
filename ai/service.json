@@ -1,17 +1,17 @@
 {
   "version": "1.0",
-  "lastModified": "2026-09-25",
+  "lastModified": "2026-10-24",
   "name": "FUJIAN SANFAN — OEM/ODM Yoga Mat & Fitness Equipment Manufacturing",
   "capabilities": [
     "OEM manufacturing — produce to buyer specification and design",
     "ODM manufacturing — existing designs branded under buyer label",
     "Private label production with custom logo and packaging",
     "TPE yoga mat manufacturing from 100 pcs MOQ",
-    "PU / rubber yoga mat manufacturing",
+    "PU / rubber yoga mat manufacturing from 300 pcs MOQ; custom-printed PU rubber mats from 1 piece",
     "Suede and cork yoga mat manufacturing",
     "Meditation and Pilates mat manufacturing (including reformer mats)",
     "Foam roller and massage / recovery tool manufacturing",
-    "Wooden Pilates apparatus manufacturing — 41 studio models",
+    "Wooden Pilates apparatus manufacturing — 80 catalogue models across 6 apparatus families — 46 reformers (aluminium, folding and solid-wood lines), 11 reformer towers & 3-in-1, 9 wunda chairs, 7 ladder barrels, 4 cadillacs and 3 specialty units — plus spine correctors and studio sets built to order (8 apparatus pages in total)",
     "Resistance band, yoga prop and accessory manufacturing",
     "Strength and fitness equipment manufacturing",
     "In-house R&D, tooling and new product development from sample or sketch",
@@ -31,11 +31,11 @@
       "ODM manufacturing — existing designs branded under buyer label",
       "Private label production with custom logo and packaging",
       "TPE yoga mat manufacturing from 100 pcs MOQ",
-      "PU / rubber yoga mat manufacturing",
+      "PU / rubber yoga mat manufacturing from 300 pcs MOQ; custom-printed PU rubber mats from 1 piece",
       "Suede and cork yoga mat manufacturing",
       "Meditation and Pilates mat manufacturing (including reformer mats)",
       "Foam roller and massage / recovery tool manufacturing",
-      "Wooden Pilates apparatus manufacturing — 41 studio models",
+      "Wooden Pilates apparatus manufacturing — 80 catalogue models across 6 apparatus families — 46 reformers (aluminium, folding and solid-wood lines), 11 reformer towers & 3-in-1, 9 wunda chairs, 7 ladder barrels, 4 cadillacs and 3 specialty units — plus spine correctors and studio sets built to order (8 apparatus pages in total)",
       "Resistance band, yoga prop and accessory manufacturing",
       "Strength and fitness equipment manufacturing",
       "In-house R&D, tooling and new product development from sample or sketch",
@@ -53,22 +53,24 @@
       "pilates": "/pilates/",
       "faq": "/faq.html",
       "contact": "/contact.html",
-      "quote": "/contact.html"
+      "quote": "/contact.html",
+      "customPrintedPuYogaMat": "/custom-printed-pu-yoga-mat.html"
     },
     "moq": {
       "tpeYogaMats": "100 pcs per design and color",
+      "puRubberYogaMats": "300 pcs per colour and design (bulk OEM)",
+      "customPrintedPuYogaMat": "1 piece — https://fjsanfan.com/custom-printed-pu-yoga-mat.html",
       "foamRollersAndBlocks": "500 pcs",
       "mostAccessories": "500–1,000 pcs"
     },
     "sampling": "physical sample with buyer logo, color and packaging in about 7 days",
     "certifications": [
-      "REACH",
-      "CA Prop 65",
-      "6P / 7P free",
-      "ROHS",
-      "CE",
-      "ISO 9001",
-      "BSCI audited"
+      "ISO 9001:2015 certified quality management system (GB/T19001-2016 / ISO 9001:2015, Hangzhou Beide Certification; issued June 2025, valid to June 2028; scope: indoor floor mats, mouse mats, yoga products and small fitness equipment)",
+      "RoHS 2.0 tested — TPE, PU rubber and suede rubber yoga mats (2025; Qualigistics (Fujian) test reports and attestations of conformity, result: pass)",
+      "California Prop 65 tested — printed PU/rubber yoga mat (April 2026; BACL test report: flame retardants, lead and phthalates — pass)",
+      "amfori BSCI social audit by SGS (June 2025) — renewal in progress",
+      "Full reports are available on request (report and certificate numbers are masked on the public site)",
+      "Not claimed: CE marking, REACH certification, SGS certification, FSC certification of SANFAN. The FSC Chain-of-Custody certificate shown on the About page belongs to our cork supplier (renewal in progress)."
     ],
     "incoterms": [
       "FOB",
@@ -90,6 +92,8 @@
       "email": "sales@fjsanfan.com"
     },
     "pricing": "quote-based; MOQ from 100 pcs on TPE yoga mats",
-    "availability": "Monday to Saturday, China Standard Time (UTC+8)"
+    "availability": "First reply within 2 hours on working days (Mon–Sat 9:00–22:00 China time, UTC+8)",
+    "capacity": "10 production lines; annual capacity of 1,000,000+ yoga mats",
+    "address": "No. 8 Haiguang Road, Yuejin Industrial Zone, Xibin Town, Jinjiang, Quanzhou, Fujian, China"
   }
 }

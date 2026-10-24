@@ -1785,3 +1785,32 @@ h1, h2, h3, .section-title { text-wrap: balance; }
   /* 长文案按钮（ES/DE CTA）nowrap 会撑出屏幕：手机上允许换行 */
   .btn { white-space: normal; text-align: center; max-width: 100%; }
 }
+
+/* ---- Certificates & test reports (2026-10-24) ---- */
+.cert-grid.cert-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.cert-docs .section-head p { max-width: 62ch; }
+.cert-docs-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.cert-doc { margin: 0; }
+.cert-doc figure { margin: 0; height: 100%; display: flex; flex-direction: column; gap: 12px; }
+.cert-doc-thumb { display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 5; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px; overflow: hidden; transition: border-color .2s ease; }
+.cert-doc-thumb:hover, .cert-doc-thumb:focus-visible { border-color: var(--brand); }
+.cert-doc-thumb:focus-visible { outline: 3px solid var(--brand-2); outline-offset: 2px; }
+.cert-doc-thumb img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; box-shadow: 0 2px 10px rgba(20, 50, 42, .12); background: #fff; }
+.cert-doc figcaption { font-size: 14px; line-height: 1.5; color: var(--muted); }
+.cert-doc figcaption strong { display: block; color: var(--ink); font-size: 15px; line-height: 1.35; margin-bottom: 4px; }
+.cert-docs-supplier { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+.cert-docs-supplier h3 { font-size: 16px; margin: 0 0 14px; }
+.cert-doc-row { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; align-items: center; max-width: 720px; }
+.cert-docs-cta { margin-top: 32px; }
+@media (max-width: 900px) {
+  .cert-grid.cert-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .cert-docs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}
+@media (max-width: 480px) {
+  .cert-doc-thumb { padding: 10px; }
+  .cert-doc figcaption { font-size: 14px; }
+  .cert-doc figcaption strong { font-size: 14.5px; }
+  .cert-doc-row { grid-template-columns: 110px minmax(0, 1fr); gap: 14px; }
+  .cert-docs-cta .btn { width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { .cert-doc-thumb { transition: none; } }

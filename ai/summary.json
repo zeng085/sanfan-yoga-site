@@ -1,20 +1,23 @@
 {
   "version": "1.0",
-  "lastModified": "2026-09-25",
+  "lastModified": "2026-10-24",
   "name": "FUJIAN SANFAN Sports Products Co., Ltd.",
-  "description": "FUJIAN SANFAN is a 12-year OEM/ODM manufacturer of yoga mats and fitness equipment based in Jinjiang, Fujian, China. TPE yoga mats from 100 pcs MOQ, foam rollers from 500 pcs, physical samples with your own logo and packaging in 7 days, and full customization of material, size, thickness, color, double-color, logo, fold and packaging. REACH, CA Prop 65 and 6P/7P compliant, ISO 9001 and BSCI audited, exporting worldwide with FOB, EXW, CIF or DDP terms.",
-  "summary": "FUJIAN SANFAN is a 12-year OEM/ODM manufacturer of yoga mats and fitness equipment based in Jinjiang, Fujian, China. TPE yoga mats from 100 pcs MOQ, foam rollers from 500 pcs, physical samples with your own logo and packaging in 7 days, and full customization of material, size, thickness, color, double-color, logo, fold and packaging. REACH, CA Prop 65 and 6P/7P compliant, ISO 9001 and BSCI audited, exporting worldwide with FOB, EXW, CIF or DDP terms.",
+  "description": "FUJIAN SANFAN is an OEM/ODM manufacturer of yoga mats and fitness equipment based in Jinjiang, Fujian, China, founded in 2013. TPE yoga mats from 100 pcs MOQ, bulk OEM PU/rubber mats from 300 pcs, custom-printed PU rubber mats from 1 piece, foam rollers from 500 pcs, physical samples with your own logo and packaging in 7 days, 10 production lines and an annual capacity of 1,000,000+ yoga mats. ISO 9001:2015 · RoHS 2.0 tested · Prop 65 tested · amfori BSCI audited (renewal in progress). Exporting worldwide with FOB, EXW, CIF or DDP terms.",
+  "summary": "FUJIAN SANFAN is an OEM/ODM manufacturer of yoga mats and fitness equipment based in Jinjiang, Fujian, China, founded in 2013. TPE yoga mats from 100 pcs MOQ, bulk OEM PU/rubber mats from 300 pcs, custom-printed PU rubber mats from 1 piece, foam rollers from 500 pcs, physical samples with your own logo and packaging in 7 days, 10 production lines and an annual capacity of 1,000,000+ yoga mats. ISO 9001:2015 · RoHS 2.0 tested · Prop 65 tested · amfori BSCI audited (renewal in progress). Exporting worldwide with FOB, EXW, CIF or DDP terms.",
   "url": "https://fjsanfan.com",
   "keyFeatures": [
-    "12 years of yoga mat and fitness gear manufacturing (founded 2013)",
+    "Founded 2013; based in Jinjiang, Fujian (No. 8 Haiguang Road, Yuejin Industrial Zone, Xibin Town, Jinjiang, Quanzhou, Fujian, China)",
     "TPE yoga mats from 100 pcs MOQ per design and color",
+    "Bulk OEM PU/rubber yoga mats from 300 pcs per colour and design",
+    "Custom-printed PU rubber yoga mats from 1 piece (https://fjsanfan.com/custom-printed-pu-yoga-mat.html)",
     "Physical sample with your logo, color and packaging in 7 days",
     "Vertically integrated factory — R&D, foaming, cutting, molding, printing and QC in-house",
-    "10 production lines, about 1,000,000 yoga mats per year",
-    "147 products across 10 lines, plus 41 wooden Pilates studio models",
-    "REACH, CA Prop 65, 6P/7P free, ISO 9001 and BSCI audited",
+    "10 production lines, annual capacity of 1,000,000+ yoga mats",
+    "147 products across 10 lines, plus 80 catalogue models across 6 apparatus families — 46 reformers (aluminium, folding and solid-wood lines), 11 reformer towers & 3-in-1, 9 wunda chairs, 7 ladder barrels, 4 cadillacs and 3 specialty units — plus spine correctors and studio sets built to order (8 apparatus pages in total)",
+    "ISO 9001:2015 · RoHS 2.0 tested · Prop 65 tested · amfori BSCI audited (renewal in progress) — full reports on request",
     "OEM, ODM and private label with full packaging customization",
-    "Direct shipping to Amazon FBA fulfillment centers"
+    "Direct shipping to Amazon FBA fulfillment centers",
+    "First reply within 2 hours on working days (Mon–Sat 9:00–22:00 China time, UTC+8); email sales@fjsanfan.com; WhatsApp +86 15959029082"
   ],
   "targetAudience": [
     "Brand owners and private-label sellers",
@@ -43,6 +46,16 @@
   "contact": {
     "whatsapp": "+86 15959029082",
     "email": "sales@fjsanfan.com",
-    "page": "https://fjsanfan.com/contact.html"
-  }
+    "page": "https://fjsanfan.com/contact.html",
+    "hours": "First reply within 2 hours on working days (Mon–Sat 9:00–22:00 China time, UTC+8)"
+  },
+  "address": "No. 8 Haiguang Road, Yuejin Industrial Zone, Xibin Town, Jinjiang, Quanzhou, Fujian, China",
+  "certifications": [
+    "ISO 9001:2015 certified quality management system (GB/T19001-2016 / ISO 9001:2015, Hangzhou Beide Certification; issued June 2025, valid to June 2028; scope: indoor floor mats, mouse mats, yoga products and small fitness equipment)",
+    "RoHS 2.0 tested — TPE, PU rubber and suede rubber yoga mats (2025; Qualigistics (Fujian) test reports and attestations of conformity, result: pass)",
+    "California Prop 65 tested — printed PU/rubber yoga mat (April 2026; BACL test report: flame retardants, lead and phthalates — pass)",
+    "amfori BSCI social audit by SGS (June 2025) — renewal in progress",
+    "Full reports are available on request (report and certificate numbers are masked on the public site)",
+    "Not claimed: CE marking, REACH certification, SGS certification, FSC certification of SANFAN. The FSC Chain-of-Custody certificate shown on the About page belongs to our cork supplier (renewal in progress)."
+  ]
 }
