@@ -64,9 +64,9 @@ window.SANFAN_PRODUCTS = {
   },
   pr3: {
     id: 'pr3', cat: 'props', img: 'assets/img/yoga-cushion-1.webp', gallery: ['assets/img/yoga-cushion-1.webp'],
-    specs: { material: 'Buckwheat fill + cotton cover', size: 'Round / rectangular styles', thickness: '—', moq: 'On request', colors: 'Custom fabrics', cert: 'ISO 9001:2015 factory · amfori BSCI audited (2025, renewal in progress)', packing: 'Carton' },
-    en: { overview: 'Zafu meditation cushion with buckwheat fill and cotton cover — round and rectangular styles, custom fabrics.', features: ['Buckwheat fill, cotton cover', 'Round & rectangular styles', 'Custom fabrics'] },
-    zh: { overview: '荞麦填充 Zafu 冥想坐垫，棉质外套；圆形/长方形可选，面料可定制。', features: ['荞麦填充、棉质外套', '圆形与长方形可选', '面料可定制'] }
+    specs: { material: 'PU + Natural Rubber (meditation mat) / 100% Polyester + Sponge (bolster)', size: '40×60 cm (rect.) / 60×60 cm (round); bolster 64×24×13 cm', thickness: '4.5 mm (meditation mat)', moq: 'On request', colors: 'Custom fabrics', cert: 'ISO 9001:2015 factory · amfori BSCI audited (2025, renewal in progress)', packing: 'Carton' },
+    en: { overview: 'PU + natural rubber meditation mat (40×60 / 60×60 cm, 4.5 mm) with a 100% polyester bolster (64×24×13 cm, 550 g) — custom colors and sizes.', features: ['PU + natural rubber meditation mat', 'Polyester bolster with sponge fill', 'Custom fabrics'] },
+    zh: { overview: 'PU + 天然橡胶冥想垫（40×60 / 60×60 cm，4.5 mm）搭配 100% 聚酯纤维抱枕（64×24×13 cm，550 g）；颜色与尺寸可定制。', features: ['PU + 天然橡胶冥想垫', '聚酯纤维抱枕，海绵填充', '面料可定制'] }
   },
   pr4: {
     id: 'pr4', cat: 'props', img: 'assets/img/yoga-block-1.webp', gallery: ['assets/img/yoga-block-1.webp'],
