@@ -952,3 +952,10 @@ body.home-v2 .site-footer h5 { text-transform: none; letter-spacing: 0; font-siz
 @media (max-width: 820px) {
   .hv-hero-cap { right: auto; left: var(--gutter); top: 16px; bottom: auto; }
 }
+
+/* Pilates apparatus: full-row range tile (2026-10-25) */
+.hv-bento > .hv-b-full { grid-column: 1 / -1; grid-row: auto; }
+@media (min-width: 821px) {
+  .hv-bento .hv-b-full .hv-tile { padding-right: 52%; }
+  .hv-bento .hv-b-full .hv-tile-img img { inset: 8% 4% 8% auto; width: 46%; height: 84%; }
+}
