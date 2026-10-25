@@ -33,7 +33,6 @@ outputs/
 /*.js
 /*.md
 /*.csv
-/92c62d163567679a15cfefe662a3eb43.txt
 
 # ── ④ 显式保留（只为 review 时一眼看出没误伤；Vercel 默认放行未列出的文件）──
 # 页面：根 *.html + de/ ja/ ko/ fr/ it/ es/ blog/ products/ pilates/ applications/
