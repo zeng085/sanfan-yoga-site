@@ -52,9 +52,6 @@ const I18N = {
     'factory.vertical': '<strong>In-house from foaming to finishing.</strong> We operate three owned plants — two dedicated to TPE yoga mats and one to PU / rubber mats — running 6 foaming machines and 10 production lines. Because foaming, the most capacity-critical step, happens inside our own factories, we hold a steady annual output of about 1,000,000 mats and control quality from raw material through to the finished mat.',
     'factory.cap.title': 'Monthly Production Capacity',
     'cap1.t': 'Yoga Mats', 'cap1.d': '1,000,000 pcs / year',
-    'cap2.t': 'Sports Bags', 'cap2.d': '150,000 pcs / month',
-    'cap3.t': 'Yoga Wears', 'cap3.d': '120,000 pcs / month',
-    'cap4.t': 'Yoga Leggings', 'cap4.d': '100,000 pcs / month',
     'cap5.t': 'Yoga Blocks', 'cap5.d': '100,000 pcs / month',
     'factory.media': 'Warehouse aisle with pallets of yoga mat sheets sorted by colour',
 
@@ -313,9 +310,6 @@ const I18N = {
     'factory.vertical': '<strong>从发泡到成品全自有。</strong>我们运营三家自有工厂——两家专做 TPE 瑜伽垫，一家专做 PU/橡胶垫，共配备 6 台发泡机、10 条生产线。由于发泡这道最影响产能的工序掌握在自己手里，我们能稳定做到年产约 100 万片，并从原料到成品全程控质。',
     'factory.cap.title': '月度产能',
     'cap1.t': '瑜伽垫', 'cap1.d': '1,000,000 片 / 年',
-    'cap2.t': '运动包', 'cap2.d': '150,000 个 / 月',
-    'cap3.t': '瑜伽服', 'cap3.d': '120,000 件 / 月',
-    'cap4.t': '瑜伽裤', 'cap4.d': '100,000 条 / 月',
     'cap5.t': '瑜伽砖', 'cap5.d': '100,000 块 / 月',
     'factory.media': '仓库通道里按颜色分好的瑜伽垫片材托盘',
 
