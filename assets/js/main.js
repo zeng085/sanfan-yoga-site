@@ -56,7 +56,7 @@ const I18N = {
     'cap3.t': 'Yoga Wears', 'cap3.d': '120,000 pcs / month',
     'cap4.t': 'Yoga Leggings', 'cap4.d': '100,000 pcs / month',
     'cap5.t': 'Yoga Blocks', 'cap5.d': '100,000 pcs / month',
-    'factory.media': 'SANFAN factory building',
+    'factory.media': 'Warehouse aisle with pallets of yoga mat sheets sorted by colour',
 
     // Product range (5 cards)
     // Product range (10 category cards — 双语 span，无需字典)
@@ -194,7 +194,7 @@ const I18N = {
 
     // CTA
     'cta.title': 'Ready to Build Your Brand?',
-    'cta.sub': 'Get a tailored quote and free samples today.',
+    'cta.sub': 'Get a tailored quote today. Samples in about 7 days.',
     'cta.btn': 'Contact Our Team',
 
     // Product detail page
@@ -317,7 +317,7 @@ const I18N = {
     'cap3.t': '瑜伽服', 'cap3.d': '120,000 件 / 月',
     'cap4.t': '瑜伽裤', 'cap4.d': '100,000 条 / 月',
     'cap5.t': '瑜伽砖', 'cap5.d': '100,000 块 / 月',
-    'factory.media': '三梵工厂厂房',
+    'factory.media': '仓库通道里按颜色分好的瑜伽垫片材托盘',
 
     'range.title': '产品系列',
     'range.sub': '从瑜伽刚需到完整健身线 — 全部工厂直供、可定制。',
@@ -444,7 +444,7 @@ const I18N = {
     'foot.copyright': '© 2026 福建三梵体育用品有限公司 版权所有。',
 
     'cta.title': '准备好打造你的品牌了吗？',
-    'cta.sub': '立即获取专属报价与免费样品。',
+    'cta.sub': '立即获取专属报价，约 7 天出样。',
     'cta.btn': '联系我们',
 
     // 产品详情页

@@ -942,3 +942,13 @@ body.home-v2 .site-footer h5 { text-transform: none; letter-spacing: 0; font-siz
 .hv-bento .hv-tile:has(.hv-photo) .hv-tile-name, .hv-bento .hv-tile:has(.hv-photo) .hv-tile-sub, .hv-hero h1, .hv-lead { text-shadow: 0 1px 12px rgba(29,43,54,.35); }
 @media (max-width: 820px) { .hv-lead { text-shadow: none; } .hv-hero-media::after { background: linear-gradient(0deg, rgba(29,43,54,.86) 0%, rgba(29,43,54,.6) 48%, rgba(29,43,54,0) 82%); } }
 @media (min-width: 761px) { .hv-footage .fm-grid { max-width: none; gap: 16px; } }
+
+/* ---------- Hero caption: names the brand on the booth wall (2026-10-25 trust fixes) ----------
+   Shown only while the first slide (booth wall) is on screen; hidden once the slideshow
+   moves to a different photo. Sits bottom-right on desktop (the reel is top-right),
+   top-left on phones (the reel tag is top-right there). */
+.hv-hero-cap { position: absolute; z-index: 2; right: max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter))); bottom: 24px; margin: 0; max-width: calc(100% - 2 * var(--gutter)); display: inline-flex; align-items: center; background: rgba(255,255,255,.94); color: var(--ink); border-radius: 999px; padding: 8px 14px; font: 650 14px/1.25 var(--text); transition: opacity .8s ease; }
+.hv-hero-media:has(.hv-hero-slides img.is-on) .hv-hero-cap { opacity: 0; }
+@media (max-width: 820px) {
+  .hv-hero-cap { right: auto; left: var(--gutter); top: 16px; bottom: auto; }
+}
