@@ -1108,8 +1108,8 @@ if (form) {
           apps +
           '<div class="mm-foot"><a href="' + ROOT + BASE + 'contact.html">' +
             T('not_sure', 'Not sure which spec?', '不确定选什么规格？') +
-            '<span>' + T('send_price', 'Send your target price — we quote in 24h',
-                            '把目标价发给我们 —— 24 小时内报价') + '</span></a></div>' +
+            '<span>' + T('send_price', 'Send your target price — we reply within 2 hours on working days',
+                            '把目标价发给我们 —— 工作日 2 小时内回复') + '</span></a></div>' +
         '</aside>' +
       '</div>';
     if (mega) mega.innerHTML = html;

@@ -50,7 +50,7 @@ UI_SRC = {
     "compare": "Compare materials",
     "shop_app": "Shop by application",
     "not_sure": "Not sure which spec?",
-    "send_price": "Send your target price — we quote in 24h",
+    "send_price": "Send your target price — we reply within 2 hours on working days",
 }
 
 

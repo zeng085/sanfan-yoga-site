@@ -393,7 +393,7 @@ HEAD = """<!DOCTYPE html>
     <div class="container">
       <div class="cta-band">
         <h2 data-i18n="cta.title">Ready to Build Your Brand?</h2>
-        <p data-i18n="cta.sub">Get a tailored quote and free samples today.</p>
+        <p data-i18n="cta.sub">Get a tailored quote today. Samples in about 7 days.</p>
         <a href="../contact.html" class="btn btn-light" data-i18n="cta.btn">Contact Our Team</a>
       </div>
     </div>

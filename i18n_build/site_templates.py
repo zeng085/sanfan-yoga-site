@@ -187,9 +187,9 @@ def footer(prefix="", ver=None):
 def cta(prefix=""):
     return CTA % (
         bi("Can't find the exact spec?", "没找到完全匹配的规格？"),
-        bi("Send us your drawing, target price or a photo — we reply with a quote and a "
-           "sampling plan within 24 hours. MOQ from 100 pcs.",
-           "把图纸、目标价或照片发给我们 —— 24 小时内回复报价与打样方案，100 片起订。"),
+        bi("Send us your drawing, target price or a photo — our sales team replies "
+           "within 2 hours on working days (Mon–Sat, 09:00–22:00 China time). MOQ from 100 pcs.",
+           "把图纸、目标价或照片发给我们 —— 销售团队工作日 2 小时内回复（周一至周六 09:00–22:00 北京时间），100 片起订。"),
         bi("Get a Quote", "获取报价"),
     ) % {"pf": prefix}
 
