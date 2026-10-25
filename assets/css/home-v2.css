@@ -696,3 +696,249 @@ body.home-v2 { --r: 24px; --plum: #4B3A78; }
   .hv-cta { padding: 32px 22px; }
 }
 .hv-end { padding-top: 0; }
+
+/*__V4__*/
+/* =====================================================================
+   v4 "calm, one system" layer (2026-10-25). Same content and motion, but
+   every section now draws from one quiet palette, one shape family and one
+   type scale so the page reads as a single brand, relaxed rather than
+   industrial.
+   Palette  ink blue #1D2B36 (text, footer) · muted #4A5762 · brand green
+            #0E6B5C (links, primary buttons, numbers) · sage #7C9A86 ·
+            cork #C8A47A · paper #FBFAF7 · sheet #F2F0EA; tints for every
+            ground: sage 50 #EEF2EE / 100 #DFE8E0, cork 50 #F7F1E8 /
+            100 #EFE3D2; one mat accent: TPE lilac 100 #E7E2F0.
+   Rhythm   hero (photo) + sage strip → paper → sage band → paper →
+            cork band → paper → sage band → paper → cork band → paper → ink footer.
+   Shapes   16px cards, 24px large media, 999px pills/buttons. No tilts,
+            arches, blobs, glows or offset colour fields.
+   Type     one H2 scale for every section title, sentence-case labels,
+            8px spacing steps.
+   Motion   one ease (--hv-ease) and slow, soft timings.
+   ===================================================================== */
+body.home-v2 {
+  --ink: #1D2B36; --ink-2: #4A5762; --paper: #FBFAF7; --stone: #F2F0EA;
+  --teal: #0E6B5C; --green: #0E6B5C; --green-dk: #0A5247;
+  --sage: #7C9A86; --sage-50: #EEF2EE; --sage-100: #DFE8E0; --sage-deep: #0E6B5C;
+  --cork: #C8A47A; --cork-50: #F7F1E8; --cork-100: #EFE3D2;
+  --lilac: #E7E2F0; --pink: #EFE3D2; --mist: #F2F0EA;
+  --rule: rgba(29, 43, 54, .12); --rule-2: rgba(29, 43, 54, .22);
+  --r: 16px; --r-lg: 24px;
+  --hv-ease: cubic-bezier(.22, .61, .36, 1);
+  --shadow-soft: 0 12px 32px rgba(29, 43, 54, .08);
+  background: var(--paper);
+}
+.hv { color: var(--ink); }
+/* tile tints: every coloured ground comes from the same five tints */
+.hv-c-sage { --tile: #DFE8E0; } .hv-c-cork { --tile: #EFE3D2; } .hv-c-lilac { --tile: #E7E2F0; }
+.hv-c-pink { --tile: #F2E9DE; } .hv-c-mist { --tile: #EAEFEA; }
+
+/* ---------- type: one scale ---------- */
+body.home-v2 .hv h2 { font-size: clamp(36px, 4.2vw, 58px); line-height: 1.05; font-weight: 750; font-stretch: 104%; letter-spacing: -0.02em; }
+body.home-v2 .hv h3 { font-weight: 700; }
+.hv-hero h1 { font-weight: 750; font-stretch: 106%; letter-spacing: -0.025em; }
+.hv-kicker { font-size: 16px; font-weight: 600; letter-spacing: .06em; }
+.hv-split-head { margin-bottom: 40px; }
+.hv-split-head > p, .hv-why-head p, .hv-glance-body > p, .hv-cert-grid > div > p, .hv-end-sub { color: var(--ink-2); }
+/* labels: one chip style, sentence case */
+.hv-tile-count, .hv-bento .hv-tile-count, .hv-reel-tag, .hv .fm-badge { background: rgba(251, 250, 247, .94); color: var(--ink); border-radius: 999px; padding: 6px 12px; font: 600 14px/1.2 var(--text); letter-spacing: 0; text-transform: none; }
+.hv .fm-badge { left: 12px; top: 12px; }
+.hv .fm-badge::before, .hv-reel-tag i { background: var(--green); }
+
+/* ---------- buttons: primary (green) and secondary (outline) only ---------- */
+.hv-btn { transition: background-color .4s var(--hv-ease), color .4s var(--hv-ease), border-color .4s var(--hv-ease); }
+.hv-btn-primary, .hv-hero .hv-btn-primary { background: var(--green); border-color: var(--green); color: #fff; }
+.hv-btn-primary:hover, .hv-hero .hv-btn-primary:hover { background: var(--green-dk); border-color: var(--green-dk); color: #fff; }
+.hv-btn-quiet, .hv-btn-outline { background: transparent; border-color: var(--ink); color: var(--ink); }
+.hv-btn-quiet:hover, .hv-btn-outline:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+body.home-v2 .site-header .btn-primary { background: var(--green); border-color: var(--green); }
+body.home-v2 .site-header .btn-primary:hover { background: var(--green-dk); }
+.hv-rail-btn:hover:not(:disabled) { background: var(--ink); border-color: var(--ink); color: #fff; }
+/* focus: one ring on light grounds, white only over photos */
+body.home-v2 .hv a:focus-visible, body.home-v2 .hv button:focus-visible, body.home-v2 .hv [tabindex]:focus-visible { outline: 3px solid var(--green) !important; outline-offset: 3px; }
+body.home-v2 .hv .hv-hero-grid a:focus-visible, body.home-v2 .hv .hv-bento .hv-tile:has(.hv-photo):focus-visible { outline-color: #fff !important; box-shadow: 0 0 0 6px var(--ink); }
+
+/* ---------- section rhythm: paper / sage / paper / cork ... ---------- */
+.hv-sec { padding: clamp(64px, 7.5vw, 112px) 0; }
+.hv-band, .hv-range, .hv-featured, .hv-why, .hv-apps, .hv-end { background: var(--paper); }
+.hv-process, .hv-glance { background: var(--sage-50); }
+.hv-video, .hv-footage, .hv-cert { background: var(--cork-50); }
+.hv-end { padding-top: clamp(64px, 7.5vw, 112px); }
+
+/* ---------- hero: soft ink-blue veil, light facts strip ---------- */
+.hv-hero { background: var(--paper); }
+.hv-hero-media::after { background: linear-gradient(90deg, rgba(29,43,54,.72) 0%, rgba(29,43,54,.42) 40%, rgba(29,43,54,0) 72%), linear-gradient(0deg, rgba(29,43,54,.42), rgba(29,43,54,0) 45%); }
+.hv-hero .hv-btn-quiet { border-color: rgba(255,255,255,.85); color: #fff; }
+.hv-hero .hv-btn-quiet:hover { background: #fff; color: var(--ink); border-color: #fff; }
+.hv-strip { background: var(--sage-50); color: var(--ink); }
+.hv-tag dl > div { border-right-color: var(--rule); }
+.hv-tag dt { color: var(--ink-2); }
+.hv-tag dd { color: var(--ink); font-weight: 750; }
+.hv-reel { rotate: none; border: 5px solid var(--paper); border-radius: var(--r-lg); box-shadow: 0 24px 56px rgba(29,43,54,.28); }
+.hv-reel video, .hv-stack img, .hv-vid video, .hv-footage .fm-media img, .hv-footage .fm-media video, .hv-glance-media img, .hv-why-media img { filter: saturate(.9) brightness(1.03) contrast(.96); }
+
+/* ---------- materials marquee: one pill family + cut-out tiles ---------- */
+.hv-band { padding: 32px 0 8px; }
+.hv-mq-words li a { min-height: 56px; padding: 0 28px; font-weight: 700; font-size: clamp(20px, 2vw, 28px); font-stretch: 104%; transition: background-color .5s var(--hv-ease), color .5s var(--hv-ease); }
+.hv-mq-words li a:hover { background: var(--sage-100); color: var(--green); box-shadow: inset 0 0 0 2px var(--sage); }
+.hv-mq-prods li { width: 112px; height: 112px; border-radius: var(--r); }
+.hv-mq-prods img { width: 80% !important; height: 80% !important; }
+
+/* ---------- categories ---------- */
+.hv-bento .hv-tile { border-radius: var(--r); }
+.hv-bento .hv-tile-img.hv-photo::after { background: linear-gradient(0deg, rgba(29,43,54,.66) 0%, rgba(29,43,54,.2) 44%, rgba(29,43,54,0) 66%); }
+.hv-bento .hv-tile-name { font-weight: 700; }
+
+/* ---------- process: white cards on the sage band ---------- */
+.hv-process { color: var(--ink); }
+.hv-process .hv-split-head > p { color: var(--ink-2); }
+.hv-process .hv-split-head > p strong { color: var(--ink); }
+.hv-process .hv-more { color: var(--ink); }
+.hv-stack figure { background: #fff; color: var(--ink); border-radius: var(--r-lg); box-shadow: 0 -10px 36px rgba(29,43,54,.08); }
+.hv-stack figure::after { background: var(--sage-50); }
+.hv-stack .hv-num, .hv-steps .hv-num { color: var(--sage); font-weight: 750; font-size: clamp(72px, 8vw, 120px); }
+.hv-stack h3 { font-weight: 700; font-size: clamp(28px, 3vw, 44px); }
+.hv-stack p { color: var(--ink-2); }
+
+/* ---------- featured: every cut-out on the same sheet ground ---------- */
+.hv-prod-img { background: var(--stone); border-radius: var(--r); }
+.hv-prods > li:nth-child(even) { padding-top: 0; }
+.hv-prod-name { font-weight: 700; }
+
+/* ---------- film chapter: light cork band, framed clips ---------- */
+.hv-dark { color: var(--ink); }
+.hv-dark .hv-split-head > p { color: var(--ink-2); }
+.hv-dark .hv-link, .hv-dark p a:not(.hv-btn), .hv-dark .fm-more a { color: var(--green); }
+.hv-video::before, .hv-footage::before { display: none; }
+.hv-video { padding-bottom: 32px; }
+.hv-video .hv-wrap { display: block; }
+.hv-video .hv-split-head { position: static; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); margin-bottom: 40px; }
+.hv-vid-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.hv-vid, .hv-vid:first-child, .hv-vid:nth-child(2), .hv-vid:nth-child(3) { rotate: none; grid-row: auto; border-radius: var(--r); background: #E9E1D4; }
+.hv-vid video, .hv-vid:not(:first-child) video { aspect-ratio: 4 / 5; }
+.hv-footage { padding-top: 32px; padding-bottom: clamp(64px, 7.5vw, 112px); }
+.hv-footage .fm-media, .hv-footage .fm-compact .fm-media { border-radius: var(--r); background: #E9E1D4; box-shadow: none; }
+.hv-footage .fm-item, .hv-footage .fm-item:nth-child(n) { rotate: none; margin-top: 0; }
+.hv-footage .fm-item:hover { rotate: none; scale: 1; }
+.hv-footage .fm-item figcaption { color: var(--ink-2); }
+.hv-footage .fm-item figcaption b { color: var(--ink); }
+.hv-footage .fm-more a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* ---------- why: no overlap, no tilt ---------- */
+.hv-why-head p { color: var(--ink-2); }
+.hv-why-list > div, .hv-why-list > div:first-child { border-top: 1px solid var(--rule-2); }
+.hv-why-list p { color: var(--ink-2); }
+.hv-why-list p a { color: var(--green) !important; }
+.hv-why-media { margin-top: 0; rotate: none; border-radius: var(--r-lg); box-shadow: none; }
+.hv-why-list .hv-swatches-lg { display: none; }
+
+/* ---------- glance ---------- */
+.hv-glance-media { border-radius: var(--r-lg); box-shadow: none; margin-right: 0; }
+.hv-facts > div { border-top: 1px solid var(--rule-2); }
+.hv-facts dd { font-weight: 750; }
+.hv-cap th, .hv-cap td { border-top-color: var(--rule-2); }
+
+/* ---------- applications: same card family as the tiles ---------- */
+.hv-app { border-radius: var(--r); transition: translate .5s var(--hv-ease), box-shadow .5s var(--hv-ease); }
+.hv-app:hover { rotate: none; translate: 0 -4px; box-shadow: var(--shadow-soft); }
+.hv-app h3 { font-weight: 700; }
+.hv-app-list > li:nth-child(1) .hv-app h3, .hv-app-list > li:nth-child(6) .hv-app h3 { font-size: clamp(26px, 2.2vw, 32px); }
+.hv-app p { color: var(--ink-2); }
+.hv-app .hv-app-kit { border-top-color: var(--rule-2); }
+.hv-app-icon { background: rgba(255,255,255,.75); color: var(--green); }
+
+/* ---------- certifications: white cards on the cork band ---------- */
+.hv-cert-list li, .hv-cert-list li:nth-child(n) { background: #fff; border-radius: var(--r); }
+.hv-cert-list strong { font-weight: 700; }
+.hv-cert-wall { rotate: none; transform: none; border-radius: var(--r); box-shadow: var(--shadow-soft); }
+
+/* ---------- how it works + CTA ---------- */
+.hv-how li { border-top: 1px solid var(--rule-2); }
+.hv-how .hv-num { color: var(--green); font-weight: 750; }
+.hv-cta { background: var(--sage-100); border-radius: var(--r-lg); }
+.hv-cta::before, .hv-cta::after { display: none; }
+.hv-cta p { color: var(--ink-2); }
+.hv-direct a { color: var(--ink); }
+
+/* footer on this page: same ink blue, sentence-case headings */
+body.home-v2 .site-footer { background: var(--ink); }
+body.home-v2 .site-footer h5 { text-transform: none; letter-spacing: 0; font-size: 16px; }
+
+/* ---------- motion: one ease, slow and soft ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .hv-mq-words .hv-mq-track { animation-duration: 90s; }
+  .hv-mq-prods .hv-mq-track { animation-duration: 120s; }
+  .hv-hero-slides img { transition: opacity 2.4s var(--hv-ease); }
+  .hv-hero-slides img.is-on, .hv-hero-img.is-kb { animation: hv-kb4 12s var(--hv-ease) both; }
+  .hv-hero-img { animation-duration: 2.4s; }
+  .hv-reel { animation: none; }
+  .hv-reel-tag i { animation: hv-pulse 2.8s ease-in-out infinite; }
+  .hv-reel video { transition: opacity 1.2s var(--hv-ease); }
+  .hv-bento .hv-tile-img img, .hv-tile-img img, .hv-prod-img img { transition: transform .9s var(--hv-ease); }
+  .hv-bento .hv-tile:hover .hv-tile-img img, .hv-bento .hv-tile:hover .hv-tile-img:not(.hv-photo) img, .hv-prod:hover .hv-prod-img img { transform: scale(1.04); }
+  .hv-prod-img { transition: translate .6s var(--hv-ease); }
+  .hv-prod:hover .hv-prod-img { translate: 0 -4px; }
+  .hv-motion .hv-rv { translate: 0 24px; transition: opacity 1s var(--hv-ease), translate 1.1s var(--hv-ease); transition-delay: var(--d, 0s); }
+  .hv-motion .hv-rv-zoom { scale: .97; transition: opacity 1.1s var(--hv-ease), scale 1.2s var(--hv-ease); transition-delay: var(--d, 0s); }
+}
+@keyframes hv-kb4 { from { transform: scale(1.06); } to { transform: scale(1); } }
+
+/* ---------- tablet ---------- */
+@media (max-width: 1100px) {
+  .hv-video .hv-split-head { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+}
+
+/* ---------- phone ---------- */
+@media (max-width: 820px) {
+  .hv-sec, .hv-end { padding: 48px 0; }
+  .hv-range { padding-top: 40px; padding-bottom: 48px; }
+  .hv-featured { padding-top: 48px; }
+  .hv-process { padding-bottom: 48px; }
+  body.home-v2 .hv h2 { font-size: clamp(30px, 8.6vw, 38px); line-height: 1.08; }
+  .hv-split-head, .hv-head-nav, .hv-why-head { margin-bottom: 24px; }
+
+  /* hero: calm crossfading photos (the factory reel lives in the film chapter) */
+  .hv-reel { display: none; }
+  .hv-hero-media { height: clamp(330px, 44svh, 400px); }
+  .hv-hero-media::after { background: linear-gradient(0deg, rgba(29,43,54,.82) 0%, rgba(29,43,54,.34) 46%, rgba(29,43,54,0) 72%); }
+  .hv-lead { color: var(--ink-2); }
+  .hv-hero .hv-more { color: var(--ink); }
+  .hv-hero .hv-btn-quiet { border-color: var(--ink); color: var(--ink); }
+  .hv-hero .hv-btn-quiet:hover { background: var(--ink); color: #fff; }
+  body.home-v2 .hv .hv-hero .hv-actions a:focus-visible, body.home-v2 .hv .hv-hero .hv-more:focus-visible { outline-color: var(--green) !important; box-shadow: none; }
+  .hv-strip { border-top: 0; }
+  .hv-tag dl > div { border-bottom-color: var(--rule) !important; }
+  .hv-tag dl > div:nth-child(even) { border-left-color: var(--rule) !important; }
+
+  .hv-band { padding: 24px 0 8px; }
+  .hv-mq-words li a { min-height: 48px; padding: 0 20px; font-size: 20px; }
+  .hv-mq-prods li { width: 88px; height: 88px; border-radius: 16px; }
+
+  .hv-bento .hv-tile { border-radius: var(--r); }
+  .hv-stack figure { border-radius: var(--r); box-shadow: none; }
+  .hv-stack .hv-num, .hv-steps .hv-num { font-size: 48px; }
+  .hv-stack h3 { font-size: 24px; }
+
+  .hv-vid, .hv-vid:first-child { flex: 0 0 40vw; border-radius: var(--r); }
+  .hv-vid video, .hv-vid:first-child video, .hv-vid:not(:first-child) video { aspect-ratio: 9 / 16; }
+  .hv-video .hv-split-head { grid-template-columns: 1fr; margin-bottom: 24px; }
+  .hv-video { padding-bottom: 24px; }
+  .hv-footage { padding-top: 24px; padding-bottom: 48px; }
+
+  .hv-why-media { margin: 0; rotate: none; border-radius: var(--r); }
+  .hv-glance-media { border-radius: var(--r); box-shadow: none; margin-right: 0; }
+  .hv-cta { border-radius: var(--r-lg); padding: 32px 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hv-hero-img { animation: none !important; }
+}
+/* v4 fixes after first review */
+.hv-vid video { background: #E9E1D4; }
+.hv-facts dd { white-space: nowrap; }
+@media (max-width: 820px) { .hv-facts dd { font-size: clamp(30px, 8.6vw, 40px); } }
+/* legibility over photos: keep the veil soft in colour but strong enough for AA */
+.hv-hero-media::after { background: linear-gradient(90deg, rgba(29,43,54,.8) 0%, rgba(29,43,54,.62) 46%, rgba(29,43,54,0) 80%), linear-gradient(0deg, rgba(29,43,54,.4), rgba(29,43,54,0) 45%); }
+.hv-bento .hv-tile-img.hv-photo::after { background: linear-gradient(0deg, rgba(29,43,54,.8) 0%, rgba(29,43,54,.5) 34%, rgba(29,43,54,0) 62%); }
+.hv-bento .hv-tile:has(.hv-photo) .hv-tile-name, .hv-bento .hv-tile:has(.hv-photo) .hv-tile-sub, .hv-hero h1, .hv-lead { text-shadow: 0 1px 12px rgba(29,43,54,.35); }
+@media (max-width: 820px) { .hv-lead { text-shadow: none; } .hv-hero-media::after { background: linear-gradient(0deg, rgba(29,43,54,.86) 0%, rgba(29,43,54,.6) 48%, rgba(29,43,54,0) 82%); } }
+@media (min-width: 761px) { .hv-footage .fm-grid { max-width: none; gap: 16px; } }

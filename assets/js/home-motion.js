@@ -72,8 +72,8 @@
         var a = cards[i].getBoundingClientRect(), b = cards[i + 1].getBoundingClientRect();
         var p = 1 - Math.min(Math.max((b.top - a.top) / a.height, 0), 1); /* 0 = next card far, 1 = fully over */
         var f = cards[i].firstElementChild;
-        f.style.setProperty('--s', (1 - p * 0.06).toFixed(4));
-        f.style.setProperty('--dim', (p * 0.35).toFixed(3));
+        f.style.setProperty('--s', (1 - p * 0.04).toFixed(4));
+        f.style.setProperty('--dim', (p * 0.5).toFixed(3));
       }
     }
     addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(stack); } }, { passive: true });
@@ -128,7 +128,7 @@
       if (next === 0) { imgs.forEach(function (x, k) { if (k) x.classList.remove('is-on'); }); first.classList.remove('is-kb'); void first.offsetWidth; first.classList.add('is-kb'); }
       else { imgs[next].classList.remove('is-on'); void imgs[next].offsetWidth; imgs[next].classList.add('is-on'); }
       i = next;
-    }, 5200);
+    }, 7000);
   }
   function go() { setTimeout(function () { startSlides(); startReel(); }, 400); }
   if (d.readyState === 'complete') go(); else addEventListener('load', go);
