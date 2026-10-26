@@ -252,7 +252,7 @@ const I18N = {
     'faq.q16': 'Can you develop a new product from my sample or design?',
     'faq.a16': 'Absolutely. Our R&D team develops new items from your sample, sketch or concept — from material selection to final mass production, with a physical sample in about 7 days.',
     'faq.q17': 'How fast can I get a sample and bulk production?',
-    'faq.a17': 'Physical samples are ready in about 7 days with your logo, color and packaging. Bulk lead time depends on order size and customization; we confirm a clear timeline at quotation.',
+    'faq.a17': 'Physical samples are ready in about 7 days with your logo, color and packaging. Bulk production takes 15–20 days; we confirm the exact timeline for your order at quotation.',
     'faq.q18': 'What is your monthly production capacity?',
     'faq.a18': 'We run 10 production lines with an annual output of about 1,000,000 yoga mats, plus rollers, blocks, bags and apparel — enough to support both growing brands and large repeat orders.',
     'faq.q19': 'Do you ship to the US, EU or Australia? Which incoterms (FOB, EXW, DDP)?',
