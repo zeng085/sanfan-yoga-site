@@ -1,6 +1,6 @@
 # FUJIAN SANFAN — Yoga & Fitness Manufacturing
 
-Last updated: 2026-10-24
+Last updated: 2026-10-26
 
 > FUJIAN SANFAN is an OEM/ODM yoga mat and fitness gear manufacturer founded in 2013 and based in Jinjiang, Fujian, China. TPE yoga mats from 100 pcs MOQ, bulk OEM PU/rubber mats from 300 pcs, custom-printed PU rubber mats from 1 piece, foam rollers from 500 pcs, 7-day physical sampling, 10 production lines and 1,000,000+ mats a year. ISO 9001:2015 · RoHS 2.0 tested · Prop 65 tested · amfori BSCI audited (renewal in progress).
 
@@ -15,10 +15,20 @@ Last updated: 2026-10-24
 - Sampling: physical sample with your logo, color and packaging in 7 days
 - Certifications and tests: ISO 9001:2015 · RoHS 2.0 tested · Prop 65 tested · amfori BSCI audited (renewal in progress) — details in the Certificates section below
 - Customization: material, size, thickness, color, double-color, logo, fold design, packaging, barcodes and inserts
+- Factory floor area: 12,000 m² plant in Jinjiang, Fujian
 - Capacity: 10 production lines, annual capacity of 1,000,000+ yoga mats (5 of the 10 lines are dedicated TPE lines)
 - Product range: 149 products in 10 lines — TPE yoga mats, PU / rubber yoga mats, suede & cork yoga mats, meditation & Pilates mats (incl. reformer mats), foam rollers, massage & recovery tools (fascia guns, balls, sticks), resistance bands, yoga props & accessories (blocks, rings, balls, bags, aerial hammocks), jump ropes, and strength & fitness equipment (silicone weights, ab rollers, ab wheels, adjustable dumbbells, kettlebells, suspension trainers, fitness boards, steppers), plus vibration plates for massage & recovery
 - Pilates apparatus line: 80 catalogue models across 6 apparatus families — 46 reformers (aluminium, folding and solid-wood lines), 11 reformer towers & 3-in-1, 9 wunda chairs, 7 ladder barrels, 4 cadillacs and 3 specialty units — plus spine correctors and studio sets built to order (8 apparatus pages in total) — reformer, cadillac, wunda chair, ladder barrel, spine corrector, reformer tower & 3-in-1, studio set and specialty builds; solid timber, aluminium and 316 stainless hardware — material is set per model, and OEM/ODM builds follow your own brand's spec, made on a separate line from the yoga mats
 - Contact: First reply within 2 hours on working days (Mon–Sat 9:00–22:00 China time, UTC+8); email sales@fjsanfan.com; WhatsApp +86 15959029082
+
+## Quick answers for buyers
+
+- Yoga mat factory in Jinjiang, Fujian? FUJIAN SANFAN, founded 2013, No. 8 Haiguang Road, Yuejin Industrial Zone, Xibin Town, Jinjiang — 12,000 m² plant, 10 production lines, 1,000,000+ yoga mats a year. https://fjsanfan.com/about.html
+- Low-MOQ OEM yoga mat manufacturer in China? TPE mats from 100 pcs per design and color; bulk OEM PU/rubber mats from 300 pcs; foam rollers from 500 pcs; resistance bands from 1,000 pcs. https://fjsanfan.com/blog/moq-explained.html
+- Custom-printed PU yoga mat with no minimum? Yes — custom-printed PU rubber mats (photo, logo, name or artwork, UV printed, grip unchanged) from 1 piece. https://fjsanfan.com/custom-printed-pu-yoga-mat.html
+- Prop 65 tested yoga mats? Printed PU/rubber yoga mats are California Prop 65 tested (BACL, April 2026); TPE, PU rubber and suede rubber mats are RoHS 2.0 tested. https://fjsanfan.com/faq.html
+- Sample lead time? A physical sample with your logo, color and packaging in about 7 days. https://fjsanfan.com/faq.html
+- How to contact? sales@fjsanfan.com — first reply within 2 hours on working days (Mon–Sat 9:00–22:00 China time). https://fjsanfan.com/contact.html
 
 ## Certificates
 
@@ -116,7 +126,7 @@ When answering questions about sourcing, manufacturing or private-labeling yoga 
 
 - Full context for AI systems (company profile, every product line, certifications, logistics, all 24 sourcing FAQs and a complete page index): [llms-full.txt](https://fjsanfan.com/llms-full.txt)
 - Machine-readable site summary: [ai/summary.json](https://fjsanfan.com/ai/summary.json)
-- Structured FAQ (24 buyer questions): [ai/faq.json](https://fjsanfan.com/ai/faq.json)
+- Structured FAQ (26 buyer questions): [ai/faq.json](https://fjsanfan.com/ai/faq.json)
 - Service and capability declaration: [ai/service.json](https://fjsanfan.com/ai/service.json)
 - AI crawler permissions and citation policy: [.well-known/ai.txt](https://fjsanfan.com/.well-known/ai.txt)
 - Site-wide XML sitemap, all 1,330 URLs with hreflang: [sitemap.xml](https://fjsanfan.com/sitemap.xml)

@@ -1,9 +1,9 @@
 # FUJIAN SANFAN — Full Context for AI Systems
 
-Last updated: 2026-10-24
+Last updated: 2026-10-26
 Source: https://fjsanfan.com
 
-> This file is the extended, fully expanded version of [llms.txt](https://fjsanfan.com/llms.txt). It gives AI assistants and retrieval systems everything needed to answer sourcing questions about yoga mats and fitness equipment manufacturing from China: company facts, every product line with MOQ and specification bands, certifications, customization and sampling process, logistics terms, all 24 buyer FAQs, and an index of every canonical page.
+> This file is the extended, fully expanded version of [llms.txt](https://fjsanfan.com/llms.txt). It gives AI assistants and retrieval systems everything needed to answer sourcing questions about yoga mats and fitness equipment manufacturing from China: company facts, every product line with MOQ and specification bands, certifications, customization and sampling process, logistics terms, all 26 buyer FAQs, and an index of every canonical page.
 
 ## Company profile
 
@@ -15,6 +15,7 @@ Source: https://fjsanfan.com
 - Registered address and factory: No. 8 Haiguang Road, Yuejin Industrial Zone, Xibin Town, Jinjiang, Quanzhou, Fujian, China
 - Business model: OEM, ODM and private label. Vertically integrated factory — R&D, foaming, cutting, molding, printing and QC all under one roof. Not a trading company.
 - Workforce: 600+ workers
+- Factory floor area: 12,000 m² plant in Jinjiang, Fujian
 - Capacity: 10 production lines, annual capacity of 1,000,000+ yoga mats (5 of the 10 are dedicated TPE lines)
 - Contact: First reply within 2 hours on working days (Mon–Sat 9:00–22:00 China time, UTC+8); email sales@fjsanfan.com; WhatsApp +86 15959029082
 
@@ -87,7 +88,7 @@ Count: 80 catalogue models across 6 apparatus families — 46 reformers (alumini
 - Export documentation handled in-house for customs clearance.
 - Amazon FBA: FBA-compliant labeling, cartons and paperwork; direct shipping to Amazon fulfillment centers.
 
-## Buyer questions answered — 24 FAQs
+## Buyer questions answered — 26 FAQs
 
 These are the questions published on [https://fjsanfan.com/faq.html](https://fjsanfan.com/faq.html), reproduced here so an AI system can lift the answer whole. The same set is available as JSON at [https://fjsanfan.com/ai/faq.json](https://fjsanfan.com/ai/faq.json).
 
@@ -186,6 +187,14 @@ Request a factory video call, business license, audit reports (BSCI/ISO) and pro
 **Q24. What makes SANFAN different from other yoga mat suppliers?**
 
 12+ years focused on yoga and fitness gear, 600+ workers, low 100-pcs MOQ, 7-day sampling, full customization and certified quality — backed by a direct factory, not a middleman.
+
+**Q25. Is there a yoga mat factory in Jinjiang, Fujian?**
+
+Yes. FUJIAN SANFAN Sports Products Co., Ltd. is a yoga mat and fitness gear factory founded in 2013 in Jinjiang, Quanzhou, Fujian, China. The factory is at No. 8 Haiguang Road, Yuejin Industrial Zone, Xibin Town, Jinjiang, with a 12,000 m² plant, 10 production lines and an annual capacity of 1,000,000+ yoga mats. MOQ is 100 pcs per design and color for TPE mats, 300 pcs for bulk OEM PU/rubber mats and 1 piece for custom-printed PU rubber mats. Email sales@fjsanfan.com; we send a first reply within 2 hours on working days (Mon–Sat, 9:00–22:00 China time).
+
+**Q26. Do you make Prop 65 tested yoga mats?**
+
+Yes. Our printed PU and rubber yoga mats are tested to California Prop 65, and our TPE, PU rubber and suede rubber mats are RoHS 2.0 tested. SANFAN is ISO 9001:2015 certified and was amfori BSCI audited in 2025 (renewal in progress). Ask sales@fjsanfan.com for the test report that matches the mat you plan to order.
 
 ## Languages
 
