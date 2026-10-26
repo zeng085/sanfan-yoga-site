@@ -130,6 +130,45 @@
           </div></div></div>
     </section>
 
+    <!-- ===== 30-second promo film (2026-10-27) ===== -->
+    <section class="hv-promo hv-dark" id="promo-video" aria-labelledby="hv-promo-title">
+      <style>
+        .hv-promo { padding: clamp(40px, 6vw, 80px) 0; background: var(--ink); color: #fff; }
+        .hv-promo .hv-promo-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; margin-bottom: 20px; }
+        .hv-promo h2 { margin: 0; color: #fff; font-size: clamp(24px, 3.2vw, 38px); }
+        .hv-promo .hv-promo-head p { margin: 0; color: rgba(255,255,255,.78); font-size: 16px; max-width: 60ch; }
+        .hv-promo-frame { position: relative; width: 100%; max-width: 1080px; margin: 0 auto; aspect-ratio: 16 / 9; border-radius: var(--r, 18px); overflow: hidden; background: #000; }
+        .hv-promo-frame video { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .hv-promo .hv-promo-cta { margin: 16px 0 0; text-align: center; font-size: 16px; }
+        .hv .hv-promo .hv-promo-cta a { color: var(--lilac, #CEC3E6); }
+      </style>
+      <div class="hv-wrap">
+        <div class="hv-promo-head">
+          <h2 id="hv-promo-title">Sanfan in 30 seconds</h2>
+          <p>Our Jinjiang factory, materials, custom options, Pilates apparatus and MOQ at a glance. Tap the controls for sound.</p>
+        </div>
+        <div class="hv-promo-frame"><video id="hv-promo-vid" muted loop playsinline controls preload="metadata" width="1280" height="720" poster="assets/video/sanfan-promo-30s-poster.webp" aria-label="30-second film: SANFAN yoga mat factory in Jinjiang, materials, custom logo and packaging, Pilates Reformer, Cadillac and Wunda Chair, low MOQ"><source src="assets/video/sanfan-promo-30s.mp4" type="video/mp4"></video></div>
+        <p class="hv-promo-cta"><a href="contact.html">Get a quote or sample &rarr;</a></p>
+      </div>
+      <script>
+        (function () {
+          var v = document.getElementById('hv-promo-vid');
+          if (!v) return;
+          var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (reduce || !('IntersectionObserver' in window)) return;
+          var userPaused = false;
+          v.addEventListener('pause', function () { if (!v.dataset.auto) userPaused = true; delete v.dataset.auto; });
+          new IntersectionObserver(function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) { if (!userPaused && v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } }
+              else if (!v.paused) { v.dataset.auto = '1'; v.pause(); }
+            });
+          }, { threshold: 0.35 }).observe(v);
+        })();
+      </script>
+      <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Sanfan in 30 seconds - OEM/ODM yoga mat and Pilates factory in Jinjiang, China", "description": "A 30-second film from FUJIAN SANFAN Sports Products Co., Ltd., an OEM/ODM manufacturer in Jinjiang, Fujian, China since 2013: 1,000,000+ yoga mats a year, 10 production lines, TPE, PU, natural rubber, cork, suede and EVA mats, custom logo and packaging, Pilates Reformer, Cadillac and Wunda Chair, MOQ from 100 pcs for TPE mats and samples in about 7 days.", "thumbnailUrl": "https://fjsanfan.com/assets/video/sanfan-promo-30s-poster.webp", "contentUrl": "https://fjsanfan.com/assets/video/sanfan-promo-30s.mp4", "uploadDate": "2026-10-27T08:00:00+08:00", "duration": "PT30S", "width": 1280, "height": 720, "publisher": {"@type": "Organization", "name": "FUJIAN SANFAN Sports Products Co., Ltd.", "url": "https://fjsanfan.com/"}}</script>
+    </section>
+
     <!-- ===== Materials marquee (v2) ===== -->
     <section class="hv-band" aria-label="Materials we make">
       <div class="hv-mq hv-mq-words"><div class="hv-mq-track"><ul class="hv-mq-set" aria-label="Materials we make"><li class="hv-c-lilac"><a href="materials.html">TPE</a></li><li class="hv-c-mist"><a href="materials.html">PVC</a></li><li class="hv-c-sage"><a href="materials.html">NBR</a></li><li class="hv-c-pink"><a href="materials.html">PU + natural rubber</a></li><li class="hv-c-cork"><a href="materials.html">Suede microfibre</a></li><li class="hv-c-sage"><a href="materials.html">Cork</a></li><li class="hv-c-lilac"><a href="materials.html">EVA</a></li><li class="hv-c-pink"><a href="materials.html">EPP</a></li></ul><ul class="hv-mq-set" aria-hidden="true"><li class="hv-c-lilac"><a href="materials.html" tabindex="-1">TPE</a></li><li class="hv-c-mist"><a href="materials.html" tabindex="-1">PVC</a></li><li class="hv-c-sage"><a href="materials.html" tabindex="-1">NBR</a></li><li class="hv-c-pink"><a href="materials.html" tabindex="-1">PU + natural rubber</a></li><li class="hv-c-cork"><a href="materials.html" tabindex="-1">Suede microfibre</a></li><li class="hv-c-sage"><a href="materials.html" tabindex="-1">Cork</a></li><li class="hv-c-lilac"><a href="materials.html" tabindex="-1">EVA</a></li><li class="hv-c-pink"><a href="materials.html" tabindex="-1">EPP</a></li></ul></div></div>
