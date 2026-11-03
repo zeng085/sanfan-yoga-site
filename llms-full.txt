@@ -28,7 +28,7 @@ Source: https://fjsanfan.com
 - Most accessories: 500–1,000 pcs
 - Pilates apparatus (wooden studio equipment): quoted per model, see the Pilates section
 
-## Product range — 157 products in 10 lines
+## Product range — 161 products in 10 lines
 
 The full catalogue spans TPE yoga mats; PU / rubber yoga mats; suede and cork yoga mats; meditation and Pilates mats including reformer mats; foam rollers; massage and recovery tools (fascia guns, balls, sticks); resistance bands; yoga props and accessories (blocks, rings, balls, bags, aerial hammocks); jump ropes; and strength and fitness equipment (silicone weights, ab rollers, ab wheels, adjustable dumbbells, kettlebells, suspension trainers, fitness boards, steppers), plus vibration plates for massage and recovery.
 
@@ -45,7 +45,7 @@ Each category page carries the SKU list, specification bands and MOQ for that li
 - [Massage & Recovery Manufacturer](https://fjsanfan.com/massage-recovery.html)
 - [Yoga Props & Accessories Manufacturer](https://fjsanfan.com/yoga-props-accessories.html)
 
-All 157 product pages are indexed in the page index below.
+All 161 product pages are indexed in the page index below.
 
 ## Pilates apparatus line — 80 catalogue models
 
@@ -212,7 +212,7 @@ Core commerce pages — home, products overview, all 10 product categories, all 
 ### Core pages
 
 - [Home](https://fjsanfan.com/index.html)
-- [All products — 157 SKUs in 10 lines](https://fjsanfan.com/products.html)
+- [All products — 161 SKUs in 10 lines](https://fjsanfan.com/products.html)
 - [About the factory](https://fjsanfan.com/about.html)
 - [Buyer FAQ — 24 questions](https://fjsanfan.com/faq.html)
 - [Contact / get a quote](https://fjsanfan.com/contact.html)
@@ -240,7 +240,7 @@ Core commerce pages — home, products overview, all 10 product categories, all 
 - [Massage & Recovery Manufacturer](https://fjsanfan.com/massage-recovery.html)
 - [Yoga Props & Accessories Manufacturer](https://fjsanfan.com/yoga-props-accessories.html)
 
-### All 157 product pages
+### All 161 product pages
 
 - [AB Roller Training Set](https://fjsanfan.com/products/ab-roller-training-set.html)
 - [Ab Roller with Resistance Band](https://fjsanfan.com/products/ab-roller-with-resistance-band.html)
@@ -399,6 +399,10 @@ Core commerce pages — home, products overview, all 10 product categories, all 
 - [Natural Cork Yoga Block (Single or 2-Pack)](https://fjsanfan.com/products/cork-yoga-block.html)
 - [Wrist-Support EVA Yoga Block Set (2 Blocks, Knee Pad & Strap)](https://fjsanfan.com/products/wrist-support-eva-yoga-block-set.html)
 - [Dual-Sided Core Sliders (2-Pack)](https://fjsanfan.com/products/core-sliders.html)
+- [PVC Pilates Ball 25 cm (with Inflation Straw & Plug)](https://fjsanfan.com/products/pvc-pilates-ball-25cm.html)
+- [Fabric Hip Resistance Band Set (3 Levels: 60 / 90 / 120 LB)](https://fjsanfan.com/products/hip-resistance-band-set-3-levels.html)
+- [Triangle Adjustable Wrist & Ankle Weights (2 LB or 4 LB per Pair)](https://fjsanfan.com/products/triangle-adjustable-wrist-ankle-weights.html)
+- [Silicone-Coated Cast Iron Dumbbells (1 kg / 1.5 kg / 2 kg, Pair)](https://fjsanfan.com/products/silicone-coated-cast-iron-dumbbells.html)
 
 ### Sourcing guides (blog)
 
