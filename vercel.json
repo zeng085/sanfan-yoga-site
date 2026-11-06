@@ -1,6 +1,7178 @@
 {
   "redirects": [
     {
+      "source": "/product/advanced-yoga-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/advanced-yoga-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/advanced-yoga-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/advanced-yoga-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/vibrating-yoga-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/vibrating-yoga-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/vibrating-yoga-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/vibrating-yoga-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ym1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ym1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-dual-color/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/multi-color-tpe-yoga-mat-bundle.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-dual-color",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/multi-color-tpe-yoga-mat-bundle.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-special-dual-color/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pink-and-black-dual-color-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-special-dual-color",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pink-and-black-dual-color-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-special-dual-color-body-line/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/alignment-line-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-special-dual-color-body-line",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/alignment-line-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/matte-pu-rubber-folding-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/matte-pu-rubber-foldable-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/matte-pu-rubber-folding-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/matte-pu-rubber-foldable-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cork-tpe-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/cork-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cork-tpe-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/cork-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/bidirectional-slide-rail-semi-elevated-core-bed/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/bidirectional-slide-rail-semi-elevated-core-bed",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/maple-cadillac-bed/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-cadillac.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/maple-cadillac-bed",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-cadillac.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/maple-core-bed/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/maple-core-bed",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/maple-foldable-core-bed/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/maple-foldable-core-bed",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/maple-pilates-chair/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-wunda-chair.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/maple-pilates-chair",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-wunda-chair.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/maple-spine-corrector/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-spine-corrector.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/maple-spine-corrector",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-spine-corrector.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/metal-foldable-core-bed/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/metal-foldable-core-bed",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/oak-core-bed/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/oak-core-bed",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/oak-ladder-bucket/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-ladder-barrel.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/oak-ladder-bucket",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-ladder-barrel.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/oak-pilates-chair/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-wunda-chair.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/oak-pilates-chair",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-wunda-chair.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pilates-reformer-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pilates-reformer-mat-custom-logo.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pilates-reformer-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pilates-reformer-mat-custom-logo.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/oak-cadillac-bed/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-cadillac.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/oak-cadillac-bed",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-cadillac.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pilates-reformer-mat2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pilates-reformer-mat-tropical-print.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pilates-reformer-mat2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pilates-reformer-mat-tropical-print.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pilates-reformer-mat3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pilates-reformer-mat-mandala.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pilates-reformer-mat3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pilates-reformer-mat-mandala.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/ab-wheel/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ab-wheel.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/ab-wheel",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ab-wheel.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/adjustable-dumbbell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/adjustable-dumbbell.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/adjustable-dumbbell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/adjustable-dumbbell.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/dumbbel/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fi5.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/dumbbel",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fi5.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/eva-foam-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/eva-foam-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/eva-foam-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/eva-foam-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascia-gun-1/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascia-gun-1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascia-gun-1",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascia-gun-1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascia-gun-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascia-gun-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascia-gun-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascia-gun-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascia-gun-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascia-gun-3.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascia-gun-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascia-gun-3.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascial-sphere-1/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascial-sphere-1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascial-sphere-1",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascial-sphere-1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascial-sphere-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascial-sphere-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascial-sphere-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascial-sphere-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascial-sphere-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascial-sphere-3.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascial-sphere-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascial-sphere-3.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/jump-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/beaded-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/jump-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/beaded-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/kettlebell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/color-kettlebell.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/kettlebell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/color-kettlebell.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/massager-1/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/massager-1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/massager-1",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/massager-1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/massager-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/massager-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/massager-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/massager-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/massager-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/massager-3.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/massager-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/massager-3.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/power-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/power-band.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/power-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/power-band.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/resistance-tube/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/resistance-tube.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/resistance-tube",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/resistance-tube.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/resistance-tube-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/resistance-tube-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/resistance-tube-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/resistance-tube-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suspension-training/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/suspension-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suspension-training",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/suspension-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/vibrating-foam-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/vibrating-foam-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/vibrating-foam-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/vibrating-foam-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/vibration-machine/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/vibration-machine.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/vibration-machine",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/vibration-machine.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-bag/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/yoga-bag.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-bag",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/yoga-bag.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-ball/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/yoga-ball.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-ball",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/yoga-ball.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/matte-pu-rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ym6.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/matte-pu-rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ym6.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/eva-yoga-block/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/eva-yoga-block.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/eva-yoga-block",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/eva-yoga-block.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ym5.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ym5.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pr1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pr1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-spliced-color-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/spliced-color-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-spliced-color-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/spliced-color-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-test/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ym7.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-test",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ym7.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/purple-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/purple-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-double-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/two-tone-double-layer-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-double-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/two-tone-double-layer-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-eco-friendly-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/eco-friendly-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-eco-friendly-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/eco-friendly-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/lilac-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/lilac-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-dual-color-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/dual-color-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-dual-color-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/dual-color-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/oil-painting-style-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/oil-painting-style-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/oil-painting-style-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/oil-painting-style-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/red-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/red-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/purple-mandala-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/purple-mandala-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-4/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/gray-mandala-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-4",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/gray-mandala-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-5/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pink-mandala-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-5",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pink-mandala-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-6/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/solid-black-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-6",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/solid-black-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-7/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/gold-printed-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-7",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/gold-printed-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-8/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ultra-thin-pu-rubber-travel-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-8",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ultra-thin-pu-rubber-travel-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-9/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/cork-surface-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-9",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/cork-surface-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-10/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/marble-print-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-10",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/marble-print-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-tpe-foldable-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pink-mandala-foldable-suede-tpe-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-tpe-foldable-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pink-mandala-foldable-suede-tpe-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/meditation-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/round-mandala-meditation-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/meditation-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/round-mandala-meditation-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-yoga-mat-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/aurora-gradient-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-yoga-mat-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/aurora-gradient-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/watercolor-floral-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/watercolor-floral-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-yoga-mat-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/galaxy-gradient-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-yoga-mat-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/galaxy-gradient-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-foldable-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/gold-koi-foldable-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-foldable-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/gold-koi-foldable-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-tpe-yoga-mat-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/round-mandala-suede-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-tpe-yoga-mat-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/round-mandala-suede-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/flamingo-print-suede-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/flamingo-print-suede-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-tpe-yoga-mat-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/monochrome-leaf-suede-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-tpe-yoga-mat-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/monochrome-leaf-suede-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-tpe-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/geometric-print-suede-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-tpe-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/geometric-print-suede-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/sude-tpe-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/navy-botanical-suede-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/sude-tpe-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/navy-botanical-suede-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-yoga-mat-4/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/starry-night-print-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/suede-yoga-mat-4",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/starry-night-print-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/folding-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ym4.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/folding-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ym4.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/folding-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/foldable-yoga-mat-multi-color.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/folding-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/foldable-yoga-mat-multi-color.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/tpe-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/tpe-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-11/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/sage-green-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-11",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/sage-green-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pu-rubber-yoga-mat-with-alignment-lines.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pu-rubber-yoga-mat-with-alignment-lines.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-12/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/gradient-line-art-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-rubber-yoga-mat-12",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/gradient-line-art-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/folding-yoga-mat-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pink-foldable-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/folding-yoga-mat-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pink-foldable-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/arched-pu-rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/arched-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/arched-pu-rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/arched-pu-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/rubber-folding-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/olive-foldable-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/rubber-folding-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/olive-foldable-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/kettlebell-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fi2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/kettlebell-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fi2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/weighted-ring/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/weighted-training-ring.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/weighted-ring",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/weighted-training-ring.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/weighted-ball/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/weighted-training-ball.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/weighted-ball",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/weighted-training-ball.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/dumbbell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/triangular-silicone-dumbbell.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/dumbbell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/triangular-silicone-dumbbell.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/dumbbell-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fi5.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/dumbbell-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fi5.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/barbell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/wave-silicone-barbell.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/barbell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/wave-silicone-barbell.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pilates-ring/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pilates-ring.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pilates-ring",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pilates-ring.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/resistance-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/resistance-band.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/resistance-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/resistance-band.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/wrist-weights/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/silicone-wrist-ankle-weights.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/wrist-weights",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/silicone-wrist-ankle-weights.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-block-cover/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/yoga-block-cover.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-block-cover",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/yoga-block-cover.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-ring/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/yoga-ring.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-ring",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/yoga-ring.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/abs-yoga-ring/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/abs-yoga-ring.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/abs-yoga-ring",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/abs-yoga-ring.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pilates-ring-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pilates-ring-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pilates-ring-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pilates-ring-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-bolster/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/yoga-bolster.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-bolster",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/yoga-bolster.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fitness-board/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/multi-function-fitness-board.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fitness-board",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/multi-function-fitness-board.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/p3-fitness-board/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/p3-smart-fitness-board.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/p3-fitness-board",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/p3-smart-fitness-board.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cork-suede-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/cork-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cork-suede-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/cork-suede-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cork-tpe-yoga-mat-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/two-tone-cork-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cork-tpe-yoga-mat-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/two-tone-cork-tpe-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cork-rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/cork-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cork-rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/cork-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cork-rubber-yoga-mat-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/botanical-print-cork-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cork-rubber-yoga-mat-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/botanical-print-cork-rubber-yoga-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-meditation-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pu-meditation-mat-set.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/pu-meditation-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pu-meditation-mat-set.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-meditation-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/tpe-meditation-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-meditation-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/tpe-meditation-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/meditation-mat-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mandala-meditation-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/meditation-mat-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mandala-meditation-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pr1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/pr1.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock-with-handles/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/aerial-yoga-hammock-with-handles.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock-with-handles",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/aerial-yoga-hammock-with-handles.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/gradient-color-yoga-hammock/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/gradient-aerial-yoga-hammock.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/gradient-color-yoga-hammock",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/gradient-aerial-yoga-hammock.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/colorful-aerial-yoga-hammock.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/colorful-aerial-yoga-hammock.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/solid-color-yoga-hammock/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/solid-color-aerial-yoga-hammock.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/solid-color-yoga-hammock",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/solid-color-aerial-yoga-hammock.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/eva-foam-roller-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/eva-foam-roller-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/eva-foam-roller-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/eva-foam-roller-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock-4/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ombre-aerial-yoga-hammock.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock-4",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ombre-aerial-yoga-hammock.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock-5/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/large-aerial-yoga-hammock.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-hammock-5",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/large-aerial-yoga-hammock.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-tank-top/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-tank-top",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/ab-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ab-roller-with-resistance-band.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/ab-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ab-roller-with-resistance-band.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/ab-roller-set/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ab-roller-training-set.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/ab-roller-set",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/ab-roller-training-set.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/ab-roller-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/giant-ab-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/ab-roller-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/giant-ab-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/stair-climbers/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/adjustable-stair-climber.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/stair-climbers",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/adjustable-stair-climber.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/stair-climbers-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/compact-stair-climber.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/stair-climbers-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/compact-stair-climber.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-sports-vest/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-sports-vest",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-leggings/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-leggings",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/massage-stick/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/massage-stick.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/massage-stick",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/massage-stick.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/massage-stick-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/massage-stick-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/massage-stick-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/massage-stick-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/exercise-bands/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/exercise-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/exercise-bands",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/exercise-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-resistance-loop-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/tpe-resistance-loop-band.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-resistance-loop-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/tpe-resistance-loop-band.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/uv-protective-clothing/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/uv-protective-clothing",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-sun-protection-jacket/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-sun-protection-jacket",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-shorts/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-shorts",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-vest/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-vest",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/womens-yoga-shorts/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/womens-yoga-shorts",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-shorts-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-shorts-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-shorts-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-shorts-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-shorts-4/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-shorts-4",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/circular-leg-clamps/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/circular-leg-clamps.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/circular-leg-clamps",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/circular-leg-clamps.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-leggings-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-leggings-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-basic-t-shirts/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-basic-t-shirts",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-tops/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-tops",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/sun-protective-clothing/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/sun-protective-clothing",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-shorts-5/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-shorts-5",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-tops-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/yoga-tops-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/women-yoga-shirts/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/women-yoga-shirts",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/figure-8-resistance-bands/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/figure-8-resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/figure-8-resistance-bands",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/figure-8-resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/jump-rope-kids/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/kids-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/jump-rope-kids",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/kids-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-4/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mulinsen-branded-tpe-yoga-mat-61cm.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-4",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mulinsen-branded-tpe-yoga-mat-61cm.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/jump-rope-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/kids-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/jump-rope-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/kids-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/electronic-counting-skip-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/electronic-counting-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/electronic-counting-skip-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/electronic-counting-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/jump-rope-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/two-tone-kids-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/jump-rope-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/two-tone-kids-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cordless-jump-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/cordless-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/cordless-jump-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/cordless-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/smart-counting-jump-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/smart-counting-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/smart-counting-jump-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/smart-counting-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/speed-jump-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/speed-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/speed-jump-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/speed-jump-rope.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/resistance-band-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/resistance-band-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/resistance-band-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/resistance-band-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/stair-climbers-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/adjustable-stair-climber.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/stair-climbers-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/adjustable-stair-climber.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascia-gun/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascia-gun.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/fascia-gun",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/fascia-gun.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-5/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mulinsen-branded-tpe-yoga-mat-183cm.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-5",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mulinsen-branded-tpe-yoga-mat-183cm.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-6/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mulinsen-dual-sided-non-slip-tpe-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-6",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mulinsen-dual-sided-non-slip-tpe-mat.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-7/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mulinsen-widened-anti-slip-tpe-mat-90cm.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-7",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mulinsen-widened-anti-slip-tpe-mat-90cm.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-8/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mulinsen-3x-anti-slip-tpe-mat-90cm.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/tpe-yoga-mat-8",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/mulinsen-3x-anti-slip-tpe-mat-90cm.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/foam-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/foam-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/foam-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/foam-roller.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/foam-roller-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/foam-roller-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/foam-roller-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/foam-roller-2.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/foam-roller-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/foam-roller-3.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/foam-roller-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/foam-roller-3.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/foot-pedal-resistance-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/foot-pedal-resistance-band.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/foot-pedal-resistance-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/foot-pedal-resistance-band.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/stretch-board/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/stretch-board.html",
+      "permanent": true
+    },
+    {
+      "source": "/product/stretch-board",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products/stretch-board.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/ankle-wrist-weights-silicone-series/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/ankle-wrist-weights-silicone-series",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/free-weights/barbell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/free-weights/barbell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/pilates-ring-silicone-series/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/pilates-ring-silicone-series",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/resistance-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/resistance-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-equipment/stair-climbers/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-equipment/stair-climbers",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/weight-training/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/weight-training",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/yoga-block-cover/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/yoga-block-cover",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/tpe-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/tpe-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/pu-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/pu-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/suede-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/suede-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/folding-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/folding-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/cork-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/cork-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/meditation-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/meditation-pilates-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/meditation-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/meditation-pilates-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/economical-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-mat/economical-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/pilates-ring/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/pilates-ring",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/yoga-bolster-pillow/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/yoga-bolster-pillow",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/yoga-bag/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/yoga-bag",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/yoga-ball/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/yoga-ball",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/yoga-block/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-accessories/yoga-block",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/resistance-bands/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/resistance-bands",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/resistance-bands/loop-bands/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/resistance-bands/loop-bands",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/resistance-bands/resistance-tube/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/resistance-bands/resistance-tube",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/resistance-bands/figure-8-bands/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/resistance-bands/figure-8-bands",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-wear/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-wear",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-hammock/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/yoga-hammock",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-accessories/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-accessories",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-accessories/ab-wheel/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-accessories/ab-wheel",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-accessories/jump-rope-fitness-accessories/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-accessories/jump-rope-fitness-accessories",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-accessories/suspension-training/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-accessories/suspension-training",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-accessories/ankle-wrist-weights/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-accessories/ankle-wrist-weights",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/free-weights/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/free-weights",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/free-weights/kettlebell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/free-weights/kettlebell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/free-weights/dumbbel/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/free-weights/dumbbel",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/free-weights/adjustable-dumbbell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/free-weights/adjustable-dumbbell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-equipment/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-equipment",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-equipment/vibration-machine/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fitness-equipment/vibration-machine",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/silicone-series",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/pilates-equipment/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/pilates-equipment",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/pilates-equipment/pilates-reformer/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/pilates-equipment/pilates-reformer",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-reformer.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/pilates-equipment/ladder-barrel/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-ladder-barrel.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/pilates-equipment/ladder-barrel",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-ladder-barrel.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/pilates-equipment/stability-chair/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-wunda-chair.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/pilates-equipment/stability-chair",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/pilates-wunda-chair.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/pilates-reformer-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/meditation-pilates-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/pilates-reformer-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/meditation-pilates-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/foam-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/foam-rollers.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/foam-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/foam-rollers.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/foam-roller/eva-foam-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/foam-rollers.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/foam-roller/eva-foam-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/foam-rollers.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/foam-roller/vibrating-foam-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/foam-rollers.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/foam-roller/vibrating-foam-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/foam-rollers.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fascia-gun/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fascia-gun",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fascia-ball/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/fascia-ball",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/massager/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/massager",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/8-resistance-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/8-resistance-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/ab-wheel/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/ab-wheel",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/aerial-yoga-hammock/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/aerial-yoga-hammock",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/ankle-weights/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/ankle-weights",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/ankle-wrist-weights/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/ankle-wrist-weights",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/arched-pu-rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/arched-pu-rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/arched-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/arched-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/barbell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/barbell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/children-jump-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/children-jump-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/circular-leg-clamps/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/circular-leg-clamps",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/cordless-jump-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/cordless-jump-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/cork-rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/cork-rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/cork-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/cork-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/dumbbell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/dumbbell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/electronic-counting-skip-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/electronic-counting-skip-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/eva-foam-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/foam-rollers.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/eva-foam-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/foam-rollers.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/figure-8-resistance-bands/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/figure-8-resistance-bands",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/fitness-board/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/fitness-board",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/foam-roller/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/foam-rollers.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/foam-roller",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/foam-rollers.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/folding-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/folding-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/free-weights/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/free-weights",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/jump-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/jump-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/jump-rope-kids/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/jump-rope-kids",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/kettlebell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/kettlebell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/leg-massager/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/leg-massager",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/loop-bands/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/loop-bands",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/massage-accessories/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/massage-accessories",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/massage-stick/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/massage-stick",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/massager/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/massager",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/meditation-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/meditation-pilates-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/meditation-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/meditation-pilates-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/pilates-circle/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/pilates-circle",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/pilates-ring/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/pilates-ring",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/pu-meditation-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/meditation-pilates-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/pu-meditation-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/meditation-pilates-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/pu-rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/pu-rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/pu-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/pu-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/resistance-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/resistance-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/resistance-loop-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/resistance-loop-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/rubber-folding-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/rubber-folding-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pu-rubber-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-ankle-weights/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-ankle-weights",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-ankle-wrist-weights/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-ankle-wrist-weights",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-barbell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-barbell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-dumbbell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-dumbbell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-kettlebell/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-kettlebell",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-pilates-ring/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-pilates-ring",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-resistance-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-resistance-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-wrist-weights/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/silicone-wrist-weights",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/smart-counting-jump-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/smart-counting-jump-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/speed-jump-rope/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/speed-jump-rope",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/jump-ropes.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/stair-climbers/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/stair-climbers",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/suede-rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/suede-rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/suede-tpe-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/suede-tpe-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/suede-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/suede-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/suede-cork-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/sun-protective-clothing/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/sun-protective-clothing",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-folding-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-folding-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-meditation-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/meditation-pilates-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-meditation-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/meditation-pilates-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-resistance-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-resistance-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-resistance-loop-band/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-resistance-loop-band",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/resistance-bands.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-rubber-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-rubber-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/tpe-yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/tpe-yoga-mats.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/uv-protective-clothing/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/uv-protective-clothing",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/weight-training/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/weight-training",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/weighted-ball/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/weighted-ball",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/weighted-training/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/weighted-training",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/womens-yoga-shorts/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/womens-yoga-shorts",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/wrist-weights/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/wrist-weights",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-basic-t-shirts/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-basic-t-shirts",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-block/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-block",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-block-cover/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-block-cover",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-bolster-pillow/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-bolster-pillow",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-hammock/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-hammock",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-leggings/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-leggings",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-mat/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-mat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-pants/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-pants",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-ring/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-ring",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/yoga-props-accessories.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-shorts/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-shorts",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-sports-vest/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-sports-vest",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-sun-protection-jacket/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-sun-protection-jacket",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-tank-top/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-tank-top",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-tops/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-tops",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-vest/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-vest",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-wear/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-tag/yoga-wear",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/request-quote/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/request-quote",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/simple/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/simple",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/faqs/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/faqs",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/custom/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/applications/retail-private-label.html",
+      "permanent": true
+    },
+    {
+      "source": "/custom",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/applications/retail-private-label.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/our-team/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/our-team",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/pilates/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/",
+      "permanent": true
+    },
+    {
+      "source": "/pilates",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/pilates/",
+      "permanent": true
+    },
+    {
+      "source": "/yoga/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/yoga",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/fithess/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/fithess",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/strength-training.html",
+      "permanent": true
+    },
+    {
+      "source": "/recover/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/recover",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/massage-recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/2013/08/29/new-client-landed/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/2013/08/29/new-client-landed",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/2013/12/30/just-a-cool-blog-post-with-images/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/2013/12/30/just-a-cool-blog-post-with-images",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/2015/10/13/a-simple-blog-post/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/2015/10/13/a-simple-blog-post",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/category/style/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/category/style",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/tag/brooklyn/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/tag/brooklyn",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/tag/fashion/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/tag/fashion",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/tag/style-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/tag/style-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/tag/women-3/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/tag/women-3",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/blocks/blog-header/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blocks/blog-header",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blocks/footer-about-us/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blocks/footer-about-us",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blocks/custom-404-page/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blocks/custom-404-page",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blocks/footer-contact/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blocks/footer-contact",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sanfansport\\.com"
+        }
+      ],
+      "destination": "https://fjsanfan.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
