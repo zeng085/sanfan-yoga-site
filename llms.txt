@@ -85,6 +85,8 @@ The Pilates apparatus section is fully localized, e.g. [German Pilates apparatus
 - [Yoga mat MOQ explained](https://fjsanfan.com/blog/moq-explained.html) — why MOQ exists, what drives it, and how to negotiate below it
 - [REACH, CA Prop 65 & 6P compliance for US/EU](https://fjsanfan.com/blog/compliance.html) — which test reports to ask a factory for, and how to read them (a buyer guide to the regulations, not a list of SANFAN certifications)
 - [How to vet a Chinese yoga mat factory](https://fjsanfan.com/blog/vet-factory.html) — audit checklist, red flags, and what to verify before paying a deposit
+- [Yoga mat factory equipment checklist: S/A/B/C supplier tiers](https://fjsanfan.com/blog/yoga-mat-factory-equipment-checklist.html) — tier definitions, machines each material (TPE, natural rubber, PU/rubber) needs, video-call checks, and how to check a RoHS/REACH/Prop 65 report matches your mat
+- [SANFAN factory capabilities & audit checklist](https://fjsanfan.com/factory-capabilities.html) — process-by-process list of what SANFAN runs in-house (foaming, calendering, lamination, printing, cutting), factory footage, certificates and how to audit us
 - [7-day sampling](https://fjsanfan.com/blog/7day-sampling.html) — how physical samples with your own logo, color and packaging are produced in 7 days
 - [Custom yoga mat sizes & thickness](https://fjsanfan.com/blog/custom-sizes.html) — size limits, when new tooling is needed, and how thickness affects cost
 - [Yoga mat materials compared (TPE / NBR / PVC / natural rubber)](https://fjsanfan.com/blog/yoga-mat-materials.html) — performance, price band and compliance per material
