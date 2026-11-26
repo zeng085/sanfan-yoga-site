@@ -1,99 +1,77 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-IndexNow 主动推送：把 sitemap 里的全部 URL 提交给 Bing / Yandex / Naver / Seznam。
-（Bing 的索引会供 ChatGPT 等 AI 搜索使用，对 GEO 目标价值高。）
+"""Notify IndexNow of specific public URLs after deployment."""
 
-用法:
-  python3 submit_indexnow.py              # 从线上 sitemap 取 URL 并提交
-  python3 submit_indexnow.py --dry-run    # 只打印不提交
-"""
-import os, re, sys, json, time
-import urllib.request, urllib.error
+import argparse
+import json
+from pathlib import Path
+import re
+from urllib.parse import quote, urlsplit
+from urllib.request import Request, urlopen
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-KEY_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".indexnow_key")
-SITEMAP = "https://fjsanfan.com/sitemap.xml"
 HOST = "fjsanfan.com"
-ENDPOINTS = [
-    "https://api.indexnow.org/indexnow",
-    "https://www.bing.com/indexnow",
-    "https://search.seznam.cz/indexnow",
-    "https://yandex.com/indexnow",
-]
-
-_proxy = os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
-_opener = urllib.request.build_opener(urllib.request.ProxyHandler({"http": _proxy, "https": _proxy})) \
-    if _proxy else urllib.request.build_opener()
+BASE = f"https://{HOST}"
+ENDPOINT = "https://api.indexnow.org/indexnow"
+DEFAULT_KEY_FILE = Path(__file__).with_name(".indexnow_key")
 
 
-def get_urls():
-    raw = _opener.open(SITEMAP, timeout=30).read().decode("utf-8")
-    urls = re.findall(r"<loc>(.*?)</loc>", raw)
-    # 去重保序，只保留本站
-    seen, out = set(), []
-    for u in urls:
-        u = u.strip()
-        if u.startswith("https://" + HOST) and u not in seen:
-            seen.add(u)
-            out.append(u)
-    return out
+def public_url(value):
+    """Accept an absolute site path or an HTTPS URL on the canonical host."""
+    if any(char.isspace() or ord(char) < 32 for char in value) or "\\" in value:
+        raise argparse.ArgumentTypeError(f"无效 URL：{value!r}")
+    try:
+        parts = urlsplit(value)
+    except ValueError as error:
+        raise argparse.ArgumentTypeError(f"无效 URL：{value!r}") from error
+    same_host = parts.scheme == "https" and parts.netloc == HOST
+    site_path = not parts.scheme and not parts.netloc and value.startswith("/") and not value.startswith("//")
+    if not (same_host or site_path) or "?" in value or "#" in value:
+        raise argparse.ArgumentTypeError(f"请填写本站主域 URL 或绝对路径：{value!r}")
+    path = quote(parts.path or "/", safe="/%:@!$&'()*+,;=-._~")
+    return BASE + path
 
 
-def submit(urls, key):
-    payload = {
-        "host": HOST,
-        "key": key,
-        "keyLocation": "https://%s/%s.txt" % (HOST, key),
-        "urlList": urls,
-    }
-    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-    results = []
-    for ep in ENDPOINTS:
-        req = urllib.request.Request(ep, data=data,
-                                     headers={"Content-Type": "application/json; charset=utf-8"})
-        try:
-            r = _opener.open(req, timeout=40)
-            results.append((ep, r.status, "OK"))
-        except urllib.error.HTTPError as e:
-            results.append((ep, e.code, (e.read().decode()[:80] or e.reason)))
-        except Exception as e:
-            results.append((ep, "-", "%s: %s" % (type(e).__name__, str(e)[:60])))
-    return results
+def submit(urls, key_file):
+    key = key_file.read_text(encoding="utf-8").strip()
+    if not re.fullmatch(r"[A-Za-z0-9-]{8,128}", key):
+        raise ValueError("IndexNow 验证值格式无效")
+    key_location = f"{BASE}/{key}.txt"
+    with urlopen(key_location, timeout=15) as response:
+        if response.geturl() != key_location or response.read().decode("utf-8").strip() != key:
+            raise ValueError("主域上的 IndexNow 验证文件未直接返回预期内容")
+
+    payload = {"host": HOST, "key": key, "keyLocation": key_location, "urlList": urls}
+    request = Request(
+        ENDPOINT,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json; charset=utf-8"},
+    )
+    with urlopen(request, timeout=30) as response:
+        return response.status
 
 
 def main():
-    dry = "--dry-run" in sys.argv
-    if not os.path.exists(KEY_FILE):
-        print("缺少 key 文件:", KEY_FILE)
-        return 1
-    key = open(KEY_FILE).read().strip()
-    urls = get_urls()
-    print("sitemap URL 数: %d" % len(urls))
-    for lg in ("de", "ja", "ko"):
-        n = sum(1 for u in urls if "/" + lg + "/" in u)
-        print("  %s: %d 条" % (lg.upper(), n))
-    if dry:
-        for u in urls[:8]:
-            print("  ", u)
-        print("  ...(dry-run，未提交)")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("urls", nargs="+", type=public_url, help="已上线新增、更新或删除的规范 URL")
+    parser.add_argument("--key-file", type=Path, default=DEFAULT_KEY_FILE, help="本地 IndexNow 验证文件")
+    parser.add_argument("--dry-run", action="store_true", help="离线查看去重后的提交清单")
+    args = parser.parse_args()
+    urls = list(dict.fromkeys(args.urls))
+    if len(urls) > 10_000:
+        parser.error("每批最多 10,000 条 URL")
+
+    print(f"IndexNow URL 数：{len(urls)}")
+    if args.dry_run:
+        print("\n".join(urls))
         return 0
-    # 确认 key 文件已线上可访问（IndexNow 会校验）
+
     try:
-        r = _opener.open("https://%s/%s.txt" % (HOST, key), timeout=25)
-        body = r.read().decode().strip()
-        if body != key:
-            print("!! key 文件内容不匹配，放弃提交（线上='%s'）" % body[:40])
-            return 1
-        print("key 文件校验通过: https://%s/%s.txt" % (HOST, key))
-    except Exception as e:
-        print("!! key 文件不可访问(%s)，请先部署后重试" % str(e)[:60])
+        code = submit(urls, args.key_file)
+    except (OSError, ValueError) as error:
+        print(f"IndexNow 未完成：{error}")
         return 1
-    print("\n提交中...")
-    for ep, code, msg in submit(urls, key):
-        print("  [%s] %s -> %s" % (code, ep, msg))
-    return 0
+    print(f"IndexNow HTTP {code}，请在站长工具查看后续状态")
+    return 0 if code in (200, 202) else 1
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(main())

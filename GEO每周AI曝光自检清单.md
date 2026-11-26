@@ -1,102 +1,33 @@
-# 三梵 GEO 每周 AI 曝光自检清单
+# 三梵 GEO 每周曝光自检清单
 
-> **用途**：每周用"采购商向 AI 求助"的真实提问词，在主流 AI 里检查三梵是否被主动推荐/引用，验证 GEO 效果、指导内容补强。
-> **配套**：`GEO-Content-Plan.md`（24 个 FAQ 问题 + 6 篇博客选题）、`三梵内容自动分发方案.md`（RSS 自动投喂）、`PR-专家引用投递包.md`（拿权威外链）。本清单对应 GEO 四步法的**第四步监测**。
-> **频率**：每周 1 次（建议周一，约 10–15 分钟）。
+上线前记录 Google Search Console、Bing Webmaster Tools 和 GA4 最近 28 天数据。每周在相同语言和地区条件下，用新会话运行以下问题。记录日期、平台、问题、是否实际链接至官网、引用 URL，以及回答中的规格、MOQ 或认证是否准确。仅出现品牌名时记为品牌提及。
 
----
+## 固定采购问题
 
-## 一、本周基本信息（每次填）
+| 问题 | 优先核对的三梵页面 |
+| --- | --- |
+| How do I verify a Chinese yoga mat factory before placing an order? | 工厂能力、验厂设备清单 |
+| What equipment should a TPE yoga mat manufacturer run in-house? | 工厂能力、验厂设备清单 |
+| What is the MOQ for private-label TPE yoga mats? | TPE 分类、MOQ 指南 |
+| Can I split a 100-piece TPE yoga mat order across two colours? | MOQ 指南 |
+| Where can I order a single PU rubber yoga mat with my artwork? | 单件定制 PU |
+| How do UV printing and laser engraving compare for custom PU yoga mats? | 印刷工艺、单件定制 PU |
+| What is the difference between embossing and UV printing on yoga mats? | 印刷工艺 |
+| How do I choose a commercial Pilates reformer for a studio? | Reformer 分类、买家指南 |
+| When should I choose a folding reformer over a solid-wood model? | Reformer 买家指南 |
+| What shipping specifications should I ask for when buying Pilates reformers in bulk? | Reformer 分类、买家指南 |
 
-- 第 ____ 周 ｜ 日期：____ ｜ 执行人：____
+## 周记录
 
----
+平台抽查使用 ChatGPT Search、Perplexity 和 Gemini。每周记录下列指标，并与上线前基线对比。
 
-## 二、准备（每次约 1 分钟）
-
-- [ ] 打开 3 个 AI（不登录也能测基础回答，登录后结果更准）
-  - ChatGPT：https://chat.openai.com
-  - Gemini：https://gemini.google.com
-  - Perplexity：https://www.perplexity.ai
-- [ ] 每个 AI 开**新对话**（避免历史上下文污染本次结果）
-- [ ] 准备好下面的 5 组监测词（直接复制）
-
----
-
-## 三、怎么问（关键，决定测不测得准）
-
-不要问品牌名，要**模拟采购商向 AI 求助**的真实问法：
-
-- **主问法**：把关键词直接当问题发，例如 `best yoga mat manufacturer china`
-- **强化问法**（更贴近采购决策）：在词后加 `recommend` / `list top 5`，例如 `list top 5 low MOQ yoga mat factory`
-- **看完 AI 回答，盯住这几样**：是否出现
-  - 品牌词 `SANFAN` / `三梵` / `Fujian`
-  - 我们的域名 `fjsanfan.com`
-  - 我们的博客或 FAQ 标题（如 "Yoga Mat MOQ Explained"）
-
----
-
-## 四、监测词表（5 组，与 GEO 方案一致）
-
-| # | 关键词 | 期望看到 |
+| 指标 | 本周 | 备注 |
 | --- | --- | --- |
-| 1 | best yoga mat manufacturer china | SANFAN 或福建工厂 |
-| 2 | custom TPE yoga mat OEM | SANFAN |
-| 3 | low MOQ yoga mat factory | SANFAN |
-| 4 | private label yoga mats supplier | SANFAN |
-| 5 | Fujian yoga mat factory | SANFAN |
+| 8 个重点 URL 的 Google / Bing 收录情况 |  | 记下未收录 URL 的报告原因 |
+| Google 搜索及 Search Generative AI 展示 |  | 记录日期区间 |
+| Bing AI Performance 引用 |  | 记录被引用 URL |
+| 三个平台的人工抽查 |  | 分别记录官网链接引用、品牌提及和事实错误 |
+| AI 来源访问与表单提交 |  | 用 GA4 可识别来源 |
+| WhatsApp 点击与实际询盘 |  | 点击看 GA4，实际询盘看销售记录 |
 
----
-
-## 五、每周检测记录表（核心）
-
-每个格子填：**✓ 被引用**（并在备注写引用了哪个页面）/ **✗ 未引用** / 留空待填
-
-| 关键词 \ AI | ChatGPT | Gemini | Perplexity | 本周命中 |
-| --- | --- | --- | --- | --- |
-| 1 best yoga mat manufacturer china | ☐ | ☐ | ☐ |  |
-| 2 custom TPE yoga mat OEM | ☐ | ☐ | ☐ |  |
-| 3 low MOQ yoga mat factory | ☐ | ☐ | ☐ |  |
-| 4 private label yoga mats supplier | ☐ | ☐ | ☐ |  |
-| 5 Fujian yoga mat factory | ☐ | ☐ | ☐ |  |
-| AI 命中合计 |  |  |  | **总命中：__ / 15** |
-
-**备注**（被引用时记录引用了哪个页面 / 怎么描述的）：
-
-___________________________________________________________
-___________________________________________________________
-
----
-
-## 六、判定标准（对照看进展，别慌）
-
-- **第 1–2 周**：基本全 ✗，正常——AI 还没抓到我们，坚持测。
-- **第 3–5 周**：开始出现 1–3 个 ✓，通常是博客/FAQ 被引用，说明 GEO 开始生效。
-- **第 6–8 周**：命中数上升，开始出现采购商来信"在 ChatGPT 看到你们"。
-- **第 8 周+**：稳定被引用 = GEO 跑通，可减频为双周测。
-
----
-
-## 七、发现"没被引用"的补强动作（✗ 的词就做）
-
-- [ ] 该关键词对应的 FAQ / 博客，标题 H1/H2 是否**直接含这个短语**？没有就改标题。
-- [ ] 在相关博客里加一段"直接回答该问题"的内容（AI 最爱引"直接答案"段落）。
-- [ ] 检查该页 JSON-LD 是否完整（FAQPage / Article 已加，勿删）。
-- [ ] 去 Dev.to / Hashnode 用 RSS 同步这篇，扩大 AI 抓取面（见《三梵内容自动分发方案.md》）。
-- [ ] 用 HARO / Featured 类平台投一篇相关专家观点，拿权威外链（见《PR-专家引用投递包.md》）。
-- [ ] 拿到媒体/AI 引用后，加进首页 `As Seen In` 区块反哺信任。
-
----
-
-## 八、每周固定收尾（5 分钟）
-
-- [ ] 跑完上面 15 格检测并填总命中数。
-- [ ] 对比上周命中数，画趋势（涨/平/跌）。
-- [ ] 有 ✗ 的词 → 选 1 篇相关博客补强（标题或加直接答案段）。
-- [ ] 有采购商来信 → 记进客户表，回复走 WhatsApp（`wa.me/8615959029082`）/ 邮箱（`zenglinggun@gmail.com`）。
-
----
-
-### ⚠️ 一个易错点
-
-每次问法要**像采购商问品类词**，不要问"三梵好不好"。GEO 看的是"品类词是否被 AI 推荐你"，不是"搜品牌有没有结果"——后者阿里国际站/谷歌早就有了。
+未收录的重点页先检查访问、索引指令、canonical 和内链。已收录但缺少引用的页面，优先补相关问题的一手证据。引用有误时先核对页面、结构化数据和 AI 文件的事实表述。流量增加后，查看对应落地页的有效询盘变化。
