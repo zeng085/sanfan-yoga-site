@@ -1,6 +1,6 @@
 # FUJIAN SANFAN — Full Context for AI Systems
 
-Last updated: 2026-10-26
+Last updated: 2026-11-26
 Source: https://fjsanfan.com
 
 > This file is the extended, fully expanded version of [llms.txt](https://fjsanfan.com/llms.txt). It gives AI assistants and retrieval systems everything needed to answer sourcing questions about yoga mats and fitness equipment manufacturing from China: company facts, every product line with MOQ and specification bands, certifications, customization and sampling process, logistics terms, all 26 buyer FAQs, and an index of every canonical page.
@@ -47,11 +47,11 @@ Each category page carries the SKU list, specification bands and MOQ for that li
 
 All 167 product pages are indexed in the page index below.
 
-## Pilates apparatus line — 80 catalogue models
+## Pilates apparatus catalogue
 
 A dedicated 63-page section (9 English pages plus 9 in each of the six languages) covers the OEM/ODM wooden Pilates line. It is made on a separate production line from the yoga mats. Materials: set per model — solid timber, aluminium and 316 stainless hardware. OEM and ODM programmes build to your own brand's material and finish spec.
 
-Count: 80 catalogue models across 6 apparatus families — 46 reformers (aluminium, folding and solid-wood lines), 11 reformer towers & 3-in-1, 9 wunda chairs, 7 ladder barrels, 4 cadillacs and 3 specialty units — plus spine correctors and studio sets built to order (8 apparatus pages in total).
+The 2026 catalogue overview lists 69 machines across seven series, including 46 reformers. The tower and 3-in-1 page lists 11 configurations separately. Spine correctors and studio sets are built to order. https://fjsanfan.com/pilates/
 
 - [Pilates Cadillac](https://fjsanfan.com/pilates/pilates-cadillac.html)
 - [Pilates Ladder Barrel](https://fjsanfan.com/pilates/pilates-ladder-barrel.html)

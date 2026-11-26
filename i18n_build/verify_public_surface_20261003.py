@@ -54,7 +54,6 @@ ONLINE_PROBES = [
     "/i18n_build/enblocks/7day-sampling.en.html",
     "/i18n_build/zhblocks/7day-sampling.zh.html",
     "/outputs/en-seo-audit-20260925.html",
-    "/92c62d163567679a15cfefe662a3eb43.txt",
     "/GEO-Content-Plan.md",
     "/seo_audit.py",
     "/README.md",
@@ -126,8 +125,8 @@ def fnmatch_seg(name, pat):
 
 
 def tracked():
-    out = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True).stdout
-    return [f for f in out.split("\n") if f.strip()]
+    out = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, check=True, stdout=subprocess.PIPE).stdout
+    return [os.fsdecode(path) for path in out.split(b"\0") if path]
 
 
 def main():

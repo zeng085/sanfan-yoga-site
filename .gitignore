@@ -67,3 +67,7 @@ outputs/catcontent-preview/
 # ⚠️ 这里已有 24 个文件在忽略规则之前就入了库，gitignore 不影响已跟踪文件，
 #    它们继续正常跟踪；此规则只拦新增的过程产物，避免仓库被中间切片撑大。
 i18n_build/reports/
+
+# 新的工作笔记与运营产物仅保留在本地。
+.workbuddy/
+outputs/
